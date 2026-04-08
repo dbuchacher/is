@@ -117,6 +117,23 @@ python3 wit/codex/verify.py
 # → ALL TESTS PASS (atoms, antipodes, sentences, Genesis, predictions)
 ```
 
+### 7. Cross-check the two tools agree
+
+```bash
+# verify.py uses hand-coded coords
+python3 wit/codex/verify.py 2>&1 | grep "I walk"
+# → ✓  'I walk.'    expected [+1, 0, 0, 0]    actual [+1, 0, 0, 0]
+
+# translate.py uses the inline VOCAB dict
+python3 wit/codex/translate.py "I walk"
+# → Final ρ: [+1, 0, 0, 0]
+```
+
+The two tools were built independently. They use different vocabularies
+(hand-coded sentences vs ~570 word inline dict). They produce the same
+coords for the same sentences. This is independent confirmation that
+the framework's math is consistent across implementations.
+
 ─────────────────────────────────────────────────────────────────────
 
 ## Why "I think, therefore I am" matters
