@@ -817,7 +817,7 @@ def translate(text: str, verbose: bool = True) -> Coord:
 
     unknown = []
     for i, token in enumerate(tokens, 1):
-        if token in ('not', "n't"):
+        if token in ('not', "n't", 'no', 'never'):
             pending_not = True
             continue
 
