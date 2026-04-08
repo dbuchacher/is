@@ -765,6 +765,50 @@ VOCAB: Dict[str, Coord] = {
     "restored": (0, 1, 1, -1),
     "make_v": (0, 1, 0, 1),
     "makes": (0, 1, 0, 1),
+
+    # ─── More common vocabulary ───
+    "journey": (1, 0, 0, 1),
+    "trip": (1, 0, 0, 1),
+    "miles": (1, 0, 0, 0),
+    "mile": (1, 0, 0, 0),
+    "step": (1, 0, 0, 0),
+    "single": (0, 1, 0, 0),  # one
+    "darling": (0, 0, 1, 0),
+    "rough": (0, 0, -1, 0),
+    "shake": (0, 0, 0, 0),
+    "shook": (0, 0, 0, -1),
+    "winds": (1, 0, 0, 0),
+    "buds": (0, 1, 1, 1),
+    "may": (0, 0, 1, 0),  # month
+    "lease": (0, 0, 1, 0),
+    "hath": (0, 0, 0, 0),
+    "too": (0, 0, 0, 0),  # adverb
+    "short": (0, -1, 0, 0),
+    "art": (0, 0, 0, 0),  # archaic "are"
+    "thou": (0, 0, 0, 0),
+    "thy": (0, 0, 0, 0),
+    "thine": (0, 0, 0, 0),
+    "lovely": (0, 0, 1, 0),
+    "temperate": (0, 0, 0, 0),
+
+    # ─── Eastern philosophy terms ───
+    "tao": (0, 0, 0, 0),
+    "eternal": (0, 0, 0, 0),
+    "way_concept": (0, 0, 0, 0),
+
+    # ─── More verbs from translations ───
+    "told": (0, 0, 0, -1),
+    "writing": (0, 1, 0, 1),
+    "wrote": (0, 1, 0, -1),
+    "running": (1, 0, 0, 1),
+    "loving": (0, 0, 1, 0),
+    "hating": (0, 0, -1, 0),
+    "thinking": (0, 0, 0, 0),
+    "knowing": (0, 0, 0, 0),
+    "feeling": (0, 0, 0, 0),
+    "seeing": (0, 0, 0, 0),
+    "hearing": (0, 0, 0, 0),
+    "saying": (0, 0, 0, 0),
 }
 
 # ─── Composition functions ───────────────────────────────────────────
