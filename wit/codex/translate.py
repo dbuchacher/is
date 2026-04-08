@@ -767,6 +767,45 @@ def antonyms(word: str) -> List[str]:
     target = negate(VOCAB[word])
     return [w for w, c in VOCAB.items() if c == target]
 
+def closest(target: Coord, n: int = 5) -> List[Tuple[str, Coord, int]]:
+    """Find the n words whose coords are closest to the target (Manhattan)."""
+    candidates = [(w, c, manhattan_distance(c, target)) for w, c in VOCAB.items()]
+    candidates.sort(key=lambda x: (x[2], x[0]))
+    return candidates[:n]
+
+def compose_to(target: Coord, max_words: int = 6) -> List[str]:
+    """
+    Greedy compose: build a word sequence whose ρ walk approaches the target.
+    Returns the chosen words.
+    """
+    rho = ORIGIN
+    chosen = []
+    used = set()
+
+    for _ in range(max_words):
+        if rho == target:
+            break
+        # Find the word that minimizes distance after adding it
+        best = None
+        best_distance = manhattan_distance(rho, target)
+        for word, coord in VOCAB.items():
+            if word in used:
+                continue
+            new_rho = compose(rho, coord)
+            d = manhattan_distance(new_rho, target)
+            if d < best_distance:
+                best_distance = d
+                best = (word, coord, new_rho)
+
+        if best is None:
+            break
+        word, coord, new_rho = best
+        chosen.append(word)
+        used.add(word)
+        rho = new_rho
+
+    return chosen
+
 def main():
     args = sys.argv[1:]
 
@@ -882,6 +921,47 @@ def main():
         print(f"Words at/near {fmt(target)} (distance ≤ {max_d}):")
         for w, c, d in neighbors:
             print(f"  d={d}  {w:<14} {fmt(c)}")
+        return 0
+
+    if args[0] == '--closest' and len(args) > 1:
+        # --closest "+1,+1,+1,+1" find n words closest to target
+        coord_str = args[1]
+        try:
+            parts = [int(x.strip()) for x in coord_str.split(',')]
+            target = tuple(parts)
+            assert len(target) == 4
+        except (ValueError, AssertionError):
+            print(f"Invalid coord: {coord_str}")
+            return 1
+        n = int(args[2]) if len(args) > 2 else 5
+        results = closest(target, n)
+        print(f"\n{n} closest words to {fmt(target)}:")
+        for w, c, d in results:
+            print(f"  d={d}  {w:<14} {fmt(c)}")
+        return 0
+
+    if args[0] == '--compose' and len(args) > 1:
+        # --compose "+5,+4,+15,+1" find a word sequence whose walk approaches the target
+        coord_str = args[1]
+        try:
+            parts = [int(x.strip()) for x in coord_str.split(',')]
+            target = tuple(parts)
+            assert len(target) == 4
+        except (ValueError, AssertionError):
+            print(f"Invalid coord: {coord_str}")
+            return 1
+        chosen = compose_to(target)
+        if not chosen:
+            print(f"No words found close to {fmt(target)}")
+            return 1
+        print(f"\nGreedy compose toward {fmt(target)}:")
+        rho = ORIGIN
+        for w in chosen:
+            coord = VOCAB[w]
+            rho = compose(rho, coord)
+            print(f"  + {w:<14} {fmt(coord)}    ρ = {fmt(rho)}")
+        d = manhattan_distance(rho, target)
+        print(f"\n  Final ρ = {fmt(rho)}    distance to target: {d}")
         return 0
 
     if args[0] == '--help':
