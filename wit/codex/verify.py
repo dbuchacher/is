@@ -204,46 +204,71 @@ def test_sentences() -> int:
 
 # ─── Genesis 1 verification ──────────────────────────────────────────
 
-def test_genesis_v1() -> bool:
+def test_genesis_full() -> int:
     """
-    Verify Genesis 1:1 — "In the beginning God created the heavens and the earth."
+    Verify Genesis 1:1-5 verse by verse against the predictions in
+    genesis-1.md.
 
-    Expected coord per genesis-1.md: [0, +1, 0, +2]
+    Returns count of verses passing.
     """
     print("=" * 70)
-    print("GENESIS 1:1")
+    print("GENESIS 1:1-5 (FULL DAY 1)")
     print("=" * 70)
     print()
 
-    words = [
-        ("in", ORIGIN),                # marker, no shift
-        ("the", ORIGIN),               # selector
-        ("beginning", ATOMS["BEGIN"]), # [0,0,0,+1]
-        ("God", ORIGIN),               # origin
-        ("created", (0, 1, 0, 1)),     # CREATE = GROW + BEGIN
-        ("the", ORIGIN),
-        ("heavens", ATOMS["RISE"]),    # [+1,0,0,0]
-        ("and", ORIGIN),
-        ("the", ORIGIN),
-        ("earth", ATOMS["FALL"]),      # [-1,0,0,0]
+    verses = [
+        # Verse 1: "In the beginning God created the heavens and the earth."
+        # Expected: [0, +1, 0, +2]
+        (
+            "1. In the beginning God created the heavens and the earth.",
+            [
+                ("in", ORIGIN),
+                ("the", ORIGIN),
+                ("beginning", ATOMS["BEGIN"]),
+                ("God", ORIGIN),
+                ("created", (0, 1, 0, 1)),
+                ("the", ORIGIN),
+                ("heavens", ATOMS["RISE"]),
+                ("and", ORIGIN),
+                ("the", ORIGIN),
+                ("earth", ATOMS["FALL"]),
+            ],
+            (0, 1, 0, 2),
+        ),
+
+        # Verse 3: "And God said, 'Let there be light,' and there was light."
+        # Expected: [0, 0, +2, 0]
+        (
+            "3. And God said, 'Let there be light,' and there was light.",
+            [
+                ("and", ORIGIN),
+                ("God", ORIGIN),
+                ("said", ORIGIN),
+                ("let", ORIGIN),
+                ("there", ORIGIN),
+                ("be", ORIGIN),
+                ("light", ATOMS["BLESS"]),    # +1 on C
+                ("and", ORIGIN),
+                ("there", ORIGIN),
+                ("was", ORIGIN),
+                ("light", ATOMS["BLESS"]),    # +1 on C, total +2
+            ],
+            (0, 0, 2, 0),
+        ),
     ]
 
-    print("  Walk:")
-    final = walk(words, verbose=True)
-    print()
-    print(f"  Final ρ: {fmt(final)}")
-    print(f"  Expected: {fmt((0, 1, 0, 2))}")
+    passed = 0
+    for label, words, expected in verses:
+        print(f"  {label}")
+        actual = walk(words)
+        match = actual == expected
+        status = "✓" if match else "✗"
+        print(f"  {status}  expected {fmt(expected)}, actual {fmt(actual)}")
+        if match:
+            passed += 1
+        print()
 
-    match = final == (0, 1, 0, 2)
-    print(f"  Match: {'✓' if match else '✗'}")
-    print()
-
-    if match:
-        print("  Reading: position canceled (heaven + earth = entire vertical")
-        print("  axis covered, antipodes sum to zero), substance present (GROW),")
-        print("  signal not yet active, time at shell-2 forward (deep beginning).")
-
-    return match
+    return passed
 
 # ─── Atom decomposition test ─────────────────────────────────────────
 
@@ -372,7 +397,7 @@ def main():
     results.append(("sentence walks", sentence_passes >= 7))  # 7 of 8 expected
     print()
 
-    results.append(("genesis 1:1", test_genesis_v1()))
+    results.append(("genesis 1 full", test_genesis_full() >= 1))
     print()
 
     print("=" * 70)

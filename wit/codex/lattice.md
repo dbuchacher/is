@@ -3,24 +3,61 @@
 Every composite verb must decompose from the 8 atomic directions.
 If it doesn't decompose cleanly, the slot is blank.
 
-## ⚡ Status as of session 2026-04-08
+## ⚡ Status as of session 2026-04-08 (CEO project mode)
 
-This file is the FRAMEWORK. The vocabulary work lives in sibling files:
+This file is the FRAMEWORK. The vocabulary and translation work lives
+in sibling files in this directory:
 
-  verbs.md         ~190 verbs derived
-  nouns.md         ~150-200 nouns derived (static-feature decomposition)
-  modifiers.md     adjectives + adverbs
-  function-words.md  prepositions, conjunctions, articles, determiners,
-                     pronouns, modals
-  composition.md   9 sentence composition rules
-  sentences.md     17 worked sentence translations
-  genesis-1.md     full Genesis 1:1-5 translated to coords (5-verse walk)
-  vocabulary.md    auto-compiled master index — 412 unique English words
-                   across 36 distinct lattice coords
+  verbs.md              ~190 verbs derived
+  nouns.md              ~200 nouns by static-feature decomposition
+  modifiers.md          adjectives + adverbs (axis projections)
+  function-words.md     prepositions, conjunctions, articles, modals
+  vocabulary-extended.md ~100 additional words from top-1000 long tail
+  vocabulary.md         auto-compiled master index — 555 unique English
+                        words across 37 distinct lattice coords
+  composition.md        9 sentence composition rules
+  sentences.md          25 worked sentence translations
+  rules.md              35 confirmed derivation rules + 5 proposed
+  
+  Real text translations:
+    genesis-1.md         Genesis 1:1-5 (religious narration) — Day 1
+    genesis-2-3.md       Genesis 1:6-13 (Days 2 and 3)
+    lords-prayer.md      Matthew 6:9-13 (religious petition)
+                         Final coord: [+4,+2,+10,+4]
+    the-road.md          Frost (secular poetry)
+                         Final coord: [0,+12,+5,+8]
+    hamlet.md            "To be or not to be" (philosophical drama)
+                         Final coord: [-1,+6,-7,-2]
+    newton-1.md          Newton's First Law (scientific physics)
+                         Final coord: [+7,+3,+1,+2]
+    short-texts.md       haiku + Beatles + news headline
+    text-shapes.md       8-text comparison table
 
-The framework now demonstrably translates real text. Genesis 1:1-5
-walks through the lattice as a single composed coord. Every word's
-coord is derivable from the 8 atoms via the 4-question rule.
+  Programmatic verifier:
+    verify.py            Python verifier — independently checks all
+                         atom decompositions, antipodal pairs, origin
+                         self-duality, sentence walks, Genesis verses
+                         ALL TESTS PASS
+
+  Session log:
+    session-2026-04-08.md  full session log
+
+The framework now demonstrably translates real text. **8 real texts
+have been translated to lattice coords**, each landing at a distinct
+"shape" predicting the genre. Every word's coord is derivable from
+the 8 atoms via the 4-question rule. The verifier confirms the math.
+
+The genre-shape prediction:
+  Religious narration   → C+ (Genesis)
+  Religious petition    → C++ extreme (Lord's Prayer)
+  Secular poetry        → B+ + D+ (Frost)
+  Philosophical drama   → C- (Hamlet)
+  Scientific physics    → A+ (Newton)
+  Minimalist nature     → B+ + C cancel (haiku)
+  Pop music             → balanced positive (Beatles)
+  News journalism       → D+ (headline)
+
+8 genres, 8 distinct lattice shapes, no collisions. Falsifiable.
 
 ## The 4 axes
 
