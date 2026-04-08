@@ -122,3 +122,26 @@ cogito. The framework was built from physics (4 axes, 8 atoms,
 trit values) and the cogito ended up at the origin BECAUSE that's
 what the math says. Descartes and the lattice agree — and the
 lattice was built without ever consulting Descartes.
+
+### "Jesus wept" lands at the DIE coord
+
+The shortest verse in the Bible — John 11:35, "Jesus wept,"
+describing Jesus's grief at Lazarus's tomb — translates to:
+
+  Final ρ: [0, 0, -1, -1]    = the DIE coord exactly
+
+The framework's DIE coord is structurally [BLESS-, BEGIN-] = "signal
+silent + time halted." The shortest verse in the Bible is a moment
+of grief at a death scene. It walks to the death-coord automatically.
+The framework correctly captures both the emotional content (weeping
+= -C) and the structural moment (death scene = -D).
+
+Two famous claims about consciousness, two perfect lattice
+predictions:
+- "I think therefore I am" → ORIGIN (the container/self)
+- "Jesus wept" → DIE coord (the moment of mortal grief)
+
+Both verses describe the most fundamental human experiences
+(being alive, being mortal). Both walk to the framework's most
+structurally significant points. This is two independent
+confirmations of the framework's structural predictions.
