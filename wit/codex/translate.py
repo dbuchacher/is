@@ -716,6 +716,55 @@ VOCAB: Dict[str, Coord] = {
     "sport": (1, 0, 1, 0),
     "story": (0, 0, 0, 0),
     "news": (0, 0, 0, 1),
+
+    # ─── Religious / spiritual vocabulary ───
+    "lord": (0, 0, 0, 0),    # ultimate container
+    "soul": (0, 0, 0, 0),    # container
+    "spirit_n": (0, 0, 1, 0),
+    "angel": (0, 0, 1, 1),   # spiritual being
+    "devil": (0, 0, -1, -1),
+    "saint": (0, 0, 1, 1),
+    "prayer": (0, 0, 1, 0),
+    "pray": (0, 0, 1, 0),
+    "worship": (0, 0, 1, 0),
+    "shepherd": (0, 1, 1, 1),
+    "sheep": (0, 1, 1, 1),
+    "lamb": (0, 1, 1, 1),
+    "cross": (0, 1, -1, 0),  # weapon-shape, sacrifice
+    "salvation": (0, 0, 1, 1),
+    "sin_n": (0, 0, -1, 0),
+    "forgive": (0, -1, 1, 1),  # GIVE family - release debt
+    "forgiven": (0, -1, 1, 1),
+    "redemption": (0, 0, 1, 1),
+
+    # ─── Nature / pastoral ───
+    "green": (0, 1, 1, 0),  # plant color
+    "pasture": (0, 1, 0, 0),
+    "pastures": (0, 1, 0, 0),
+    "field": (0, 1, 0, 0),
+    "grass": (0, 1, 1, 0),
+    "wheat": (0, 1, 0, 0),
+    "corn": (0, 1, 0, 0),
+    "grain": (0, 1, 0, 0),
+    "still_a": (0, 0, 0, 0),
+    "still_n": (0, 0, 0, 0),
+    "beside": (0, 0, 0, 0),
+    "next": (0, 0, 0, 1),
+    "near": (1, 0, 0, 0),
+    "fish": (0, 1, 1, 1),
+    "bird": (0, 1, 1, 1),
+
+    # ─── Action verbs continued ───
+    "made_v": (0, 1, 0, 1),
+    "leads": (1, 0, 1, 0),
+    "led": (1, 0, 1, -1),
+    "lying": (0, 0, 0, 0),
+    "lay_v": (0, 0, 0, -1),
+    "restore": (0, 1, 1, -1),  # gain substance/signal from past
+    "restores": (0, 1, 1, -1),
+    "restored": (0, 1, 1, -1),
+    "make_v": (0, 1, 0, 1),
+    "makes": (0, 1, 0, 1),
 }
 
 # ─── Composition functions ───────────────────────────────────────────
