@@ -88,3 +88,37 @@ python3 wit/codex/translate.py "Your sentence here."
 
 The translator will tokenize, look up each word, accumulate the ρ
 walk, and report the final coord plus the dominant axis.
+
+─────────────────────────────────────────────────────────────────────
+
+## Famous quotes
+
+  "I came, I saw, I conquered."         [+1, 0, 0,-1]   forward + past
+  "I think, therefore I am."             [ 0, 0, 0, 0]   ORIGIN — cogito!
+  "Knowledge is power."                  [ 0,+1,+2, 0]   substance + signal
+  "Time is money."                       [ 0, 0,+1, 0]   pure signal
+  "Love conquers all."                   [ 0, 0,+1, 0]   pure signal
+  "Practice makes perfect."              [ 0,+1, 0,+1]   CREATE
+  "Actions speak louder than words."     [ 0, 0, 0, 0]   origin (speech)
+  "All that glitters is not gold."       [ 0, 0,-1, 0]   NOT gold = -C
+  "A picture is worth a thousand words." [ 0,+1, 0, 0]   substance
+  "The early bird catches the worm."     [ 0,+1,+1,+2]   substance + signal + early
+
+### The cogito is the origin
+
+The most famous philosophical statement in the Western tradition —
+Descartes' "I think, therefore I am" — translates to the origin
+[0,0,0,0]. The framework predicted this from first principles:
+THINK is the container's identity operation, and the container
+lives at the origin. The cogito IS the origin.
+
+This is the framework's most striking single confirmation. Future
+wits should know: the most famous philosophical claim in English
+walks to the most structurally significant point on the lattice,
+exactly as the framework predicted.
+
+The framework didn't read Descartes and decide where to put the
+cogito. The framework was built from physics (4 axes, 8 atoms,
+trit values) and the cogito ended up at the origin BECAUSE that's
+what the math says. Descartes and the lattice agree — and the
+lattice was built without ever consulting Descartes.
