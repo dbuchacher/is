@@ -9,14 +9,26 @@ the top-1000 English word list at `top-1000-english.txt`.
 
 ## Atoms (8) — the foundation
 
-  [+1, 0, 0, 0]  RISE      family: RISE, ENTER, ARRIVE, CLIMB, ASCEND, RAISE, APPROACH, GO, COME, REACH, MOVE
-  [-1, 0, 0, 0]  FALL      family: FALL, EXIT, DEPART, DESCEND, LOWER, RECEDE, LEAVE
-  [ 0,+1, 0, 0]  GROW      family: GROW, EXPAND, SWELL, INFLATE, ENLARGE, FILL, GAIN, INCREASE, ADD
-  [ 0,-1, 0, 0]  SHRINK    family: SHRINK, CONTRACT, DEFLATE, EMPTY, LOSE, REDUCE, CUT
+  [+1, 0, 0, 0]  RISE      family: RISE, CLIMB, ASCEND, RAISE, GO, COME, REACH, MOVE, FOLLOW, BROWSE
+  [-1, 0, 0, 0]  FALL      family: FALL, DESCEND, LOWER, RECEDE, DROP-down
+  [ 0,+1, 0, 0]  GROW      family: GROW, EXPAND, SWELL, INFLATE, ENLARGE, FILL, GAIN, INCREASE, ADD, RECEIVE
+  [ 0,-1, 0, 0]  SHRINK    family: SHRINK, CONTRACT, DEFLATE, EMPTY, REDUCE, CUT
   [ 0, 0,+1, 0]  BLESS     family: BLESS, PRAISE, HONOR, LIKE, LOVE, REWARD, ENRICH, THANK
   [ 0, 0,-1, 0]  CURSE     family: CURSE, BLAME, DISGRACE, HATE, PUNISH, IMPOVERISH
   [ 0, 0, 0,+1]  BEGIN     family: BEGIN, START, INITIATE, OPEN, COMMENCE, LAUNCH
   [ 0, 0, 0,-1]  END       family: END, STOP, TERMINATE, CLOSE, CONCLUDE, CEASE, FINISH
+
+  Note: ENTER, ARRIVE, APPROACH have been MOVED OUT of the RISE atom
+  family (they're really A+D dyads — the "entering" event has a +D
+  starting time component). They live at the dyad layer.
+
+  Note: LOSE has been MOVED OUT of the SHRINK family. LOSE is a
+  triad [-1,-1,-1,0] (the canonical FIND-antipode), not a substance-only
+  loss. The substance-only loss verbs are LOSE-mass, REDUCE, CUT.
+
+  Note: LEAVE, EXIT, DEPART have been MOVED OUT of the FALL family.
+  They're A+D dyads ([-1,0,0,-1] = EXIT). The pure A- atoms are
+  FALL, DESCEND, LOWER, RECEDE.
 
 ─────────────────────────────────────────────────────────────────────
 
@@ -24,14 +36,16 @@ the top-1000 English word list at `top-1000-english.txt`.
 
 ### A axis (POSITION)
 
-[+1,0,0,0]  GO, COME, MOVE, RUN, ENTER, REACH, VISIT, RETURN, FOLLOW, BROWSE, TRAVEL
+[+1,0,0,0]  GO, COME, MOVE, RUN, REACH, VISIT, RETURN, FOLLOW, BROWSE, TRAVEL
   derivation: subject changes spatial position (treated as +A by convention; direction subtype lives on shell-2)
   notes: GO/COME both at +A — direction relative to deictic center is a sub-axis we don't lexicalize here.
   RUN sense = locomote (most common), not "operate."
   RETURN = re-displace (RISE family by motion).
+  ENTER/ARRIVE moved to A×D dyad — they have a +D starting component.
 
-[-1,0,0,0]  LEAVE, DROP, LOWER, RECEDE
+[-1,0,0,0]  DROP-down, LOWER, RECEDE
   derivation: subject loses spatial position relative to reference
+  notes: LEAVE/EXIT/DEPART moved to A×D dyad ([-1,0,0,-1]).
   notes: most A-negative verbs in top-1000 are paired phrasals; raw atoms here.
 
 ### B axis (SUBSTANCE)
@@ -104,13 +118,17 @@ the top-1000 English word list at `top-1000-english.txt`.
   derivation: SHRINK + BLESS — lose thing, gain money/signal
   notes: SHIP/DELIVER/SEND: subject parts with substance and gains signal-credit. Polysemy: SEND a message lives at origin.
 
-[0,+1,+1,0]  EARN, GAIN, PROFIT, WIN, ACHIEVE, ACQUIRE, COLLECT, RECEIVE, ACCEPT
+[0,+1,+1,0]  EARN, GAIN, PROFIT, WIN, ACHIEVE, ACQUIRE, COLLECT, ACCEPT
   derivation: GROW + BLESS — gain substance and signal in one move
   notes: WIN = earn via contest. ACCEPT = receive and validate.
+  CORRECTED: RECEIVE moved out — receiving doesn't add signal,
+  it's pure +B (GROW family). EARN requires earned-credit (signal gain).
 
-[0,-1,-1,0]  WASTE, SPEND, PAY, CONSUME, LOSE, COST, FUND
+[0,-1,-1,0]  WASTE, SPEND, PAY, CONSUME, COST, FUND
   derivation: SHRINK + CURSE — lose both substance and stored value
   notes: PAY/SPEND collapse here. COST is the same event from the substance's frame.
+  CORRECTED: LOSE moved out — LOSE is the FIND-antipode triad
+  [-1,-1,-1,0], not a substance+signal dyad.
 
 ### B × D (substance × time)
 
