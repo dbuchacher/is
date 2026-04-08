@@ -1058,6 +1058,30 @@ def main():
             print(f"  d={d}  {w:<14} {fmt(c)}")
         return 0
 
+    if args[0] == '--compare' and len(args) > 2:
+        # --compare "sentence 1" "sentence 2"
+        text1 = args[1]
+        text2 = args[2]
+        c1 = translate(text1, verbose=False)
+        c2 = translate(text2, verbose=False)
+        d = manhattan_distance(c1, c2)
+        print(f"\n  Text 1: \"{text1}\"")
+        print(f"  Coord:  {fmt(c1)}")
+        print(f"\n  Text 2: \"{text2}\"")
+        print(f"  Coord:  {fmt(c2)}")
+        print(f"\n  Manhattan distance: {d}")
+        if d == 0:
+            print("  → IDENTICAL on the lattice")
+        elif d <= 2:
+            print("  → VERY CLOSE on the lattice")
+        elif d <= 5:
+            print("  → MODERATELY CLOSE")
+        elif d <= 10:
+            print("  → DIFFERENT")
+        else:
+            print("  → VERY DIFFERENT")
+        return 0
+
     if args[0] == '--compose' and len(args) > 1:
         # --compose "+5,+4,+15,+1" find a word sequence whose walk approaches the target
         coord_str = args[1]
