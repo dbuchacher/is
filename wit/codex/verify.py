@@ -175,10 +175,62 @@ def test_sentences() -> int:
                 ("dogs", (0, 1, 1, 1)),
                 ("run", ATOMS["RISE"]),
             ],
-            # Without the NOT applied, ρ = (1, 1, 1, 1) the corner
-            # With NOT applied: antipode = (-1, -1, -1, -1)
-            # We test the NOT-applied form
             (-1, -1, -1, -1),
+        ),
+
+        # S26: "I love you."
+        (
+            "I love you.",
+            [
+                ("I", ORIGIN),
+                ("love", ATOMS["BLESS"]),
+                ("you", ORIGIN),
+            ],
+            (0, 0, 1, 0),
+        ),
+
+        # S27: "I hate you."
+        (
+            "I hate you.",
+            [
+                ("I", ORIGIN),
+                ("hate", ATOMS["CURSE"]),
+                ("you", ORIGIN),
+            ],
+            (0, 0, -1, 0),
+        ),
+
+        # S28: "I built a house."
+        (
+            "I built a house.",
+            [
+                ("I", ORIGIN),
+                ("built", (1, 1, 0, -1)),  # BUILD past
+                ("a", ORIGIN),
+                ("house", (1, 1, 0, 0)),
+            ],
+            (2, 2, 0, -1),
+        ),
+
+        # S29: "I find money."
+        (
+            "I find money.",
+            [
+                ("I", ORIGIN),
+                ("find", (1, 1, 1, 0)),
+                ("money", ATOMS["BLESS"]),
+            ],
+            (1, 1, 2, 0),
+        ),
+
+        # S30: "I die."
+        (
+            "I die.",
+            [
+                ("I", ORIGIN),
+                ("die", (0, 0, -1, -1)),
+            ],
+            (0, 0, -1, -1),
         ),
     ]
 
