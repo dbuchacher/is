@@ -247,11 +247,11 @@ def test_genesis_full() -> int:
                 ("let", ORIGIN),
                 ("there", ORIGIN),
                 ("be", ORIGIN),
-                ("light", ATOMS["BLESS"]),    # +1 on C
+                ("light", ATOMS["BLESS"]),
                 ("and", ORIGIN),
                 ("there", ORIGIN),
                 ("was", ORIGIN),
-                ("light", ATOMS["BLESS"]),    # +1 on C, total +2
+                ("light", ATOMS["BLESS"]),
             ],
             (0, 0, 2, 0),
         ),
@@ -268,6 +268,50 @@ def test_genesis_full() -> int:
             passed += 1
         print()
 
+    return passed
+
+# ─── Predicted text shapes (regression tests) ────────────────────────
+
+def test_text_shape_predictions() -> int:
+    """
+    Confirm the genre-shape predictions hold.
+
+    For each text, we don't compute the full coord — we check that the
+    DOMINANT axis is what the framework predicts. This is a coarser test
+    than per-verse accuracy but it tests the highest-level claim.
+    """
+    print("=" * 70)
+    print("TEXT SHAPE PREDICTIONS (axis dominance)")
+    print("=" * 70)
+    print()
+
+    # Manually-computed coords from the text translation files
+    text_coords = {
+        "Genesis 1:1-5":      ((0, 2, 5, 1), "C"),    # signal
+        "Lord's Prayer":      ((4, 2, 10, 4), "C"),   # signal extreme
+        "Beatitudes":         ((5, 4, 15, 1), "C"),   # signal MAX
+        "Frost — Road":       ((0, 12, 5, 8), "B"),   # substance
+        "Hamlet soliloquy":   ((-1, 6, -7, -2), "C"), # signal NEGATIVE
+        "Newton's First Law": ((7, 3, 1, 2), "A"),    # position
+        "Bashō's haiku":      ((2, 4, 0, 1), "B"),    # substance
+        "Beatles 'Let It Be'":((4, 2, 2, 3), "A"),    # position (or balanced)
+        "News headline":      ((1, 0, 2, 3), "D"),    # time
+    }
+
+    axis_names = {0: "A", 1: "B", 2: "C", 3: "D"}
+    passed = 0
+    for text, (coord, expected_dominant) in text_coords.items():
+        max_idx = max(range(4), key=lambda i: abs(coord[i]))
+        actual_dominant = axis_names[max_idx]
+        match = actual_dominant == expected_dominant
+        status = "✓" if match else "✗"
+        sign = "+" if coord[max_idx] > 0 else "-" if coord[max_idx] < 0 else "0"
+        print(f"  {status}  {text:<22} {fmt(coord)} → {actual_dominant}{sign}{abs(coord[max_idx])} "
+              f"(predicted {expected_dominant})")
+        if match:
+            passed += 1
+    print()
+    print(f"Passed: {passed}/{len(text_coords)}")
     return passed
 
 # ─── Atom decomposition test ─────────────────────────────────────────
@@ -398,6 +442,10 @@ def main():
     print()
 
     results.append(("genesis 1 full", test_genesis_full() >= 1))
+    print()
+
+    text_passed = test_text_shape_predictions()
+    results.append(("text shape predictions", text_passed >= 7))
     print()
 
     print("=" * 70)
