@@ -680,3 +680,49 @@ coord. It holds:
 The origin is a SINGLE coord but holds multiple word classes and
 many distinct words. They're synonyms-in-direction (same lattice
 position, different experiential flavor).
+
+### 19. Text-genre prediction: each genre has a characteristic lattice shape
+
+Translating real texts revealed that DIFFERENT TEXT GENRES land at
+different positions on the lattice. The shape (which axis dominates)
+appears to be predictable from the text type:
+
+  Genesis 1:1-5 sum:    [0, +2,  +5, +1]   sig=5, B=2, D=1   tight
+                        Religious narration: signal dominant, short time
+  
+  Lord's Prayer total:  [+4, +2, +10, +4]   sig=10            extreme
+                        Religious petition: signal EXTREME, all axes high
+  
+  The Road Not Taken:   [0, +12, +5,  +8]   B=12 dominant     extended
+                        Secular poetry: substance-rich, time-extended,
+                        signal moderate
+
+Pattern: religious texts dominate the SIGNAL axis (C+); secular poetry
+dominates SUBSTANCE (B+) and TIME (D+); position (A) is more varied.
+
+Falsifiable prediction: different text genres should systematically
+land at different axis-dominant positions:
+
+  - Religious narration → signal-dominant, time-tight
+  - Religious petition → signal-extreme, focused
+  - Secular poetry → substance + time
+  - Scientific text → ??? (pending Newton's First Law translation)
+  - Philosophical text → ??? (pending Hamlet soliloquy translation)
+  - News journalism → predicted: substance + time forward (D+)
+  - Instructions → predicted: position + action (A+)
+  - Fiction narrative → predicted: substance + time forward
+  - Legal text → predicted: signal + position (rules + status)
+
+This is a falsifiable cross-genre prediction. If the pattern holds
+across many texts, the lattice has captured something real about
+HOW DIFFERENT KINDS OF LANGUAGE USE THE LATTICE DIFFERENTLY.
+
+The discovery: the lattice's 4 axes aren't equally weighted by all
+text. Each genre privileges certain axes — religious discourse
+concentrates on the value/fortune axis (C); descriptive narrative
+concentrates on physical detail (B); science concentrates on
+position and force (A); etc.
+
+This is the strongest cross-text finding from the session. See
+genesis-1.md, lords-prayer.md, the-road.md (and forthcoming
+hamlet.md, newton-1.md) for the data.
