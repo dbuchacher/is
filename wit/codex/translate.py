@@ -481,6 +481,36 @@ def translate(text: str, verbose: bool = True) -> Coord:
 
     return rho
 
+def manhattan_distance(a: Coord, b: Coord) -> int:
+    """L1 distance between two coords on the lattice."""
+    return sum(abs(a[i] - b[i]) for i in range(4))
+
+def find_neighbors(coord: Coord, max_distance: int = 0) -> List[Tuple[str, Coord, int]]:
+    """
+    Find all words within max_distance of the given coord (Manhattan).
+    Returns list of (word, coord, distance) sorted by distance.
+    """
+    results = []
+    for word, c in VOCAB.items():
+        d = manhattan_distance(c, coord)
+        if d <= max_distance:
+            results.append((word, c, d))
+    return sorted(results, key=lambda x: (x[2], x[0]))
+
+def synonyms(word: str) -> List[str]:
+    """Find all words at the SAME coord as the given word."""
+    if word not in VOCAB:
+        return []
+    target = VOCAB[word]
+    return [w for w, c in VOCAB.items() if c == target and w != word]
+
+def antonyms(word: str) -> List[str]:
+    """Find all words at the antipodal coord of the given word."""
+    if word not in VOCAB:
+        return []
+    target = negate(VOCAB[word])
+    return [w for w, c in VOCAB.items() if c == target]
+
 def main():
     args = sys.argv[1:]
 
@@ -515,6 +545,73 @@ def main():
         with open(args[1]) as f:
             text = f.read()
         translate(text, verbose=True)
+        return 0
+
+    if args[0] == '--synonyms' and len(args) > 1:
+        word = args[1].lower()
+        syns = synonyms(word)
+        if not syns:
+            print(f"No synonyms found for '{word}' (or word not in vocab)")
+        else:
+            print(f"Synonyms of '{word}' (same coord {fmt(VOCAB.get(word, ORIGIN))}):")
+            for s in sorted(syns):
+                print(f"  {s}")
+        return 0
+
+    if args[0] == '--antonyms' and len(args) > 1:
+        word = args[1].lower()
+        ants = antonyms(word)
+        if not ants:
+            print(f"No antonyms found for '{word}' (or word not in vocab)")
+        else:
+            print(f"Antonyms of '{word}' (antipodal coord):")
+            for a in sorted(ants):
+                print(f"  {a}  {fmt(VOCAB[a])}")
+        return 0
+
+    if args[0] == '--neighbors' and len(args) > 1:
+        word = args[1].lower()
+        if word in VOCAB:
+            target = VOCAB[word]
+        else:
+            print(f"Word '{word}' not in vocab")
+            return 1
+        max_d = int(args[2]) if len(args) > 2 else 1
+        neighbors = find_neighbors(target, max_distance=max_d)
+        print(f"Neighbors of '{word}' {fmt(target)} (distance ≤ {max_d}):")
+        for w, c, d in neighbors:
+            if w != word:
+                print(f"  d={d}  {w:<14} {fmt(c)}")
+        return 0
+
+    if args[0] == '--coord' and len(args) > 1:
+        # --coord "0,1,1,1" find words at this coord
+        coord_str = args[1]
+        try:
+            parts = [int(x.strip()) for x in coord_str.split(',')]
+            target = tuple(parts)
+            assert len(target) == 4
+        except (ValueError, AssertionError):
+            print(f"Invalid coord: {coord_str}. Format: '0,1,1,1'")
+            return 1
+        max_d = int(args[2]) if len(args) > 2 else 0
+        neighbors = find_neighbors(target, max_distance=max_d)
+        print(f"Words at/near {fmt(target)} (distance ≤ {max_d}):")
+        for w, c, d in neighbors:
+            print(f"  d={d}  {w:<14} {fmt(c)}")
+        return 0
+
+    if args[0] == '--help':
+        print(__doc__)
+        print()
+        print("Modes:")
+        print("  python3 translate.py                 # demo mode")
+        print("  python3 translate.py 'sentence'      # translate text")
+        print("  python3 translate.py --file FILE     # translate file")
+        print("  python3 translate.py --synonyms WORD")
+        print("  python3 translate.py --antonyms WORD")
+        print("  python3 translate.py --neighbors WORD [DISTANCE]")
+        print("  python3 translate.py --coord 'A,B,C,D' [DISTANCE]")
         return 0
 
     # Otherwise translate the args as a sentence
