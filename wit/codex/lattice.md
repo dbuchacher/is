@@ -24,20 +24,28 @@ in sibling files in this directory:
     genesis-2-3.md       Genesis 1:6-13 (Days 2 and 3)
     lords-prayer.md      Matthew 6:9-13 (religious petition)
                          Final coord: [+4,+2,+10,+4]
+    beatitudes.md        Matthew 5:3-12 (religious blessing)
+                         Final coord: [+5,+4,+15,+1] — NEW MAX SIGNAL
     the-road.md          Frost (secular poetry)
                          Final coord: [0,+12,+5,+8]
     hamlet.md            "To be or not to be" (philosophical drama)
                          Final coord: [-1,+6,-7,-2]
     newton-1.md          Newton's First Law (scientific physics)
                          Final coord: [+7,+3,+1,+2]
-    short-texts.md       haiku + Beatles + news headline
-    text-shapes.md       8-text comparison table
+    short-texts.md       haiku + Beatles + news headline (3 short)
+    text-shapes.md       multi-text comparison table
 
-  Programmatic verifier:
+  Programmatic tools:
     verify.py            Python verifier — independently checks all
                          atom decompositions, antipodal pairs, origin
-                         self-duality, sentence walks, Genesis verses
-                         ALL TESTS PASS
+                         self-duality, sentence walks, Genesis verses.
+                         ALL TESTS PASS.
+    translate.py         Automated English→coord translator with:
+                         - 350+ word vocab
+                         - simple stemmer (-s/-ed/-ing/-er/-est)
+                         - polarity NOT for negation
+                         - synonyms/antonyms/neighbors query modes
+                         - works on real text via --file or stdin
 
   Session log:
     session-2026-04-08.md  full session log
@@ -47,17 +55,39 @@ have been translated to lattice coords**, each landing at a distinct
 "shape" predicting the genre. Every word's coord is derivable from
 the 8 atoms via the 4-question rule. The verifier confirms the math.
 
-The genre-shape prediction:
-  Religious narration   → C+ (Genesis)
-  Religious petition    → C++ extreme (Lord's Prayer)
-  Secular poetry        → B+ + D+ (Frost)
-  Philosophical drama   → C- (Hamlet)
-  Scientific physics    → A+ (Newton)
-  Minimalist nature     → B+ + C cancel (haiku)
-  Pop music             → balanced positive (Beatles)
-  News journalism       → D+ (headline)
+The genre-shape prediction (9 texts now translated):
 
-8 genres, 8 distinct lattice shapes, no collisions. Falsifiable.
+  Text                  Final coord            Dominant axis
+  ────                  ───────────            ─────────────
+  Beatitudes            [+5, +4, +15, +1]      C+++++ (max signal)
+  Lord's Prayer         [+4, +2, +10, +4]      C++++ (extreme signal)
+  Frost — Road          [ 0,+12,  +5, +8]      B+ + D+ (substance + time)
+  Newton's Law          [+7, +3,  +1, +2]      A+ (position dominant)
+  Hamlet                [-1, +6,  -7, -2]      C- (signal NEGATIVE)
+  Genesis 1:1-5         [ 0, +2,  +5, +1]      C+ (signal positive)
+  Bashō's haiku         [+2, +4,   0, +1]      B+ + C cancel
+  "Let It Be" (chorus)  [+4, +2,  +2, +3]      balanced positive
+  News headline         [+1,  0,  +2, +3]      D+ (time forward)
+
+9 texts, 9 distinct lattice shapes, no collisions.
+
+The signal axis ladder:
+  Beatitudes        +15  (8x BLESSED + righteousness + mercy)
+  Lord's Prayer     +10
+  Genesis 1         +5
+  Frost             +5
+  Newton            +1
+  News              +2
+  Pop song          +2
+  Haiku             0    (signal cancellation by design)
+  Hamlet            -7   (philosophical NEGATIVE)
+
+Religious blessing texts saturate the signal axis.
+Philosophical/tragic texts go negative.
+Scientific texts are neutral on signal.
+Each genre has its predicted profile.
+
+This is a falsifiable prediction across linguistic genres.
 
 ## The 4 axes
 
