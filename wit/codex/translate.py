@@ -487,6 +487,103 @@ VOCAB: Dict[str, Coord] = {
     "later": (0, 0, 0, 1),
     "early": (0, 0, 0, 1),
     "late": (0, 0, 0, -1),
+
+    # ─── Numbers ───
+    "one": (0, 1, 0, 0),
+    "two": (0, 1, 0, 0),
+    "three": (0, 1, 0, 0),
+    "four": (0, 1, 0, 0),
+    "five": (0, 1, 0, 0),
+    "six": (0, 1, 0, 0),
+    "seven": (0, 1, 0, 0),
+    "eight": (0, 1, 0, 0),
+    "nine": (0, 1, 0, 0),
+    "ten": (0, 1, 0, 0),
+    "first": (0, 0, 0, -1),  # ordinal first = earliest
+    "second": (0, 0, 0, 0),
+    "third": (0, 0, 0, 1),
+    "last": (0, 0, 0, -1),
+
+    # ─── Family ───
+    "brother": (0, 1, 1, 1),
+    "sister": (0, 1, 1, 1),
+    "son": (0, 1, 1, 1),
+    "daughter": (0, 1, 1, 1),
+    "wife": (0, 1, 1, 1),
+    "husband": (0, 1, 1, 1),
+    "parent": (0, 1, 1, 1),
+    "baby": (0, 1, 1, 1),
+
+    # ─── Common verbs not yet in vocab ───
+    "eat": (0, 1, 0, 0),  # body gains substance
+    "ate": (0, 1, 0, -1),
+    "drink": (0, 1, 0, 0),
+    "drank": (0, 1, 0, -1),
+    "sit": (0, 0, 0, 0),  # stative
+    "sat": (0, 0, 0, -1),
+    "stand": (0, 0, 0, 0),
+    "stood": (0, 0, 0, -1),
+    "lie": (0, 0, 0, 0),
+    "lay": (0, 0, 0, -1),
+    "breathe": (0, 0, 0, 0),
+    "breath": (0, 0, 0, 0),
+    "let": (0, 0, 0, 0),  # modal
+    "there": (0, 0, 0, 0),
+    "separated": (0, -1, 0, 0),
+    "separate": (0, -1, 0, 0),
+    "formless": (0, 0, 0, 0),
+    "hovering": (0, 0, 0, 0),
+    "hover": (0, 0, 0, 0),
+    "save": (0, 0, 1, -1),  # REMEMBER family
+    "saved": (0, 0, 1, -1),
+
+    # ─── More adjectives ───
+    "strong": (0, 1, 1, 0),
+    "weak": (0, -1, -1, 0),
+    "young": (0, 0, 0, 1),
+    "ancient": (0, 0, 0, -1),
+    "beautiful": (0, 0, 1, 0),
+    "happy": (0, 0, 1, 0),
+    "sad": (0, 0, -1, 0),
+    "angry": (0, 0, -1, 0),
+    "afraid": (0, 0, -1, 0),
+    "calm": (0, 0, 0, 0),
+    "warm": (0, 0, 1, 0),
+    "cold": (0, 0, -1, 0),
+    "hot": (0, 0, 1, 0),
+    "wet": (0, 1, 0, 0),
+    "dry": (0, -1, 0, 0),
+    "clean": (0, 0, 1, 0),
+    "dirty": (0, 0, -1, 0),
+    "free": (0, 0, 1, 0),
+    "bound": (0, 0, -1, 0),
+    "open_a": (0, 0, 0, 1),
+    "closed_a": (0, 0, 0, -1),
+
+    # ─── Common nouns from secular texts ───
+    "score": (0, 1, 0, 0),  # Gettysburg
+    "year": (0, 0, 0, 0),
+    "years": (0, 0, 0, 0),
+    "ago": (0, 0, 0, -1),
+    "fathers": (0, 1, 1, 1),
+    "brought": (0, 1, 0, -1),
+    "bring": (0, 1, 0, 0),
+    "forth": (0, 0, 0, 1),
+    "continent": (0, 1, 0, 0),
+    "nation": (0, 1, 1, 1),
+    "conceived": (0, 1, 0, 1),
+    "liberty": (0, 0, 1, 0),
+    "dedicated": (0, 0, 1, 0),
+    "proposition": (0, 0, 0, 0),
+    "men": (0, 1, 1, 1),
+    "equal": (0, 0, 0, 0),
+    "compare": (0, 0, 0, 0),
+    "thee": (0, 0, 0, 0),
+    "summer": (0, 0, 1, 0),  # warmth season
+    "winter": (0, 0, -1, 0),
+    "spring": (0, 0, 0, 1),
+    "autumn": (0, 0, 0, -1),
+    "fall_n": (0, 0, 0, -1),
 }
 
 # ─── Composition functions ───────────────────────────────────────────
