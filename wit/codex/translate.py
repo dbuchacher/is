@@ -643,6 +643,33 @@ def main():
         translate(text, verbose=True)
         return 0
 
+    if args[0] == '--lines' and len(args) > 1:
+        # Process each line separately, reporting per-line coords
+        with open(args[1]) as f:
+            lines = [line.strip() for line in f if line.strip()]
+        print()
+        print(f"Processing {len(lines)} lines independently")
+        print("=" * 70)
+        line_coords = []
+        for i, line in enumerate(lines, 1):
+            print(f"\n  Line {i}: \"{line}\"")
+            coord = translate(line, verbose=False)
+            print(f"  → {fmt(coord)}")
+            line_coords.append(coord)
+        # Sum
+        total = ORIGIN
+        for c in line_coords:
+            total = compose(total, c)
+        print()
+        print("=" * 70)
+        print(f"  Total (sum of all lines): {fmt(total)}")
+        labels = ["POSITION", "SUBSTANCE", "SIGNAL", "TIME"]
+        max_idx = max(range(4), key=lambda i: abs(total[i]))
+        if total[max_idx] != 0:
+            sign = "+" if total[max_idx] > 0 else "-"
+            print(f"  Dominant: {labels[max_idx]} {sign}{abs(total[max_idx])}")
+        return 0
+
     if args[0] == '--synonyms' and len(args) > 1:
         word = args[1].lower()
         syns = synonyms(word)
