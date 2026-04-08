@@ -3,6 +3,25 @@
 Every composite verb must decompose from the 8 atomic directions.
 If it doesn't decompose cleanly, the slot is blank.
 
+## ⚡ Status as of session 2026-04-08
+
+This file is the FRAMEWORK. The vocabulary work lives in sibling files:
+
+  verbs.md         ~190 verbs derived
+  nouns.md         ~150-200 nouns derived (static-feature decomposition)
+  modifiers.md     adjectives + adverbs
+  function-words.md  prepositions, conjunctions, articles, determiners,
+                     pronouns, modals
+  composition.md   9 sentence composition rules
+  sentences.md     17 worked sentence translations
+  genesis-1.md     full Genesis 1:1-5 translated to coords (5-verse walk)
+  vocabulary.md    auto-compiled master index — 412 unique English words
+                   across 36 distinct lattice coords
+
+The framework now demonstrably translates real text. Genesis 1:1-5
+walks through the lattice as a single composed coord. Every word's
+coord is derivable from the 8 atoms via the 4-question rule.
+
 ## The 4 axes
 
   A = POSITION   displacement in space
@@ -330,23 +349,31 @@ Each shell adds fine-grained magnitude distinctions within verb families.
 
 ─────────────────────────────────────────────────────────────────────
 
-## Status
+## Status (updated 2026-04-08)
 
   Axes:            committed (A/B/C/D = position/substance/signal/time)
-                   wh- equivalent: WHERE/WHAT/WHICH/WHEN (interrogatives,
-                   same axes — both name sets are valid)
+                   wh- equivalent: WHERE/WHAT/WHICH/WHEN (both valid)
   Atoms:           solid (8 directions, 4 antipodal pairs)
-  Dyads:           9 pairs validated, 3 pairs blanked
-  Triads:          2 pairs validated, 14 slots blank
-  Corners:         reserved for bonds (32 with ±½ spin)
-  Origin:          container family (~18+ verbs, all collapse here)
-  Shell 2+:        sketched for intensified verbs
-  Bond spin:       32 = 16 corners × 2 polarity (±½) hypothesis
+  Dyads:           ~16 dyad coords populated with verbs/nouns/adjectives
+  Triads:          ~11 triad coords populated
+  Origin:          container family (~75 word entries — verbs, nouns,
+                   adjectives, pronouns all collapse here)
+  Bond layer:      modals/aux at corners with ±½ polarity (n't = NOT)
+  Shell 2+:        sketched for intensified verbs (DOUBLE, EXPLODE, etc.)
 
-  What's solid: 29 content verb decompositions, origin as container
-  What's open: corner → modal assignment with polarity, triad slots,
-  cross-linguistic axis additions (Japanese social direction, Arabic
-  causation, Russian telicity)
+  Vocabulary:      412 unique English words derived
+  Coords used:     36 distinct lattice positions (out of 81 in shell 1)
+  Test text:       Genesis 1:1-5 fully translated (5 verses → 1 walk)
+  Test sentences:  17 sentences worked through composition rules
+
+  What's solid: derivation rule, atom decomposition, container layer,
+                composition by · operator, Genesis 1 walk
+  What's open: 
+    - Many shell-1 coords still unfilled (45 of 81 slots empty)
+    - Polysemy resolution for RUN/GET/USE/PLAY etc.
+    - Corner→modal polarity assignment specifics
+    - Cross-linguistic axis additions (causation, social direction)
+    - Aspect and embedded clauses in composition rules
 
 ─────────────────────────────────────────────────────────────────────
 
@@ -567,3 +594,89 @@ This gives a structural reason for the 32: the gate from
 1-container.md (NOT) doubles every operator into affirmative
 and negative forms. Every modal has its `n't` contraction.
 That's the 32.
+
+### 13. Sentences are walks; ρ accumulates
+
+Composition uses the · operator (element-wise trit addition) to
+compose word coords into a sentence-level coord. The running state
+ρ starts at origin (the speaker = container) and accumulates each
+word's coord. The final ρ is the sentence's lattice destination.
+
+  ρ₀ = [0, 0, 0, 0]                  (start at speaker)
+  ρₙ = ρₙ₋₁ · wordₙ                  (composition by trit addition)
+  final ρ = sentence coord
+
+See composition.md for the 9 base composition rules and sentences.md
+for 17 worked examples.
+
+### 14. Nouns share coords with their related verbs
+
+Verbs are operations; nouns are static residues at the same coord.
+HAT and BUILD both = [+1,+1,0,0]. DOG and LIVE both = [0,0,+1,+1]
+(or [0,+1,+1,+1] with substance). MONEY and BLESS both = [0,0,+1,0].
+HOLE and DEMOLISH both = [-1,-1,0,0].
+
+The lattice is part-of-speech polymorphic — each coord holds a verb
+(operation), a noun (thing), an adjective (feature), and an adverb
+(magnitude) all describing the same point from different grammatical
+angles. See nouns.md for the verified noun-verb collision pattern
+across ~150 nouns.
+
+### 15. Genesis 1:1-5 walks the lattice cleanly
+
+The 5-verse opening of Genesis translates to a 5-step lattice walk
+where every word's coord is derived and every verse's coord is
+composed. The framework's predictions verified by the translation:
+
+  1. "Heavens AND earth" sums to A=0 (the antipodes cancel — the
+     position axis is fully covered)
+  2. "Light" lands at C+1 (signal-on event, shell 2 due to assertion
+     + manifestation)
+  3. "Day" and "night" labels cancel (binary established)
+  4. "Evening AND morning" cancel to D=0 (one full oscillation)
+  5. The full 5-verse walk lands at [0, +2, +5, +1] — substance
+     present, signal maximally on, position canceled, time started
+
+See genesis-1.md for the full word-by-word trace. This is the first
+real text fully translated to coords. The framework survived.
+
+### 16. Composition cancellation is meaningful
+
+When two words compose to a coord that nets to zero on some axis,
+that's structurally meaningful — it means the two words COVER that
+axis and the net change is zero. Examples:
+
+  red + ugly  →  C+ + C-  →  C=0     (visual feature canceled by aesthetic judgment)
+  light + darkness  →  C+ + C-  →  C=0     (binary established, both states represented)
+  evening + morning  →  D- + D+  →  D=0     (one full oscillation = one tick)
+  heavens + earth  →  A+ + A-  →  A=0     (entire vertical axis covered)
+  Spirit + darkness (verse 2) → C+ + C-  →  C=0     (light vs dark in tension)
+
+Cancellation isn't a bug — it's the lattice expressing "both ends
+present" which on a single axis means the axis is fully spanned.
+The composition maps "fully spanning an axis" to "summing to zero
+on that axis." Beautiful structural prediction, verified by Genesis.
+
+### 17. The vocabulary doubles up — same word, multiple coords
+
+Some English words have multiple senses that derive to different
+coords. RUN (locomote) ≠ RUN (operate). GET (acquire) ≠ GET (arrive).
+PLAY (game) ≠ PLAY (music). For the master vocabulary index, we
+pick the MOST COMMON sense and note polysemy. Future work may
+support sense-specific coords.
+
+### 18. Origin layer holds ~75 word entries (and growing)
+
+The container layer (origin = [0,0,0,0]) is the densest single
+coord. It holds:
+  - All container verbs (THINK, KNOW, BE, FEEL, SEE, HEAR...)
+  - All abstract nouns (IDEA, MIND, LOVE, JUSTICE, FREEDOM...)
+  - All first-person pronouns (I, ME, MY)
+  - All proximal references (HERE, NOW, THIS)
+  - All speech-act verbs (SAY, TELL, ASK, CALL, REPLY...)
+  - All cognitive evaluation verbs (JUDGE, CHECK, COMPARE, DECIDE)
+  - All stative possession verbs (HAVE, OWN, KEEP, HOLD)
+
+The origin is a SINGLE coord but holds multiple word classes and
+many distinct words. They're synonyms-in-direction (same lattice
+position, different experiential flavor).
