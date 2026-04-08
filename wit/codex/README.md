@@ -64,6 +64,11 @@ Then explore the vocabulary and text translations as needed.
 ### Source data
 - `top-1000-english.txt` — top 1000 English words by frequency
 
+### Documentation (read after framework)
+- `showcase.md` — 5-minute pitch with the cogito-at-origin result
+- `tutorial.md` — step-by-step guide to deriving a new word's coord
+- `next-session.md` — prioritized work for whoever picks this up
+
 ### Audit / process
 - `validation-report.md` — ~70 issues found in vocabulary derivations
 - `session-2026-04-08.md` — full session log from this work session
