@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Atlas — 1D</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0d0d10; overflow: hidden; font-family: 'JetBrains Mono', monospace; }
+canvas { display: block; }
+#ui {
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  z-index: 50; display: flex; gap: 8px; align-items: center;
+}
+#ui button {
+  background: none; border: 1px solid #2a2a32; color: #7f8490;
+  font: inherit; font-size: 12px; padding: 5px 14px; border-radius: 14px;
+  cursor: pointer;
+}
+#ui button:hover { border-color: #b39df3; color: #b39df3; }
+#ui button.active { border-color: #b39df3; color: #b39df3; background: #b39df315; }
+.sep { color: #2a2a32; font-size: 10px; }
+</style>
+</head>
+<body>
+<div id="ui">
+  <button class="view-btn active" data-view="nonlocal">non-local</button>
+  <button class="view-btn" data-view="local">local</button>
+  <span class="sep">│</span>
+  <button id="btn-electron" class="active" style="color:#fc5d7c;border-color:#fc5d7c40">e⁻</button>
+  <button id="btn-neutrino" class="active" style="color:#7f8490;border-color:#7f849040">ν</button>
+  <button id="btn-positron" class="active" style="color:#9ed072;border-color:#9ed07240">e⁺</button>
+</div>
+<script type="importmap">
+{ "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0d0d10);
+const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.1, 200);
+camera.position.set(0, 0, 8);
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(innerWidth, innerHeight);
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+document.body.appendChild(renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+const l = new THREE.DirectionalLight(0xffffff, 0.5); l.position.set(5,8,6); scene.add(l);
+
+const S = 3.0;
+
+// line
+scene.add(new THREE.Line(
+  new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-50,0,0), new THREE.Vector3(50,0,0)]),
+  new THREE.LineBasicMaterial({ color: 0xe2e2e3, transparent: true, opacity: 0.4 })
+));
+
+// 3 points
+const pts = [
+  { val:-1, color: 0xfc5d7c },
+  { val: 0, color: 0x7f8490 },
+  { val: 1, color: 0x9ed072 },
+];
+const meshes = pts.map(p => {
+  const m = new THREE.Mesh(new THREE.SphereGeometry(0.1,24,16),
+    new THREE.MeshStandardMaterial({ color:p.color, emissive:p.color, emissiveIntensity:0.3, roughness:0.3 }));
+  m.position.set(p.val*S, 0, 0); scene.add(m); return m;
+});
+
+// lepton toggles
+['btn-electron','btn-neutrino','btn-positron'].forEach((id,i) => {
+  document.getElementById(id).addEventListener('click', e => {
+    meshes[i].visible = !meshes[i].visible;
+    e.target.classList.toggle('active', meshes[i].visible);
+  });
+});
+
+// views
+const VIEWS = { nonlocal: [0,0,8], local: [8,0,0] };
+let anim=false, aFrom=new THREE.Vector3(), aTo=new THREE.Vector3(), aT=0;
+function ease(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
+document.querySelectorAll('.view-btn').forEach(b => b.addEventListener('click', () => {
+  aFrom.copy(camera.position); aTo.set(...VIEWS[b.dataset.view]); aT=0; anim=true;
+  document.querySelectorAll('.view-btn').forEach(x=>x.classList.remove('active')); b.classList.add('active');
+}));
+
+window.addEventListener('resize', () => { camera.aspect=innerWidth/innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth,innerHeight); });
+
+let last=performance.now()/1000;
+function animate(){
+  requestAnimationFrame(animate);
+  const now=performance.now()/1000, dt=now-last; last=now;
+  if(anim){aT+=dt*2;if(aT>=1){aT=1;anim=false}camera.position.lerpVectors(aFrom,aTo,ease(aT));camera.lookAt(0,0,0)}
+  controls.update(); renderer.render(scene,camera);
+}
+animate();
+</script>
+</body>
+</html>

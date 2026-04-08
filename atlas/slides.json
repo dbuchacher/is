@@ -1,0 +1,212 @@
+[
+  {
+    "id": "diagonal",
+    "label": "principal quantum number 0",
+    "title": "Lattice Points",
+    "desc": "",
+    "boxes": [
+      { "coord": [-1,-1,-1,-1], "title": "electron", "sub": "−1 · backward · SF", "color": "var(--neg)" },
+      { "coord": [0,0,0,0], "title": "neutrino", "sub": "0 · still · ZF", "color": "var(--accent)" },
+      { "coord": [0.5,0.5,0.5,0.5], "title": "hylo", "sub": "½ · bond · all forces", "color": "var(--Q)" },
+      { "coord": [1,1,1,1], "title": "positron", "sub": "+1 · forward · no flags", "color": "var(--pos)" }
+    ],
+    "deep": [
+      {
+        "title": "The Equation",
+        "tag": "core",
+        "body": "<div class='formula-box'>f(a,b,c,d) = L<sup>a</sup> · M<sup>b</sup> · Q<sup>c</sup> · T<sup>d</sup></div>Four dimensions. Integer coordinates. Every physical quantity and every computational operation is a point in this lattice. Speed is L/T. Energy is L²M/T². Bandwidth is M/T. Not analogy — <strong>identity</strong>. Same formula, same structure, same coordinate."
+      },
+      {
+        "title": "wave — fiat — observation",
+        "tag": "source: 0-information/mod.rs",
+        "body": "<code>pub fn wave(fiat: bool) -> u64 { fiat as u64 }</code><br><br>Bool → bit. Two-state simplification of three-state reality. <code>let x = 5</code> is a fiat. In physics: observation collapses wave. In religion: \"let there be light.\" Light is a wave.<br><br><div class='evidence'><span class='ev-l'>positron()</span><span class='ev-v'>+1 — forward — increase — SF=0, ZF=0</span><span class='ev-l'>neutrino()</span><span class='ev-v'>0 — still — no change — ZF=1</span><span class='ev-l'>electron()</span><span class='ev-v'>−1 (wrapping) — backward — decrease — SF=1</span></div>The neutrino isn't a particle sitting at zero. It's the <strong>moment the wave passes through zero</strong>. positron(+1) → neutrino(0) → electron(−1) → neutrino(0) → repeat. Neutrino oscillation = waves oscillate. That's what waves DO."
+      },
+      {
+        "title": "hylo bond — the complete recursion scheme",
+        "tag": "source: 01-bond/param/hylo.asm",
+        "body": "All four forces, all forward. (+½, +½, +½, +½).<br><br><div class='evidence'><span class='ev-l'>P (PROJ/strong) +½</span><span class='ev-v'>read</span><span class='ev-l'>C (COMP/EM) +½</span><span class='ev-v'>apply</span><span class='ev-l'>R (PRIM/gravity) +½</span><span class='ev-v'>advance</span><span class='ev-l'>W (WEAK/weak) +½</span><span class='ev-v'>test</span></div>The <strong>Grand Unified Bond</strong> — all four fundamental forces cooperate in the same direction. Georgi & Glashow (1974): at high enough energy, all forces merge. The hylo is that energy.<br><br>The Turing machine's single step: read the tape, apply the transition function, move the head, check for halt. Meijer et al. (1991) named the hylomorphism. Every stream-processing program is a sequence of hylos.<br><br><strong>Every forward bond is a subface of hylo.</strong> Remove any force and you get a simpler bond: fold, filter, slurp, take_while."
+      },
+      {
+        "title": "meta bond — antimatter",
+        "tag": "source: 01-bond/return/meta.asm",
+        "body": "All four forces, all backward. (−½, −½, −½, −½).<br><br><div class='evidence'><span class='ev-l'>P at −½</span><span class='ev-v'>write</span><span class='ev-l'>C at −½</span><span class='ev-v'>curry</span><span class='ev-l'>R at −½</span><span class='ev-v'>rewind</span><span class='ev-l'>W at −½</span><span class='ev-v'>bypass</span></div>The anti-hylo. If hylo is execution, meta is generation. Reflection, eval, macro expansion, code generation — programs that produce programs.<br><br>Dirac (1928): the positron follows from the Dirac equation's negative energy solutions. The existence of meta follows from the lattice's negative coordinate solutions.<br><br><strong>meta · hylo = one complete cycle.</strong> hylo · meta = bootstrap (generate then execute). Their annihilation yields the identity — the system that generates itself."
+      },
+      {
+        "title": "Self-Reference (Fixed Point)",
+        "tag": "proof",
+        "body": "f(1,1,1,1) = hylo = full pipeline (read, call, cycle, test). The equation applied to its own coordinates produces itself.<br><br>Five independent proofs converge:<br><div class='evidence'><span class='ev-l'>Lawvere 1969</span><span class='ev-v'>Turing complete → surjective → fixed point exists</span><span class='ev-l'>Banach 1922</span><span class='ev-v'>unique fixed point in complete metric space</span><span class='ev-l'>Scott 1972</span><span class='ev-v'>continuous endomorphism → Kleene chain converges</span><span class='ev-l'>Y combinator</span><span class='ev-v'>Y f = f(Y f). Hylo = fixed point of Φ(h)=α∘F(h)∘β</span><span class='ev-l'>Kauffman 2003</span><span class='ev-v'>reflexive domain D≅D^D → eigenform T(x)=x</span></div>Confidence: 95%. These are proven theorems."
+      }
+    ]
+  },
+  {
+    "id": "single",
+    "label": "principal quantum number 1 · quarks",
+    "title": "Single Dimensions",
+    "desc": "One dimension active. The quarks of the lattice. Each axis has its atom pair (+1/−1) and its bond at ½ — the force that acts on that dimension.",
+    "generate": "single",
+    "deep": [
+      {
+        "title": "Quarks = Logic Gates",
+        "tag": "source: quarks.rs",
+        "body": "<code>pub fn and(a: bool, b: bool) -> bool { a & b }<br>pub fn or(a: bool, b: bool) -> bool { a | b }<br>pub fn not(a: bool) -> bool { !a }</code><br><br>3 independent boolean gates (Post, 1941). 3 color charges. Same number, same reason.<br><br><div class='evidence'><span class='ev-l'>AND</span><span class='ev-v'>up quark — +2/3 charge — truth table 1/4 true</span><span class='ev-l'>OR</span><span class='ev-v'>down quark — −1/3 charge — truth table 3/4 true</span><span class='ev-l'>NOT</span><span class='ev-v'>weak force — transformer — W+/W−/Z from compositions</span></div><strong>Functional completeness IS confinement.</strong> You need all three to compute anything = you can't isolate one quark.<br><br>As forces (weak bosons):<br><div class='evidence'><span class='ev-l'>W+ = OR(x, NOT(x))</span><span class='ev-v'>tautology — forces existence (creation)</span><span class='ev-l'>W− = AND(x, NOT(x))</span><span class='ev-v'>contradiction — forces non-existence (annihilation)</span><span class='ev-l'>Z = x</span><span class='ev-v'>identity — no transformation</span></div>6 flavors = 3 gates × NOT. 8 gluons = 3²−1 non-trivial wirings."
+      },
+      {
+        "title": "Leptons = CPU FLAGS",
+        "tag": "source: 0-information/mod.rs",
+        "body": "Every operation the CPU has ever done produces three states. The FLAGS register after any ALU instruction:<br><br><div class='evidence'><span class='ev-l'>SF set → electron (−1)</span><span class='ev-v'>negative — backward — decrease</span><span class='ev-l'>ZF set → neutrino (0)</span><span class='ev-v'>zero — still — no change</span><span class='ev-l'>neither → positron (+1)</span><span class='ev-v'>positive — forward — increase</span><span class='ev-l'>CF</span><span class='ev-v'>emission — a bit radiated out of the register. By CPU definition.</span><span class='ev-l'>OF</span><span class='ev-v'>pair production — sign flip = matter↔antimatter</span><span class='ev-l'>PF</span><span class='ev-v'>parity conservation — weak force (NOT) violates it at Gen 1 (1-bit)</span></div><code>lt(b,a)</code> = positron detection = Feynman time reversal (1949). Swap args = reverse time.<br><br>This isn't a mapping we chose. It's what the hardware does. Since 1978. <strong>\"The FLAGS register is a lepton detector built into every CPU.\"</strong>"
+      },
+      {
+        "title": "Spin = Access Mode",
+        "tag": "source: 0-information/mod.rs",
+        "body": "<div class='evidence'><span class='ev-l'>fermion (spin ½)</span><span class='ev-v'>write = exclusive = single writer per address</span><span class='ev-l'>boson (spin 1)</span><span class='ev-v'>read = shareable = multiple readers allowed</span></div>WHY Pauli exclusion? Same reason as OS: two writers to same address = race condition = corruption. Physics, sm, and operating systems enforce the same rule for the same reason.<br><br>Bose-Einstein condensate = many readers on one trace = fan-out. The quantum phenomenon IS the architecture feature.<br><br><strong>Writing IS matter</strong> (creates, exclusive, fermion). <strong>Reading IS light</strong> (observes, shareable, boson). No edit/modify — particles are immutable. Create or destroy only."
+      },
+      {
+        "title": "Forces = Constructors",
+        "tag": "source: forces.rs",
+        "body": "Three from Kleene (1936) + one from quarks = all four.<br><br><div class='evidence'><span class='ev-l'>PROJ (MOV) → strong</span><span class='ev-v'>binds quarks → hadrons. Register between two gates IS the gluon. 8 gluons = 3²−1. Shortest range. Confines.</span><span class='ev-l'>COMP (CALL/RET) → EM</span><span class='ev-v'>binds functions → programs. Infinite range. Photons = arguments and return values. Every function signature is a Feynman diagram.</span><span class='ev-l'>PRIM (JMP/loop) → gravity</span><span class='ev-v'>keeps things orbiting. Weakest — you can break out (escape velocity). State: the iterator (entropy).</span><span class='ev-l'>Weak = quark compositions</span><span class='ev-v'>W+=tautology (creation). W−=contradiction (annihilation). Z=identity.</span></div>Each force pairs with its dimension. The bond at ½ on that axis IS the force."
+      },
+      {
+        "title": "Speed of Light = Clock Cycle",
+        "tag": "source: forces.rs",
+        "body": "A photon (argument) arrives in 1 clock cycle. Register to register. That's the fastest anything travels. The clock IS c.<br><br><div class='evidence'><span class='ev-l'>photon (register value)</span><span class='ev-v'>1 cycle = c (massless)</span><span class='ev-l'>proton (add)</span><span class='ev-v'>1 cycle ≈ c (11 gates)</span><span class='ev-l'>fusion (mul)</span><span class='ev-v'>3-5 cycles < c (49 gates)</span><span class='ev-l'>fission (div)</span><span class='ev-v'>35-90 cycles << c (112 gates)</span></div><strong>Overclocking = trying to exceed c.</strong> Push the clock too fast and values arrive before circuits finish. Cause/effect decouple. Crash. Same failure mode as FTL: causality violation.<br><br><strong>Speculative execution = FTL with paradox cleanup.</strong> The CPU computes results BEFORE knowing if they're needed. Wrong guess: discard the impossible timeline. Spectre/Meltdown (2018): the discarded timeline left traces in cache. Information from an impossible future leaked into the present. A real causality violation. In billions of CPUs. For 25 years."
+      },
+      {
+        "title": "Element Mapping",
+        "tag": "ordering",
+        "body": "Elements map by ordinal position, not composition. H is first because space is first.<br><br><div class='evidence'><span class='ev-l'>L+ → H(1)</span><span class='ev-v'>space — hydrogen — pure proton</span><span class='ev-l'>L− → He(2)</span><span class='ev-v'>wavenumber — helium — first with neutrons</span><span class='ev-l'>M+ → Li(3)</span><span class='ev-v'>mass — lithium — first metal</span><span class='ev-l'>M− → Be(4)</span><span class='ev-v'>specific — beryllium</span><span class='ev-l'>Q+ → B(5)</span><span class='ev-v'>signal — boron</span><span class='ev-l'>Q− → C(6)</span><span class='ev-v'>per signal — carbon</span><span class='ev-l'>T+ → N(7)</span><span class='ev-v'>time — nitrogen</span><span class='ev-l'>T− → O(8)</span><span class='ev-v'>frequency — oxygen</span></div>Big Bang produces ONLY elements 1−4 = first two axes. Genesis 1:1 creates space + mass = same boundary."
+      },
+      {
+        "title": "Neutrino Oscillation",
+        "tag": "source: 0-information/mod.rs",
+        "body": "The neutrino isn't a particle sitting at zero. It's the MOMENT the wave passes through zero. The wave keeps moving:<br><br>positron(+1) → neutrino(0) → electron(−1) → neutrino(0) → repeat<br><br>The neutrino oscillates because waves oscillate. <code>sin(t)</code> IS the oscillation. Every zero crossing is a neutrino.<br><br>Partial oscillation: <code>binding(0, mask)</code> = progressive XOR. <code>binding(0, 0x01)</code> = one bit flipped. <code>binding(0, 0xFF..FF)</code> = fully electron. The mask determines how far along the oscillation. Gradual flavor change."
+      }
+    ]
+  },
+  {
+    "id": "double",
+    "label": "principal quantum number 1 · hadrons",
+    "title": "Dimension Pairs",
+    "desc": "Two dimensions active. Six combinations. Where physics formulas begin — velocity, bandwidth, density, momentum.",
+    "generate": "multi:2",
+    "deep": [
+      {
+        "title": "Hadrons = Instructions",
+        "tag": "source: hadrons.rs",
+        "body": "<code>pub fn proton(a: u64, b: u64) -> u64 { a.wrapping_add(b) }<br>pub fn neutron(a: u64, b: u64) -> u64 { a.wrapping_sub(b) }<br>pub fn fusion(a: u64, b: u64) -> u64 { a.wrapping_mul(b) }<br>pub fn fission(a: u64, b: u64) -> u64 { if b == 0 { 0 } else { a / b } }</code><br><br>Gate counts (verified — tests/quark_count.rs):<br><div class='evidence'><span class='ev-l'>proton (6,3,2)</span><span class='ev-v'>AND:OR=2:1 — ~1 cycle — lightest</span><span class='ev-l'>neutron (6,3,3)</span><span class='ev-v'>AND:OR=2:1 — ~1 cycle — proton + 1 NOT = beta decay</span><span class='ev-l'>fusion (34,9,6)</span><span class='ev-v'>AND:OR=3.8:1 — ~3-5 cycles — high energy</span><span class='ev-l'>fission (56,28,28)</span><span class='ev-v'>AND:OR=2:1 — ~35-90 cycles — heaviest</span><span class='ev-l'>gluon (64,0,0)</span><span class='ev-v'>pure AND — ~1 cycle — pure strong force</span></div>Gate count predicts cycle ordering. Two kinds of mass: <strong>gate count</strong> (rest) and <strong>gate depth</strong> (inertial). Both predict same ordering = equivalence principle."
+      },
+      {
+        "title": "Antimatter Asymmetry",
+        "tag": "source: hadrons.rs",
+        "body": "At the quark level: 5 positrons + 5 neutrinos + 0 electrons. Perfectly balanced.<br><br><strong>neutron (sub) is the SOLE source of electrons (−1).</strong> proton (add) never creates electrons — positive + positive = positive. The asymmetry is a HADRON property, not a quark property.<br><br>Traces drain over time (reads ≥ writes). Electrons accumulate. Matter wins. The arrow of time (entropy/second law) produces the matter/antimatter asymmetry. Same phenomenon, same direction.<br><br>Physics: CP violation occurs in hadron interactions, not at the fundamental level. The universe started balanced and matter won over time. Same arc."
+      },
+      {
+        "title": "Photons = Arguments",
+        "tag": "source: forces.rs",
+        "body": "A photon is a value crossing a function boundary. Every CALL/RET is photon exchange. Every function signature is a Feynman diagram.<br><br><code>let result = callee(arg1, arg2);<br>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑<br>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─────┘ photons emitted (args)<br>//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── photon absorbed (return value)</code><br><br><div class='evidence'><span class='ev-l'>photon</span><span class='ev-v'>value between FUNCTIONS — long range, real, observable</span><span class='ev-l'>meson</span><span class='ev-v'>value between INSTRUCTIONS inside one function — short range, virtual</span><span class='ev-l'>#[inline]</span><span class='ev-v'>converts photons to mesons (EM → strong force transition) = binding energy</span></div>Rust enforces photon conservation: \"unused return value\" warning = unabsorbed photon detected. <code>#[must_use]</code> = \"this photon MUST be absorbed\" = conservation law."
+      },
+      {
+        "title": "Fields — Gates at Every Bit",
+        "tag": "source: hadrons.rs",
+        "body": "A field = a gate applied to every point in the register. 64 parallel gates.<br><br><code>pub fn gluon_field(a: u64, b: u64) -> u64 { a & b }&nbsp;&nbsp;// 64× AND<br>pub fn down_field(a: u64, b: u64) -> u64 { a | b }&nbsp;&nbsp;// 64× OR<br>pub fn weak_field(a: u64) -> u64 { !a }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 64× NOT<br>pub fn binding(a: u64, b: u64) -> u64 { a ^ b }&nbsp;&nbsp;&nbsp;&nbsp;// 64× XOR</code><br><br><div class='evidence'><span class='ev-l'>binding(a, a) = 0</span><span class='ev-v'>self-annihilation → neutrino</span><span class='ev-l'>binding(a, 0) = a</span><span class='ev-v'>neutrino passes through</span><span class='ev-l'>binding(a, MAX) = !a</span><span class='ev-v'>electron (MAX) acts as weak force</span><span class='ev-l'>XOR rax, rax = 0</span><span class='ev-v'>fastest way to zero a register</span></div>Only 2-input reversible operation. Quantum gate (CNOT). SHA-256 uses binding heavily — hashing IS quark-level physics."
+      },
+      {
+        "title": "Light = Bind Bond",
+        "tag": "physics",
+        "body": "Photon = L<sup>½i</sup>·T<sup>½i</sup> = purely imaginary exponents.<br><br>In flight: ∘+∮+δ (bind, no π). <strong>No read until detection.</strong><br>Absorbed: π added = hylo = measurement = wave collapses.<br><br><div class='evidence'><span class='ev-l'>classical computer</span><span class='ev-v'>hylo — reads (π) at every step</span><span class='ev-l'>quantum computer</span><span class='ev-v'>bind — no read (no π) until measurement</span><span class='ev-l'>the difference</span><span class='ev-v'>presence of π. That's it.</span></div>Decoherence = unwanted π. Qubit = unread value."
+      },
+      {
+        "title": "Speed, Bandwidth, Density...",
+        "tag": "formulas",
+        "body": "Every two-dimension formula maps to both physics and computing:<br><br><div class='evidence'><span class='ev-l'>L/T = speed</span><span class='ev-v'>velocity / throughput / link speed</span><span class='ev-l'>M/T = bandwidth</span><span class='ev-v'>mass flow / data rate / Nyquist</span><span class='ev-l'>M/L = density</span><span class='ev-v'>linear density / bit density</span><span class='ev-l'>T/L = latency</span><span class='ev-v'>slowness / Elmore delay / RTT</span><span class='ev-l'>LM/T = momentum</span><span class='ev-v'>throughput / channel capacity</span></div>Same formula. Same structure. Not analogy — identity."
+      }
+    ]
+  },
+  {
+    "id": "triple",
+    "label": "principal quantum number 1 · atoms",
+    "title": "Dimension Triples",
+    "desc": "Three dimensions active. Power, pressure, acceleration, field equations. The atoms — three-body compositions.",
+    "generate": "multi:3",
+    "deep": [
+      {
+        "title": "Nucleus — Hadrons Bound by Forces",
+        "tag": "source: nucleus.rs",
+        "body": "In physics: protons + neutrons glued together. The nucleus weighs LESS than its parts separately (mass deficit = binding energy).<br><br><code>pub fn delta(initial: u64, final_val: u64) -> u64 { neutron(final_val, initial) }<br>pub fn half(a: u64) -> u64 { fission(a, proton(positron(), positron())) }<br>pub fn sqr(a: u64) -> u64 { fusion(a, a) }<br>pub fn inc(a: u64) -> u64 { proton(a, positron()) }</code><br><br>Every intermediate value is a meson — born from one hadron, consumed by the next. Temporary. In asm: a register value between two instructions. Lives one clock cycle."
+      },
+      {
+        "title": "Binding Energy = Inlining",
+        "tag": "source: nucleus.rs",
+        "body": "Three levels of binding:<br><br><div class='evidence'><span class='ev-l'>1. Rust (not inlined)</span><span class='ev-v'>CALL fission → CALL proton → CALL positron. Each CALL = photon (EM force). Heavyweight.</span><span class='ev-l'>2. #[inline]</span><span class='ev-v'>Compiler removes CALLs. Hadrons connect through registers. EM → strong force. Removed CALLs = mass deficit = binding energy.</span><span class='ev-l'>3. Assembly</span><span class='ev-v'>No CALL ever existed. Everything register-wired. Strong force is the DEFAULT. Ground state.</span></div>\"Is this zero cost?\" = \"Is there binding energy?\" Answer: yes. <code>#[inline]</code> tells the compiler: bind with strong force, not EM."
+      },
+      {
+        "title": "Generations = Compiler Optimization",
+        "tag": "72/0",
+        "body": "Values (Gen 1), operations (Gen 2), patterns (Gen 3). No Gen 4.<br><br><code>#[inline]</code> = radioactive decay. Higher generations collapse to Gen 1, removing CALL overhead. <strong>The compiler IS radioactive decay.</strong><br><br><strong>Binding energy:</strong> binary weighs LESS than source functions. Same as nuclear binding energy. Ground state = everything inlined."
+      },
+      {
+        "title": "Dark Matter and Dark Energy",
+        "tag": "source: forces.rs",
+        "body": "<div class='evidence'><span class='ev-l'>dark matter</span><span class='ev-v'>distance(read_cursor, write_cursor) = buffer fill. Data written (has mass) but not read (no photons). The fill level IS a PRIM operation.</span><span class='ev-l'>dark energy</span><span class='ev-v'>empty slots in the ring. The capacity PRIM hasn't filled yet. Negative pressure: empty traces PULL for records.</span><span class='ev-l'>visible matter</span><span class='ev-v'>written AND read. Normal matter.</span></div>In physics: dark matter interacts ONLY through gravity. In our system: the dark matter quantity IS gravity's state. We didn't seek this. It fell out of moving an iterator to where it belongs. (session 146)"
+      },
+      {
+        "title": "Why Gravity is Weak",
+        "tag": "source: forces.rs",
+        "body": "PRIM is the outermost loop. PROJ is inside one instruction. COMP is between functions. PRIM wraps everything.<br><br>Nesting depth ~20 levels × ~8× overhead = 8<sup>20</sup> ≈ 10<sup>18</sup>. Squared → 10<sup>36</sup>.<br><br><strong>Gravity is 10<sup>36</sup>× weaker than EM. Same number. Same reason.</strong> The outermost loop is the weakest binding."
+      },
+      {
+        "title": "The Second Law = PRIM is Irreversible",
+        "tag": "source: forces.rs",
+        "body": "<code>pub fn next(s: u64) -> u64 { inc(s) }</code><br><br>\"Entropy never decreases\" = next() never goes backward. The second law of thermodynamics is a constraint on the iterator. The arrow of time is the arrow of the cursor. One direction. Always.<br><br>Physics named the counter \"entropy.\" Games call it RNG. sm calls it seqno. It's a counter that only goes forward."
+      },
+      {
+        "title": "P ≠ NP",
+        "tag": "conjecture",
+        "body": "Pipeline (ring) = O(n). Tree (branching) = O(2<sup>n</sup>). Topology determines complexity.<br><br>Finding coordinates = NP. Computing the function from coordinates = O(1). The asymmetry is structural. Confidence: 80%."
+      }
+    ]
+  },
+  {
+    "id": "quad",
+    "label": "principal quantum number 1 · molecules",
+    "title": "All Four Dimensions",
+    "desc": "All dimensions active. Energy, impedance, voltage, capacitance. Full four-body compositions.",
+    "generate": "multi:4",
+    "deep": [
+      {
+        "title": "isqrt — The Heaviest Nucleus",
+        "tag": "source: nucleus.rs",
+        "body": "<code>pub fn isqrt(n: u64) -> u64 {<br>&nbsp;&nbsp;let mut x = n;<br>&nbsp;&nbsp;let mut y = fission(proton(x, fission(n, x)), 2);<br>&nbsp;&nbsp;while electron_detector(y, x) {<br>&nbsp;&nbsp;&nbsp;&nbsp;x = y;<br>&nbsp;&nbsp;&nbsp;&nbsp;y = fission(proton(x, fission(n, x)), 2);<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;x<br>}</code><br><br>Newton's method composed from proton + fission + electron_detector in a PRIM loop. Needs all four forces. The heaviest nucleus — uses gravity (loops). Not in the ~20 ISA because it needs iteration.<br><br>sqrt IS the atom→bond map. D<sup>½</sup> = √D = the bond on the space axis. Two bonds compose into one atom: D<sup>½</sup> · D<sup>½</sup> = D<sup>1</sup>."
+      },
+      {
+        "title": "Mesons — Virtual Particles",
+        "tag": "source: nucleus.rs",
+        "body": "In physics: mesons mediate the force between hadrons. Virtual particles — pop in, carry the force, disappear. Yukawa (1935).<br><br><code>fission(a, proton(positron(), positron()))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^^^^^^^^^^^^^^^^^^^^^^^^<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this return value = meson<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;born from proton, consumed by fission</code><br><br>In asm: a register value between two instructions. Lives one clock cycle.<br><br><div class='evidence'><span class='ev-l'>π0</span><span class='ev-v'>same gate + negation (AND+NAND) → tautology → instant decay (shortest lifetime)</span><span class='ev-l'>π+/π−</span><span class='ev-v'>cross-gate pairs (AND+NOR) → doesn't cancel → longer lived</span></div>Every intermediate value in your code is a meson. Every argument passed between functions is a virtual particle."
+      },
+      {
+        "title": "Alpha = 1/137",
+        "tag": "numbers",
+        "body": "<div class='formula-box'>1/α = 544/4 + 1 + 3/84 = 137.035714...</div>Measured: 137.035999... — <strong>6 significant figures. Zero free parameters.</strong><br><br><div class='evidence'><span class='ev-l'>544/4 = 136</span><span class='ev-v'>second shell (5⁴−3⁴) ÷ 4 dimensions. Eddington's number.</span><span class='ev-l'>+ 1</span><span class='ev-v'>the origin. f(0,0,0,0) = 1. The lattice exists.</span><span class='ev-l'>+ 3/84</span><span class='ev-v'>3 gates ÷ 84 sedenion zero divisor pairs.</span></div>Eddington found 136 in the 1930s. Mocked as a numerologist. He was off by 1 + 3/84. He had the right structure."
+      },
+      {
+        "title": "68 / 27 / 5 Cosmic Split",
+        "tag": "numbers",
+        "body": "<div class='evidence'><span class='ev-l'>dark energy</span><span class='ev-v'>67.98% — empty ring buffer slots — negative pressure</span><span class='ev-l'>dark matter</span><span class='ev-v'>27.02% — written but unread — has mass, no photons</span><span class='ev-l'>visible</span><span class='ev-v'>5.00% — written AND read — normal matter</span></div>Planck 2018: 68.3 / 26.8 / 4.9. Match within 0.3 points.<br><br>25% base fill from <strong>three independent equations, three centuries:</strong><br>Michaelis-Menten (1913). Nyquist (1928). Shannon (1948). Zero free parameters."
+      },
+      {
+        "title": "What Would Break It",
+        "tag": "falsifiable",
+        "body": "<div class='evidence'><span class='ev-l'>5th dimension</span><span class='ev-v'>a physical quantity not expressible as L<sup>a</sup>M<sup>b</sup>Q<sup>c</sup>T<sup>d</sup></span><span class='ev-l'>1024-bit SIMD</span><span class='ev-v'>general-purpose shipping — breaks Cayley-Dickson</span><span class='ev-l'>element 119</span><span class='ev-v'>stable — breaks d=4 ceiling</span><span class='ev-l'>proton decay</span><span class='ev-v'>observed — breaks confinement = completeness</span><span class='ev-l'>dark matter particle</span><span class='ev-v'>detected — means it's not a fill level</span><span class='ev-l'>17th bond</span><span class='ev-v'>useful operation outside the 16 — needs 5th force</span></div>None have happened. Several actively tested for 40+ years."
+      },
+      {
+        "title": "What This Dissolves",
+        "tag": "physics",
+        "body": "<div class='evidence'><span class='ev-l'>Wigner 1960</span><span class='ev-v'>\"Why does math describe physics?\" — because math IS the periodic table</span><span class='ev-l'>measurement</span><span class='ev-v'>wave(true) = exists. Any π is observation. No consciousness needed.</span><span class='ev-l'>simulation</span><span class='ev-v'>computation IS physics. Not \"computed by something else.\"</span><span class='ev-l'>proton decay</span><span class='ev-v'>ADD can't decompose. Confinement = completeness. Never.</span><span class='ev-l'>dark matter</span><span class='ev-v'>not particles. Fill level. Every detector will find nothing.</span><span class='ev-l'>vacuum catastrophe</span><span class='ev-v'>QFT counts empty slots as full. 10<sup>121</sup> overcounting.</span></div>"
+      },
+      {
+        "title": "Hurwitz-Post: Why 4?",
+        "tag": "algebra",
+        "body": "Why 4 dimensions? 4 forces? Why stop?<br><br>Exactly 4 normed division algebras: <strong>R, C, H, O</strong> (Hurwitz, 1898). Each doubling loses one property:<br><br><div class='evidence'><span class='ev-l'>R → C</span><span class='ev-v'>gain NOT (i²=−1). Nothing lost.</span><span class='ev-l'>C → H</span><span class='ev-v'>lose commutativity = gain AND (order matters)</span><span class='ev-l'>H → O</span><span class='ev-v'>lose associativity = gain OR (grouping matters)</span><span class='ev-l'>O → S</span><span class='ev-v'>zero divisors = annihilation. Completeness achieved. Stop.</span></div>3 properties to lose. 3 gates to gain. <strong>The Post→Hurwitz connection may be new.</strong>"
+      }
+    ]
+  }
+]

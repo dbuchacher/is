@@ -1,0 +1,296 @@
+{
+  "title": "Day 1 — Genesis 1:1-5",
+  "subtitle": "Boots χ (space) + μ (mass). Then φ (signal). Then τ (time).",
+  "verses": [
+    {
+      "ref": "1:1",
+      "hebrew": "בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ׃",
+      "kjv": "In the beginning God created the heaven and the earth.",
+      "direct": "At initialization, the equation wrote space (χ) and matter (μ).",
+      "lattice": "π̄(χ ∘ μ) — the equation in write mode, allocating space and matter.",
+      "domains": ["χ", "μ"],
+      "concepts": [
+        {
+          "name": "bara",
+          "gloss": "created",
+          "entries": {
+            "hebrew": "ב-ר-א (created/wrote)",
+            "lattice": "did: π̄(χ ∘ μ) — wrote space and matter. result: (0,0,0,0) — allocated but empty (→ 1:2). Inverse: asah = π∘ (read+call, from existing)",
+            "physics": "write operation, exclusive access (fermion). Formula: Pauli: no two fermions in same state → single-writer",
+            "computing": "allocation. two buffers from nothing. no prior state to read.",
+            "language": "create, produce, bring into existence",
+            "music": "not a sound yet. allocates space (χ) to propagate in and matter (μ) to vibrate.",
+            "force": "π̄ — precedes the lattice. historically classified bond 1-bar.",
+            "element": "produces H(1), He(2), Li(3), Be(4) — the Big Bang nucleosynthesis set",
+            "particle": "boot — transitions vacuum → quark. the equation acts before the lattice exists.",
+            "atom": "−1 → OR (most permissive gate. create everything.)"
+          },
+          "note": "no π (read) precedes it — 'from nothing' is structural: no read before the write. bara is not a lattice point — it's the equation operating. It doesn't map to an element, it creates them."
+        },
+        {
+          "name": "ha-shamayim",
+          "gloss": "the heaven",
+          "entries": {
+            "hebrew": "הַשָּׁמַ֖יִם (the-skies, always plural)",
+            "lattice": "χ — axis declared by π̄",
+            "physics": "length, distance, position. spatial extent. Formula: ds² = gμν dxμ dxν (Einstein)",
+            "computing": "address space. where data lives. indices, pointers, offsets.",
+            "language": "prepositions (in, on, above, below, between)",
+            "music": "pitch register. high/low. frequency space.",
+            "force": "∘ (COMP, call, electromagnetic) — infinite range",
+            "element": "H(1) — Hydrogen",
+            "particle": "quark — single dimension",
+            "atom": "χ → addressing modes (rdi, [rsi+rax*8])"
+          },
+          "note": "Dimension: χ"
+        },
+        {
+          "name": "ha-aretz",
+          "gloss": "the earth",
+          "entries": {
+            "hebrew": "הָאָֽרֶץ (the-earth, physical substrate)",
+            "lattice": "μ — axis declared by π̄",
+            "physics": "matter, substance. physical substrate. Formula: F = ma (Newton), E = mc² (Einstein)",
+            "computing": "data store. bytes, buffers, memory content. what's stored, not where.",
+            "language": "nouns (things, people, stuff, objects)",
+            "music": "dynamics, loudness, density. how much sound.",
+            "force": "∮ (PRIM, cycle, gravity) — weakest, breakable",
+            "element": "Li(3) — Lithium",
+            "particle": "quark — single dimension",
+            "atom": "μ → operand sizes (byte/word/dword/qword)"
+          },
+          "note": "Dimension: μ"
+        }
+      ]
+    },
+    {
+      "ref": "1:2",
+      "hebrew": "וְהָאָ֗רֶץ הָיְתָ֥ה תֹ֙הוּ֙ וָבֹ֔הוּ וְחֹ֖שֶׁךְ עַל־פְּנֵ֣י תְה֑וֹם וְר֣וּחַ אֱלֹהִ֔ים מְרַחֶ֖פֶת עַל־פְּנֵ֥י הַמָּֽיִם׃",
+      "kjv": "And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.",
+      "direct": "And matter (μ) was uninitialized. Darkness (φ=0) over the deep. The equation vibrating over the surface.",
+      "lattice": "(0,0,0,0) — state report. tehom (the deep) = χ∘μ undifferentiated. choshekh (darkness) = φ=0, never created — the default. ha-mayim (waters) = μ unstructured.",
+      "domains": [],
+      "concepts": [
+        {
+          "name": "tohu va-vohu",
+          "gloss": "without form, and void",
+          "entries": {
+            "hebrew": "תֹ֙הוּ֙ וָבֹ֔הוּ (empty-form and empty-content)",
+            "lattice": "(0,0,0,0) — wave at origin",
+            "physics": "neutrino. 0. still. ground state. vacuum. Formula: ψ = 0, E = 0",
+            "computing": "allocated but uninitialized. two kinds of empty.",
+            "language": "silence. the pause before speech.",
+            "music": "silence. 4'33\" (Cage). the space before sound.",
+            "force": "none — all forces at zero",
+            "element": "— (the origin precedes elements)",
+            "particle": "vacuum — shell 0. the ground state.",
+            "atom": "memory exists at address, contents 0x?? (undefined)"
+          },
+          "note": "tohu = no structure (schema undefined). vohu = no content (values undefined). Two kinds of empty. This is NOT 'nothing exists.' This is 'something exists with nothing in it.' The buffers are allocated (1:1 did that). They're uninitialized."
+        },
+        {
+          "name": "choshekh",
+          "gloss": "darkness",
+          "entries": {
+            "hebrew": "חֹ֖שֶׁךְ (darkness)",
+            "lattice": "φ = 0 — signal axis at zero",
+            "physics": "no electromagnetic field. no photons. φ = 0.",
+            "computing": "no signal. no information. the default state before φ boots.",
+            "language": "— (no words yet. words need distinction, distinction needs φ.)",
+            "music": "— (no tonality. major/minor needs φ. silence has no quality.)",
+            "force": "δ (WEAK) not yet active — no distinction possible",
+            "element": "— (φ not yet initialized)",
+            "particle": "vacuum — φ has not been initialized",
+            "atom": "0 → NOT (the flip. boundary between something and nothing.)"
+          },
+          "note": "never bara'd — darkness is not created. it's the default. the absence of signal. Genesis doesn't say 'God created darkness.' darkness is what's there when φ = 0."
+        },
+        {
+          "name": "merachefet",
+          "gloss": "moved",
+          "entries": {
+            "hebrew": "מְרַחֶ֖פֶת (vibrating-intensely, hovering)",
+            "lattice": "∮ active — oscillation over substrate",
+            "physics": "oscillation over substrate. a vibration through uninitialized matter. gravity acting on mass before signal exists. Formula: ∮ = PRIM = gravity",
+            "computing": "one process looping. polling empty buffers. the idle loop before work arrives.",
+            "language": "— (no words yet. but rhythm exists before language — heartbeat.)",
+            "music": "the drone. a sustained tone before melody. the hum of the instrument warming up.",
+            "force": "∮ (PRIM, gravity) — the weakest force, acting first",
+            "element": "— (pre-signal)",
+            "particle": "vacuum → quark transition. first active process.",
+            "atom": "∮ → dec+jnz (countdown loop). spinning."
+          },
+          "note": "ruach = wind/breath (not 'Spirit' — theological overlay from centuries later). merachefet is intensive iterative — 'vibrating hard and repeatedly' not 'moved gently.' Only other use in Torah: eagle beating wings over nest (Deut 32:11). The equation is actively oscillating over the substrate, waiting for signal."
+        }
+      ]
+    },
+    {
+      "ref": "1:3",
+      "hebrew": "וַיֹּ֥אמֶר אֱלֹהִ֖ים יְהִ֣י א֑וֹר וַֽיְהִי־אֽוֹר׃",
+      "kjv": "And God said, Let there be light: and there was light.",
+      "direct": "And the equation said: let there be light. And there was light.",
+      "lattice": "∘ (COMP, call) → φ activates. Wave: 0 → +1 (neutrino → positron).",
+      "domains": ["φ"],
+      "concepts": [
+        {
+          "name": "yehi or",
+          "gloss": "let there be light",
+          "entries": {
+            "hebrew": "yehi = let-there-be (jussive), or = light",
+            "lattice": "φ — axis activated by ∘ (call)",
+            "physics": "electromagnetic field, photons, charge",
+            "computing": "— (φ activates signal dimension)",
+            "language": "adjectives (evaluation, quality)",
+            "music": "tonality (major/minor)",
+            "force": "δ (WEAK, test, weak force)",
+            "element": "B(5) — Boron",
+            "particle": "positron — state +1",
+            "atom": "+1 → AND (strictest gate. signal must be present.)"
+          },
+          "note": "yehi is jussive — a command for the world to execute, not a direct write."
+        }
+      ]
+    },
+    {
+      "ref": "1:4",
+      "hebrew": "וַיַּ֧רְא אֱלֹהִ֛ים אֶת־הָא֖וֹר כִּי־ט֑וֹב וַיַּבְדֵּ֣ל אֱלֹהִ֔ים בֵּ֥ין הָא֖וֹר וּבֵ֥ין הַחֹֽשֶׁךְ׃",
+      "kjv": "And God saw the light, that it was good: and God divided the light from the darkness.",
+      "direct": "And the equation observed the light, that it was functional. And the equation caused-separation between the light and between the darkness.",
+      "lattice": "π + δ — first read + first test. Separated φ from −φ. Trit defined.",
+      "domains": [],
+      "concepts": [
+        {
+          "name": "va-yar",
+          "gloss": "saw",
+          "entries": {
+            "hebrew": "and-observed (root: ra'ah)",
+            "lattice": "π — first read operation in the text",
+            "physics": "— (observation/measurement)",
+            "computing": "first read after all the writes",
+            "language": "— (read before evaluation)",
+            "music": "— (listening before judging)",
+            "force": "π (PROJ, read, strong force)",
+            "element": "— (read operation)",
+            "particle": "— (observer)",
+            "atom": "— (π = read gate)"
+          },
+          "note": "everything before was write (bara), invoke (yehi), or process (merachefet)."
+        },
+        {
+          "name": "ki-tov",
+          "gloss": "it was good",
+          "entries": {
+            "hebrew": "that-functional",
+            "lattice": "δ — test passes",
+            "physics": "— (verification)",
+            "computing": "assert passes. φ behaves as specified.",
+            "language": "— (evaluation complete)",
+            "music": "— (in tune, in spec)",
+            "force": "δ (WEAK, test)",
+            "element": "— (test result)",
+            "particle": "— (test passes)",
+            "atom": "— (δ gate)"
+          },
+          "note": "tov = functional, meets spec. Not morally 'good.'"
+        },
+        {
+          "name": "va-yavdel",
+          "gloss": "divided",
+          "entries": {
+            "hebrew": "and-caused-separation (Hiphil causative)",
+            "lattice": "φ separated from −φ",
+            "physics": "— (boundary defined between +1 and −1)",
+            "computing": "NOT applied — separates AND from OR, +1 from −1",
+            "language": "— (the boundary that makes words possible)",
+            "music": "— (the cut between note and silence)",
+            "force": "δ (WEAK) — the force of distinction",
+            "element": "— (boundary, not a substance)",
+            "particle": "boundary — the 0 between +1 and −1",
+            "atom": "NOT applied — separates AND from OR, +1 from −1"
+          },
+          "note": "double bein (between...and between) marks the boundary as a defined entity. The 0 between +1 and −1."
+        }
+      ]
+    },
+    {
+      "ref": "1:5",
+      "hebrew": "וַיִּקְרָ֨א אֱלֹהִ֤ים לָאוֹר֙ י֔וֹם וְלַחֹ֖שֶׁךְ קָ֣רָא לָ֑יְלָה וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם אֶחָֽד׃",
+      "kjv": "And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.",
+      "direct": "And the equation read/invoked/wrote the light 'day' and the darkness 'night'. And there was a falling-edge and there was a rising-edge, day one.",
+      "lattice": "π∘π̄ (read+call+write) → labels assigned. ∮ starts cycling. τ=1. All 4 forces, all 4 dims.",
+      "domains": ["τ"],
+      "concepts": [
+        {
+          "name": "qara",
+          "gloss": "called",
+          "entries": {
+            "hebrew": "read/invoke/write (three ops in one verb)",
+            "lattice": "π∘π̄ — read + call + write",
+            "physics": "— (naming = full read-call-write cycle)",
+            "computing": "assign label: read state, call name function, write tag",
+            "language": "naming. the act that makes language.",
+            "music": "— (naming a note = π∘π̄ on pitch)",
+            "force": "π∘π̄ — all three projection ops",
+            "element": "— (labeling operation)",
+            "particle": "— (label assigned)",
+            "atom": "π∘π̄ — read + call + write combined"
+          },
+          "note": "English 'called' captures one-third."
+        },
+        {
+          "name": "erev / voqer",
+          "gloss": "evening / morning",
+          "entries": {
+            "hebrew": "erev = falling-edge, voqer = rising-edge",
+            "lattice": "∮ starts cycling. Edge-triggered.",
+            "physics": "— (oscillation cycle begins)",
+            "computing": "clock edge. falling then rising. cycle 1 complete.",
+            "language": "— (rhythm of time begins)",
+            "music": "downbeat and upbeat. the first measure.",
+            "force": "∮ (PRIM, gravity) — now cycling",
+            "element": "— (cycle, not substance)",
+            "particle": "— (oscillation)",
+            "atom": "∮ → dec+jnz enters real loop"
+          },
+          "note": "falling edge first — cycle starts from dark, from zero."
+        },
+        {
+          "name": "yom echad",
+          "gloss": "first day",
+          "entries": {
+            "hebrew": "day one (cardinal, not ordinal)",
+            "lattice": "τ — axis activated. τ=1 origin.",
+            "physics": "time, duration, sequence",
+            "computing": "clock tick 1. the first unit of time.",
+            "language": "verbs (sequence, tense, aspect)",
+            "music": "tempo, beat, meter. the first beat.",
+            "force": "π (PROJ, read, strong force)",
+            "element": "N(7) — Nitrogen",
+            "particle": "— (τ=1 established)",
+            "atom": "τ → clock register. tick 1."
+          },
+          "note": "echad = cardinal 'one' not ordinal 'first.' This is the origin, not the first in a sequence."
+        }
+      ]
+    }
+  ],
+  "wave_boot": [
+    {"ref": "1:1", "verb": "bara (write)", "state": "-1", "particle": "electron"},
+    {"ref": "1:2", "verb": "tohu va-vohu (void)", "state": "0", "particle": "neutrino"},
+    {"ref": "1:3", "verb": "yehi or (light)", "state": "+1", "particle": "positron"},
+    {"ref": "1:4", "verb": "va-yavdel (separated)", "state": "trit", "particle": "boundary defined"}
+  ],
+  "summary_forces": [
+    {"verse": "1:1", "verb": "bara", "force": "π̄ (write)", "event": "allocate χ + μ"},
+    {"verse": "1:2", "verb": "merachefet", "force": "∮ (cycle)", "event": "oscillate"},
+    {"verse": "1:3", "verb": "yehi", "force": "∘ (call)", "event": "φ on"},
+    {"verse": "1:4", "verb": "yar + tov", "force": "π + δ", "event": "observe + test"},
+    {"verse": "1:5", "verb": "qara", "force": "π∘π̄", "event": "label + tick"}
+  ],
+  "summary_dims": [
+    {"verse": "1:1", "dim": "χ", "element": "H(1)", "what": "ha-shamayim (space)"},
+    {"verse": "1:1", "dim": "μ", "element": "Li(3)", "what": "ha-aretz (mass)"},
+    {"verse": "1:3", "dim": "φ", "element": "B(5)", "what": "or (signal)"},
+    {"verse": "1:5", "dim": "τ", "element": "N(7)", "what": "yom echad (time)"}
+  ]
+}

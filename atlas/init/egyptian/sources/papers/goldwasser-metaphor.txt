@@ -1,0 +1,625 @@
+METAPHOR AND SYMBOL, 20(2), 95–113
+Copyright © 2005, Lawrence Erlbaum Associates, Inc.
+
+Where Is Metaphor?:
+Conceptual Metaphor and Alternative
+Classification in the Hieroglyphic Script
+Orly Goldwasser
+Department of Ancient Near Eastern
+Languages and Cultures—Egyptology
+The Hebrew University, Jerusalem
+
+The Ancient Egyptian hieroglyphic script contains data that shed light on 3 major issues central to current metaphor studies: (a) Where is metaphor, that is, is metaphor
+linguistic or conceptual? (b) If metaphor is indeed conceptual, does metaphor understanding entail creation of an ad hoc category in which the vehicle is a particularly
+good exemplar? (c) Is metaphor processing primarily dependent on the identification
+and activation of the underlying “deep structure” conceptual metaphor?
+The script includes an elaborate system of classifiers that constitute an intensely
+motivated, highly constrained categorization system strictly referring to conceptual,
+nonlinguistic configurations. The Egyptian system is a prototype-centered classification system, from which metaphor clearly emerges as a form of alternative
+classification.
+
+Whereas language displays a series of cognitive faits accomplis, the events occurring in the hieroglyphic picture–script—as in a cognitive ultrasound device—render mental processes that are made visible for our inspection. In my
+recent book, Prophets, Lovers, and Giraffes: Wor(l)d Classification in Ancient
+Egypt (2002), I substantiated the assumption that the prominent feature of the hieroglyphic script which Egyptologists call “determinatives,” is actually an elaborate graphemic system of classifiers. This classifier system is a highly motivated,
+strictly constrained categorization system that reflects in detail the knowledge
+organization of the long-lost ancient Egyptian culture (Goldwasser, 2002). Being
+Requests for reprints should be sent to Orly Goldwasser, Department of Ancient Near Eastern Languages and Cultures—Egyptology, The Hebrew University, Jerusalem 91905, Israel. E-mail:
+goldorly@hotmail.com
+
+96
+
+GOLDWASSER
+
+an integral part of the Egyptian script but representing metalinguistic data, the
+information reflected by the system refers to strictly conceptual, nonlinguistic
+configurations. Metaphor appears in the Egyptian script as an integral part of the
+classification system.
+
+WHAT ARE “DETERMINATIVES”
+The hieroglyphic script, which is formed of hundreds of iconic signs with different
+semiotic roles, completes almost every word with a “silent icon” (the so-called
+“determinative”) that carries no additional phonetic value of its own. As such, this
+hieroglyph is a “mute” icon, which does not exist on the verbal level of language
+but supplies the word in question, through its iconic meaning alone, with extra
+metalinguistic semantic information (for reading strategies, see Goldwasser, 2002;
+for general introductions, see Collier, 1998 and Davies, 1987; for decipherment,
+see Parkinson, 1999).
+The “determinative” phenomenon differs in essence from American Sign Language (ASL). In ASL, the nonverbal signifier comes to replace the verbal signifier
+(O’Brien, 1999), whereas the Egyptian classifier is an additional sign, which
+comes after the signs that refer the reader to the phonetic signifier.
+For example, the words “palace,” “fortress,” “harem,” “office,” “tomb,” “stable,” “tent,” “cave,” “nest,” and “den” (this is a very partial list of the category
+members) all take one classifier: the O hieroglyph (Figure 1). Iconically, this hieroglyph represents the ground plan of a minimal one-room house.1 It provides the
+reader with the metalinguistic information that all the aforementioned words are
+“a kind of house” or “HABITAT.”
+The stela of king Horemheb (Martin, 1991, Figure17), shown in Figure 2, is
+an entirely random but typical example of an Egyptian inscription from the New
+Kingdom period. In the main part of the stela, the classifiers are colored in
+black, so that we get a fairly immediate impression of the percentage and frequency of classifiers in an average hieroglyphic inscription. As the Egyptian
+script keeps no spaces between words, the classifiers, in addition to their classificatory qualities, often help the reader to decide where one word ends and another begins.
+1In the pictorial Egyptian script, a hieroglyph could also play the role of a logogram, sometimes
+called ideogram. In this role, “it” refers to a word through its motivated pictorial signifier, for example,
+“a house” O, “a horse”É, “a dog” Ò, “sandals” ¸¸. Nevertheless, in these cases, the hieroglyph
+has two signifieds: pictorial and phonetic. When activated as classifier, the same sign has only one (!)
+signifier—the pictorial signifier. The phonetic information is provided by the signs preceding the classifier (Goldwasser, 1995).
+
+HIEROGLYPHICS AND METAPHOR
+
+FIGURE 1
+
+97
+
+Members of the taxonomic category “HABITAT.”
+
+HOW CLASSIFIERS WORK IN ANCIENT EGYPTIAN
+The Egyptian hieroglyphic classifier system unveils to the modern eye the most
+long-standing system of “folk classification” traceable to date. The evidence it provides differs from sources of information on categorization in other ancient cultures in that it does not stem from a literary environment, but is rather a reflection
+of the collective conceptual organization of a culture, transmitted through an ob-
+
+FIGURE 2
+
+98
+
+Distribution of classifiers.
+
+HIEROGLYPHICS AND METAPHOR
+
+99
+
+jective medium, a medium that was developed to another end in the script system.
+As such, the analyzed system remains uncontaminated by any notion of a “chosen
+informant”—either the traditional sophomore, or an “omniscient” native informant (Medin &Atran, 1999, pp. 2–5)—or by overinterpretation by the specialized
+linguist (Steen & Gibbs, 1999, pp. 2–3).
+Crucially, the Egyptian classificatory system is also qualitatively different from
+classificatory systems studied in other languages, as the Egyptian language is not a
+classifier language but a nonclassifier language recorded in a classifier script. Its
+classification is not represented by morphemes but by graphemes; in other words,
+the classification exists, in all its elaboration, only at the level of the script and not
+at the level of language and thus reflects metalinguistic knowledge, that is, conceptual organization (of course, to a certain extent, all languages are “classifier languages.” On the definition of classifier languages, see Aikhenvald, 2000).
+The script hosts a variety of categories, from relatively simple “object categories” such as ã “TREE,” ä “BUSH,” „ “BIRD,” ¤ “FISH,” ®“SWORM” (a
+portmanteau word for “Snake+worm”), > “QUADRUPED-ANIMAL,” !
+“HUMAN MALE,” _ “HUMAN FEMALE,” and 6 “CHILDHOOD,” to other categories such as & “SUN,” < “FOREIGN LANDS,” å “WOOD,” E “METAL,”
+p°
+G “FLUID” (distinct from ® “LIQUID” as in Ô©
+°® “beer,” versus »I¸G
+“urine”), O “HABITAT,” and ° “SHIP.” “Action categories” are categories such
+as º “MOVEMENT,” {“EYE”(SIGHT), and >“ACTION OF FORCE.” Uppermost on the pole lie such abstract categories as ^, O “DIVINE.” The divine is represented by a prototypical zoomorphic god, or by an anthropomorphic prototype
+(on the divine classifiers, see Shalomi-Hen, 2000), Even more abstract, highly important, and as yet largely unnamable categories, which at this point may be provisionally titled # “SENSES AND EMOTIONS” category (classified by the icon of
+“things which are put in/come out from the body-container [through the mouth],”
+discussed later), ò“ABSTRACT” (papyrus roll; see Goldwasser, 1995, p. 88), or
+the ‚“SMALL–EVIL,”—“bad bird” category (David, 2000).
+The metalinguistic information provided by the “mute” classifiers thus specifies the word’s relation to a certain domain or category; in other words, it classifies
+the word into a higher category.
+ëÃX !“thief” and the ¸¸! “sandal-maker” are classified into the
+superordinate category “HUMAN + MALE” by the icon !. The ¡
+F¥
+°_
+‘
+“wet-nurse” and ¬ X ° _ “widow” are classified into the superordinate category “HUMAN + FEMALE” _. The words “cat” ¾ë°> and “hippopotamus”
+±¾> are classified into the superordinate category “HIDE AND TAIL” =
+“QUADRUPED” by the sign >, a schematization of the hide and tail of a leopard
+(on this category, discussed later). The ª»„ “ostrich” and the ¾ëÙ„ “falcon” are classified into the superordinate category “BIRD” by the icon of a duck
+„, which, for the Egyptians, is the bird par excellence, the prototypical bird representing the generic concept “BIRD.” As mentioned earlier, ›XO“office,”
+
+100
+
+GOLDWASSER
+
+p
+ëÔ»O“stable,” ë—O “tomb,” éF
+°‹O “harem,” and I
+IÂO “nest,” all
+take the O “HABITAT” classifier (Figure 1).
+
+MULTIPLE CLASSIFICATION
+The opulence of the script’s classificatory system is clear from the fact that almost all elements of the lexicon (excluding a few prepositions and other function
+words) take classifiers. Furthermore, a word may take not just one but up to four
+classifiers simultaneously and so participate in several conceptual knowledge
+structures, taxonomic and schematic (on the possible schematic relations, see
+Goldwasser, 2002, pp. 33–35). As a result, classification weaves almost every
+word into a sophisticated embroidery of knowledge organization (Figure 3). For
+ï ì°6_ “maiden” is classified into the superordinate category 7
+example, Ô F
+“CHILDHOOD” (represented by the prototype of a male child) and the
+superordinate _ “HUMAN + FEMALE,” thus showing two superordinate taxo‘‚
+nomic classifications. The word KXë 3! “wretched man” or “pauper” also
+takes two superordinate taxonomic classifiers: ‚“INFERIORITY–EVIL” and !
+°
+p ¸
+“HUMAN + MALE.” The word » I
+G “urine” of humans and animals
+alike is classified by the male human phallus ¸, which is activated as a schematic classifier, depicting an integral object in the action of urination. The sec-
+
+FIGURE 3
+
+Words with two to four classifiers.
+
+HIEROGLYPHICS AND METAPHOR
+
+101
+
+ond classifier is taxonomic, classifying the urine into the superordinate G
+“FLUID” category.
+´ „
+The word “fowler” ¥ ¸ ¤
+> ! may show up to four (!) classifiers. The first two
+are schematic classifiers—the „ duck and the ¤ fish, both essential to the activity
+of fowling. These two classifiers stand in meronymic relation (part–whole, see
+Winston et al., 1987) to the action of fowling and fishing and thus to the fowler himself. The third classifier assigns the nature of the fowler’s activity to the
+superordinate taxonomic “action category” > “ACTION OF FORCE,” which is signified by a man holding a stick. Last but not least is the classifier $ “HUMAN +
+MALE,” representing the taxonomic superordinate category of the fowler himself.
+Thus the action is regarded from all angles: its purpose, its energetic nature, and
+the social and sexual identity of its undertaker are all represented. This kind of
+compound classification suggests taxonomic set inclusion structures of knowledge, as well as schematic knowledge information, all scaffolding the word on all
+sides and in all directions. In the conceptual democracy of the script, the hunter and
+the prey are given an equal size on the immaculately executed grid. This phenomenon allows refined details of conceptual peculiarities to show through, whereas
+less detailed classification systems cannot express these peculiarities. Yet, for all
+its opulence, the system remains highly constrained, its classifiers all strongly motivated and adhering to a small number of rules (Goldwasser, 2002, pp. 5–36).
+
+INNER STRUCTURE OF CATEGORIES OF THE SCRIPT
+The categories of the Egyptian script present taxonomic-cum-schematic domains
+assembled around a prototype, or rarely, around a schema. In most cases, the icon
+that serves as classifier is a basic-level (generic) member that has risen to represent
+a more general meaning, that is, a superordinate (Goldwasser, 2000; for further
+discussion, see Glucksberg, 2000, p. 39, and Chiappe, 2003, pp. 56–57). As we
+have seen, when activated as a superordinate, the O hieroglyph seems to move
+away from its literal iconic meaning “house,” into a more general meaning such as
+“HABITAT.” The basic-level members of the category stand in an “example of” a
+relation with the taxonomic superordinate. An office, a stable, a tomb, a harem,
+and a nest are all different ‘examples of’ “HABITAT” for different purposes and
+different residents—officials, horses, dead men, royal women, and birds. In these
+cases, no metaphor is created, as all members—the examples as well as the
+superordinate—belong to the same category (Glucksberg & Keysar, 1990; on the
+graded relations of metaphor literal meanings, see Thomas & Mareschal, 2001).
+In many cases, the domain also shows schematic knowledge attributes arranged
+around the prototype. In the case of “HABITAT,” we find parts of the house (e.g.,
+¥
+°
+y
+‘
+ÎO
+‘ ëëO “gate” and † ±
+“window” [discussed later]) to be classified by the
+O prototype.
+
+102
+
+GOLDWASSER
+
+A primary category of the script is the “ANIMAL” category. By the end of the
+Pharaonic era, there is still no single word in the Egyptian lexicon that signifies
+“animal” or “mammal” or even “quadruped.” No word in the lexicon can jointly
+refer to a cat, a mouse, a hippopotamus, and a goat. Had the Egyptian hieroglyphic
+script not been available to us, we would have had to think of Egyptian society as
+yet another example of the many societies in which the superordinate term for
+“mammal” or “animal” did not materialize (for such examples, see Atran, 1990;
+Berlin, 1992).
+However, the highly pictorial nature of the Egyptian hieroglyphic script, with
+its elaborate system of classifiers, gives us a unique glimpse into the “laboratory of
+the mind,” where we may follow the birth and the gradual development of a conceptual category in the human cognitive space hundreds of years before it is born
+into verbal language. The pictorial script makes the structure and development of
+the highly important covert category of animals entirely visible for the modern student of hieroglyphs. Thus we learn with certainty that the Egyptians clearly conceptualized cats, dogs, lions, leopards, hippopotami, and mice, despite their
+widely varying perceptual and morphological differences, as members of a single
+category (Figure 4). We can deduce this conclusion from the fact that all these
+members of lexicon consistently take one single classifier (from the Middle Kingdom on)—that of the > “HIDE AND TAIL.” This superordinate (suprageneric)
+concept surfaces only in the script. It carries the meaning, “having hide and tail,”
+
+FIGURE 4
+
+The taxonomic category “Hide and Tail.”
+
+HIEROGLYPHICS AND METAPHOR
+
+103
+
+just as the word “quadruped” implies “having four legs,” and animal, “those who
+have anima.” The icon itself depicts a leopard hide (Champollion, 1836;
+Goldwasser, 2002), and in this case, the superordinate is represented by a
+“schema” and not a prototype. Here the script seems to turn to schematic representation, as it is extremely difficult to come up with a “good exemplar” for the morphologically variegated categories of “MAMMAL” or “QUADRUPED” (on prototype versus schema, see Taylor, 1995, pp. 65–68).
+The > “HIDE AND TAIL” classifier unequivocally proves the existence of a
+covert category that is well-defined in the cognitive space (since, at least, circa
+1900 B.C.), but remains unmaterialized in language until the Coptic period (circa
+200 A.D., Coptic introduces a Greek loan-word for “animals”). It is a category
+with clear boundaries, a large set of basic-level members, “fuzzy-edge” members,
+and intermediate taxa (Figure 4). In this case, the Egyptian script data strongly oppose the Worfian hypothesis that language plays a primary role in determining the
+nature of thought and conceptualization (on this topic, see Katz, 1998, pp. 32–34).
+The Egyptian script strengthens the opposite postulate, that is, that the conceptual
+system may be more detailed and developed than language, and that language lags
+behind conceptual organization.
+
+ALTERNATIVE CLASSIFICATION
+Alternative classification is a highly active mechanism in the hieroglyphic script,
+by which a word usually taking a certain classifier is diverted to take another classifier instead. It is always a motivated process (in the Saussurian sense), bound to
+the general constraints that govern the classification system. I shall give only two
+examples to clarify the process.
+The verb B†±# “to hate” mostly shows classification into the # “SENSES
+AND EMOTIONS” superordinate category but may sometimes be written as
+B†±‚, showing an alternative membership in the ‚ “INFERIORITY–EVIL”
+category. Hatred in this case is an “example of” “EVIL,” showing a negative cultural judgment of this emotion.
+In the framework of the > “HIDE AND TAIL” category discussed earlier, we
+meet with some examples of alternative categorization that stem from a different
+motivation. This process surfaces clearly in cases of “fuzzy-edge” members. The
+‘flea,’ py in Egyptian, is a difficult classification issue for a language that does not
+have a superordinate concept such as “INSECT.” The script offers two alternative
+classifiers, either the > “HIDE AND TAIL” or the „ “BIRD” superodinates (Figure 4). Here we see the scribes oscillating between classification into the category
+„ “BIRD” and the > “HIDE AND TAIL” category. On the eve of the New Kingdom (circa 1200 B.C.), the > “HIDE AND TAIL” category will come to include
+birds, thus moving slowly toward a more encompassing category, which comes
+
+104
+
+GOLDWASSER
+
+nearer—if never quite matures into—the category “ANIMAL” (Goldwasser,
+2002). Another example of this kind is a snakelike reptile called in Egyptian ddft,
+mostly classified into the ® “SWORM” superordinate category but at least once
+known to be classified as an > “HIDE AND TAIL” member.
+
+METAPHOR AS ALTERNATIVE CLASSIFICATION
+Metaphor makes its appearance in the framework of the Egyptian classifier system
+as another option for alternative classification, thus suggesting that metaphors are
+in essence a categorization process. As the entire classification system represented
+in the script is conceptual, that is, strictly representing conceptual data, one must
+conclude that the graphemic metaphors occur at the conceptual level, as they appear as part of the detailed representation of the conceptual world organization.
+The metaphors that are represented in graphemes do not necessarily emerge on the
+linguistic level (as words, phrases, idioms, etc.), thus again confirming the independence of conceptual organization from language.
+Animalistic metaphors form an especially important group among the metaphorical classifiers. It is quite possible that the animal hieroglyphs may offer themselves more readily than other icons to the metaphorical use in the script due to
+their high level of iconicity, which gives the metaphor instant pictorial lucidity and
+attractiveness.
+The conceptual metaphor “ANGER IS A DANGEROUS ANIMAL” or in
+Lakoff’s (XXXX, p. X) more detailed formulation, “The aggressive behavior of
+the dangerous animal is angry behavior,” in all probability has its roots in a culturally-based conceptual metaphor. However, when it surfaces in the Egyptian script,
+this cross-cultural conceptual metaphor is already tuned to the specific animal domain of the Nile valley (on metaphor and culture, see Gibbs, 1999).
+©
+The words qnd F
+œ # describe two types of anger—“angry (like
+±ä and dnd F
+±
+a) monkey” and “angry (like a) bull.” The angry man is thus classified as a member
+in the category “ANGRY ANIMALS” with two available prototypes for the scribe
+to choose from, to refine the description of the type of anger involved.
+If the prototype is the monkey, the “angry one” will get monkish attributes of
+anger—that is, very loud and showy but not essentially dangerous. On the other
+hand, should the prototype be the bull, the attributes will include not so boisterous
+but highly menacing and dangerous (for a detailed description of property attribution processes, see Glucksberg, 2000). The metaphoric classification of the two
+last mentioned words appears as an alternative for the nonmetaphoric classifica©
+œ >—classifies the state of
+F
+tion. The > classifier otherwise employed— F
+± >, ±
+anger into the conventional superordinate category of “ACTION OF FORCE”
+where “acting angrily” is an “example of” aggressive behavior. Somewhat surprisingly, another important conceptual metaphor for anger, “ANGER IS HEAT,”
+
+HIEROGLYPHICS AND METAPHOR
+
+105
+
+is not documented in the script. It is, however, well documented in other venues of
+the Egyptian culture, such as language and literature. The “hot one” is the negative
+personality par excellence of the Ancient Egyptian society, and “quarrel” is literally “heating” (Hannig, 2003, p. 1305). However, this conceptual metaphor surfaces exclusively on the level of language and not script.
+The crocodile, which was a daily menace on the banks of the Nile during the
+Pharaonic era, plays the role of vehicle in some other implicit metaphors of the
+script. The word Ôä
+F° > “be avaricious,” which is also usually classified into the
+> “ACTION OF FORCE” superordinate category, may occasionally take the ×
+°
+crocodile as an additional classifier, that is, Ô ä
+F × >, creating the implicit simile
+“avaricious as a crocodile,” the crocodile standing as a prototypical member of an
+ad hoc category we might call “THOSE WHO PILLAGE WHATEVER THEY CAN
+GET.” Crocodile autopsies in modern zoos have shown crocodiles to be remarkably undiscriminating eaters, finding china, wood, plastic, and other unlikely objects and materials in their stomachs. A term semantically close to the last example
+is ¥
+ªX>, ¥
+ªX× to devour. In this case, again, the superordinate > “ACTION
+OF FORCE” classifier alternates with the × crocodile hieroglyph. In this word,
+it is the devouring power of the crocodile that is called to mind.
+Another animal vehicle for two divergent conceptual metaphors is the leopard.
+9
+It appears (in a pictorial synecdoche +) as a classifier for the word °´++
+“strength,” clearly pointing to a conceptual category of “STRONG BEINGS” of
+which the leopard is a prototypical member. However, in the case of a more inter°
+esting word, “instant,” X& the leopard’s contribution becomes more multidimensional, where it appears as an alternative for the & “SUN” classifier, the conventional classifier°of all notions related to the sun as well as to “TIME.” The spelling
+variation of X+ “striking moment” was conceived already by Gardiner (1943, pp.
+13–15) as referring to the speed of the big cat attack. To achieve this cognitive goal,
+the ad hoc category utilized may be “SPEEDY MOMENTS,” of which the panther’s speedy attack would make a best exemplar member.
+An interesting alternative classification for the word “moment” develops during the New Kingdom. In some examples, the leopard head is exchanged for a hippopotamus head $. In this case, the classifier seems to refer to the short space of
+time that a hippopotamus keeps his head above water (Gardiner, 1943, p. 15; Gardiner, 1957, p. 461). Here the hippopotamus seizes the prototype role from the
+leopard.
+The awe-inspiring ram-head ) regularly appears as a classifier for the word
+°
+° into the
+“awe” “respect,” I
+ª )which otherwise may be classified I
+ª ò
+so-called ò “ABSTRACT” category. The ad hoc category created in this case may
+be “AWE-INSPIRING BEINGS,” where the respected man and the ram are basic-level examples.
+A particularly memorable classifier is the pictogram of a cow suckling its calf,
+which appears as a classifier in the words XB†È “to show solicitude.” Some-
+
+106
+
+GOLDWASSER
+
+what surprisingly for the modern observer, the mother cow, not the human mother,
+is the prototypical member in the ad hoc category “CARE-GIVING” for the
+Egyptians.
+—I
+In the word “stink” F
+¤‚, the ¤ “FISH” classifier creates the additional
+simile “stinking like a fish,” whereas the final common classification into the ‚
+“INFERIORITY–EVIL” informs the reader of the negative nature of the smell as
+well as of the word. The fish in this case plays the prototype for the category
+“STINKING THINGS” (the theme of the bad smell of the fisherman is a
+well-known theme in Egyptian literature).
+Another example, outside the animal kingdom, occurs when we find the {
+{
+“EYE” classifier acting as an additional alternative classification †Î
+± O with the
+word “window,” which is commonly classified into the O “HABITAT” domain in
+part–whole schematic relations. It is plausible that the window is metaphorically
+conceptualized as “the eye of the house.” The ad hoc category constructed is something like “PARTS THROUGH WHICH ONE CAN SEE,” of which the eye is naturally the most prototypical member, the “window” of the body container of the human being.
+An intricate example of conceptual category formation played out between
+script and language may be found in the verb sr † ‘ # “to foresee” or “to foretell.” Like the verbs “conceive,” “hate,” “love,” “talk,” or “eat,” this verb takes the
+superordinate classifier # “SENSES AND EMOTIONS,” as befits a human quality
+residing in the “body–container.” However, on occasion, it may take instead as
+classifier the giraffe ß hieroglyph, thereby creating the simile † ‘ ß “to foretell
+(foresee) is to see like a giraffe.” The giraffe is the vehicle of the metaphor and the
+prototypical member (at least iconically) of the ad hoc superordinate category
+“THOSE WHO SEE AND KNOW BEFORE ALL OTHERS.” However, a rare word
+in the Egyptian language shares the same consonants —sr— and comes to designate the noun “giraffe” (the giraffe is usually called mmy). The sr example forms
+part of a phenomenon in which an animal quality serves as the Grundbegriff from
+which the name of the animal and a verb “to behave as such and such an animal” is
+derived (Westendorf, 1986). The metaphor in this case exists both in language and
+in script.
+Another metaphor that exists both in language and script is the word špt I
+Ä °ß
+“be angry.” The Tetrodon fahaka fish replaces the more common classifier that
+classifies the word I
+Ä°# into the #“SENSES AND EMOTIONS” superordinate
+category. The špt fish displays a unique propensity to grow into a strange, menacing balloon-like form by swallowing air or water in times of danger or arousal
+(hence its German name Kugelfish; Boessneck, 1988, p. 121; see also Figure 5).
+This characteristic may have served as the Grundbegriff or more correctly as the
+Grundbild from which the name of the fish (špt) and the metaphorical verb eventually sprung. The angry man may be classified into the alternative ad hoc category
+of “SWOLLEN BEINGS,” where the specific fish is probably a prototypical mem-
+
+HIEROGLYPHICS AND METAPHOR
+
+FIGURE 5
+
+107
+
+“The Angry Fish”—Tetrodon fahaka.
+
+ber. The angry person, like the fish, puffs up at times of intense emotion, and reverts back to his normal state when his emotion lessens. This conceptualization of
+anger relates to the deep structure metaphors “ANGER IS HEAT” and “THE
+BODY IS A CONTAINER.” As a result of the heating process, the ingredients in the
+container (i.e., the human body), inflate. The description of the angry person as
+“swollen” by anger is a common metaphor in modern Hebrew as well as in German—es schwillt der Aerger in ihm an.
+
+MYTH-AND-BELIEF PRINCIPLE
+The term Myth-and-Belief was coined by George Lakoff in his discussion of the
+Dyirbal classification system:
+If some noun has characteristic X (on the basis of which its class membership is expected to be decided) but is, through belief or myth, connected with characteristic Y,
+then generally it will belong to the class corresponding to Y and not that corresponding to X. (XXXX, p. X)
+
+A prominent example is the classification of birds in Dyirbal. Birds are not classified into the animate class with other animated beings. Birds are believed to be the
+spirits of dead human females, and are moved into the human female category
+(Lakoff, 1986, pp. 15–16).
+The Myth-and-Belief Principle plays only a marginal role within the framework
+of the Egyptian classification system. Yet some alternative categorization stems
+from mythological reasoning, confirming that the Myth-and-Belief Principle
+should be understood as another option of ad hoc alternative classification.
+
+108
+
+GOLDWASSER
+
+The locus par excellence of religious intervention in the Egyptian secular conceptual world organization is the Sethian case. The god Seth is the Egyptian god of
+storm and foreign lands, but also the murderer of the benevolent father of the gods,
+Osiris. Seth always held an ambivalent status in the Egyptian pantheon during the
+pharaonic period and was conceptualized as a necessary part of world order, similar to confusion and disorder. Seth is represented in art and in script by the icon of a
+fabulous quadruped Ù or in his anthropomorphic form l. Seth may yank words
+out of their common categories, placing them in his own, so-called “Sethian category.” The partial list of examples of Figure 6 shows the main semantic fields that
+may be affected by the alternative Sethian category (Te Velde, 1967). A central
+member of the Sethian category are the words “to disturb” and their derivatives,
+such as “turmoil” and “brawler”. Another important cluster contains words that
+describe weather conditions conceptualized as “irregularities” by the Egyptians.
+Here we find snow, storm, heavy rain—all elements of weather that were unusual
+or unknown in the Nile valley. These words may be moved from the common
+%“PRECIPITATION” category to the realm of Seth. As sickness is a major disturbance in life, it may also be moved to the Sethian category from its expected
+‚“EVIL” category classification. Likewise, a nightmare—a dream that went
+astray—may exchange its conventional classification into the {“EYE” domain
+(because one seems to “see” a dream) for the alternative Sethian category. In rare
+cases, the reason for the shift into the Sethian category may be the human qualities
+attributed to the god Seth. As Seth is known in the Egyptian mythology to be a
+braggart, we are not surprised to find the word “boast” classified by the Ù classifier in addition to the expected #“SENSES AND EMOTIONS” classifier (Figure
+6).
+It seems that when words take the Sethian classifier, they become members in
+the ad hoc category “DISTURBANCE”or the like, of which Seth is unequivocally
+the center and the prototypical member, that is, the best exemplar, in the ancient
+Egyptian culture. It is very difficult to evaluate why Seth alone of all Egyptian gods
+and divine beings had the enormous cognitive power to move such a large chunk of
+vocabulary items from their conventional classification into the realm of his own
+superordinate category, even if temporarily. The answer may lie in the growing
+need of the Egyptian society (like any society) to give explicit reasons and explanations for life’s difficulties and irregularities, and to seek the understanding of “the
+other.” The preponderance of the Sethian category suggests that secular superordinates such as ‚“EVIL,” although descriptive and even judgmental, lack the explanatory power of this dominant and fascinating religious figure. Illness, weather
+catastrophes, abnormal events, and abnormal behavior may gain a stronger explanatory force from the Sethian categorization than the objective “bad bird” could offer. Any uncalled-for event must be caused by the intervention of Seth.
+The Seth case gives support to the cognitive school of metaphor that regards
+categorization and metaphorization as central tools by which different cultures try
+
+HIEROGLYPHICS AND METAPHOR
+
+FIGURE 6
+
+109
+
+The SETH category.
+
+to put order and meaning into the sometimes inexplicable fate of people and societies. Conceptual world organization through classification helps man to tackle daily
+problems and dangers, as has been suggested early on by Rosch (1978), and Lakoff
+(1986). The Egyptian script tends to confirm this hypothesis. The script mirrors a
+world organization with clear, detailed categories of “EVIL,” and ”DISTURBANCE.” No parallel category of “GOOD” has been traced in the system.
+
+A FEW WORDS ON METHODOLOGY
+The study of the Egyptian classifier system is still in its embryonic stages. Of all
+categories of the script, only three—“TREE” and “HIDE AND TAIL” and to a
+limited extent “DISTURBANCE”—have been comprehensively studied (Goldwasser, 2002; Te Velde, 1977). The rules of Egyptian script do not prescribe fixed
+
+110
+
+GOLDWASSER
+
+spellings, and the different signs playing the role of classifiers are subject to varying preferences, codification processes, and idiosyncratic choices. It is therefore
+methodologically insufficient to construct any theory of Egyptian world organization on the strength of the relatively few examples represented by the standard dictionaries for each specific word. To give a study of a hieroglyphic classifier the best
+statistical grounding available, one should access the more than a million published and unpublished cards in the files of the Egyptian dictionary in Berlin, Germany,2 as well as to the vast collection of new data from later publications (for details, see Goldwasser, 2002).
+
+CONCLUSION
+The rich data provided by the Egyptian classifier system—very partially represented in this article—confirm unequivocally the existence of knowledge organization and conceptual structures that are divorced from language. The overall classification system manifest in the script presents knowledge structures that inhabit
+the conceptual sphere and are not represented on the level of the linguistic
+signifier, (i.e., the word). The > classifier provides rare proof for the existence of a
+lively and evolving covert category. Metaphor takes part in this overall representation of the mental space and thus resides primarily in the conceptual sphere. A metaphor can reside in the conceptual sphere without materializing in the linguistic
+sphere or can share both worlds, the conceptual and the linguistic.
+The Egyptian case also lends strong support to the school that believes that metaphor is essentially alternative categorization and that the vehicle is a “best exemplar”
+of this temporary category. The vehicle and the topic become, for a short time, members in a newly created abstract category. As the Egyptian system operates around
+prototypical basic-level members that represent superordinate categories, and as the
+metaphoric classification takes the place of the ordinary, nonmetaphorical classifier,
+it seems that alternative classification is undeniable in this case.
+A more complex issue is the possible activation of the “deep structure,” prestored,
+conceptual metaphor. In most cases, the script presents only the vehicle, the best exemplar, which together with the topic creates metaphorical movement. The script itself may also avoid any representation of the “deep structure“ conceptual metaphor
+because of its inherent iconic limitations. A superordinate such as “DANGEROUS
+2The Wörterbuch is the abbreviation in Egyptological literature for the Wörterbuch der ägyptischen
+Sprache. This handwritten, 12-volume dictionary, compiled at the beginning of the last century and
+completed in 1936, is still the main database of examples from Egyptian texts. Besides the 12 published
+volumes, the Berlin Wörterbuch center holds more than a million handwritten cards with examples that
+were omitted from the published volumes by the dictionary’s compilers for reasons of space. At present, a comprehensive project is being concluded that will transfer all the Wörterbuch cards onto the
+Wörterbuch Internet site under the direction of S. Seidlmayer and W. Schenkel.
+
+HIEROGLYPHICS AND METAPHOR
+
+111
+
+ANIMAL” is difficult to describe iconically (on the problematics of iconicity and
+metaphor, see Forceville, 1996; Goldwasser, 1995; Kennedy, 1982).
+Nevertheless, sometimes a conventional “deep structure” conceptual metaphor
+does surface in the script. A prominent case involves the dominant conceptual metaphors “THE BODY IS A CONTAINER” and “IDEAS ARE FOOD.” These two
+conceptual structures are reflected in the collection of words that take the # icon
+as a classifier. Originally signifying the verb “to eat,” this hieroglyph, when activated as classifier, unites a wide range of words related to food consumption as
+well as “everything that comes/in out of the body container.” Such elements include words pertaining to speech such as “say,” “talk,” and “cry,” as well as words
+that describe emotions—“remember,” “love,” “hate,” or “feel” (Kammerzell,
+1999; Schenkel, 2002). A central member in the category is the verb “perceive,”
+strongly pointing to the conceptual metaphor “IDEAS ARE FOOD” (compare
+Kovecses, 2000, p. 141). This last example, however, does not necessarily suggest
+the activation of the conventional “deep structure” metaphor in the processing of
+other specific metaphorical expressions. Additional research is required before
+any final conclusion can be drawn concerning the activation of conceptual metaphor in such occasions in the script.
+One central, if unexpected, finding of the study of classifiers has been the astonishing degree of affinity between the 5,000-year-old Egyptian system and modern
+Western classification. This result is particularly surprising, given the fact that
+many view the ancient Egyptian culture as an esoteric, “pre-Greek” culture contaminated by “mythological thinking.” Consequently, one would expect to find a
+classification system such as that of the Dyrbal (as analyzed in Lakoff, 1986). Nevertheless, the Egyptian system reflects an almost entirely secular categorization
+with very limited influence of Myth-and-Belief Principle. World classification as
+represented by the script supports an understanding of classification systems as
+universal, notwithstanding some cultural effects and variations.
+One should always keep in mind that like any other language, the Ancient Egyptian language reflects many conceptual metaphors, some identical to and some different from the metaphors that emerge in the script. The understanding of ancient
+Egypt’s world organization and the mapping of its stable conceptual metaphors call
+for the joining of the two channels of information—the script and the language. We
+hope that future inquiry into additional categories of the script will transport us further into the intimate cognitive landscape of this ancient, alluring civilization.
+
+ACKNOWLEDGMENTS
+I am indebted to Professor Yeshayahu Shen of Tel Aviv University for helping me,
+many years ago, to make my first steps in the field of metaphor studies.
+
+112
+
+GOLDWASSER
+
+REFERENCES
+Aikhenvald, A. Y. (2000). Classifiers. A typology of noun categorization devices. Oxford, XXXX: Oxford University Press.
+Atran, S. (1990). The cognitive foundations of natural history. Cambridge, England: Cambridge University Press.
+Boessneck, J. (1988). Die Tierwelt des Alten Ägypten untersucht anhand kulturgeschichtlicher und
+zoologischer Quellen [XXXXXXXXXX]. München, XXXX: C. H. Beck.
+Champollion, le J. (1836). Grammaire égyptienne, principes généraux de l’écriture sacrée égyptienne
+[XXXXXXXXX]. Paris: Typographie de firmin Didot Frères.
+Chiappe, D. (2003). Review of: Glucksberg, S. (2001). Understanding figurative language: From metaphors to idioms. Metaphor and Symbol, 18, 55–61.
+David, A. (2000). De l’infériorité à la pertubation: L’oiseau du «mal» et la catégorisation en Egypte
+ancienne. Göttinger Orientforschungen IV: Ägypten, Bd. 38 [Classification and Categorisation in
+Ancient Egypt, 1]. Wiesbaden, XXXX: Harrassowitz.
+Erman, A., & Grapow, H. (1926–1963). Wörterbuch der ägyptischen Sprache [XXXXXXXXXX].
+Leipzig, XXXX: J. C. Hinrichs; Berlin, Germany: Akademie–Verlag.
+Forceville, C. (1996). Pictorial metaphor in advertising. London: Routledge.
+Gardiner, A. (1947). Ancient Egyptian onomastica. London: Oxford University Press.
+Gardiner, A. (1957). Egyptian grammar. Being an introduction to the study of hieroglyphs (3rd ed., revised). Oxford, XXXX: Griffith Institute.
+Gibbs, R.W. (1998). The fight over metaphor in thought and language. In A. N. Katz & X. XXXX al.
+(Eds.), Figurative language and thought (pp. 88–118). New York: Oxford University Press.
+Gibbs, R.W. (1999). Taking metaphor out of our heads and putting it into the cultural world. In R. W.
+Gibbs & G. Steen (Eds.), Metaphor in cognitive linguistic (pp. 125–144). Amsterdam: Benjamins.
+Gibbs, R. W. (2001). Evaluating contemporary models of figurative language understanding. Metaphor
+and Symbol, 16, 317–333.
+Glucksberg, S. (2001). Understanding figurative language: From metaphors to idioms (Oxford Psychology Series 36). Oxford, XXXX: Oxford University Press.
+Glucksberg, S., & Keysar, B. (1990). Understanding metaphorical comparisons: Beyond similarity.
+Psychological Review, 97, 3–18.
+Goldwasser, O. (1995). From icon to metaphor: Studies in the semiotics of the hieroglyph (Orbis
+Biblicus et Orientalis 142). Fribourg, XXXX; Universitätsverlag; Göttingen, XXXX: Vandenhoeck
+& Ruprecht.
+Goldwasser, O. (2002). Prophets, lovers, and giraffes: Wor(l)d classification in ancient Egypt
+(Göttinger Orientforschungen 38. Classification and categorisation in Ancient Egypt, 3).
+Wiesbaden, XXXX: Harrassowitz.
+Goldwasser, O. (in press). A comparison between classifier languages and classifier script: The case of
+ancient Egyptian. In G. Goldenberg & A. Shisha–Halevi (Eds.), Ancient Egyptian, neo-semitic,
+methods in linguistics: Polotsky memorial volume. Jerusalem : Magnes Press.
+Hannig, R. (2003). Ägyptisches Wörterbuch I. Altes Reich und Erste Zwischenzeit [XXXXXXX].
+Mainz, XXXX: Philipp von Zabern.
+Kammerzell, F. (1999). Zur interpretation einiger beispiele graphemsprachlicher varianz im
+Ägyptischen [XXXXXXX]. Göttinger Beiträge zur Sprachwissenschaft, 2, 61–97.
+Katz, A. N. (1998). Figurative language and figurative thought: A review. In A. N. Katz & X. X.
+XXXXXXX (Eds.), Figurative language and thought (pp.3–43). New York: Oxford University
+Press.
+Kennedy, J. M. (1982). Metaphor in picture. Perception, 11, 589–605.
+Kovecses, Z. (2000). Metaphor and emotion. Language, culture, and body in human feeling. Cambridge, England: Cambridge University Press.
+
+HIEROGLYPHICS AND METAPHOR
+
+113
+
+Lakoff, G. (1986). Classifiers as reflections of the mind. In C. Craig (Ed.), Noun classes and categorization (pp. 13–51). Amsterdam: Benjamins.
+Lakoff, G. (1987). Women, fire, and dangerous things: What categories reveal about the mind. Chicago: University of Chicago Press.
+Martin, G. L (1991). The hidden tombs of Memphis. London: Thames & Hudson
+Medin, D. L., & Atran, S. (1999). Folkbiology. Cambridge, MA: MIT Press.
+O’brien, J. (1999). Metaphoricity in the signs of American Sign Language. Metaphor and Symbol, 14,
+159–177.
+Parkinson, R. (1999). Cracking codes: The Rosetta stone and decipherment. London: British Museum
+Press.
+Rosch, E. (1978). Principles of categorization. In E. Rosch & B. Lloyd (Eds.), Cognition and categorization (pp. 28–49). Hillsdale, NJ: Lawrence Erlbaum Associates, Inc.
+Schenkel, W. (2002). Ägyptisch wnm “essen.” Zur interpretation der graphien [XXXXXX]. Lingua
+Aegyptia, 10, 59–77.
+Shalomi-Hen, R. (2000). Classifying the divine. Determinatives and categorisation in CT 335 and BD
+17 (Göttinger Orientforschungen IV: Ägypten. Bd. 38. Classification and Categorisation in Ancient
+Egypt, 2). Wiesbaden, XXXX: Harrassowitz.
+Shen, Y. (1997). Metaphors and conceptual structures. Poetics, 25, 1–16.
+Steen, G., & Gibbs, R. W. (1999). Introduction. In R. W. Gibbs & G. Steen (Eds.), Metaphor in cognitive linguistic (pp. 1–8). Amsterdam: Benjamins.
+Taylor, J. R. (1995). Linguistic categorization: Prototypes in linguistic theory. Oxford, England: Clarendon.
+Te Velde, H. (1967). Seth, god of confusion: A study of his role in Egyptian mythology and religion
+(Probleme der Ägyptologie 6). Leiden, XXXX: E. J. Brill.
+Thomas, M. S. C., & Mareschal, D. (2001). Metaphor as categorization: A connectionist implementation. Metaphor and Symbol, 16, 5–27.
+Westendorf, W. (1986). Tiernamen. In W. Helck. & E. Otto (Eds.), Lexikon der Ägyptologie (Bd. VI.;
+pp. 588–590). Wiesbaden, XXXX: Harrassowitz.
+Winston, M. E. (1987). A taxonomy of part-whole relations. Cognitive Science, 11, 417–444.
+
+

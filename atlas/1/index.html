@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Genesis 1</title>
+<style>
+@font-face {
+  font-family: 'ComicCode';
+  src: url('../fonts/ComicCodeLigaturesNerdFont-Regular.otf') format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'ComicCode';
+  src: url('../fonts/ComicCodeLigaturesNerdFont-Bold.otf') format('opentype');
+  font-weight: 700;
+}
+:root {
+  --bg: #0d0d10;
+  --fg: #e2e2e3;
+  --bright: #FAFAFA;
+  --accent: #b39df3;
+  --pos: #9ed072;
+  --neg: #fc5d7c;
+  --orange: #f39660;
+  --yellow: #e7c664;
+  --blue: #76cce0;
+  --grey: #7f8490;
+  --zero: #7f8490;
+  --border: #1e1e24;
+  --surface: #141418;
+  --sel: #54487A;
+  --L: #76cce0;
+  --M: #9ed072;
+  --Q: #e7c664;
+  --T: #b39df3;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'ComicCode', 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 13px;
+}
+
+/* ── Scroll snap ── */
+#pages {
+  height: 100vh; overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.page {
+  min-height: 100vh; scroll-snap-align: start;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  padding: 60px 32px 40px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.page-top {
+  position: absolute; top: 48px; left: 0; right: 0;
+  text-align: center;
+}
+
+/* ── Nav dots ── */
+#nav {
+  position: fixed; right: 16px; top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 8px; z-index: 50;
+}
+.nav-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--border); cursor: pointer; transition: all 0.2s;
+  border: none;
+}
+.nav-dot:hover { background: var(--accent); }
+.nav-dot.active { background: var(--accent); transform: scale(1.3); }
+
+/* ── Verse content ── */
+.verse-ref {
+  font-size: 14px; color: var(--zero); text-transform: uppercase;
+  letter-spacing: 3px; margin-bottom: 28px;
+}
+.hebrew {
+  font-size: 28px; direction: rtl; text-align: center;
+  line-height: 1.8; color: var(--bright); margin-bottom: 28px;
+  font-family: serif;
+}
+.translations {
+  display: flex; flex-direction: column; gap: 80px;
+  max-width: 720px;
+}
+.bubble {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 20px 28px;
+  position: relative;
+}
+.bubble:hover { border-color: var(--accent); }
+.bubble:hover .bubble-label {
+  opacity: 1; transform: translateY(0);
+}
+.bubble-label {
+  position: absolute; top: -10px; left: 20px;
+  background: var(--surface); padding: 0 8px;
+  color: var(--zero); font-size: 10px; text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0; transform: translateY(4px);
+  transition: all 0.2s;
+}
+.bubble-text { font-size: 20px; line-height: 1.5; color: var(--bright); }
+.bubble-text em { color: var(--bright); font-style: normal; }
+.bubble.note {
+  opacity: 0; transform: translateY(4px);
+  transition: all 0.3s;
+  border-color: var(--accent)30;
+}
+.bubble.note .bubble-text { font-size: 14px; color: var(--zero); }
+.page:hover .bubble.note { opacity: 1; transform: translateY(0); }
+
+/* ── Text pages (preface, etc) ── */
+.page-title {
+  font-size: 28px; font-weight: 700; color: var(--accent);
+  margin-bottom: 8px;
+}
+.page-subtitle {
+  font-size: 14px; color: var(--zero); letter-spacing: 1px;
+  text-transform: uppercase; margin-bottom: 36px;
+}
+.page-body p { margin-bottom: 16px; }
+.page-body p:last-child { margin-bottom: 0; }
+
+/* ── Code cards ── */
+.code-text {
+  font-size: 20px; line-height: 2.2;
+  color: var(--fg); white-space: pre;
+  text-align: left;
+}
+.code-text .kw { color: var(--neg); }
+.code-text .fn { color: var(--pos); }
+.code-text .var { color: var(--blue); }
+.code-text .cm { color: var(--grey); font-style: italic; }
+
+.scroll-hint {
+  position: absolute; bottom: 20px;
+  font-size: 10px; color: var(--zero); letter-spacing: 1px;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 0.3; } 50% { opacity: 0.8; } }
+</style>
+</head>
+<body>
+
+<div id="pages"></div>
+<div id="nav"></div>
+
+<script>
+function esc(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+fetch('verses.json').then(r => r.json()).then(verses => {
+  const container = document.getElementById('pages');
+  container.innerHTML = verses.map((v, i) => {
+    if (v.code) {
+      // code card — syntax highlight
+      const highlighted = esc(v.code)
+        .replace(/(\/\/.*)/g, '<span class="cm">$1</span>')
+        .replace(/\b(let|const|new|function|return|if|else)\b/g, '<span class="kw">$1</span>')
+        .replace(/\b(Dimension|Array|Object|String|Number)\b/g, '<span class="fn">$1</span>')
+        .replace(/\b(space|matter|signal|time)\b/g, '<span class="var">$1</span>');
+      return `<div class="page" id="v${i}" data-idx="${i}">
+        <div class="translations">
+          <div class="bubble">
+            <span class="code-text">${highlighted}</span>
+          </div>
+        </div>
+      </div>`;
+    }
+    if (v.body) {
+      // text page (preface, interlude, etc)
+      const paras = esc(v.body).split('\n\n').map(p => `<p>${p}</p>`).join('');
+      return `<div class="page" id="v${i}" data-idx="${i}">
+        <div class="page-top">
+          <div class="page-title">${esc(v.title || v.ref)}</div>
+          ${v.subtitle ? `<div class="page-subtitle">${esc(v.subtitle)}</div>` : ''}
+        </div>
+        <div class="translations">
+          <div class="bubble">
+            <span class="bubble-text"><div class="page-body">${paras}</div></span>
+          </div>
+        </div>
+        ${i === 0 ? '<div class="scroll-hint">&darr; scroll</div>' : ''}
+      </div>`;
+    }
+    // verse page
+    return `<div class="page" id="v${i}" data-idx="${i}">
+      <div class="page-top">
+        <div class="verse-ref">Genesis ${esc(v.ref)}</div>
+        <div class="hebrew">${esc(v.hebrew)}</div>
+      </div>
+      <div class="translations">
+        <div class="bubble">
+          <span class="bubble-label">KJV</span>
+          <span class="bubble-text">${esc(v.kjv)}</span>
+        </div>
+        <div class="bubble">
+          <span class="bubble-label">Direct</span>
+          <span class="bubble-text">${esc(v.direct)}</span>
+        </div>
+        <div class="bubble">
+          <span class="bubble-label">Lattice</span>
+          <span class="bubble-text">${esc(v.lattice)}</span>
+        </div>
+        ${v.note ? `<div class="bubble note">
+          <span class="bubble-label">Note</span>
+          <span class="bubble-text">${esc(v.note)}</span>
+        </div>` : ''}
+      </div>
+      ${i === 0 ? '<div class="scroll-hint">&darr; scroll</div>' : ''}
+    </div>`;
+  }).join('');
+
+  // nav dots
+  const nav = document.getElementById('nav');
+  nav.innerHTML = verses.map((v, i) =>
+    `<button class="nav-dot${i === 0 ? ' active' : ''}" title="${v.ref}" onclick="document.getElementById('v${i}').scrollIntoView({behavior:'smooth'})"></button>`
+  ).join('');
+
+  // track active page
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const idx = e.target.dataset.idx;
+        document.querySelectorAll('.nav-dot').forEach((d, i) =>
+          d.classList.toggle('active', i === parseInt(idx)));
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.page').forEach(p => observer.observe(p));
+});
+</script>
+
+</body>
+</html>

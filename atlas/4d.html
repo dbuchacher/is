@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Atlas — 4D</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0d0d10; overflow: hidden; font-family: 'JetBrains Mono', monospace; }
+canvas { display: block; }
+#ui {
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  z-index: 50; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: center;
+  max-width: 90vw;
+}
+#ui button {
+  background: none; border: 1px solid #2a2a32; color: #7f8490;
+  font: inherit; font-size: 11px; padding: 4px 12px; border-radius: 14px;
+  cursor: pointer;
+}
+#ui button:hover { border-color: #b39df3; color: #b39df3; }
+#ui button.active { border-color: #b39df3; color: #b39df3; background: #b39df315; }
+.sep { color: #2a2a32; font-size: 10px; }
+</style>
+</head>
+<body>
+<div id="ui">
+  <button class="view-btn active" data-view="iso">iso</button>
+  <button class="view-btn" data-view="face-xy">χμ</button>
+  <button class="view-btn" data-view="face-xz">χφ</button>
+  <button class="view-btn" data-view="face-yz">μφ</button>
+  <button class="view-btn" data-view="edge-x">edge χ</button>
+  <button class="view-btn" data-view="edge-y">edge μ</button>
+  <button class="view-btn" data-view="edge-z">edge φ</button>
+  <button class="view-btn" data-view="corner">corner</button>
+  <span class="sep">│</span>
+  <button id="btn-4d">show τ</button>
+  <span class="sep">│</span>
+  <button id="btn-electron" class="active" style="color:#fc5d7c;border-color:#fc5d7c40">e⁻</button>
+  <button id="btn-neutrino" class="active" style="color:#7f8490;border-color:#7f849040">ν</button>
+  <button id="btn-positron" class="active" style="color:#9ed072;border-color:#9ed07240">e⁺</button>
+</div>
+<script type="importmap">
+{ "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0d0d10);
+const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.1, 200);
+camera.position.set(7, 5, 9);
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(innerWidth, innerHeight);
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+document.body.appendChild(renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+const dl = new THREE.DirectionalLight(0xffffff, 0.5); dl.position.set(5,8,6); scene.add(dl);
+
+const S = 1.5;
+const CAM4D = 3.0;
+const BLUE = 0x76cce0, GREEN = 0x9ed072, YELLOW = 0xe7c664, PURPLE = 0xb39df3;
+const RED = 0xfc5d7c, GREY = 0x7f8490;
+const DIM_COLORS = [BLUE, GREEN, YELLOW, PURPLE]; // χ, μ, φ, τ
+
+// ── 4D → 3D projection ──
+// τ drives perspective. χ→x, μ→y, φ→z.
+// When showing τ (4D mode): τ also drives quaternion rotation.
+let show4D = false;
+
+function project(chi, mu, phi, tau) {
+  const w = CAM4D / (CAM4D - tau);
+  let x = chi, y = mu, z = phi;
+
+  if (show4D) {
+    // quaternion rotation: τ rotates in χ↔μ plane (π·∘ = ∮)
+    const angle = tau * Math.PI / 2;
+    const c = Math.cos(angle), s = Math.sin(angle);
+    x = chi * c - mu * s;
+    y = chi * s + mu * c;
+    z = phi;
+  }
+
+  return new THREE.Vector3(x * w * S, y * w * S, z * w * S);
+}
+
+// ── Generate 81 vertices: all ±1 combos on 4 axes = tesseract (16) ──
+// Actually all combos of {-1, +1} on 4 axes
+const verts4D = [];
+for (let a = -1; a <= 1; a += 2)
+  for (let b = -1; b <= 1; b += 2)
+    for (let c = -1; c <= 1; c += 2)
+      for (let d = -1; d <= 1; d += 2)
+        verts4D.push([a, b, c, d]);
+
+// ── Create vertex meshes ──
+const vertMeshes = verts4D.map(v => {
+  const [chi, mu, phi, tau] = v;
+  const isDiag = (chi === mu && mu === phi && phi === tau);
+  let color, radius;
+  if (isDiag && chi === -1)     { color = RED; radius = 0.09; }
+  else if (isDiag && chi === 1) { color = GREEN; radius = 0.09; }
+  else { color = tau === 1 ? 0x555560 : 0x333338; radius = 0.03; }
+
+  const mesh = new THREE.Mesh(
+    new THREE.SphereGeometry(radius, 12, 8),
+    new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.3, roughness: 0.3 }),
+  );
+  scene.add(mesh);
+  return mesh;
+});
+
+// neutrino at origin
+const neutrinoMesh = new THREE.Mesh(
+  new THREE.SphereGeometry(0.06, 12, 8),
+  new THREE.MeshStandardMaterial({ color: GREY, emissive: GREY, emissiveIntensity: 0.4, roughness: 0.3 }),
+);
+scene.add(neutrinoMesh);
+
+// ── Edges: connect verts differing in exactly 1 coord ──
+const edges = [];
+for (let i = 0; i < verts4D.length; i++) {
+  for (let j = i + 1; j < verts4D.length; j++) {
+    let diff = 0, axis = -1;
+    for (let k = 0; k < 4; k++) {
+      if (verts4D[i][k] !== verts4D[j][k]) { diff++; axis = k; }
+    }
+    if (diff === 1) {
+      const geo = new THREE.BufferGeometry();
+      const pos = new Float32Array(6);
+      geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+      const line = new THREE.Line(geo, new THREE.LineBasicMaterial({
+        color: DIM_COLORS[axis], transparent: true, opacity: 0.12,
+      }));
+      scene.add(line);
+      edges.push({ i, j, geo, line });
+    }
+  }
+}
+
+// ── Diagonal lines (hylo + meta) ──
+const DIAG_STEPS = 80;
+function makeDiagLine(color) {
+  const geo = new THREE.BufferGeometry();
+  const pos = new Float32Array((DIAG_STEPS + 1) * 3);
+  geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const line = new THREE.Line(geo, new THREE.LineBasicMaterial({ color, transparent: true, opacity: 0.6 }));
+  scene.add(line);
+  return { geo, line };
+}
+const diagHylo = makeDiagLine(YELLOW);
+const diagMeta = makeDiagLine(PURPLE);
+
+// ── Update all positions ──
+function updatePositions() {
+  for (let i = 0; i < verts4D.length; i++) {
+    vertMeshes[i].position.copy(project(...verts4D[i]));
+  }
+  for (const e of edges) {
+    const a = vertMeshes[e.i].position, b = vertMeshes[e.j].position;
+    const p = e.geo.attributes.position.array;
+    p[0]=a.x; p[1]=a.y; p[2]=a.z; p[3]=b.x; p[4]=b.y; p[5]=b.z;
+    e.geo.attributes.position.needsUpdate = true;
+  }
+  // diagonals
+  for (let i = 0; i <= DIAG_STEPS; i++) {
+    const t = -1 + 2 * i / DIAG_STEPS;
+    const ph = project(t, t, t, t);
+    const dp = diagHylo.geo.attributes.position.array;
+    dp[i*3]=ph.x; dp[i*3+1]=ph.y; dp[i*3+2]=ph.z;
+    // meta: same path (both straight in local frame; helix differs only in non-local)
+    const pm = show4D ? project(t, t, t, -t) : ph; // flip tau for meta
+    const mp = diagMeta.geo.attributes.position.array;
+    mp[i*3]=pm.x; mp[i*3+1]=pm.y; mp[i*3+2]=pm.z;
+  }
+  diagHylo.geo.attributes.position.needsUpdate = true;
+  diagMeta.geo.attributes.position.needsUpdate = true;
+}
+
+// ── 4D toggle ──
+let morphTarget = 0, morphVal = 0;
+const MORPH_SPEED = 1.5;
+const btn4d = document.getElementById('btn-4d');
+btn4d.addEventListener('click', () => {
+  morphTarget = morphTarget === 0 ? 1 : 0;
+  btn4d.textContent = morphTarget === 0 ? 'show τ' : 'hide τ';
+  btn4d.classList.toggle('active', morphTarget === 1);
+});
+
+// ── Lepton toggles ──
+const electronMesh = vertMeshes[verts4D.findIndex(v => v[0]===-1&&v[1]===-1&&v[2]===-1&&v[3]===-1)];
+const positronMesh = vertMeshes[verts4D.findIndex(v => v[0]===1&&v[1]===1&&v[2]===1&&v[3]===1)];
+const leptons = [electronMesh, neutrinoMesh, positronMesh];
+['btn-electron','btn-neutrino','btn-positron'].forEach((id,i) => {
+  document.getElementById(id).addEventListener('click', e => {
+    leptons[i].visible = !leptons[i].visible;
+    e.target.classList.toggle('active', leptons[i].visible);
+  });
+});
+
+// ── 8 views = 2³ (3D camera angles; τ is the 4D button) ──
+const VIEWS = {
+  'iso':      [7, 5, 9],
+  'face-xy':  [0, 0, 12],
+  'face-xz':  [0, 12, 0.1],
+  'face-yz':  [12, 0, 0.1],
+  'edge-x':   [12, 0.1, 0.1],
+  'edge-y':   [0.1, 12, 0.1],
+  'edge-z':   [0.1, 0.1, 12],
+  'corner':   [8, 8, 8],
+};
+
+let anim = false, aFrom = new THREE.Vector3(), aTo = new THREE.Vector3(), aT = 0;
+function ease(t) { return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2; }
+
+document.querySelectorAll('.view-btn').forEach(b => b.addEventListener('click', () => {
+  aFrom.copy(camera.position); aTo.set(...VIEWS[b.dataset.view]); aT = 0; anim = true;
+  document.querySelectorAll('.view-btn').forEach(x => x.classList.remove('active')); b.classList.add('active');
+}));
+
+window.addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight);
+});
+
+let last = performance.now() / 1000;
+function animate() {
+  requestAnimationFrame(animate);
+  const now = performance.now() / 1000, dt = now - last; last = now;
+
+  // morph 4D toggle
+  if (morphVal !== morphTarget) {
+    const dir = morphTarget > morphVal ? 1 : -1;
+    morphVal += dir * dt * MORPH_SPEED;
+    morphVal = dir > 0 ? Math.min(morphVal, 1) : Math.max(morphVal, 0);
+    show4D = morphVal > 0.5;
+  }
+
+  // camera animation
+  if (anim) {
+    aT += dt * 2; if (aT >= 1) { aT = 1; anim = false; }
+    camera.position.lerpVectors(aFrom, aTo, ease(aT)); camera.lookAt(0, 0, 0);
+  }
+
+  updatePositions();
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
+</script>
+</body>
+</html>

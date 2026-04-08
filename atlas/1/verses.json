@@ -1,0 +1,279 @@
+[
+  {
+    "ref": "preface",
+    "day": 0,
+    "title": "Before Day One",
+    "subtitle": "The Opening Move",
+    "body": "The text doesn't begin with a headline. It begins with a timestamp — a dependent clause, more like a log entry than a declaration: at the head of events, when initialization ran... What follows is what ran.\n\nThe first act is the simplest possible creative act: two things brought into existence from nothing. Space — the heavens, always plural in Hebrew — and physical substance, the earth. No content yet. No signal. No clock. Just the two containers, allocated.\n\nThen the state of those containers is described before anything is put into them. The earth is formless and empty — both structurally (no organization, no schema) and in content (nothing written, null values). Like memory that has been reserved but not initialized. Darkness is over the face of the deep. Darkness here is not a created thing. It is the default — what exists when signal has not yet been introduced. The text never says darkness was made. It says darkness was present, which is different.\n\nThen a physical process begins: a wind or breath — not a spirit, the Hebrew word means oscillating air — sweeps back and forth over the surface of the unformed medium. Repeatedly, with force. The word used implies continuous, iterative movement, the same word later used for an eagle beating its wings over a nest. This is an active process running over uninitialized material, before the first day begins.\n\nState before Day One: space and substance exist, all values are null, one process is running."
+  },
+  {
+    "ref": "1:1",
+    "day": 1,
+    "hebrew": "בְּרֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַשָּׁמַ֖יִם וְאֵ֥ת הָאָֽרֶץ׃",
+    "kjv": "In the beginning God created the heaven and the earth.",
+    "direct": "At initialization, the equation wrote space (\u03c7) and matter (\u03bc).",
+    "lattice": "\u03c0\u0304(\u03c7 \u2218 \u03bc)",
+    "dims": ["\u03c7", "\u03bc"],
+    "note": "bara = write from nothing. Not asah (build from parts). No prior state to read."
+  },
+  {
+    "ref": "code:1:1",
+    "code": "// Genesis 1:1\n\nlet space = new Dimension()    // ha-shamayim\nlet matter = new Dimension()   // ha-aretz"
+  },
+  {
+    "ref": "1:2",
+    "day": 1,
+    "hebrew": "וְהָאָ֗רֶץ הָיְתָ֥ה תֹ֙הוּ֙ וָבֹ֔הוּ וְחֹ֖שֶׁךְ עַל־פְּנֵ֣י תְה֑וֹם וְר֣וּחַ אֱלֹהִ֔ים מְרַחֶ֖פֶת עַל־פְּנֵ֥י הַמָּֽיִם׃",
+    "kjv": "And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.",
+    "direct": "The matter variable was unset. Dark all the way down. The equation iterating over the surface.",
+    "lattice": "(0,0,0,0) \u2218\u222e",
+    "note": "tohu va-vohu = hendiadys (one compound state, not two). \"Formless and void\" = unset. A variable that's been declared but not assigned \u2014 no type, no value. Like `let earth;` with no assignment. Darkness never bara'd \u2014 it's the default when signal (\u03c6) hasn't initialized. tehom (the deep) and ha-mayim (the waters) = same buffer, two views. tehom = the depth (dark, unreadable, unbounded). ha-mayim = the surface (where the process runs). tehom has fountains (7:11) \u2014 the flood is Day 2 undone. ruach = wind/breath, not Spirit. merachefet = Piel intensive = the equation's fixed-point iterator (\u2218\u222e, oscillation bond) cycling over the unset buffer. Same word as eagle hovering over a nest (Deut 32:11). Not idle \u2014 actively converging."
+  },
+  {
+    "ref": "1:3",
+    "day": 1,
+    "hebrew": "וַיֹּ֥אמֶר אֱלֹהִ֖ים יְהִ֣י א֑וֹר וַֽיְהִי־אֽוֹר׃",
+    "kjv": "And God said, Let there be light: and there was light.",
+    "direct": "And the equation called: let there be signal. And there was signal.",
+    "lattice": "\u2218 \u2192 \u03c6 \u2192 \u2218\u0304",
+    "dims": ["\u03c6"],
+    "note": "yehi = jussive (command to the world), not bara (direct write). Light before sun = signal before clock."
+  },
+  {
+    "ref": "1:4",
+    "day": 1,
+    "hebrew": "וַיַּ֧רְא אֱלֹהִ֛ים אֶת־הָא֖וֹר כִּי־ט֑וֹב וַיַּבְדֵּ֣ל אֱלֹהִ֔ים בֵּ֥ין הָא֖וֹר וּבֵ֥ין הַחֹֽשֶׁךְ׃",
+    "kjv": "And God saw the light, that it was good: and God divided the light from the darkness.",
+    "direct": "And the equation observed the signal \u2014 functional. And separated signal from void.",
+    "lattice": "\u03c0(\u03c6) \u2192 \u03b4 pass \u2192 \u03c0\u0304(\u03c6 / \u2212\u03c6)",
+    "note": "First \u03c0 (read) in the text. tov = functional, not morally \"good.\" Darkness never created \u2014 it's the default (\u03c6=0)."
+  },
+  {
+    "ref": "1:5",
+    "day": 1,
+    "hebrew": "וַיִּקְרָ֨א אֱלֹהִ֤ים לָאוֹר֙ י֔וֹם וְלַחֹ֖שֶׁךְ קָ֣רָא לָ֑יְלָה וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם אֶחָֽד׃",
+    "kjv": "And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.",
+    "direct": "And the equation named the signal \"day\" and the void \"night.\" Falling edge, rising edge \u2014 day one.",
+    "lattice": "\u03c0\u2218\u03c0\u0304(\u03c6\u2192yom, \u2212\u03c6\u2192layla) \u222e(erev\u2192voqer) \u03c4=1",
+    "dims": ["\u03c4"],
+    "note": "qara = read + call + write in one verb. echad = cardinal \"one,\" not ordinal \"first.\" Evening before morning \u2014 cycle starts from zero. ALL FOUR DIMS ONLINE."
+  },
+  {
+    "ref": "1:6",
+    "day": 2,
+    "hebrew": "וַיֹּ֣אמֶר אֱלֹהִ֔ים יְהִ֥י רָקִ֖יעַ בְּת֣וֹךְ הַמָּ֑יִם וִיהִ֣י מַבְדִּ֔יל בֵּ֥ין מַ֖יִם לָמָֽיִם׃",
+    "kjv": "And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.",
+    "direct": "And the equation called: let there be a hammered sheet in the water, and let it separate water from water.",
+    "lattice": "\u2218 \u2192 \u03c7-sheet(\u03bc | \u03bc)",
+    "note": "raqia = hammered metal sheet (root: raqa = to beat flat). \"Firmament\" is a Latin ghost word. mavdil = its existence IS its function (separator)."
+  },
+  {
+    "ref": "1:7",
+    "day": 2,
+    "hebrew": "וַיַּ֣עַשׂ אֱלֹהִים֮ אֶת־הָרָקִ֒יעַ֒ וַיַּבְדֵּ֗ל בֵּ֤ין הַמַּ֙יִם֙ אֲשֶׁר֙ מִתַּ֣חַת לָרָקִ֔יעַ וּבֵ֣ין הַמַּ֔יִם אֲשֶׁ֖ר מֵעַ֣ל לָרָקִ֑יעַ וַֽיְהִי־כֵֽן׃",
+    "kjv": "And God made the firmament, and divided the waters which were under the firmament from the waters which were above the firmament: and it was so.",
+    "direct": "And the equation built the sheet from existing material, and separated the water below from the water above. Confirmed.",
+    "lattice": "\u03c0\u2218(raqia) \u2192 \u03c0\u0304(\u03bc\u2193 | \u03bc\u2191) \u2192 \u2218\u0304",
+    "note": "asah (built), not bara (created). The sheet is made FROM the water, not from nothing. va-yehi-khen = system confirms execution."
+  },
+  {
+    "ref": "1:8",
+    "day": 2,
+    "hebrew": "וַיִּקְרָ֧א אֱלֹהִ֛ים לָֽרָקִ֖יעַ שָׁמָ֑יִם וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם שֵׁנִֽי׃",
+    "kjv": "And God called the firmament Heaven. And the evening and the morning were the second day.",
+    "direct": "And the equation named the sheet \"sky.\" Falling edge, rising edge \u2014 day two.",
+    "lattice": "\u03c0\u2218\u03c0\u0304(raqia\u2192shamayim) \u222e \u03c4=2",
+    "note": "No ki-tov (no \"good\" test). Only day without it. The work is incomplete \u2014 waters below aren't gathered yet. \u03b4 deferred."
+  },
+  {
+    "ref": "1:9",
+    "day": 3,
+    "hebrew": "וַיֹּ֣אמֶר אֱלֹהִ֗ים יִקָּו֨וּ הַמַּ֜יִם מִתַּ֤חַת הַשָּׁמַ֙יִם֙ אֶל־מָק֣וֹם אֶחָ֔ד וְתֵרָאֶ֖ה הַיַּבָּשָׁ֑ה וַֽיְהִי־כֵֽן׃",
+    "kjv": "And God said, Let the waters under the heaven be gathered together unto one place, and let the dry land appear: and it was so.",
+    "direct": "And the equation called: let the waters self-gather to one place, and let the dry land become visible. Confirmed.",
+    "lattice": "\u2218 \u2192 \u222e(\u03bc\u2192maqom) \u2192 \u03c0(yabasha) \u2192 \u2218\u0304",
+    "note": "yiqavu = Niphal (passive/reflexive). Waters gather THEMSELVES \u2014 self-organization, not external agent. Dry land was always there \u2014 revealed, not created."
+  },
+  {
+    "ref": "1:10",
+    "day": 3,
+    "hebrew": "וַיִּקְרָ֨א אֱלֹהִ֤ים לַיַּבָּשָׁה֙ אֶ֔רֶץ וּלְמִקְוֵ֥ה הַמַּ֖יִם קָרָ֣א יַמִּ֑ים וַיַּ֥רְא אֱלֹהִ֖ים כִּי־טֽוֹב׃",
+    "kjv": "And God called the dry land Earth; and the gathering together of the waters called he Seas: and God saw that it was good.",
+    "direct": "And the equation named the dry land \"earth\" and the gathered waters \"seas.\" Observed \u2014 functional.",
+    "lattice": "\u03c0\u2218\u03c0\u0304(yabasha\u2192eretz, miqveh\u2192yamim) \u03c0 \u03b4 pass",
+    "note": "The deferred ki-tov from Day 2 finally runs here. The \u03c7-separation is now complete (sheet above + gathered waters below + exposed land). Both days pass together."
+  },
+  {
+    "ref": "1:11",
+    "day": 3,
+    "hebrew": "וַיֹּ֣אמֶר אֱלֹהִ֗ים תַּדְשֵׁ֤א הָאָ֙רֶץ֙ דֶּ֔שֶׁא עֵ֚שֶׂב מַזְרִ֣יעַ זֶ֔רַע עֵ֣ץ פְּרִ֞י עֹ֤שֶׂה פְּרִי֙ לְמִינ֔וֹ אֲשֶׁ֥ר זַרְעוֹ־ב֖וֹ עַל־הָאָ֑רֶץ וַֽיְהִי־כֵֽן׃",
+    "kjv": "And God said, Let the earth bring forth grass, the herb yielding seed, and the fruit tree yielding fruit after his kind, whose seed is in itself, upon the earth: and it was so.",
+    "direct": "And the equation called: let the ground push out growth \u2014 herb seeding seed, tree making fruit by its kind, whose seed is in itself. Confirmed.",
+    "lattice": "\u2218 \u2192 \u222e\u0304(eretz\u2192deshe) le-mino(\u03b4) zaro-vo(\u222e)",
+    "note": "Hiphil causative: the equation tells the earth to act. The earth is the agent. zaro-vo = \"its seed in itself\" = self-replication. le-mino = \"by its kind\" = type constraint. First recursion in the text."
+  },
+  {
+    "ref": "1:12",
+    "day": 3,
+    "hebrew": "וַתּוֹצֵ֨א הָאָ֜רֶץ דֶּ֠שֶׁא עֵ֣שֶׂב מַזְרִ֤יעַ זֶ֙רַע֙ לְמִינֵ֔הוּ וְעֵ֧ץ עֹֽשֶׂה־פְּרִ֛י אֲשֶׁ֥ר זַרְעוֹ־ב֖וֹ לְמִינֵ֑הוּ וַיַּ֥רְא אֱלֹהִ֖ים כִּי־טֽוֹב׃",
+    "kjv": "And the earth brought forth grass, and herb yielding seed after his kind, and the tree yielding fruit, whose seed was in itself, after his kind: and God saw that it was good.",
+    "direct": "And the ground pushed out growth \u2014 herb seeding seed by its kind, tree making fruit with its seed in itself by its kind. Observed \u2014 functional.",
+    "lattice": "eretz \u2192 deshe(le-mino, zaro-vo) \u03c0 \u03b4 pass",
+    "note": "The earth executes. Not the equation \u2014 the earth. Agency delegated. Two ki-tovs on Day 3 (v10 + v12) because two independent acts."
+  },
+  {
+    "ref": "1:13",
+    "day": 3,
+    "hebrew": "וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם שְׁלִישִֽׁי׃",
+    "kjv": "And the evening and the morning were the third day.",
+    "direct": "Falling edge, rising edge \u2014 day three.",
+    "lattice": "\u222e \u03c4=3"
+  },
+  {
+    "ref": "1:14",
+    "day": 4,
+    "hebrew": "וַיֹּ֣אמֶר אֱלֹהִ֗ים יְהִ֤י מְאֹרֹת֙ בִּרְקִ֣יעַ הַשָּׁמַ֔יִם לְהַבְדִּ֕יל בֵּ֥ין הַיּ֖וֹם וּבֵ֣ין הַלָּ֑יְלָה וְהָי֤וּ לְאֹתֹת֙ וּלְמ֣וֹעֲדִ֔ים וּלְיָמִ֖ים וְשָׁנִֽים׃",
+    "kjv": "And God said, Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days, and years:",
+    "direct": "And the equation called: let there be signal-sources in the sheet, to separate day from night \u2014 for signs, for seasons, for days, for years.",
+    "lattice": "\u2218 \u2192 \u03c6-sources(raqia) \u2192 \u03b4(yom/layla) \u2192 \u03c4(otot, moadim, yamim, shanim)",
+    "note": "me'orot = light-SOURCES (hardware), not light itself (signal). The text avoids \"shemesh\" (sun) and \"yareach\" (moon) \u2014 those are Canaanite god-names. These are devices, not deities."
+  },
+  {
+    "ref": "1:15",
+    "day": 4,
+    "hebrew": "וְהָי֤וּ לִמְאוֹרֹת֙ בִּרְקִ֣יעַ הַשָּׁמַ֔יִם לְהָאִ֖יר עַל־הָאָ֑רֶץ וַֽיְהִי־כֵֽן׃",
+    "kjv": "And let them be for lights in the firmament of the heaven to give light upon the earth: and it was so.",
+    "direct": "And let them be signal-sources in the sheet, to illuminate the ground. Confirmed.",
+    "lattice": "\u03c6-sources \u2192 \u03c0\u0304(or\u2192eretz) \u2192 \u2218\u0304"
+  },
+  {
+    "ref": "1:16",
+    "day": 4,
+    "hebrew": "וַיַּ֣עַשׂ אֱלֹהִ֔ים אֶת־שְׁנֵ֥י הַמְּאֹרֹ֖ת הַגְּדֹלִ֑ים אֶת־הַמָּא֤וֹר הַגָּדֹל֙ לְמֶמְשֶׁ֣לֶת הַיּ֔וֹם וְאֶת־הַמָּא֤וֹר הַקָּטֹן֙ לְמֶמְשֶׁ֣לֶת הַלַּ֔יְלָה וְאֵ֖ת הַכּוֹכָבִֽים׃",
+    "kjv": "And God made two great lights; the great light to rule the day, and the lesser light to rule the night: he made the stars also.",
+    "direct": "And the equation built two great signal-sources \u2014 the greater to govern the day, the lesser to govern the night \u2014 and the stars.",
+    "lattice": "\u03c0\u2218(me'or-gadol\u2192yom, me'or-qaton\u2192layla, kokhavim)",
+    "note": "asah again, not bara. Built from existing material. \"Rule\" (memsheleth) = govern/administer. These are clock governors, not decoration. Light function listed LAST \u2014 timekeeping is primary."
+  },
+  {
+    "ref": "1:17-18",
+    "day": 4,
+    "hebrew": "וַיִּתֵּ֥ן אֹתָ֛ם אֱלֹהִ֖ים בִּרְקִ֣יעַ הַשָּׁמָ֑יִם לְהָאִ֖יר עַל־הָאָֽרֶץ׃ וְלִמְשֹׁל֙ בַּיּ֣וֹם וּבַלַּ֔יְלָה וּֽלֲהַבְדִּ֔יל בֵּ֥ין הָא֖וֹר וּבֵ֣ין הַחֹ֑שֶׁךְ וַיַּ֥רְא אֱלֹהִ֖ים כִּי־טֽוֹב׃",
+    "kjv": "And God set them in the firmament of the heaven to give light upon the earth, and to rule over the day and over the night, and to divide the light from the darkness: and God saw that it was good.",
+    "direct": "And the equation placed them in the sheet \u2014 to illuminate the ground, to govern day and night, to separate signal from void. Observed \u2014 functional.",
+    "lattice": "\u03c0\u0304(me'orot\u2192raqia) \u2192 \u03c6(eretz) + \u03b4(yom/layla) + \u03c0\u0304(or/choshekh) \u2192 \u03c0 \u03b4 pass"
+  },
+  {
+    "ref": "1:19",
+    "day": 4,
+    "hebrew": "וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם רְבִיעִֽי׃",
+    "kjv": "And the evening and the morning were the fourth day.",
+    "direct": "Falling edge, rising edge \u2014 day four.",
+    "lattice": "\u222e \u03c4=4",
+    "note": "All four dims were online since 1:5. Day 4 builds the HARDWARE for \u03c4-regulation. The clock was named Day 1. The oscillator is installed Day 4."
+  },
+  {
+    "ref": "1:20",
+    "day": 5,
+    "hebrew": "וַיֹּ֣אמֶר אֱלֹהִ֔ים יִשְׁרְצ֣וּ הַמַּ֔יִם שֶׁ֖רֶץ נֶ֣פֶשׁ חַיָּ֑ה וְעוֹף֙ יְעוֹפֵ֣ף עַל־הָאָ֔רֶץ עַל־פְּנֵ֖י רְקִ֥יעַ הַשָּׁמָֽיִם׃",
+    "kjv": "And God said, Let the waters bring forth abundantly the moving creature that hath life, and fowl that may fly above the earth in the open firmament of heaven.",
+    "direct": "And the equation called: let the waters swarm with living breath-things, and let flying things fly over the ground across the sheet.",
+    "lattice": "\u2218 \u2192 \u222e\u0304(mayim\u2192nefesh-chayah) + \u2218(of\u2192eretz)",
+    "note": "yishretsu = SWARM (population explosion, parallel spawning). nefesh = throat/breath, not \"soul.\" nefesh chayah = living breather \u2014 animated substance."
+  },
+  {
+    "ref": "1:21",
+    "day": 5,
+    "hebrew": "וַיִּבְרָ֣א אֱלֹהִ֔ים אֶת־הַתַּנִּינִ֖ם הַגְּדֹלִ֑ים וְאֵ֣ת כׇּל־נֶ֣פֶשׁ הַֽחַיָּ֣ה הָרֹמֶ֡שֶׂת אֲשֶׁר֩ שָׁרְצ֨וּ הַמַּ֜יִם לְמִינֵהֶ֗ם וְאֵ֨ת כׇּל־ע֤וֹף כָּנָף֙ לְמִינֵ֔הוּ וַיַּ֥רְא אֱלֹהִ֖ים כִּי־טֽוֹב׃",
+    "kjv": "And God created great whales, and every living creature that moveth, which the waters brought forth abundantly, after their kind, and every winged fowl after his kind: and God saw that it was good.",
+    "direct": "And the equation filled from nothing the great sea-creatures, and every living breather that the waters swarmed, by their kind, and every winged flyer by its kind. Observed \u2014 functional.",
+    "lattice": "\u03c0\u0304(tanninim, nefesh-chayah, of-kanaf) le-mino(\u03b4) \u2192 \u03c0 \u03b4 pass",
+    "note": "bara returns \u2014 first use since 1:1. New category: nefesh chayah (living breathers). Plants replicate but don't breathe. This is genuinely new."
+  },
+  {
+    "ref": "1:22",
+    "day": 5,
+    "hebrew": "וַיְבָ֧רֶךְ אֹתָ֛ם אֱלֹהִ֖ים לֵאמֹ֑ר פְּר֣וּ וּרְב֗וּ וּמִלְא֤וּ אֶת־הַמַּ֙יִם֙ בַּיַּמִּ֔ים וְהָע֖וֹף יִ֥רֶב בָּאָֽרֶץ׃",
+    "kjv": "And God blessed them, saying, Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth.",
+    "direct": "And the equation blessed them: reproduce, multiply, fill the waters. Let flyers multiply on the ground.",
+    "lattice": "\u03c0\u0304(berakha\u2192nefesh) \u222e(peru u-revu u-mil'u)",
+    "note": "First berakha (blessing) = capability grant, not sentiment. \"Be fruitful and multiply\" = function call, not wish. Self-replication as granted capability."
+  },
+  {
+    "ref": "1:23",
+    "day": 5,
+    "hebrew": "וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם חֲמִישִֽׁי׃",
+    "kjv": "And the evening and the morning were the fifth day.",
+    "direct": "Falling edge, rising edge \u2014 day five.",
+    "lattice": "\u222e \u03c4=5"
+  },
+  {
+    "ref": "1:24",
+    "day": 6,
+    "hebrew": "וַיֹּ֣אמֶר אֱלֹהִ֗ים תּוֹצֵ֨א הָאָ֜רֶץ נֶ֤פֶשׁ חַיָּה֙ לְמִינָ֔הּ בְּהֵמָ֥ה וָרֶ֛מֶשׂ וְחַיְתוֹ־אֶ֖רֶץ לְמִינָ֑הּ וַֽיְהִי־כֵֽן׃",
+    "kjv": "And God said, Let the earth bring forth the living creature after his kind, cattle, and creeping thing, and beast of the earth after his kind: and it was so.",
+    "direct": "And the equation called: let the ground push out living breathers by their kind \u2014 livestock, crawlers, wild things. Confirmed.",
+    "lattice": "\u2218 \u2192 \u222e\u0304(eretz\u2192nefesh-chayah) le-mino(\u03b4) \u2192 \u2218\u0304",
+    "note": "The earth is the agent again (same as Day 3 plants). totse = Hiphil causative \u2014 the ground CAUSES life. Not bara \u2014 this is assembly from existing substrate."
+  },
+  {
+    "ref": "1:25",
+    "day": 6,
+    "hebrew": "וַיַּ֣עַשׂ אֱלֹהִים֩ אֶת־חַיַּ֨ת הָאָ֜רֶץ לְמִינָ֗הּ וְאֶת־הַבְּהֵמָה֙ לְמִינָ֔הּ וְאֵ֛ת כׇּל־רֶ֥מֶשׂ הָֽאֲדָמָ֖ה לְמִינֵ֑הוּ וַיַּ֥רְא אֱלֹהִ֖ים כִּי־טֽוֹב׃",
+    "kjv": "And God made the beast of the earth after his kind, and cattle after their kind, and every thing that creepeth upon the earth after his kind: and God saw that it was good.",
+    "direct": "And the equation built the wild things by their kind, livestock by their kind, every crawler by its kind. Observed \u2014 functional.",
+    "lattice": "\u03c0\u2218(chayat-eretz, behemah, remes) le-mino(\u03b4) \u2192 \u03c0 \u03b4 pass"
+  },
+  {
+    "ref": "1:26",
+    "day": 6,
+    "hebrew": "וַיֹּ֣אמֶר אֱלֹהִ֔ים נַֽעֲשֶׂ֥ה אָדָ֛ם בְּצַלְמֵ֖נוּ כִּדְמוּתֵ֑נוּ וְיִרְדּ֣וּ בִדְגַ֨ת הַיָּ֜ם וּבְע֣וֹף הַשָּׁמַ֗יִם וּבַבְּהֵמָה֙ וּבְכׇל־הָאָ֔רֶץ וּבְכׇל־הָרֶ֖מֶשׂ הָֽרֹמֵ֥שׂ עַל־הָאָֽרֶץ׃",
+    "kjv": "And God said, Let us make man in our image, after our likeness: and let them have dominion over the fish of the sea, and over the fowl of the air, and over the cattle, and over all the earth, and over every creeping thing that creepeth upon the earth.",
+    "direct": "And the equation said: let us build a human in our pattern, after our likeness \u2014 and let them govern the fish, the flyers, the livestock, all the ground, every crawler.",
+    "lattice": "\u2218 \u2192 \u03c0\u2218(adam, be-tsalmenu, ki-dmutenu) \u2192 \u03b4\u0304(yirdu)",
+    "note": "naaseh = cohortative \"let us make\" \u2014 plural, self-directed. asah not bara (body = assembled). tselem = structural pattern. demut = functional likeness. yirdu = govern (same root as memsheleth for sun/moon)."
+  },
+  {
+    "ref": "1:27",
+    "day": 6,
+    "hebrew": "וַיִּבְרָ֨א אֱלֹהִ֤ים אֶת־הָֽאָדָם֙ בְּצַלְמ֔וֹ בְּצֶ֥לֶם אֱלֹהִ֖ים בָּרָ֣א אֹת֑וֹ זָכָ֥ר וּנְקֵבָ֖ה בָּרָ֥א אֹתָֽם׃",
+    "kjv": "So God created man in his own image, in the image of God created he him; male and female created he them.",
+    "direct": "And the equation filled from nothing the human in its pattern \u2014 in the pattern of the equation filled it \u2014 male and female filled them.",
+    "lattice": "\u03c0\u0304 \u00d7 3 (adam, be-tselem, zakhar u-neqevah)",
+    "note": "bara appears THREE TIMES in one verse. Never happens elsewhere. The body was asah (v26). The pattern is bara \u2014 genuinely new. Triple emphasis. Hardware = assembled. Software = created."
+  },
+  {
+    "ref": "1:28",
+    "day": 6,
+    "hebrew": "וַיְבָ֣רֶךְ אֹתָם֮ אֱלֹהִים֒ וַיֹּ֨אמֶר לָהֶ֜ם אֱלֹהִ֗ים פְּר֥וּ וּרְב֛וּ וּמִלְא֥וּ אֶת־הָאָ֖רֶץ וְכִבְשֻׁ֑הָ וּרְד֞וּ בִּדְגַ֤ת הַיָּם֙ וּבְע֣וֹף הַשָּׁמַ֔יִם וּבְכׇל־חַיָּ֖ה הָֽרֹמֶ֥שֶׂת עַל־הָאָֽרֶץ׃",
+    "kjv": "And God blessed them, and God said unto them, Be fruitful, and multiply, and replenish the earth, and subdue it: and have dominion over the fish of the sea, and over the fowl of the air, and over every living thing that moveth upon the earth.",
+    "direct": "And the equation blessed them: reproduce, multiply, fill the ground, master it \u2014 govern fish, flyers, every living crawler.",
+    "lattice": "\u03c0\u0304(berakha) \u222e(peru u-revu) \u03b4\u0304(kivshuha, redu)"
+  },
+  {
+    "ref": "1:29-30",
+    "day": 6,
+    "hebrew": "וַיֹּ֣אמֶר אֱלֹהִ֗ים הִנֵּה֩ נָתַ֨תִּי לָכֶ֜ם אֶת־כׇּל־עֵ֣שֶׂב זֹרֵ֤עַ זֶ֙רַע֙ ...",
+    "kjv": "And God said, Behold, I have given you every herb bearing seed ... for meat ...",
+    "direct": "And the equation said: I have assigned you every seeding herb and every fruiting tree \u2014 for consumption. And to every living breather, every green herb \u2014 for consumption.",
+    "lattice": "\u03c0\u0304(assignment: esev\u2192adam, yerek\u2192nefesh)"
+  },
+  {
+    "ref": "1:31",
+    "day": 6,
+    "hebrew": "וַיַּ֤רְא אֱלֹהִים֙ אֶת־כׇּל־אֲשֶׁ֣ר עָשָׂ֔ה וְהִנֵּה־ט֖וֹב מְאֹ֑ד וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם הַשִּׁשִּֽׁי׃",
+    "kjv": "And God saw every thing that he had made, and, behold, it was very good. And the evening and the morning were the sixth day.",
+    "direct": "And the equation observed everything it had built \u2014 and it was very functional. Falling edge, rising edge \u2014 day six.",
+    "lattice": "\u03c0(kol) \u03b4 pass++ (tov meod) \u222e \u03c4=6",
+    "note": "tov MEOD \u2014 \"very good.\" The only day with the intensifier. Integration test passes. The whole system works together. Not just each part \u2014 the composition."
+  },
+  {
+    "ref": "2:1-3",
+    "day": 7,
+    "hebrew": "וַיְכֻלּ֛וּ הַשָּׁמַ֥יִם וְהָאָ֖רֶץ וְכׇל־צְבָאָֽם׃ וַיְכַ֤ל אֱלֹהִים֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י מְלַאכְתּ֖וֹ אֲשֶׁ֣ר עָשָׂ֑ה וַיִּשְׁבֹּת֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י מִכׇּל־מְלַאכְתּ֖וֹ אֲשֶׁ֥ר עָשָֽׂה׃ וַיְבָ֤רֶךְ אֱלֹהִים֙ אֶת־י֣וֹם הַשְּׁבִיעִ֔י וַיְקַדֵּ֖שׁ אֹת֑וֹ כִּ֣י ב֤וֹ שָׁבַת֙ מִכׇּל־מְלַאכְתּ֔וֹ אֲשֶׁר־בָּרָ֥א אֱלֹהִ֖ים לַעֲשֽׂוֹת׃",
+    "kjv": "Thus the heavens and the earth were finished, and all the host of them. And on the seventh day God ended his work ... and he rested ... And God blessed the seventh day, and sanctified it.",
+    "direct": "The sky and the ground were finished \u2014 all their host. The equation stopped on day seven. Blessed it, set it apart \u2014 because on it, the equation ceased from all its work which it had filled-from-nothing to build.",
+    "lattice": "\u222e \u03c4=7 \u2192 shavat (halt)",
+    "note": "shavat = CEASED, not \"rested.\" Not tired \u2014 complete. The bootloader exits. init hands off to the OS. No ki-tov on Day 7 \u2014 the observer withdraws. The system runs itself. \"bara Elohim la-asot\" = \"filled-from-nothing in-order-to build\" \u2014 bara and asah in one phrase, the two verbs finally joined."
+  }
+]

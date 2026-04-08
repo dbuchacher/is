@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Atlas</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0d0d10; overflow: hidden; }
+canvas { display: block; }
+</style>
+</head>
+<body>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+// ── Colors ──
+const BG    = 0x0d0d10;
+const RED   = 0xfc5d7c;
+const GREEN = 0x9ed072;
+const GREY  = 0x7f8490;
+const BLUE  = 0x76cce0;
+const PURPLE= 0xb39df3;
+const YELLOW= 0xe7c664;
+
+// ── Scene ──
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(BG);
+
+const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.1, 200);
+camera.position.set(0, 0, 8);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(innerWidth, innerHeight);
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+document.body.appendChild(renderer.domElement);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.08;
+
+scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+const light = new THREE.DirectionalLight(0xffffff, 0.5);
+light.position.set(5, 8, 6);
+scene.add(light);
+
+// ── 4 axis lines through origin ──
+// L=x, M=y, Q=z, T=diagonal(1,1,1)
+// Balls sit on the T axis (all coords equal → diagonal)
+const S = 2.0; // scale: val * S = world position on each component
+
+// dimension directions in 3D
+const DIM = [
+  { dir: [1,0,0], color: BLUE },    // L
+  { dir: [0,1,0], color: GREEN },   // M
+  { dir: [0,0,1], color: YELLOW },  // Q
+];
+
+// lattice values where balls sit
+const VALS = [-1, 0, 1];
+
+function addLine(dir, origin, color, opacity) {
+  const d = new THREE.Vector3(...dir);
+  const o = new THREE.Vector3(...origin);
+  const geo = new THREE.BufferGeometry().setFromPoints([
+    o.clone().addScaledVector(d, -100),
+    o.clone().addScaledVector(d, 100),
+  ]);
+  const mat = new THREE.LineBasicMaterial({ color, transparent: true, opacity });
+  scene.add(new THREE.Line(geo, mat));
+}
+
+// For each ball at (p,p,p), draw L/M/Q lines through it
+// L line through (-S,-S,-S): goes in x-dir at y=-S, z=-S
+for (const v of VALS) {
+  const p = v * S;
+  addLine([1,0,0], [0, p, p], BLUE,   v === 0 ? 0.6 : 0.3); // L through ball
+  addLine([0,1,0], [p, 0, p], GREEN,  v === 0 ? 0.6 : 0.3); // M through ball
+  addLine([0,0,1], [p, p, 0], YELLOW, v === 0 ? 0.6 : 0.3); // Q through ball
+}
+
+// T axis — the diagonal (1,1,1) — already passes through all balls
+addLine([1,1,1], [0,0,0], PURPLE, 0.6);
+
+// ── 3 balls on the diagonal ──
+// electron(-1,-1,-1,-1) → position (-S,-S,-S)
+// neutrino(0,0,0,0)     → position (0,0,0)
+// positron(1,1,1,1)     → position (S,S,S)
+const balls = [
+  { pos: [-S,-S,-S], color: RED },
+  { pos: [0,0,0],    color: GREY },
+  { pos: [S,S,S],    color: GREEN },
+];
+
+for (const b of balls) {
+  const mesh = new THREE.Mesh(
+    new THREE.SphereGeometry(0.12, 24, 16),
+    new THREE.MeshStandardMaterial({
+      color: b.color, emissive: b.color, emissiveIntensity: 0.3,
+      roughness: 0.3, metalness: 0.05,
+    }),
+  );
+  mesh.position.set(...b.pos);
+  scene.add(mesh);
+}
+
+// ── Axis labels at ±1 ──
+function makeSprite(text, color) {
+  const cv = document.createElement('canvas');
+  cv.width = 64; cv.height = 32;
+  const ctx = cv.getContext('2d');
+  ctx.font = 'bold 20px monospace';
+  ctx.fillStyle = '#' + color.toString(16).padStart(6, '0');
+  ctx.textAlign = 'center';
+  ctx.fillText(text, 32, 22);
+  const tex = new THREE.CanvasTexture(cv);
+  const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, opacity: 0.7, depthWrite: false });
+  const sprite = new THREE.Sprite(mat);
+  sprite.scale.set(0.5, 0.25, 1);
+  return sprite;
+}
+
+// place -1 and +1 labels at the far end of each line through each ball
+// for the origin (v=0) lines, label at the axis ends
+const labelOffset = 6; // how far out along the line
+for (const v of VALS) {
+  const p = v * S;
+  const tag = v === 0 ? '' : v.toString();
+  if (!tag) continue; // skip origin labels
+
+  // L axis labels
+  const lPos = makeSprite(tag, BLUE);   lPos.position.set(labelOffset * Math.sign(v), p, p); scene.add(lPos);
+  const lNeg = makeSprite(tag, BLUE);   lNeg.position.set(-labelOffset * Math.sign(v), p, p); scene.add(lNeg);
+  // M axis labels
+  const mPos = makeSprite(tag, GREEN);  mPos.position.set(p, labelOffset * Math.sign(v), p); scene.add(mPos);
+  const mNeg = makeSprite(tag, GREEN);  mNeg.position.set(p, -labelOffset * Math.sign(v), p); scene.add(mNeg);
+  // Q axis labels
+  const qPos = makeSprite(tag, YELLOW); qPos.position.set(p, p, labelOffset * Math.sign(v)); scene.add(qPos);
+  const qNeg = makeSprite(tag, YELLOW); qNeg.position.set(p, p, -labelOffset * Math.sign(v)); scene.add(qNeg);
+}
+// T diagonal labels
+const tPos = makeSprite('+1', PURPLE);
+const d = new THREE.Vector3(1,1,1).normalize();
+tPos.position.copy(d.clone().multiplyScalar(labelOffset));
+scene.add(tPos);
+const tNeg = makeSprite('-1', PURPLE);
+tNeg.position.copy(d.clone().multiplyScalar(-labelOffset));
+scene.add(tNeg);
+
+// ── Resize ──
+window.addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+// ── Loop ──
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
+</script>
+</body>
+</html>

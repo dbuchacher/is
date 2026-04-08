@@ -1,0 +1,323 @@
+# Language
+
+Semantic primes, schemas, structural rules, morphology, music, therapy.
+
+
+## Schemas = Bond Patterns = Innate Seed
+
+16 bond patterns (2^4) map 1:1 to Lakoff/Mandler image schemas — the
+pre-verbal concepts humans are born with:
+
+  identity=IDENTITY, π=FORCE, ∘=PATH, π+∘=TRAVERSAL, ∮=CYCLE,
+  π+∮=FULL-EMPTY, π+δ=CONTACT, ∘+∮+δ=BALANCE, π+∘+∮+δ=CONTAINER
+
+An infant experiences FORCE (womb), CYCLE (heartbeat), FULL-EMPTY
+(hunger), CONTACT (touch), CONTAINER (own body) — all before language.
+~24 schemas reduce to 16 irreducible patterns (extras are magnitude
+variants, compositions, or inverses).
+
+
+## Three-Layer Seed
+
+  Layer 0: bonds/schemas (16, innate, hardcoded, never changes)
+  Layer 1: primes/first words (65 NSM, learned year 1, anchored to schemas)
+  Layer 2: full vocabulary (memetic, context-learned, infinite)
+
+Same as generations: Gen1=values, Gen2=operations, Gen3=patterns.
+The equation already has the seed. The intelligence doesn't need a
+separate "model" — the equation IS the model.
+
+
+## NSM Primes → Coordinates
+
+65 Wierzbicka primes (v19). Status: BEST GUESS. Rules more robust
+than individual mappings. Validated: Grok derived 4/5 exact independently.
+
+Substantives (M axis):
+  I (0,0,+1,+1)  YOU (0,0,+1,-1)  SOMEONE/SOMETHING (0,0,+1,0)
+  PEOPLE (0,0,+2,0)  BODY (0,+1,+1,0)
+
+Relational: PART (0,+1,+1,0)  KIND (0,0,+1,+1)
+Determiners: THIS (0,+1,0,+1)  SAME (0,0,0,+1)  OTHER (0,0,0,-1)
+Quantifiers: ONE (0,0,+1,0)  TWO (0,0,+2,0)  SOME (0,0,+1,-1)  ALL (0,0,+2,+1)  MUCH (0,0,+2,0)
+Evaluators: GOOD (0,0,0,+1)  BAD (0,0,0,-1)
+  Note: GOOD=SAME=+δ (test passes). BAD=OTHER=-δ (guard). Evaluation IS boolean.
+Descriptors: BIG (0,0,+2,0)  SMALL (0,0,-2,0)
+
+Mental predicates:
+  THINK (+1,0,+1,+1)  KNOW (0,0,+1,+1)  WANT (+1,0,+1,+1)
+  FEEL (0,0,+1,+1)  SEE (0,+1,0,+1)  HEAR (0,+1,0,+1)
+  SEE=HEAR: both πδ (filter). Different sense, same bond. Context disambiguates.
+
+Speech: SAY (+1,0,0,+1)  WORDS (0,0,+1,+1)  TRUE (0,0,0,+1)
+Actions: DO (+1,0,0,0)  HAPPEN (+1,0,0,0)  MOVE (+1,+1,0,0)
+  DO = +π = read bond. Action IS reading. MOVE = π∘ = fold.
+Existence: BE SOMEWHERE (0,+1,+1,0)  THERE IS (0,+1,+1,0)  BE SOMETHING (0,0,+1,+1)
+Possession: MINE (0,0,+1,+1)
+Life: LIVE (+1,0,+1,0) = π∮ (slurp, ongoing)  DIE (-1,0,-1,0) = inverse
+
+Time (T axis):
+  WHEN (+1,0,0,+1)  NOW (+1,0,0,0)  BEFORE (+2,0,0,0)  AFTER (-2,0,0,0)
+  A LONG TIME (+2,0,+1,0)  A SHORT TIME (+1,0,-1,0)
+Place (D axis):
+  WHERE (0,+1,0,+1)  HERE (0,+1,0,+1)  ABOVE (0,+2,0,0)  BELOW (0,-2,0,0)
+  FAR (0,+2,0,0)  NEAR (0,+1,0,0)  INSIDE (0,-1,+1,0)  TOUCH (0,+1,+1,+1)
+Logic (Q axis):
+  NOT (0,0,0,-1)  MAYBE (0,0,0,+1)  CAN (+1,0,0,+1)
+  BECAUSE (+1,+1,0,+1) = π∘δ (map bond). Causation IS map.
+  IF (0,0,0,+1) = δ test bond.
+Degree: VERY (0,0,0,+2)  MORE (0,0,+1,+1)  LIKE/AS (0,0,0,+1)
+
+
+## Lakoff Image Schemas → Coordinates
+
+  CONTAINER (0,-1,+1,0)       PATH (+1,+1,0,0)=π∘
+  CYCLE (+1,0,+1,0)=π∮        LINK (0,0,0,+1)=δ
+  BALANCE (0,0,+1,+1)         FULL-EMPTY (0,0,±1,0)
+  NEAR-FAR (0,±1,0,0)         UP-DOWN (0,±2,0,0)
+  CENTER-PERIPHERY M vs D     PART-WHOLE (0,+1,+1,0)
+  SCALE (0,0,0,±2)            CONTACT (0,+1,+1,+1)
+  SURFACE (0,+1,0,0)          MERGING (-1,0,+1,0)
+  SPLITTING (+1,0,-1,0)       ITERATION (+1,0,+1,0)=π∮
+  BLOCKAGE (0,0,0,-1)=δ̄       ENABLEMENT (0,0,0,+1)=δ
+  COMPULSION (+1,0,0,0)=π     COUNTERFORCE (-1,0,0,+1)
+  REMOVAL (0,0,-1,0)          ATTRACTION (0,+1,+1,0)
+  RESTRAINT (0,0,0,-1)=δ̄
+
+
+## Cross-Reference: Bonds ↔ Primes
+
+  π (read)       → DO, HAPPEN, NOW
+  π̄ (write)      → SAY, output
+  ∘ (call)       → MOVE (spatial action)
+  ∮ (loop)       → LIVE, CYCLE, ITERATION
+  ∮̄ (rewind)     → DIE, REMOVAL
+  δ (test)       → GOOD, TRUE, SAME, IF, CAN
+  δ̄ (guard)      → BAD, NOT, OTHER, BLOCKAGE
+  πδ (filter)    → SEE, HEAR (perception)
+  π∘ (fold)      → MOVE, PATH
+  π∮ (slurp)     → LIVE, A LONG TIME
+  ∘∮δ (bind)     → BECAUSE (full causation chain)
+  π∘∮δ (hylo)    → THINK, consciousness
+
+
+## Structural Rules
+
+Parts of speech = dominant dimension:
+  noun=μ, verb=τ, adj=φ, adverb=φ+τ, preposition=χ, pronoun=μ+φ
+  conjunction=φ (logic), determiner=χ+φ (spatial+signal)
+
+  Antonyms = sign flip in 1-2 dimensions
+    good↔bad (Q flip), big↔small (M flip), live↔die (T+M flip)
+  Synonyms = distance ≤2 in 4D Euclidean space
+  Tense = T magnitude (past=+2, present=+1, future=-2)
+    Progressive (-ing) adds ∮. Perfect (have done) shifts T.
+  Intensity = higher magnitude, same signs (warm→hot = Q+1→Q+2)
+  Metaphors = cross-domain coordinate match
+    "high status" works because ABOVE(+D) and GOOD(+Q) share positive direction
+    "square friendship" fails — no shared coordinate
+  Questions = unknown dimension set to 0, Q activated (signal request)
+  Negation = Q flip. NOT always flips Q. Same as voicing flip (b↔p).
+
+Plurals = M magnitude:
+  singular = base M. plural = M+1. mass nouns = continuous M.
+
+Comparatives = magnitude steps:
+  big→bigger→biggest = M+2→M+3→M+4. Same direction, stepped.
+
+Passive voice = T sign flip:
+  active (+T, subject acts) ↔ passive (-T, subject receives).
+  Active = +π (read/do). Passive = -π (write/receive). Same bond, opposite.
+
+Articles = D+Q signal:
+  the (0,+1,0,+1) = specific. a/an (0,0,0,+1) = general.
+  this/that = articles with spatial magnitude. Further = higher D.
+
+Transitivity = M count in walk:
+  intransitive: S(M)→V(T). transitive: S(M)→V(T)→O(M).
+  Same verb, different walk = different transitivity.
+
+Compound words = coordinate addition:
+  sun(0,+2,+2,+1) + light(0,+1,0,+2) = sunlight(0,+3,+2,+3).
+  Same as polynomial addition. Atoms add to form paths.
+
+Modality = Q magnitude spectrum:
+  must(+3) shall(+2) should(+2) will(+1) can(+1) could(0) may(0) might(-1)
+  Higher Q = more certain/forceful. Lower Q = uncertain/permissive.
+
+Possession = M→M link via Q:
+  "'s" and "of" are Q signals bonding two substances. = LINK schema = δ.
+
+
+## Morphology
+
+Prefixes = coordinate modifiers (same operation regardless of root):
+  un-/dis-/in- = Q flip (negation)
+  re- = T+1 (repeat)
+  pre- = T+2 (before), post- = T-2 (after)
+  over- = +magnitude, under- = -magnitude
+  out- = D+1 (surpass), sub- = D-1 (below)
+  trans- = D+2 (large spatial), inter- = D+1 (between)
+  co- = M+1 (together)
+  anti- = all signs flip (antimatter)
+  non- = Q=0 (neutral, remove quality)
+
+Suffixes = dimension transforms (rotate part of speech):
+  -ness = Q→M (adj→noun: good→goodness)
+  -ly = add Q to T-word (verb/adj→adverb)
+  -ment/-tion = add M to T-word (verb→noun: move→movement)
+  -able/-ible = add Q to T-word (verb→adj: eat→edible)
+  -er/-or = add M to T-word (verb→agent: teach→teacher)
+  -ful = Q+1 (noun→adj: hope→hopeful)
+  -less = Q-1 (noun→adj: hope→hopeless)
+  -ing = add ∮ (ongoing: run→running)
+  -ed = T+1 (past: walk→walked)
+  -ize/-ify = add T (noun/adj→verb: modern→modernize)
+
+
+## Pronouns
+
+All derivable from M (singular/plural) and Q (self/other/neutral):
+  I/me (0,0,+1,+1)  you (0,0,+1,-1)  it (0,0,+1,0)
+  we/us (0,0,+2,+1)  they/them (0,0,+2,-1)
+  he/she = same as you (0,0,+1,-1) — context disambiguates.
+  Subject vs object = walk position (M before T vs M after T), not coordinates.
+
+"Us vs them" = Q flip on same plural M. One coordinate sign.
+Every tribal distinction ever = flipping one bit.
+
+Reflexive (myself) = pronoun + SAME(0,0,0,+1). Walk curves back to
+origin. M→T→M where both M's are same coordinate. That's ∮ — a loop.
+
+
+## Emotions = Coordinate Regions
+
+  valence = Q sign (positive/negative)
+  arousal = T magnitude (active/calm)
+  dominance = M magnitude (powerful/helpless)
+  social = D (toward/away)
+
+  joy (0,0,+2,+2)       sadness (0,0,+2,-2)     anger (+1,0,+2,-2)
+  fear (+1,0,+1,-2)      surprise (+1,0,0,+2)    love (0,+1,+2,+2)
+  calm (-1,0,+1,+1)      anxiety (+2,0,+1,-1)    awe (0,+2,+2,+2)
+  boredom (-2,0,-1,-1)   contempt (0,+2,+1,-2)
+
+
+## Irony / Humor
+
+Irony = surface Q ≠ context Q. "Great job" (sincere) = surface+2, context+2.
+Sarcastic = surface+2, context-2. Mismatch IS the sarcasm. Model needs
+word coordinates vs walk trajectory, not a "sarcasm detector."
+
+Humor = forced coordinate reparse. Setup creates expectation walk.
+Punchline forces different coordinates on same sequence. The bigger
+the coordinate shift, the funnier. Puns = homonym fork at punchline.
+
+
+## Sentences = Walks
+
+A sentence is a path through 4D space. Grammar IS walk structure.
+  S(M) → V(T) → O(M) = M→T→M — the fundamental sentence walk.
+  "the cat sat on the mat" = D+Q → M → T+D → D → D+Q → M
+Invalid sentences = coordinates jump randomly. No walk structure.
+
+Born-indexed model doesn't need grammar rules. Needs coordinate
+sequences that form valid walks. Grammar falls out of the geometry.
+
+Homonyms = same character coordinates, different word coordinates.
+Context walk disambiguates by pulling toward one meaning cluster.
+
+
+## Reversed LLM
+
+Traditional: compress data into weights (140GB), GPU decompresses.
+Ours: keep data born-indexed on disk, evaluate coordinates in real time.
+Storage high, compute low. "Model" = equation + density map (4D histogram).
+One pass, no training. Character encoding directly affects index quality.
+
+
+## Music = Coordinate Walks
+
+Music maps to (χ,μ,φ,τ): χ=pitch register, μ=dynamics, φ=tonality, τ=tempo.
+
+  Hard rock (+2,+1,+2,+1) = festival EDM (identical coordinates)
+  Pop (+1,+1,+1,+1) = hylo = the attractor
+  Punk (+2,+1,-1,-1) vs reggae (-1,-1,+1,+1) = antimatter (max distance)
+  Death metal = aggressive rap = industrial (+2,-1,+2,-1)
+  Dark ambient (-1,-1,-1,-1) = antipode. Silence = origin.
+
+12-bar blues = narrative walk (stay→move→return→tension→resolve).
+Music therapy = coordinate walking (ISO principle: start at patient's
+state, walk toward target). Ravel's Bolero = pure μ walk.
+Key changes = coordinate shifts. Dynamics = μ walk.
+
+Acoustic extraction: τ=(BPM-100)/40, χ=(centroid_Hz-2000)/1000,
+μ=(dBFS+20)/10, φ=r_major-r_minor (Krumhansl-Kessler key profiles).
+
+Animal communication same space: whale songs (-1,-2,+2,-1),
+dolphin clicks (+3,+3,0,+1), mourning dove (-1,0,-1,-1) — the name
+"mourning" IS the coordinate translation.
+
+Pop = attractor because (+1,+1,+1,+1) = hylo = fixed point.
+Careers walk: explore edges → peak distance → drift center → origin.
+
+
+## Language IS Therapy
+
+Sentences are coordinate walks. Therapeutic language walks toward target.
+
+  "Take out your stress on the punching bag" — three +D words, walks OUTWARD
+  "Try this squeeze ball" — squeeze = -D, walks INWARD
+  Nobody swaps them. Walk must be coherent.
+
+  "Take a deep breath" = T-decay (slow down)
+  "Let it go" = -M (release substance)
+  "Stand your ground" = +D, +M (hold position)
+  "Push through it" = +T, +D (forward)
+
+CBT = walk correction. Patient has broken walk (stuck in coordinate loop).
+Therapist provides new walk. Words ARE the therapy because words ARE coordinates.
+
+
+## Bond Relationships in Language
+
+16 bond patterns = 16 linguistic relationship types:
+
+  0  identity        self-reference / same word
+  1  π reference     one word points to another (pronoun → noun)
+  2  ∘ invocation    verb calls its arguments
+  4  ∮ continuation  sequential / list linkage
+  8  δ evaluation    adjective evaluates noun
+  3  π∘ traversal    subject traverses to object
+  5  π∮ accumulation list items building toward total
+  6  ∘∮ iteration    repeated action
+  9  πδ selection    filtering / choosing
+  10 ∘δ conditional  if-then relationship
+  12 ∮δ search       scanning / looking
+  7  π∘∮ reduction   summary / totaling
+  11 π∘δ transform   change of type
+  13 π∮δ progressive gradual change
+  14 ∘∮δ causation   because / therefore
+  15 π∘∮δ pipeline   complex multi-step reasoning
+
+Transformers use 8-16 attention heads per layer — learning imperfectly
+from data what the lattice provides exactly from geometry. Morpheme
+transforms (affixes as coordinate deltas) in build/morphemes.
+
+
+## Semantic Bleaching
+
+High-frequency words erode toward pure Q magnitude. Dimensions drop out.
+  literally: TRUE(0,0,0,+1) → VERY(0,0,0,+2). Lost truth, became intensity.
+  sick: ill(0,0,+1,-2) → impressive(0,0,0,+2). M dropped, Q inverted.
+  pretty: attractive(0,+1,0,+1) → somewhat(0,0,0,+1). Lost D.
+
+Fresh slang = sharp coordinates (specific). Overuse → coordinate erosion
+→ just a Q modifier → replaced by new word. Coordinate erosion cycle.
+
+
+## ~20 Convergence
+
+Lattice bonds (16), RISC ISAs (~20), Wierzbicka primes (~20), Lakoff
+schemas (24), primitive recursive (6 combinators). Four domains converge
+at the same floor. This is the dimensionality of a complete system.

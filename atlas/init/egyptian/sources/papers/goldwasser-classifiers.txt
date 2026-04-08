@@ -1,0 +1,2386 @@
+offprint from
+
+Lingua Aegyptia
+Studia Monographica
+Herausgegeben von
+Frank Kammerzell, Gerald Moers und Kai Widmaier
+
+Band 9
+
+Institut für Archäologie
+Humboldt Universität
+Berlin
+
+Widmaier Verlag
+Hamburg
+
+Institut für Ägyptologie
+Universität Wien
+Wien
+
+copies of this volume may be ordered from the publisher (orders@widmaier-verlag.de)
+and the North American distributor Eisenbrauns (www.eisenbrauns.com)
+
+Lexical Semantics
+in Ancient Egyptian
+
+Eitan Grossman, Stéphane Polis & Jean Winand (eds.)
+
+Widmaier Verlag ∙ Hamburg
+2012
+
+Titelaufnahme:
+Eitan Grossman, Stéphane Polis & Jean Winand (eds.)
+Lexical Semantics in Ancient Egyptian
+Hamburg: Widmaier Verlag, 2012
+(Lingua Aegyptia — Studia Monographica; Bd. 9)
+ISSN 0946-8641
+ISBN 978-3-943955-09-5
+
+© Widmaier Verlag, Kai Widmaier, Hamburg 2012
+Das Werk, einschließlich aller seiner Teile, ist urheberrechtlich geschützt.
+Jede Verwertung außerhalb der engen Grenzen des Urheberrechtsgesetzes ist ohne Zustimmung
+des Verlages unzulässig und strafbar. Das gilt insbesondere für Vervielfältigungen, Übersetzungen,
+Mikroverfilmungen und die Einspeicherung und Verarbeitung in elektronischen Systemen.
+Gedruckt auf säurefreiem, archivierfähigem Papier.
+Druck und Verarbeitung: Hubert & Co., Göttingen
+Printed in Germany
+
+CONTENTS
+Lexical semantics in Ancient Egyptian. An introduction
+Eitan Grossman & Stéphane Polis .......................................................................1-15
+What are “Determinatives” good for?
+Orly Goldwasser & Colette Grinevald...............................................................17-53
+Egyptian classifiers at the interface of lexical semantics and pragmatics
+Eliese-Sophia Lincke & Frank Kammerzell ....................................................55-112
+Motivated sign formation in Hieroglyphic Egyptian
+and German Sign Language (DGS).
+Towards a typology of iconic signs in visual linguistic systems
+Eliese-Sophia Lincke & Silvia Kutscher .......................................................113-140
+Prototype structures and conceptual metaphor.
+Cognitive Approaches to Lexical Semantics in Ancient Egyptian
+Rune Nyord ....................................................................................................141-174
+Navigating polyfunctionality in the lexicon.
+Semantic maps and Ancient Egyptian lexical semantics
+Eitan Grossman & Stéphane Polis .................................................................175-225
+Discourse markers between grammar and lexicon.
+Two Ancient Egyptian cases for (de)grammaticalization?
+Elsa Oréal.......................................................................................................227-245
+A diachronic approach to the syntax and semantics of
+Egyptian spatio-temporal expressions with HA-t ‘front’.
+Implications for cognition and metaphor
+Camilla Di Biase-Dyson ................................................................................247-292
+Ancient Egyptian Prepositions for the Expression of Spatial Relations
+and their Translations. A typological approach
+Daniel Werning ..............................................................................................293-346
+Spatial frames of reference in Egyptian.
+Diachronic evidence for Left/Right patterns
+Matthias Müller..............................................................................................347-378
+
+vi
+
+Contents
+
+To clothe or to wipe. On the semantics of the verb nms
+Joachim Friedrich Quack ...............................................................................379-386
+Le verbe gm(j) : essai de sémantique lexicale
+Pascal Vernus.................................................................................................387-438
+Le verbe de perception nw(A) en égyptien ancien.
+Étude de sémantique lexicale
+Alessandro Stella ...........................................................................................439-458
+Le verbe et les variations d’actance.
+Les constructions réversibles (= Études valentielles, 2)
+Jean Winand...................................................................................................459-486
+
+Grossman, Polis & Winand (eds.), Lexical Semantics in Ancient Egyptian, 17-53
+
+What are “Determinatives” good for?
+Orly Goldwasser & Colette Grinevald (Craig), Jerusalem – Lyon
+
+Abstract
+This article attempts to answer the question: why did the Egyptian script keep a cumbersome and, in
+principle, unnecessary system of multi-determinatives for more than 3000 years? Almost every word in
+the script is followed by a few additional “mute” hieroglyphs (hieroglyphs that are not to be pronounced) that provided additional information about the word. As the Egyptian script is first and foremost a communication system, the question to be raised is: what are the “gains” brought by the use of
+these determinatives into this system that contributed to their retention and extensive usage for
+thousands of years on the “communication market.” We contend that the conservative answers given in
+Egyptology are insufficient. The answers to these questions can be found through redefining “determinatives” as “classifiers” that operate as a “classifier system” analogous to such systems in oral
+languages. Moreover, being of a different medium — script and not speech — the Egyptian multiclassifier word offers the reader a rich array of additional data, unavailable even to other classifier
+languages.
+
+0 Introduction
+Almost every word in the Egyptian hieroglyphic script ends with one or more “mute”
+graphemes (as a rule, unpronounced signs), which are frequently referred to in the
+scientific literature as “determinatives.” Note the three examples:
+“Sinuhe”1
+
+Personal name, male
+
+“Meret”2
+
+Personal name, female
+
+“horse”3
+
+For many decades, the explanation in Egyptology for the existence of these so–called
+“determinatives” was that they were just “reading aids.” The determinatives were said
+
+1
+2
+3
+
+Our ongoing joint research was made possible largely through the financial and scientific support
+of the EU project COST A31 Stability and adaptation of classification systems in a cross-cultural
+perspective, chaired by Thekla Wiebusch (CRLAO, CNRS-EHESS-INALCO). We are grateful to
+Eitan Grossman, Hebrew University, and Niv Allon, Yale University, for reading the manuscript
+and making very useful comments. Thanks also to Dan Elharrar, Hebrew University, for his
+invaluable assistance in preparing this article.
+Blackman 1932: 37. The meaning of the name is “Son of the Sycamore.” The
+sign is also a
+“determinative,” referring to the generic category of trees [TREE/WOOD]; see Goldwasser 2002: 3955.
+Parkinson 1991: 1a. The sign
+is also a “determinative” relating to the meaning of the name mrt
+“the beloved,” see below, n. 38.
+DZA 28.723.000 (18th dynasty, stela). On the “determinative” [HIDE & TAIL], see Appendix below, n. 129.
+
+18
+
+Orly Goldwasser & Colette Grinevald
+
+to both signal the end of the word, and to indicate “the general idea of the word.”4 It
+was thought that “determinatives” were introduced to compensate for the lack of
+vowels and word divisions in the Egyptian writing system. This opinion is still held
+by most Egyptologists and linguists today.5
+While this justification for the existence of determinatives may hold some weight,
+we contend that it is insufficient. Although, this theory may explain the initial impetus
+for the creation of determinatives, it cannot explain their survival and long-lasting
+“success” in the Egyptian script system for over three thousand years.
+Moreover, the student of Egyptology, who interprets the birth of determinatives as
+the result of an effort to dispel ambiguity within the vowel-less script system, should
+be reminded that past and present alphabetic Semitic scripts function well as writing
+systems, although these are (in most cases) purely consonantal, and the correct
+reading of words can be reached only through their con-textual and co-textual
+information.6
+Thus, evidence suggests that determinatives were not indispensable. Moreover,
+considering that one determinative could have easily performed the task of indicating
+both the “end” and the “general idea” of the word, the rich and lively development of
+the “multi-determinative” word in Egyptian certainly requires an explanation. Moreover, some words never take a determinative (see discussion below), and in some
+cases because of considerations of space determinatives are simply avoided.
+In this article, we will (§1) review some of the arguments from the last decade for
+considering determinatives as classifiers; (§2) go beyond the study of the semantics of
+Egyptian classifiers, and address a new research question as yet unanswered in Egyptology: what are determinatives — now taken as classifiers — good for? This question
+has been addressed in the literature on general classifier studies and is now being
+brought into the field of Egyptology. In §3, we will analyze the encyclopedic, discourse-pragmatic, and grammatical information carried by classifiers. We will then
+discuss in §4 the “grammar” of the multi-classifier word and compare it to wellknown linguistic phenomena recognized in many languages of the world. In §5, we
+will summarize the discussion and review the advantages of classifiers to the
+communication system, and lastly (§6) we will present the relevance of research on
+the Egyptian classifier system for general linguistics. A short appendix by Grinevald
+will introduce the reader to the world of classifier languages.
+4
+
+5
+6
+
+See, for example, the standard grammars of Ancient Egyptian, e.g., Gardiner 31957: 31 & passim;
+Allen 2000: 3; Schenkel 1990: 49-51. For the history of “determinative” studies in Egyptology, see
+Goldwasser 2006a. The most thorough analysis of the “determinative” phenomenon in the Egyptological literature before this decade was done by Champollion 1836; however, this part of his
+legacy is often forgotten in Egyptology.
+This argument can even be found in the latest discussions on the Egyptian script system,
+e.g. Stauder 2010: 137-148.
+The written word ʸʴʱ s-p-r in Modern Hebrew shows only root consonants. This word bears at
+least six possible meanings: book, barber, (he) counted, (he) told, (he) cut [hair], (it) was told. The
+reader can only reach the intended meaning through context; see Goldwasser forthcoming. One
+should also note that words derived from a single root often display the same classifier, which
+shows that the role of classifier as kind of matres lectionis is rather limited (we are grateful to Jean
+Winand for this comment).
+
+What are “Determinatives” good for?
+
+19
+
+1 Determinatives as classifiers: recent research and new questions
+Recent studies have argued that determinatives are not hieroglyphs signifying associations and connotations that represent extra-linguistic data, but in fact constitute an
+interesting case of a classification system. While other types of classification systems,
+such as gender systems, are characterized by systematic agreement patterns (between
+noun and article, adjective, or participle), the characteristics of a classifier is that it
+consists of an extra morpheme, occurring once in a certain construction, carrying
+information that should be interpreted together with the word it classifies.
+The relationship between a word and its classifier is generally semantically
+motivated, the semantic link being a taxonomic, or sometimes meronymic connection,
+although, during the evolution of systems, a classifier can lose some or all of its
+semantic content. Therefore, the term classifier must not be taken literally, because a
+classifier does not always literally classify, but the majority of classifiers do relate
+semantically to the word to which they are linked. Of interest here is that classifiers
+constitute grammatical systems, now known as classifier systems in the linguistic
+literature, in the same way other systems are known as gender systems.
+A striking parallelism is found between written classifiers in Egyptian and noun
+classifiers in Jakaltek Popti’, an Amerindian language of the Mayan family. In the
+Jakaltek Popti’ language, a free word – a classifier – obligatorily precedes referential
+nouns.7 Three of these twenty-four classifiers of Jakaltek Popti’ are shown below —
+[WOMAN], [MAN] and [ANIMAL] are classifiers (CLs):
+Xil
+ix
+malin naj
+pel b’oj no’
+cheh
+Saw [WOMAN] Malin [MAN] Pel with [ANIMAL] horse
+‘Malin saw Pel with the horse’
+
+1.1 First definition of determinatives as classifiers
+Noel Rude was the first to suggest, twenty five years ago, in a short (5-page) article,8
+the similarities between hieroglyphic and cuneiform determinatives on the one hand,
+and oral language classifiers, on the other. Fifteen years later, Goldwasser provided
+the theoretical demonstration that supported Rude’s thesis, in the book Prophets,
+Lovers and Giraffes.9
+In several other publications over the last decade, Goldwasser has shown that the
+many types of semantic relations which exist between “determinatives” and nouns in
+Egyptian have exact parallels in the oral classifier systems of different languages.10
+Other students of the Jerusalem School have added to this research via studies
+focusing on specific classifiers. 11 The Berlin school, headed by Kammerzell, 12 has
+made many important theoretical contributions to the understanding of the semantics
+of classifiers and has introduced an exciting new era in the study of verb classifiers.
+
+7
+8
+9
+10
+11
+12
+
+There are also classifier systems in which the classifier appears after the noun.
+Rude 1986: 133-138.
+Goldwasser 2002.
+Especially in Goldwasser 2006a.
+E.g. Shalomi-Hen 2006; David 2000. On the classifier, see Goldwasser 2010.
+See Lincke 2011.
+
+Orly Goldwasser & Colette Grinevald
+
+20
+
+1.1.1 “Echo classifiers” in the script: Repeaters and unique classifiers
+In the abovementioned studies, special attention has been given to “echo classifiers,”13
+known in the oral classifiers literature as “repeaters.”14 This type of determinative has
+long stood as a barrier between Egyptologists and the realization that “determinatives”
+are actually classifiers. Echo classifiers are a common phenomenon in the Egyptian
+script, such as, for example, in the orthography of the word “locust” snHm
+, where the [LOCUST] classifier pictorially repeats the phonetic 15
+information given by the preceding hieroglyphs. The locust classifier is a “repeater”
+as well as a “unique” 16 classifier because no other word is classified by the icon
+.
+Conversely, in spelling of the word “woman” Hmt
+, the last hieroglyph is a
+“repeater” classifier, as it pictorially repeats the phonetic information given by the
+previous signs, “woman,” but it is not a “unique” classifier, since many words pertaining to female occupations can take this [FEMALE] classifier.17
+As evidenced in the appendix below, these types of classifiers, which involve no
+real “classification” process, are present in oral classifier systems as well. They are
+semantically motivated, but add very little or no additional information to the word
+they classify. As in the case of Egyptian graphemes, classifier scholars find it difficult
+to define their “raison d’être.”
+
+1.2 The “text approach”: Frequency and density in a single text
+Grinevald 18 has demonstrated that Egyptian determinatives constitute a system,
+comparable to oral language classifiers, in that they exhibit regularities and obey
+rules. Her argument was based on a method of textual analysis familiar to field
+linguists who want to establish the grammar of as yet un-described languages, and
+demonstrate the existence of a specific system.
+As a test case, Grinevald analyzed the determinatives occurring in “The Great
+Hymn to the Aten,” a long text from the reign of Akhenaten in the New Kingdom.19
+Her analysis clearly showed that “determinatives” bore characteristics of a welldeveloped system. The determinatives were observed to appear with regular frequency, with about the same density, for any portion of the text, and to obey specific
+rules of use. Structurally, the determinatives were found to be regularly attached to
+13 Senft 2000; Allan 1977: 295, and Appendix below.
+14 For repeaters in Egyptian, see Goldwasser 2002: 15; Goldwasser 2006a: 21-22; Kammerzell
+forthcoming.
+15 For the term “phonetic” in this article, see below, n. 62.
+16 For “repeater” and “unique” classifiers, see the appendix at the end of this article.
+17 Unlike the classifier the [LOCUST] classifier may also be used as a logogram. However the [MALE
+(HUMAN)] classifier can be used as a repeater but also as a logogram.
+18 Presented by Grinevald and Goldwasser at the COST A31 conference: “The Boundaries of
+Classification: Definitions, Processes and Adaptability,” University of Kent, Canterbury, UK, 1518 September 2008, publication in preparation.
+19 Davies & Ricci 1908: pl. XXVII. Other texts of similar lengths from the New Kingdom show
+similar results.
+
+What are “Determinatives” good for?
+
+21
+
+root lexemes, and, for the most part, to precede suffixes such as tense or person
+markers (such as the past tense marker n in sDm.n.f formations, see below). The determinatives of the text could, therefore, be argued to constitute a rule-governed system
+in contrast to how they are traditionally described in the Egyptological literature — as
+marking associations or connotations, or even as a playful “game of icons.”20
+Once the fact that determinatives constitute a rule-governed system of classifiers
+is established, the systematic comparison of this Egyptian system with the wellknown linguistic phenomenon of classifiers becomes very productive, revealing striking similarities between these “mute” graphemic determinatives and classifier systems
+found in hundreds of languages from around the world.
+
+1.3 The “theater of the verb” — verb classifiers
+A first discussion of “verb classifiers” as a possible separate category with a different
+function in the script system was already offered by Jean Winand in his book Temps
+et aspect en égyptien.21 In a ground-breaking study focusing on verb classification,
+Kammerzell22 demonstrated how the classifier system visually encodes semantic relations of the Egyptian verb. In doing so, these classifiers open a new window through
+which prototypical “event schemata” in written Egyptian could be observed. We shall
+return to this topic below.
+
+1.4 The new research question: What are “determinatives” good for?
+The title of this article is, in fact, a paraphrase of the title of a pioneering article in
+classifier studies by Denny in 197623 entitled “What are noun classifiers good for?”
+Denny’s basic answer was that classifiers are independent elements whose semantic
+function is to place objects in classes relating to how humans interact with the world.
+This interaction could be social, physical or functional.24 Included in the social realm
+are animate entities, fellow human beings — classified by gender, and/or social rank
+— and culture-specific entities such as divinities. A classification by physical interaction is based on the physical characteristics of tangible objects, such as their shape
+and consistency (long, flat, round; rigid or flexible), while a classification by functional interaction reveals how these objects are used by humans (for example, for
+food, transportation, adornment, instruments).
+Previous works on Egyptian classifiers concentrated on the semantic relations
+between classifier and word, and on the reconstruction of the Egyptian knowledge
+system (classes or categories) as evidenced through the collection of words that take
+the same classifier, which unveils the ancient Egyptian world organization. These
+studies showed that Denny’s answer proves to be correct for Egyptian graphemic
+classifiers as well.
+However, due to the “longue durée” and constant development of the classifier
+system within the script, we argue that there were additional benefits in using such a
+20
+21
+22
+23
+24
+
+E.g. Gardiner 31957; Vernus 1983: 77; Schenkel 1990.
+Winand 2006: 46-47.
+Kammerzell forthcoming. On the verb classifiers in the Pyramid Texts, see Lincke 2011.
+See Denny 1976 & 1986.
+Denny 1976: 125.
+
+22
+
+Orly Goldwasser & Colette Grinevald
+
+system, which might warrant its lasting persistence within Egyptian culture. One
+exceptional phenomenon is the survival of the multi-classifier word, some examples
+of which exhibit three or more classifiers for one lexeme, creating a seemingly
+cumbersome and communication-stalling system.
+In this paper we further examine Denny’s question. We will try to identify and
+describe the operations of Egyptian classifiers on the reader (beyond the already discussed categorization processes). We believe that once we demonstrate the different
+levels on which classifiers operate, we will better understand the cognitive and
+informational benefits that have sustained the classifier system for so long — we will
+understand the reasons for its cultural “success.”
+
+2 The kinds of information provided by Egyptian classifiers
+Let us analyze the information that classifiers provide to the reader as belonging to
+different domains. We have identified three main domains of information:
+– The first domain of information to be considered is of an encyclopedic nature. If we
+consider that every lexeme is in reality a complex “knowledge frame”, and that each
+word evokes cultural prototypes, then the role of classifiers is to direct the reader to a
+more explicit referent, by providing a wide range of encyclopedic information about
+it. For instance, within the “noun universe,”25 the classifier may provide information
+such as gender, social status, animacy, material, or shape; and for verbs, the classifier
+may provide information about event schemata and the nature of its arguments.
+Culture-specific knowledge may also emerge through the classification system.26
+– Another level of information, discourse-pragmatic in nature, stems from the fact
+that scribes often had choices between several classifiers and combinations of classifiers. These options are usually traditional alternatives for the word’s classifiers, but
+in rare cases we may find the introduction of a discourse-specific classifier. Thus, the
+selected classifiers provide additional information about specific referents at the time
+of discourse, such as who is talking, with regards to what specifically, and with what
+attitude or intention.27
+– Finally, classifiers can provide grammatical information. For instance, they can
+indicate where a root or stem ends and where a suffix starts.28 Classifiers can also
+mark derivational processes, such as deriving a noun from a verb, or syntactic
+boundaries, such as the end of a relative clause.
+
+We shall also try to account for the cases where no additional semantic information is
+given, either because the classifiers are “phonetic classifiers” with no overt semantic
+relevance, or when words remain unclassified.
+
+25 Defined as such by Givón 2001: 7-8.
+26 E.g. on the crocodile
+classifier as a culture-bound classifier, see Goldwasser 1995: 103-106.
+On the Seth classifier and its reflection of cultural and religious changes in the New Kingdom, see
+Allon; see also Goldwasser 2010.
+27 E.g. The verb rx “to know” when referring to “knowing a woman” in the Biblical sense, may be
+written with the phallus classifier [instrument]
+(DZA 26.029.740 and 26.029.670).
+28 For root structure in Egyptian, see Reintges 1994; Brein 2009: 3; Vernus 2009.
+
+What are “Determinatives” good for?
+
+23
+
+2.1 Encyclopedic information
+We now turn to a few examples of encyclopedic information given by Egyptian
+classifiers, first in nouns, then in verbs.
+2.1.1 Encyclopedic information in Egyptian nouns
+In many cases, the classifier directs the reader to specific aspects of the knowledge
+structure, and the end product of the reading process is a “high-lighted” frame of
+knowledge. In many cases, this extra information relays socio-cultural or institutional
+perceptions. This knowledge is attached to individual nouns themselves and is usually
+not context-sensitive.
+For example, in the word “widow”
+,29 the two classifiers (last two
+signs) highlight two aspects of “widowhood.” The first,
+[HAIR], a metonymic
+classifier, is a cultural referent referring the reader to mourning rituals in ancient
+Egypt, in which women’s hair played an important role.30 The second classifier refers
+to a universal generic classification of the widow, which is not culture-bound but a
+universal semantic ‘feature’ of the lexeme “widow”; i.e. a “widow” ‘is a kind’ of
+[FEMALE].31 This classifier functions, in a way, like a female gender marker32.
+33
+In another spelling of the word
+the
+[HAIR] classifier is
+replaced with the
+“BAD BIRD”, while the same gender classifier is used at the end.
+This classifier
+, which originally designated the category [SMALL], acquired the
+extended meaning [NEGATIVE] from the Middle Kingdom onwards. Kammerzell correctly defined the use of this classifier in the New Kingdom as “a non-iconic classifier
+constituting a hyper-category of events and states which were regarded as negative or
+undesirable.”34 In the case of the word “widow”, the use of the [NEGATIVE] classifier
+appears to signal the social judgment in Egyptian society that widowhood is a ‘negative’ state.35
+On a more encyclopedic level, attested from the Old Kingdom onwards, classifiers
+may depict units that comprise an entity considered a collective noun, thus, actually
+
+“dismantling” it. For instance, the word “people”
+
+rmT is classified by
+
+[MALE] and
+[FEMALE], the components that make up “people”; the classifiers are
+always written in this order, reflecting the basic gender priority of Egyptian society.36
+29 DZA 28.191.180, Middle Kingdom.
+classifier, e.g. sAmt “mourning” and iAkb “to
+30 A few other words related to mourning take the
+mourn” (Gardiner 31957: 588 & 450).
+31 Reflection of the cultural code and the “politically correct” in script was discussed in detail in
+Goldwasser 1995 & 2002.
+32 In Late Egyptian, when the gender marker -t is not written systematically, the classifier is sometimes the only way to decide on the gender of a noun (p.c. Jean Winand).
+33 Faulkner 1962: 184.
+34 Kammerzell forthcoming. On this classifier in the Old Kingdom, see David 2000.
+can be found also in this spelling of the verb msdd
+35 A social-cultural judgment
+“hate” (Urk. IV, 758,9).
+order is known to us, see Goldwasser 2002: 22, note 63
+36 A single example of the reversed
+(Old Kingdom).
+
+24
+
+Orly Goldwasser & Colette Grinevald
+
+Another interesting example is the collective noun
+mnmnt “herd.” In
+this example, the classifier represents the prototypical animal which comprises a herd.
+On a papyrus from the 18th Dynasty is an outstanding example of the word “herd”
+taking no less than 5 classifiers (!):37
+
+2.1.2 Encyclopedic information in Egyptian verbs and deverbals
+A particularly interesting characteristic of Egyptian classifiers is that they are also
+applied to verbs, and, in fact, provide more information about the structure of verbal
+events than oral classifier systems are known to do.38
+If a noun is a static universe, then verbs present event schema. 39 The event
+schema, “the theater of the verb”, specifies the number and nature of its arguments,
+such as agent, patient, theme, instrument, or location, etc. For instance, ‘running’
+involves an agent, while ‘eating’ involves an agent and a patient; ‘cutting’ involves an
+agent, a patient and an instrument, while ‘putting’ involves an agent, a theme and a
+location. A characteristic feature of the Egyptian classifier system is that the classifiers of a verb (and of a nominalized verb form — a deverbal) may present (in the
+pictorial alone) any one of or a combination of its prototypical arguments.40
+41
+So, for example, the verb swr
+“to drink,” in this spelling, takes
+two classifiers: one representing a prototypical [patient] of the act of drinking,
+
+[WATER]
+
+, and one representing the [actor/action]
+
+.42
+
+The verb wHa
+“to fowl” reflects a specific life-style in the marshes of
+the Nile. In this activity, well-known from reliefs and paintings in tombs from the Old
+Kingdom onwards, the fowler targets both fish and water-fowl. This specific situation
+is well-documented through the classifier system, where the verb “to fowl” gets two
+prototypical patients:
+
+[BIRD], and
+
+[FISH], as we see above. The third classi-
+
+fier is an [actor/action] classifier (see discussion of this word below §4.1.1). Intransitive verbs may also show two arguments.
+An interesting example is the verb sDr “to sleep.” Since the Old Kingdom it
+regularly takes the classifier
+which may be understood as a pictorial repeater.
+P. Boulaq 17, 6,7 = Luiselli 2004: 64. Also Goldwasser 2002: 74(18th Dynasty).
+On the role of classifiers in determining the verbal Aksionsart, already Winand 2006: 45-47
+See Van Valin 2001: 22-33; also Rappaport Hovav, Doron & Sichel 2010.
+See Kammerzell forthcoming and Lincke 2011. On classifiers as prototypes, see Goldwasser 2002:
+25-38.
+41 DZA 20.553.790, Middle Kingdom. In earlier examples, this verb may take a [CUP] classifier,
+which represents the [instrument].
+42 For the identification of the classifier
+as the pictorial manifestation of the conceptual metaphor
+[THE BODY IS A CONTAINER], see Goldwasser 2005: 111 & 2006b: 476 n. 2 (with bibliography).
+The words that take this classifier encompasses food, feelings, thoughts, and ideas — all supposedly residing within the “human container,” compare Lakoff & Johnson 1980: 46 & 50.
+
+37
+38
+39
+40
+
+What are “Determinatives” good for?
+
+25
+
+However the sign
+actually combines two arguments, the [agent] and the typical,
+prestige, [instrument] — the bed. However, in not a few examples in New Kingdom
+literary (hieratic) texts we find a development of two differentiated arguments as
+classifiers —
+
+, i.e. [instrument] – [BED] and an agent, the [actor/action] classi-
+
+43
+
+fier. It seems that the hieroglyph
+was understood as “bed” alone. Like the
+[BIRD] and [FISH], the [BED] acts as a prototypical vehicle. It appears, for example, in
+sentences where the protagonist is described sleeping under a tree or in the street. The
+verb may also present a typical combination of three classifiers
+
+in Ramesside
+
+44
+
+hieratic. The second classifier in this combination may be an extension of the bed,
+standing for [CLOTH] or the like.
+
+2.2 Discourse-pragmatic information in Egyptian classifiers
+In addition to classifiers expressing encyclopedic knowledge at the word level, there
+are many situations where Egyptian classifiers offer discourse-pragmatic rather than
+lexical information, exhibiting the process of “referent tracking” of particular
+referents.45
+For instance, a word that is usually classified by a
+
+[MALE] classifier, such as
+
+the word “brother,” can instead be written with a
+[DIVINE] classifier, informing
+the reader that the brother being mentioned is a god.46 Two representative examples
+are given below.
+2.2.1 Tracking a specific referent in a discourse — “tracking the enemy”
+An illuminating example of the “referent tracking” process, found in the hieroglyphic
+autobiographical text of the 18th Dynasty, is illustrated briefly in sequence (1) below.
+Although the unmarked classifier for personal names (1a) and for the word “crew”
+(1c) should be
+[MALE], in this particular case, the person named and the crew
+involved happen to be enemies of the Egyptians. Thus, in a context-sensitive manner,
+the unmarked classifier
+is substituted with the hieroglyph “dead enemy”
+,
+which represents the prototypical and ideal state of an enemy in Egyptian culture.47 In
+this example, only the relevant words are presented in hieroglyphs:48
+43 E.g. DZA 29.912.590 (d’Orbiney, 8,9), DZA 29.911.770 (pAnastasi I, 25,5).
+44 E.g. DZA 29.912.620 (pChester Beatty I, 10,2) ist ir Hr sw sDr Xry wa nht “ as for Horus, he was
+sleeping under a tree.”
+45 For “reference tracking” in classifier languages, see Craig 1987; Croft 1994. This phenomenon
+was clearly detected and described by Polis in his elaborate study on the linguistic registers of the
+scribe Amennakhte son of Ipuy during the 20th Dynasty (see Polis 2012: 38).
+46 See, for example, the sentence Dwt iryt r.f in sn.f StX
+“Evil
+done to him by his brother Seth” (Gardiner 31957: 270 = Eb. I, 13).
+47 The hieroglyph shows a dead enemy with an axe in his head. For some examples showing
+Canaanite axes in the head of the dead man, see Ziffer 1990: 70*.
+48 Available in Gardiner 31957: 399. For a similar example see Urk. IV, 695,3. Compare this to a
+similar example from the 19th Dynasty analyzed by Kammerzell forthcoming.
+
+26
+
+Orly Goldwasser & Colette Grinevald
+
+[1.a] “Then that enemy, whose name was
+CL
+
+[ENEMY]
+
+tti-an
+[1.b] came and collected to himself
+
+CL
+
+[ENEMY] CL[PLURAL]
+
+rebels
+[1.c] His majesty proceeded to slay him and his
+
+crew CL[ENEMY] CL[PLURAL]”
+
+Therefore, this particularly marked choice of using the “enemy” classifier, instead of
+the unmarked
+classifier, demonstrates the possible discourse motivation relayed
+through in classifier choice. In this case, the referent being tracked through this particular discourse happens to be explicitly classified as an “enemy.”49 In the meantime,
+it also creates a powerful “visual rhyming” foregrounding the topic [ENEMY].50
+2.2.2 Who is talking? The case of 1st person classifiers
+Egyptian classifiers may also play a role in individuation, i.e. signaling a single “contoured referent” of a respective noun or, in our case, pronoun. This discursive function
+can be illustrated via the use of the 1st person pronoun. In most languages, the 1st person singular pronoun is not marked for gender or rank.51 Therefore, the 1st person pronoun refers to the “speaker” without giving any additional information to facilitate the
+identification of the speaker.
+As far as we know, in spoken Egyptian the 1st person was also not marked for any
+characteristic of the person, such as gender or social status. The 1st person suffix-pronoun in spoken Egyptian was a vowel (probably i),52 and thus, in most cases, was not
+represented in the vowel-less script, as shown in the table below. However the written
+Egyptian classifier system offers individuating information through with at least six
+variant forms of the 1st person pronoun:
+
+49
+50
+51
+52
+
+See DZA 20.554.380 for a similar example. On this topic compare Allon 2010: 9-14.
+For “visual rhyming” see Goldwasser 1995: 60-62 (especially 61).
+Siewierska 2004: 104-105 & passim.
+On the status of the yod i in Egyptian, see Reintges 1994: 214-215. Kammerzell (1995, 2005) and
+Peust (1999) have shown that the grapheme <j> does not correspond to a glottal stop but rather to a
+sonorant. Similar semantic information about the 1st person speaker appears in other pronouns as
+well. For suffix pronouns, dependent pronouns, independent pronouns, and the old perfective
+(stative), see Gardiner 31957: 39, 45, 53, 234.
+
+What are “Determinatives” good for?
+
+27
+
+[2] Classifiers for 1st person
+[MALE]
+[DIVINE] prototypical god Horus
+[DIVINE] prototypical anthropomorphic god
+( )(i) +
+
+[KING]
+[DIGNITARY]
+[FEMALE]
+
+Therefore, the verbal construction “I have given” di.n.(i) could appear in the script
+with any of the variant classifiers, as shown in (3) below:
+[3.a] gender
+
+[MALE]
+
+[FEMALE]
+
+[3.b] divinity
+
+[GOD/DIVINE KING]
+
+53
+
+[3.c] social rank
+[3.d] no classification
+
+[KING]
+(vowel i, no CL)
+
+[GOD/DIVINE KING]
+
+[DIGNITARY]
+(no vowel, no CL)
+
+st
+
+In (3.d), the 1 person marker corresponds to phonetic writing only alone, through the
+use of a simple vowel i, and no accompanying classifier to provide any pragmatic
+information about the “speaker.” The second example lacks any phonetic representation or classifier.54
+That the classifiers of the 1st person were semantically meaningful and helped
+both writer and reader to track referents through discourse can be argued on the basis
+of the choice of classifiers made by the famous 18th Dynasty queen, Hatshepsut. As a
+woman playing the role of a (male) king, she struggled with the issue of self-representation during her entire reign. This struggle can be observed in royal sculpture, where
+graded variations of female, male and “in between” representations are wellattested.55 The iconic individuation of the 1st person singular pronouns exposed the
+queen (or her scribes) to a difficult decisions, since the classifiers
+,
+and
+that would best represent the classification of an Egyptian royal personality 56 are
+actually marked as [MALE] in gender. As a “spelling choice,” she seems to have
+preferred to be represented in many of her inscriptions by the simple phonetic 1st
+person i instead of a human 1st person classifier, thus avoiding the gender issue
+
+53
+
+is a representation of god in a human prototype in contrast to the very early animal prototype
+, see Shalomi-Hen 2006; Goldwasser 2002: 113-144.
+54 In Old Kingdom mastabas the missing classifier is to be searched in the scenes accompanying the
+text.
+55 E.g. Roehrig, Dreyfus & Keller 2005: 166-173.
+56 The divine nature of the Egyptian kingship enabled the royals to take a [DIVINE] gender classifier
+instead of a [HUMAN] gender classifier. On the
+as the “royal falcon” see Shalomi-Hen 2006:
+39-44.
+
+Orly Goldwasser & Colette Grinevald
+
+28
+
+altogether.57 Another clear cut example of discourse sensitivity is evidenced in the
+speech of the cow-goddess to Hatshepsut. In a 1st person monologue, the cow-goddess
+is represented by the phonetic spelling , in 1st person pronouns that occur in the
+text.58
+
+2.3 Some grammatical functions of Egyptian classifiers
+Finally, Egyptian classifiers can also fulfill grammatical functions, similar to classification systems of other languages. We present here three functions we have identified
+for Egyptian classifiers: at the root (§2.3.1), word (§2.3.2), and phrase (§2.3.3) levels.
+2.3.1 Root marking
+In Egyptian, classifiers usually mark the end of a root by directly following it and by
+appearing before the grammatical information of tense and person.59 In example 4
+below, the verb root ii
+is immediately followed by the classifier
+[MOVEMENT],
+60
+st
+which itself is followed by the past tense marker n
+. The 1 person pronoun has
+no phonetic representation, but the speaker is marked as a human male through the
+classifier.
+[4]
+
+“[that] (I) came” (lit. “come cl[MOVT] [past] (I) cl[MALE]”)
+
+Therefore, this characteristic position of the
+classifier, next to the verb root itself,
+renders the grammatical structure of the word more transparent.61 The salience of the
+root in the Egyptian system is reflected and enhanced by this phenomenon. The root
+shows a strong linguistic presence, and the script keeps the root and its prototypical
+classification very much alive in the reader’s mind.
+2.3.2 Derivational function: Signaling agent nominalization
+One of the motivations for Egyptian classifiers is to specify the prototypical agent of
+actions. The presence of this agent classifier signals the grammatical process called, in
+
+57 Compare Goldwasser 2006c: 273.
+58 See Naville 1894-1898: pls. XCIV & XCVI. Sometimes the is also absent. On the choice of for
+1st person representation and its possible reasons on the Metropolitan statue of Haremhab, see
+Goldwasser 2011.
+59 See the description of this phenomenon with other tense markers in Gardiner 31957: 325.
+60 “Examples where the formative n precedes the determinative are rare, and may be considered as
+faulty” (Gardiner 31957: 328). See also Allen 2000: 224.
+61 This adds to another very important root-constraint of the script —– suffix pronouns are never
+coupled into biconsonantals with the root. For example, the combination sDm.i
+([while] I
+hear) is always written with the combination of
+(Faulkner 1962: 259) representing the triconsonantal root s-D-m, and a suffix pronoun. Theoretically, biconsonantals that combine the last
+consonant of the root and the suffix could be an option, e.g. mi ; however, this is not exercised in
+the script. This kind of sandhi is extremely rare but it is found in at least two cases: ns (< tr+ sw)
+and wsy (< wy + sw) as expressive particle in adjectival predicate in Late Egyptian. We are grateful
+to Jean Winand for this remark.
+
+What are “Determinatives” good for?
+
+29
+
+oral language grammar, ‘agentive nominalizations,’ traditionally termed ‘participles’
+in Egyptian grammar.62
+Examples of agentive classifiers functioning as nominalizing gender markers,
+[MALE],
+
+[FEMALE] are given below in [5].
+
+[5.a]
+
+[MALE]
+63
+
+wHa
+
+“watchman”
+
+wrSy
+[5.b]
+
+“fowler”
+
+[FEMALE]
+
+mnat
+
+“wet nurse”64
+
+Smayt
+
+“singer”65
+
+The subject of interest here is that, just as in oral language agent nominalization, these
+human nominalizing classifiers generally designate agents of traditional activities,
+such as fowler, wet-nurse, singer, or watchman.66
+2.3.3 Syntactic function: Marker of relative clauses67
+In other cases of nominalization, particularly when the signified is referred to by a
+whole phrase that is a relative clause, the
+classifier functions as a relative clause
+marker, 68 as shown in example [6] below:
+[6]
+
+“one who turns his back to him”69
+
+2.4 When there is no classifier information
+The Egyptian classifier system exhibits several instances, as do other classifier
+languages, where a word, as a rule, is either not accompanied by a classifier with
+semantic value, or not accompanied by a classifier at all. We have identified three
+such cases of different natures: one case of “phonetic determinative,”70 and two cases
+62 In European languages, the process of agentive nominalization is usually done by morphological
+derivation, as in sing-er, build-er, teach-er, etc. In Egyptian, this derivation probably corresponded,
+in many cases, to a vowel-change, which is not evidenced in the script.
+63 Faulkner 1962: 66.
+64 This word gets two classifiers: the metonymic classifier [BREAST] and the generic classifier
+[FEMALE] (DZA 24.057.170).
+65 Gardiner 31957: 448.
+66 Gardiner 31957: 274 (ex. 6).
+67 For the analysis of a classifier used as noun phrase marker, see Goldwasser 2006b: 476, compare
+Grinevald 2000: 64.
+68 This phenomenon is already discerned in Gardiner 31957: 271.
+69 Gardiner 31957: 271.
+70 Here we use the term “phonetic” without committing ourselves to more than the fact that these
+classifiers stand for sounds of a word they evoke, with no link to any semantic value. The term
+“phonological” might also be used, although it would not be, strictly speaking, any more appropriate since all established writing systems are neither phonetic nor phonological, but rather partly
+mnemotechnic systems aimed at competent speakers of the language.
+
+30
+
+Orly Goldwasser & Colette Grinevald
+
+of the total absence of classifiers. Two different motivations are involved: nonreferentiality and high iconicity. The only motivation unique to the Egyptian system is
+the “high iconicity” phenomenon, which stems from the special characteristic of the
+Egyptian script system, and thus, does not exist in other languages or script systems.71
+2.4.1 A classifier with no semantic function?
+The special case of “phonetic determinatives”
+There are cases where a classifier is not related to the semantic referent of the word
+(semantically motivated), but instead reproduces the phonetic structure of the word72
+it follows (making it “phonologically motivated”). Often this “phonetic classifier”
+appears side by side with semantic classifiers.
+One example of such a phonetic classifier appears in the word ibi
+73
+
+“to thirst after,” which takes three classifiers in a row: [KID]
+
+[WATER] and [ACTIONS OF MOUTH]. The classifier of interest here is the first one,
+which bears no semantic relation to the verbal root ib
+
+,
+
+“to thirst after,” while the
+
+other two,
+[WATER] and
+[ACTIONS OF MOUTH], are semantic classifiers
+referring to the [patient] and the [action/actor] of that verbal root, and stand in
+meronymic/taxonomic relation to the word. In
+
+, the first classifier
+
+, therefore, appears to have shed its semantic value and instead acquired a
+phonetic one by being analogous in sound to the verb root.74
+The proposed analysis here is that the use of the “kid” classifier, as a purely phonetic classifier in the verb “to thirst after,” might be derived from an intermediate use
+of the classifier as an iconic pictorial logogram or repeater
+
+“kid.” 75 As a logo-
+
+gram or repeater classifier, the hieroglyph
+could have become associated with
+the pronunciation of the word ib “kid” and thereby come to mark the sound value of
+ib
+, probably also contributing some additional information on the vowels of the
+word.
+As presented in the Appendix below, this phenomenon of a “phonologically
+motivated classifier”76 has been accounted for in oral classification systems, although
+it is considered rare typologically. It has been identified, for instance, in some
+languages of the Pacific and South America.
+
+71
+72
+73
+74
+
+On the high level of iconicity within the Egyptian script, see Goldwasser 1995 & 2009: 336-354.
+Or part of the word.
+DZA 20.553.790. For a semiotic discussion of this word, see Goldwasser 1995: 45-46 & 71-77.
+Compare this to a similar explanation by Kammerzell forthcoming: n. 6. Another application of the
+same
+phonetic classifier is found in the word ibhty
+“a kind of stone”, see
+Faulkner 1962: 16.
+75 In the New Kingdom example
+“kid”,75 the repeater classifier
+[KID] is followed by a
+taxonomic one, in this case the classifier [HIDE & TAIL], which further places the animal into a
+generic category of “having hide and tail,” see Goldwasser 2002: 57-89.
+76 Grinevald, see Appendix below.
+
+What are “Determinatives” good for?
+
+31
+
+2.4.2 No classifiers for words with no referential meaning
+In classifier languages, grammatical words such as (a) prepositions, and (b) primary
+(non-derived) adjectives, usually do not get classified; this is also true of Egyptian.
+a. Prepositions
+Prepositions as a whole — spatial Hr
+
+‘on,’ Xr
+
+‘below,’77 temporal xft
+
+‘after,’ or others such as Hna
+‘with,’ mi
+‘like’ — do not appear with
+classifiers. Well-known in general linguistics is the fact that adpositions in general
+(prepositions as well as postpositions) are function words of a relational nature that do
+not refer to events or entities in the world, and therefore are not expected to take
+classifiers.
+There is, however, an interesting exception to this rule that actually proves the rule. It
+is the case of the agentive preposition in “by,” which can be written either without a
+classifier, as in
+(written phonetically, i+n), or with a classifier
+, a not
+uncommon variation. As noted by Gardiner, 78 this agentive ‘by-phrase’ with an
+expressed classifier is used mainly with the various passive forms. In these cases, the
+mere presence of the human classifier underlines the agentive nature of the Egyptian
+passive construction.79 Moreover, it is interesting to note how the classifier in this
+case specifically depicts an agent “on the move,” thus underlying the full agentivity
+of this argument. The fact that the classifier appears in the middle of the word, and
+not at the end, is otherwise due to aesthetic reasons.80
+b. Adjectival words
+Words that come immediately to the mind of every Egyptologist in the context of
+“classifier absence” or “non-classification” are roots with adjectival meaning, which
+perform either a modifier or predicative function. For example, the primary quantifying adjective nb
+
+“all, every” never takes a classifier.81 This is also the case
+
+with adjective-like verbs, such as nfr “good, beautiful,” which can express any
+number of positive qualities, such as “beautiful, fair, good, kind, happy, well,
+necessary, etc.”82 Other examples include
+wr “big” and
+nDs/Sri “small.”83
+As recent studies in general linguistics have shown, adjective-like words, which express qualities of entities and are not in themselves referential, do not constitute as
+77 The preposition includes iconic information of “being above” as the head is on top of the human
+body. The hieroglyph Xr, “butcher block” contains the information of “being under” in the same
+way.
+78 Gardiner 31957: 128-129.
+79 This is said in contrast to the common motivation for passives in European languages, for instance,
+with no expressed agent, whether by choice of the speaker or because it is not known.
+80 The variation
+would be iconically unacceptable. For different examples from Old Kingdom
+tombs, see DZA 20.805.290, 20.805.300. A variation without the n
+is also known, see DZA
+20.805.340. The combination of the first letter and the rare classifier, as well as the unambiguous
+grammatical and contextual situation, creates a “unique” classifier effect that may lead to a
+spelling without the n, which may be felt as redundant information.
+81 For nb as the only primary adjective in Egyptian, see Allen 2000: 61.
+82 This polysemic root, when acquiring the meaning “to beautify,” tends to take the
+[DEFAULT]
+classifier (Kammerzell forthcoming: 7, and Appendix below n. 136). Other derivations of the word
+may also acquire classifiers.
+83 Winand sees the Egyptian adjective as participle, Winand 2006: 156. On adjectives, see Peust
+2008: 58-82.
+
+Orly Goldwasser & Colette Grinevald
+
+32
+
+clearly defined a lexical category in many oral languages of the world as they do in
+European languages.84 This characteristic of adjective-like words seems, therefore, to
+be echoed in Egyptian writing by the absence of classifiers85.
+
+2.4.3 No classifiers when there is high iconic motivation
+Another instance of the lack of classifier information is the absence of a classifier
+after a noun or verbal root. Upon inspection, in many cases this absence appears connected to the use of a logogram or an ideogram. It appears that the high iconicity of
+some logographic or ideographic representations could motivate the consistent
+absence of a classifier. Such a case, for instance, is that of the scarab ideogram xpr ,
+which stands for the root “to become, to reincarnate.86” This ideogram was very informative pictorially (and thus semantically) to the native Egyptian speaker, thus, the
+addition of classifiers was unnecessary.87 Another instance of a word written with a
+highly informative logogram that makes classifiers redundant is the verb sDm
+“to hear,” written metonymically by the logogram of the ear
+
+, and a phonogram m
+
+.
+Thus far we have shown how the Egyptian classifier system shares many similarities with other classifier systems known around the world. Now we will explore the
+fact that it also has interesting characteristics of its own.
+88
+
+3 Exploring the “grammar” of Egyptian classifiers
+This section explores the particular grammar of the Egyptian classifier system, which
+is overall more complex than that of known oral classifier systems. Accounted for are
+two types of situations: first, the fact that certain words take several classifiers, raising
+the question of the grammar of such arrangements; and second, the fact that in certain
+instances on certain occasions words merge with their classifier. We argue that, while
+these specificities of Egyptian classifiers set this system apart from other known
+classifier systems of the world, Egyptian classifiers are reminiscent of various
+linguistic processes well-known in other languages. The multi-classifier phenomenon
+will be compared to the linguistic devices of nominal compounding and verbal
+incorporation; furthermore, the results of classifier and word merging in some cases
+84 See Dixon & Alexandra 2006.
+85 The category of “adjective” in Egyptian is almost limited to Earlier Egyptian. From Late Egyptian
+onwards, this category dramatically diminishes to become virtually absent in Coptic (we are grateful to Jean Winand for this remark). For a general discussion of the term ‘adjective’, see
+Haspelmath 2010.
+86 Pascal Vernus elaborately discusses the complex semiotic status of the scarab hieroglyph, see
+Vernus 2003: 205-213.
+87 On the semiotics of the grapheme xpr, see Goldwasser 1995: 48-49. The Egyptians regarded the
+beetles emerging from the dung-ball created by the Scarabaeus sacer as an autonomous birth, and
+thus the verb xpr became a vivid metaphor for “coming into existence [like a scarab],” i.e. eternal
+renewal. The scarab is also a manifestation of the daily renewal of the sun-god.
+88 For writings with the ideogram without the m see e.g. Urk. IV. A more complicate case is the
+semiotics of the hieroglyph that stands for the verb iri “to do” and never takes a classifier. This
+case is dealt with in a forthcoming publication.
+
+What are “Determinatives” good for?
+
+33
+
+will be linked to the lexicalization processes of such compounds. A third phenomenon, that of “classifier loss,” will be compared to the process of grammaticalization
+in general linguistics.89
+
+3.1 Nominal compounding and verbal incorporation
+As demonstrated above, words in the Egyptian script may take a combination of
+classifiers. While these “multiple-classifier” constructions set the Egyptian classifier
+system apart from other better known classifier systems from around the world,90 we
+argue here that this “multiple-classifier” characteristic provides a strong argument for
+considering this classifier system as a linguistic part of written Egyptian. Our argument consists of showing how the specific linear arrangement of classifiers is reminiscent of grammatical processes known in general linguistics as “nominal compounding” and “verbal incorporation.”
+3.1.1 Order constraints: Meronymic precedes taxonomic classifiers
+The first observation on the sequence of classifiers in Egyptian is that it follows a
+strict “meronymic-taxonomic” categorization order, in both nouns and verbs. Consider how, in the noun examples below, the meronymic classifiers (hair and throwstick) precede the generic, superordinate taxonomic classifications [FEMALE] and
+[MALE]:
+[7] nouns:
+‘widow’
+
+xArt
+NOUN
+
+widow
+
+CL
+
+CL
+
+‘Asiatic’
+
+CL
+
+CL
+
+[FEMALE]
+
+aAm
+
+[meronymic] [taxonomic]
+
+NOUN
+
+[meronymic]
+
+[taxonomic]
+
+Asiatic
+
+foreign weapon
+
+man
+
+[HAIR]
+hair
+
+woman
+
+[THROW-STICK]
+
+[MALE]
+
+The same order of classifiers is found in verb classification, as shown below, in which
+the meronymic classifiers for [patient] or [instrument] arguments almost always precede the taxonomic classifiers of the [event] itself.91
+In the examples 8 below, both of these verbs take two classifiers: “drinking”92
+takes a classifier representing the prototypical [patient] of the act of drinking, water,
+89 For a basic reference to lexical sources of some major grammatical elements in languages of the
+world, see Heine & Kuteva 2002.
+90 While in a spoken language, an accumulation of classifiers may create a communication disturbance because of the increase of phonetic elements after the word, in the Egyptian system, the
+graphemic classifiers are “mute,” and thus, do not have this effect. Nevertheless, the process of
+multiple classification marking is known, for instance, in certain Amazonian languages with somewhat similar systems of noun classification known as “noun class systems” rather than strictly
+“classifier” systems.
+91 This order becomes very conspicuous if we check the detailed list of verb classifiers used in
+Wenamun, as presented in Kammerzell forthcoming: 27.
+92 For the discussion of this verb in the Old Kingdom, see Kammerzell forthcoming: 5. Our spelling
+of swri is typical for the Middle Kingdom and later hieratic manuscripts, see DZA 28.584.230.
+
+Orly Goldwasser & Colette Grinevald
+
+34
+
+while “sculpting” takes a classifier for its prototypical [instrument], a knife. Therefore, in both of these verbs, the meronymic patient or instrument classifier precedes
+the action classifier specific to the verb.
+[8] verbs:
+‘to drink’
+
+swri
+VERB
+
+to drink
+
+CL
+
+CL
+
+[WATER]
+
+‘to carve’
+
+[ACTIONS OF MOUTH]
+
+[meronymic]
+
+[taxonomic]
+
+patient
+
+actor/action
+
+water
+
+action of mouth
+
+xti
+VERB
+
+to carve
+
+CL
+
+[KNIFE]
+
+CL
+
+[ACTION OF FORCE]
+
+[meronymic]
+
+[taxonomic]
+
+instrument
+
+actor/action
+
+knife
+
+action of force
+
+Another illuminating example of the multiple-classifier construction following this
+strict meronymic-taxonomic order is found with the verb wHa “to fowl,” which takes
+both bird and fish as its two prototypical patients of the fowling act, followed by an
+action classifier. The expression of the whole verbal event is given below [9]:
+[9]
+
+‘to fowl’
+
+wHa
+VERB
+
+to fowl
+
+CL
+
+[BIRD] 93
+[FISH]
+
+CL
+
+CL
+
+[ACTION OF FORCE]
+
+[meronymic]
+
+[taxonomic]
+
+patients
+
+actor/action
+
+bird-fish
+
+action of force
+
+Therefore, this example
+clearly illustrates the constraint placed on classifier order, where the classifiers for patients always precede classifiers for actions.94
+Notice how, in this case, the instrument of fowling is actually present but not
+individualized or isolated. It is, however, iconically implied in the last hieroglyph
+which represents pictorially in a single ideogram the active agent performing his
+prototypical ‘action’ while holding the prototypical tool, a stick
+of this word, such as the deverbal nominalized “fowler”
+
+. In other variations
+95
+
+(with the
+
+93 Even though this sign represents a duck iconically, the duck is the prototypical bird in the Egyptian
+landscape; thus, as a classifier, it stands for birds in general. A similar phenomenon can be traced
+on the lexical level, where the word for “duck” Apd comes to refer to “bird,” see Goldwasser 1999
+& 2002: 19-24.
+94 The possible reasons for this order of classifiers are not discussed in this publication. The topic is
+studied extensively in Lincke 2011.
+95 DZA 22.568.100. For the history of the spelling of this word, see DZA 22.568.090-200, especially
+in Late Egyptian, DZA 22.568.110. Typically, not all examples of the word show full classifycation; some examples omit one or both of the patients (fish or bird), while others omit the actor
+
+What are “Determinatives” good for?
+
+35
+
+agentive nominalizing classifier
+discussed above in §3.3.2), the prototypical
+instrument is represented by a metonymic performing hand with the stick
+.
+3.1.2 Classifier order of event schema vs. sentence order of spoken Egyptian
+An interesting feature of the order of the different classifiers in the verb schema is that
+it happens to be the reverse of the basic syntactic order of Egyptian. While the general
+sentence order in written Egyptian is always Verb-Object (VO), whether in the Verb
+Subject Object order (VSO) or in the Subject Verb Object order (SVO), the classifier
+sequence within the orthography of the verb is always the reverse: [patient]-[action]
+(corresponding to OV).
+This difference between Verb-Object order at the sentence level and patient
+(object) – action (verb) at the classifier level is exemplified in the predicate construction in example 10, a spell of drinking medication. Note how, at the syntactic level,
+the direct object of the verb of drinking (= medication) follows the verb complex (root
+plus verb classifiers), while the classifier order within the orthography of the verb is
+the reverse, with the prototypical patient classifier [WATER] preceding the action
+classifier [ACTIONS OF MOUTH].
+[10]
+
+swri
+VERB
+
+to drink
+
+‘drinking medication’
+
+CL
+
+[WATER]
+
+CL
+
+[ACTIONS OF MOUTH]
+
+[meronymic]
+
+[taxonomic]
+
+patient
+
+actor/action
+
+water
+
+action of mouth
+
+VERB (ACTION)
+
+CL
+
+pXrt
+
+[POWDER]
+
+CL
+
+[PLURAL]
+
+[taxonomic]
+
+NOUN
+
+[plural]
+
+medication
+
+powder-plural
+
+OBJECT (PATIENT)
+
+The same manner of contrasting word order at the sentence level versus at the verb
+classifier level can also be illustrated through the structure of the whole sentence 11
+“your fowler is bringing fish,” see below. Within the classifier structure of the
+deverbal noun “fowler,” the [patient] classifiers, [BIRD] and [FISH], precede the
+[ACTION OF FORCE] classifier (OV order), while at the syntactic level of the sentence,
+the syntactic object/patient (fish) follows the verb (SVO order).
+
+classifier or the gender-nominalizer marker. Another semantically related word “to catch fish”
+HAm, may take similar classifiers (Faulkner 1962: 163). However, this word employs a different,
+metaphorical, prototype of a non-human agent,
+a bird-“fish catcher.”
+
+Orly Goldwasser & Colette Grinevald
+
+36
+
+[11] ‘your fowler is bringing fish’96
+
+fowler97
+
+Your
+
+on98
+
+(to) bring
+
+fish
+
+[FISH]
+
+CL
+
+pAy.k
+POSS.ART.2SG.M
+
+wHa
+
+[BIRD] CL[FISH] CL[ACTION OF FORCE] Hr
+
+CL
+
+NOUN
+
+[meronymic]
+
+[taxonomic]
+
+(DEVERBAL)
+
+PATIENTS
+
+ACTOR/ACTION
+
+SUBJECT (ACTOR)
+
+PREP
+
+ms.t
+
+[MOVT]
+
+CL
+
+VERB
+
+rmw
+NOUN
+
+[PLURAL]
+
+CL
+
+[taxonomic]
+[plural]
+
+VERB (ACTION)
+
+OBJECT (PATIENT)
+
+3.1.3 A linguistic comparison:
+The processes of “nominal compounding” and “verbal incorporation”
+In the linguistic process of nominal compounding, a noun functions as the head of the
+compound, while another element, in a dependent relationship to the head noun,
+indicates a property of this noun. This process of nominal compounding commonly
+appears in English, for example in the compound nouns “rain boots,” “hair pin,” or
+“leather shoes,” and “plastic cup,” in which the first element, a dependent noun,
+stands in any of a number of possible semantic relations to the second element, the
+head noun. These semantic relationships can be rendered explicit by undoing the compounding, thus revealing either a goal relation in “boots for rain” and “pin to hold
+hair,” or articulating a source (material) as in “shoes made of leather” and “cup made
+of plastic.” Let us consider some examples mentioned above (§4.1.1.[7]; §3.3.2[5a]),
+“widow”-“hair-woman,”
+
+, “wet-nurse”-“breast-woman”
+
+, or “Asiatic”-“boomerang-man”
+as pictorial parallels of this
+nominal compounding process.
+In verbal incorporation, the other linguistic process to be considered, one can also
+observe the combination of a head element and a dependent element, set in a particular order and having specific features. In this instance, the head element is a transitive
+verb and its dependent a patient noun. The phenomenon exists in English, although it
+is restricted to certain constructions, such as agent nominalization and participial
+constructions. Examples of agent nominalization in [12] below show how, in the
+process of verbal incorporation in English, the dependent (incorporated) patient precedes the verb, in contrast to the position of an object [patient] argument that follows
+the verb, in a full sentence:
+
+96 DZA 22.568.340. New Kingdom (Dynasty 19) hieratic text. Original version in the papyrus:
+. Because of the complexity of this example, we have added a
+line of literal translation underneath the hieroglyphs.
+97 In this example there is no classifier (nominalizer) for the actual actor.
+98 This preposition carries the meaning of progressive action.
+
+What are “Determinatives” good for?
+
+[12] transitive clause
+a. they climbed this mountain
+b. they smoked a Cuban cigar
+c. they drive my truck’
+
+vs
+
+37
+
+verbal incorporation
+a’. (they are) mountain climbers
+b’. (they are) cigar smokers
+c’. (they are) truck drivers
+
+As noted already in the case of Egyptian meronymic classifiers, the semantic relation
+between dependent and head in these incorporated constructions can be varied. Consider the various semantic relations in the following English participial constructions,
+patient in (a), instrument in (b), and location in (c):
+[13] a. watching birds
+a’. bird watching
+b. fishing with a fly
+b’. fly fishing
+c. kayaking on a river c’. river kayaking
+
+The two parallelisms between the linguistic processes of nominal compounding and
+verbal incorporation, in both English and Egyptian, are therefore, (1) a similar
+constraint on reversed word order, and (2) non-restricted semantic relations. However,
+another important parallelism exists: the fact that the dependent element must be nonreferential and non-specific. In many languages, these types of constructions are used
+to designate traditional activities, for example the term “reindeer slaughter” in Koryak
+(Siberia).99
+Mithun, in her substantial article on this type of incorporation process, suggests
+that the incorporation occurs because some entity, quality, or activity is recognized
+sufficiently frequently to be considered name-worthy in its own right.100
+In Egyptian, the meronymic classifier appearing to the left of the taxonomic one
+always stands for such an encyclopedic argument, whether in terms of patient, instrument, or location.
+That the patient classifier in verbal incorporation is non-referential is very clear in
+Egyptian sentences, such as the one cited above in [11], in which the co-textual,
+referential information informs us that this certain fowler specifically caught fish.
+Nevertheless, the patient classifiers in the verb form still include the [BIRD]
+classifier as a prototypical encyclopedic (non-referential) patient of the fowling
+action.
+As this process of incorporation is attested in many languages around the world,
+not surprising is its occurrence in Egyptian, even if it is within the graphemic classifier system in this case.
+The patient incorporation in Egyptian classifier constructions persists in the
+presence of the referential patient objects of the verbs being classified, as if the classifier complex served to reveal the hidden complexity of the verb’s meaning. Thus, the
+Egyptian reader gains a forceful “double-level” of information — at a cultural/encyclopedic level via the classifier system, and at a discourse-referential level through the
+sentence construction.
+
+99 Mithun 1984: 856 (non-specific) & 847 (Koryak). Koryak are a Siberian people called “rich in
+reindeer” who came to the Bering Strait region after the Eskimo people.
+100 Mithun 1984: 848.
+
+38
+
+Orly Goldwasser & Colette Grinevald
+
+3.2 Lexicalization in language and pictorial lexicalization in the script
+Lexicalization in language occurs when compounded or incorporated elements lose
+their independence, and form new entities in which the original components may still
+be identified, but where the entirety must be semantically interpreted as referring to a
+new conceptual unit. 101
+In the case of the Egyptian script, one finds a parallel evolution from compounding to complete lexicalization. In the incorporation process illustrated above
+with the example of the verbs “to drink” and “to fowl,” the classifiers have clearly
+remained independent units (§3.1.2). Even if the classifier order is constrained, the
+classifiers themselves are still free components.102 However, one finds cases where a
+verb is written with two hieroglyphs that have become pictorially fused — comprising
+a combination of two lexical103 components that have become inseparable. We use the
+expression ‘pictorial lexicalization’ to refer to this phenomenon. The pictorially
+fused hieroglyphs are prototypical and no longer sensitive to contextual or pragmatic
+considerations.
+For example, cases of pictorial lexicalization104 in the script are
+
+rdi (imi) “to
+
+give” (literally “bread-giving”) and
+ini “to bring” (literally “pot-bringing”). These
+two ideograms can be analyzed as a combination of two elements, the first being the
+non-referential patients — “bread” and “pot” — the second the action itself, which is
+represented by the metonymic prototypical body part of the human agent involved —
+“giving” by the hand and “bringing” by the legs.
+Even if the context of the sentence involves the giving of slaves, the word rdi
+would still be written as “loaf-giving.”105 Likewise, the object “pot” is fixed to
+the verb “to bring,” independent of the context in which the verb is used.106
+
+101 Mithun 1984: 889-890.
+102 These variations are subject to diachronic or regional developments, as well as to idiosyncratic
+scribal choices.
+103 This is to be differentiated from combinations of a lexical (iconic) sign and a sign carrying phonological information, in cases such as
+, , and
+. The combination sign
+does not carry the
+meaning “walking pool,” nor is the pool the patient of the verb. This combined hieroglyph is a
+logogram for the verb Sm “to go.” The pool icon plays the role of signifier for the phonetic signified S.
+104 I am grateful to my former student Omer Shafran for calling my attention to this phenomenon a
+long time ago (O.G.).
+105 See already the sophisticated discussion of Henri Fischer in his article “The Evolution of Composite Hieroglyphs” about the variegated semiotic status of what he calls “Composite Signs,”
+where he also suggests that the different parts of this hieroglyph
+are put together in a
+“meaningful way(…) a hand presents the bilateral sign di (itself a loaf) of the verb ‘give’.”
+106 E.g.
+“A southern live panther brought to her majesty from the
+foreign lands…” written above a picture of a panther-Hatshepsut, 18th Dynasty, see Naville 18941898: 80.
+
+What are “Determinatives” good for?
+
+39
+
+Although both ideograms107 “to give” and “to bring” are pictorially lexicalized
+units presenting a chosen prototypical patient object (bread loaf and pot), some minor
+variations of the patient may occur. For instance, the verb “to give” is also attested
+with a rounded bread loaf
+, or in rare cases even with a nw pot
+.108 As for
+the verb “to bring”, an interesting variant is found in Ptolemaic Egyptian, a period of
+the language during which the revival of old signs and the creation of new ones is in
+vogue. This Ptolemaic variant demonstrates the concept of the reconstruction of the
+whole from the part by depicting the classifier as a whole human body instead of
+merely the legs
+.109
+
+3.3 Grammaticalization as a cause for the loss of classifiers110
+The third process found in the Egyptian classifier system, which is reminiscent of a
+linguistic process known in oral languages, is a standard case of grammaticalization
+— taken here as the process of evolution of lexical items, or content words, into
+grammatical elements or function words.
+The Egyptian script provides an interesting case of such grammaticalization,
+where verbs retain their classifiers when used as content words but lose them once the
+verbs have turned into auxiliaries. Thus, the absence of classifiers signals the verb’s
+new grammatical status. Two such examples are presented here: the verbs ‘to say’
+and ‘to stand.’
+3.3.1 When the verb ‘to say’ becomes a quotative
+‘Quotatives’ are grammatical elements that introduce direct reported speech and
+thought. In oral languages, quotatives have often been observed as grammaticalized
+forms of the verb “to say.”111
+
+107 We use the term logogram when a sign refers directly to a word in the lexicon through its pictorial
+meaning, which in turn refers to a referent in the world — such as
+“dog.” Indeed, due to its
+iconic nature, in many cases logograms offer additional pictorial information with regards to the
+cultural prototype, see, for example, my long discussion “No Ugly Dogs, Please”, in Goldwasser
+2002: 91-110. We call hieroglyphs such as
+meaning “front” or
+which means “strength”
+ideograms. In such cases (which are not very common in the Egyptian system) the script does not
+refer to any referent in the real world, such as “the front part of a lion” or “the head of a panther.”
+In order to reach the correct meaning, the reader must pass through additional cultural-metaphoric
+levels. These types of complex semiotic deliberations are discussed in Goldwasser 1995: 54-79.
+108 Gardiner 31957: 454, D37, D38, D39. It seems that the markedness of the patient in the verb “to
+give” called for the early spelling variation (Gardiner 31957: 533, X8), where the loaf alone
+metonymically represents the verb rdi “to give,” which has three semantic arguments — agent,
+patient, and receiver (for this terminology see Van Valin 2001: 22-33). In the opposite spectrum of
+attested variation, is where the patient is neglected, while the agent of “giving” is represented by
+the extended hand alone, see
+, Gardiner 31957: 454, D36. This last variation is more common
+in hieratic.
+109 See Goldwasser 1995: 21-22.
+110 This topic was first raised by Iddo Diamant (Hebrew University of Jerusalem) in an unpublished
+lecture (On the Interrelationship of Classification and Grammaticalization, Berlin, January 2010)
+given in the framework of the COST.
+111 See Heine and Kuteva 2002: 265-269.
+
+40
+
+Orly Goldwasser & Colette Grinevald
+
+In Egyptian, the most common verb Dd
+“to say” does not take a classifier in
+most cases. Our proposal is that this absence of classifiers is due to the fact that Dd
+has become grammaticalized as a quotative. From the Middle Kingdom onwards,
+Dd
+is very rarely used in contexts where it still carries the full semantic meaning
+of “to say” and exists as an essential part of the described chain of events. In these
+rare cases, where Dd still carries its full semantic load, the verb may take the classifier
+[ACTIONS OF MOUTH], i.e.
+.112
+On the other hand, verbs with similar meanings that keep their full lexical semantics, such as mdw
+“to speak”, also keep their classifier
+in most
+cases.
+3.3.2 When posture verbs are used as auxiliaries
+Another case of the grammaticalization of verbs is when posture verbs, such as ‘to
+stand,’ ‘to sit,’ and ‘to lie,’ become copulas or auxiliaries, and consequently, lose their
+fundamental semantic value.113 Posture verbs are known sources of verbal morphology in many languages of the world. This is the case for copular verbs of basic
+locative constructions in languages where something or someone cannot simply ‘be’
+somewhere, they are obligatorily said to ‘stand’ or ‘sit’ or ‘lie’ somewhere.114 Posture
+verbs are also known sources of tense or aspect markers, such as for instance ‘to
+stand’ being used to indicate the present tense, and ‘to sit’ or ‘to lie’ to indicate the
+progressive. 115
+The following examples illustrate the contrast between posture verbs used as main
+verbs — with full semantic value and use of classifiers — and those used as auxiliaries — hence without classifiers. Example [14] below is taken from a New Kingdom
+version of an old wisdom text that describes the disadvantages of old age. In this case,
+the posture verbs have clearly retained their full semantic value, thus, are accompanied by their respective classifiers.
+
+112 In Coptic, the word ƢĮ is a clear quotative. In Late Egyptian, different variations of the verb already show clear grammaticalized forms, see ýerný & Groll 31984: 164-166. This topic should be
+reseved for a large scale study according to periods, scripts, genres and idiolects. An example of a
+minimal context in a narrow synchronic framwork can be found in a single battle scene on a wall
+in Karnak dated to Seti I. All occurences, but one, of the verb Dd in this battle-scene are quotatives
+or quotes on various levels of grammaticalization. All occurences appears as expected without a
+classifier. In a single phrase Dd still carries its full sematic meaning: whi nb hr tp Dbawt.f Hr Dd
+pHty.f m xAswt wAw “Every run-away from his fingers tells his power to far-away foreign lands.” In
+this single case the verb is written with the classifier –
+, see The Battle Reliefs of King Seti I,
+pl. 3, l. 11.
+113 Winand 2006: 329-332.
+114 The Spanish verb ‘estar’ which, as a general verb of location (as in ‘el nino esta en su cama’ meaning ‘the child is in his bed’) is in fact a grammaticalized verb of posture meaning ‘to stand’. This
+verb of posture has also become grammaticalized in that language as the auxiliary of the progressive aspect (as in ‘esta cantando’ meaning ‘(he) is singing’).
+115 Many cases of the grammaticalization of posture verbs are discussed in Newman 2002.
+
+What are “Determinatives” good for?
+
+[14]
+
+41
+
+‘to stand’
+
+aHa
+
+[painful (is) standing (and) sitting!]116
+
+CL
+
+qsn
+
+[NEGATIVE]
+
+ADJ.VERB
+
+painful
+
+CL
+
+aHa
+
+[MOVEMENT]
+
+VERB
+
+negative
+
+standing
+
+VERB
+
+Hmst
+
+CL
+
+[SIT]
+
+VERB
+
+movement
+
+sitting
+
+sit
+
+SUBJECT
+
+However, from the Middle Kingdom onwards, the verb aHa
+‘to stand’ began to
+be employed as an auxiliary in narrative chains to link sequential events. When this
+verb appears in the auxiliary role its
+[MOVEMENT] classifier tends to be lost117 as
+illustrated in [15] below:
+[15] ‘then he gave,’ from lit. “(he) stood up and he gave”
+
+aHa
+
+n
+
+rdi
+
+to stand (past)
+VERB
+
+(past tense marker)
+
+VERB
+
+n
+
+f
+
+to give (past)
+
+he
+
+(past tense marker)
+
+SUBJECT
+
+The grammaticalization of the verb is also signaled by the absence of a personal pronoun (subject).
+
+3.4 The “gains” of the classifiers system
+As we have seen, classifiers provide the reader with a wide range of encyclopedic and
+pragmatic information, while serving as grammatical “reading aids” by marking roots
+from other elements, as well as by pointing to the ends of words or clauses. On certain
+occasions, they may help the reader track specific referents, sometimes signaling the
+status of a particular referent in a certain place or time.
+In verbs and participles, the classifiers orchestrate patients, actors, and instruments
+— visually bringing to life the “Theater of the Verb” and its array of arguments.
+Conversely, unclassified words signal to the reader a weak level of referentiality,
+or hint at processes of semantic depletion, such as grammaticalization.
+The “grammar of classifiers,” once unveiled, shows that the written Egyptian sentence contains two main levels of information: a syntactic level, and an additional
+116 Žába 1956 : l. 23.
+117 This phenomenon was already discerned by Gardiner. A charming example is cited in Winand
+(2006: 331, ex. 588):
+aHa.n pA-smn aHa Hr gAgA “(…) and
+then the duck stood up cackling” (pWestcar VIII, 23). For a similar process with the negative verb
+tm, see Gardiner 31957: 391-2.
+
+42
+
+Orly Goldwasser & Colette Grinevald
+
+visual, word-based, level. The syntactic level offers the reader the expected referential
+information at the level of discourse, while on the visual word level, classifier information gives priority to general conceptual information about types of entities or
+events and prototypical and non-referential dependent elements of nouns or verbs, in
+various semantic relations such as patient, instrument, location, or other. We have
+argued that, at this level of the word, the combination of classifiers “imitates,” in the
+pictorial, well-known linguistic devices, such as nominal compounding and verbal
+incorporation.
+We argue therefore, that the Egyptian reader was presented with a generous
+amount of information at two levels. At the syntactic level, the information is referential and specific (for instance, that a particular fowler fowled a particular fish at
+some determined time and space) but additionally, at the word level, encyclopedic and
+culture-specific information is packaged within the spelling of the verb and signaled
+by a marked order that is the reverse of the sentence structure word order.
+Thus, the Egyptian written sentence, to be taken as a whole with its classifier
+system, functions as a rich source of different types of information that are instantiated through different media. The phonological and syntactic systems are coded in
+ways also used in all oral languages, but, in addition, the Egyptian writing system has
+a language-specific, strictly visual, classifier system. Both systems convey different
+types of information, in a different order, that complete and compete with each other.
+This complex and rich orchestration of information has become a precious cognitive and social resource in Egyptian culture. This encoded information may hold the
+clue for the reason of the endurance and success of the classifier system, and thus, its
+survival in the Egyptian language for almost 3000 years.
+
+4 What the study of “determinatives”
+brings to the general study of classifiers?
+It is worth reiterating the fact that there is a whole field of studies focused on classification systems in oral and signed languages, from linguistic, anthropological, and
+cognitive points of view. Over the last thirty years numerous descriptions of systems
+from all major continents have appeared, and one of the surprises in studying Egyptian determinatives from the angle of their being a classifier system, is how much they
+do behave similarly to the classifiers of many oral languages. 118 We share this
+position with Frank Kammerzell, who writes in his recent contribution “(…) I daresay
+that there is no way to avoid the use of the term ‘classifier’ lest one should wish to
+isolate Egyptological studies from other, theoretically more advanced disciplines.”119
+However, also worth noting is that the study of the Egyptian classifier system, in
+turn, can potentially provide important contributions to a more comprehensive understanding of the phenomenon of classifiers within general linguistic studies. The study
+118 The original connection between the two coauthors of this article stems from this parallelism —
+Egyptian classifiers studied by Goldwasser strikingly resemble the noun classifiers of Jakaltek
+Popti’, a Mayan language of Central America, studied by Grinevald (see Craig and Grinevald
+publications cited).
+119 Kammerzell forthcoming.
+
+What are “Determinatives” good for?
+
+43
+
+of Egyptian classifiers is, in fact, bound to contribute new information to update the
+current proposals for establishing a typology of such systems.
+
+4.1 Unique characteristics of the Egyptian classifier system
+Egyptian “determinatives” are interesting for several reasons. First, they represent a
+system that incorporates classifiers that are concomitantly applicable to several
+categories of words, in particular to both nouns and verbs, while documented classifier systems of oral languages apply either to nouns or to verbs. Secondly, the Egyptian system is much more complex than other known classifier systems in that it commonly employs multiple classifier constructions that correspond to the syntactic compounding or verb incorporation processes of oral language syntax. Finally, the
+Egyptian written record offers the very rare possibility of following the evolution of
+the system over a very long spell of time.
+4.1.1 A new type of system:
+Classifiers for both nouns and verbs, but also for adverbs etc., all at once
+While most known oral language classifier systems classify either nouns or verbs, the
+most common being systems classifying only nouns, the Egyptian system is striking
+for its ability to classify concomitantly nouns and verbs, and even certain adverbs.
+Of special interest is the
+[MOVEMENT (EVENT)]120 classifier, which is attested
+as early as the very beginning of the 1st Dynasty, and clearly refers to an event
+(“moving”) rather than to an entity of the world.121 Its existence shows that, from the
+earliest stages of the Egyptian language, classifiers have applied to both nouns and
+verb events. This phenomenon is one of the most original and distinctive features of
+the Egyptian system. The reason for this phenomenon may lie in the fact that the
+borders between “verb” and “noun” may have been rather ambiguous in early Egyptian.122
+Furthermore, in addition to nouns and verbs, the system may even classify other
+elements, such as prepositions (discussed above) and, in an even rarer phenomenon
+typologically, adverbs (e.g. dy “here” classified by the
+[PATH] classifier).
+4.1.2 New constructions:
+Multiple-classifier constructions and the “grammar of classifiers”
+The other particularity in the Egyptian classifier system of great interest is the relatively common way sets of two or three classifiers are formed in well-determined
+arrangements, following strict rules of organization, as argued above.
+Egyptian classifiers provide an interesting inside look at certain cognitive
+processes, through the nature of their own grammar. As we have demonstrated, Egyptian classifiers have a grammar of their own that is independent from the grammar of
+spoken Egyptian, while it is reminiscent of the grammar of oral languages from many
+parts of the world.
+120 Goldwasser 2006b. Wierzbicka (1996: 83) sees in [MOVE] a “Semantic Primitive.”
+121 Goldwasser 2006b: 478-479, King Aha.
+122 Goldwasser 2006b: 473.
+
+44
+
+Orly Goldwasser & Colette Grinevald
+
+These phenomena are accounted for in the common linguistic processes of oral
+languages although they are not known to be part of the classifier systems in those
+languages.
+4.1.3 La longue durée — 3,000 years of a classification system
+Classifier systems that most resembles the Egyptian system are noun or verb classifier
+systems, not the better known numeral classifier systems used in Asia. Both noun and
+verb classifier systems have been identified in languages from America and Australia
+in recent decades, as the field of classifier studies has developed. Considering that
+working on indigenous languages of America and Australia today means working on
+languages that are purely oral in tradition, researchers have to “meet” the language in
+a synchronic state, by and large without having access to historical evidence (which
+either does not exist or is not identified), or even information on sister languages that
+would permit comparative reconstruction.123 Therefore, actual data for elaborating an
+overall view of the lifespan of the system — birth, development and decay — is
+limited. The Egyptian system, on the other hand, can provide us with an extremely
+rare overview of a classifier system in use for almost three thousand years, spanning
+all phases of its evolution, from its birth, through its development, to its demise and
+final death.
+Classifiers can be found in all script variations of hieroglyphs — pictorial hieroglyphs, cursive hieroglyphs, lapidary hieratic and hieratic scripts. We witness their
+birth in the 1st Dynasty, and their continuation in Demotic and in Ptolemaic. The first
+clearly attested examples of “determinatives” to emerge are mostly gender markers
+[MALE] and
+[FEMALE] with a few instances of
+[DOG] and
+[SOLDIER].124 Indeed, human classifiers are the most common classifiers in oral classifier systems,125 and their emergence as the first classifiers on the script stage so early
+is unsurprising.
+Egyptian classifiers constituted a highly productive, growing system. One of the
+signs of this productivity is the fact that new lexemes were semantically analyzed and
+provided with adequate classifiers as they entered the written lexicon, for instance the
+horse. Through its lifespan, the system exhibited many new structural developments,
+such as a strong tendency to create fixed combinations of classifiers, as well as a
+marked development of “default” classifiers that were depleted of semantic value.126
+These developments, therefore, shed new light on the processes of growth and decay
+of such systems, including classifier systems of oral languages that lack ancient evidence.
+
+123 Although see Craig (1990: 253-268), for the demonstration, on the basis of Mayan comparative
+data, noun classifiers in Jakeltek Popti’ are characteristic of only the Q’anjob’alan branch of the
+family, and an innovation of that branch, and therefore, must have appeared only several hundred
+years before colonization.
+124 See Petrie 1902: pl. XXXI-XXXII. A soldier classifier (Petrie 1902: pl. XXXII, 29). A few dwarfs
+can be identified on tablets, e.g. Petrie 1902: pl. XV, 16,17. See also Regulski 2010: 87, 94.
+125 Aikhenvald 2003: 402.
+126 Allon 2010.
+
+What are “Determinatives” good for?
+
+45
+
+Final remark
+Finally, we would like to remind our patient reader, that this study is no more than a
+brief overview of the questions raised. Every section of this article could be developped into a book of its own. We trust that further studies will lead to insights into
+the collective mind of the ancient Egyptian civilization, as well as shed new light on
+universal cognitive phenomena and their reflection in linguistic phenomena.
+
+46
+
+Orly Goldwasser & Colette Grinevald
+
+Appendix: Basics on Classifier Systems – by Colette Grinevald
+1
+
+Classifiers as morphosyntactic systems with a semantic profile
+
+Classifiers constitute overt systems of categorization of clear lexical origin used in
+specific morphosyntactic constructions. The first systems to be studied were classification systems of nouns,127 but more recent studies have also revealed the existence of
+verb classification systems. 128 It is worth noting that no classifier system of oral
+languages is attested to be classifying at once both nouns and verbs, as the Egyptian
+system does.
+Classification systems of nouns consist of various types, of which “classifier”
+systems per se are simply one major type. European languages have no “classifier”
+systems per se, but various types of such classification systems: some operate within
+the lexicon (such as berry in blueberry, blackberry, boysenberry, etc.), while others
+are the familiar morphosyntactic genders systems (with two or three genders:
+M,F,(N)). There are also other types of noun classification systems, such as the ‘noun
+class systems’ of African Bantu languages, which usually involve more classes, but
+similar extensive agreement patterns. More recently, other noun class systems have
+also been identified in Amazonian languages.129
+1.1
+
+Different types of nominal classifier systems
+based on morphosyntactic principles
+
+Nominal Classifier systems function via the application of an extra word or
+morpheme — a classifier — which is linked to a noun and appears crucially only
+once, this being the feature that most distinguishes this system from gender or noun
+class systems (involved in extensive patterns of agreement). The location of the classifier determines the different sub-types of classifier systems: for instance “numeral
+classifiers” appear only with numerals, while “noun classifiers” are directly attached
+onto nouns.
+1.2
+
+Semantic profiles of the classifier systems of nouns
+
+As argued by Grinevald,130 the different subtypes of noun classifier system have particular semantic profiles, along different semantic parameters, as illustrated below:
+a. numeral classifiers = physical categories
+two-[ROUND] oranges; three-[LONG RIGID] pencils
+b. genitive classifiers = functional categories
+his-[DRINKABLE] potion; their-[TRANSPORT] canoe
+c. noun classifiers = material/essence categories
+an [ANIMAL] deer, the [ROCK] cave, [MAN] John
+d. verbal classifiers = several types of profiles possible
+I-[LONG RIGID]-put the knife on the table (physical category)
+you-[DOMESTIC PET]-have a dog (functional category)
+he-[POTATO]-ate a rotten potato (material category)
+127 Craig 1986a; Senft 2000; Aikhenvald 2003.
+128 McGregor 2002.
+129 Grinevald & Seifart 2004: 243-285.
+130 Grinevald 2000: 72.
+
+What are “Determinatives” good for?
+
+47
+
+In all of the above cases, whether the classifier appears with a numeral (a), in a
+possessive construction (b), or on a noun (c) or a verb (d), it is important to note that
+the classifier always classifies a noun. Hence, our use of the blanket terms “nominal
+classifier systems”131 or “noun classifier systems”132 for all subtypes.
+The different classifier system subtypes originally documented in the linguistic
+literature are evidenced in languages around the world. The better known “numeral
+classifiers” are found in Asian languages, while “possessive classifiers” are first
+described in Pacific languages. “Noun classifiers” (as in c above), which are
+interesting here because of their close resemblance to parts of the Egyptian system,
+were identified very recently and remain a rare type, mostly known from native
+American133 and Australian languages.134
+1.3
+
+A more recently described type: The classifier systems of verbs
+
+Linguistic studies of classifiers have only recently revealed the existence of yet
+another type of classifiers, named verb classifiers. Contrary to verbal classifiers, verb
+classifiers do not classify nominal arguments of the verb but the verbs themselves,
+with corresponding semantics (action, locution, movement, being or existing, etc.)
+incorporated. The main regions of the world in which these classifiers have been
+identified so far are Australia and parts of America. The contrast between verbal (a)
+and verb classifiers (b) is outlined below. In example (a) the classifier, even if
+attached to the verb, refers to the knife, while in (b) the classifier categorizes the verb
+itself.
+a. verbal CL (classifier of patient object)
+I [LONG RIGID]-put a knife on the table
+b. VERB CL (classifier of verb semantics)
+put-[DO] a knife on the table!
+you shout-[SAY] to me
+
+1.4
+
+The Egyptian system: A different system of classifiers yet again
+
+The Egyptian system represents a system not described as yet, since it combines in
+one system both noun and verb classifier systems, which it resembles by their respective semantics and morphosyntax. In addition, the Egyptian system also applies to
+other word categories, such as adverbs and adpositions, which are not known to be
+part of any other attested classifier systems in the world.
+
+131 Grinevald 2000.
+132 Aikhenvald 2003.
+133 Craig 1986a & 1986b.
+134 Sands 1995.
+
+Orly Goldwasser & Colette Grinevald
+
+48
+
+2
+
+Principles of classification: Different levels of categorization
+
+Classifiers are also studied in terms of the different categorizing relations they hold
+with the elements they classify. Several levels and types of relationships have been
+identified across the classifier systems of the world.135
+2.1
+
+Levels of categorization
+
+While most classifiers head classes contain any number of items in a taxonomic relation to them, others define larger or smaller classes, of more or fewer items. The
+following labels have been given in the literature to classifiers in order to define the
+scope of classification:
+unique (c) << specific (b) << general (a) >> default (d)
+[a] a general classifier categorizes at the taxonomic level, and includes any number
+of items, for example, a general classifier for animals or plants can classify any
+animal — or plant — related terms (and plant matter objects), while
+[b] a specific classifier defines a smaller class, for instance, a particular class of
+plants and their derived products.
+[c] a unique classifier, on the other hand, heads a class of just one item, such as one
+special animal (for example, the elephant or the tiger in some South Asian classifier
+systems, or the locust in the Egyptian script).
+[d] a default classifier, at the other extreme, is a classifier with no particular semantic
+classifying value, but can replace other classifiers under certain circumstances. A default classifier could be translated as a “thing” (or in French “un truc, un machin,” or
+even a “whatchamacallit” in colloquial American English). This classifier is derived
+from a more specific one, for example, the default classifier in Chinese comes from
+the specific classifier for bamboo).136
+
+2.2
+
+Special types of classifiers (1): The case of repeaters
+
+It is common in the classifier systems of oral languages for some of the classifiers to
+be similar to some nouns in that language. In this case, the classifiers are called
+“repeater classifiers,” as first defined by Allan. 137 The repeater in its function as
+classifier usually shows signs of grammaticalization, such as the loss of stress,
+semantics, or the shortening of form, since the repeater can function as a general or
+specific classifier. Below are Jakaltek examples of repeater classifiers, some are still
+in full noun form (a, a’), while others show shortening by either (b) the loss of a
+syllable or (b’) the loss of the last glottal stop (marked ’):
+a
+
+CL
+ix
+[ADULT FEMALE]
+
+N
+ix
+woman
+
+a’
+
+CL
+N
+ch’en
+ch’en
+[ROCK/METAL/GLASS] rock
+
+b
+
+CL
+naj
+[ADULT MALE]
+
+N
+winaj
+man
+
+b’
+
+CL
+te
+[PLANT/WOOD]
+
+135 Grinevald 2004.
+136 Kammerzell recently identified the “papyrus roll”
+script, see Kammerzell forthcoming.
+137 Allan 1977.
+
+N
+te’
+tree
+
+as a [DEFAULT] classifier in the Egyptian
+
+What are “Determinatives” good for?
+
+2.3
+
+49
+
+Special types of classifiers (2): The case of “phonetic classifiers”
+
+Some languages have been shown to possess “phonetic classifiers”, i.e. classifying
+elements that have no semantic content in that they simply repeat part of the sound
+material of the word they classify (if they repeated the whole word they would be
+“repeaters” and would have semantic content).
+One such language with phonetic classifiers is the Movima of Bolivia, discussed
+by Grinevald.138 In the Movima system, the majority of the nouns are classified by
+mechanically reproducing the last syllable of native nouns, (as in a-a’). Interestingly,
+this language is sensitive to loanwords, for which the classifying element is always
+two syllables long (as in b-b’), by either repeating the last two syllables of the loanword (for camisa ‘shirt’) or by reduplication of the last syllables of disyllabic words
+(for mesa ‘table’):
+Nb-CL Noun
+Native words:
+a. oy-d’o chad’o ‘2 plates’ a’ oy-pi sukapi ‘2 belts’
+Borrowed words: b. oy-misa kamisa ‘2 shirts’ b’ oy-sasa mesa ‘2 tables’
+
+3
+
+About the Jakaltek (Mayan) system of noun classifiers
+
+The classifier system of Jakaltek Popti’, a Mayan language of Guatemala, has been
+argued repeatedly by Grinevald (Craig)139 to be a typologically rare system, distinct
+from the better known numeral classifier systems. She referred to this system as a
+“noun classifier system” on the basis of its use with bare nouns (independent of
+quantification or possession).
+As demonstrated by Craig,140 the Jakaltek Popti’ language offers an interesting insight into the Jakaltek culture of centuries past. There are many parallels between this
+Amerindian system and the Egyptian system of classification, and in what follows,
+their shared basic principles of categorization will be discussed.
+3.1
+
+Principles of classification
+
+The semantic profile of the Jakaltek Popti’ system corresponds to categorization by
+the material or essence of the element being classified. Interestingly, the traditional
+system described in the 1970s did not classify items of unknown origins (such as
+Coca Cola, beer, and plastic items).
+3.2
+
+Levels of categorization
+
+All the levels of categorization mentioned above are found in the Jakaltek system, as
+shown by the sampling of classifiers given below (with a sampling of the 24 classifiers of the system):
+General classifiers:
+ANIMAL: – cats (but not dogs; see uniques below!), horses, cows, pigs, snakes,
+birds, flies, etc.
+– items made of animal matter: meat, eggs, milk,
+138 Grinevald 2002.
+139 See Craig 1986b & 1987; Grinevald 2000 in particular.
+140 Craig 1986b.
+
+50
+
+Orly Goldwasser & Colette Grinevald
+
+– and manufactured items: leather sandals141, woollen blankets
+PLANT:
+
+– all kinds of trees and plants, but not corn! (see specific below)
+– also: drinks of plant matter like coffee or herbal medicinal infusions
+– and manufactured items: houses, furniture, spoons, books
+
+ROCK:
+
+– rock, cave
+– items made of rock, like grinding stones
+– by extension: all items made of glass, such as bottles, glasses,
+and of metal, such as knives, guns, metal dishware, cars, airplanes, etc.
+
+Specific classifier:
+CORN
+
+– (distinct from general plant) for corn plants of differents species and
+stages of growth
+– foods and drinks made of corn (tortillas, tamales, atole, etc.)
+
+The following are illustrations of the special cases of repeaters in Jakaltek (a phonological characteristic) and uniques (a categorization characteristic), demonstrating that
+these are different concepts and that all logical combinations of the two can be found
+in the Jakaltek language. See below repeaters that are also unique (a, a’), uniques that
+are not repeaters (b) and repeaters that are not unique (c, c’, c’’):
+Repeater / Unique CL
+a. +
++
+atz’am
+salt
+a’ +
++
+q’a’
+fire
+b. +
+metx’
+dog
+c. +
+ix
+woman
+ix
+woman
+ix
+woman
+c’ +
+ha
+water
+ha
+water
+ha
+water
+c’’ +
+te
+plant142
+
+N
+atz’am
+salt
+q’aq’
+fire
+tx’i’
+dog
+ix
+woman
+malin
+Mary
+q’opoj
+girl
+ha’
+water
+nhab’
+rain
+pam
+lake
+te’
+tree
+
+‘(the) salt’
+‘the/a fire’
+‘the/a dog’
+‘the/a woman’
+‘Mary’
+‘the/a girl’ , etc….
+‘the water’
+‘the rain’
+‘the/a lake’
+‘the/a tree’
+
+141 This category closely parallels in the Egyptian system the classifier [HIDE &TAIL] which classifies two clusters: 1. [“MADE OF HIDE”] and 2. [QUADRUPED]. This category defined by the slowly
+extends to include birds, reptiles, and even fish, thus functioning more as the category for
+[ANIMAL]. However, this category is a covert category in the Egyptian world organization, as there
+is not a single word in the Egyptian lexicon that embraces the concept [ANIMAL]. For a detailed
+discussion, see Goldwasser 2002: 57-89.
+
+What are “Determinatives” good for?
+
+te
+plant
+te
+plant
+te’
+plant
+
+51
+
+nhah
+house
+‘the house’
+hum
+paper/book ‘the/a piece of paper, book’
+kape
+coffee
+‘coffee (plant or drink) etc…
+
+Bibliography
+Aikhenvald, Alexandra Y. 2003. Classifiers: A Typology of Noun Categorization Devices, Oxford
+Oxford University Press.
+Allan, Keith. 1977. Classifiers, in: Language 53, 285-311.
+Allen, James P. 2000. Middle Egyptian: An Introduction to the Language and Culture of Hieroglyphs,
+Cambridge & New York, Cambridge University Press.
+Allon, Niv. 2007. Seth is Baal — Evidence from the Egyptian Script, in: Ägypten und Levante 17, 1522.
+––––. 2010. At the Outskirts of a System: Classifiers and Word Dividers in Foreign Phrases and Texts,
+in: Lingua Aegyptia 18, 9-14.
+Blackman, Aylward Manly. 1932. Middle-Egyptian Stories, Bibliotheca Aegyptiaca 2, Bruxelles,
+Fondation Égyptologique Reine Élisabeth.
+Brein, Georg. 2009. Root Incompatibilities in the Pyramid Texts, in: Lingua Aegyptia 17, 1-8.
+Champollion, Jean Francois. 1836. Principes généraux de l'écriture sacrée égyptienne, Paris, institut
+d’Orient/Michel Sidhom.
+ýerný, Jaroslav & Sarah Israelit Groll. 1984. A Late Egyptian Grammar, 3 ed., Rome, Biblical Institute
+Press.
+Craig, Colette (ed.). 1986a. Noun Classes and Categorization. Proceedings of a Symposium on
+Categorization and Noun Classification, Eugene, Oregon, October 1983, Typological studies in
+language, Amsterdam & Philadelphia, John Benjamins.
+––––. 1986b, Jacaltec Noun Classifiers: A Study in Language and Culture, in: Colette Craig (1986a).
+––––. 1987. Jacaltec Noun Classifiers: A Study in Grammaticalization, in: Lingua 71, 241-284.
+––––. 1990. Los clasificadores de nombre en Jacalteco: una innovación k’anjobalana, in: Nora England
+& Stephen R. Elliott (eds.), Lecturas sobre la lingüística maya, Antigua (Guatemala), CIRMA,
+253-268.
+Croft, William. 1994. Semantic Universals in Classifier Systems, in: Word 45, 145-171.
+David, Arlette. 2000. De l'infériorité à la perturbation : l'oiseau du « mal » et la catégorisation en
+Égypte ancienne, Göttinger Orientforschungen IV/38, Classi¿cation and Categorization in Ancient
+Egypt 1, Wiesbaden, Harrassowitz.
+Davies, Norman de Garis & Seymour de Ricci. 1908. The Rock Tombs of El Amarna: Tombs of
+Parennefer, Tutu, and Aÿ, London, Egypt Exploration Society.
+Denny, J. Peter. 1976. What are Noun Classifiers Good for?, in: Proceedings of the 12th Regional
+Meeting of the Chicago Linguistic Society, 453-471.
+––––. 1986. The Semantic Role of Noun Classifiers, in: Colette Craig 1986a, 297-308.
+Dixon, Robert M. W. & Alexandra Y. Aikhenvald (eds.). 2006. Adjective Classes: A Cross-Linguistic
+Typology, Oxford, Oxford University Press.
+DZA = Digitales Zettelarchiv der Arbeitsstelle Altägyptisches Wörterbuch an der BerlinBrandenburgischen Akademie der Wissenschaften. http://aaew.bbaw.de/tla/servlet/TlaLogin.
+Faulkner, Raymond O. 1962. A Concise Dictionary of Middle Egyptian, Oxford, Griffith Institute.
+Gardiner, Alan Henderson. 1957. Egyptian Grammar, Being an Introduction to the Study of Hieroglyphs, 3rd rev. ed., Oxford.
+
+142 This classifier already has a more general meaning than its source noun; while the noun te’ means
+tree, the classifier te refers to all types of plant matter, and object made of wood. For a similar
+development in the Egyptian classifier system, see Goldwasser 2002: 39-41.
+
+52
+
+Orly Goldwasser & Colette Grinevald
+
+Givón, Talmy. 2001. Syntax: An Introduction 1, Amsterdam & Philadephia, John Benjamins
+Publishing Company.
+Goldwasser, Orly. 1995. From Icon to Metaphor: Studies in the Semiotics of the Hieroglyphs, Orbis
+Biblicus et Orientalis 142, Fribourg, 103-106.
+––––. 1999. The Determinative System as a Mirror of World Organization, in: Göttinger Miszellen 170,
+49-68.
+––––. 2002. Prophets, Lovers and Giraffes: Wor(l)d Classification in Ancient Egypt, Göttinger
+Orientforschungen IV/38, Classi¿cation and Categorization in Ancient Egypt 3, Wiesbaden,
+Harrassowitz.
+––––. 2005. Where is Metaphor?: Conceptual Metaphor and Alternative Classification in the
+Hieroglyphic Script, in: Metaphor and Symbol 20/2, 95-113.
+––––. 2006a. A Comparison Between Classifier Languages and Classifier Script: the Case of Ancient
+Egyptian, in: Gideon Goldenberg & Ariel Shisha-Halevy (eds.), A Festschrift for Hans Jakob
+Polotsky, Jerusalem, Magnes Press,16-39.
+––––. 2006b. On a New Definition of Classifier Languages and Classifier Scripts, in: Lingua Aegyptia
+14, 473-484.
+––––. 2006c. The Essence of Amarna Monotheism, in: Gerald Moers et al. (eds.), jn.t Dr.w Festschrift
+für Friedrich Junge, Göttingen, Seminar für Ägyptologie und Koptologie, 267-279.
+––––. 2009. La force de l’icône – le ‘signifié élu’, in: Nathalie Beaux, Bernard Pottier & Nicolas
+Grimal (eds.), Image et conception du monde dans les écritures figuratives. Actes du colloque
+Collège de France – Académie des Inscriptions et Belles-Lettres, AIBL-Soleb, 336-354.
+––––. 2010. The Aten is the ‘Energy of Light’: New Evidence from the Script, in: JARCE 46, 159-164.
+––––. 2011. The Dream of Haremhab — Evidence from the Script (Presented at the conference: A
+Symposium and a Lecture on Haremhab: General and King of Egypt, New-York, The
+Metropolitan Museum of Art, May 5-6 2011).
+––––. 2012. The Advantage of Cultural Periphery: The Invention of the Alphabet in Sinai ca. 1850
+B.C.E., in: Rakefet Sela-Sheffy & Gideon Toury (eds.), Culture Contacts and the Making of
+Cultures: Papers in Homage to Itamar Even-Zohar, Tel-Aviv, Tel Aviv University – Unit of
+Culture Research.
+Grinevald, Colette. 2000. A Morphosyntactic Typology of Classifiers, in: Gunter Senft (ed.), Systems
+of Nominal Classification, Cambridge, Cambridge University Press, 50-92.
+––––. 2002. Nominal Classification in Movima, in: Mily Crevels et al. (eds.), Current studies on South
+American indian languages: Selected papers from the 50th International Congress of Americanists
+in Warsaw and the Spinoza Workshop on Amerindian Languages in Leiden (Indigenous languages
+of Latin America [ILLA]), Leiden, Research School of Asian, African, and Amerindian Studies,
+216-239.
+––––. 2004. Classifiers, in: Geert Booij et al. (eds.), Morphology: An International Handbook on
+Inflection and Word-Formation, article 97.
+––––. A Fieldwork Squib, in: Jorge Hankamer WebFest, http://ling.ucsc.edu/Jorge/ grinevald.html.
+Grinevald, Colette & Frank Seifart. 2004. Noun Classes in African and Amazonian Languages, in:
+Linguistic Typology 8, 243-285.
+Haspelmath, Martin. 2010. Comparative Concepts and descriptive categories in Cross-Linguistic
+Studies, in: Language 86/3: forthcoming.
+Heine, Bernd & Tania Kuteva. 2002. World Lexicon of Grammaticalization, Cambridge, Cambridge
+University Press.
+Kammerzell, Frank. 1995. Zur Umschreibung und Lautung, in: Rainer Hannig, Großes Handwörterbuch Ägyptisch-Deutsch (2800-950 v. Chr.), Kulturgeschichte der antiken Welt 64, Mainz: von
+Zabern, XXIII-LIX (2., unveränderte Auflage 1997).
+––––. 2005. Old Egyptian and Pre-Old Egyptian: Tracing linguistic diversity in Archaic Egypt and the
+creation of the Egyptian language, in: Stephan J. Seidlmayer (ed.), Texte und Denkmäler des
+ägyptischen Alten Reiches, Thesaurus Linguae Aegyptiae 3, Berlin: Achet, 165-247.
+––––. Forthcoming. Egyptian Verb Classifiers, Panagiotis Kousoulis & Nikolaos Lazaridis (eds.),
+Proceedings of the Tenth International Congress of Egyptologists. University of the Aegean,
+Rhodes, 22-29 May 2008, Orientalia Lovaniensia Analecta, Leuven: Peeters.
+Lakoff, George & Mark Johnson. 1980. Metaphors We Live by, Chicago & London, University of
+Chicago Press.
+
+What are “Determinatives” good for?
+
+53
+
+Lincke, Eliese-Sophia. 2011. Die Prinzipien der Klassifizierung im Altägyptischen, Göttinger Orientforschungen IV/38, Classi¿cation and Categorization in Ancient Egypt 6, Wiesbaden, Harrasowitz.
+Luiselli, Maria, M. 2004. Der Amun-Re Hymnus des P. Boulaq 17 (P. Kairo 58038), Wiesbaden,
+Harrasowitz.
+McGregor, William B. 2002. Verb Classification in Australian Languages, Berlin, Mouton de Gruyter.
+Mithun, Marianne. 1984. The Evolution of Noun Incorporation, in: Language 60/4, 847-894.
+Naville, Edouard. 1894-1898. The Temple of Deir el Bahari IV, London, Egypt Exploration Fund.
+Newman, John (ed.). 2002. The Linguistics of Sitting, Standing, and Lying, Studies in Typological
+Linguistics 51, Amsterdam & Philadelphia, John Benjamins.
+Parkinson, Richard B. 1991. The Tale of the Eloquent Peasant, Oxford, Griffith Institute.
+Petrie, William Matthew Flinders. 1902. Abydos, London, Egypt Exploration Fund.
+Peust, Carsten. 1999. Egyptian phonology. An introduction to the phonology of a dead language,
+Monographien zur Ägyptischen Sprache 2, Göttingen: Peust & Gutschmidt Verlag.
+––––. 2008. Adjektiv und Adjektivverb im Mittelägyptischen, in: Carsten Peust (ed.), Miscellanea in
+honorem Wolfhart Westendorf, Göttinger Miszellen, Beihefte 3, Göttingen, 58-82.
+Polis, Stéphane. 2012. Linguistic Variation in Ancient Egyptian: Genres and registers in the scribal
+repertoire of Amennakhte son of Ipuy during the 20th Dynasty, in: Jeniffer Cromwell and Eitan
+Grossman (eds.), Beyond Free Variation. Scribal Repertoires from Old Kingdom to Early Islamic
+Egypt, Oxford, Oxford University Press.
+Rappaport Hovav, Malka, Edit Doron & Ivy Sichel (eds.). 2010. Lexical Semantics, Syntax, and Event
+Structure, Oxford, Oxford University Press.
+Regulski, Ilona. 2010. A Palaeographic Study of Early Writing in Egypt, Peeters, Leuven.
+Reintges, Christoph Hanns. 1994. Egyptian Root-and-Pattern Morphology, in: Lingua Aegyptia 4, 213244.
+Roehrig, Catharine H., Renée Dreyfus & Cathleen A. Keller (eds.). 2005. Hatshepsut: from Queen to
+Pharaoh, New-York, The Metropolitan Museum of Art.
+Rude, Noel. 1986. Graphemic Classifiers in Egyptian Hieroglyphics and Mesopotamian Cuneiform, in:
+Colette Craig (ed.), Noun Classes and Categorization: Proceedings of a Symposium on
+Categorization and Noun Classification, Amsterdam & Philadelphia, John Benjamins Publishing
+Company, 133-138.
+Sands, Kristina. 1995. Nominal classification in Australia, in: Anthropological Linguistics 37, 247-346.
+Schenkel, Wolfgang. 1990. Einführung in die altägyptische Sprachwissenschaft, Darmstadt, Wissenschaftliche Buchgesellschaft.
+Senft, Gunter. 2000. What Do We Really Know about Nominal Classification Systems?, in: Gunter
+Senft (ed.), Systems of Nominal Classification, Cambridge, Cambridge University Press, 11-49.
+Shalomi-Hen, Racheli. 2006. The Writing of Gods. The Evolution of Divine Classi¿ers in the Old Kingdom, Göttinger Orientforschungen IV/38, Classi¿cation and Categorization in Ancient Egypt 2,
+Wiesbaden, Harrassowitz.
+Siewierska, Anna. 2004. Person, Cambridge, Cambridge University Press.
+Stauder, Andréas. 2010. The Earliest Egyptian Writing, in: Christopher Woods (ed.), Visible Language,
+The Invention of Writing, Chicago, Oriental Institute, 137-148.
+Urk. = Kurt Sethe (1906-1933), Urkunden der 18. Dynastie, Leipzig, J.C. Hinrichs.
+Van Valin, Robert D. 2001. An Introduction to Syntax, Cambridge, Cambridge University Press.
+Vernus, Pascal. 1983. Écriture du rêve et écriture hiéroglyphique, in: Littoral 7/8, 27-32.
+––––. 2003. Idéogramme et phonogramme à l’épreuve de la figurativité: les intermittences de
+l’homophonie, in: Lucia Morra & Carla Bazzanella (eds.), Philosophers and Hieroglyphs, Torino,
+Rosenberg & Sellier, 205-212.
+––––. 2009. Le préformant n et la détransitivité. Formation nC1C2C1C2 versus C1C2C1C2. À propos
+de la racine ¥gm « notion de trituration »,in: Lingua Aegyptia 17, 291-317.
+Wierzbicka, Anna. 1996. Semantics: Primes and Universals, Oxford, Oxford University Press.
+Winand, Jean. 2006. Temps et aspect en égyptien: une approche sémantique, Probleme der Ägyptologie 25, Leiden, Brill.
+Žába, ZbynČk. 1956. Les maximes de Ptahhotep, texte, traduction et commentaires, Prague, Academie
+Tchécoslovaque des Sciences.
+Ziffer, Irit. 1990. At that Time the Canaanites Were in the Land: Daily Life in Canaan in the Middle
+Bronze Age 2, 2000-1550 BCE, Tel-Aviv, Eretz Israel Museum.
+
+
