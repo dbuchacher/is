@@ -201,14 +201,16 @@ same lattice point — the noun is the static residue of the verb.
 
 [0,+1,+1,+1]  DOG, CAT, BABY, CHILD, MAN, WOMAN, PERSON, PEOPLE,
               FRIEND, FAMILY, MEMBER, USER, CUSTOMER, STUDENT, TEACHER,
-              AUTHOR, AUTHOR, DIRECTOR, MANAGER, PRESIDENT, MICHAEL,
-              JAMES, JOHN, PAUL, DAVID, MARK, GIRL, BOY, KID, TEEN,
+              AUTHOR, DIRECTOR, MANAGER, GIRL, BOY, KID, TEEN,
               ANIMAL, PLANT, TREE-as-living, FLOWER, FIRE, HEART,
               TEAM, GROUP-as-living, SOCIETY, COMMUNITY, ASSOCIATION,
               CLUB, COMPANY, INDUSTRY, NATION, COUNTRY, STATE, CITY,
               TOWN, VILLAGE, GOVERNMENT
   reasoning: substance + positive signal (loved/charged) + alive
   (forward-time persistence). Living substance.
+  CORRECTED: removed proper names (PRESIDENT, MICHAEL, JAMES, JOHN,
+  PAUL, DAVID, MARK) — they're pointers to specific containers,
+  not coords. Also removed duplicate AUTHOR.
   noun-verb collision: LIVE lives here too — animate nouns inherit
   LIFE's coord. DOG = FIRE = HEART = LIFE = LIVE, exactly as the
   framework predicts.
@@ -222,9 +224,13 @@ same lattice point — the noun is the static residue of the verb.
   reasoning: substance up + just-begun in time
   noun-verb collision: ENTER + BUILD overlap
 
-[0,+1,-1,+1]  PUBLICATION, RELEASE, GIFT-given, OFFERING, DELIVERY
-  reasoning: substance + signal-loss + time-forward = giving event
-  noun-verb collision: GIVE family (cf. GIVE = [0,-1,+1,+1])
+[0,-1,+1,+1]  PUBLICATION, RELEASE, GIFT, OFFERING, DELIVERY, DONATION
+  reasoning: substance LOST (you no longer have it) + signal gained
+              (reputation/credit) + time forward = the GIVER's residue
+  noun-verb collision: GIVE [0,-1,+1,+1] — CORRECTED from [0,+1,-1,+1]
+              which was the receiver's frame, not the giver's. The
+              "noun is the static residue of the verb" rule applies
+              from the verb's subject's frame.
 
 [0,+1,-1,-1]  ACQUISITION, GRAB, HAUL, TAKE (the noun)
   reasoning: substance gained + signal lost + time-back
