@@ -6,12 +6,55 @@ This is the third of the Big 3. The substrate axiom that says
 "there are exactly four independent directions, and no more
 will ever exist."
 
-  WHERE   space    position on the ring
-  WHAT    matter   what's in the slot
-  WHICH   signal   selection pressure, charge
-  WHEN    time     cursor advances
+  axis  question  declarative  what it carries
+  ────  ────────  ───────────  ─────────────────────────────────
+  A     WHERE     POSITION     space, displacement, geometry
+  B     WHAT      SUBSTANCE    matter, mass, content, body
+  C     WHICH     SIGNAL       selection pressure, charge, fortune
+  D     WHEN      TIME         cursor advance, sequence, direction
 
 Four dimensions. Four forces. Four anything that has structure.
+
+Both the question-word names (WHERE/WHAT/WHICH/WHEN) and the
+declarative names (POSITION/SUBSTANCE/SIGNAL/TIME) refer to the
+same 4 axes. The interrogatives are how you'd ASK about the axis;
+the declaratives are what the axis IS. Use whichever is clearer
+in context.
+
+## Current framing (read this first)
+
+The 4 axes from this file are the 4 spins in the live verb-mapping
+work (`wit/codex/lattice.md`). They haven't changed structurally —
+only the labeling and the verb-derivation approach.
+
+  4 axes  ×  2 directions (±1)  =  **8 atoms** = the foundation
+
+The 8 atoms are pure single-axis verb pairs (RISE/FALL on A,
+GROW/SHRINK on B, BLESS/CURSE on C, BEGIN/END on D). Every
+composite verb decomposes from these 8 atoms via a 4-question
+derivation rule. See lattice.md for details.
+
+  4 axes  →  8 atoms  →  64 has-zero compositions  →  16 corner bonds
+                          (dyads + triads)             (operators)
+
+The corner bonds (16 of them) carry **±½ polarity** — affirmative
+vs negative form of an operator. CAN/CAN'T, WILL/WON'T, IS/ISN'T.
+The contraction `n't` is the polarity NOT operator. **16 corners
+× ±½ = 32 bonds total.**
+
+The 4 forces this file describes (READ/CALL/CYCLE/TEST) are the
+**axis-level spins** — the dynamic transitions between integer
+states on each axis. They live "at the half step" between trit
+values. The corner-level ±½ polarity is a different scale of spin
+(operator polarity, not value transition). Both are real; both
+relate to the NOT gate from 1-container.md.
+
+The **container** layer (origin [0,0,0,0]) holds verbs of
+subjectivity — THINK, KNOW, BE, FEEL, SEE, HEAR, EXIST, SLEEP,
+SAY. These don't move any of the 4 axes because they happen
+INSIDE the observer. The container IS the observer; the 4 axes
+are what the observer sees. From inside the container, the
+origin is the viewpoint from which the lattice is read.
 
 
 ## Why Four — Hurwitz (1898) PROVEN

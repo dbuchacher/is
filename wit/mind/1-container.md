@@ -9,6 +9,48 @@ This is the first of the Big 3. The substrate axiom that says
    0   neutrino   NOT   nothing       crossing    null
   +1   positron   OR    creation      forward     fiat
 
+## Current framing (read this first)
+
+The trit's three values appear at three levels in the live work
+(`wit/codex/lattice.md`):
+
+  trit value:    -1              0              +1
+                 ──────          ──────         ──────
+  as gate:       AND             NOT            OR
+  as verb axis:  reverse         neutral        forward
+  as polarity:   "not" / -½      identity        affirm / +½
+  as English:    can't, won't,   "is", "do",    can, will,
+                 isn't, n't      thinks         must
+
+NOT is the gate that flips signs. It's the same operator that English
+uses as the contraction `n't` (CAN/CAN'T, WILL/WON'T, IS/ISN'T, DO/DON'T).
+When a content verb has its negative form, that's NOT being applied at
+the polarity level — the same NOT defined in this file.
+
+**Three NOTs, all the same operator at different scopes**:
+  - Trit NOT: flips one value (this file)
+  - Polarity NOT: flips a bond's spin state (±½)
+  - Antipodal NOT: flips all 4 axis signs of a coordinate (lattice antonym)
+
+**AND, OR, NOT in English** = the conjunctions "and", "or", and "not"/"n't".
+Post (1941) proved these three are functionally complete. English
+lexicalizes exactly the three Post primes as its most basic logical
+connectives. The framework predicts this; English confirms it.
+
+The 4-axis names (POSITION/SUBSTANCE/SIGNAL/TIME) used in lattice.md
+are the **declarative** names. The older files use WHERE/WHAT/WHICH/WHEN,
+which are the **interrogative** (question-word) names for the same 4 axes.
+Both names refer to the same structure:
+
+  axis  question (wh-)  declarative   atom pair (verbs)
+  ────  ──────────────  ───────────   ──────────────────
+  A     WHERE           POSITION      RISE / FALL
+  B     WHAT            SUBSTANCE     GROW / SHRINK
+  C     WHICH           SIGNAL        BLESS / CURSE
+  D     WHEN            TIME          BEGIN / END
+
+Use whichever is clearer in context. The lattice doesn't care.
+
 
 ## The Three Are One Thing
 
