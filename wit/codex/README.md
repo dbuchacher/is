@@ -60,6 +60,8 @@ Then explore the vocabulary and text translations as needed.
 ### Programmatic tools
 - `verify.py` — Python verifier (independently checks the math)
 - `translate.py` — Automated English→coord translator with stemmer
+- `corpus.sh` — bash regression test suite
+- `demo.sh` — 30-second framework showcase
 
 ### Source data
 - `top-1000-english.txt` — top 1000 English words by frequency
@@ -150,6 +152,17 @@ bash wit/codex/corpus.sh
 Runs translate.py on a corpus of test sentences, queries word
 synonyms/antonyms, and runs verify.py. The complete regression
 test suite for the framework.
+
+### Quick demo (30 seconds)
+
+```bash
+bash wit/codex/demo.sh
+```
+
+Shows the framework's highlights in 30 seconds: 5 sentences,
+the cogito-at-origin result, synonym/antonym query, the
+verifier passing, and the genre-shape predictions. The
+"wow moment" for first-time viewers.
 
 ─────────────────────────────────────────────────────────────────────
 
