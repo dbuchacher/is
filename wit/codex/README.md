@@ -115,6 +115,37 @@ These query the lattice geometrically — words at the same coord are
 synonyms, words at antipodal coords are antonyms, words within
 Manhattan distance N are neighbors.
 
+### Reverse direction (compose / closest)
+
+```bash
+python3 wit/codex/translate.py --closest '+1,+1,+1,+1' 5
+python3 wit/codex/translate.py --compose '+5,+4,+15,+1'
+```
+
+These work in reverse — given a target coord, find words near it
+(--closest) or build a sentence whose walk approaches it (--compose,
+greedy). The framework is bidirectional: words → coords (translate)
+and coords → words (compose).
+
+### Compare two texts
+
+```bash
+python3 wit/codex/translate.py --compare "I love you" "I hate you"
+```
+
+Computes the Manhattan distance between two texts on the lattice.
+Tells you how close or different the texts are by lattice geometry.
+
+### Run regression tests
+
+```bash
+bash wit/codex/corpus.sh
+```
+
+Runs translate.py on a corpus of test sentences, queries word
+synonyms/antonyms, and runs verify.py. The complete regression
+test suite for the framework.
+
 ─────────────────────────────────────────────────────────────────────
 
 ## What this proves
