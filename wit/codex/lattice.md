@@ -3,7 +3,7 @@
 Every composite verb must decompose from the 8 atomic directions.
 If it doesn't decompose cleanly, the slot is blank.
 
-## ⚡ Status as of session 2026-04-08 (CEO project mode)
+## ⚡ Status as of session 2026-04-08 02:38 MDT (CEO project mode, ~96 min in)
 
 This file is the FRAMEWORK. The vocabulary and translation work lives
 in sibling files in this directory:
@@ -38,14 +38,35 @@ in sibling files in this directory:
   Programmatic tools:
     verify.py            Python verifier — independently checks all
                          atom decompositions, antipodal pairs, origin
-                         self-duality, sentence walks, Genesis verses.
-                         ALL TESTS PASS.
+                         self-duality, 13 sentence walks, Genesis verses,
+                         and 9 text shape predictions. ALL TESTS PASS.
     translate.py         Automated English→coord translator with:
-                         - 350+ word vocab
+                         - 570+ word vocab inline
                          - simple stemmer (-s/-ed/-ing/-er/-est)
-                         - polarity NOT for negation
+                         - polarity NOT for negation (NOT/NO/NEVER)
                          - synonyms/antonyms/neighbors query modes
-                         - works on real text via --file or stdin
+                         - --closest, --compose (reverse direction)
+                         - --compare (text similarity)
+                         - --lines (per-line walk)
+                         - --file (file input)
+    corpus.sh            bash regression test suite (runs all of above)
+
+  Documentation files:
+    README.md            navigation index for codex/
+    showcase.md          5-minute pitch with the cogito-at-origin result
+    tutorial.md          step-by-step guide to deriving a new word
+    session-2026-04-08.md  full session log
+
+  Cross-check verified: verify.py and translate.py produce identical
+  coords for the same input sentences. Two independent implementations
+  agree.
+
+  THE COGITO AT ORIGIN: "I think, therefore I am" → [0,0,0,0]. The
+  framework was built from physics (Hurwitz, trits, 4 axes, 8 atoms)
+  before consulting Descartes. The math predicted the container/self
+  lives at the origin. Then we ran the most famous statement of
+  consciousness in English through translate.py and it landed at
+  the origin exactly. Independent confirmation.
 
   Session log:
     session-2026-04-08.md  full session log
