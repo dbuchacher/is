@@ -441,6 +441,70 @@ def test_antipodes() -> bool:
     print(f"Passed: {passed}/{len(pairs)}")
     return passed == len(pairs)
 
+# ─── Composition associativity ───────────────────────────────────────
+
+def test_composition_associativity() -> bool:
+    """
+    The · operator should be associative: (a · b) · c == a · (b · c).
+    Verify this for several test cases.
+    """
+    print("=" * 70)
+    print("COMPOSITION ASSOCIATIVITY")
+    print("=" * 70)
+    print()
+
+    test_triples = [
+        (ATOMS["RISE"], ATOMS["GROW"], ATOMS["BLESS"]),
+        (ATOMS["FALL"], ATOMS["SHRINK"], ATOMS["CURSE"]),
+        (ATOMS["BEGIN"], ATOMS["END"], ATOMS["RISE"]),
+    ]
+
+    passed = 0
+    for a, b, c in test_triples:
+        left = compose(compose(a, b), c)
+        right = compose(a, compose(b, c))
+        match = left == right
+        status = "✓" if match else "✗"
+        print(f"  {status}  ({fmt(a)} · {fmt(b)}) · {fmt(c)} == {fmt(a)} · ({fmt(b)} · {fmt(c)})")
+        print(f"     left={fmt(left)} right={fmt(right)}")
+        if match:
+            passed += 1
+    print()
+    print(f"Passed: {passed}/{len(test_triples)}")
+    return passed == len(test_triples)
+
+# ─── NOT operator behavior ───────────────────────────────────────────
+
+def test_not_operator() -> bool:
+    """
+    Verify NOT is involutive (NOT(NOT(x)) == x) and the origin is
+    its own NOT.
+    """
+    print("=" * 70)
+    print("NOT OPERATOR BEHAVIOR")
+    print("=" * 70)
+    print()
+
+    tests = [
+        ("NOT(NOT(RISE)) == RISE", negate(negate(ATOMS["RISE"])) == ATOMS["RISE"]),
+        ("NOT(NOT(GROW)) == GROW", negate(negate(ATOMS["GROW"])) == ATOMS["GROW"]),
+        ("NOT(BLESS) == CURSE", negate(ATOMS["BLESS"]) == ATOMS["CURSE"]),
+        ("NOT(CURSE) == BLESS", negate(ATOMS["CURSE"]) == ATOMS["BLESS"]),
+        ("NOT(RISE) == FALL", negate(ATOMS["RISE"]) == ATOMS["FALL"]),
+        ("NOT(BEGIN) == END", negate(ATOMS["BEGIN"]) == ATOMS["END"]),
+        ("NOT(ORIGIN) == ORIGIN", negate(ORIGIN) == ORIGIN),
+    ]
+
+    passed = 0
+    for description, result in tests:
+        status = "✓" if result else "✗"
+        print(f"  {status}  {description}")
+        if result:
+            passed += 1
+    print()
+    print(f"Passed: {passed}/{len(tests)}")
+    return passed == len(tests)
+
 # ─── THINK at origin (self-dual) ─────────────────────────────────────
 
 def test_origin_self_dual() -> bool:
@@ -484,6 +548,12 @@ def main():
     print()
 
     results.append(("antipodal pairs", test_antipodes()))
+    print()
+
+    results.append(("composition associativity", test_composition_associativity()))
+    print()
+
+    results.append(("NOT operator", test_not_operator()))
     print()
 
     results.append(("origin self-duality", test_origin_self_dual()))
