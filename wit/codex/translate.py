@@ -584,6 +584,69 @@ VOCAB: Dict[str, Coord] = {
     "spring": (0, 0, 0, 1),
     "autumn": (0, 0, 0, -1),
     "fall_n": (0, 0, 0, -1),
+
+    # ─── Intensifiers (would push next word to shell 2 if we had
+    #     proper modifier composition; for now they're origin or
+    #     small magnitude markers) ───
+    "very": (0, 0, 0, 0),     # intensifier — applied to next word
+    "really": (0, 0, 0, 0),
+    "extremely": (0, 0, 0, 0),
+    "truly": (0, 0, 0, 0),
+    "quite": (0, 0, 0, 0),
+    "totally": (0, 0, 0, 0),
+    "absolutely": (0, 0, 0, 0),
+    "almost": (0, 0, 0, 0),
+    "nearly": (0, 0, 0, 0),
+    "just": (0, 0, 0, 0),
+    "only": (0, 0, 0, 0),
+    "barely": (0, 0, 0, 0),
+    "hardly": (0, 0, 0, 0),
+    "well": (0, 0, 1, 0),       # adverbial form of GOOD
+    "badly": (0, 0, -1, 0),
+    "quickly": (1, 0, 0, 1),    # speed
+    "slowly": (-1, 0, 0, -1),
+    "carefully": (0, 0, 1, 0),
+    "loudly": (0, 0, 1, 0),
+    "softly": (0, 0, -1, 0),
+
+    # ─── More common verbs ───
+    "becomes": (0, 1, 0, 1),
+    "became": (0, 1, 0, 0),
+    "changing": (0, 0, 0, 0),
+    "changed": (0, 0, 0, 0),
+    "showed": (0, 0, 1, 1),
+    "shown": (0, 0, 1, 1),
+    "show": (0, 0, 1, 1),
+    "explain": (0, 0, 0, 0),
+    "explained": (0, 0, 0, 0),
+    "remember_v": (0, 0, 1, -1),
+    "forget_v": (0, 0, -1, 1),
+
+    # ─── Additional grammatical particles ───
+    "yes": (0, 0, 1, 0),
+    "okay": (0, 0, 1, 0),
+    "ok": (0, 0, 1, 0),
+    "well_int": (0, 0, 0, 0),
+    "oh": (0, 0, 0, 0),
+    "ah": (0, 0, 0, 0),
+
+    # ─── Famous words from various texts ───
+    "dust": (0, 1, 0, 0),
+    "ash": (0, 1, 0, 0),
+    "wisdom": (0, 0, 1, 0),
+    "knowledge": (0, 0, 1, 0),
+    "secret": (0, 0, 1, 0),
+    "lie_n": (0, 0, -1, 0),
+    "truth_n": (0, 0, 1, 0),
+    "promise": (0, 0, 0, 1),
+    "threat": (0, 0, -1, -1),
+    "law": (0, 0, 1, 0),
+    "rule": (0, 0, 1, 0),
+    "order_n": (0, 0, 0, 0),
+    "freedom": (0, 0, 0, 0),
+    "slavery": (0, 0, -1, 0),
+    "victory": (1, 0, 1, 0),
+    "defeat_n": (-1, 0, -1, 0),
 }
 
 # ─── Composition functions ───────────────────────────────────────────
