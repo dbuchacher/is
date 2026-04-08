@@ -391,6 +391,102 @@ VOCAB: Dict[str, Coord] = {
     "pain": (0, 0, -1, 0),
     "fear": (0, 0, -1, 0),
     "hope_n": (0, 0, 1, 0),
+
+    # ─── More common English from various texts ───
+    "poor": (0, -1, -1, 0),  # lacking substance + negative state
+    "rich": (0, 1, 1, 0),    # EARN coord
+    "those": (0, 0, 0, 0),   # demonstrative
+    "who": (0, 0, 0, 0),     # interrogative
+    "what": (0, 0, 0, 0),
+    "when": (0, 0, 0, 0),
+    "where": (0, 0, 0, 0),
+    "why": (0, 0, 0, 0),
+    "how": (0, 0, 0, 0),
+    "mourn": (0, 0, -1, 0),
+    "comfort": (0, 0, 1, 0),
+    "comforted": (0, 0, 1, 0),
+    "meek": (0, 0, 0, 0),    # humble = origin
+    "hunger": (0, -1, -1, 0),
+    "thirst": (0, -1, -1, 0),
+    "righteousness": (0, 0, 1, 0),
+    "merciful": (0, 0, 1, 0),
+    "mercy": (0, 0, 1, 0),
+    "pure": (0, 0, 1, 0),
+    "god": (0, 0, 0, 0),     # ultimate container
+    "peacemaker": (0, 0, 1, 0),
+    "peacemakers": (0, 0, 1, 0),
+    "called": (0, 0, 0, 0),  # past CALL = container
+    "children": (0, 1, 1, 1),
+    "persecuted": (0, 0, -1, -1),
+    "sake": (0, 0, 0, 0),
+    "theirs": (0, 0, 0, 0),
+    "yours": (0, 0, 0, 0),
+    "his": (0, 0, 0, 0),
+    "hers": (0, 0, 0, 0),
+    "ours": (0, 0, 0, 0),
+    "inherit": (0, 1, 0, 0),  # gain substance
+    "obtain": (0, 1, 0, 0),
+    "filled": (0, 1, 0, 0),
+    "fill_n": (0, 1, 0, 0),
+
+    # More common verbs (past forms)
+    "lived": (0, 0, 1, 1),
+    "loved": (0, 0, 1, 0),
+    "hated": (0, 0, -1, 0),
+    "feared": (0, 0, -1, 0),
+    "found_v": (1, 1, 1, 0),
+    "made": (0, 1, 0, 1),
+    "created": (0, 1, 0, 1),
+    "destroyed": (0, -1, 0, -1),
+    "killed": (0, -1, 0, -1),
+    "blessed": (0, 0, 1, 0),
+    "cursed": (0, 0, -1, 0),
+    "began": (0, 0, 0, 1),
+    "ended": (0, 0, 0, -1),
+    "rose": (1, 0, 0, 0),
+    "fell": (-1, 0, 0, 0),
+    "grew": (0, 1, 0, 0),
+    "shrank": (0, -1, 0, 0),
+
+    # More nouns
+    "hand": (0, 1, 0, 0),
+    "foot": (-1, 1, 0, 0),
+    "arm": (0, 1, 0, 0),
+    "leg": (-1, 1, 0, 0),
+    "eye": (1, 1, 0, 0),
+    "ear": (1, 1, 0, 0),
+    "mouth": (1, 1, 0, 0),
+    "face": (1, 1, 0, 0),
+    "body": (0, 1, 0, 0),
+    "blood": (0, 1, 1, 1),
+    "bone": (0, 1, 0, 0),
+    "skin": (0, 1, 0, 0),
+    "tree": (0, 1, 0, 0),
+    "flower": (0, 1, 1, 1),
+    "rock": (0, 1, 0, 0),
+    "stone": (0, 1, 0, 0),
+    "river": (0, 1, 0, 1),
+    "lake": (0, 1, 0, 0),
+    "ocean": (0, 2, 0, 0),
+    "star": (0, 1, 1, 1),
+    "sun": (1, 1, 1, 1),
+    "moon": (1, 1, 0, 0),
+    "cloud": (1, 1, 0, 0),
+    "rain": (-1, 1, 0, 0),
+    "snow": (-1, 1, 0, 0),
+
+    # Time words
+    "today": (0, 0, 0, 0),
+    "tomorrow": (0, 0, 0, 1),
+    "yesterday": (0, 0, 0, -1),
+    "always": (0, 0, 0, 1),
+    "never": (0, 0, 0, -1),
+    "often": (0, 0, 0, 1),
+    "sometimes": (0, 0, 0, 0),
+    "soon": (0, 0, 0, 1),
+    "later": (0, 0, 0, 1),
+    "early": (0, 0, 0, 1),
+    "late": (0, 0, 0, -1),
 }
 
 # ─── Composition functions ───────────────────────────────────────────
