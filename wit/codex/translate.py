@@ -809,6 +809,34 @@ VOCAB: Dict[str, Coord] = {
     "seeing": (0, 0, 0, 0),
     "hearing": (0, 0, 0, 0),
     "saying": (0, 0, 0, 0),
+
+    # ─── More religious / biblical names and verbs ───
+    "jesus": (0, 0, 0, 0),  # ultimate container reference
+    "christ": (0, 0, 0, 0),
+    "moses": (0, 0, 0, 0),
+    "abraham": (0, 0, 0, 0),
+    "weep": (0, 0, -1, 0),  # express grief = -C
+    "wept": (0, 0, -1, -1),
+    "cry": (0, 0, -1, 0),
+    "cried": (0, 0, -1, -1),
+    "laugh": (0, 0, 1, 0),
+    "laughed": (0, 0, 1, -1),
+    "smile": (0, 0, 1, 0),
+    "frown": (0, 0, -1, 0),
+    "tear": (0, 0, -1, 0),
+    "tears": (0, 0, -1, 0),
+    "joyful": (0, 0, 1, 0),
+    "sorrowful": (0, 0, -1, 0),
+    "blessed_n": (0, 0, 1, 0),
+
+    # ─── More common abstract nouns ───
+    "world_n": (0, 1, 0, 0),
+    "earth_n": (-1, 0, 0, 0),
+    "heart_n": (0, 1, 1, 1),
+    "mind_n": (0, 0, 0, 0),
+    "body_n": (0, 1, 0, 0),
+    "soul_n": (0, 0, 0, 0),
+    "spirit_concept": (0, 0, 1, 0),
 }
 
 # ─── Composition functions ───────────────────────────────────────────
