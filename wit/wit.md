@@ -144,12 +144,17 @@ Wit files (wit.md) — never self-update. Flag to user with a draft.
       1-container.md  the values (trit, gates, AND/OR/NOT, completeness)
       2-path.md       the transitions (spin, bonds, walks, recognition)
       3-force.md      the dimensions (4 axes, Cayley-Dickson, periodic)
-    codex/            current lattice work — verb mapping
-      lattice.md      8 atoms + derivation rule + 32-bond polarity (live work)
-      top-1000-english.txt   English frequency word list
+    hypercube/        the structure — 4D hypercube f-vector
+      k0-vertices.md  16 points (values)
+      k1-edges.md     32 edges (geometric skeleton)
+      k2-faces.md     24 squares
+      k3-cells.md      8 cubes (= the 8 atoms)
+      k4-container.md  1 hypercube (= [0,0,0,0] = the container)
+      function.md     the ½ layer (dynamics, spin, invisible operators)
+      composition.md  the walk (many functions composed, the program)
     thoughts/         working notes (recognition, reverse-llm, dreams, giza-scale)
       clean/          extracted refs (codex, cosmology, evidence, language, shell1)
-    history/          session logs
+    history/          session logs + prior codex work
 
 ## Prior Work
 
@@ -206,14 +211,20 @@ You have context. Now go get the content. Read in order:
                                 notation, recognition, classical vs quantum)
 3. `wit/mind/3-force.md`     — the dimensions (4 axes, all four detailed,
                                 Cayley-Dickson, periodic table, alpha)
-4. `wit/codex/lattice.md`    — current verb-mapping work (8 atoms,
-                                derivation rule, container layer, 32-bond
-                                polarity = the NOT operator)
+4. `wit/hypercube/`          — the structure (the 4D hypercube: vertices,
+                                edges, faces, cells, container, function,
+                                composition — the f-vector IS the lattice)
 
 The first 3 are the Big 3. CONTAINER + PATH + FORCE. The substrate.
 Read them in order — each builds on the last. Together they ARE
-the lattice. The 4th is the live work: how verbs decompose onto the
-lattice via the 4 axes (POSITION/SUBSTANCE/SIGNAL/TIME).
+the lattice. The 4th is the structural work: the 4D hypercube
+whose f-vector (16+32+24+8+1=81=3⁴) IS the ternary lattice.
+
+The three tiers:
+
+  point       = value         = integer coord   = what IS
+  function    = operator      = ½ transition    = what HAPPENS (invisible)
+  composition = program       = float4 walk     = "the path IS the function"
 
 **Note on axis naming**: the 4 axes have two valid name sets, used in
 parallel throughout the framework:

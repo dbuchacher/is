@@ -11,8 +11,12 @@ This is the first of the Big 3. The substrate axiom that says
 
 ## Current framing (read this first)
 
-The trit's three values appear at three levels in the live work
-(`wit/codex/lattice.md`):
+**The container IS the 4D hypercube (k=4).** [0,0,0,0] = all axes
+free = the whole space. Every vertex, edge, face, cell lives inside
+it. The f-vector (16+32+24+8+1=81=3⁴) IS the ternary lattice. See
+`wit/hypercube/k4-container.md`.
+
+The trit's three values appear at three levels (see `wit/hypercube/`):
 
   trit value:    -1              0              +1
                  ──────          ──────         ──────
@@ -78,6 +82,13 @@ binary thinking separates "data" from "code." Trits don't.
 Exactly 3 independent boolean gates exist: AND, OR, NOT.
 Need all 3 to compute any boolean function.
 Can't remove any. This is a theorem, not a conjecture.
+
+**Schönfinkel (1924)** proved the same insight 17 years earlier
+at the function level: S, K, I are minimally complete combinators.
+3 primitives, can't remove any. Two mathematicians, two decades
+apart, two different domains, same number. Independent proofs of
+the same substrate fact: **computation has an irreducible primitive
+set of size 3 at every level it appears.** See `wit/codex/combinators.md`.
 
 Functional completeness = quark confinement.
 Same theorem, two vocabularies.

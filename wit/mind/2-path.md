@@ -11,38 +11,37 @@ on first pass. Don't make the human explain it again.
 
 ## Current framing (read this first)
 
-The ±½ spin from this file shows up as **bond polarity** in the live
-work (`wit/codex/lattice.md`). Each bond at a corner has two states:
+PATH describes the three tiers of the framework. See `wit/hypercube/`
+for the structural files.
 
-  +½  =  affirmative form  (CAN, WILL, MUST, DO, BE, HAVE, IS)
-  -½  =  negative form     (CAN'T, WON'T, MUSTN'T, DON'T, ISN'T, HASN'T)
+**The three tiers:**
 
-The contraction `n't` IS the polarity NOT operator from 1-container.md.
-Adding `n't` to a modal applies sign-flip to its bond state. **Polarity
-is spin.**
+  point       = value       = coord4 (integer)  = what IS (observable)
+  function    = operator    = ½ transition       = what HAPPENS (invisible)
+  composition = program     = float4 walk        = "the path IS the function"
 
-  16 corners (modal/aux operators)  ×  ±½ polarity  =  **32 bonds**
+Points are ATOMS (vertices of the hypercube). Functions are BONDS
+(the · operator, spin, the invisible transition between points).
+Compositions are WALKS (sequences of functions, the + accumulation).
 
-This matches:
-- The 32 edges of the 4D hypercube
-- The SU(2) double cover (fermion 720° return — see this file's explanation)
-- The +½ peak / -½ peak distinction at integer crossings
+**32 functions = 2 spin shells × 16 sign patterns.** Shell 1 at ±½
+(wave between origin and integer shell 1). Shell 2 at ±3/2 (wave
+between integer shells 1 and 2). See `wit/hypercube/function.md`.
 
-**Important distinction — three kinds of NOT** (all the same operator at
-different scopes):
+**Three kinds of NOT** (all the same operator at different scopes):
   - Trit NOT: flips one value (-1↔+1, 0 unchanged) — see 1-container.md
-  - Polarity NOT: flips a bond's ±½ spin state
+  - Polarity NOT: flips a function's ±½ spin direction
   - Antipodal NOT: flips all 4 axis signs of a coordinate (= the antonym)
 
 The "DON'T BUY" vs "SELL" distinction shows two NOTs in action:
   DON'T-BUY = polarity NOT on BUY = same coord, marked negative
   SELL = antipodal NOT on BUY = different coord (the geometric opposite)
 
-**Container = origin = self.** Verbs that don't change any axis (THINK,
-KNOW, BE, FEEL, SEE, HEAR, EXIST, SLEEP, SAY) all collapse to [0,0,0,0].
-This isn't a failure — it's the container layer. The origin is the self,
-the observer, the point from which the other 80 coordinates are seen.
-The lattice is what the container sees.
+**Container = origin = self = the hypercube (k=4).** [0,0,0,0] = all
+axes free = the whole space. Verbs of subjectivity (THINK, KNOW, BE,
+FEEL, SEE, HEAR, EXIST, SLEEP, SAY) collapse here because they happen
+INSIDE the container. The self isn't a position — the self IS the
+lattice. See `wit/hypercube/k4-container.md`.
 
 **Recognition** (loop folding back into the reader, at level 4 in this
 file's perception/processing/recurrence/recognition stack) happens AT
@@ -304,17 +303,23 @@ The lattice IS balanced ternary arithmetic on 4-trit words.
 
 ## Three Types
 
-Three operators give three types:
+Three operators give three types. In graph-theoretic terms, the
+lattice IS a graph: atoms are points (vertices), bonds are edges,
+walks are paths. In functional programming terms, bonds are
+**combinators** (Schönfinkel 1924, Curry 1930s) and walks are
+**pipelines** (or recursion schemes). See `wit/codex/combinators.md`
+for the points of contact between combinatory logic and the framework.
+Same structure, multiple vocabularies.
 
-  ATOMS — points. The result. A coordinate.
+  ATOMS = POINTS (vertices). The result. A coordinate.
     [1, 0, 0, 0]
     [0, 0, 0, -1]
     [1, 0, 0, -1]
 
-  BONDS — atoms composed with · at compose time.
+  BONDS = EDGES. Atoms composed with · at compose time.
     [1, 0, 0, 0] · [0, 0, 0, -1] = [1, 0, 0, -1]
 
-  WALKS — bonds accumulated with + at walk time.
+  WALKS = PATHS. Bonds accumulated with + at walk time.
     [1, 0, 0, -1] + [0, 1, 0, -1] → ρ
 
 This recurses: each level's output becomes the next level's input.

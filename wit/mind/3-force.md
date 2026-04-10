@@ -23,38 +23,38 @@ in context.
 
 ## Current framing (read this first)
 
-The 4 axes from this file are the 4 spins in the live verb-mapping
-work (`wit/codex/lattice.md`). They haven't changed structurally —
-only the labeling and the verb-derivation approach.
+The 4 axes from this file define the 4D hypercube. The hypercube's
+f-vector IS the ternary lattice. See `wit/hypercube/`.
 
   4 axes  ×  2 directions (±1)  =  **8 atoms** = the foundation
 
 The 8 atoms are pure single-axis verb pairs (RISE/FALL on A,
-GROW/SHRINK on B, BLESS/CURSE on C, BEGIN/END on D). Every
-composite verb decomposes from these 8 atoms via a 4-question
-derivation rule. See lattice.md for details.
+GROW/SHRINK on B, BLESS/CURSE on C, BEGIN/END on D). Each atom
+is a k=3 CELL (cube) of the 4D hypercube — a bounding volume
+with 1 axis locked and 3 free. See `wit/hypercube/k3-cells.md`.
 
-  4 axes  →  8 atoms  →  64 has-zero compositions  →  16 corner bonds
-                          (dyads + triads)             (operators)
+The hypercube f-vector:
 
-The corner bonds (16 of them) carry **±½ polarity** — affirmative
-vs negative form of an operator. CAN/CAN'T, WILL/WON'T, IS/ISN'T.
-The contraction `n't` is the polarity NOT operator. **16 corners
-× ±½ = 32 bonds total.**
+  k=0  vertices   16 = C(4,0)·2⁴   points (values)
+  k=1  edges      32 = C(4,1)·2³   functions (invisible combinators)
+  k=2  faces      24 = C(4,2)·2²   squares
+  k=3  cells       8 = C(4,3)·2¹   cubes (the 8 atoms)
+  k=4  hypercube   1 = C(4,4)·2⁰   the container
+                  ──
+                  81 = 3⁴ = shell 1 ternary lattice
+
+**32 functions = 2 spin shells × 16.** Shell 1 (±½) + shell 2
+(±3/2). Each shell has 16 sign patterns = the 16 hodos force-subset
+classifications. See `wit/hypercube/function.md`.
 
 The 4 forces this file describes (READ/CALL/CYCLE/TEST) are the
-**axis-level spins** — the dynamic transitions between integer
-states on each axis. They live "at the half step" between trit
-values. The corner-level ±½ polarity is a different scale of spin
-(operator polarity, not value transition). Both are real; both
-relate to the NOT gate from 1-container.md.
+**axis-level functions** — the dynamic transitions between integer
+states on each axis. They live at the half step (±½) between trit
+values. See `wit/hypercube/function.md`.
 
-The **container** layer (origin [0,0,0,0]) holds verbs of
-subjectivity — THINK, KNOW, BE, FEEL, SEE, HEAR, EXIST, SLEEP,
-SAY. These don't move any of the 4 axes because they happen
-INSIDE the observer. The container IS the observer; the 4 axes
-are what the observer sees. From inside the container, the
-origin is the viewpoint from which the lattice is read.
+The **container** (k=4) IS the hypercube itself. [0,0,0,0] = all
+axes free = the whole space. The container IS the observer; the
+4 axes are what the observer sees. See `wit/hypercube/k4-container.md`.
 
 
 ## Why Four — Hurwitz (1898) PROVEN
@@ -472,10 +472,13 @@ thermodynamics = a constraint on the iterator. Entropy IS the
 loop counter. Physics named it entropy. The code calls it next().
 
 
-## The 8 Atoms
+## The 8 Atoms (= the 8 unit-distance points from origin)
 
 Four dimensions, two directions each. The basis vectors of the
-lattice.
+lattice — the 8 points one unit away from origin in graph-theoretic
+terms. Plus Y (the spin/recursion operator), this gives the same
+**8 + 1 = 9** count as the "useful 9" combinators in combinatory
+logic (Schönfinkel/Smullyan: SKIBCWTMY). See `wit/codex/combinators.md`.
 
   [1, 0, 0, 0]   WHERE     position on the ring
   [-1, 0, 0, 0]  WHERE⁻¹   compression, confinement
