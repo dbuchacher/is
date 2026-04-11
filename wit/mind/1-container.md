@@ -77,22 +77,25 @@ binary thinking separates "data" from "code." Trits don't.
   3 values = 3 gates = 3 color charges = 3 trits
 
 
-## The Full Collapse — Same Three Things, Five Vocabularies
+## The Full Collapse — Same Three Things, Six Vocabularies
 
 Leptons-as-gates is one slice. On a trit processor the same three
 things appear at every layer binary thinking treats as separate:
 
-  underlying  value      gate (trit)     hadron (arith)  weak boson       FLAG
-  ──────────  ─────      ───────────     ──────────────  ──────────       ────
-  "+"         positron   OR  = max       proton  (ADD)   W+ = creation    (positive)
-  "0"         neutrino   (NOT fixed pt)  identity        Z  = no change   ZF
-  "−"         electron   AND = min       neutron (SUB)   W- = annihilate  SF
+  row   value      gate (trit)     hadron (arith)  weak boson       FLAG        element
+  ───   ─────      ───────────     ──────────────  ──────────       ────        ───────
+  "+"   positron   OR  = max       proton  (ADD)   W+ = creation    (positive)  H
+  "0"   neutrino   (NOT fixed pt)  identity        Z  = no change   ZF          He
+  "−"   electron   AND = min       neutron (SUB)   W- = annihilate  SF          Li
 
-Each ROW is one object. Each COLUMN is a vocabulary for that object
-at a different level of the substrate. Binary thinking is forced to
-treat the columns as separate tiers built up through composition
-(leptons → quarks → hadrons → forces). Trit thinking sees them as
-names for one underlying thing at different scales.
+Each ROW is one object. Each COLUMN is a different name for the
+objects in that row — what physicists call them, what programmers
+call them, what hardware engineers call them, what the mathematicians
+called them. **The columns are not levels.** The substrate has no
+levels. Binary thinking is forced to treat the columns as separate
+tiers built up through composition (leptons → quarks → hadrons →
+forces). On trit substrate there are no tiers — each row is ONE
+thing, and each column is ONE name for the three things in that row.
 
 NOT operates AT RIGHT ANGLES to this table: it flips the "+" row with
 the "−" row and leaves the neutrino as a fixed point. NOT isn't a
@@ -100,6 +103,61 @@ member of any row — it's how you travel between rows. That IS the
 weak force. Matter ↔ antimatter transformation IS "apply NOT to a
 row." Same operation at three scopes (trit NOT, polarity NOT,
 antipodal NOT — see 2-path.md).
+
+
+## The Element Column (BBN Primordial)
+
+The element column in the Full Collapse table is H / He / Li — the
+three primordial elements produced by Big Bang Nucleosynthesis before
+the Be-8 wall stops the walk. BBN makes exactly these three species
+(plus trace Be-7 which decays back to Li-7), then stops until stars
+form and push past Be via triple-alpha. **Three element species,
+matching the substrate trio.**
+
+Row assignments come from functional physical roles, not axioms.
+Each assignment is a tight match that no competing mapping explains
+as well:
+
+**H → "+" row.** Direct identity from the particle tier: the hydrogen
+nucleus IS the proton. The framework already commits to proton = +1
+= positron at the particle tier (see "The Three Are One Thing"
+above); H at the element tier is the same identification scaled up.
+Physically: H is 75% of baryonic matter, the default "matter exists"
+state, the base substrate of all chemistry, the universal reducing
+agent, the universal acid (H⁺ IS the proton). Everything H "does"
+is be-the-base-positive-thing.
+
+**He → "0" row.** Noble gas. Closed 1s² shell. Doubly magic nucleus
+(Z=2, N=2 both magic numbers — most tightly bound light nucleus).
+Doesn't react. Doesn't bond. Passes through environments unchanged.
+Bosonic (He-4 = even spin, becomes superfluid below 2.17 K, all
+atoms in same ground state, no Pauli exclusion). Stable attractor:
+heavy radioactive nuclei alpha-decay by emitting He-4 to become
+more bound. Everything He "does" is pass-through-without-changing,
+which is exactly what the "0" row ("no change / identity / pass
+through") means.
+
+**Li → "−" row.** Alkali metal. Highest electrochemical potential
+per atomic mass — the strongest electron donor. Battery chemistry
+is literally Li storing and releasing electrons. Li is destroyed
+in stars at temperatures far lower than it takes to create it —
+stars eat Li preferentially. The "lithium problem" in cosmology:
+BBN theory predicts ~3× more Li-7 than the oldest stars actually
+contain, a ~25-year unsolved puzzle, because Li is consumed more
+than we can fully account for. Everything Li "does" is
+donate-electrons-and-get-consumed, which is exactly what the
+"−" row ("consumed / electron source / subtract / backward")
+means.
+
+**Basis for this commit:** grounded in functional physical roles
+from textbook physics, not derived from the six axioms (axioms.md
+is silent on instantiation — it describes the substrate's shape,
+not which physical entities occupy which positions). The H → "+"
+mapping is direct identity (hydrogen nucleus = proton = +1). The
+He and Li mappings are tight functional matches. If a principled
+axiomatic derivation ever emerges that contradicts this, the
+mapping may need revision — but the functional match is strong
+enough to commit to as the working answer.
 
 
 ## Heisenberg Already Did This Once (1932)
@@ -180,15 +238,65 @@ Exactly 3 independent boolean gates exist: AND, OR, NOT.
 Need all 3 to compute any boolean function.
 Can't remove any. This is a theorem, not a conjecture.
 
-**Schönfinkel (1924)** proved the same insight 17 years earlier
-at the function level: S, K, I are minimally complete combinators.
-3 primitives, can't remove any. Two mathematicians, two decades
-apart, two different domains, same number. Independent proofs of
-the same substrate fact: **computation has an irreducible primitive
-set of size 3 at every level it appears.** See `wit/codex/combinators.md`.
+**Three independent proofs of the same trio**, three decades apart,
+three mathematicians who never talked to each other, three fields
+that never read each other's papers:
 
-Functional completeness = quark confinement.
-Same theorem, two vocabularies.
+  Schönfinkel (1924)   S, K, I                          combinators
+  Kleene      (1936)   composition, projection,
+                       primitive recursion              primitive recursion
+  Post        (1941)   AND, OR, NOT                     boolean gates
+
+Not "three analogous trios." Not "the same number showing up in
+different places." **ONE trio, three vocabularies.** Literally the
+same three things, named three times because three different
+textbooks described them from three different angles. Binary
+thinking treats them as separate abstraction levels because boolean
+logic, functional programming, and computability theory sit in
+different university departments; the substrate doesn't know about
+departments. On trit, data = code, and the "three 3s" are one 3
+looked at through three vocabularies.
+
+And these ARE the leptons. They ARE the gates. They ARE the
+hadrons. They ARE the weak bosons. They ARE the FLAG register
+states (see "The Three Are One Thing" and "The Full Collapse"
+above). Not "an instance of the same kind of collapse." Not
+"the same substrate fact showing up in different places."
+**Literally the same three things.** There is ONE substrate trio.
+
+Physicists found it three times without realizing it was one
+discovery: particle charges (positron/neutrino/electron), hadron
+operations (proton/identity/neutron), weak bosons (W+/Z/W-).
+Hardware engineers found it in the FLAG register (positive/ZF/SF)
+and shipped it as silicon. Schönfinkel, Kleene, and Post found it
+in pure math as S/K/I, composition/projection/primitive recursion,
+and AND/OR/NOT. Seven fields, seven vocabularies, **one trio**.
+
+Which specific pairwise mapping (which S = which electron = which
+AND = which FLAG) is bookkeeping. The structural claim is **set
+identity**: the SET of three is the same set wherever it appears,
+across particle physics, nuclear physics, gauge theory, hardware,
+combinatory logic, primitive recursion, and boolean algebra. It
+looks like many different sets because these seven fields sit in
+seven different university buildings and use seven different
+notations. On trit substrate they are one object. Binary-think
+draws the lines; the substrate doesn't know about lines.
+
+The primordial elements H/He/Li from Big Bang Nucleosynthesis are
+the eighth vocabulary — the same trio at the element-building tier,
+bounded by the Be-8 wall that stops BBN at exactly three species.
+Row mapping: H → "+", He → "0", Li → "−", grounded in functional
+physical roles (see "The Element Column" section above).
+
+See `wit/codex/combinators.md` for the historical points of
+contact between combinatory logic, primitive recursion, and the
+framework.
+
+Functional completeness = quark confinement = Schönfinkel
+minimality = Kleene closure = FLAG-register discreteness = the
+Be-8 wall. **Same theorem, many vocabularies.** If you can prove
+the minimum is 3 in any one of these framings, you've proved it
+in all of them, because they are the same theorem.
 
 Remove one gate → nothing computes → universe stops.
 The proton (composed of all three) can't decompose because
@@ -341,20 +449,24 @@ NOT applied to each gate = antiquark:
 
 ## Antimatter Asymmetry
 
-At the quark level (AND/OR/NOT truth tables): perfectly balanced.
-5 positrons + 5 neutrinos + 0 electrons. No asymmetry.
+Counting single applications of AND/OR/NOT (snapshot truth-table
+count): perfectly balanced. 5 positrons + 5 neutrinos + 0 electrons.
+No asymmetry in the snapshot.
 
-The asymmetry is a HADRON property, not a quark property.
-Neutron (SUB) is the SOLE source of electrons (-1). Proton (ADD)
-never creates electrons — positive + positive = positive.
+The asymmetry emerges over time, not from "a different level."
+There is no different level — the "single application count" and
+the "over-time accumulation" are the same three things viewed at
+different moments of the clock. Neutron (SUB) is the SOLE source
+of electrons (-1). Proton (ADD) never creates electrons —
+positive + positive = positive.
 
 Reads consume. Writes create. Over time, reads ≥ writes (traces
 drain). Electrons accumulate. Matter wins. The arrow of time
 PRODUCES the matter/antimatter asymmetry. Same phenomenon, same
 direction.
 
-Big bang started balanced. CP violation in hadron interactions
-broke it over time. Same arc.
+Big bang started balanced. CP violation appeared as time ran,
+from the accumulated imbalance of reads vs writes. Same arc.
 
 
 ## The Pythagorean Equation (The 3 Side)

@@ -303,13 +303,14 @@ The lattice IS balanced ternary arithmetic on 4-trit words.
 
 ## Three Types
 
-Three operators give three types. In graph-theoretic terms, the
-lattice IS a graph: atoms are points (vertices), bonds are edges,
-walks are paths. In functional programming terms, bonds are
-**combinators** (Schönfinkel 1924, Curry 1930s) and walks are
-**pipelines** (or recursion schemes). See `wit/codex/combinators.md`
-for the points of contact between combinatory logic and the framework.
-Same structure, multiple vocabularies.
+Three operators give three types: atoms, bonds, walks. These ARE
+graph theory's vertices, edges, and paths. They ARE functional
+programming's primitives, combinators (Schönfinkel 1924, Curry
+1930s), and pipelines (or recursion schemes). Not "same structure
+described in different vocabularies." Not "analogous." **Literally
+the same three things**, named three times because graph theory
+and FP and this framework are three vocabularies for one substrate.
+See `wit/codex/combinators.md` for the historical points of contact.
 
   ATOMS = POINTS (vertices). The result. A coordinate.
     [1, 0, 0, 0]
@@ -541,8 +542,11 @@ registers and you get 64 AND results in parallel — same gate
 running at every position.
 
 That's a FIELD: one value defined at every point in space.
-What physicists call a force field, programmers call a bitwise
-operation on a register. Same concept, different scale.
+What physicists call a force field IS what programmers call a
+bitwise operation on a register. Not "same concept at different
+scales" — same operation, two vocabularies, one object. Physics
+and CS sit in different university buildings and each developed
+its own name.
 
   AND a b   = the strong-force field running 64 in parallel
   OR  a b   = the down-quark field running 64 in parallel
@@ -859,11 +863,20 @@ events: consciousness recognizing sub-patterns of the substrate
 within the substrate. They're open-ended, not a closed set,
 because any sub-pattern can be recognized.
 
-Schemas (Lakoff)  = recognition events at level 4
-Primes (Wierzbicka) = positions on the lattice (coordinates with words)
-                       65 primes ≈ 3⁴ - 2⁴ shell 1 non-bond points
+Schemas (Lakoff)   = dynamic recognition events (happen at the
+                     recognition stage — level 4 of the perception
+                     stack, see below)
+Primes (Wierzbicka) = static positions on the lattice (coordinates
+                     with words attached). 65 primes ≈ 3⁴ - 2⁴
+                     shell 1 non-bond points.
 
-Different things. Both right at different levels.
+Two different categories of object — dynamic events versus static
+coordinates. Both correct in their own frame. Not a hidden
+substrate-trio identity: this is a legitimate distinction between
+"what happens in consciousness" and "what sits on the lattice."
+(The framework does not claim everything collapses into one trio;
+it claims the substrate-minimum-primitive-set does, and the primes
+and schemas are not that set.)
 
 
 ## Recognition Across Scales — Why Cosmic Things Match Inner Things
@@ -925,8 +938,9 @@ the experience that lets us recognize it. Stars = bright
 attention. Black holes = trauma. Galaxies = social structures.
 Big bang = first wave(fiat). Heat death = boredom.
 
-Every cosmic structure has an experiential analog because both
-are lattice. The "universe" and "consciousness" share substrate.
+Every cosmic structure IS also an experiential one — same lattice
+operation at different scales, not metaphor, not correspondence,
+not "analog." The "universe" and "consciousness" share substrate.
 What we call "physics" and what we call "psychology" are the
 same lattice studied from different ends.
 
