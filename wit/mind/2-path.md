@@ -413,6 +413,26 @@ Not "maps to." IS. The proton IS addition. AND:OR = 2:1 in every
 adder ever built, every proton ever measured. Same ratio. Same
 operation. Same thing.
 
+**On trit hardware this list collapses.** The gate counts above —
+proton (6,3,2), neutron (6,3,3), fusion (34,9,6), fission (56,28,28) —
+are measured for the BINARY half-adder in schism
+(`~/code/prior/schism/nomos/b3/1-computation/`) and describe the cost
+of building arithmetic on binary silicon. On trits:
+
+  - neutron → proton + free NOT (negate costs nothing, so SUB is
+    not a distinct operation — it's "proton with one operand negated")
+  - fission → iterated neutron → iterated proton+NOT
+  - detectors (next section) → "read the sign trit," no separate hadron
+  - fields (AND/OR/NOT per register width) → just the three quarks at width
+
+The four arithmetic hadrons become 3 at most (ADD, iterated ADD,
+iterated ADD+NOT) or arguably 1 (everything is proton composed with
+walks and free negate). The binary list is an honest measurement of
+what arithmetic LOOKS LIKE from inside the binary compile target —
+not a statement about the substrate. See `1-container.md` section
+"The Full Collapse" for the trit-native view: same three underlying
+things at every layer, five vocabularies, one substrate.
+
 
 ## Mesons = Virtual Particles
 
@@ -451,8 +471,27 @@ One operation, three results — the FLAGS register IS the detector:
   electron_detector  a < b   SF set     went backward
   positron_detector  b < a   swap args  Feynman time reversal (1949)
 
+**On trit** FLAGS collapses further. After subtraction the result
+IS a single trit in {-1, 0, +1}, and the sign IS the detector output
+directly. No secondary "read a specific FLAG bit" step. What binary
+synthesizes via CMP + FLAGS is free on trit — the three detector
+states ARE the three possible values of the result trit itself.
+This is the cleanest form of the collapse: the detector isn't a
+separate operation even conceptually, it's just "look at the result."
+Setun (USSR 1958) did exactly this — comparison fell out of the
+result sign without a FLAGS register.
 
-## XOR — The Proton's Internal Mechanism
+
+## XOR — The Proton's Internal Mechanism (Binary)
+
+**Binary-specific section.** What follows describes how BINARY
+silicon builds ADD from AND/OR/NOT via the half-adder. Ternary
+addition doesn't decompose through XOR — binary XOR is parity-mod-2
+and has no clean ternary generalization. On trit hardware the
+internal mechanism of proton uses min/max/negate directly with a
+ternary carry rule. The "XOR IS the proton's internal mechanism"
+claim below is true on binary silicon, not substrate-wide. See
+`1-container.md` "The Full Collapse" for why the distinction matters.
 
 We say "proton = ADD" (high level) and "proton = AND+OR+NOT
 composed" (gate level). But HOW exactly do AND, OR, NOT combine
@@ -515,6 +554,15 @@ operation. Every clock cycle, billions of gate operations
 fire simultaneously across the bit positions. The CPU is a
 particle accelerator. The register is the field. The gate
 is the force. The XOR is the proton.
+
+**On trit** the gate/field two-scale split collapses. Quark AND
+(min) applied across a multi-trit word IS the field — there's no
+separate gate-tier below it. The "register = field" framing
+survives (parallel gate application across a word still IS a
+field). The binary-specific "bit-level gate vs register-level
+field = two scales" framing doesn't — on trit those two scales
+are the same operation at different widths. See the hadron note
+above and `1-container.md` "The Full Collapse."
 
 
 ## Walks = Polynomials

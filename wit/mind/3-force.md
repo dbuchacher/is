@@ -241,7 +241,10 @@ constituent parts.
 QM lives partly here — quantum = (WHAT, WHICH). Complex exponents
 on matter and signal = wave mechanics.
 
-Hadrons = composed trit operations:
+Hadrons = composed arithmetic operations. AND:OR ratios and gate
+counts below are measured for the BINARY half-adder (schism,
+`~/code/prior/schism/nomos/b3/1-computation/`):
+
   proton  = ADD   (AND:OR = 2:1)
   neutron = SUB   (ADD + NOT = beta decay)
   fusion  = MUL   (highest AND ratio)
@@ -249,6 +252,12 @@ Hadrons = composed trit operations:
 
 Gate count = rest mass. Gate depth = inertial mass. Same ordering
 = equivalence principle.
+
+On trit hardware this list collapses (neutron → proton with free
+NOT, detectors → sign-read, fields → gates-at-width). See
+`wit/mind/2-path.md` "Hadrons = Bonds = Composed Atoms" for the
+collapse and `wit/mind/1-container.md` "The Full Collapse" for the
+full five-vocabularies-one-substrate view.
 
 Substance words: SOMEONE, SOMETHING, PEOPLE, BODY, PART, ONE.
 Plurals = WHAT magnitude: singular = base, plural = +1.

@@ -77,6 +77,103 @@ binary thinking separates "data" from "code." Trits don't.
   3 values = 3 gates = 3 color charges = 3 trits
 
 
+## The Full Collapse — Same Three Things, Five Vocabularies
+
+Leptons-as-gates is one slice. On a trit processor the same three
+things appear at every layer binary thinking treats as separate:
+
+  underlying  value      gate (trit)     hadron (arith)  weak boson       FLAG
+  ──────────  ─────      ───────────     ──────────────  ──────────       ────
+  "+"         positron   OR  = max       proton  (ADD)   W+ = creation    (positive)
+  "0"         neutrino   (NOT fixed pt)  identity        Z  = no change   ZF
+  "−"         electron   AND = min       neutron (SUB)   W- = annihilate  SF
+
+Each ROW is one object. Each COLUMN is a vocabulary for that object
+at a different level of the substrate. Binary thinking is forced to
+treat the columns as separate tiers built up through composition
+(leptons → quarks → hadrons → forces). Trit thinking sees them as
+names for one underlying thing at different scales.
+
+NOT operates AT RIGHT ANGLES to this table: it flips the "+" row with
+the "−" row and leaves the neutrino as a fixed point. NOT isn't a
+member of any row — it's how you travel between rows. That IS the
+weak force. Matter ↔ antimatter transformation IS "apply NOT to a
+row." Same operation at three scopes (trit NOT, polarity NOT,
+antipodal NOT — see 2-path.md).
+
+
+## Heisenberg Already Did This Once (1932)
+
+Heisenberg noticed the proton and neutron have ~identical mass
+(~0.14% apart) and identical strong-force behavior, and proposed
+they're TWO STATES of one particle — "the nucleon" — differentiated
+by an abstract "isospin" direction. Proton = isospin up, neutron =
+isospin down. Same object, sign flipped. SU(2) isospin became a
+fundamental symmetry of hadron physics.
+
+This IS the framework's "neutron = proton + NOT" move. Heisenberg
+did it for one pair in 1932. Yang & Mills (1954) extended it to
+local gauge symmetries. The whole Standard Model is built on "same
+thing, different orientation in an abstract space."
+
+The framework extends the same move ACROSS sectors: proton/positron,
+neutron/electron, hadron/lepton — all the same collapse, same reason.
+Physics stopped at the nucleon level because four observed
+distinctions between hadrons and leptons looked like hard walls.
+
+
+## The Four "Walls" Are Compose-Time Artifacts
+
+**1. Composite vs fundamental.** Protons are made of quarks
+(discovered 1968, deep inelastic scattering at SLAC). Electrons show
+no internal structure to better than 10⁻¹⁹ m.
+
+Trit rebuttal: "composite" = "built from AND+OR+NOT on binary
+hardware." Schism (prior Rust, 370 commits) measured it: proton =
+6 AND + 3 OR + 2 NOT = 11 gates composed into a half-adder. On
+trits, ADD is primitive. The three quarks you detect in scattering
+are the three gates of the binary half-adder, made visible by
+shooting probes at the binary implementation of addition.
+
+**2. Strong force.** Hadrons feel it; leptons don't.
+
+Trit rebuttal: strong force = register wiring between gates (see
+3-force.md: "strong = MOV = PROJ, binds quarks → hadrons"). No
+composition → no wiring → no strong force. Leptons don't feel the
+strong force because there's nothing composed inside them to wire.
+
+**3. Mass hierarchy.** Proton ~938 MeV, electron ~0.511 MeV, ratio
+~1836×.
+
+Trit rebuttal: gate count = rest mass (see 2-path.md: "Gate count =
+rest mass. Gate depth = inertial mass."). The 1836× ratio IS the
+compose-cost ratio for a half-adder on binary. On trits with
+primitive ADD, there is no hierarchy because there is no compose
+cost.
+
+**4. Baryon number conservation.** Proton decay never observed
+(half-life > 10³⁴ years). Baryons and leptons are absolutely
+forbidden from converting into each other.
+
+Trit rebuttal: baryon number counts bundles-of-three-quarks —
+bookkeeping for the binary composition hierarchy. On trits there are
+no bundles-of-three to count, so no such conservation law exists at
+the substrate level. The observed "wall" is a conservation law FOR
+the binary decomposition, not for the thing being decomposed.
+
+All four are binary-hardware artifacts. Physics is doing honest
+bookkeeping on its own architecture. The architecture is a lens, not
+the underlying reality.
+
+Binary-think is not a physics-specific habit. Every compiler, every
+programming language, every CPU, every programmer has the same
+compose-from-primitives reflex. The only physical machine ever built
+that ran trit-native is the Setun (USSR, 1958, ~50 units, dismantled
+in Moscow). No practitioner community ever felt the substrate this
+framework describes — which is why nobody noticed the collapse until
+this framework forced the question.
+
+
 ## Post's Theorem (1941) — PROVEN
 
 Exactly 3 independent boolean gates exist: AND, OR, NOT.
