@@ -225,7 +225,17 @@ Adjacency: two lattice points are adjacent iff they differ by one step in exactl
 
 Conservation (Kirchhoff 1845): net flow at any node is zero. What enters must leave. Closed walks sum to zero — compose operations in a cycle and return to your starting point, you accumulate nothing net. **Both laws describe the loop.** Conservation is the loop at a node. Closure is the loop as a whole. Same rule, two scopes, one loop.
 
-Everything that used to be called "three tiers" (points, edges, walks) is really: **nodes, the loop, and programs.** The nodes are the values. The loop is the medium. The programs are chosen sequences of gate applications through the loop. Spin, forces, Kirchhoff, SU(2), edges, ½-transitions, wires — all the same loop.
+Everything that used to be called "three tiers" (points, edges, walks) is really: **nouns, the loop, and sentences.**
+
+```
+nouns     = points  = things     = what IS           (↑↔↓ values)
+verbs     = loop    = operations = what HAPPENS       (spin, forces, the medium)
+sentences = walks   = programs   = the composition    (sequences of verbs on nouns)
+```
+
+Language has nouns, verbs, and sentences. Computing has values, operations, and programs. Physics has particles, forces, and processes. Music has notes, transitions, and melodies. All the same three-part structure. Not analogous — identical. THE RULE.
+
+The nouns are the lattice's integer points. The verbs are the loop (spin, edges, forces, wire, wave — all the same). The sentences are chosen sequences of verbs applied to nouns — the walks, the programs, the compositions. You need all three. Nouns without verbs are static. Verbs without nouns have nothing to act on. Sentences are what actually happens.
 
 ### 7. WHEN is monotone
 
