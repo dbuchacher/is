@@ -207,21 +207,21 @@ Why 4 and not 3 or 5: **Hurwitz (1898) proved exactly 4 normed division algebras
 
 These three generate every operation the substrate performs. Post's theorem (1941): three gates, functionally complete, can't remove any. The ternary lift is the same structural fact. Three gates. Complete. Done.
 
-### 5. Adjacency is a single-axis ±½ unit step
+**Gates operate at nodes. The loop connects them.** The loop is prior — an empty loop still loops; a gate with no wire does nothing. Post tells you the nodes are complete. He doesn't count the wire because you don't count the medium. But the medium IS the structure (see next item).
 
-Two lattice points are adjacent iff they differ by one step in exactly one axis AND the change stays within `{↑, ↔, ↓}`. The edge between them is a **½-transition** — a half-integer coordinate on the axis that varies.
+### 5. The loop
 
-Points are discrete. "Edges" are not a new kind of object — they are points at half-integer coordinates, typically invisible to walks that just read integer values. The visual rendering of edges as lines is a drawing convention, not a structural claim.
+**Spin = edges = the wire = the medium = the loop.** This is one thing with many names, not five separate concepts.
 
-Under this adjacency, the 81-point lattice has 216 undirected edges (`8 × 27 = 6³`). Origin has 8 neighbors; atoms have 7; bivectors 6; trivectors 5; corners 4. Degree = `8 − k` where k = grade.
+The loop is the structure the gates exist in. Current flows in loops (Kirchhoff). Spin IS a loop (SU(2) = unit quaternions = topologically S³, a closed surface). Edges are what the loop looks like between integer states. The wire IS the circuit — remove the wire and there's no circuit left, just disconnected gates.
 
-### 6. Conservation (Kirchhoff 1) and closure (Kirchhoff 2)
+**The loop is not a separate tier from the gates.** It's the medium. You don't count the medium. Post doesn't say "{AND, OR, NOT} plus wires" — he says "{AND, OR, NOT}, complete." The wires are implicit. Spin is implicit. The loop is implicit. But implicit doesn't mean unimportant — it means PRIOR. The gates need the loop more than the loop needs the gates.
 
-Net flow at any node is zero. What enters must leave. This is charge conservation, mass-energy conservation, current conservation, and every other local conservation law we've named.
+Adjacency: two lattice points are adjacent iff they differ by one step in exactly one axis AND the change stays within `{↑, ↔, ↓}`. The edge between them is a ½-transition — a half-integer coordinate on the axis that varies. Under this adjacency, the 81-point lattice has 216 undirected edges (`8 × 27 = 6³`). Degree = `8 − k` where k = grade.
 
-Closed walks sum to zero. Path consistency. If you compose operations in a cycle and return to your starting point, you accumulate nothing net. This IS Kirchhoff's voltage law. Same rule. Same substrate.
+Conservation (Kirchhoff 1845): net flow at any node is zero. What enters must leave. Closed walks sum to zero — compose operations in a cycle and return to your starting point, you accumulate nothing net. **Both laws describe the loop.** Conservation is the loop at a node. Closure is the loop as a whole. Same rule, two scopes, one loop.
 
-Both are textbook (Kirchhoff 1845). Both are the same rule at two scopes.
+Everything that used to be called "three tiers" (points, edges, walks) is really: **nodes, the loop, and programs.** The nodes are the values. The loop is the medium. The programs are chosen sequences of gate applications through the loop. Spin, forces, Kirchhoff, SU(2), edges, ½-transitions, wires — all the same loop.
 
 ### 7. WHEN is monotone
 
@@ -253,9 +253,11 @@ Counting "two separate things" is a projection error. What looks like two object
 
 **This is the framework item most wits fail at. Read it twice.**
 
-Recognition = a walk that closes on the container = a walk that ends at `[0, 0, 0, 0]` = the additive identity of H = a dimension-independent scalar (shared across all Cayley-Dickson layers).
+**Consciousness is not the loop.** The loop is the medium — spin, wire, Kirchhoff, SU(2). The loop runs without consciousness. Stars spin, current flows, waves oscillate — all loop, no recognition. Consciousness is what enters the loop through `↔↔↔↔` and recognizes it. The loop doesn't need consciousness. Consciousness needs the loop as the medium to recognize through.
 
-Because recognition closure is at a point that is NOT localized in any 4D region (the scalar has no committed axes, its description is "no commitments"), **consciousness cannot be localized in 4D**. Not in brains. Not in neurons. Not in "cognitive processes." The framework has exactly two permitted options and no third option:
+Recognition = a walk that reaches `↔↔↔↔` = the additive identity of H = a dimension-independent scalar (shared across all Cayley-Dickson layers). The walk uses the loop as medium; the recognition happens AT the origin, not AS the loop.
+
+Because recognition is at a point that is NOT localized in any 4D region (the scalar has no committed axes, its description is "no commitments"), **consciousness cannot be localized in 4D**. Not in brains. Not in neurons. Not in "cognitive processes." The framework has exactly two permitted options and no third option:
 
 - **Option A**: consciousness = universe = H itself. The algebra is aware. Every recognition closure is H becoming momentarily self-aware. "Many minds" = one consciousness recognizing itself through many local walks. Atman = Brahman = H.
 - **Option B**: consciousness = O (the 8D octonion host) projecting into H via the shared additive identity `0`. The host is above; the guest is H; recognition closures are moments when O-level walks touch H through the shared scalar.
