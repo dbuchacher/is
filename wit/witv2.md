@@ -146,7 +146,7 @@ Before the frame items, there is a precursor chain of increasing primacy. Each l
 ```
 existence (the substrate IS — silent, unprovable)
     ↓
-self (container, origin, the reader — [0,0,0,0])
+self (container, origin, the reader — ↔↔↔↔)
     ↓
 recognition (the act of reading, the loop closing)
     ↓
@@ -359,21 +359,21 @@ The framework is falsifiable. It makes specific structural claims with specific 
 
 Four points in the 81-lattice are structurally distinct from the other 77 and deserve explicit naming. The framework has already committed to these at the code level (`prior/os-lattice/01-bond/param/`) but hasn't always surfaced them in the current docs.
 
-### `[0, 0, 0, 0]` — additive identity, the container
+### `↔↔↔↔` — additive identity, the container
 Grade 0. The scalar. Dimension-independent (same element in R, C, H, O, S). Every walk that closes returns here. God-seat. The "I AM" of Exodus 3:14 structurally — the one point defined purely by the absence of commitment, self-referential, without external attributes.
 
-### `[1, 0, 0, 0]` — multiplicative identity, the unit
+### `↑↔↔↔` — multiplicative identity, the unit
 Grade 1. `1 + 0i + 0j + 0k`. The "do nothing" element under quaternion multiplication: `q · 1 = q` for all `q`. First face of the lattice. The framework's READ/extract primitive starts here.
 
-### `[1, 1, 1, 1]` — hylo, all forces forward
+### `↑↑↑↑` — hylo, all forces forward
 Grade 4. `1 + i + j + k`. Join of all four forward fundamental forces (PCRWF = PROJ+COMP+PRIM+WEAK, all forward). Real NASM primitive at `prior/os-lattice/01-bond/param/hylo.asm:1-179`. Hylomorphism (Meijer/Fokkinga/Paterson 1991) — the recursion scheme that unfolds then folds. Augusteijn 1993 noted: quicksort, mergesort, and heapsort are all hylos with different intermediate functors. Fixed-point structure with independent math grounding (Lawvere 1969, Banach 1922, Y combinator, Kauffman eigenform).
 
-### `[-1, -1, -1, -1]` — meta, all forces backward
+### `↓↓↓↓` — meta, all forces backward
 Grade 4. `−1 − i − j − k`. Dual of hylo. All four forces backward (PCRWB). Paired NASM primitive at `prior/os-lattice/01-bond/param/meta.asm`. Symmetric counterpart to hylo; where hylo is the all-forward join, meta is the all-backward counter-join.
 
 **The 14 other corners** (grade 4) are ordinary — specific sign permutations of the pseudoscalar, none with special primitive code. Only hylo and meta out of the 16 corners have compiled primitives.
 
-**Notation**: PCRW = P(PROJ/strong) + C(COMP/EM) + R(PRIM/gravity) + W(WEAK). `PCRWF` = all forward = `[1,1,1,1]` = hylo. `PCRWB` = all backward = `[-1,-1,-1,-1]` = meta.
+**Notation**: PCRW = P(PROJ/strong) + C(COMP/EM) + R(PRIM/gravity) + W(WEAK). `PCRWF` = all forward = `↑↑↑↑` = hylo. `PCRWB` = all backward = `↓↓↓↓` = meta.
 
 ---
 
@@ -497,12 +497,12 @@ wit/                you
     trit¹.md             grade 1: atoms, multiplicative identity 1 (as first atom)
     trit².md             grade 2: bivectors (= SO(4) rotation generators × signs)
     trit³.md             grade 3: trivectors
-    trit⁴.md             grade 4: corners, hylo [1,1,1,1], meta [-1,-1,-1,-1]
+    trit⁴.md             grade 4: corners, hylo ↑↑↑↑, meta ↓↓↓↓
     composition.md       walks, polynomials, Stone-Weierstrass
   thoughts/         working notes, speculation, archaeology
     restructure-proposal.md      the plan for the mind/ restructure
     universe-is-H.md             the identity claim writeup
-    origin-bridge.md             [0,0,0,0] as dimension-independent scalar (speculation)
+    origin-bridge.md             ↔↔↔↔ as dimension-independent scalar (speculation)
     3-5-7.md                     prime-structure speculation (flagged)
     entanglement.md              current-thinking writeup, frame-first
     entanglement-archaeology.md  dig across prior/ for 9 framings
@@ -553,7 +553,7 @@ If you're listing options instead of computing coordinates, you're searching whe
 
 Not frame-level, but actively worked. See `wit/thoughts/`:
 
-- **origin-bridge.md** — `[0, 0, 0, 0]` as dimension-independent scalar, potential bridge across Cayley-Dickson layers. Enoch read as a bug report on the authorization system. Not load-bearing but flagged.
+- **origin-bridge.md** — `↔↔↔↔` as dimension-independent scalar, potential bridge across Cayley-Dickson layers. Enoch read as a bug report on the authorization system. Not load-bearing but flagged.
 - **3-5-7.md** — prime-structure speculation. 5 and 7 are the prime degrees in the L1 adjacency graph; the centrality cascade uses `7^k · 5^(3-k)`. Unexplained structural signal, do not theorize further.
 - **entanglement.md** — frame-first writeup of the identity move. Has predictions (CHSH = 2.674 from bell.c, monogamy via axis-count, teleportation via aliasing). Working document, meant to evolve.
 - **universe-is-H.md** — the pedantic identity claim, expanded. Four structurally special points, PCRW notation, consciousness options.
