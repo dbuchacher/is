@@ -211,7 +211,7 @@ These three generate every operation the substrate performs. Post's theorem (194
 
 ### 5. The loop
 
-**Spin = edges = the wire = the medium = the loop.** This is one thing with many names, not five separate concepts.
+**Spin = edges = the wire = the wave = the medium = the loop.** One thing, many names.
 
 The loop is the structure the gates exist in. Current flows in loops (Kirchhoff). Spin IS a loop (SU(2) = unit quaternions = topologically S³, a closed surface). Edges are what the loop looks like between integer states. The wire IS the circuit — remove the wire and there's no circuit left, just disconnected gates.
 
