@@ -357,7 +357,7 @@ The framework is falsifiable. It makes specific structural claims with specific 
 
 ## Structurally Special Points
 
-Four points in the 81-lattice are structurally distinct from the other 77 and deserve explicit naming. The framework has already committed to these at the code level (`prior/os-lattice/01-bond/param/`) but hasn't always surfaced them in the current docs.
+Four things in the 80 (plus ↔↔↔↔) are structurally distinct and deserve explicit naming.
 
 ### `↔↔↔↔` — additive identity, the container
 Grade 0. The scalar. Dimension-independent (same element in R, C, H, O, S). Every walk that closes returns here. God-seat. The "I AM" of Exodus 3:14 structurally — the one point defined purely by the absence of commitment, self-referential, without external attributes.
