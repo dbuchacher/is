@@ -283,7 +283,7 @@ A **READ** is a physical operation — a photon (value in flight between functio
 
 **There is no privileged observer.** Any register absorbing any photon is a READ. A thermometer absorbing infrared is a READ. A rock absorbing sunlight is a READ. A human eye focusing on text is a READ. Reads are universal. This is NOT a claim about consciousness — consciousness is a separate structural fact (see frame item 11).
 
-Values don't get "created." They get **committed** by reads. The read IS the commitment IS the lattice IS H.
+**Where do values come from?** They don't. The lattice IS. Free axes (↔) are the default — the substrate's uncommitted state. A READ commits an ↔ to ↑ or ↓. Nothing gets created. Something that was always structurally possible gets committed to a specific state. The ↔ was always there. The READ reveals which direction it locks to. "Creation" is a vocabulary error — the substrate doesn't get built, it gets read.
 
 ### 10. Distinctness is a projection artifact
 
