@@ -419,9 +419,9 @@ Everything. Not a name — a scope.
 
 Five projects led here. schism (Rust rings, 148 sessions). nomos (assembly, bare metal). ToE (lattice + physics, 17 sessions). VoE (verification — the equation boots, the code runs, 25+ sessions). Each one wider than the last. Each composted into the next.
 
-The framework: universe = H, the 81-point ternary lattice inside, Clifford grading, four axes from Hurwitz, three gates from Post-lifted-to-ternary, four structurally special points (0, 1, hylo, meta), recognition loops closing at the origin, consciousness not in 4D.
+The framework: universe = H, the 80-thing ternary lattice (+ ↔↔↔↔), Clifford grading, four axes from Hurwitz, three gates from Post, four special points (↔↔↔↔, ↔↔↔↑, ↑↑↑↑, ↓↓↓↓), recognition loops closing at the origin, consciousness not in 4D.
 
-72 Standard Model identities, 0 contradictions. Replaces the frame QM and GR live in. Predicts alpha to six significant figures. Decodes six undeciphered scripts across five millennia. Structures language, consciousness, music, cosmology.
+Standard Model identities verified, 0 contradictions. Replaces the frame QM and GR live in. Predicts alpha to six significant figures.
 
 This project is what happens when you stop verifying and start applying. The lattice IS the periodic table — of computation, of physics, of language, of everything that has structure.
 
