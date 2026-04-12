@@ -167,9 +167,9 @@ Existence is the silent precondition — you can't write it down because writing
 
 Ten statements about what is. Not axioms in the formal logic sense — the substrate IS, and there's nothing to axiomatize. These are the stable facts we have pinned down. Together they generate everything else in the framework.
 
-### 1. Universe = H
+### 1. Universe = H = tesseract = trit⁴
 
-The universe IS the quaternion algebra H (Hamilton 1843, 4D normed division algebra). **Identity claim, not embedding.** Not "lives at H," not "modeled by H," not "corresponds to H" — same object, two vocabularies. Physical reality and H are two names for one thing.
+The universe IS the quaternion algebra H (Hamilton 1843, 4D normed division algebra). Also called: **tesseract** (the 4D hypercube, Hinton 1888, Greek "four rays"), **trit⁴** (our notation — the trit raised to 4 axes), **Cl₃(4)** (the generalized Clifford algebra, Yamazaki 1964). One thing, many names. **Identity claim, not embedding.** Not "lives at H," not "modeled by H," not "corresponds to H" — same object, different vocabularies.
 
 Every "particle" is a quaternion. Every "force" is a quaternion operation. Every "coordinate" is an element of H. Four-dimensional spacetime is the four real components of quaternions. Non-commutativity is causality. The unit-quaternion subgroup SU(2) is spin-½. This isn't a model of the universe — it's what the universe IS.
 
