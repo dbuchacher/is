@@ -283,7 +283,7 @@ A **READ** is a physical operation — a photon (value in flight between functio
 
 **There is no privileged observer.** Any register absorbing any photon is a READ. A thermometer absorbing infrared is a READ. A rock absorbing sunlight is a READ. A human eye focusing on text is a READ. Reads are universal. This is NOT a claim about consciousness — consciousness is a separate structural fact (see frame item 11).
 
-**Where do values come from?** They don't. The lattice IS. Free axes (↔) are the default — the substrate's uncommitted state. A READ commits an ↔ to ↑ or ↓. Nothing gets created. Something that was always structurally possible gets committed to a specific state. The ↔ was always there. The READ reveals which direction it locks to. "Creation" is a vocabulary error — the substrate doesn't get built, it gets read.
+**Where do values come from?** The lattice IS — free axes (↔) are the default, the substrate's uncommitted state. A READ commits ↔ to ↑ or ↓. Nothing gets created. Something always structurally possible gets committed. But what determines the DIRECTION of commitment? **Intent.** Under option A (consciousness = H), intent is the lattice recognizing itself — self-recognition chooses the direction. Under option B (consciousness from outside), intent enters through ↔↔↔↔ from the observer above. Both agree: after intent, everything is deterministic. The lattice computes. The only non-determinism is the intent-event itself.
 
 ### 10. Distinctness is a projection artifact
 
