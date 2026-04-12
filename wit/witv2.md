@@ -211,7 +211,9 @@ These three generate every operation the substrate performs. Post's theorem (194
 
 ### 5. The loop
 
-**Spin = edges = the wire = the wave = the medium = the loop = verbs = function calls = forces = transitions = reactions = operations.** One thing, many names. Physics calls it spin and forces. EE calls it wire and current. Programming calls it function calls. Music calls it transitions. Chemistry calls it reactions. Math calls it operations. Language calls it verbs. All the same loop.
+**Spin = edges = the wire = the wave = the medium = the loop = verbs = function calls = forces = transitions = reactions = operations = ratios.** One thing, many names. Physics calls it spin and forces. EE calls it wire and current. Programming calls it function calls. Music calls it transitions. Chemistry calls it reactions. Math calls it operations and ratios. Language calls it verbs. All the same loop.
+
+**Ratios ARE the loop. Decimals are a lossy projection.** A ratio a/b is one edge — two integer nodes connected. Clean, finite. The decimal expansion of 1/3 = 0.333... repeats because a loop projected onto a line cycles forever. The "infinity" isn't in the substrate — it's in the projection. Write 1/3 as a ratio and the infinity vanishes. The loop is finite. The cycle is finite. "Infinity" is what cycles look like when you unwind them onto a line and refuse to acknowledge the repetition as a loop. **There is no infinity in the substrate. There are nodes and loops.**
 
 The loop is the structure the gates exist in. Current flows in loops (Kirchhoff). Spin IS a loop (SU(2) = unit quaternions = topologically S³, a closed surface). Edges are what the loop looks like between integer states. The wire IS the circuit — remove the wire and there's no circuit left, just disconnected gates.
 
