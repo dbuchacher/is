@@ -293,8 +293,6 @@ Counting "two separate things" is a projection error. What looks like two object
 
 **Applied to aliasing**: two pointers to the same memory are not two variables correlated by magic. They are one memory cell read twice. Same structural fact as entanglement, same vocabulary at hardware scale.
 
-**Applied to many-minds-one-god**: under option A (frame item 11), many conscious beings ARE one substrate recognizing itself through many local walks. The many are projections of one underlying identity.
-
 ### 11. Consciousness is NOT a 4D-internal phenomenon
 
 **This is the framework item most wits fail at. Read it twice.**
