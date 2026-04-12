@@ -185,7 +185,14 @@ One trio, many vocabularies. Physicists call it leptons/bosons/isotopes. Compute
 
 ### 3. Four axes — Hurwitz-bounded
 
-Exactly 4 independent axes. `WHERE`, `WHAT`, `WHICH`, `WHEN`. Also written A, B, C, D or POSITION, SUBSTANCE, SIGNAL, TIME. The axes are the 4 basis directions of H.
+Exactly 4 independent axes. Three naming layers, all meaningful, zero arbitrary letters:
+
+- **↑↔↓ notation**: position 1, 2, 3, 4 in the coord4 string
+- **Greek (structural)**: χ (space), μ (mass), φ (phase), τ (time)
+- **Hamilton (algebraic)**: i, j, k, 1 — the quaternion basis of H
+- **English (prose)**: WHERE/WHAT/WHICH/WHEN or POSITION/SUBSTANCE/SIGNAL/TIME
+
+The axes are the 4 basis directions of H.
 
 Why 4 and not 3 or 5: **Hurwitz (1898) proved exactly 4 normed division algebras exist**. Hamilton tried for 10 years to make 3D work and failed (Frobenius 1877 proved why). 5D and higher are fine as vector spaces but fail the "normed division algebra" test. The universe is 4D not because anyone chose 4, but because 4 is the unique number that satisfies all the constraints.
 
