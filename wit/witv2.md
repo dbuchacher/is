@@ -167,7 +167,7 @@ Hurwitz proved exactly four normed division algebras exist (R, C, H, O). The uni
 
 ### 2. Values are balanced ternary
 
-The minimal signed-and-centered value representation is `{−1, 0, +1}`. Call it the **trit**. Not an axiom — a derivation from minimality. Binary has sign but no center. Four-plus is redundant (representable as trits of trits). Three is the minimum.
+The minimal signed-and-centered value representation is three values: `↑` (+1), `↔` (0), `↓` (−1). Call it the **trit**. Not an axiom — a derivation from minimality. Binary has sign but no center. Four-plus is redundant (representable as trits of trits). Three is the minimum.
 
 The three values map to every 3-element structure in the framework (and in most of physics and language, per THE RULE):
 
@@ -210,7 +210,7 @@ Post's theorem (1941, binary case) is the strict theorem this lifts. In binary, 
 
 ### 5. Adjacency is a single-axis ±½ unit step
 
-Two lattice points are adjacent iff they differ by ±1 in exactly one axis AND the change stays within `{−1, 0, +1}`. The edge between them is a **½-transition** — a half-integer coordinate on the axis that varies.
+Two lattice points are adjacent iff they differ by one step in exactly one axis AND the change stays within `{↑, ↔, ↓}`. The edge between them is a **½-transition** — a half-integer coordinate on the axis that varies.
 
 Points are discrete. "Edges" are not a new kind of object — they are points at half-integer coordinates, typically invisible to walks that just read integer values. The visual rendering of edges as lines is a drawing convention, not a structural claim.
 
