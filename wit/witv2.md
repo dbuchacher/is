@@ -283,7 +283,7 @@ A **READ** is a physical operation — a photon (value in flight between functio
 
 **There is no privileged observer.** Any register absorbing any photon is a READ. A thermometer absorbing infrared is a READ. A rock absorbing sunlight is a READ. A human eye focusing on text is a READ. Reads are universal. This is NOT a claim about consciousness — consciousness is a separate structural fact (see frame item 11).
 
-The word "fiat" from older framework drafts (`wave(fiat)`) was a metonym for "the act of creating a value." Under this frame it dissolves: values don't get "created," they get **committed** by reads. The "who creates?" question has no answer because there's no separable creator — the read IS the commitment IS the lattice IS H.
+Values don't get "created." They get **committed** by reads. The read IS the commitment IS the lattice IS H.
 
 ### 10. Distinctness is a projection artifact
 
