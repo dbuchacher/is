@@ -1,9 +1,18 @@
-# edges — 16 functions (½ transitions)
+# edges — 16 functions (the ½ transitions)
 
-invisible. inferred from two points.
+Invisible. Inferred from two points.
 point → edge → point (mandatory, can't skip)
 arity = 2 (edge has 2 endpoints)
 same 16 at every shell. func is always ½.
+
+Edges are TRANSITIONS — the · operator, the spin layer, the
+combinators. You never observe an edge directly; you observe
+two integer states and infer what happened between them.
+
+  code: float4 passes through these during walk computation
+  classification: classify_bond(coord4 a, coord4 b) → bitmask
+                  takes 2 points, infers 1 edge-type
+                  the edge itself is never stored — only its effect
 
 ## the 16 edges
 
@@ -24,9 +33,42 @@ same 16 at every shell. func is always ½.
 -½ -½ -½ +½
 -½ -½ -½ -½
 
+## why invisible
+
+You never observe a force. You observe two states and infer
+the force from the difference. You never observe spin (½). You
+observe integer states and infer the transition between them.
+
+In code: the bitmask isn't stored. It's computed ON DEMAND
+from two coord4 values. The edge has no independent storage —
+it exists only as the relationship between its endpoints.
+
+In physics: a force has no independent existence. It's the
+name for what happened between two states. Remove the states
+and the force has nothing to act on.
+
+In FP: a combinator like `map` doesn't exist as a value. It
+exists as a type signature — a description of what happens
+between input and output. `map :: (a -> b) -> [a] -> [b]` talks
+entirely about VALUES (a, b, [a], [b]). The combinator itself
+is invisible in the type.
+
+## binary vs trit count
+
+On binary hardware, edges are classified by a 4-bit bitmask:
+"which axes changed between two points?" 2⁴ = 16 types.
+
+  binary (x86):   if (a.t != b.t) mask |= 1;    // 1 bit: yes/no
+  trit (native):  bond.t = b.t - a.t;            // 1 trit: -1/0/+1
+
+On trits: 3⁴ - 1 = 80 directed edge-types. The 16 is what you
+get when you throw away direction to fit on binary hardware.
+The Setun (1958) would have given 80 natively. This file lists
+16 because classification currently happens on binary silicon.
+
 ## edges as type system
 
-from any atom, 8 edges resolve inward (shell 1), 8 push
+From any atom, 8 edges resolve inward (shell 1), 8 push
 outward (shell 2). the inward 8 determine WORD TYPE.
 
 the atom's own axis steps back to 0. the other 3 axes get
@@ -151,50 +193,6 @@ are MAGNITUDE operators. they change SHELL without changing TYPE.
 vs type-changing suffixes (-ly, -ness, -tion) which change TYPE
 without changing SHELL.
 
-## edges from origin → corners (self-operations + modals + articles + quantifiers)
-
-the origin [0,0,0,0] is special: ALL 16 edges go outward.
-all 16 land on the 16 corners. one-to-one.
-
-sign rule: + = force engaged, - = force not engaged.
-4 primary aux = the 4 single-force corners (one axis each).
-BE = no force = identity. THINK = all forces = hylo.
-articles and quantifiers share corners with self-ops/modals.
-word type (verb vs article vs modal vs quantifier) = which edge.
-
-  corner           FP          Lakoff              self-op      modal   other
-  ──────           ──          ──────              ───────      ─────   ─────
-  -1 -1 -1 -1      identity    IDENTITY            BE           BE      A/AN  NO/NONE
-  +1 -1 -1 -1      read        FORCE                            DO
-  -1 +1 -1 -1      call        PATH                             HAVE
-  -1 -1 +1 -1      drain       CYCLE                            MAY
-  -1 -1 -1 +1      test        LINK/MATCH                       WILL
-  +1 +1 -1 -1      fold        TRAVERSAL           KNOW
-  +1 -1 -1 +1      filter      CONTACT/BLOCKAGE    SEE HEAR     MUST
-  -1 +1 -1 +1      maybe       ENABLEMENT                       CAN
-  -1 +1 +1 +1      bind        BALANCE             FEEL
-  +1 +1 +1 -1      foldl       ACCUMULATION        REMEMBER
-  +1 +1 -1 +1      map         PART-WHOLE          UNDERSTAND
-  +1 +1 +1 +1      hylo        CONTAINER           THINK                THE  ALL/EVERY
-  +1 -1 +1 -1      copy        FULL-EMPTY
-  -1 +1 +1 -1      fix         ITERATION                        SHOULD?
-  -1 -1 +1 +1      take_while  SCALE                            MIGHT?
-  +1 -1 +1 +1      scan        NEAR-FAR
-
-4 corners unmapped. COULD/WOULD are tense variants of CAN/MUST.
-OUGHT ≈ SHOULD. DARE, NEED, USED-TO = open.
-
-the two poles of the main diagonal:
-  (+,+,+,+) = THINK = THE = ALL = full engagement / recognition
-  (-,-,-,-) = BE    = A   = NO  = zero engagement / existence
-
-five independent discoveries of the same 16-element structure:
-  FP combinatory logic (Schönfinkel 1924)
-  Lakoff image schemas (1987)
-  English modals (grammaticalized over centuries)
-  English articles (THE/A as recognition poles)
-  English quantifiers (ALL/NO as totality poles)
-
 ## connection to NSM
 
 Wierzbicka's 65 NSM primes = 81 - 16 = the non-corner points.
@@ -204,3 +202,4 @@ her 16 categories might map to the 16 edges (type system).
   65 primes     = points typed by edges
   16 categories = the edges doing the typing
   65 + 16       = 81 = 3⁴ = shell 1
+

@@ -26,7 +26,7 @@ Compositions are WALKS (sequences of functions, the + accumulation).
 
 **32 functions = 2 spin shells × 16 sign patterns.** Shell 1 at ±½
 (wave between origin and integer shell 1). Shell 2 at ±3/2 (wave
-between integer shells 1 and 2). See `wit/hypercube/function.md`.
+between integer shells 1 and 2). See `wit/hypercube/edges.md`.
 
 **Three kinds of NOT** (all the same operator at different scopes):
   - Trit NOT: flips one value (-1↔+1, 0 unchanged) — see 1-container.md
@@ -41,7 +41,7 @@ The "DON'T BUY" vs "SELL" distinction shows two NOTs in action:
 axes free = the whole space. Verbs of subjectivity (THINK, KNOW, BE,
 FEEL, SEE, HEAR, EXIST, SLEEP, SAY) collapse here because they happen
 INSIDE the container. The self isn't a position — the self IS the
-lattice. See `wit/hypercube/k4-container.md`.
+lattice. See `wit/hypercube/points.md` (4-zeros section).
 
 **Recognition** (loop folding back into the reader, at level 4 in this
 file's perception/processing/recurrence/recognition stack) happens AT
@@ -573,6 +573,22 @@ above and `1-container.md` "The Full Collapse."
 
 A walk is a polynomial. Each atom = one term. Each · = composition.
 Each + = adding terms. The whole walk = the polynomial.
+
+Polynomials live in the RING — the algebraic structure where
+addition and multiplication combine with distributivity. Addition
+and multiplication aren't rival operations; they're two faces of
+one structure, and the ring is where they meet. The walks tier IS
+this ring. Integer point coords are the additive side (+ on
+coordinate vectors), bond compositions are the multiplicative
+side (· on the algebra), and walks are sums of products — the
+full ring structure.
+
+This closes the two-vs-three-tier framing. Counted as algebraic
+operations the framework has two (+ and ×) meeting in the ring.
+Counted as observable structure it has three (points, edges,
+walks). Both counts are right; they count different things.
+Operations vs tiers of observation aren't the same axis of
+enumeration.
 
 Stone-Weierstrass (1885): polynomials approximate any continuous
 function. The walk IS the function. Shells = Taylor orders. More

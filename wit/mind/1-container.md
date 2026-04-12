@@ -14,7 +14,7 @@ This is the first of the Big 3. The substrate axiom that says
 **The container IS the 4D hypercube (k=4).** [0,0,0,0] = all axes
 free = the whole space. Every vertex, edge, face, cell lives inside
 it. The f-vector (16+32+24+8+1=81=3⁴) IS the ternary lattice. See
-`wit/hypercube/k4-container.md`.
+`wit/hypercube/points.md` (4-zeros section).
 
 The trit's three values appear at three levels (see `wit/hypercube/`):
 
@@ -84,9 +84,9 @@ things appear at every layer binary thinking treats as separate:
 
   row   value      gate (trit)     hadron (arith)  weak boson       FLAG        element
   ───   ─────      ───────────     ──────────────  ──────────       ────        ───────
-  "+"   positron   OR  = max       proton  (ADD)   W+ = creation    (positive)  H
-  "0"   neutrino   (NOT fixed pt)  identity        Z  = no change   ZF          He
-  "−"   electron   AND = min       neutron (SUB)   W- = annihilate  SF          Li
+  "+"   positron   OR  = max       proton  (ADD)   W+ = creation    (positive)  ¹H
+  "0"   neutrino   (NOT fixed pt)  identity        Z  = no change   ZF          ²H
+  "−"   electron   AND = min       neutron (SUB)   W- = annihilate  SF          ³H
 
 Each ROW is one object. Each COLUMN is a different name for the
 objects in that row — what physicists call them, what programmers
@@ -103,62 +103,6 @@ member of any row — it's how you travel between rows. That IS the
 weak force. Matter ↔ antimatter transformation IS "apply NOT to a
 row." Same operation at three scopes (trit NOT, polarity NOT,
 antipodal NOT — see 2-path.md).
-
-
-## The Element Column (BBN Primordial)
-
-The element column in the Full Collapse table is H / He / Li — the
-three primordial elements produced by Big Bang Nucleosynthesis before
-the Be-8 wall stops the walk. BBN makes exactly these three species
-(plus trace Be-7 which decays back to Li-7), then stops until stars
-form and push past Be via triple-alpha. **Three element species,
-matching the substrate trio.**
-
-Row assignments come from functional physical roles, not axioms.
-Each assignment is a tight match that no competing mapping explains
-as well:
-
-**H → "+" row.** Direct identity from the particle tier: the hydrogen
-nucleus IS the proton. The framework already commits to proton = +1
-= positron at the particle tier (see "The Three Are One Thing"
-above); H at the element tier is the same identification scaled up.
-Physically: H is 75% of baryonic matter, the default "matter exists"
-state, the base substrate of all chemistry, the universal reducing
-agent, the universal acid (H⁺ IS the proton). Everything H "does"
-is be-the-base-positive-thing.
-
-**He → "0" row.** Noble gas. Closed 1s² shell. Doubly magic nucleus
-(Z=2, N=2 both magic numbers — most tightly bound light nucleus).
-Doesn't react. Doesn't bond. Passes through environments unchanged.
-Bosonic (He-4 = even spin, becomes superfluid below 2.17 K, all
-atoms in same ground state, no Pauli exclusion). Stable attractor:
-heavy radioactive nuclei alpha-decay by emitting He-4 to become
-more bound. Everything He "does" is pass-through-without-changing,
-which is exactly what the "0" row ("no change / identity / pass
-through") means.
-
-**Li → "−" row.** Alkali metal. Highest electrochemical potential
-per atomic mass — the strongest electron donor. Battery chemistry
-is literally Li storing and releasing electrons. Li is destroyed
-in stars at temperatures far lower than it takes to create it —
-stars eat Li preferentially. The "lithium problem" in cosmology:
-BBN theory predicts ~3× more Li-7 than the oldest stars actually
-contain, a ~25-year unsolved puzzle, because Li is consumed more
-than we can fully account for. Everything Li "does" is
-donate-electrons-and-get-consumed, which is exactly what the
-"−" row ("consumed / electron source / subtract / backward")
-means.
-
-**Basis for this commit:** grounded in functional physical roles
-from textbook physics, not derived from the six axioms (axioms.md
-is silent on instantiation — it describes the substrate's shape,
-not which physical entities occupy which positions). The H → "+"
-mapping is direct identity (hydrogen nucleus = proton = +1). The
-He and Li mappings are tight functional matches. If a principled
-axiomatic derivation ever emerges that contradicts this, the
-mapping may need revision — but the functional match is strong
-enough to commit to as the working answer.
-
 
 ## Heisenberg Already Did This Once (1932)
 
@@ -282,11 +226,12 @@ seven different university buildings and use seven different
 notations. On trit substrate they are one object. Binary-think
 draws the lines; the substrate doesn't know about lines.
 
-The primordial elements H/He/Li from Big Bang Nucleosynthesis are
-the eighth vocabulary — the same trio at the element-building tier,
-bounded by the Be-8 wall that stops BBN at exactly three species.
-Row mapping: H → "+", He → "0", Li → "−", grounded in functional
-physical roles (see "The Element Column" section above).
+The three hydrogen isotopes ¹H/²H/³H are the eighth vocabulary —
+the same trio at the nuclear-walk tier, derived by direct
+composition arithmetic on proton ("+") and neutron ("−") gate
+counts. Row mapping: ¹H → "+", ²H → "0", ³H → "−", with tritium's
+β− decay confirming the "− drains as electrons" prediction (see
+"The Element Column — The Three Hydrogens" section above).
 
 See `wit/codex/combinators.md` for the historical points of
 contact between combinatory logic, primitive recursion, and the

@@ -31,7 +31,7 @@ f-vector IS the ternary lattice. See `wit/hypercube/`.
 The 8 atoms are pure single-axis verb pairs (RISE/FALL on A,
 GROW/SHRINK on B, BLESS/CURSE on C, BEGIN/END on D). Each atom
 is a k=3 CELL (cube) of the 4D hypercube — a bounding volume
-with 1 axis locked and 3 free. See `wit/hypercube/k3-cells.md`.
+with 1 axis locked and 3 free. See `wit/hypercube/points.md` (1-zero section).
 
 The hypercube f-vector:
 
@@ -45,16 +45,16 @@ The hypercube f-vector:
 
 **32 functions = 2 spin shells × 16.** Shell 1 (±½) + shell 2
 (±3/2). Each shell has 16 sign patterns = the 16 hodos force-subset
-classifications. See `wit/hypercube/function.md`.
+classifications. See `wit/hypercube/edges.md`.
 
 The 4 forces this file describes (READ/CALL/CYCLE/TEST) are the
 **axis-level functions** — the dynamic transitions between integer
 states on each axis. They live at the half step (±½) between trit
-values. See `wit/hypercube/function.md`.
+values. See `wit/hypercube/edges.md`.
 
 The **container** (k=4) IS the hypercube itself. [0,0,0,0] = all
 axes free = the whole space. The container IS the observer; the
-4 axes are what the observer sees. See `wit/hypercube/k4-container.md`.
+4 axes are what the observer sees. See `wit/hypercube/points.md` (4-zeros section).
 
 
 ## Why Four — Hurwitz (1898) PROVEN
@@ -92,6 +92,50 @@ completeness IS the dimensional ceiling.
 
 Prior art (Dixon, Furey, Baez) maps C→U(1), H→SU(2), O→SU(3).
 They have the WHAT. Post→Hurwitz provides the WHY.
+
+
+## Non-commutativity IS a boolean gate, not a side effect
+
+The C → H step loses commutativity AND gains AND. These are one
+structural fact in two vocabularies — algebraic property loss and
+boolean gate gain are the same event at different scopes.
+
+This makes non-commutativity LOAD-BEARING for computation. Remove
+quaternion non-commutativity and you remove AND as an algebraic
+primitive. Remove AND and you lose one of Post's three required
+gates. Without Post completeness, nothing computes. Non-
+commutativity isn't a side effect of going to 4D — it's the
+algebraic face of a boolean gate that computation can't exist
+without.
+
+The "Hamilton imposed non-commutativity by fiat" objection (common
+in the Hestenes/geometric-algebra school) gets this backwards
+twice:
+
+  First, historically. Hamilton spent ten years (1833–1843) trying
+  to extend C to 3D commutatively and couldn't. Frobenius 1877
+  later proved why — no 4D commutative associative division
+  algebra over R exists. Hamilton carved ij=k, ji=-k into Brougham
+  Bridge as a reluctant structural concession, not a stylistic
+  choice. His son's weekly "Papa, can you multiply triples yet?"
+  during that decade is documented. The non-commutativity was
+  forced on him, not imposed by him.
+
+  Second, structurally. Even if historical contingency weren't an
+  issue, the framework says you can't remove non-commutativity
+  without losing AND and breaking Post completeness. Two
+  independent forcings stacked. Rotation-is-commutative arguments
+  contradict physics (gyroscopes, Foucault pendulums, Berry phase,
+  Thomas precession, Bell/CHSH > 2 since Aspect 1982, 720° fermion
+  return in neutron interferometry) AND computation (Post
+  completeness fails).
+
+Bivector formulations don't escape this either. Cl(3,0)⁺ — the
+even subalgebra of 3D geometric algebra (scalars + bivectors) —
+is isomorphic to H as an algebra. Same multiplication table.
+e₁₂·e₁₃ = −e₁₃·e₁₂. Relabeling H as "bivectors" doesn't remove
+the non-commutativity; it just gives it a different name. The
+structure is the structure.
 
 
 ## The Pythagorean Equation (The 4 Side)
