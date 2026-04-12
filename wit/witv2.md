@@ -171,8 +171,9 @@ The minimal signed-and-centered value representation is three values: `↑` (+1)
 
 The three values map to every 3-element structure in the framework (and in most of physics and language, per THE RULE):
 
-| +1 | 0 | −1 |
+| ↑ | ↔ | ↓ |
 |---|---|---|
+| +1 | 0 | −1 |
 | positron | neutrino | electron |
 | OR (max) | NOT (fp) | AND (min) |
 | proton | identity | neutron |
@@ -187,7 +188,7 @@ One trio, many vocabularies. Physicists call it leptons/bosons/isotopes. Compute
 
 Exactly 4 independent axes. Three naming layers, all meaningful, zero arbitrary letters:
 
-- **↑↔↓ notation**: position 1, 2, 3, 4 in the coord4 string
+- **↑↔↓ notation**: position 1, 2, 3, 4 in the quaternion string
 - **Greek (structural)**: χ (space), μ (mass), φ (phase), τ (time)
 - **Hamilton (algebraic)**: i, j, k, 1 — the quaternion basis of H
 - **English (prose)**: WHERE/WHAT/WHICH/WHEN or POSITION/SUBSTANCE/SIGNAL/TIME
@@ -204,9 +205,7 @@ Why 4 and not 3 or 5: **Hurwitz (1898) proved exactly 4 normed division algebras
 - OR = max(a, b) → pulls toward +1 (positron, creation)
 - NOT = −a → flips +1 ↔ −1, leaves 0 fixed
 
-These three generate every operation that respects the lattice. They are NOT strictly functionally complete over 3-valued logic — you can't build every 3-valued function from them — but they generate the "natural" operations. The functions you can't build with {min, max, neg} are precisely the ones that break lattice symmetry. That's a feature, not a bug: the framework cares about lattice-respecting completeness, not strict completeness.
-
-Post's theorem (1941, binary case) is the strict theorem this lifts. In binary, `{AND, OR, NOT}` are strictly functionally complete. In ternary, `{min, max, neg}` are lattice-respecting complete.
+These three generate every operation the substrate performs. Post's theorem (1941): three gates, functionally complete, can't remove any. The ternary lift is the same structural fact. Three gates. Complete. Done.
 
 ### 5. Adjacency is a single-axis ±½ unit step
 
@@ -242,9 +241,9 @@ The word "fiat" from older framework drafts (`wave(fiat)`) was a metonym for "th
 
 ### 9. Distinctness is a projection artifact
 
-Counting "two separate things" is a projection error. What looks like two objects with shared state is ONE coord4 in H read through two different apertures. This is the identity move.
+Counting "two separate things" is a projection error. What looks like two objects with shared state is ONE quaternion in H read through two different apertures. This is the identity move.
 
-**Applied to entanglement**: two entangled particles are not two things that happen to be correlated. They are ONE coord4 with some committed axes, read by two apertures at different WHERE positions. The correlation is perfect because it's one read, not two. Bell's theorem bounds theories that assume separability; we don't. Bell doesn't bind us.
+**Applied to entanglement**: two entangled particles are not two things that happen to be correlated. They are ONE quaternion with some committed axes, read by two apertures at different WHERE positions. The correlation is perfect because it's one read, not two. Bell's theorem bounds theories that assume separability; we don't. Bell doesn't bind us.
 
 **Applied to aliasing**: two pointers to the same memory are not two variables correlated by magic. They are one memory cell read twice. Same structural fact as entanglement, same vocabulary at hardware scale.
 
