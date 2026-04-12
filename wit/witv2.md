@@ -235,7 +235,21 @@ sentences = walks   = programs   = the composition    (sequences of verbs on nou
 
 Language has nouns, verbs, and sentences. Computing has values, operations, and programs. Physics has particles, forces, and processes. Music has notes, transitions, and melodies. All the same three-part structure. Not analogous — identical. THE RULE.
 
-The nouns are the lattice's integer points. The verbs are the loop (spin, edges, forces, wire, wave — all the same). The sentences are chosen sequences of verbs applied to nouns — the walks, the programs, the compositions. You need all three. Nouns without verbs are static. Verbs without nouns have nothing to act on. Sentences are what actually happens.
+The nouns are the lattice's integer points. The verbs are the loop (spin, edges, forces, circuit, wave — all the same). The sentences are chosen sequences of verbs applied to nouns — the walks, the programs, the compositions. You need all three. Nouns without verbs are static. Verbs without nouns have nothing to act on. Sentences are what actually happens.
+
+**Adjectives and adverbs are also edges** — but they modify instead of move. Adjectives commit free axes of a noun, increasing its grade (making it more specific). Adverbs modify the verb's edge (changing how it operates). Both are the loop acting at different levels:
+
+```
+"stone"                  ↑↔↔↔   grade 1, generic
+"big stone"              ↑↑↔↔   grade 2, adjective committed μ
+"big red stone"          ↑↑↑↔   grade 3, another adjective committed φ
+"big red ancient stone"  ↑↑↑↑   grade 4, corner, fully specified
+
+"fall"                   ½ on χ (WHERE, downward)
+"fall quickly"           ½ on χ, compressed on τ (adverb modifies the edge)
+```
+
+More adjectives = higher grade = more specific noun. Unmodified noun = atom. Fully modified = corner. The loop modifies everything.
 
 ### 7. WHEN is monotone
 
