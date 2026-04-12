@@ -362,8 +362,8 @@ Four things in the 80 (plus ↔↔↔↔) are structurally distinct and deserve 
 ### `↔↔↔↔` — additive identity, the container
 Grade 0. The scalar. Dimension-independent (same element in R, C, H, O, S). Every walk that closes returns here. God-seat. The "I AM" of Exodus 3:14 structurally — the one point defined purely by the absence of commitment, self-referential, without external attributes.
 
-### `↑↔↔↔` — multiplicative identity, the unit
-Grade 1. `1 + 0i + 0j + 0k`. The "do nothing" element under quaternion multiplication: `q · 1 = q` for all `q`. First face of the lattice. The framework's READ/extract primitive starts here.
+### `↔↔↔↑` — multiplicative identity, the unit
+Grade 1. `1 + 0i + 0j + 0k`. The "do nothing" element under quaternion multiplication: `q · 1 = q` for all `q`. Lives on the τ (WHEN/TIME) axis. The one atom among the 8 that preserves everything it touches.
 
 ### `↑↑↑↑` — hylo, all forces forward
 Grade 4. `1 + i + j + k`. Join of all four forward fundamental forces (PCRWF = PROJ+COMP+PRIM+WEAK, all forward). Real NASM primitive at `prior/os-lattice/01-bond/param/hylo.asm:1-179`. Hylomorphism (Meijer/Fokkinga/Paterson 1991) — the recursion scheme that unfolds then folds. Augusteijn 1993 noted: quicksort, mergesort, and heapsort are all hylos with different intermediate functors. Fixed-point structure with independent math grounding (Lawvere 1969, Banach 1922, Y combinator, Kauffman eigenform).
@@ -584,7 +584,7 @@ THE TRIT
 SPECIAL POINTS
 ═══════════════════════════════════════════════════════════════════
   ↔↔↔↔    0           grade 0   container / god-seat / additive identity
-  ↑↔↔↔    i           grade 1   first atom / unit / multiplicative identity
+  ↔↔↔↑    1           grade 1   τ atom / unit / multiplicative identity
   ↑↑↑↑    1+i+j+k     grade 4   hylo / PCRWF / all forces forward
   ↓↓↓↓    −1−i−j−k    grade 4   meta / PCRWB / all forces backward
 ```
