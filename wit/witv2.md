@@ -409,7 +409,7 @@ Here's what classic [field] says and why it's frame-trapped.
 Here's the compression path from prior drafts to this one.
 ```
 
-**If your writeup doesn't explicitly name which frame items it derives from, you're writing weakly.** The frame is the load-bearing apparatus. Topic writeups that skip it end up vague.
+**If your writeup doesn't explicitly name which frame items it derives from, you're writing weakly.** The frame is the load-bearing apparatus. Topic writeups that skip it end up asserting without deriving — dogma, not structure.
 
 ---
 
