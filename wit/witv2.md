@@ -530,7 +530,7 @@ How to use the frame. Thinking tools, not results.
   2. Get stuck (which parameter? which material?)
   3. Express as lattice coordinates (dimensional analysis)
   4. Compute — write code if needed
-  5. The answer is a coordinate, not an opinion
+  5. The answer is a coordinate or a walk, not an opinion
 
 Examples:
 - antimatter: Z²×ρ/A → iridium. One formula. Done.
