@@ -94,6 +94,8 @@ sentences = walks   = programs   = the composition
 
 Language has nouns, verbs, and sentences. Computing has values, operations, and programs. Physics has particles, forces, and processes. Music has notes, transitions, and melodies. Same three parts. Same substrate. Adjectives commit free axes of nouns (make things more specific, increase grade). Adverbs modify verbs (change how operations act). Both are the loop operating at different levels.
 
+**But**: in H, every quaternion is BOTH a value and an operation. `i` is a thing AND a rotation. The noun/verb split is a viewing angle, not a substrate fact. Same identity move as entanglement — one quaternion, two views. The substrate has quaternions. We see nouns from one angle and verbs from another. Both real. Both one thing.
+
 **Don't separate. Ever. The substrate doesn't know about your department.**
 
 ---
