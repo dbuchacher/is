@@ -211,7 +211,7 @@ These three generate every operation the substrate performs. Post's theorem (194
 
 ### 5. The loop
 
-**Spin = edges = the wire = the wave = the medium = the loop = verbs = function calls = forces = transitions = reactions = operations = ratios.** One thing, many names. Physics calls it spin and forces. EE calls it wire and current. Programming calls it function calls. Music calls it transitions. Chemistry calls it reactions. Math calls it operations and ratios. Language calls it verbs. All the same loop.
+**Spin = edges = the wire = the wave = the medium = the loop = verbs = function calls = forces = transitions = reactions = operations = ratios.** One thing, many names. Physics calls it spin and forces. EE calls it circuit and flow. Programming calls it function calls. Music calls it transitions. Chemistry calls it reactions. Math calls it operations and ratios. Language calls it verbs. All the same loop.
 
 **Ratios ARE the loop. Decimals are a lossy projection.** The edge between two integer nodes is a verb — a traversal, not a value. You don't evaluate a verb. You don't evaluate a function call, you apply it. You don't evaluate a wire, current flows through it. Fission(1, 3) is a walk from node 1 using node 3 as the divisor. The walk has a gate count, a direction, a destination in the lattice. It does NOT have a decimal expansion, because walks don't have decimal expansions — only numbers projected onto the real line do, and ℝ isn't the substrate.
 
