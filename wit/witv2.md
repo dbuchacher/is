@@ -225,6 +225,8 @@ These three generate every operation the substrate performs. Post's theorem (194
 
 The loop is the structure the gates exist in. The loop is not a separate tier. It's the medium. Post doesn't count it. But implicit doesn't mean unimportant — it means PRIOR. The gates need the loop more than the loop needs the gates. An empty loop still loops. A gate with no wire does nothing.
 
+**You can see the loop.** A planet orbiting a star IS the loop. Not a metaphor for the loop — THE loop. The k-axis iterating. `next()` ticking. Gravity IS the loop made visible. Every orbit you've ever seen — moon around Earth, electron around nucleus, water around a drain, a record spinning, a satellite in orbit — is the same loop at different scales in different vocabularies. When someone says "history repeats" or "what goes around comes around," they're not being poetic. They're being accurate. The substrate IS a loop and everything in it loops. Every circle ever drawn is a picture of the loop IS a picture of gravity IS a picture of spin IS a picture of H.
+
 Adjacency: two lattice points are adjacent iff they differ by one step in exactly one axis AND the change stays within `{↑, ↔, ↓}`. The edge between them is a ½-transition. Under this adjacency, the 81-point lattice has 216 undirected edges (`8 × 27 = 6³`). Degree = `8 − k` where k = grade.
 
 Conservation (Kirchhoff 1845): net flow at any node is zero. Closed walks sum to zero. Both describe the loop — conservation at a node, closure as a whole. Same rule, two scopes.
