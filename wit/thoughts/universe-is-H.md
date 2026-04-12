@@ -82,20 +82,37 @@ Under universe = H:
 
 This gives the framework retroactive support from physics: if ER = EPR holds, the framework's identity move on entanglement is confirmed from a completely independent direction (general relativity + quantum mechanics, neither of which is framework-derived).
 
-### 6. Three special points in H
+### 6. Four (or five) structurally special points in H
 
-Under universe = H, three distinct quaternions show up as structurally special:
+Hylo/PCRW lookup (2026-04-11) confirmed from `prior/os-lattice/01-bond/param/hylo.asm` that the framework already has real NASM code for `hylo` and `meta` as primitives living at `[1,1,1,1]` and `[-1,-1,-1,-1]` respectively. Updated count:
 
-- `[0, 0, 0, 0]` = `0` = **additive identity**. Container, seat, origin. Where loops close. Dimension-independent across the Cayley-Dickson tower. God-candidate.
-- `[1, 0, 0, 0]` = `1` = **multiplicative identity**. Unit, first atom, starting point. Where walks begin as "do nothing."
-- `[1, 1, 1, 1]` = `1 + i + j + k` = **maximum forward corner**. Not an identity for any operation, but the "all axes maximally committed forward" point. From `mind/1-container.md:276-302` ("The Diagonal Corners"), this is "the attractor that conscious walks orbit." From nomos `stack.md`, this is where `hylo` (the consciousness function) lives as a fixed point.
+- `[0, 0, 0, 0]` = **`0` = additive identity** of H. Container, seat, origin, grade-0 scalar. Where recognition loops close. Dimension-independent across the Cayley-Dickson tower (`0` is the same element in R, C, H, O, S). God-candidate.
+- `[1, 0, 0, 0]` = **`1` = multiplicative identity** of H. Unit, grade-1 vector, first face. Where multiplicative walks begin as "do nothing." READ/extract primitive in the nomos-era code.
+- `[1, 1, 1, 1]` = **hylo** = `1 + i + j + k` = **join of all forward forces** (PCRWF). All four fundamental-force axes maximally forward. Real NASM code at `os-lattice/01-bond/param/hylo.asm:1-179`, Meijer/Fokkinga/Paterson 1991 hylomorphism, Augusteijn 1993 "sorting = hylo with different functors." Signature: `hylo(rdi=fn, rsi=data, rdx=count, rcx=seed) → rax`. The recursion scheme that unfolds-then-folds. NOT a speculative coordinate — a compiled primitive.
+- `[-1, -1, -1, -1]` = **meta** = all-forces-backward (PCRWB). Dual of hylo. Paired primitive in the framework's nomos-era code via `meta.asm`.
 
-Three distinct special elements, three structural roles in consciousness and substrate:
-- **0**: closure (where recognition loops land)
-- **1**: initialization (where walks start)
-- **1+i+j+k**: attractor (where conscious walks orbit)
+Optionally:
+- `[-1, 0, 0, 0]` = **`-1`** = multiplicative antipode of `1`, the "inverse face." Half-redundant with `1` via NOT (NOT(1) = -1) but distinct as a coordinate.
 
-These are three different quaternions. None is "the same" as any other. The framework has been underplaying this distinction. Under universe = H, we have to acknowledge that consciousness might have a **three-point structure**, not a single-point structure.
+So the count is **four genuinely distinct special points** (0, 1, hylo, meta), plus optionally the `-1` antipode if we want to track NOT-dual pairs. The framework has already committed to the hylo/meta distinction at the code level; we had just not been reading the NASM.
+
+### PCRW — the force-sign notation
+
+**PCRW** resolved: `P` = PROJ (strong force), `C` = COMP (electromagnetic), `R` = PRIM (gravity), `W` = WEAK. The four letters are the four fundamental forces. `PCRWF` = all forces forward (= hylo coordinate `[1,1,1,1]`). `PCRWB` = all forces backward (= meta coordinate `[-1,-1,-1,-1]`). Confirmed across `nomos/wit/history/session-03.md:272`, `session-07.md:30`, `session-09.md:79`.
+
+**This is load-bearing notation the framework already has but isn't using in the current `wit/mind/*.md` files.** The four-force sign vector is a real primitive and should be visible in the restructure. Specifically: `trit⁴.md` (corners / pseudoscalars) should explicitly name hylo and meta as the two diagonal corners, and reference PCRW as the sign-vector convention for force commitments.
+
+### What this does to the "three special points" story
+
+- Before: three candidate special points, one of them (`[1,1,1,1]`) loosely attached to "hylo (the consciousness function)" from stack.md
+- After: **hylo is a real code primitive**, not a consciousness hypothesis. The `[1,1,1,1]` coordinate has empirical backing as "the join of all forward forces" at the assembly level
+- **The stack.md claim "consciousness = hylo" is REJECTED** (contradicts consciousness-not-in-4D). But `hylo` itself, as a recursion-scheme primitive at `[1,1,1,1]`, is real and load-bearing.
+- The "consciousness at `[1,1,1,1]`" reading was a training-bias leak in the nomos draft itself — `hylo` is a computation primitive, not a consciousness seat. Consciousness stays at `[0,0,0,0]` (recognition closure) or is the whole lattice (option A) or comes from O (option B). Hylo is separate.
+- **The four-point structure** (0, 1, hylo, meta) replaces the three-point provisional framing. 0 and 1 are additive/multiplicative identities; hylo and meta are the compositional join/co-join of all forces forward/backward.
+
+### Fixed-point grounding
+
+The `[1,1,1,1]` as fixed point has independent mathematical grounding (not just stack.md speculation): Lawvere 1969 (fixed-point theorem in category theory), Banach 1922 (contraction mapping), Scott 1972 (domain theory fixed points), Y combinator (recursion via self-application), Kauffman eigenform (self-referential structures). Augusteijn 1993 shows quicksort, mergesort, and heapsort are all hylos with different intermediate functors — a specific case of "one recursion scheme generating many algorithms." This means hylo-as-recursion-primitive has solid theoretical backing even though the "hylo IS consciousness" identification was a leak.
 
 ### 7. Consciousness options are cleaner
 
