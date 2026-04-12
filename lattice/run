@@ -1,0 +1,94 @@
+#!/bin/bash
+# run — run the lattice test battery.
+#
+# Usage:
+#   ./run            fast tests only (default, sub-second battery)
+#   ./run slow       include slow tests in tests/passing/slow/ (minutes)
+#   ./run all        alias for `./run slow`
+#
+# For each .w under tests/ and primes/tests/:
+#   1. Assemble with hodos → .bin next to the source
+#   2. Run under lattice → stdout = integer result
+#   3. Compare to expected value from tests/expect.txt + primes/tests/expect.txt
+#   4. Print PASS/FAIL and update counters
+#
+# Framework tests live under tests/. Project-specific tests live
+# under <project>/tests/ (currently just primes/). Each root owns its
+# own expect.txt.
+#
+# expect.txt format, one per line:  <test_name> <expected_integer>
+# Lines starting with # are comments.
+set -e
+
+cd "$(dirname "$0")"
+
+[ -x ./lattice ] || { echo "run: ./lattice not built (try ./build)" >&2; exit 2; }
+[ -x ./hodos ]   || { echo "run: ./hodos not built (try ./build)"   >&2; exit 2; }
+
+# slow-mode flag
+include_slow=0
+if [ "$1" = "slow" ] || [ "$1" = "all" ]; then
+    include_slow=1
+fi
+
+# preflight: show the active SIMD width exactly once
+if [ $include_slow -eq 1 ]; then
+    printf "width: %s  (slow tests included)\n─────────────────\n" "$(./lattice --info)"
+else
+    printf "width: %s\n─────────────────\n" "$(./lattice --info)"
+fi
+
+pass=0
+fail=0
+
+# load expected values from every expect.txt under a tests/ root
+declare -A expect
+for f in tests/expect.txt primes/tests/expect.txt; do
+    [ -f "$f" ] || continue
+    while read -r name val; do
+        [ -z "$name" ] && continue
+        [ "${name:0:1}" = "#" ] && continue
+        expect[$name]=$val
+    done < "$f"
+done
+
+# find walks under every test root; exclude /slow/ unless requested
+walk_list=$(find tests primes/tests -name '*.w' -type f 2>/dev/null | sort)
+if [ $include_slow -eq 0 ]; then
+    walk_list=$(printf "%s\n" "$walk_list" | grep -v '/slow/' || true)
+fi
+
+for w in $walk_list; do
+    name=$(basename "$w" .w)
+    bin="${w%.w}.bin"
+
+    if ! ./hodos "$w" -o "$bin" >/dev/null 2>&1; then
+        echo "FAIL $name  (hodos assemble error)"
+        fail=$((fail+1))
+        continue
+    fi
+
+    got=$(./lattice "$bin" 2>&1) || {
+        echo "FAIL $name  (lattice returned nonzero: $got)"
+        fail=$((fail+1))
+        continue
+    }
+
+    exp=${expect[$name]:-}
+    if [ -z "$exp" ]; then
+        echo "SKIP $name  (no expected value; got $got)"
+        continue
+    fi
+
+    if [ "$got" = "$exp" ]; then
+        echo "PASS $name  $got"
+        pass=$((pass+1))
+    else
+        echo "FAIL $name  expected=$exp got=$got"
+        fail=$((fail+1))
+    fi
+done
+
+echo "─────────────────"
+echo "$pass pass, $fail fail"
+[ $fail -eq 0 ]

@@ -1,0 +1,30 @@
+# lattice framework test expected values
+# format: <test_name> <expected_integer>
+#
+# Project-specific expected values live under that project's own
+# expect.txt (e.g. primes/tests/expect.txt).
+add_16 16
+mul_20 20
+and_8  8
+pyth_lhs_19200 19200
+pyth_rhs_19200 19200
+sacred_year_364 364
+pyth_fill_25 25
+shell1_full_81 81
+mod_14_5_eq_4 4
+div_14_5_eq_2 2
+scratch_rw_42 42
+corners_16 16
+sadd32_test_15 15
+shell1_80 80
+atoms_8 8
+composed_72 72
+faces_24 24
+ssub32_test_neg2 -2
+smod32_test_3 3
+scratch64_roundtrip_42 42
+cd_mul_d2_imag_22 22
+cd_mul_d2_real_neg7 -7
+gcd_12_18_eq_6 6
+gcd64_bond_6 6
+siadd64_test_17 17

@@ -1,0 +1,42 @@
+; gcd.winc — Euclidean GCD on two u64 scratch slots.
+;
+; Contract:
+;   Input:  scratch[60] = a (u64)
+;           scratch[68] = b (u64)
+;   Output: pipeline    = gcd(a, b)
+;   Clobbers: scratch[60], scratch[68], scratch[76]
+;
+; Algorithm: classical Euclidean. While b != 0: (a, b) = (b, a mod b).
+; Edge case `b == 0` is handled at entry — returns a directly.
+; Edge case `a == 0` is handled implicitly: first iteration sets
+; (a, b) = (b, 0) and the `t=0` exit triggers, returning original b.
+;
+; Labels used (must not collide with caller): gcd_loop, gcd_done.
+;
+; Dependencies:
+;   smod64 (|D|=+35) — the 64-bit scratch mod primitive added in Turn 7
+;   sread64 / swrite64 / loop_back / skip_nz / test
+
+; ── edge: b == 0 → return a (gcd(a, 0) = a) ──
+sread64  θ¹ρρ 68
+test     θρ¹ρ  0
+skip_nz  gcd_done
+
+: gcd_loop
+; t = a mod b   (stored in scratch[76] temporarily)
+sread64  θ¹ρρ 60              ; pipeline = a
+smod64   θ¹ρρ 68              ; pipeline = a mod b
+swrite64 θρ¹ρ 76              ; scratch[76] = t
+
+; a = old b
+sread64  θ¹ρρ 68
+swrite64 θρ¹ρ 60              ; scratch[60] = b (new a)
+
+; b = t (new b)
+sread64  θ¹ρρ 76
+swrite64 θρ¹ρ 68              ; scratch[68] = t, pipeline = t
+
+loop_back gcd_loop             ; if t != 0, rewind
+
+: gcd_done
+sread64  θ¹ρρ 60              ; pipeline = final a = gcd(a, b)

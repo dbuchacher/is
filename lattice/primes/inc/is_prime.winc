@@ -1,0 +1,75 @@
+; is_prime.winc — trial-division primality test for a u32 candidate.
+;
+; Contract:
+;   Input  (reads):   scratch[40] = candidate n (u32, ≥ 0)
+;   Output (writes):  pipeline    = 1 if n is prime, 0 otherwise
+;   Temp clobbered:   scratch[44] = composite flag
+;                     scratch[48] = current divisor d
+;
+; Algorithm: classical trial division with √n early exit.
+;   n < 2              → composite
+;   n == 2             → prime
+;   n even  (n > 2)    → composite
+;   n odd,  d = 3,5,..  check while d·d ≤ n:
+;                         if n mod d == 0 → composite, exit
+;                       if no divisor found → prime
+;
+; Uses the new slot-8 bonds: ssub32 (|D|=-17) for `d·d − n` compare,
+; smod32 (|D|=+19) for `n mod d` where d lives in a scratch slot.
+;
+; Labels used (must not collide with the caller's labels):
+;   isprime_odd  isprime_div_loop  isprime_next_d  isprime_end
+
+; ── init: composite = 0 (assume prime) ─────────────
+swrite32 θ¹¹ρ  0  44
+
+; ── edge: n < 2 → composite = 1 ────────────────────
+sread32  θ¹ρρ 40
+lt       θρ¹ρ  2
+swrite32 θρ¹ρ 44                 ; composite = (n < 2) ? 1 : 0
+
+; ── edge: n == 2 → prime, jump to end ──────────────
+sread32  θ¹ρρ 40
+test     θρ¹ρ  2                 ; pipeline = (n == 2) ? 1 : 0
+skip_nz  isprime_end             ; if n == 2, done (composite still 0)
+
+; ── edge: n even (and > 2) → composite ─────────────
+sread32  θ¹ρρ 40
+mod      θρ¹ρ  2
+test     θρ¹ρ  0                 ; pipeline = (n%2 == 0) ? 1 : 0
+skip_z   isprime_odd             ; if n is odd, go to odd-divisor loop
+swrite32 θ¹¹ρ  1  44             ; n is even > 2: composite = 1, pipeline = 1
+skip_nz  isprime_end             ; unconditional (pipeline = 1 from swrite)
+
+: isprime_odd
+; ── inner loop: d = 3, 5, 7, ... while d·d ≤ n ─────
+swrite32 θ¹¹ρ  3  48             ; d = 3
+
+: isprime_div_loop
+; exit if d·d > n
+sread32  θ¹ρρ 48                 ; pipeline = d
+mul      θρρρ                    ; pipeline = d·d
+ssub32   θ¹ρρ 40                 ; pipeline = d·d − n (signed)
+gt       θρ¹ρ  0                 ; pipeline = (d·d > n) ? 1 : 0
+skip_nz  isprime_end             ; exit loop if d·d > n
+
+; check n mod d == 0
+sread32  θ¹ρρ 40                 ; pipeline = n
+smod32   θ¹ρρ 48                 ; pipeline = n mod scratch[48] = n mod d
+test     θρ¹ρ  0                 ; pipeline = (n%d == 0) ? 1 : 0
+skip_z   isprime_next_d          ; if not divisible, try next d
+; else: divisor found → composite
+swrite32 θ¹¹ρ  1  44             ; composite = 1, pipeline = 1
+skip_nz  isprime_end             ; exit
+
+: isprime_next_d
+; d += 2
+sread32  θ¹ρρ 48
+add      θρ¹ρ  2
+swrite32 θρ¹ρ 48                 ; pipeline = new d (always ≥ 5, nonzero)
+loop_back isprime_div_loop        ; unconditional rewind
+
+: isprime_end
+; result = !composite
+sread32  θ¹ρρ 44                 ; pipeline = composite flag
+xor      θρ¹ρ  1                 ; pipeline = composite XOR 1 = !composite

@@ -1,0 +1,8 @@
+# cd project — test expected values
+# format: <test_name> <expected_integer>
+
+# ── d4 (quaternion) sanity ──
+cd_mul_d4_identity_2 2
+cd_mul_d4_i_squared_neg1 -1
+cd_mul_d4_noncommutative_neg1 -1
+cd_mul_d4_norm_4 4

@@ -1,0 +1,115 @@
+; shell_phase1.winc — Tier C phase 1: prime enumeration + cell classification.
+;
+; Contract:
+;   Pre (caller fills):
+;     scratch[164] = N   (u32, number of balanced-ternary digits)
+;     scratch[168] = x_N (u32, inclusive upper bound for candidates)
+;     scratch[60..60+8*(N+1)) = A_z u64 counters, zeroed by caller
+;   Post:
+;     scratch[172] = pi_count (u32, unsigned prime count)
+;     scratch[60..]  = A_z counters (signed = 2 × unsigned per cell)
+;
+;   Clobbered scratch: [40..52] (is_prime),
+;                      [176..200] (decoder state: p, i, z, r, adjust, is_zero)
+;
+;   Labels used (must not collide with caller): phase1_outer,
+;   phase1_decode_loop, phase1_decode_done, phase1_advance.
+;
+; Algorithm:
+;   for n = 2; n ≤ x_N; n++:
+;     if is_prime(n):
+;       pi_count++
+;       decode n as N-digit balanced ternary:
+;         p = n, z = 0
+;         for i = 0..N-1:
+;           r = p mod 3
+;           if r == 0: z++
+;           p = (p + (r/2)) / 3       // (r/2) is 0 for r∈{0,1}, 1 for r=2
+;       A[z] += 2  (signed counterpart doubling)
+;
+; Dependencies:
+;   - is_prime.winc (for primality check per candidate)
+;   - siadd64 bond (|D|=+39) for A[z] += 2 with runtime z
+;   - ssub32 (n vs x_N compare in outer loop)
+;   - sadd32 (decoder: p += adjust and z += is_zero)
+
+; ── init ───────────────────────────────────────────
+swrite32 θ¹¹ρ  0  172            ; pi_count = 0
+swrite32 θ¹¹ρ  2   40            ; n = 2
+
+: phase1_outer
+
+; ── is_prime(n) → pipeline ────────────────────────
+@include is_prime.winc
+
+; if not prime, skip classification
+skip_z   phase1_advance
+
+; ── prime: increment pi_count ─────────────────────
+sread32  θ¹ρρ 172
+add      θρ¹ρ  1
+swrite32 θρ¹ρ 172
+
+; ── decoder init: p = n, i = 0, z = 0 ─────────────
+sread32  θ¹ρρ  40
+swrite32 θρ¹ρ 176                ; scratch[176] = p
+swrite32 θ¹¹ρ  0 180             ; scratch[180] = i
+swrite32 θ¹¹ρ  0 184             ; scratch[184] = z
+
+: phase1_decode_loop
+
+; exit if i >= N
+sread32  θ¹ρρ 180                ; pipeline = i
+ssub32   θ¹ρρ 164                ; pipeline = i - N (signed)
+lt       θρ¹ρ  0                 ; pipeline = (i - N < 0) ? 1 : 0 = (i < N)
+skip_z   phase1_decode_done      ; if (i >= N), exit decoder
+
+; r = p mod 3
+sread32  θ¹ρρ 176
+mod      θρ¹ρ  3                 ; pipeline = r ∈ {0, 1, 2}
+swrite32 θρ¹ρ 188                ; save r
+
+; adjust = r / 2  (0 for r∈{0,1}, 1 for r=2)
+shr      θρ¹ρ  1
+swrite32 θρ¹ρ 192                ; save adjust
+
+; p = (p + adjust) / 3
+sread32  θ¹ρρ 176
+sadd32   θ¹ρρ 192                ; pipeline = p + adjust
+div      θρ¹ρ  3                 ; pipeline = new p
+swrite32 θρ¹ρ 176
+
+; z += (r == 0)
+sread32  θ¹ρρ 188                ; pipeline = r
+test     θρ¹ρ  0                 ; pipeline = (r == 0) ? 1 : 0
+swrite32 θρ¹ρ 196                ; save is_zero
+sread32  θ¹ρρ 184                ; pipeline = z
+sadd32   θ¹ρρ 196                ; pipeline = z + is_zero
+swrite32 θρ¹ρ 184
+
+; i += 1
+sread32  θ¹ρρ 180
+add      θρ¹ρ  1
+swrite32 θρ¹ρ 180                ; pipeline = new i (nonzero, > 0)
+loop_back phase1_decode_loop
+
+: phase1_decode_done
+
+; ── bump A[z] += 2 (signed counterpart) ──────────
+; target_offset = 60 + 8·z
+sread32  θ¹ρρ 184                ; pipeline = z
+shl      θρ¹ρ  3                 ; pipeline = 8·z
+add      θρ¹ρ 60                 ; pipeline = 60 + 8·z = A[z] offset
+siadd64  θρ¹ρ  2                 ; scratch[offset] += 2, pipeline = new value
+
+: phase1_advance
+
+; n += 1
+sread32  θ¹ρρ 40
+add      θρ¹ρ  1
+swrite32 θρ¹ρ 40                 ; n = n + 1
+
+; continue while n ≤ x_N
+ssub32   θ¹ρρ 168                ; pipeline = n − x_N (signed)
+lt       θρ¹ρ  1                 ; pipeline = (n − x_N < 1) = (n ≤ x_N)
+loop_back phase1_outer           ; rewind if n ≤ x_N

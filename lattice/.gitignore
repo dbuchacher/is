@@ -1,0 +1,11 @@
+# build artifacts
+hodos
+lattice
+*.o
+
+# pre-built walk bytecode (regenerable from .w sources via hodos)
+tests/**/*.bin
+primes/tests/**/*.bin
+
+# primality sieve cache (25 MB, built by main.c's ensure_sieve(), regenerates in ~1 sec)
+lattice_sieve.bin

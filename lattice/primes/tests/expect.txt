@@ -1,0 +1,28 @@
+# primes project — test expected values
+# format: <test_name> <expected_integer>
+
+# ── Tier B: prime counting ──
+prime_pi_13 6
+prime_pi_40 12
+prime_pi_121 30
+prime_pi_364 72
+sieve_pi_364 72
+
+# ── Tier C: shell-identity theorem (fast) ──
+gcd_reduce_13 13
+shell_reduce_N3 13
+shell_reduce_N4 5
+shell_gcd_N3 13
+shell_gcd_N4 5
+shell_gcd_N12 91
+shell_gcd_N3_c 13
+shell_gcd_N4_c 5
+shell_gcd_N12_c 91
+
+# ── Tier C: shell-identity theorem (slow, opt-in with ./run slow) ──
+shell_gcd_N17 64570081
+shell_gcd_N18 532171
+shell_gcd_N19 581130733
+shell_gcd_N17_c 64570081
+shell_gcd_N18_c 532171
+shell_gcd_N19_c 581130733

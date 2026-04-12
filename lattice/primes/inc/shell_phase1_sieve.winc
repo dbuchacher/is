@@ -1,0 +1,127 @@
+; shell_phase1_sieve.winc — Tier C phase 1 using the bit-sieve bond.
+;
+; Same contract as shell_phase1.winc but uses `is_prime_bit` bond
+; (C-side bit sieve) instead of `@include is_prime.winc` (walker-side
+; trial division). Also uses HIGHER phase 1 state offsets so A_z
+; counters have room to grow through N=18 without overlap.
+;
+; When to use:
+;   - N ≥ 17 (trial division becomes too slow: ~200s at N=17 scalar)
+;   - Any test where fast prime enumeration matters more than walker
+;     purity. The primality check becomes an O(1) bit lookup.
+;
+; shell_phase1.winc (trial division) stays as the walker-pure
+; variant for N ≤ 12 where speed isn't an issue.
+;
+; Contract:
+;   Pre (caller fills):
+;     scratch[280] = N   (u32, number of balanced-ternary digits)
+;     scratch[284] = x_N (u32, inclusive upper bound for candidates)
+;     scratch[60..60+8·(N+1)) = A_z u64 counters, zeroed by caller
+;   Post:
+;     scratch[288] = pi_count (u32, unsigned prime count)
+;     scratch[60..]  = updated A_z counters (signed = 2× unsigned)
+;
+;   Clobbered scratch: [40]  (candidate n), [292..316) (decoder state)
+;
+; Slot layout:
+;   [40]        candidate counter n (u32)
+;   [60..60+8·(N+1))  A_z counters (u64 each)
+;   [280..284)  N (u32, input)
+;   [284..288)  x_N (u32, input)
+;   [288..292)  pi_count (u32, output)
+;   [292..296)  decoder p (u32)
+;   [296..300)  decoder i (u32)
+;   [300..304)  decoder z (u32)
+;   [304..308)  decoder r (u32)
+;   [308..312)  decoder adjust (u32)
+;   [312..316)  decoder is_zero temp (u32)
+;
+; This layout supports N up to 26 (A_z range fits under offset 280).
+; Bumped from [220..256] at N=20 when A_20 would have collided —
+; 20-byte push gave 7 more N of headroom.
+;
+; Labels used (must not collide with caller): phase1s_outer,
+; phase1s_decode_loop, phase1s_decode_done, phase1s_advance.
+;
+; Dependencies:
+;   - is_prime_bit bond (|D|=+41) — C-side bit sieve lookup
+;   - siadd64 bond (|D|=+39) — dynamic-offset cell counter bump
+
+; ── init ───────────────────────────────────────────
+swrite32 θ¹¹ρ  0 288             ; pi_count = 0
+swrite32 θ¹¹ρ  2  40             ; n = 2
+
+: phase1s_outer
+
+; ── is_prime_bit(n) → pipeline ────────────────────
+sread32  θ¹ρρ 40                 ; pipeline = n
+is_prime_bit θρρρ                ; pipeline = 0 or 1 (C-side bit lookup)
+
+; if not prime, skip classification
+skip_z   phase1s_advance
+
+; ── prime: increment pi_count ─────────────────────
+sread32  θ¹ρρ 288
+add      θρ¹ρ  1
+swrite32 θρ¹ρ 288
+
+; ── decoder init: p = n, i = 0, z = 0 ─────────────
+sread32  θ¹ρρ  40
+swrite32 θρ¹ρ 292                ; p = n
+swrite32 θ¹¹ρ  0 296             ; i = 0
+swrite32 θ¹¹ρ  0 300             ; z = 0
+
+: phase1s_decode_loop
+
+; exit if i >= N
+sread32  θ¹ρρ 296                ; pipeline = i
+ssub32   θ¹ρρ 280                ; pipeline = i - N (signed)
+lt       θρ¹ρ  0                 ; (i < N) ? 1 : 0
+skip_z   phase1s_decode_done     ; exit if i >= N
+
+; r = p mod 3
+sread32  θ¹ρρ 292
+mod      θρ¹ρ  3
+swrite32 θρ¹ρ 304                ; save r
+
+; adjust = r / 2
+shr      θρ¹ρ  1
+swrite32 θρ¹ρ 308                ; save adjust
+
+; p = (p + adjust) / 3
+sread32  θ¹ρρ 292
+sadd32   θ¹ρρ 308
+div      θρ¹ρ  3
+swrite32 θρ¹ρ 292                ; update p
+
+; z += (r == 0)
+sread32  θ¹ρρ 304                ; pipeline = r
+test     θρ¹ρ  0                 ; (r == 0) ? 1 : 0
+swrite32 θρ¹ρ 312                ; save is_zero
+sread32  θ¹ρρ 300                ; pipeline = z
+sadd32   θ¹ρρ 312
+swrite32 θρ¹ρ 300                ; update z
+
+; i += 1
+sread32  θ¹ρρ 296
+add      θρ¹ρ  1
+swrite32 θρ¹ρ 296                ; pipeline = new i (nonzero, > 0)
+loop_back phase1s_decode_loop
+
+: phase1s_decode_done
+
+; ── bump A[z] += 2 ──────────────────────────────
+sread32  θ¹ρρ 300                ; pipeline = z
+shl      θρ¹ρ  3                 ; pipeline = 8·z
+add      θρ¹ρ 60                 ; pipeline = 60 + 8·z = A[z] offset
+siadd64  θρ¹ρ  2                 ; A[z] += 2
+
+: phase1s_advance
+
+sread32  θ¹ρρ 40
+add      θρ¹ρ  1
+swrite32 θρ¹ρ 40                 ; n = n + 1
+ssub32   θ¹ρρ 284                ; pipeline = n - x_N
+lt       θρ¹ρ  1                 ; (n <= x_N) ? 1 : 0
+loop_back phase1s_outer
