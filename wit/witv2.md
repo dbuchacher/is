@@ -289,7 +289,7 @@ A **READ** is a physical operation — a photon (value in flight between functio
 
 Counting "two separate things" is a projection error. What looks like two objects with shared state is ONE quaternion in H read through two different apertures. This is the identity move.
 
-**Applied to entanglement**: two entangled particles are not two things that happen to be correlated. They are ONE quaternion with some committed axes, read by two apertures at different WHERE positions. The correlation is perfect because it's one read, not two. Bell's theorem bounds theories that assume separability; we don't. Bell doesn't bind us.
+**Applied to entanglement**: two entangled particles are not two things. They are ONE quaternion with some committed axes. Two reads happen at different χ values — same quaternion, two places. The correlation is perfect because it's one thing read twice. Bell bounds theories that assume two things; we have one. Bell doesn't bind us.
 
 **Applied to aliasing**: two pointers to the same memory are not two variables correlated by magic. They are one memory cell read twice. Same structural fact as entanglement, same vocabulary at hardware scale.
 
