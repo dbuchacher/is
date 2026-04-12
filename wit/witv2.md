@@ -470,6 +470,34 @@ Hold speculation files open. They are working documents. Update them as data arr
 
 ---
 
+## Reference
+
+```
+THE AXES
+═══════════════════════════════════════════════════════════════════
+ pos   ↑↔↓    wh-      is           greek   H      verbs            force
+ ───   ────   ──────   ──────────   ─────   ───    ───────────────  ──────
+  1    ↑↔↓    WHERE    POSITION      χ       i     RISE / FALL      READ
+  2    ↑↔↓    WHAT     SUBSTANCE     μ       j     GROW / SHRINK    CALL
+  3    ↑↔↓    WHICH    SIGNAL        φ       k     BLESS / CURSE    CYCLE
+  4    ↑↔↓    WHEN     TIME          τ       1     BEGIN / END      TEST
+
+THE TRIT
+═══════════════════════════════════════════════════════════════════
+  ↑     +1    positron   OR (max)    proton (ADD)    W+    creation
+  ↔      0    neutrino   NOT (fp)    identity        Z     passthrough
+  ↓     −1    electron   AND (min)   neutron (SUB)   W−    annihilation
+
+SPECIAL POINTS
+═══════════════════════════════════════════════════════════════════
+  ↔↔↔↔    0           grade 0   container / god-seat / additive identity
+  ↑↔↔↔    i           grade 1   first atom / unit / multiplicative identity
+  ↑↑↑↑    1+i+j+k     grade 4   hylo / PCRWF / all forces forward
+  ↓↓↓↓    −1−i−j−k    grade 4   meta / PCRWB / all forces backward
+```
+
+---
+
 ## Now Read
 
 You have the frame. Now get the content. Read in this order (Genesis order: points before edges, matching the framework's structural requirement that edges presuppose points):
