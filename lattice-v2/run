@@ -1,0 +1,92 @@
+#!/bin/bash
+# run — build + run in QEMU, extract result
+set -e
+cd "$(dirname "$0")"
+
+./build >/dev/null 2>&1
+
+extract_result() {
+    timeout 10 qemu-system-x86_64 \
+        -kernel "$1" \
+        -serial stdio \
+        -monitor none \
+        -nographic \
+        -no-reboot \
+        2>/dev/null | tr -d '\r' | grep '^=' | sed 's/^=//'
+}
+
+inject_walk() {
+    # $1 = walk binary, $2 = output kernel
+    python3 -c "
+import sys, struct
+kernel = bytearray(open('kernel.bin', 'rb').read())
+walk = open('$1', 'rb').read()
+# Find the walk marker: C3 05 08 08 at the start of _walk_data
+marker = bytes([0xC3, 0x05, 0x08, 0x08])
+idx = kernel.find(marker)
+if idx < 0:
+    sys.exit('walk marker not found')
+# Patch walk_len (4 bytes before walk_data)
+struct.pack_into('<I', kernel, idx - 4, len(walk))
+# Patch walk bytes (within the 64KB pre-allocated area)
+kernel[idx:idx+len(walk)] = walk
+# Zero the rest of the default walk area after our walk
+for i in range(len(walk), 4):
+    kernel[idx+i] = 0
+open('$2', 'wb').write(kernel)
+"
+}
+
+if [ "$1" = "test" ] && [ -x ./hodos ]; then
+    pass=0 fail=0
+
+    declare -A expect
+    if [ -f tests/expect.txt ]; then
+        while read -r name val; do
+            [ -z "$name" ] && continue
+            [ "${name:0:1}" = "#" ] && continue
+            expect[$name]=$val
+        done < tests/expect.txt
+    fi
+
+    for w in tests/passing/*.w; do
+        [ -f "$w" ] || continue
+        name=$(basename "$w" .w)
+        bin="${w%.w}.bin"
+
+        if ! ./hodos "$w" -o "$bin" >/dev/null 2>&1; then
+            echo "FAIL $name  (hodos assemble error)"
+            fail=$((fail+1))
+            continue
+        fi
+
+        inject_walk "$bin" kernel_test.bin 2>/dev/null || {
+            echo "FAIL $name  (inject error)"
+            fail=$((fail+1))
+            continue
+        }
+
+        got=$(extract_result kernel_test.bin) || true
+
+        exp=${expect[$name]:-}
+        if [ -z "$exp" ]; then
+            echo "SKIP $name  (no expected value; got $got)"
+            continue
+        fi
+
+        if [ "$got" = "$exp" ]; then
+            echo "PASS $name  $got"
+            pass=$((pass+1))
+        else
+            echo "FAIL $name  expected=$exp got=$got"
+            fail=$((fail+1))
+        fi
+    done
+
+    rm -f kernel_test.bin
+    echo "─────────────────"
+    echo "$pass pass, $fail fail"
+    [ $fail -eq 0 ]
+else
+    extract_result kernel.bin
+fi

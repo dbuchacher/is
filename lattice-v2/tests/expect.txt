@@ -1,0 +1,51 @@
+# lattice-v2 test expectations
+# format: test_name expected_integer
+
+# framework arithmetic
+add_16 16
+mul_20 20
+sub_5 5
+and_8 8
+mod_14_5_eq_4 4
+div_14_5_eq_2 2
+
+# scratch
+scratch_rw_42 42
+scratch64_roundtrip_42 42
+sadd32_test_15 15
+ssub32_test_neg2 -2
+smod32_test_3 3
+siadd64_test_17 17
+gcd_12_18_eq_6 6
+gcd64_bond_6 6
+
+# CD d2
+cd_mul_d2_real_neg7 -7
+cd_mul_d2_imag_22 22
+
+# CD d4
+cd_mul_d4_c_identity_2 2
+cd_mul_d4_c_i_squared_neg1 -1
+cd_mul_d4_c_noncommutative_neg1 -1
+cd_mul_d4_c_norm_4 4
+
+# CD d8
+cd_mul_d8_identity_2 2
+cd_mul_d8_e1_squared_neg1 -1
+cd_mul_d8_norm_8 8
+
+# CD d16
+cd_mul_d16_identity_2 2
+cd_mul_d16_e1_squared_neg1 -1
+cd_mul_d16_norm_16 16
+
+# CD d32
+cd_mul_d32_identity_2 2
+cd_mul_d32_e1_squared_neg1 -1
+cd_mul_d32_norm_32 32
+
+# control flow
+sum_1_to_10_eq_55 55
+
+# zero divisors
+zero_divisors_d16 168

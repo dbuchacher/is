@@ -100,11 +100,38 @@ arg2 from the walk stream. The most-used forms:
     θρ¹ρ    arg0 from pipeline, arg1 = u8, arg2 from pipeline
     θρ²ρ    arg0 from pipeline, arg1 = u32, arg2 from pipeline
     θ²ρρ    arg0 = u32, rest from pipeline
+    θ²²ρ    arg0 = u32, arg1 = u32, arg2 from pipeline
+    θ²²²    arg0 = u32, arg1 = u32, arg2 = u32
     θ³ρρ    arg0 = u64, rest from pipeline
 
 The key idiom is `θρ¹ρ` — "do something to the pipeline with a u8
 literal on the side." Every `pipeline += 1`, `pipeline -= n`,
 `pipeline < bound` pattern uses it.
+
+### Audit rule — u8 offset silent truncation
+
+**Any walk touching walker-scratch offsets > 255 MUST use u32-offset
+encoding forms** (`θ²²ρ`, `θρ²ρ`, `θ²ρρ`, `θ²²²`, etc.). hodos
+encodes u8 args with zero-extension and **no overflow warning**, so
+offsets > 255 silently truncate mod 256. Truncated writes/reads can
+land in usable scratch slots and produce tests that pass by
+coincidence (identical truncation between writer and reader) or
+hang with infinite loops (truncated write colliding with the outer
+loop counter at slot 40).
+
+Two concrete cases discovered at Turn 17/18:
+1. Four Tier D walks (d8 alternative, d16 triple-assoc, two d32
+   walks) had offsets ≥ 256 under `θ¹¹ρ`. Two passed by truncation
+   coincidence; two failed outright. Fixed to `θ²²ρ` / `θ²ρρ` / `θ²²²`.
+2. `shell_phase1_sieve.winc` briefly moved its state slots to
+   [280..316] to support N=20 A_z at [60..228). The decoder-i
+   slot at 296 truncated to `296 & 0xFF = 40`, colliding with the
+   outer loop counter and creating an infinite loop that wasted a
+   ~1.5 hour slow battery run. Reverted to [220..256] layout; N=20
+   serial is skipped (parallel `_c` path is canonical).
+
+If you need state slots > 255, use u32 encoding everywhere — not
+just the "big" offsets. Write/read must agree on the encoding form.
 
 ### Scratch slot conventions (unwritten but followed)
 

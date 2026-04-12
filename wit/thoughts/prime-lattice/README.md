@@ -33,6 +33,19 @@
    `C = 2·π(x_N)`. Refined three-term theorem adopted; N=12
    "Zsygmondy coincidence" narrative retires as systematic
    π-side stripping.
+10. **findings/08-chains-d32-result.md** — `chains_d32 = 3024`,
+    exact chain rate `36/133`, replaces old float "19%" estimate.
+    Cross-thread `2520 = 8!/(2!)⁴` hit with wormhole.
+11. **findings/09-compute-extensions.md** — four new structural
+    datasets: base-3 Wieferich (p=11 only, three-way cross-link
+    with M(x_7) and x_5=121), π-side stripping rarity (1/16 N),
+    Mertens extended to N=18, g-vector invariants revealing
+    Pythagorean pair (5, 25) as the complete N=4 g-vector.
+12. **findings/10-N21-N23-predictions.md** — three-term theorem
+    predictions for N=21 (`402321277`, 13 strips), N=22
+    (`3922632451`, surprise hold), N=23 (`47071589413`, clean hold).
+    Derived via standalone C segmented sieve `code/pi_count.c`.
+    Awaiting Tier F walker verification.
 
 ## Running the code
 

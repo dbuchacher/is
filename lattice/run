@@ -43,7 +43,7 @@ fail=0
 
 # load expected values from every expect.txt under a tests/ root
 declare -A expect
-for f in tests/expect.txt primes/tests/expect.txt; do
+for f in tests/expect.txt primes/tests/expect.txt cd/tests/expect.txt; do
     [ -f "$f" ] || continue
     while read -r name val; do
         [ -z "$name" ] && continue
@@ -53,7 +53,7 @@ for f in tests/expect.txt primes/tests/expect.txt; do
 done
 
 # find walks under every test root; exclude /slow/ unless requested
-walk_list=$(find tests primes/tests -name '*.w' -type f 2>/dev/null | sort)
+walk_list=$(find tests primes/tests cd/tests -name '*.w' -type f 2>/dev/null | sort)
 if [ $include_slow -eq 0 ]; then
     walk_list=$(printf "%s\n" "$walk_list" | grep -v '/slow/' || true)
 fi

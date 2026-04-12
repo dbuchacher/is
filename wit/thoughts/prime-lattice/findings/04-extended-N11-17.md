@@ -1,8 +1,12 @@
 # primes — extended findings at N = 3..17
 
-**Status**: parallel compute across N = 3..17 done. Refined theorem proven
-(gcd arithmetic). Failure pattern identified. Several striking
-coincidences flagged but not explained.
+**Status**: parallel compute across N = 3..17 done. Refined theorem
+identified here in two-term form; later (`findings/07-N19-N20-results.md`)
+refined to three-term form `v_p(g) = max(0, v_p(B) − v_p(C) − max
+v_p(D_z))` after Turn 14 N=20 walker surprise. The "π coincidence"
+at N=12 below is reframed in that later finding as **systematic
+`v_p(C)` stripping**, not coincidence. Original text preserved here
+with retrofit notes inline.
 
 **Code**: `primes_everything.py` next to this file. Parallel via
 multiprocessing across all N simultaneously.
@@ -52,17 +56,30 @@ when `d = 1` (theorem-in-simple-form holds) vs `d > 1` (theorem fails).
 
 ## Why each failure
 
-### N=12: π coincidence
+### N=12: π-side stripping (not "coincidence")
+
+> **Retrofit note** (post-Turn 14): the language below originally
+> framed the 73-stripping as a "coincidence" — Zsygmondy primitive
+> 73 "happening to" also divide π(x_12). The refined three-term
+> theorem `v_p(g) = max(0, v_p(B) − v_p(C) − max v_p(D_z))` shows
+> this is systematic: `v_73(C_12) = 1` because `73 | π(x_12)`, and
+> the formula strips 73 deterministically. See
+> `findings/07-N19-N20-results.md` for the correct framing.
 
 - `x_12 = 2³ · 5 · 7 · 13 · 73`
 - `π(265720) = 23287 = 11 · 29 · 73`
-- `73` divides both `x_12` and `π(x_12)` — gcd(g) loses 73
-- Also `5` divides `C(12, 3) = C(12, 9) = 220 = 2²·5·11` — gcd(g) loses 5
-- Result: `gcd(g) = 91 = 7·13`, losing factors `5` and `73`
+- `73` divides both `x_12` and `π(x_12)` — **v_73(C_12) = 1, so
+  v_73(g) = max(0, 1 − 1 − 0) = 0**; 73 strips from gcd
+- Also `5` divides `C(12, 3) = C(12, 9) = 220 = 2²·5·11` — **max
+  v_5(D_z) ≥ 1, so 5 strips from gcd**
+- Result: `gcd(g) = 91 = 7·13`, losing factors `5` and `73` via
+  two distinct mechanisms (binomial stripping + π-side stripping)
 
-**Structural reason for 73**: `ord_73(3) = 12`, so 73 first appears as
-a divisor of `3^N − 1` at exactly N=12 (by Zsygmondy). And 73 happens to
-also divide the empirically-counted `π(265720)`.
+**Structural reason for 73 appearing in both B and π**: `ord_73(3)
+= 12`, so 73 first appears as a divisor of `3^N − 1` at exactly
+N=12 (by Zsygmondy). The π-side "sharing" is not a separate
+coincidence — it's how π(x_N) factorization interacts with the
+gcd arithmetic. Systematic, not accidental.
 
 ### N=15: old primes in binomial coefficients
 
@@ -97,13 +114,17 @@ from N=4 via the factorization `3^16 − 1 = (3^8 − 1)(3^8 + 1) = ...`.
 
 ## When does the theorem hold?
 
-**Heuristic**: the theorem holds at N when:
-1. `x_N` contains ONLY "new" primes (Zsygmondy-primitive at N), AND
-2. Those primes are too large to divide any `C(N, z)` for odd-parity z, AND
-3. They don't coincidentally divide `π(x_N)`
+**Heuristic**: the theorem's simple form `gcd(g) = odd_part(x_N)`
+holds at N when every odd prime `p` dividing `B_N = 3^N − 1`
+satisfies BOTH:
+1. `max_z v_p(D_z) = 0` — `p` doesn't divide any binomial `C(N, z)`
+   at prime-holding z (Kummer's theorem; holds automatically when
+   `p > N`, AND
+2. `v_p(C_N) = 0` — `p` doesn't divide `π(x_N)`
 
-Condition (2) almost always holds because primitive primes tend to be
-≥ N (Zsygmondy bound). Condition (3) is a statistical accident.
+If either condition fails, the three-term formula strips `p` from
+gcd by `v_p(C_N) + max_z v_p(D_z)` powers. See `findings/07` for
+the complete form.
 
 **Prime N usually holds** (because x_N has few prime factors, mostly
 new/large). In our range: N = 3, 5, 7, 11, 13, 17 all prime, all

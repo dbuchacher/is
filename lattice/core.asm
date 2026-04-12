@@ -39,6 +39,25 @@ extern sieve_max                 ; const uint64_t (SIEVE_MAX from main.c)
 ; ── C-side parallel phase 1 (main.c) called from fn_shell_phase1_c ──
 extern shell_phase1_compute      ; void(uint32_t N, uint32_t x_N, uint64_t *A_out, uint64_t *pi_out)
 
+; ── C-side Cayley-Dickson mul (main.c) called from fn_cd_mul_d{4,8,16,32}_c ──
+extern cd_mul_d4_compute         ; void(const int64_t *a, const int64_t *b, int64_t *out)
+extern cd_mul_d8_compute         ; void(const int64_t *a, const int64_t *b, int64_t *out)
+extern cd_mul_d16_compute        ; void(const int64_t *a, const int64_t *b, int64_t *out)
+extern cd_mul_d32_compute        ; void(const int64_t *a, const int64_t *b, int64_t *out)
+extern zero_divisors_d16_compute ; uint64_t(void) — Tier D.3 probe at d=16
+extern zero_divisors_d32_compute ; uint64_t(void) — Tier D.3 probe at d=32
+extern chains_d16_compute        ; uint64_t(void) — Tier D.4 probe at d=16
+extern chains_d32_compute        ; uint64_t(void) — Tier D.4 probe at d=32 (THE target)
+extern chains_d32_candidates_compute  ; uint64_t(void) — candidate triple count at d=32
+extern cd_mul_d64_compute             ; void(const int64_t *a, const int64_t *b, int64_t *out)
+extern zero_divisors_d64_compute      ; uint64_t(void) — Tier E probe at d=64
+extern chains_d64_compute             ; uint64_t(void) — THE ratio stability test
+extern chains_d64_candidates_compute  ; uint64_t(void) — d64 candidate denominator
+extern cd_mul_d128_compute            ; void(const int64_t *a, const int64_t *b, int64_t *out)
+extern zero_divisors_d128_compute     ; uint64_t(void)
+extern chains_d128_compute            ; uint64_t(void) — the 36 invariant test
+extern chains_d128_candidates_compute ; uint64_t(void)
+
 ; ══════════════════════════════════════════════════════════════
 ; DATA
 ; ══════════════════════════════════════════════════════════════
@@ -271,6 +290,36 @@ bond_dispatch:
     je .d_shellp1c
     cmp eax, 45
     je .d_cdmul_d4
+    cmp eax, 47
+    je .d_cdmul_d8_c
+    cmp eax, 49
+    je .d_cdmul_d4_c
+    cmp eax, 51
+    je .d_cdmul_d16_c
+    cmp eax, 53
+    je .d_zd_d16
+    cmp eax, 55
+    je .d_cdmul_d32_c
+    cmp eax, 57
+    je .d_zd_d32
+    cmp eax, 59
+    je .d_chains_d16
+    cmp eax, 61
+    je .d_chains_d32
+    cmp eax, 63
+    je .d_chains_d32_cands
+    cmp eax, 65
+    je .d_zd_d64
+    cmp eax, 67
+    je .d_chains_d64
+    cmp eax, 69
+    je .d_chains_d64_cands
+    cmp eax, 71
+    je .d_zd_d128
+    cmp eax, 73
+    je .d_chains_d128
+    cmp eax, 75
+    je .d_chains_d128_cands
     lea rax, [fn_wave]
     ret
 .d_eq:
@@ -424,6 +473,66 @@ bond_dispatch:
     ; Integer-exact signed 64-bit imul throughout, 16 muls + 12 adds.
     ; Same scratch-resident IO shape as fn_cd_mul_d2 (d2 base case).
     lea rax, [fn_cd_mul_d4]
+    ret
+.d_cdmul_d8_c:
+    ; |D|=47: C-dispatch octonion multiply (Cayley-Dickson d8).
+    ; Calls main.c's cd_mul_d8_compute(), 64 muls + 56 adds under
+    ; gcc -O3. Input prep for Tier D.3/D.4 theorems.
+    lea rax, [fn_cd_mul_d8_c]
+    ret
+.d_cdmul_d4_c:
+    ; |D|=49: C-dispatch quaternion multiply — cross-val mirror for
+    ; the walker-native fn_cd_mul_d4 (|D|=45). Same exact formula.
+    lea rax, [fn_cd_mul_d4_c]
+    ret
+.d_cdmul_d16_c:
+    ; |D|=51: C-dispatch sedenion multiply (Cayley-Dickson d16).
+    ; CD doubling from d8. Input prep for Tier D.3/D.4 probes.
+    lea rax, [fn_cd_mul_d16_c]
+    ret
+.d_zd_d16:
+    ; |D|=53: Tier D.3 zero-divisor count at d16 via enumeration.
+    ; Returns the count (expected 168) in the pipeline.
+    lea rax, [fn_zero_divisors_d16]
+    ret
+.d_cdmul_d32_c:
+    ; |D|=55: C-dispatch pathion multiply (Cayley-Dickson d32).
+    ; CD doubling from d16. Input prep for the Tier D.3/D.4 payload.
+    lea rax, [fn_cd_mul_d32_c]
+    ret
+.d_zd_d32:
+    ; |D|=57: Tier D.3 zero-divisor count at d32 (expected 2520).
+    lea rax, [fn_zero_divisors_d32]
+    ret
+.d_chains_d16:
+    ; |D|=59: Tier D.4 chain count at d16 (expected 0 per Python).
+    lea rax, [fn_chains_d16]
+    ret
+.d_chains_d32:
+    ; |D|=61: Tier D.4 chain count at d32 — THE Tier D target.
+    ; No expected value; walker output becomes the ground truth.
+    lea rax, [fn_chains_d32]
+    ret
+.d_chains_d32_cands:
+    lea rax, [fn_chains_d32_candidates]
+    ret
+.d_zd_d64:
+    lea rax, [fn_zero_divisors_d64]
+    ret
+.d_chains_d64:
+    lea rax, [fn_chains_d64]
+    ret
+.d_chains_d64_cands:
+    lea rax, [fn_chains_d64_candidates]
+    ret
+.d_zd_d128:
+    lea rax, [fn_zero_divisors_d128]
+    ret
+.d_chains_d128:
+    lea rax, [fn_chains_d128]
+    ret
+.d_chains_d128_cands:
+    lea rax, [fn_chains_d128_candidates]
     ret
 
     ; ── πδ filter/port/add variants ──
@@ -1012,13 +1121,18 @@ fn_cd_mul_d2:
 ;   out[3] = a0·b3 + a1·b2 − a2·b1 + a3·b0
 ;
 ; Register plan: r9..r11/rcx hold a0..a3, r12..r14/rdi hold b0..b3
-; (rdi is free after a_ofs loaded). rbx = scratch temp (pushed,
-; aligns stack). rax = accumulator. r8 = &walk_scratch. rdx = out_ofs.
+; (rdi is free after a_ofs loaded). rbx = scratch temp. rax =
+; accumulator. r8 = &walk_scratch. rdx = out_ofs (preserved).
 ; r15 is walker pipeline, left untouched.
+; r12, r13, r14 are callee-saved (walker uses them for walk ptr /
+; length / end), so we push them. r15 untouched throughout.
 ; ══════════════════════════════════════════════════════════════
 
 fn_cd_mul_d4:
     push rbx                     ; callee-saved, aligns stack
+    push r12                     ; callee-saved (walker: walk ptr)
+    push r13                     ; callee-saved (walker: walk len/flags)
+    push r14                     ; callee-saved (walker: end ptr)
 
     lea r8, [rel walk_scratch]
 
@@ -1094,8 +1208,156 @@ fn_cd_mul_d4:
     add rax, rbx
     mov [r8 + rdx + 24], rax
 
+    pop r14
+    pop r13
+    pop r12
     pop rbx
     xor eax, eax                 ; convention: CD multiplies return 0
+    ret
+
+; ══════════════════════════════════════════════════════════════
+; fn_cd_mul_d4_c — C-dispatch quaternion multiply (|D|=49)
+; fn_cd_mul_d8_c — C-dispatch octonion multiply (|D|=47)
+;
+; Interface matches fn_cd_mul_d4 exactly:
+;   rdi = a_ofs   (scratch offset of input A)
+;   rsi = b_ofs   (scratch offset of input B)
+;   rdx = out_ofs (scratch offset for result)
+;
+; Translates walker-scratch offsets to absolute pointers and calls
+; the C implementation in main.c. d4 uses 4 qwords per operand,
+; d8 uses 8 qwords per operand; same asm prologue both times.
+;
+; Stack: walker's call leaves rsp mod 16 == 8. push rbx aligns.
+; No further stack adjustment needed (no locals; C function takes
+; pointers in registers per SysV ABI).
+; ══════════════════════════════════════════════════════════════
+
+fn_cd_mul_d4_c:
+    push rbx                     ; callee-saved, align stack to 16
+
+    lea rax, [rel walk_scratch]
+    add rdi, rax                 ; rdi = &scratch[a_ofs]
+    add rsi, rax                 ; rsi = &scratch[b_ofs]
+    add rdx, rax                 ; rdx = &scratch[out_ofs]
+
+    call cd_mul_d4_compute wrt ..plt
+
+    pop rbx
+    xor eax, eax
+    ret
+
+fn_cd_mul_d8_c:
+    push rbx                     ; callee-saved, align stack to 16
+
+    lea rax, [rel walk_scratch]
+    add rdi, rax
+    add rsi, rax
+    add rdx, rax
+
+    call cd_mul_d8_compute wrt ..plt
+
+    pop rbx
+    xor eax, eax
+    ret
+
+fn_cd_mul_d16_c:
+    push rbx                     ; callee-saved, align stack to 16
+
+    lea rax, [rel walk_scratch]
+    add rdi, rax
+    add rsi, rax
+    add rdx, rax
+
+    call cd_mul_d16_compute wrt ..plt
+
+    pop rbx
+    xor eax, eax
+    ret
+
+; ══════════════════════════════════════════════════════════════
+; fn_zero_divisors_d16 — Tier D.3 probe (|D|=53)
+;
+; No args needed from the walker — the enumeration space is fixed
+; at d=16 canonical pairs. Calls C function, pipeline receives the
+; integer count on return.
+; ══════════════════════════════════════════════════════════════
+
+fn_zero_divisors_d16:
+    push rbx
+    call zero_divisors_d16_compute wrt ..plt
+    pop rbx
+    ret
+
+fn_cd_mul_d32_c:
+    push rbx
+    lea rax, [rel walk_scratch]
+    add rdi, rax
+    add rsi, rax
+    add rdx, rax
+    call cd_mul_d32_compute wrt ..plt
+    pop rbx
+    xor eax, eax
+    ret
+
+fn_zero_divisors_d32:
+    push rbx
+    call zero_divisors_d32_compute wrt ..plt
+    pop rbx
+    ret
+
+fn_chains_d16:
+    push rbx
+    call chains_d16_compute wrt ..plt
+    pop rbx
+    ret
+
+fn_chains_d32:
+    push rbx
+    call chains_d32_compute wrt ..plt
+    pop rbx
+    ret
+
+fn_chains_d32_candidates:
+    push rbx
+    call chains_d32_candidates_compute wrt ..plt
+    pop rbx
+    ret
+
+fn_zero_divisors_d64:
+    push rbx
+    call zero_divisors_d64_compute wrt ..plt
+    pop rbx
+    ret
+
+fn_chains_d64:
+    push rbx
+    call chains_d64_compute wrt ..plt
+    pop rbx
+    ret
+
+fn_chains_d64_candidates:
+    push rbx
+    call chains_d64_candidates_compute wrt ..plt
+    pop rbx
+    ret
+
+fn_zero_divisors_d128:
+    push rbx
+    call zero_divisors_d128_compute wrt ..plt
+    pop rbx
+    ret
+
+fn_chains_d128:
+    push rbx
+    call chains_d128_compute wrt ..plt
+    pop rbx
+    ret
+
+fn_chains_d128_candidates:
+    push rbx
+    call chains_d128_candidates_compute wrt ..plt
+    pop rbx
     ret
 
 ; ── πδ min ──

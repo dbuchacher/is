@@ -134,6 +134,21 @@ static const struct bond bonds[] = {
     {"is_prime_bit",{0x02, 0x29}, 2},            /* +D=+41 ext: primality lookup via C-side bit sieve */
     {"shell_phase1_c",{0x02, 0x2B}, 2},          /* +D=+43 ext: parallel phase 1 via C OpenMP */
     {"cd_mul_d4",{0x02, 0x2D}, 2},               /* +D=+45 ext: walker-native quaternion multiply */
+    {"cd_mul_d8_c",{0x02, 0x2F}, 2},             /* +D=+47 ext: C-dispatch octonion multiply */
+    {"cd_mul_d4_c",{0x02, 0x31}, 2},             /* +D=+49 ext: C-dispatch quaternion multiply (cross-val) */
+    {"cd_mul_d16_c",{0x02, 0x33}, 2},            /* +D=+51 ext: C-dispatch sedenion multiply */
+    {"zero_divisors_d16",{0x02, 0x35}, 2},       /* +D=+53 ext: Tier D.3 zero-divisor count at d16 */
+    {"cd_mul_d32_c",{0x02, 0x37}, 2},            /* +D=+55 ext: C-dispatch pathion multiply */
+    {"zero_divisors_d32",{0x02, 0x39}, 2},       /* +D=+57 ext: Tier D.3 zero-divisor count at d32 */
+    {"chains_d16",{0x02, 0x3B}, 2},              /* +D=+59 ext: Tier D.4 chain count at d16 */
+    {"chains_d32",{0x02, 0x3D}, 2},              /* +D=+61 ext: Tier D.4 chain count at d32 (THE target) */
+    {"chains_d32_candidates",{0x02, 0x3F}, 2},   /* +D=+63 ext: candidate triple count at d=32 */
+    {"zero_divisors_d64",{0x02, 0x41}, 2},       /* +D=+65 ext: zero-divisor count at d=64 */
+    {"chains_d64",{0x02, 0x43}, 2},              /* +D=+67 ext: chain count at d=64 */
+    {"chains_d64_candidates",{0x02, 0x45}, 2},   /* +D=+69 ext: candidate triple count at d=64 */
+    {"zero_divisors_d128",{0x02, 0x47}, 2},      /* +D=+71 ext: zero-divisor count at d=128 */
+    {"chains_d128",{0x02, 0x49}, 2},             /* +D=+73 ext: the 36 invariant test */
+    {"chains_d128_candidates",{0x02, 0x4B}, 2},  /* +D=+75 ext: candidate count at d=128 */
 
     /* ── memory+test combinations (A and D both odd) ── */
     {"min",     {0x41},       1},                /* +A +D: min(arg0, arg1) */

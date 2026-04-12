@@ -70,8 +70,8 @@ swrite64 θ¹¹ρ 0 180              ; A_15
 swrite64 θ¹¹ρ 0 188              ; A_16
 swrite64 θ¹¹ρ 0 196              ; A_17
 
-swrite32 θ¹¹ρ  17 280            ; N = 17
-swrite32 θ²¹ρ  64570081 284      ; x_N = 64570081
+swrite32 θ¹¹ρ  17 220            ; N = 17
+swrite32 θ²¹ρ  64570081 224      ; x_N = 64570081
 
 ; ══════════════════════════════════════════════════════════
 ; Phase 1: prime enumeration via sieve + cell classification
@@ -81,14 +81,14 @@ swrite32 θ²¹ρ  64570081 284      ; x_N = 64570081
 
 ; After phase 1:
 ;   scratch[60..204] = A_z counters (18 slots)
-;   scratch[288]     = pi_count (expected 3816776)
+;   scratch[228]     = pi_count (expected 3816776)
 
 ; ══════════════════════════════════════════════════════════
 ; Phase 2: per-cell reduction (18 cells for N=17)
 ; ══════════════════════════════════════════════════════════
 
 ; Read pi_count BEFORE overwriting phase 1 state slots
-sread32  θ¹ρρ 288
+sread32  θ¹ρρ 228
 shl      θρ¹ρ  1                 ; pipeline = 2·pi_count = C
 swrite64 θρ¹ρ 40                 ; C at [40..48] (reuses phase 1 n slot)
 

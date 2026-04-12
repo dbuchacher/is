@@ -1,8 +1,44 @@
 # cd project — test expected values
 # format: <test_name> <expected_integer>
 
-# ── d4 (quaternion) sanity ──
+# ── d4 (quaternion) sanity — walker-native ──
 cd_mul_d4_identity_2 2
 cd_mul_d4_i_squared_neg1 -1
 cd_mul_d4_noncommutative_neg1 -1
 cd_mul_d4_norm_4 4
+
+# ── d4 (quaternion) sanity — C dispatch cross-val ──
+cd_mul_d4_c_identity_2 2
+cd_mul_d4_c_i_squared_neg1 -1
+cd_mul_d4_c_noncommutative_neg1 -1
+cd_mul_d4_c_norm_4 4
+
+# ── d8 (octonion) sanity — C dispatch ──
+cd_mul_d8_identity_2 2
+cd_mul_d8_e1_squared_neg1 -1
+cd_mul_d8_alternative_neg1 -1
+cd_mul_d8_norm_8 8
+
+# ── d16 (sedenion) sanity — C dispatch via d8 doubling ──
+cd_mul_d16_identity_2 2
+cd_mul_d16_e1_squared_neg1 -1
+cd_mul_d16_basis_triple_assoc_neg1 -1
+cd_mul_d16_norm_16 16
+
+# ── d32 (pathion) sanity — C dispatch via d16 doubling ──
+cd_mul_d32_identity_2 2
+cd_mul_d32_e1_squared_neg1 -1
+cd_mul_d32_basis_triple_assoc_neg1 -1
+cd_mul_d32_norm_32 32
+
+# ── Tier D.3 zero-divisor probes (canonical form, cross-check vs Python) ──
+zero_divisors_d16 168
+zero_divisors_d32 2520
+
+# ── Tier D.4 chain probes ──
+# chains_d32 / chains_d32_candidates = 3024 / 11172 = 36/133 ≈ 27.07%
+# This is THE exact integer replacement for the old "19% chain rate"
+# float estimate from prior/ToE/wit/findings/c/chain.c.
+chains_d16 0
+chains_d32 3024
+chains_d32_candidates 11172

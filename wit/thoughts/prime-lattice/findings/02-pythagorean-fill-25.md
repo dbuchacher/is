@@ -83,30 +83,42 @@ numbers (see `wit/mind/3-force.md` section "The Pythagorean Equation"):
    9 + 16 = 25     →    Pythagorean lattice fill
 ```
 
-## The four convergences on 25
+## Convergences on 25
 
-The framework already has three independent fields converging on the
-same 25:
+> **Honesty note** (post-session review): the original "four
+> convergences on 25" framing was over-pat. Only ONE hit is an exact
+> integer 25 — the Pythagorean identity at N=4. The others are
+> "approximately 25%" at varying levels of looseness, and the
+> Shannon-Hartley claim (5/27 ≈ 18.5%, NOT 25%) was arithmetically
+> wrong. Revised below with honest precision levels.
 
-1. **Michaelis-Menten (1913, biochemistry)**: 25% substrate saturation
-   optimum (enzymes at maximum efficiency when substrate fills ~¼ of
-   available sites).
+**Exact integer 25 hit:**
 
-2. **Nyquist (1928, sampling)**: to avoid aliasing, sample at 2× the
-   signal frequency. The safe operating margin is ~25% (factor of 2
-   gives quarter-fill headroom).
+1. **Prime density at the 4D hypercube shell 1 (2026)**: the integer
+   equation `20·80·12 = 24·32·25 = 19200` has `25 = 3²+4²` appearing
+   as the exact Pythagorean factor. This is the only hit where the
+   INTEGER 25 appears, not an approximation to 25%.
 
-3. **Shannon-Hartley (1948, information)**: S/N ratio 5/27 for optimal
-   channel capacity, approximately 25%.
+**~25% operating point convergences (different ratios, same neighborhood):**
 
-Three centuries, three fields, same number from three different
-starting points.
+2. **Michaelis-Menten (1913, biochemistry)**: exact ratio is `1/4`
+   (25%) — substrate at half-max velocity when `[S] = K_m`, giving
+   quarter-fill at the onset of saturation. Clean `1/4`, not "25."
 
-**This compute adds a fourth:**
+3. **Nyquist (1928, sampling)**: 2× oversampling → operating margin
+   of "roughly 25%." Depends on definition of margin; the clean
+   integer is the factor of 2, not 25.
 
-4. **Prime density at the 4D hypercube shell 1 (2026)**: the integer
-   equation `20·80·12 = 24·32·25 = 19200` has `25` appearing as the
-   exact Pythagorean factor in the prime distribution at N=4.
+4. ~~**Shannon-Hartley (1948)**~~: previously listed as "S/N = 5/27
+   ≈ 25%." **This was wrong**: `5/27 ≈ 0.185 = 18.5%`, not 25%.
+   Struck. The Shannon-Hartley channel capacity formula doesn't
+   naturally land at 25% under any standard derivation.
+
+**The honest read**: the INTEGER 25 appears exactly once — as the
+Pythagorean fill factor at N=4. The "~25% efficiency" framing is a
+loose family of ratios near 1/4 from different fields. Conflating
+them with the exact integer 25 is decimal-rhyming, not convergence.
+THE FILTER says: flag but don't conflate.
 
 Four independent derivations, same number, same framework origin
 `3² + 4² = 25`.

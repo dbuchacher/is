@@ -8,6 +8,16 @@ derivation and machine-side compute.
 **Derived from**: factorization of `x_18` + binomial-coefficient
 stripping rule from the refined shell-identity theorem.
 
+> **Theorem-history note**: this finding used a **two-term** Kummer
+> form (`v_p(g) = v_p(B) − max v_p(D_z)`) which tracked only
+> binomial stripping. The prediction matched at N=18 because
+> `v_p(C) = 0` for all stripped primes (π(x_18) doesn't share 7 or
+> 13 with B_18). At N=20 (finding 07), the walker surfaced a
+> **three-term** refinement adding `v_p(C)` — the complete form is
+> `v_p(g) = max(0, v_p(B) − v_p(C) − max v_p(D_z))`. The N=18
+> prediction was **right by happy accident** (correct answer, incomplete
+> theorem). See `findings/07-N19-N20-results.md` for the full story.
+
 This is the first time in the prime-lattice quest that the framework
 **predicts a specific integer** before the compute tool produces it.
 Previous results at N=3..17 were either known from Python or
