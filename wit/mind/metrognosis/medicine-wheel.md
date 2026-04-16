@@ -107,6 +107,6 @@ Balance at the hub is the LITERAL claim in the diagram — not a
 framework interpretation we're imposing.
 
 Further reading:
-- `mind/trit-new/wheel.md` — the wheel structure derivation
-- `mind/trit-new/wheel-math.md` — D4 root system and Lie-algebra math
+- `mind/wheel/1-wheel.md` — the wheel structure derivation + D4 math
 - `mind/metrognosis/ezekiel-wheel.md` — Ezekiel's version
+- `mind/metrognosis/hieroglyphs.md` — Egyptian version (9 convergences)

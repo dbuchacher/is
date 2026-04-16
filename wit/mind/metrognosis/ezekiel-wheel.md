@@ -1,7 +1,7 @@
 # Ezekiel's wheel
 
 Ezekiel 1 and 10 describe a wheel-vision that maps, feature-by-feature,
-to the framework's substrate wheel (see `mind/trit-new/wheel.md`). A
+to the framework's substrate wheel (see `mind/wheel/1-wheel.md`). A
 single observer ~6th century BCE recording what he saw by the river
 Chebar.
 
