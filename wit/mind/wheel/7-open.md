@@ -62,6 +62,42 @@ real with refinements. 3+1 pattern is load-bearing.
 
 ---
 
+## Retracted in 2026-04-16b stress-test session
+
+Statistical retest of the "log-depth invariant family" claim from
+the round-2 stress test (the `f8e15ee` commit). Verdict: **noise**.
+
+- Density of n/m fractions with n,m<50 in [0.5, 1] is ~580. Random
+  ratios in this range hit some small fraction within 0.1% with
+  78.5% probability; SM pairs do so at 79.1% (no excess).
+- At 0.005% precision: random ~5.7%, SM ~5.5% (no excess).
+- Direct verification of the 9 specific pairs cited: 4 hold (H/p =
+  8/9, Z/down = 4/5, top/p = 15/17, p/strange = 19/20, W/μ = 6/7),
+  4 are wrong (W/bottom = 9/10 off 3.4%; top/bottom = 15/17 off
+  3.4%; Z/τ = 17/19 off 1.6%; τ/e = 6/7 off 1.8%), 2 weak.
+- Even the verified hits are within statistical expectation.
+
+**What the retraction kills:**
+- The "6/7 = bivectors/wh-words" cross-pair attractor claim.
+- The 9-pair "log-depth invariant family" as evidence.
+- The framing "close 6/7 gap → cascade P1+P13+P14."
+
+**What survives intact:**
+- All individual mass decompositions (Lp = 19+log(4/3)−log(1+7α/2),
+  Le = 22+log(12/5)−log(1+4α/5), and the analogues for every SM
+  particle). These match observation at 10⁻⁵ — real signal.
+- The 17 anchor (5+ independent appearances).
+- P1 working-hypothesis (16 = grade-4 corners).
+- The 19-mystery decomposition (19 = 17+2 = corners+hub +
+  Z2-pair) — internally consistent with proton's individual decomp.
+
+**Methodological lesson.** Pattern-matching small fractions to
+ratios is high-risk because n/m density saturates [0.5, 1]. Future
+"family" claims need explicit randomized null comparison before
+publication. See `wit/mind/moves.md § Anti-patterns` for update.
+
+---
+
 ## Open questions — priority list
 
 These carry forward from the 2026-04-15 session handoff. Each is
@@ -262,30 +298,39 @@ Framework has candidate decompositions (hub+axes=5, D4 roots+2=26,
 F4+trit×wh-words=69) but these are **fitted, not derived**. Derive
 from first principles without knowing observed numbers.
 
-### P13 — Planck mass from substrate alone — PARTIAL (2026-04-16)
+### P13 — Planck mass from substrate alone — STILL OPEN (revised 2026-04-16b)
 
-Framework currently uses m_Planck as input. Updated status:
+Framework currently uses m_Planck as input. Status revised after
+the log-depth retraction (see `6-masses.md § Pairwise log-depth
+ratios — RETRACTED`):
 
 **Relational closure achieved**: `m_P = (12/5) × 10²² × m_electron`.
 Substrate-clean factor (5/12 = (axes+hub)/D4-pairs) with exponent
-22 = 16 + 6 + log(12/5) decomposing as corners + bivectors + shelf
-residual. 0.45% error (inherits from m_e's 5/12 fit).
+22 = 16 + 6 = corners + bivectors. ~0.45% error (inherits from m_e's
+5/12 fit). The relation is CIRCULAR — requires m_e as input.
 
-**Absolute closure still missing**: the relation above is CIRCULAR —
-requires m_e as input. What's needed: a substrate-clean reason for
-the electron Yukawa coupling y_e = m_e/v = 2.08×10⁻⁶. Any one of
-{m_e, m_P, v_Higgs} still has to be scale-set from outside substrate
-integers.
+**Earlier "6/7-gap closes P13" claim withdrawn**. The proton/electron
+log-depth ratio is 0.85415 (matched by α-corrected decomps to 10⁻⁵),
+NOT 6/7 = 0.85714. There's no "gap" to close. The whole "log-depth
+invariant family" turns out to be statistical noise (SM pair hit
+rates at every precision match random hit rates in [0.5, 1]). See
+the retraction section in 6-masses.md.
 
-**The 6/7 invariant gives a constraint**: proton/electron log-depth
-ratio should equal 6/7 exactly if framework fully closes, but
-decomposes to 0.8545 vs 6/7 = 0.8571 (0.3% gap). That gap IS where
-the remaining residual physics lives. Closing P13 requires closing
-this gap.
+**What's actually needed**: substrate-clean derivation of electron
+Yukawa y_e = m_e/v_Higgs = 2.08 × 10⁻⁶. Decomposes as
+y_e = (5/24) × 10⁻⁵ where 5 = axes+hub, 24 = D4-roots, and the 10⁻⁵
+exponent = (electron shelf 22) − (Higgs shelf 17) = 5 = axes+hub
+(coincidence between the 5 in the geometric factor and the 5 in the
+exponent is interesting but not yet derived).
 
-Entangled with P1 (now working-hypothesis). The 19-mystery (P14) also
-cascades through — close the 6/7 gap exactly and all three resolve
-together.
+Any one of {m_e, m_P, v_Higgs} still has to be scale-set from
+outside substrate integers. P13 closure will require either:
+(a) deriving 5/24 × 10⁻⁵ = y_e from substrate alone, or
+(b) deriving Planck mass independently via gravity (α_G = 1 at m_P
+    is a definition, not a derivation).
+
+No clean path open. Entangled with P1 (resolved working-hypothesis,
+16 = grade-4 corners) but P1 doesn't pin absolute scale either.
 
 ### P14 — 19-mystery (proton/Planck ratio) — WORKING HYPOTHESIS (2026-04-16)
 
@@ -303,9 +348,15 @@ shelf = EW shelf + one chirality-commit (CD-doubling step).
 virial factor for QCD confinement geometry. Real baseline is
 `10⁻¹⁹ × (3/4)`.
 
-**New invariant**: `log(m_P/m_p) / log(m_P/m_e) = 6/7` (0.4% error)
-= bivectors/wh-words. Proton-to-electron shelf spacing is locked by
-wheel grade structure, not QCD accident.
+**~~New invariant~~ — RETRACTED 2026-04-16b**: `log(m_P/m_p) /
+log(m_P/m_e) = 6/7` was claimed at 0.4% error. True observed ratio
+is 0.85415, off 0.35% from 6/7 = 0.85714. Statistical retest shows
+the whole "log-depth invariant family" is consistent with noise —
+n/m fractions saturate [0.5, 1] densely enough that random ratios
+hit small fractions ~80% of the time at 0.1% precision. See
+`6-masses.md § Pairwise log-depth ratios — RETRACTED`. The 17+2
+shelf decomposition for proton remains; just the 6/7 ratio claim
+falls.
 
 **QCD confinement scale**: `log₁₀(m_P / Λ_QCD) ≈ 19.79 ≈ 20 − 1/4`
 (trit shelf + one axis-quarter). Proton's π/4 factor = confinement

@@ -817,81 +817,73 @@ locates the electron within the ladder.
                  = 19.110  (observed 19.113)
 ```
 
-### The 6/7 invariant reconsidered
+### Pairwise log-depth ratios — RETRACTED 2026-04-16
+
+A previous pass claimed `Lp / Le = 6/7` (and a "family" of similar
+small-fraction invariants across SM pairs) was a substrate signal.
+Statistical retest kills it.
+
+**Numerical reality.** With α-corrections in both decomps:
 
 ```
-  L_p / L_e = (17 + 2 + log(4/3)) / (16 + 6 + log(12/5))
-            = 19.11 / 22.38
-            = 0.8545   vs   6/7 = 0.8571   (0.3% gap)
+  Lp = 19 + log(4/3) - log(1 + 7α/2) = 19.11399
+  Le = 22 + log(12/5) - log(1 + 4α/5) = 22.37768
+  Lp / Le = 0.85415   matches observed 0.854148 to 6 × 10⁻⁶
 ```
 
-The 6/7 invariant is **almost but not exactly** forced by the two
-substrate decompositions. The 0.3% gap is where residual physics
-still lives — if the framework fully closes, this gap tightens to
-zero and forces one of the decompositions to be adjusted. Suggestive
-path to closing P13 (Planck mass absolute).
+The α-corrected decompositions match observation to 10⁻⁵. So the
+**individual** Lp and Le decompositions are exact-as-tested. The
+**ratio** 0.85415 does not equal 6/7 = 0.85714 (0.35% off) and no
+substrate adjustment of either decomp produces 6/7 without breaking
+the observed mass. The closer fraction `41/48 = 1 − wh-words/F4 =
+0.85417` matches at 0.002%, but see noise check below.
 
-## Log-depth invariant family
-
-The 6/7 = proton/electron log-depth ratio turns out to be part of a
-**family of substrate-clean log-depth invariants** across SM particle
-pairs. Computed across all major pairs using the mass ladder values
-in the table above.
-
-### Strongest hits (< 0.1% error)
+**Statistical noise check.** Distinct n/m fractions with n,m < 50 in
+[0.5, 1] number ~580. Density gives:
 
 ```
-  pair            ratio       fraction   error    semantic
-  ────            ─────       ────────   ─────    ────────
-  W / bottom      0.8999      9/10       0.01%    tightest
-  H / proton      0.8891      8/9        0.02%    atoms / (atoms+hub)
-  Z / down        0.7997      4/5        0.04%    axes / (axes+hub)
-  top / bottom    0.8827      15/17      0.03%    15 = SU(4) gens,
-                                                   17 = EW shelf
-  top / proton    0.8817      15/17      0.07%    same family
-  Z / tau         0.8950      17/19      0.03%    EW-shelf / proton-shelf
-  Z / charm       0.8950      17/19      0.03%    (tau=charm degenerate
-                                                   at log-depth 19.14)
-  proton/strange  0.9498      19/20      0.02%    N=3 shelf / (4×5)
-  W / muon        0.8564      6/7        0.08%    bivectors / wh-words
+  precision   random-hit rate   SM-pair hit rate (91 pairs)
+  ─────────   ───────────────   ──────────────────────────
+  0.10%       78.5%             79.1%   ← session-handoff regime
+  0.05%       52.7%             56.0%
+  0.02%       22.6%             21.0%
+  0.01%       11.2%             11.0%
+  0.005%       5.7%              5.5%
 ```
 
-### The 6/7 family (three pairs converge)
+**The SM hit-rate at every precision level matches what you get from
+random ratios in [0.5, 1].** The "9 pairs at <0.1%" cited in the
+session-2026-04-16 handoff (W/bottom, H/proton, Z/down, top/bottom,
+top/proton, Z/tau, Z/charm, proton/strange, W/muon, plus the 6/7
+family) is **statistically indistinguishable from chance**. Several
+of the specific claims (W/bottom = 9/10, top/bottom = 15/17,
+Z/tau = 17/19, tau/electron = 6/7) are also off by 1-3% on direct
+verification — they were errors compounded with noise.
 
-```
-  W / muon        6/7      0.08%   gauge/gen-2
-  tau / electron  6/7      0.22%   gen-3 lepton / gen-1 lepton
-  proton / e      6/7      0.38%   hadron / lepton
-```
+**What survives.**
+- Individual mass decompositions (Lp = 19 + log(4/3) − log(1+7α/2),
+  Le = 22 + log(12/5) − log(1+4α/5), and the analogous formulas for
+  every SM particle in `6-masses.md`) remain real signal — each one
+  is a specific substrate-tied prediction matching observation at
+  sub-1%.
+- The 17 anchor (5+ independent appearances in α, m_p/m_e, lepton
+  ratios, top/charm, EW hierarchy) is genuine.
+- The 16-baseline grade-4 reading (P1) remains genuine.
 
-**6/7 = bivectors/wh-words is a grade-structure attractor**: whenever
-one particle sits at the "17+2 hadron/confinement shelf" and the
-other at the "22 = 16+6+… lepton shelf," the log-depth ratio locks
-to 6/7. Not a coincidence — structural.
+**What was wrong.** The "log-depth invariant family" was a pattern
+overlaid on noise. Density of small-integer fractions near 0.85 is
+~one hit per 10⁻³ of ratio space; random ratios near there hit
+small fractions ~80% of the time at 0.1% precision. The framework's
+real strength is per-particle decomposition, not pairwise ratio
+locking.
 
-### Pattern observations
-
-- **17 and 19 are log-depth anchors.** 17 = (corners+hub) = EW shelf.
-  19 = 17+2 = proton/hadron shelf. These appear as denominators in
-  Z/tau=17/19, top/bottom=15/17, top/proton=15/17.
-- **15/17 governs up-type quark generation-climbing.** u→c, c→t,
-  t→b all pattern on 15/17.
-- **N=3 shelf particles are log-degenerate.** proton, neutron, tau,
-  charm all cluster at 19.1 (consistent with the 4/3-virial shelf
-  reading) — any ratio between them is ≈1 and carries no substrate
-  content.
-- **Small-integer fractions dominate.** 4/5, 6/7, 8/9, 9/10, 15/17,
-  17/19 all appear. Consecutive-integer fractions (n/(n+1)) are
-  common: 4/5, 8/9, 9/10, 15/17 all consecutive-pairs with substrate
-  meaning.
-
-### Semantic reading
-
-Particle log-depths aren't arbitrary numbers — they're grade-
-structure locked. Every particle pair's log-depth ratio picks from
-the same small substrate dictionary. The mass ladder isn't just a
-convenient parameterization; it's **the grade-structure of the
-wheel manifesting as observable mass**.
+**P13 implication.** Closing the 6/7 gap was framed as cascading P13
+(Planck mass absolute). It does not — there's no gap to close
+because 6/7 isn't the true ratio, and individual decomps already
+match observation. P13 needs an independent attack (e.g., deriving
+electron Yukawa y_e = 5/24 × 10⁻⁵ from the gap between EW shelf
+(N_sub=1) and electron shelf (N_sub=6), where 5 = (electron shelf) −
+(EW shelf) = axes+hub).
 
 ## Proton factor — π/3 reparameterization (semantic)
 

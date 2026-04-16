@@ -322,6 +322,21 @@ Method.md Step 10. Honest flags are data. If no clean substrate
 form emerges after trying all 8 method.md forms, write "no clean
 form found yet" and move on.
 
+### Don't claim invariant families without a noise null
+
+Pattern-matching small fractions n/m to ratios in [0.5, 1] is
+high-risk: there are ~580 distinct n/m with n,m<50 in that range,
+so random ratios hit some small fraction within 0.1% with ~80%
+probability and within 0.005% with ~5.7%. Per-particle mass
+formulas (where each side decomposes into specific substrate
+counts) are real signal. Pairwise ratio "families" need an explicit
+randomized null comparison before publication. The 2026-04-16b
+retraction of the "log-depth invariant family" came from skipping
+this check; SM pair hit-rates at every precision matched random
+hit-rates exactly. See `wit/mind/wheel/6-masses.md § Pairwise
+log-depth ratios — RETRACTED` and `7-open.md § Retracted in
+2026-04-16b`.
+
 ### Don't conflate scopes
 
 H-internal 4 axes vs S-peer 4 H's are different. Medicine wheel
