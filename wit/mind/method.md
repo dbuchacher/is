@@ -1,9 +1,16 @@
-# Methodology — how to derive physical constants from framework
+# Method — deriving decimals from substrate
 
-Companion to `session-2026-04-15.md`. This file captures **exactly
-how** I approached deriving Standard Model parameters from framework
-substrate. Written because another wit attempted it and didn't
-come close — the difference is method.
+Given any decimal (physical constant, astronomical ratio, biological
+ratio, anything measured), find its framework-substrate form. This
+procedure works regardless of domain.
+
+Read `mind/wheel/1-wheel.md` through `mind/wheel/6-masses.md` first.
+The wheel framework is the vocabulary; this file is the procedure.
+
+Written because a wit attempted it and didn't come close — the
+difference is method. Written up after the wheel-pivot session
+(2026-04-15) succeeded in deriving 30+ Standard Model parameters
+at sub-1% precision.
 
 ## Before you start: the mindset
 
