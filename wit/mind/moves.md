@@ -337,6 +337,48 @@ hit-rates exactly. See `wit/mind/wheel/6-masses.md § Pairwise
 log-depth ratios — RETRACTED` and `7-open.md § Retracted in
 2026-04-16b`.
 
+### Don't claim "X near substrate-clean Y" without a local-density null
+
+Same pattern, distance-not-ratio version. Two contexts where this
+goes wrong:
+
+- **Small magnitudes**: substrate-clean integer set (1, 3, 4, 5,
+  6, 7, 8, 12, 16, 17, 24, 32, 42, 48, 72, 80, 108, 120, 137, 168,
+  192, 240, ...) plus pairwise/triple products fills the small
+  integers densely. Almost any small integer is "within 2 of
+  something clean." A hit at p ≈ 1000 carries ~50% information at
+  best.
+- **Large magnitudes**: the same set is sparse. A hit at p ≈ 10⁶
+  carries ~99.9% information — but only if you actually find one.
+
+The 2026-04-16c retraction of the Wieferich-substrate claim came
+from missing this: 1093 (base-2 Wieferich) was claimed
+substrate-adjacent because 1092 = 12·7·13. Local density at p~1000
+makes that claim noise. The base-3 Wieferich attack confirmed:
+p=11 hits in a 100%-adjacency regime (zero info), p=1,006,003
+misses in a 0.1%-adjacency regime (decisive miss against the
+prediction).
+
+Rule: any "X is near a substrate-clean integer" claim must report
+the local-density baseline. Signal is the EXCESS over the local
+rate, not the adjacency itself. See `wit/mind/metrognosis/prime-
+lattice.md § Wieferich primes — RETRACTED`.
+
+### Don't formula-fit when measurement uncertainty exceeds candidate spread
+
+Specific to the 2026-04-16c P10 attack: η_B has ~0.7% Planck CMB
+measurement uncertainty. Multiple substrate-clean formulas
+(α⁴×√3/8, α⁴×(5/24+α), α⁴×log(2)/3×exp(−10α)) land within 1% of
+observed — but you can't distinguish them from each other or from
+chance in the substrate pool, because the measurement floor is
+right at that level. When candidate spread is comparable to
+measurement uncertainty, formula-fitting yields nothing; only a
+mechanism-first derivation can.
+
+Check the measurement uncertainty BEFORE attacking with formulas.
+If the framework's precision bar (≤0.1%) is below measurement
+floor, attack the mechanism, not the number.
+
 ### Don't conflate scopes
 
 H-internal 4 axes vs S-peer 4 H's are different. Medicine wheel

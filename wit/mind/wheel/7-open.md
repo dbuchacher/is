@@ -62,6 +62,49 @@ real with refinements. 3+1 pattern is load-bearing.
 
 ---
 
+## 2026-04-16c — 5-agent parallel sweep results
+
+Fired 5 parallel agents on the revised priority list (post-16b
+retraction). Each ran with mandatory noise-null discipline. Net
+outcome: **1 partial resolution, 0 closures, 1 retraction
+kickback, 3 honest no-signals**. Framework got marginally sharper
+on E8 embedding; otherwise leveled.
+
+| # | Question | Verdict |
+|---|----------|---------|
+| P2 | E8 embedding | **PARTIAL** — clean at irrep level via E8 ⊃ SO(16) ⊃ SO(10) × SU(4)_PS. Per-particle assignment is wrong question. Dark sector reading needs revision (192 is mostly heavy gauge, not stable DM). |
+| P10 | CP violation magnitude | **NO PROGRESS** — multiple sub-1% candidates (α⁴×√3/8, α⁴×(5/24+α)) all consistent with substrate-pool chance. η_B has 0.7% measurement uncertainty; can't beat noise floor by formula-fitting. |
+| P4 | Running α(Q²) | **NO PROGRESS** — substrate naming consistent (3 in 1/(3π) = trit, etc.) but no derivation. 1/(3π) has substrate-clean alternatives 2/19 (0.79%), 3/28 (0.98%) — same noise pattern. |
+| P13 | y_e direction | **BLOCKED** — y_e is dimensionless, m_P cancels entirely. The 5-and-5 coincidence is likely separate constructions (axes+hub vs bivectors−hub). 0.97% gap because m_e and v_Higgs errors compound. |
+| Wieferich | Base-3 hunt | **NO SIGNAL + RETRACTION** — only 11 and 1006003 known under 10¹⁷. The hit on p=11 is in a regime where 100% of nearby primes are "substrate-adjacent" (zero info); 1006003 decisively misses (in regime where adjacency rate is 0.1%). **Same kickback hits the original 1093 base-2 claim** — pareidolia from local density. See `metrognosis/prime-lattice.md § Wieferich primes — RETRACTED`. |
+
+**What survives:** P2's irrep-level embedding is real (substrate-
+rigid identifications: SO(10) 16-spinor = grade-4 corners, SU(4)_PS
+= 4 H's, F4 = 48 fermions, D4 = 24 = 12 gauge pairs). All else: no
+delta from 16b state.
+
+**Methodological lesson reinforced:** the same noise-null
+discipline that killed the log-depth family (16b) killed the
+Wieferich claim (16c). At small integer magnitudes, substrate-
+clean integers are dense; at large magnitudes they're sparse.
+Signal is the EXCESS over local density, not the adjacency. Any
+"X near substrate" claim needs a local-density null. Updated in
+`moves.md § Anti-patterns`.
+
+**Revised next-move priorities:**
+1. Mechanism-first attacks (not formula-fitting). E.g. the
+   SU(3)_flavor → S3 breaking mechanism for P2.
+2. P11 (Higgs VEV factor 2) — simpler than P13 and entangled
+   with it.
+3. P5 (Δ(n-p) = m_p × α × 3/16) — derive 3/16 from wheel
+   mechanics, not pattern-match.
+4. Dark sector reconciliation: E8 ⊃ SO(16) ⊃ SO(10) × SU(4)_PS
+   says 192 is mostly heavy gauge, contradicting the "discrete
+   ultralight DM peaks" prediction in `5-physics.md`. Needs
+   resolution before either claim can be defended.
+
+---
+
 ## Retracted in 2026-04-16b stress-test session
 
 Statistical retest of the "log-depth invariant family" claim from
@@ -131,16 +174,56 @@ corner carries one SO(10) spinor's worth of fermion content.
 **Remaining gap**: still doesn't pin absolute Planck-scale from pure
 substrate integers (P13 — see below).
 
-### P2 — Full particle embedding in D4 / E8
+### P2 — Full particle embedding in D4 / E8 — PARTIAL (2026-04-16c)
 
-Each particle sits at a specific wheel position with factor f. Map
-each Standard Model particle to a specific E8 root vector. Use
-Lisi 2007 as starting point but with framework substrate
-interpretation.
+Asked the question correctly and got a clean answer at the
+representation-theoretic level. The right embedding path is:
 
-Currently framework lists factors (√3/2, √2, 5/12, π/4, 3/4, 2/3, 2)
-without mapping them to wheel positions. If specific wheel
-coordinates give specific f values, masses become fully derivable.
+```
+  E8 ⊃ SO(16) ⊃ SO(10) × SU(4)_PS,    248 = 120 + 128
+```
+
+with `(45,1) ⊃ SM gauge`, `(16,4) ⊃ 4 generations × 16-spinor`,
+`(1,15) ⊃ Pati-Salam leptoquarks + W_R`.
+
+**What's substrate-rigid (survives null check):**
+- **SO(10) 16-spinor = grade-4 corners (16)** — confirms P1; the
+  identification is forced by E8's subgroup lattice, not chosen.
+- **SU(4)_PS = 4 H's** — the SU(4) decomposing as 3+1 under
+  SU(3) ⊂ SU(4) IS the S-scope 3+1 (S3-peer + Z2-mirror). Pati-
+  Salam isn't a separate hypothesis — it's the irrep structure of
+  the natural E8 path.
+- **F4 = 48 SM fermions** — sub-root-system identity, not fitted.
+- **D4 = 24 = 12 gauge-boson pairs** — present inside SO(10) ⊂ E8.
+
+**What's NOT clean (per-particle root assignment):** group theory
+acts on irreps, not labels. "Electron is root #173" was always
+going to be the wrong granularity. The embedding is at the level
+of representations; individual root vectors aren't pinned by
+embedding alone.
+
+**Open subquestion (new):** SU(3)_flavor → S3 breaking mechanism.
+Continuous SU(3) gives gen-permutation; framework needs S3 ⊂ SU(3).
+Without an explicit breaking mechanism, the embedding predicts
+unobserved horizontal gauge bosons. Patch suggested but not
+derived.
+
+**Falsifiable predictions from the embedding:**
+1. Pati-Salam leptoquark signatures (rare K → μe, μ → eγ enhanced)
+2. SU(3)_flavor breaking mechanism OR horizontal currents at some
+   scale
+3. Right-handed neutrinos in SO(10) 16-spinor (one per generation),
+   structurally identified with the Z2-mirror sector
+4. No 4th SM generation, ever (Cartan ceiling, inherited)
+5. No graviton appears as an E8 root state
+
+**Dark sector revision:** previous "192 = 12 dark gens × 16
+corners each" reading needs revising. Under E8 ⊃ SO(16) ⊃ SO(10) ×
+SU(4)_PS, the 192 non-F4 roots are MOSTLY heavy SO(10) gauge
+bosons (X/Y), SU(4) leptoquarks, mirror fermions, and (10,6)
+inter-gen bosons — NOT a single stable DM species. The "discrete
+ultralight DM peaks" prediction in `5-physics.md § Dark sector`
+needs to be reconciled with this. Open follow-up.
 
 ### P3 — Unclean particles (bottom RESOLVED)
 
@@ -159,13 +242,35 @@ Still unclean:
 Negative corrections for gauge bosons particularly need geometric
 interpretation.
 
-### P4 — Running couplings α(Q²)
+### P4 — Running couplings α(Q²) — STILL OPEN, attack failed null (2026-04-16c)
 
 Framework gives α at some reference scale (α⁻¹ = 137.036). Does it
-predict the RUNNING (energy dependence) of α? Should be derivable
-from wheel dynamics — as you probe higher energies, you're seeing
-more of the wheel's rotation per-tick, so the effective coupling
-changes.
+predict the RUNNING (energy dependence) of α?
+
+**2026-04-16c attack — substrate naming yes, derivation no.** The
+standard QED running `1/α(Q²) = 1/α(0) − (1/3π) ln(Q²/m_e²)` reads
+substrate-cleanly (3 in 1/(3π) = trit; π = C-tier half-rotation;
+Q²/m² squared = 720° spinor period; ln-structure = revolutions per
+probe scale; m_e in denominator = lightest charged probe). But this
+is reframing what's already there, not new prediction.
+
+**Noise null killed candidate forms.** Density of small-integer ×
+π terms in the coefficient range is high enough that 1/(3π) has
+substrate-clean alternatives: 2/19 (0.79% off), 3/28 (0.98% off).
+Same pattern as the retracted log-depth family — multiple substrate
+stories fit the same number.
+
+**Suggestive but inside noise floor:** α_GUT⁻¹ ≈ 24-26 lands in
+the 24 = D4 root band, but MSSM uncertainty spans the same range.
+α_s/α ≈ 15.1 vs 16 (corners) is 6% off, not clean. 4 fractal
+scopes ↔ 4 couplings (3 gauge + gravity) is structurally
+suggestive but doesn't give running coefficients.
+
+**What would close P4:** β-function coefficient derivation from
+group-theory invariants of D4 / F4 / E8 root systems (33/5, 1, -3
+in MSSM; 41/10, -19/6, -7 in SM), not coefficient-pattern matching.
+α_GUT prediction at 0.1% precision with derived (not fitted)
+unification scale.
 
 ### P5 — Neutron-proton mass difference refinement
 
@@ -273,11 +378,48 @@ requires discrete.
 the 91-173 GeV WIMP mass range because non-F4 positions couple
 only via hub (gravity), not via F4 forces.
 
-### P10 — CP violation magnitude
+### P10 — CP violation magnitude — STILL OPEN, attack failed null (2026-04-16c)
 
-Why `η_B ~ α⁴ × sin²(θ_W)` specifically? 7.5% error is the largest
-remaining framework gap. Non-commutativity (ij ≠ ji) gives the
-asymmetry qualitatively; specific magnitude needs mechanism.
+Observed η_B = (6.12 ± 0.04) × 10⁻¹⁰; current framework form
+α⁴ × sin²(θ_W) = α⁴ × log(2)/3 = 6.55 × 10⁻¹⁰ (+7.4%). Largest
+remaining framework numerical gap.
+
+**2026-04-16c attack — multiple sub-1% candidates, all noise-floor:**
+
+```
+  candidate                       prediction (×10⁻¹⁰)   err
+  ─────────                       ──────────────────   ───
+  α⁴ × √3/8                       6.139                +0.65%
+  α⁴ × (5/24 + α)                 6.115                +0.24%
+  α⁴ × log(2)/3 × exp(−10α)       6.091                −0.15%
+  α⁴ × 3/14                       6.077                −0.39%
+```
+
+**Noise null kills these.** Substrate-clean pool of ~2420 formulas
+of form `α^k × {n/m, √n/m, n/√m}` with n,m ∈ 24-element substrate
+integer set: random hit rate is 0.083% at 1% precision over 2420
+trials = ~2 expected hits. Found exactly 2 hits. **Statistically
+indistinguishable from chance** in the substrate pool. Same anti-
+pattern as the log-depth family.
+
+**Plus** η_B itself has ~0.7% Planck CMB measurement uncertainty,
+so the true signal floor for this question is ~1%. Even a derived
+form can't be distinguished from formula-fitting via numerics
+alone.
+
+**Z2-mirror mechanism status — qualitative yes, magnitude no.**
+Sakharov conditions hold: B-violation (sphalerons / trit-arc
+commits at hub), C/CP-violation (non-commutativity ij≠ji + Z2-
+mirror H provides asymmetry), out of equilibrium (eternal wheel
+rotation, 3rd law). But no Z2-mirror argument independently
+predicts a suppression factor at the right magnitude.
+
+**What would close P10:** mechanism-first derivation. If a Z2-
+mirror argument from CD-doubling geometry independently predicts a
+suppression factor near exp(−10α) ≈ 13/14 (or whatever survives
+the noise null), then a numerical fit becomes meaningful. Without
+that mechanism, formula-fitting is futile at this measurement
+precision.
 
 ### P11 — Higgs VEV absolute derivation
 
@@ -316,18 +458,35 @@ invariant family" turns out to be statistical noise (SM pair hit
 rates at every precision match random hit rates in [0.5, 1]). See
 the retraction section in 6-masses.md.
 
-**What's actually needed**: substrate-clean derivation of electron
-Yukawa y_e = m_e/v_Higgs = 2.08 × 10⁻⁶. Decomposes as
-y_e = (5/24) × 10⁻⁵ where 5 = axes+hub, 24 = D4-roots, and the 10⁻⁵
-exponent = (electron shelf 22) − (Higgs shelf 17) = 5 = axes+hub
-(coincidence between the 5 in the geometric factor and the 5 in the
-exponent is interesting but not yet derived).
+**y_e attack — BLOCKED (2026-04-16c).** Tried deriving electron
+Yukawa y_e = m_e/v_Higgs from substrate. Algebraic identity verified:
+`y_e = (5/12 + α/3)/2 × 10⁻⁵ = (5/24)(1 + 4α/5) × 10⁻⁵`. Numerical:
+predicted y_e = 2.0955 × 10⁻⁶ vs observed 2.0753 × 10⁻⁶ — 0.97% off
+(m_e and v_Higgs errors compound rather than cancel).
 
-Any one of {m_e, m_P, v_Higgs} still has to be scale-set from
-outside substrate integers. P13 closure will require either:
-(a) deriving 5/24 × 10⁻⁵ = y_e from substrate alone, or
-(b) deriving Planck mass independently via gravity (α_G = 1 at m_P
-    is a definition, not a derivation).
+**The 5-and-5 coincidence — likely separate constructions, not one
+fact.** The 5 in the geometric factor 5/12 = (axes+hub)/D4-pairs IS
+axes+hub. The 5 in the exponent gap = (electron shelf 22) − (EW
+shelf 17) = bivectors − hub. Numerically equal but algebraically
+independent decompositions. Most parsimonious read: 5 is the
+substrate's preferred small-integer slot; both readings naturally
+land there without being "the same 5".
+
+**y_e cannot pin Planck mass anyway** — m_P cancels in y_e (it's a
+pure dimensionless ratio). Even a fully structural 5-and-5 would
+not close P13; the entire decomposition is scale-free.
+
+**What would actually close P13:**
+(a) Independent derivation of v_Higgs = 2 × 10⁻¹⁷ × m_P from
+    gravity/cosmology rather than assertion (this is P11).
+(b) Substrate derivation of geometric factor 5/24 from S-scope /
+    D4 wheel mechanics that fixes BOTH mass and VEV simultaneously
+    without circularity.
+(c) α_G = 1 at m_P upgraded from definition to derivation via
+    wheel/loop dynamics.
+(d) Noise-null verification across all 91 SM ratios for the
+    "geometric numerator = shelf gap" rule before treating the
+    electron 5-and-5 as signal.
 
 No clean path open. Entangled with P1 (resolved working-hypothesis,
 16 = grade-4 corners) but P1 doesn't pin absolute scale either.
@@ -548,27 +707,37 @@ No obvious framework derivation. Flagged accidental.
 signal.** Not directly derived, but very hard to dismiss as
 coincidence given effort × precision × independent convergence.
 
-### 3-5-7 prime signature
+### 3-5-7 prime signature — DERIVED (2026-04-16)
 
 ```
   3   = trit (axis values)                [framework-committed]
-  5   = grade-3 (trivector) degree        [verified]
-  7   = grade-1 (atom) degree             [verified]
-  
-  Cascade:
-  cent(0) − cent(1) = 343 = 7³
-  cent(1) − cent(2) = 245 = 5·7²
-  cent(2) − cent(3) = 175 = 5²·7
-  cent(3) − cent(4) = 125 = 5³
+  5   = ordered-pair straddle count       [DERIVED — trit-structural]
+        through trit edge values ±1
+  7   = ordered-pair straddle count       [DERIVED — trit-structural]
+        through trit center value 0
 ```
 
-Framework's native integers are primes. Specific primes activated
-by specific lattice dimensions via the degree formula
-`degree = 2N − k`. At N=4 (our lattice), primes activated are 5 and
-7. At N_CD=8 (O), primes would be 11 and 13.
+**Closed form** (verified N=4, N=8):
 
-**Status**: upgraded from SPECULATION to WORKING HYPOTHESIS
-(2026-04-12). See `wit/thoughts/trit½/3-5-7.md` for full treatment.
+```
+  cent_per_node(k, N) = (7^(N−k) · 5^k − 2·3^N + 1) / 2
+  Δ(k → k+1) per node = 7^(N−k−1) · 5^k              [N-independent]
+```
+
+5 and 7 are trit-structural constants — properties of the 3-element
+ordered set {−1, 0, +1}, not of lattice dimension N. The 888 = (7⁴ − 5⁴)/2
+cascade at N=4 is the special case.
+
+**What was disconfirmed (2026-04-16)**: an earlier reading predicted
+CD-layer-activation of new primes at new lattice dimensions (e.g. 11
+and 13 at O-scope via degree formula 2N−k). Tested at N=8 and failed:
+the cascade is N-independent, 11 and 13 never appear. See
+`wit/thoughts/trit½/prime-lattice/findings/11-N8-centrality-cascade.md`.
+
+**Status**: trit-structural derivation DERIVED. CD-layer-activation
+DISCONFIRMED. Canonical migration pending into `wheel/2-trits.md`
+and `wheel/3-lattice.md`; `wit/thoughts/trit½/3-5-7.md` pending
+retirement after migration.
 
 ### Chain of chains at outer scope
 

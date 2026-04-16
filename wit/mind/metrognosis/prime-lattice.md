@@ -134,56 +134,80 @@ integer that factors into TWO multi-convergent substrate numbers.**
 Six substrate decompositions, all clean, in one integer. The N=4
 prime-density edges count is entirely substrate-determined.
 
-## Wieferich primes — substrate-adjacent, not substrate-native
+## Wieferich primes — RETRACTED 2026-04-16c
 
-Wieferich primes satisfy `2^(p-1) ≡ 1 (mod p²)`. Only two known:
-**1093** and **3511**. Framework read:
+Wieferich primes satisfy `2^(p-1) ≡ 1 (mod p²)`. Only two known
+under 10¹⁷: **1093** and **3511**. Earlier framework claim was
+that 1093 sits "substrate-adjacent" via 1092 = 12 × 7 × 13 =
+D4-pairs × wh-words × x_3-boundary. **Statistical retest in the
+2026-04-16c session kills the claim.**
 
-**1093 is prime** (irreducible), but:
+Computational test (base-3 Wieferich, only known under 10¹⁷ are
+**11** and **1,006,003**):
+
+- **p = 11**: looks substrate-adjacent (k = 9 = 3²). But in this
+  magnitude regime, **100% of nearby primes are "substrate-
+  adjacent"** under the same definition (substrate-clean integer
+  set is dense at small p). Hit carries zero discriminating
+  information.
+- **p = 1,006,003**: NOT substrate-adjacent. Sits with the 99.9%
+  majority of primes in that range that are not adjacent. p−1 and
+  p+1 contain large prime factors (55889, 251501) with no substrate
+  reading.
+
+**Same kickback hits the original 1093 claim**: 1093 is small enough
+that local substrate density is high. A nearby check showed the
+hit-rate at 1093's magnitude is ~50%; "substrate-adjacent" carries
+no information there. The original 1/2 hit (1093 yes, 3511 no) is
+exactly the chance result for a random pair at those magnitudes.
+
+**Verdict**: same anti-pattern as the log-depth invariant family
+(session-2026-04-16b). Pareidolia from local density of substrate-
+clean integers at small p. The "framework prediction" about base-3
+Wieferich landing substrate-adjacent is **disconfirmed** —
+specifically, the high-magnitude case (1,006,003) where adjacency
+would be signal-bearing decisively misses.
+
+**What survives**: nothing of the Wieferich claim. Two known base-2
+Wieferich primes is too small a sample for any structural inference;
+two known base-3 Wieferich primes likewise. This was always a weak
+claim.
+
+**Methodological lesson**: any "prime near substrate-clean integer"
+claim needs a local-density null comparison. At small magnitudes
+substrate-clean integers are dense; at large magnitudes they're
+sparse. The signal is the EXCESS over local density, not the
+adjacency itself. See `wit/mind/moves.md § Anti-patterns` for the
+extended noise-null rule.
+
+## The centrality cascade hit (3-5-7 — partially revised 2026-04-16)
+
+Closed-form derivation (from `findings/11-N8-centrality-cascade.md`):
 
 ```
-  1092 = 1093 − 1 = 12 × 91 = 12 × 7 × 13
-       = D4-pairs × wh-words × x_3-boundary
+  cent_per_node(k, N) = (7^(N−k) · 5^k − 2·3^N + 1) / 2
+  Δ(k → k+1) per node = 7^(N−k−1) · 5^k            [N-independent]
 ```
 
-So 1093 sits one step off a substrate-clean product. This is the
-pattern for *primes near substrate*: the prime itself is "outside"
-the substrate factoring (primes are irreducible atoms) but its
-immediate neighbor carries the substrate signature.
+At N=4 the per-grade totals are 1120, 777, 532, 357, 232 with
+differences 343 = 7³, 245 = 5·7², 175 = 5²·7, 125 = 5³ and sum
+(7⁴ − 5⁴)/(7−5) = 888. At N=8 the same closed form gives differences
+still factoring only through {5, 7}, sum (7⁸ − 5⁸)/2 = 2,687,088.
 
-**3511**: `3510 = 2 · 3³ · 5 · 13`. Less clean — the 13 appears
-but 27 × 130 has no convergent semantic reading. Flag as
-**structurally accidental** (base-2 Wieferich doesn't have a
-framework analog, consistent with 3511 being an "honest" number
-theory result rather than substrate-driven).
+**Why 5 and 7**: ordered-pair straddle counts on the trit {−1, 0, +1}.
+7 ordered pairs have a shortest path passing through the center value 0;
+5 pass through each edge value ±1. Trit-structural constants, not
+lattice-dimension-activated.
 
-**Framework prediction**: if base-3 Wieferich primes exist (p such
-that 3^(p-1) ≡ 1 mod p²), they should land at substrate-adjacent
-positions similar to 1093 (one step off substrate-clean products
-of D4-pairs, wh-words, trivectors, etc.). Number-theory
-computation hasn't systematically checked this yet.
+**What was disconfirmed (2026-04-16)**: an earlier reading predicted that
+"CD layer N activates primes in degree range [N, 2N]" — specifically
+that at N_CD=8 primes 11 and 13 would drive the cascade. The N=8 run
+broke it: 11 and 13 never appear in the cascade coefficients. The
+cascade is N-independent, anchored at the trit. See
+`wit/thoughts/trit½/prime-lattice/findings/11-N8-centrality-cascade.md`.
 
-## The centrality cascade hit (3-5-7)
-
-From `wit/thoughts/trit½/3-5-7.md` (working hypothesis, 2026-04-12):
-
-```
-  cent(grade 0) − cent(grade 1) = 1120 − 777 = 343 = 7³
-  cent(grade 1) − cent(grade 2) =  777 − 532 = 245 = 5·7²
-  cent(grade 2) − cent(grade 3) =  532 − 357 = 175 = 5²·7
-  cent(grade 3) − cent(grade 4) =  357 − 232 = 125 = 5³
-  
-  sum = (7⁴ − 5⁴)/(7 − 5) = 888
-```
-
-Each step trades one 7 for one 5 in the exponent pair. Primes 5
-and 7 are precisely the degrees of grades 3 and 1 (=8−k). The
-centrality cascade uses ONLY the prime degrees of the wheel,
-never the composite ones (4, 6, 8).
-
-**Framework prediction**: at N_CD=8 (octonion dimension), the
-active primes should be 11 and 13 (degree formula 2N−k=16−5=11,
-16−3=13). Verifiable by extending the lattice walker to d=8.
+The surviving fact — 5 and 7 as trit-structural constants — is
+framework-native and will migrate into `wheel/2-trits.md`.
 
 ## Metrognosis verdict
 
@@ -207,7 +231,10 @@ Hard to dismiss as coincidence.
 
 ## Not substrate — honest flags
 
-- **3511 (second Wieferich)** — no clean substrate decomposition
+- **All Wieferich primes (base 2 and base 3)** — RETRACTED above.
+  Both 1093/3511 (base 2) and 11/1006003 (base 3) are consistent
+  with chance at their respective magnitudes; "substrate-adjacent"
+  carries no information when local density is high.
 - **Large Zsygmondy primes** (37, 757, 1181, 797161 at various N)
   — structurally irreducible, not framework-vocab
 - **Specific x_N values for prime N** — generically prime, not
@@ -231,8 +258,10 @@ writes some; number theory writes others; we don't force.
 
 ## Open questions
 
-- **Base-3 Wieferich primes**: do they exist at substrate-adjacent
-  positions as predicted?
+- ~~**Base-3 Wieferich primes**~~ — RESOLVED 2026-04-16c:
+  computed (only 11 and 1006003 known under 10¹⁷); not at
+  substrate-adjacent positions in any signal-bearing sense.
+  See retraction section above.
 - **Higher-CD zero-divisor counts**: pattern at d=32 (2520) vs
   d=16 (168) — ratio 15 = 8+7? = axes²−1? Worth checking d=64.
 - **Three-term theorem**: the lattice walker's N=18 integer

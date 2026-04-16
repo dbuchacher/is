@@ -293,6 +293,38 @@ scale. If Pati-Salam-specific signatures are ruled out at
 arbitrarily high scales, the S-scope reading needs revision. If
 they're found, strong S-scope confirmation.
 
+### Natural E8 path: SO(16) intermediate (2026-04-16c)
+
+Pati-Salam isn't a separate hypothesis — it's the irrep structure
+of the natural E8 embedding. The path is:
+
+```
+  E8  ⊃  SO(16)  ⊃  SO(10) × SU(4)_PS
+  248 = 120 + 128         (adjoint + spinor of SO(16))
+                          
+  (45,  1) ⊃ Standard Model gauge
+  (16,  4) ⊃ 4 generations × 16-spinor
+            (3 S3-peer + 1 Z2-mirror under SU(3) ⊂ SU(4))
+  (1,   15) ⊃ Pati-Salam leptoquarks + W_R
+  (10,  6) ⊃ inter-generation gauge bosons
+```
+
+Substrate-rigid identifications forced by E8's subgroup lattice
+(not chosen):
+- SO(10) 16-spinor = grade-4 corners (16) — confirms P1 in
+  `7-open.md`
+- SU(4)_PS = 4 H's in 3+1 (the SU(4) → SU(3) × U(1) decomposition
+  IS the S-scope 3+1)
+- F4 ⊂ E8 = 48 SM fermions (sub-root-system identity)
+- D4 ⊂ E8 = 24 = 12 gauge-boson pairs
+
+**Open subquestion**: SU(3)_flavor → S3 breaking mechanism.
+Continuous SU(3) gives gen-permutation; framework needs discrete
+S3 ⊂ SU(3). Without explicit breaking, the embedding predicts
+horizontal gauge bosons that aren't observed. Mechanism unstated.
+
+See `7-open.md § P2` for the full status.
+
 ## Gravity — the loop, not a particle
 
 Per `1-wheel.md` and `4-loop.md`: gravity IS the loop iterating. Not
@@ -516,7 +548,7 @@ evolve with redshift). **Observed**: constant Λ matches this.
 Derivation-level: framework says dark energy SHOULD be constant,
 and it is.
 
-### Dark matter = E8 − F4 (192 positions)
+### Dark matter = E8 − F4 (192 positions) — TENSION FLAGGED 2026-04-16c
 
 Standard Model fermions = 48 = F4 root system. If outer wheel is E8
 (240 roots), then 192 E8 roots are NOT Standard Model particles.
@@ -529,7 +561,21 @@ Standard Model fermions = 48 = F4 root system. If outer wheel is E8
     Total:            240
 ```
 
-**Dark matter candidates**: the 192 non-F4 E8 positions. These:
+> **⚠ Open tension (2026-04-16c).** The natural E8 embedding of the
+> SM is `E8 ⊃ SO(16) ⊃ SO(10) × SU(4)_PS` (P2, partially resolved).
+> Under that embedding, the 192 non-F4 roots decompose as MOSTLY
+> heavy gauge bosons (X/Y from SO(10) at GUT scale, leptoquarks
+> from SU(4)_PS, inter-generation gauge bosons from (10,6)) and
+> mirror fermions — **not a single stable dark-matter species**.
+> The "192 = 12 dark generations × 16 corners each" reading is
+> incompatible with this embedding. The "discrete ultralight DM
+> peaks" predictions below need to be reconciled with — or
+> retracted in favor of — the E8-embedding reading. Currently both
+> claims sit in the docs unreconciled. See `7-open.md § P2` and
+> the 16c agent report. Pick one or derive how they're compatible.
+
+**Dark matter candidates** (legacy reading, pending tension
+resolution): the 192 non-F4 E8 positions. These:
 - Couple via the hub (↕↕↕↕) = gravity ✓ (why we detect them only
   gravitationally)
 - NOT via F4-specific forces (EM, strong, weak) ✓ (why direct
