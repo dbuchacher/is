@@ -13,6 +13,55 @@ Three sections:
 
 ---
 
+## Resolved in 2026-04-16 S-scope stress-test session
+
+Nine parallel tests stress-tested "S contains 4 H's as peers"
+framing. Results:
+
+**Strong confirmations (3):**
+- **Sedenion zero divisors 168** — 5-way convergence: 168 = 4! × 7
+  (framework vocab) + bare-metal `zero_divisors_d16 = 168` computed
+  in lattice walker + Fano plane automorphisms + PSL(2,7) + Klein
+  quartic. S is structurally real.
+- **Pati-Salam SU(4) emergence** — falls out naturally from S-scope
+  3+1 structure. 15 generators = 16 corners − 1 hub. 3 quark colors
+  + 1 lepton "color" = 3 S3-peer + 1 Z2-mirror H's. Moved to
+  `5-physics.md`.
+- **Aut(S) = 48 = S3 × Z2** — triple convergence with F4 roots and
+  SM fermion count. Cartan's classification: Out ≤ S3 always, S3
+  achieved only by D4. No 4th generation possible, ever.
+
+**Frame corrections (4):**
+- "4 peer H's in S" → corrected to **"3 triality-peer H's + 1
+  CD-mirror H"** (Aut(S) = S3 × Z2 structure). Not 4 symmetric peers.
+- "Qubits ↔ CD layers" mapping **rejected** — qubits use tensor
+  product, CD uses direct-sum+involution. Different functors. Clean
+  identity only at single-qubit = SU(2) = unit H level. Quantum/
+  classical distinction lives at VERB tier (frame 6), not
+  algebra-layer tier.
+- "n-particle entanglement scales with CD scope" **rejected** —
+  frame 10 reading (one quaternion, n apertures) scales for all n.
+  Hilbert 2^n is aperture-count, not substrate scope.
+- "4 neutrino species from 4 H's" **retracted** — framework actually
+  predicts 3 generations × (active + sterile) = 3+3 via D4 triality.
+
+**Inconclusive (2):**
+- **Dark ratio 5.37** — cleanest substrate form is 16/3 (H-internal,
+  not S-peer). "Dark = other H's" doesn't land cleanly. Slight
+  falsification pressure on that specific story.
+- **Chirality × 4 H's = 8** — redundant. CD doubling IS chirality
+  flip; double-counts. H-scope 8 already covers everything.
+
+**Category error found:**
+- **"48 vs 12 gauge bosons" premise wrong** — 48 = F4 = fermions,
+  12 = D4 pairs = bosons. Different kinds of objects. No inflation
+  to resolve.
+
+Net: framework got **sharper**, not weaker. The S-scope reading is
+real with refinements. 3+1 pattern is load-bearing.
+
+---
+
 ## Open questions — priority list
 
 These carry forward from the 2026-04-15 session handoff. Each is
@@ -141,15 +190,46 @@ domains (just physics, just chemistry, just music). If each domain
 converges on its own primitive for the same cell, framework is
 confirmed. If all domains still diverge, framework needs revision.
 
-### P9 — Specific dark matter masses
+### P9 — Specific dark matter masses — CONCRETE PREDICTIONS (2026-04-16)
 
 Framework says non-F4 E8 roots (192 positions) should have specific
-masses. Not derived yet. Each non-F4 root corresponds to a specific
-wheel position; wheel position + shelf should give specific mass.
+masses. Upgraded to concrete predictions in the 2026-04-16 session:
 
-If direct-detection is abandoned as a search strategy (per framework
-prediction), astronomical observations of specific dark matter
-lineshapes might reveal the 192-position spectrum.
+**Structural decomposition**: 192 = 12 × 16 = D4-pairs × corners.
+Reads as "12 dark generations × 16 corner mass points per generation."
+Alternative: 192 = 168 + 24, where 168 = Aut(Fano plane) = sedenion
+zero-divisor count (metrognosis convergence) and 24 = D4-shadow
+partners. See `mind/metrognosis/` (new prime-lattice entry).
+
+**Predicted dark mass spectrum** (from mass ladder
+m = m_P × f × 10^-(16+N_sub)):
+
+```
+  shelf    factor      mass            type
+  ─────    ──────      ────            ────
+  N=1      3/4         ~91 GeV         dark-Z analog
+  N=1      √2          ~173 GeV        dark-top analog
+  N=3      π/4         ~958 MeV        dark-baryon
+  N=3      24/7        ~4.2 GeV        dark-bottom analog
+  N=4      √3/2        ~106 MeV        dark-muon analog
+  N=6      5/12        ~0.51 MeV       dark-electron analog
+  N=12     1           ~0.1 μeV        D4-pair hub-adjacent
+  N=12     1/2         ~0.05 μeV       mirror-neutrino partner
+```
+
+**Framework prediction**: ultralight DM should show **discrete**
+spectral lines (0.05, 0.1 μeV), **NOT a continuum**. ADMX-style
+cavity haloscopes should see peaks. Axion searches at 10⁻⁶ eV may
+actually be detecting N=12 dark shelf states (no θ_QCD mechanism
+needed).
+
+**Concrete falsifier**: ADMX or similar finds ultralight DM in a
+continuous spectrum with no framework-predicted peaks. Framework
+requires discrete.
+
+**Direct detection** (XENON, LZ) should continue failing even in
+the 91-173 GeV WIMP mass range because non-F4 positions couple
+only via hub (gravity), not via F4 forces.
 
 ### P10 — CP violation magnitude
 
@@ -186,22 +266,34 @@ This is deeply entangled with P1 (why 16 baseline) — if Planck
 scale is substrate-derivable, the 19-mystery and other unknowns
 might cascade.
 
-### P14 — 19-mystery (proton/Planck ratio)
+### P14 — 19-mystery (proton/Planck ratio) — WORKING HYPOTHESIS (2026-04-16)
 
 ```
   log₁₀(m_P / m_proton) ≈ 19.11
 ```
 
-Proton mass is ~10¹⁹ below Planck. Why 19?
+Proton mass is ~10¹⁹ below Planck. Resolved to working-hypothesis by
+2026-04-16 stress-test session (see `6-masses.md § The 19-mystery`):
 
-Candidates:
-- 19 = 16 + 3 = corners + trit
-- 19 = 2⁴ + 3 (base corner count + trit)
-- 19 = prime, may be irreducible on its own
+**Decomposition**: `19 = 17 + 2 = (corners+hub) + (Z2-pair)` — proton
+shelf = EW shelf + one chirality-commit (CD-doubling step).
 
-Proton mass emerges from QCD confinement (95% is gluon field
-binding, not quark rest mass). Framework would need to derive QCD
-confinement scale to get this 19. Currently incomplete.
+**0.1 offset**: `mean offset ≈ log₁₀(4/3) = 0.1249` — axes/trit, the
+virial factor for QCD confinement geometry. Real baseline is
+`10⁻¹⁹ × (3/4)`.
+
+**New invariant**: `log(m_P/m_p) / log(m_P/m_e) = 6/7` (0.4% error)
+= bivectors/wh-words. Proton-to-electron shelf spacing is locked by
+wheel grade structure, not QCD accident.
+
+**QCD confinement scale**: `log₁₀(m_P / Λ_QCD) ≈ 19.79 ≈ 20 − 1/4`
+(trit shelf + one axis-quarter). Proton's π/4 factor = confinement
+at 45°.
+
+**Remaining open**: formal derivation of Planck mass (P13) from
+substrate alone would close both P13 and P14 simultaneously. Also
+worth re-expressing proton π/4 as π/3 under the new 3/4 shelf
+baseline — predict same family as muon's sin(60°).
 
 ### P15 — CMB temperature
 

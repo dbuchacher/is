@@ -411,6 +411,129 @@ inner wheel's algebra = H. O is the host above. S is above O. Each
 outer layer is richer (more verbs, more positions) but loses another
 algebraic property.
 
+## S-scope: 4 H's in 3+1 arrangement
+
+S (16D) contains **4 H-substructures** via Cayley-Dickson:
+
+```
+  S = O ⊕ O = (H ⊕ H) ⊕ (H ⊕ H)
+  
+         4 H's bundled, all sharing one hub ↕↕↕↕
+```
+
+But the 4 H's are NOT symmetric peers — **Aut(S) = S3 × Z2, order 48**
+splits them into **3 + 1**:
+
+- **S3 permutes 3** of the 4 H's (triality orbit)
+  → these are our 3 fermion generations (e/μ/τ, u/c/t, d/s/b)
+- **Z2 flips the 4th** (CD-doubling direction)
+  → mirror sector (sterile neutrinos, right-handed partners,
+    CP-mirror states)
+
+```
+                   hub ↕↕↕↕
+                (shared by all 4 H's)
+                       •
+                      ╱│╲
+                     ╱ │ ╲
+                    ╱  │  ╲
+                   H₁  H₂  H₃       3 triality-peer H's
+                   │    │    │      (S3 orbit = generations)
+                e/u/d μ/c/s τ/t/b
+                   
+                       │ Z2 flip
+                       ▼
+                       
+                      H₄             mirror H (sterile /
+                 (flipped under Z2)   right-handed /
+                                      CP-mirror sector)
+```
+
+### Triple convergence at 48
+
+```
+  |Aut(S)|        = 48         (algebra fact)
+  F4 root count   = 48         (Lie theory)
+  SM fermions     = 48         (particle physics)
+```
+
+Three independent sources, one integer. Per the metrognosis filter
+(effort × precision × independent convergence) this is signal, not
+coincidence.
+
+### Why exactly 3 generations, no 4th
+
+**Cartan's classification** of outer automorphisms of simple Lie
+algebras: Out ≤ S3 for all, and S3 is achieved ONLY by D4. So the
+3-fold triality is a **hard algebraic ceiling**. A 4th fermion
+generation cannot exist — not because we haven't looked, but because
+the algebra forbids it.
+
+The 4th H is qualitatively different (Z2-flipped mirror). Physics
+calls this the sterile / right-handed / CP-mirror sector — not a
+4th generation but the partner of all three.
+
+### The 3+1 pattern at multiple scopes (fractal self-similarity)
+
+```
+  scope                      3                      + 1
+  ─────                      ─                      ───
+  H-internal                 3 imaginary axes       1 real axis
+                             (i, j, k = χ/μ/φ)     (1 = τ)
+  
+  S-internal                 3 triality-peer H's    1 CD-mirror H
+                             (generations)          (sterile sector)
+  
+  Pati-Salam GUT             3 quark-colors         1 lepton-color
+                             (red/green/blue)       ("4th color")
+  
+  Minkowski spacetime        3 spatial dimensions   1 time dimension
+```
+
+Four independent 3+1 structures at four different scopes, same
+pattern. The wheel writes 3+1 at every level where it manifests —
+fractal self-similarity is the substrate writing itself.
+
+### Pati-Salam (1974) falls out natively
+
+Pati-Salam proposed SU(4) × SU(2)_L × SU(2)_R unification with lepton
+as "4th color." Framework reading: this IS the S-scope 3+1 lifted to
+particle physics.
+
+- **SU(4)**: rotation group on C⁴ = 4 H's once one C-subfield per H
+  is picked (the same axis-privileging move used inside each H).
+  15 generators = 16 half-spin corners − 1 hub (substrate-clean).
+- **3+1 color decomposition**: 3 quark-colors (= S3-peer quarks from
+  3 peer H's) + 1 lepton "color" (= Z2-mirror H, leptons sit in the
+  mirror sector structurally)
+- **SU(2)_L × SU(2)_R**: two copies of unit-H (SU(2) = unit
+  quaternions, native to H); one per paired H in O = H ⊕ H.
+
+Pati-Salam was framework-consistent before the framework articulated
+S-scope. It's what you get when H's own geometry (1 real + 3
+imaginary, SU(2) on unit sphere, polarity flip) lifts to S-scope.
+See `mind/wheel/5-physics.md`.
+
+### Giza's 3 pyramids + Sphinx
+
+Egyptian priest-engineers built the 3+1 in stone 4500 years ago:
+
+- **3 peer pyramids** in triangular plateau layout — Khufu (π
+  encoding), Khafre (α encoding), Menkaure (5³ encoding) — each a
+  DIFFERENT fundamental, three structural peers
+- **The Sphinx** — qualitatively distinct (horizontal, lion+human,
+  oriented east, not a triangle) — the plateau's outlier, candidate
+  Z2-mirror
+
+See `mind/metrognosis/giza.md` for the post-S-scope synthesis.
+
+### The count stays 4, but the arrangement is 3+1
+
+Earlier framings said "4 peer H's in S." The arrangement clarification:
+4 H's exist, but under Aut(S) = S3 × Z2 they split as 3 triality-peers
++ 1 mirror. Not 4 symmetric things. The 3+1 asymmetry is the signal
+— it's what makes 3 generations + sterile sector fall out naturally.
+
 ## Cosmos wheels — fractal at every scale
 
 Same wheel pattern appears at every scale. THE RULE (wit.md): one

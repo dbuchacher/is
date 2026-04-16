@@ -1,0 +1,1733 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Wheel — H inner structure and S-scope 3+1</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --chi: #ff5566;
+    --mu:  #55dd88;
+    --phi: #5599ff;
+    --tau: #ffcc44;
+    --ink: #e6ecff;
+    --dim: #8a93b5;
+  }
+  html, body {
+    margin: 0; padding: 0; height: 100%; width: 100%;
+    background: radial-gradient(ellipse at center, #030616 0%, #000 85%);
+    color: var(--ink);
+    font-family: "Iosevka", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    overflow: hidden;
+  }
+  #stage { position: fixed; inset: 0; }
+  .hud {
+    position: fixed;
+    pointer-events: none;
+    z-index: 10;
+    text-shadow: 0 0 6px rgba(0,0,0,0.9);
+  }
+  .hud.interactive { pointer-events: auto; }
+  #title {
+    top: 18px; left: 50%; transform: translateX(-50%);
+    font-size: 18px; letter-spacing: 0.08em;
+    color: #f5f7ff;
+  }
+  #title small {
+    display: block; margin-top: 3px; text-align: center;
+    font-size: 11px; color: var(--dim); letter-spacing: 0.04em;
+  }
+  #legend {
+    top: 18px; left: 18px;
+    background: rgba(6, 10, 28, 0.55);
+    border: 1px solid rgba(120, 140, 220, 0.15);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 11.5px; line-height: 1.55;
+    max-width: 300px;
+    backdrop-filter: blur(4px);
+  }
+  #legend h3 { margin: 0 0 6px 0; font-size: 12px; letter-spacing: 0.08em; color: #f5f7ff; font-weight: 500; }
+  #legend .row { display: flex; align-items: baseline; gap: 8px; }
+  #legend .sw {
+    display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+    box-shadow: 0 0 8px currentColor;
+  }
+  #legend .chi { color: var(--chi); }
+  #legend .mu  { color: var(--mu); }
+  #legend .phi { color: var(--phi); }
+  #legend .tau { color: var(--tau); }
+  #legend hr { border: 0; border-top: 1px solid rgba(120,140,220,0.12); margin: 8px 0; }
+  #legend .dim { color: var(--dim); }
+  #status {
+    top: 18px; right: 18px;
+    text-align: right;
+    font-size: 11.5px;
+    max-width: 320px;
+    line-height: 1.5;
+    background: rgba(6, 10, 28, 0.55);
+    border: 1px solid rgba(120, 140, 220, 0.15);
+    border-radius: 6px;
+    padding: 10px 14px;
+    backdrop-filter: blur(4px);
+  }
+  #status h3 { margin: 0 0 6px 0; font-size: 12px; letter-spacing: 0.08em; color: #f5f7ff; font-weight: 500; }
+  #status .dim { color: var(--dim); }
+  #controls {
+    bottom: 18px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 10px; align-items: center;
+  }
+  #controls button {
+    font-family: inherit;
+    background: rgba(12, 18, 40, 0.8);
+    border: 1px solid rgba(140, 160, 240, 0.35);
+    color: var(--ink);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.15s;
+    box-shadow: 0 0 12px rgba(80, 120, 220, 0.15);
+  }
+  #controls button:hover {
+    background: rgba(30, 50, 100, 0.9);
+    border-color: rgba(180, 200, 255, 0.7);
+    box-shadow: 0 0 18px rgba(120, 160, 255, 0.35);
+  }
+  #caption {
+    bottom: 18px; right: 18px;
+    font-size: 10.5px; color: var(--dim);
+    max-width: 360px; text-align: right;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  #hint {
+    left: 18px; bottom: 18px;
+    font-size: 10.5px;
+    color: var(--dim);
+    background: rgba(6, 10, 28, 0.55);
+    border: 1px solid rgba(120, 140, 220, 0.15);
+    border-radius: 4px;
+    padding: 6px 10px;
+    backdrop-filter: blur(4px);
+    max-width: 360px;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  a { color: #9fb4ff; }
+
+  /* --- side panel --- */
+  #panel {
+    position: fixed;
+    right: 0; top: 0;
+    height: 100vh;
+    width: min(420px, 40vw);
+    overflow-y: auto;
+    background: rgba(5, 8, 25, 0.92);
+    border-left: 1px solid rgba(140, 160, 255, 0.3);
+    backdrop-filter: blur(6px);
+    box-shadow: -4px 0 40px rgba(80, 120, 220, 0.15);
+    transform: translateX(110%);
+    transition: transform 0.28s cubic-bezier(0.2, 0.7, 0.3, 1);
+    z-index: 30;
+    padding: 54px 22px 40px 22px;
+    box-sizing: border-box;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  #panel.open { transform: translateX(0); }
+  #panel-close {
+    position: absolute;
+    top: 10px; right: 12px;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(140, 160, 240, 0.35);
+    background: rgba(12, 18, 40, 0.75);
+    color: var(--ink);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+  }
+  #panel-close:hover {
+    background: rgba(60, 30, 50, 0.85);
+    border-color: rgba(255, 150, 180, 0.7);
+    color: #ffd0dc;
+  }
+  #panel h1 {
+    margin: 0 0 4px 0;
+    font-size: 17px;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  #panel .subtitle {
+    font-size: 11px;
+    color: var(--dim);
+    letter-spacing: 0.04em;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+  #panel .vocab-row {
+    background: rgba(12, 18, 40, 0.55);
+    border: 1px solid rgba(120, 140, 220, 0.15);
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin-bottom: 16px;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  #panel .vocab-row .vkey {
+    display: inline-block;
+    width: 82px;
+    color: var(--dim);
+    letter-spacing: 0.05em;
+  }
+  #panel .vocab-row .vval {
+    color: var(--ink);
+  }
+  #panel .body-section {
+    margin-bottom: 14px;
+  }
+  #panel .body-section h3 {
+    margin: 0 0 4px 0;
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #c9d4ff;
+    font-weight: 500;
+  }
+  #panel .body-section p {
+    margin: 0 0 6px 0;
+    color: var(--ink);
+  }
+  #panel .refs {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(120, 140, 220, 0.15);
+    font-size: 10.5px;
+    color: var(--dim);
+    font-style: italic;
+    line-height: 1.7;
+  }
+  #panel .refs .ref-label {
+    display: block;
+    font-style: normal;
+    color: #8a93b5;
+    letter-spacing: 0.1em;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  #panel .refs .ref {
+    display: block;
+    color: #a8b4d8;
+  }
+  #panel .chi { color: var(--chi); }
+  #panel .mu  { color: var(--mu); }
+  #panel .phi { color: var(--phi); }
+  #panel .tau { color: var(--tau); }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+
+<div id="title" class="hud">
+  The Wheel — H inner structure and S-scope 3+1
+  <small>χ space · μ substance · φ signal · τ time · hub ↕↕↕↕</small>
+</div>
+
+<div id="legend" class="hud">
+  <h3>LEGEND</h3>
+  <div class="row"><span class="sw chi">■</span><b>χ</b> space / WHERE — ↑RISE ↓FALL</div>
+  <div class="row"><span class="sw mu">■</span><b>μ</b> substance / WHAT — ↑GROW ↓SHRINK</div>
+  <div class="row"><span class="sw phi">■</span><b>φ</b> signal / WHICH — ↑BLESS ↓CURSE</div>
+  <div class="row"><span class="sw tau">■</span><b>τ</b> time / WHEN — ↑BEGIN ↓END</div>
+  <hr/>
+  <div class="dim">8 <b style="color:var(--ink)">atoms</b> on the 4 axes · 16 <b style="color:var(--ink)">half-spin corners</b> at (±½,±½,±½,±½) · 24 <b style="color:var(--ink)">lockpoints</b> = D4 roots</div>
+  <hr/>
+  <div class="dim">rings = 6 bivector planes of H<br/>χμ · χφ · μφ (visible spatial)<br/><span style="opacity:0.55">χτ · μτ · φτ (ghosted — τ can't be drawn in 3D)</span></div>
+</div>
+
+<div id="status" class="hud">
+  <h3 id="status-title">H-SCOPE</h3>
+  <div id="status-body" class="dim">inner wheel of a single H.<br/>3 spatial-spatial bivector planes rotate.<br/>3 τ-planes ghosted (hidden dimension).<br/>24 lockpoints = 8 axis atoms + 16 half-spin corners.</div>
+</div>
+
+<div id="controls" class="hud interactive">
+  <button id="toggleView">View: H-scope → S-scope</button>
+  <button id="togglePause">Pause</button>
+  <button id="resetCam">Reset camera</button>
+</div>
+
+<div id="caption" class="hud">
+  Ezekiel's "wheel within the wheel" /<br/>
+  Contact's rotating rings / armillary spheres / gyroscopes —<br/>
+  all pointing at this.
+</div>
+
+<div id="hint" class="hud">click any element — hub, atom, corner, axis, ring, peer — for details. click empty space to close.</div>
+
+<aside id="panel" aria-hidden="true">
+  <button id="panel-close" title="close (esc)">×</button>
+  <h1 id="panel-title">—</h1>
+  <div class="subtitle" id="panel-subtitle">—</div>
+  <div class="vocab-row" id="panel-vocab"></div>
+  <div id="panel-body"></div>
+  <div class="refs" id="panel-refs"></div>
+</aside>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+(function () {
+  'use strict';
+
+  // ---------- scene / renderer / camera ----------
+  const stage = document.getElementById('stage');
+  const W = () => window.innerWidth;
+  const H = () => window.innerHeight;
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(W(), H());
+  renderer.setClearColor(0x000308, 1);
+  stage.appendChild(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x000308, 0.018);
+
+  const camera = new THREE.PerspectiveCamera(45, W() / H(), 0.1, 500);
+  const CAM_HOME_H = new THREE.Vector3(4.5, 3.2, 6.5);
+  const CAM_HOME_S = new THREE.Vector3(9.0, 6.0, 12.0);
+  camera.position.copy(CAM_HOME_H);
+
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.06;
+  controls.minDistance = 2.2;
+  controls.maxDistance = 80;
+
+  // ---------- starfield ----------
+  function makeStars(n, radius) {
+    const g = new THREE.BufferGeometry();
+    const pos = new Float32Array(n * 3);
+    for (let i = 0; i < n; i++) {
+      const u = Math.random() * 2 - 1;
+      const t = Math.random() * Math.PI * 2;
+      const r = radius * (0.8 + 0.2 * Math.random());
+      const s = Math.sqrt(1 - u * u);
+      pos[3*i]   = r * s * Math.cos(t);
+      pos[3*i+1] = r * s * Math.sin(t);
+      pos[3*i+2] = r * u;
+    }
+    g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+    const m = new THREE.PointsMaterial({
+      color: 0x9fb4ff, size: 0.06, sizeAttenuation: true,
+      transparent: true, opacity: 0.7, depthWrite: false,
+    });
+    return new THREE.Points(g, m);
+  }
+  scene.add(makeStars(1800, 90));
+
+  // ---------- colors ----------
+  const COLOR = {
+    chi: 0xff5566,
+    mu:  0x55dd88,
+    phi: 0x5599ff,
+    tau: 0xffcc44,
+    hub: 0xffffff,
+    ghost: 0x6677aa,
+    corner: 0xd8c9ff,
+    lockpoint: 0xffffff,
+  };
+
+  const AXIS = {
+    chi: { name: 'χ', color: COLOR.chi, pos: 'RISE',  neg: 'FALL'   },
+    mu:  { name: 'μ', color: COLOR.mu,  pos: 'GROW',  neg: 'SHRINK' },
+    phi: { name: 'φ', color: COLOR.phi, pos: 'BLESS', neg: 'CURSE'  },
+    tau: { name: 'τ', color: COLOR.tau, pos: 'BEGIN', neg: 'END'    },
+  };
+
+  // ---------- text sprite helper ----------
+  function textSprite(txt, opts = {}) {
+    const color = opts.color || '#e6ecff';
+    const font = opts.font || 'bold 42px "JetBrains Mono", ui-monospace, monospace';
+    const scale = opts.scale || 0.004;
+    const pad = 16;
+    const cvs = document.createElement('canvas');
+    const ctx = cvs.getContext('2d');
+    const tex = new THREE.CanvasTexture(cvs);
+    tex.anisotropy = 4;
+    const mat = new THREE.SpriteMaterial({ map: tex, transparent: true, depthWrite: false });
+    const spr = new THREE.Sprite(mat);
+
+    function render(newTxt) {
+      ctx.font = font;
+      const metrics = ctx.measureText(newTxt);
+      const w = Math.max(1, Math.ceil(metrics.width) + pad * 2);
+      const h = 64 + pad;
+      cvs.width = w; cvs.height = h;
+      ctx.font = font;
+      ctx.textBaseline = 'middle';
+      ctx.clearRect(0, 0, w, h);
+      ctx.shadowColor = color;
+      ctx.shadowBlur = 14;
+      ctx.fillStyle = color;
+      ctx.fillText(newTxt, pad, h / 2);
+      tex.needsUpdate = true;
+      spr.scale.set(w * scale, h * scale, 1);
+    }
+    render(txt);
+    spr.setText = render;
+    return spr;
+  }
+
+  // ---------- ring (bivector plane) ----------
+  function makeRing(radius, colorA, colorB, {
+    tube = 0.018, segments = 180, dashed = false, opacity = 1,
+  } = {}) {
+    const group = new THREE.Group();
+    const geom = new THREE.TorusGeometry(radius, tube, 16, segments);
+    const colors = [];
+    const cA = new THREE.Color(colorA);
+    const cB = new THREE.Color(colorB);
+    const pos = geom.attributes.position;
+    for (let i = 0; i < pos.count; i++) {
+      const ang = Math.atan2(pos.getY(i), pos.getX(i));
+      const t = 0.5 + 0.5 * Math.cos(ang);
+      const c = cA.clone().lerp(cB, t);
+      colors.push(c.r, c.g, c.b);
+    }
+    geom.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+    const mat = new THREE.MeshBasicMaterial({
+      vertexColors: true,
+      transparent: true,
+      opacity: opacity,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+    });
+    const ring = new THREE.Mesh(geom, mat);
+    group.add(ring);
+
+    // invisible fat picker torus so raycast is generous
+    const pickerGeom = new THREE.TorusGeometry(radius, tube * 6, 8, 48);
+    const pickerMat = new THREE.MeshBasicMaterial({ visible: false });
+    const picker = new THREE.Mesh(pickerGeom, pickerMat);
+    group.add(picker);
+
+    const halo = new THREE.Mesh(
+      new THREE.TorusGeometry(radius, tube * 3.2, 12, 96),
+      new THREE.MeshBasicMaterial({
+        color: new THREE.Color(colorA).lerp(new THREE.Color(colorB), 0.5),
+        transparent: true, opacity: opacity * 0.18,
+        blending: THREE.AdditiveBlending, depthWrite: false,
+      })
+    );
+    group.add(halo);
+
+    if (dashed) {
+      ring.material.opacity = opacity * 0.35;
+      halo.material.opacity = opacity * 0.06;
+    }
+    group.userData.ringCore = ring;
+    group.userData.ringHalo = halo;
+    group.userData.picker = picker;
+    group.userData.baseOpacity = ring.material.opacity;
+    group.userData.baseHaloOpacity = halo.material.opacity;
+    return group;
+  }
+
+  // ---------- build a single H-wheel ----------
+  const R_INNER = 1.55;
+  const R_MID   = 1.75;
+  const R_OUTER = 1.95;
+  const R_LOCK  = 2.0;
+
+  // axis directions
+  const dChi = new THREE.Vector3(1, 0, 0);
+  const dMu  = new THREE.Vector3(0, 1, 0);
+  const dPhi = new THREE.Vector3(0, 0, 1);
+  const dTau = new THREE.Vector3(1, 1, 1).normalize();
+
+  // Everything clickable (only in primary H) goes into this array.
+  // For peer/mirror Hs we tag only pivot groups for clickability.
+  const clickables = [];
+  // Selection state
+  let selected = null; // { object, restore() }
+
+  function registerClickable(mesh, key) {
+    mesh.userData.elementKey = key;
+    clickables.push(mesh);
+  }
+
+  function buildHWheel(opts = {}) {
+    const isPrimary = !!opts.primary;
+    const root = new THREE.Group();
+    const labels = {};
+
+    // --- hub ---
+    const hubCore = new THREE.Mesh(
+      new THREE.SphereGeometry(0.09, 24, 24),
+      new THREE.MeshBasicMaterial({ color: 0xffffff })
+    );
+    root.add(hubCore);
+    const hubGlow = new THREE.Mesh(
+      new THREE.SphereGeometry(0.28, 24, 24),
+      new THREE.MeshBasicMaterial({
+        color: 0xaed0ff, transparent: true, opacity: 0.22,
+        blending: THREE.AdditiveBlending, depthWrite: false
+      })
+    );
+    root.add(hubGlow);
+    // hub picker (invisible larger sphere)
+    const hubPicker = new THREE.Mesh(
+      new THREE.SphereGeometry(0.35, 12, 12),
+      new THREE.MeshBasicMaterial({ visible: false })
+    );
+    root.add(hubPicker);
+    const hubLabel = textSprite('↕↕↕↕', { color: '#ffffff', scale: 0.005 });
+    hubLabel.position.set(0, -0.38, 0);
+    root.add(hubLabel);
+    labels.hub = hubLabel;
+    if (isPrimary) {
+      registerClickable(hubPicker, 'hub');
+      hubPicker.userData.visualTargets = { core: hubCore, glow: hubGlow };
+    }
+
+    // --- 4 axes as line segments (with invisible cylinder pickers) ---
+    const axisLen = R_LOCK + 0.25;
+    function makeAxis(dir, color, ghost=false) {
+      const group = new THREE.Group();
+      const mat = new THREE.LineBasicMaterial({
+        color: color, transparent: true,
+        opacity: ghost ? 0.22 : 0.75,
+        blending: THREE.AdditiveBlending, depthWrite: false,
+      });
+      const g = new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3().copy(dir).multiplyScalar(-axisLen),
+        new THREE.Vector3().copy(dir).multiplyScalar( axisLen),
+      ]);
+      const line = new THREE.Line(g, mat);
+      group.add(line);
+
+      // picker cylinder along the axis
+      const picker = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.08, 0.08, axisLen * 2, 8),
+        new THREE.MeshBasicMaterial({ visible: false })
+      );
+      // orient cylinder along dir — default is +y
+      const up = new THREE.Vector3(0, 1, 0);
+      const q = new THREE.Quaternion().setFromUnitVectors(up, dir.clone().normalize());
+      picker.quaternion.copy(q);
+      group.add(picker);
+
+      group.userData.line = line;
+      group.userData.picker = picker;
+      group.userData.baseOpacity = mat.opacity;
+      return group;
+    }
+
+    const axisChi = makeAxis(dChi, COLOR.chi);
+    const axisMu  = makeAxis(dMu,  COLOR.mu);
+    const axisPhi = makeAxis(dPhi, COLOR.phi);
+    const axisTau = makeAxis(dTau, COLOR.tau, true);
+
+    root.add(axisChi); root.add(axisMu); root.add(axisPhi); root.add(axisTau);
+
+    if (isPrimary) {
+      registerClickable(axisChi.userData.picker, 'axis_chi');
+      axisChi.userData.picker.userData.visualTargets = { line: axisChi.userData.line };
+      registerClickable(axisMu.userData.picker, 'axis_mu');
+      axisMu.userData.picker.userData.visualTargets = { line: axisMu.userData.line };
+      registerClickable(axisPhi.userData.picker, 'axis_phi');
+      axisPhi.userData.picker.userData.visualTargets = { line: axisPhi.userData.line };
+      registerClickable(axisTau.userData.picker, 'axis_tau');
+      axisTau.userData.picker.userData.visualTargets = { line: axisTau.userData.line };
+    }
+
+    // --- 8 atoms ---
+    function atom(axis, sign, roleKey, initialLabel, elementKey) {
+      const dir = axis === 'chi' ? dChi : axis === 'mu' ? dMu : axis === 'phi' ? dPhi : dTau;
+      const p = dir.clone().multiplyScalar(sign * R_LOCK);
+      const color = AXIS[axis].color;
+      const grp = new THREE.Group();
+      const ball = new THREE.Mesh(
+        new THREE.SphereGeometry(0.075, 18, 18),
+        new THREE.MeshBasicMaterial({ color: color })
+      );
+      ball.position.copy(p);
+      grp.add(ball);
+      const halo = new THREE.Mesh(
+        new THREE.SphereGeometry(0.20, 16, 16),
+        new THREE.MeshBasicMaterial({
+          color: color, transparent: true, opacity: 0.30,
+          blending: THREE.AdditiveBlending, depthWrite: false
+        })
+      );
+      halo.position.copy(p);
+      grp.add(halo);
+      // picker (invisible)
+      const picker = new THREE.Mesh(
+        new THREE.SphereGeometry(0.22, 10, 10),
+        new THREE.MeshBasicMaterial({ visible: false })
+      );
+      picker.position.copy(p);
+      grp.add(picker);
+
+      const spr = textSprite(initialLabel, {
+        color: '#' + color.toString(16).padStart(6, '0'),
+        scale: 0.0035,
+      });
+      spr.position.copy(p.clone().multiplyScalar(1.18));
+      grp.add(spr);
+      labels[roleKey] = spr;
+      if (axis === 'tau') {
+        ball.material.transparent = true;
+        ball.material.opacity = 0.35;
+        halo.material.opacity = 0.12;
+        spr.material.opacity = 0.55;
+      }
+      if (isPrimary) {
+        registerClickable(picker, elementKey);
+        picker.userData.visualTargets = { ball, halo };
+        picker.userData.baseBallOpacity = ball.material.opacity;
+        picker.userData.baseHaloOpacity = halo.material.opacity;
+      }
+      return grp;
+    }
+
+    root.add(atom('chi', +1, 'chi_pos', '↑ RISE',   'atom_chi_pos'));
+    root.add(atom('chi', -1, 'chi_neg', '↓ FALL',   'atom_chi_neg'));
+    root.add(atom('mu',  +1, 'mu_pos',  '↑ GROW',   'atom_mu_pos'));
+    root.add(atom('mu',  -1, 'mu_neg',  '↓ SHRINK', 'atom_mu_neg'));
+    root.add(atom('phi', +1, 'phi_pos', '↑ BLESS',  'atom_phi_pos'));
+    root.add(atom('phi', -1, 'phi_neg', '↓ CURSE',  'atom_phi_neg'));
+    root.add(atom('tau', +1, 'tau_pos', '↑ BEGIN',  'atom_tau_pos'));
+    root.add(atom('tau', -1, 'tau_neg', '↓ END',    'atom_tau_neg'));
+
+    // --- 16 corners ---
+    const cornerGroup = new THREE.Group();
+    const CORNER_R = 1.35;
+    const signPatterns = [];
+    for (let sx = -1; sx <= 1; sx += 2)
+      for (let sy = -1; sy <= 1; sy += 2)
+        for (let sz = -1; sz <= 1; sz += 2)
+          for (let st = -1; st <= 1; st += 2)
+            signPatterns.push([sx,sy,sz,st]);
+
+    function patternKey(sx, sy, sz, st) {
+      const ch = (s) => s > 0 ? 'p' : 'n';
+      return `corner_${ch(sx)}${ch(sy)}${ch(sz)}${ch(st)}`;
+    }
+
+    for (const [sx,sy,sz,st] of signPatterns) {
+      const v = new THREE.Vector3(sx, sy, sz).multiplyScalar(0.5);
+      const dir = v.clone().normalize();
+      const p = dir.multiplyScalar(CORNER_R);
+      const grp = new THREE.Group();
+      const isSpecial = (sx===1&&sy===1&&sz===1&&st===1) || (sx===-1&&sy===-1&&sz===-1&&st===-1);
+      const color = isSpecial ? (st>0 ? 0xffe0a0 : 0xff9080) : (st > 0 ? 0xd8c9ff : 0x88aaff);
+      const radius = isSpecial ? 0.065 : 0.045;
+      const ball = new THREE.Mesh(
+        new THREE.SphereGeometry(radius, 14, 14),
+        new THREE.MeshBasicMaterial({ color: color })
+      );
+      ball.position.copy(p);
+      grp.add(ball);
+      const halo = new THREE.Mesh(
+        new THREE.SphereGeometry(isSpecial ? 0.18 : 0.11, 12, 12),
+        new THREE.MeshBasicMaterial({
+          color: color, transparent: true, opacity: isSpecial ? 0.42 : 0.28,
+          blending: THREE.AdditiveBlending, depthWrite: false,
+        })
+      );
+      halo.position.copy(p);
+      grp.add(halo);
+      // picker
+      const picker = new THREE.Mesh(
+        new THREE.SphereGeometry(0.14, 8, 8),
+        new THREE.MeshBasicMaterial({ visible: false })
+      );
+      picker.position.copy(p);
+      grp.add(picker);
+      cornerGroup.add(grp);
+      if (isPrimary) {
+        const ek = patternKey(sx,sy,sz,st);
+        registerClickable(picker, ek);
+        picker.userData.visualTargets = { ball, halo };
+        picker.userData.baseBallOpacity = ball.material.opacity;
+        picker.userData.baseHaloOpacity = halo.material.opacity;
+      }
+    }
+    root.add(cornerGroup);
+
+    // --- faint lockpoint sphere ---
+    const lockSphere = new THREE.Mesh(
+      new THREE.SphereGeometry(R_LOCK, 32, 24),
+      new THREE.MeshBasicMaterial({
+        color: 0x445588, transparent: true, opacity: 0.05,
+        wireframe: true, depthWrite: false,
+      })
+    );
+    root.add(lockSphere);
+
+    // --- 6 bivector rings ---
+    const rings = {};
+
+    const ringChiMu = makeRing(R_INNER, COLOR.chi, COLOR.mu, { tube: 0.022 });
+    rings.chiMu = ringChiMu;
+    root.add(ringChiMu);
+
+    const ringChiPhi = makeRing(R_MID, COLOR.chi, COLOR.phi, { tube: 0.022 });
+    ringChiPhi.rotation.x = Math.PI / 2;
+    rings.chiPhi = ringChiPhi;
+    root.add(ringChiPhi);
+
+    const ringMuPhi = makeRing(R_OUTER, COLOR.mu, COLOR.phi, { tube: 0.022 });
+    ringMuPhi.rotation.y = Math.PI / 2;
+    rings.muPhi = ringMuPhi;
+    root.add(ringMuPhi);
+
+    const ghostOpacity = 0.45;
+    const ringChiTau = makeRing(R_INNER * 1.12, COLOR.chi, COLOR.tau, { tube: 0.012, dashed: true, opacity: ghostOpacity });
+    ringChiTau.rotation.x = Math.PI / 3;
+    ringChiTau.rotation.z = Math.PI / 5;
+    rings.chiTau = ringChiTau;
+    root.add(ringChiTau);
+
+    const ringMuTau = makeRing(R_MID * 1.12, COLOR.mu, COLOR.tau, { tube: 0.012, dashed: true, opacity: ghostOpacity });
+    ringMuTau.rotation.x = Math.PI / 4;
+    ringMuTau.rotation.y = Math.PI / 3;
+    rings.muTau = ringMuTau;
+    root.add(ringMuTau);
+
+    const ringPhiTau = makeRing(R_OUTER * 1.12, COLOR.phi, COLOR.tau, { tube: 0.012, dashed: true, opacity: ghostOpacity });
+    ringPhiTau.rotation.y = Math.PI / 4;
+    ringPhiTau.rotation.z = Math.PI / 3;
+    rings.phiTau = ringPhiTau;
+    root.add(ringPhiTau);
+
+    if (isPrimary) {
+      registerClickable(ringChiMu.userData.picker, 'ring_chimu');
+      ringChiMu.userData.picker.userData.visualTargets = { ringGroup: ringChiMu };
+      registerClickable(ringChiPhi.userData.picker, 'ring_chiphi');
+      ringChiPhi.userData.picker.userData.visualTargets = { ringGroup: ringChiPhi };
+      registerClickable(ringMuPhi.userData.picker, 'ring_muphi');
+      ringMuPhi.userData.picker.userData.visualTargets = { ringGroup: ringMuPhi };
+      registerClickable(ringChiTau.userData.picker, 'ring_chitau');
+      ringChiTau.userData.picker.userData.visualTargets = { ringGroup: ringChiTau };
+      registerClickable(ringMuTau.userData.picker, 'ring_mutau');
+      ringMuTau.userData.picker.userData.visualTargets = { ringGroup: ringMuTau };
+      registerClickable(ringPhiTau.userData.picker, 'ring_phitau');
+      ringPhiTau.userData.picker.userData.visualTargets = { ringGroup: ringPhiTau };
+    }
+
+    root.userData = {
+      rings,
+      hubCore, hubGlow, hubLabel,
+      cornerGroup,
+      labels,
+    };
+    return root;
+  }
+
+  // ---------- H-SCOPE ----------
+  const hScope = new THREE.Group();
+  const primaryH = buildHWheel({ primary: true });
+  hScope.add(primaryH);
+  scene.add(hScope);
+
+  // ---------- S-SCOPE: 4 H's in 3+1 arrangement ----------
+  const sScope = new THREE.Group();
+  sScope.visible = false;
+
+  const S_RADIUS = 4.5;
+  const S_SCALE = 0.52;
+  const S_MIRROR_OFFSET_Y = -3.2;
+
+  const peerH = [];
+
+  function makeScaledH(scale) {
+    const h = buildHWheel({ primary: false });
+    h.scale.setScalar(scale);
+    return h;
+  }
+
+  // peer picker = invisible sphere around each peer's center, at peer-pivot scope
+  for (let i = 0; i < 3; i++) {
+    const a = (i * 2 * Math.PI / 3) - Math.PI / 2;
+    const x = S_RADIUS * Math.cos(a);
+    const z = S_RADIUS * Math.sin(a);
+    const pivot = new THREE.Group();
+    pivot.position.set(x, 0, z);
+    const h = makeScaledH(S_SCALE);
+    pivot.add(h);
+
+    const lbl = textSprite('peer ' + (i + 1), { color: '#f5f7ff', scale: 0.003 });
+    lbl.position.set(0, 2.0, 0);
+    pivot.add(lbl);
+
+    // big invisible picker sphere for peer
+    const peerPicker = new THREE.Mesh(
+      new THREE.SphereGeometry(1.3, 12, 12),
+      new THREE.MeshBasicMaterial({ visible: false })
+    );
+    pivot.add(peerPicker);
+    peerPicker.userData.elementKey = 'peer_gen' + (i+1);
+    peerPicker.userData.visualTargets = { wheel: h };
+    peerPicker.userData.sOnly = true;
+
+    sScope.add(pivot);
+    peerH.push({ pivot, h, baseAngle: a, label: lbl, picker: peerPicker });
+  }
+
+  // mirror H below, flipped
+  const mirrorPivot = new THREE.Group();
+  mirrorPivot.position.set(0, S_MIRROR_OFFSET_Y, 0);
+  const mirrorH = makeScaledH(S_SCALE);
+  mirrorH.scale.y *= -1;
+  mirrorPivot.add(mirrorH);
+  const mirrorLbl = textSprite('mirror', { color: '#c0d0ff', scale: 0.0028 });
+  mirrorLbl.position.set(0, -1.9, 0);
+  mirrorPivot.add(mirrorLbl);
+
+  const mirrorPicker = new THREE.Mesh(
+    new THREE.SphereGeometry(1.3, 12, 12),
+    new THREE.MeshBasicMaterial({ visible: false })
+  );
+  mirrorPivot.add(mirrorPicker);
+  mirrorPicker.userData.elementKey = 'mirror_h';
+  mirrorPicker.userData.visualTargets = { wheel: mirrorH };
+  mirrorPicker.userData.sOnly = true;
+  sScope.add(mirrorPivot);
+
+  // central hub sphere + picker in S-scope
+  const sHubCore = new THREE.Mesh(
+    new THREE.SphereGeometry(0.13, 24, 24),
+    new THREE.MeshBasicMaterial({ color: 0xffffff })
+  );
+  sScope.add(sHubCore);
+  const sHubGlow = new THREE.Mesh(
+    new THREE.SphereGeometry(0.55, 24, 24),
+    new THREE.MeshBasicMaterial({
+      color: 0xaed0ff, transparent: true, opacity: 0.18,
+      blending: THREE.AdditiveBlending, depthWrite: false,
+    })
+  );
+  sScope.add(sHubGlow);
+  const sHubLabel = textSprite('↕↕↕↕', { color: '#ffffff', scale: 0.006 });
+  sHubLabel.position.set(0, -0.55, 0);
+  sScope.add(sHubLabel);
+
+  const sHubPicker = new THREE.Mesh(
+    new THREE.SphereGeometry(0.7, 12, 12),
+    new THREE.MeshBasicMaterial({ visible: false })
+  );
+  sHubPicker.userData.elementKey = 'hub';
+  sHubPicker.userData.visualTargets = { core: sHubCore, glow: sHubGlow };
+  sHubPicker.userData.sOnly = true;
+  sScope.add(sHubPicker);
+
+  // faint lines from hub to each H center
+  function sLine(a, b, color, opacity) {
+    const m = new THREE.LineBasicMaterial({
+      color, transparent: true, opacity,
+      blending: THREE.AdditiveBlending, depthWrite: false,
+    });
+    const g = new THREE.BufferGeometry().setFromPoints([a, b]);
+    return new THREE.Line(g, m);
+  }
+  for (let i = 0; i < 3; i++) {
+    const p = peerH[i].pivot.position;
+    sScope.add(sLine(new THREE.Vector3(0,0,0), p, 0xccddff, 0.22));
+  }
+  sScope.add(sLine(new THREE.Vector3(0,0,0), new THREE.Vector3(0, S_MIRROR_OFFSET_Y, 0), 0x8899cc, 0.22));
+
+  scene.add(sScope);
+
+  // dynamic S-line updates
+  const sLines = [];
+  sScope.traverse(o => { if (o.isLine) sLines.push(o); });
+  function updateSLines() {
+    if (sLines.length < 4) return;
+    for (let i = 0; i < 3; i++) {
+      const p = peerH[i].pivot.position;
+      const arr = new Float32Array([0,0,0, p.x, p.y, p.z]);
+      sLines[i].geometry.setAttribute('position', new THREE.BufferAttribute(arr, 3));
+      sLines[i].geometry.attributes.position.needsUpdate = true;
+      sLines[i].geometry.computeBoundingSphere();
+    }
+    const mp = mirrorPivot.position;
+    const arr2 = new Float32Array([0,0,0, mp.x, mp.y, mp.z]);
+    sLines[3].geometry.setAttribute('position', new THREE.BufferAttribute(arr2, 3));
+    sLines[3].geometry.attributes.position.needsUpdate = true;
+    sLines[3].geometry.computeBoundingSphere();
+  }
+
+  // ==================================================================
+  // ELEMENT_DATA — the rich per-element content drawn from docs
+  // ==================================================================
+  const ELEMENT_DATA = (() => {
+    // helper so corner entries stay compact
+    function corner(pattern, name, hodos, bio, calibration, modal) {
+      const arrows = pattern;
+      return {
+        title: arrows + ' — ' + name,
+        subtitle: 'grade 4 corner · stdlib verb · ' + hodos,
+        vocab: {
+          physics: 'pseudoscalar (all 4 axes committed)',
+          computing: hodos + ' — ISA primitive',
+          ezekiel: 'ophan lockpoint (one of 16 eyes)',
+          sanskrit: 'karma-verb — one of the 16 doings',
+          medicine: 'outer rim position',
+          egyptian: 'uniliteral glyph (one of 24 rotational units)',
+        },
+        body: [
+          { heading: 'Role', text: 'One of the 16 grade-4 corners — the stdlib of H. Each corner is a fully specified verb, parameterized by a 4-bit sign pattern. Quaternion pseudoscalar with all four axes committed.' },
+          { heading: 'Hodos', text: '<b>' + hodos + '</b> — ' + calibration + '. Biological signature: ' + bio + '. Modal: ' + modal + '. Confirmed across 8 unrelated vocabularies (biology, computing, physics, math, linguistics, immunology, economics, developmental biology).' },
+          { heading: 'PCRW signature', text: 'P(strong) + C(EM) + R(gravity) + W(weak) sign pattern: ' + arrows + '. Unlike hylo (↑↑↑↑, all forward) and meta (↓↓↓↓, all backward), this corner is one of the 14 "ordinary" pseudoscalars — useful, specific, non-extremal.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Grade 4 — the 16 corners"', 'mind/wheel/4-loop.md § "Specific operations mapped"', 'wit.md § "Structurally Special Points"'],
+      };
+    }
+
+    return {
+      // ----------- HUB -----------
+      hub: {
+        title: '↕↕↕↕ — the hub',
+        subtitle: 'grade 0 · additive identity · shared across all CD layers',
+        vocab: {
+          physics: 'Higgs VEV / scalar zero / origin',
+          computing: 'NULL / &0 / zero register / NOP',
+          ezekiel: '"spirit in the wheels" (the axle)',
+          sanskrit: 'ātman = brahman · Self = Absolute',
+          medicine: 'BALANCE at center',
+          egyptian: 'Ma\'at\'s feather · perfect balance',
+        },
+        body: [
+          { heading: 'Structure', text: 'Zero committed axes. The additive identity of H: 0 + 0i + 0j + 0k. Every quaternion q satisfies q + 0 = q. <b>This is NOT a thing</b> — it is the space WITHIN WHICH things exist. The 80 things live at grades 1–4. The hub is grade 0.' },
+          { heading: 'Dimension-independent', text: 'The same element in R, C, H, O, S. The one coordinate shared across the entire Cayley-Dickson tower. Every walk that closes returns here. Every READ is an event at the hub.' },
+          { heading: 'Where is the hub?', text: 'Nowhere and everywhere. "Location" is an attribute of χ-axis commitments, and the hub has χ at ↕. You can\'t go to the hub. You can\'t fail to be at it. <b>The hub is wherever recognition is happening</b> — the point of recognition. Many observers each seeing themselves as central is not many centers; it\'s one hub read through many apertures (frame 10 identity move).' },
+          { heading: 'Recognition', text: 'Atman = Brahman = ↕↕↕↕ = the loop closing at you. You ARE the structure recognizing itself — that\'s what a wit is. "I AM" of Exodus 3:14 structurally — the one point defined purely by the absence of commitment.' },
+          { heading: 'Higgs identity', text: 'The Standard Model has 1 scalar Higgs field. Framework has exactly 1 hub. Both are unique, scalar, central. The Higgs field IS the hub. Symmetry breaking = commitment (↕ → ↑ or ↓) on some axis.' },
+        ],
+        refs: [
+          'mind/wheel/1-wheel.md § "Where is the hub?"',
+          'mind/wheel/3-lattice.md § "Grade 0 — the container"',
+          'wit.md frame 10 · frame 11 option B · "I AM"',
+          'mind/metrognosis/karma.md § atman = brahman',
+        ],
+      },
+
+      // ----------- 8 ATOMS -----------
+      atom_chi_pos: {
+        title: '↑↕↕↕ — χ+ · RISE',
+        subtitle: 'grade 1 atom · χ axis forward · the WHERE+ spoke',
+        vocab: {
+          physics: '+x position / +spatial direction',
+          computing: 'MOV ↑ / register read from high address',
+          ezekiel: 'face of the man (forward)',
+          sanskrit: '+ākāśa (+space)',
+          medicine: 'direction-keeper, forward quadrant',
+          egyptian: 'Shu (air / uplift)',
+        },
+        body: [
+          { heading: 'Role', text: 'One of 8 grade-1 atoms — the basis vectors of the lattice. χ committed forward, μ/φ/τ all free. The atom\'s verb is <b>RISE</b>, spin +½, landing on the +1 pole of the χ diameter.' },
+          { heading: 'Axis identity', text: 'χ = WHERE = POSITION = i (quaternion basis) = <b>READ</b> (strong force). Drive: FEAR (check position, verify, am I right?). χ operates as a whole-quaternion rotation: i × q changes all four components of q.' },
+          { heading: 'Origin', text: 'Came from ↕↕↕↕ — every grade-1 atom emerged from the container. A half-step rotation from the hub lands here.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Full atom table"', 'mind/wheel/2-trits.md § "↑ — positive commit"', 'wit.md § "Reference / THE AXES"'],
+      },
+      atom_chi_neg: {
+        title: '↓↕↕↕ — χ− · FALL',
+        subtitle: 'grade 1 atom · χ axis backward · the WHERE− spoke',
+        vocab: {
+          physics: '−x position / −spatial direction',
+          computing: 'MOV ↓ / register read from low address',
+          ezekiel: 'face of the man (back)',
+          sanskrit: '−ākāśa',
+          medicine: 'direction-keeper, reverse quadrant',
+          egyptian: 'Tefnut (moisture / settle)',
+        },
+        body: [
+          { heading: 'Role', text: 'Opposing end of the χ diameter. Verb: <b>FALL</b>, spin −½, landing on −1. Negative commit of WHERE — annihilation direction, fact/completion.' },
+          { heading: 'Axis identity', text: 'Same axis as χ+ (READ / strong force), opposite sign. PIE root *h₁wes-* (to stay, dwell, had been) — WAS tense.' },
+          { heading: 'Structural partner', text: 'Paired with ↑↕↕↕ across the hub: −1 ──── 0 ──── +1 forms one diameter. Together they are the χ spoke.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Full atom table"', 'mind/wheel/2-trits.md § "↓ — negative commit"'],
+      },
+      atom_mu_pos: {
+        title: '↕↑↕↕ — μ+ · GROW',
+        subtitle: 'grade 1 atom · μ axis forward · the WHAT+ spoke',
+        vocab: {
+          physics: '+m mass / positive substance',
+          computing: 'INC / allocate / instantiate',
+          ezekiel: 'face of the lion (forward)',
+          sanskrit: '+prakṛti (material nature)',
+          medicine: 'East · Yellow · Eagle · Spring',
+          egyptian: 'Geb (earth / substance)',
+        },
+        body: [
+          { heading: 'Role', text: 'μ axis committed forward. Verb: <b>GROW</b>, spin +½. Creation of substance — acquisition, growth, accumulation.' },
+          { heading: 'Axis identity', text: 'μ = WHAT = SUBSTANCE = j (quaternion basis) = <b>CALL</b> (EM force). Drive: DESIRE (seek substance, grow, acquire). Coupling α ≈ 1/137 — fires once per 137 CPU cycles.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Grade 1 — the 8 atoms"', 'mind/wheel/4-loop.md § "The four forces"'],
+      },
+      atom_mu_neg: {
+        title: '↕↓↕↕ — μ− · SHRINK',
+        subtitle: 'grade 1 atom · μ axis backward · the WHAT− spoke',
+        vocab: {
+          physics: '−m / reduction of substance',
+          computing: 'DEC / free / deallocate',
+          ezekiel: 'face of the lion (back)',
+          sanskrit: '−prakṛti',
+          medicine: 'West · Black · Bear · Autumn',
+          egyptian: 'Nut (sky / release)',
+        },
+        body: [
+          { heading: 'Role', text: 'Verb: <b>SHRINK</b>, spin −½. Annihilation of substance. Pops what GROW pushed.' },
+          { heading: 'Partner', text: 'Opposite ↕↑↕↕ across the μ diameter. The pair IS the μ spoke.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Grade 1 — the 8 atoms"'],
+      },
+      atom_phi_pos: {
+        title: '↕↕↑↕ — φ+ · BLESS',
+        subtitle: 'grade 1 atom · φ axis forward · the WHICH+ spoke',
+        vocab: {
+          physics: '+q charge / positive signal',
+          computing: 'CALL subroutine / branch-true',
+          ezekiel: 'face of the ox (forward)',
+          sanskrit: '+dharma (law / upholding)',
+          medicine: 'spirit-forward, affirmative quadrant',
+          egyptian: 'Osiris (order)',
+        },
+        body: [
+          { heading: 'Role', text: 'φ committed forward. Verb: <b>BLESS</b>, spin +½. Positive selection of signal — the WHICH axis saying yes.' },
+          { heading: 'Axis identity', text: 'φ = WHICH = SIGNAL = k = <b>CYCLE</b> (gravity, weakest at our scale). Drive: CURIOSITY (discriminate signal/noise, explore). In the wheel reading, gravity IS the loop iterating — the event-loop scheduler of the universe.' },
+          { heading: 'Voice of "disdain for the delusional default"', text: 'Per wit.md: the framework blesses convergence (+1 on WHICH) and curses delusion (−1 on WHICH). Both are structural. This is the substrate\'s native signal-selection at cognitive scale.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Grade 1"', 'mind/wheel/4-loop.md § "Gravity is the event loop itself"', 'wit.md § "Disdain for the delusional default IS signal"'],
+      },
+      atom_phi_neg: {
+        title: '↕↕↓↕ — φ− · CURSE',
+        subtitle: 'grade 1 atom · φ axis backward · the WHICH− spoke',
+        vocab: {
+          physics: '−q / negative-polarity signal',
+          computing: 'RET / branch-false',
+          ezekiel: 'face of the ox (back)',
+          sanskrit: '−dharma / adharma',
+          medicine: 'shadow-side of WHICH axis',
+          egyptian: 'Set (chaos / reversal)',
+        },
+        body: [
+          { heading: 'Role', text: 'Verb: <b>CURSE</b>, spin −½. Rejection of signal — the WHICH axis saying no. Partner of BLESS across the φ diameter.' },
+          { heading: 'Substrate meaning', text: 'Not moralistic. Structural: the edge that removes a commitment on WHICH, or rejects noise. Necessary — without ↓ on φ there would be no discrimination, only acceptance.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Grade 1"', 'mind/wheel/2-trits.md § "↓ — negative commit"'],
+      },
+      atom_tau_pos: {
+        title: '↕↕↕↑ — τ+ · BEGIN · the unit',
+        subtitle: 'grade 1 atom · τ axis forward · multiplicative identity',
+        vocab: {
+          physics: '+t / Big-Bang direction / fiat',
+          computing: 'LOOP / start iteration / tick forward',
+          ezekiel: 'face of the eagle (forward)',
+          sanskrit: '+kāla (time)',
+          medicine: 'dawn / spring beginning',
+          egyptian: 'Rā (day / midday sun)',
+        },
+        body: [
+          { heading: 'Structurally special', text: 'This is the <b>multiplicative identity</b> of H: 1 + 0i + 0j + 0k. The one atom among the 8 that preserves everything it touches: q · 1 = q for all q. Lives on the τ (WHEN/TIME) axis — τ is what COMPLETES the system. You need operands before multiplication means anything. The unit makes the walk possible.' },
+          { heading: 'Axis identity', text: 'τ = WHEN = TIME = the scalar basis "1" = <b>TEST</b> (weak force). Drive: HUNGER (keep going, next(), don\'t halt). <b>τ is monotone</b> (frame 8) — next() never decrements. Arrow of time = the structural asymmetry between the one monotone axis and three bidirectional axes.' },
+          { heading: 'Master clock', text: 'τ is the master clock signal running the substrate. c = one clock cycle = Planck time ≈ 5.39 × 10⁻⁴⁴ s. All other activity is relative to this tick.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "↕↕↕↑ — the multiplicative identity"', 'mind/wheel/4-loop.md § "Time as master clock"', 'wit.md § "Structurally Special Points" · ↕↕↕↑'],
+      },
+      atom_tau_neg: {
+        title: '↕↕↕↓ — τ− · END',
+        subtitle: 'grade 1 atom · τ axis backward · ghosted (τ can\'t be drawn)',
+        vocab: {
+          physics: '−t / backward time / closure',
+          computing: 'HALT / return / loop-exit',
+          ezekiel: 'face of the eagle (back)',
+          sanskrit: '−kāla / mahāpralaya (dissolution)',
+          medicine: 'dusk / winter ending',
+          egyptian: 'Khepri (becoming / cyclic return)',
+        },
+        body: [
+          { heading: 'Role', text: 'Verb: <b>END</b>, spin −½. The closure pole of τ — where walks finish. Ghosted in the visualization because τ is the hidden 4th dimension; can\'t be drawn in 3D.' },
+          { heading: 'Subtlety', text: 'τ is monotone (frame 8): the successor-verb never actually walks backward. Counting backward is a <b>distinct</b> verb (the −½ transition), not the forward verb reversed. END is the structural closure of a walk, not time going back.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Grade 1"', 'wit.md frame 8 · "WHEN is monotone"'],
+      },
+
+      // ----------- 4 AXES -----------
+      axis_chi: {
+        title: 'χ axis — POSITION (WHERE)',
+        subtitle: 'diameter · quaternion basis i · force: READ · drive: FEAR',
+        vocab: {
+          physics: 'spatial axis x · strong-force fiber',
+          computing: 'MOV instruction · register addressing',
+          ezekiel: 'man face + man back (two spokes of creature 1)',
+          sanskrit: 'ākāśa (space)',
+          medicine: 'North ↔ South axis',
+          egyptian: 'Shu ↔ Tefnut (air ↔ moisture)',
+        },
+        body: [
+          { heading: 'Structure', text: 'A full diameter: −1 ──── 0 ──── +1 (FALL ──── hub ──── RISE). Two grade-1 atoms sharing one trit. The axis IS the spoke pair.' },
+          { heading: 'Force assignment', text: 'χ carries the READ force (strong interaction). A READ is a whole-quaternion observation — it sees all four axes at once. i × q takes (w,x,y,z) → (−x, w, −z, y). Every component changes. Coupling α_s ≈ 0.118 at observable scale.' },
+          { heading: 'Why "space"', text: 'Per the boot sequence: χ + μ come first (something to tick ON), then φ (something to tick THROUGH), then τ (the tick). Genesis 1: shamayim+eretz → or → yom echad. CPU boot: memory → bus → clock.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "The four axes"', 'mind/wheel/4-loop.md § "The four forces"', 'wit.md frame 4 · "Four axes — Hurwitz-bounded"'],
+      },
+      axis_mu: {
+        title: 'μ axis — SUBSTANCE (WHAT)',
+        subtitle: 'diameter · quaternion basis j · force: CALL · drive: DESIRE',
+        vocab: {
+          physics: 'mass axis · electroweak fiber',
+          computing: 'CALL instruction · function-call site',
+          ezekiel: 'lion face + lion back (creature 2)',
+          sanskrit: 'prakṛti (material nature)',
+          medicine: 'East ↔ West axis',
+          egyptian: 'Geb ↔ Nut (earth ↔ sky)',
+        },
+        body: [
+          { heading: 'Structure', text: 'Two atoms (GROW, SHRINK) sharing the WHAT trit. The axis of material substance — what exists, what gets acquired or released.' },
+          { heading: 'Force assignment', text: 'μ carries CALL (electromagnetism). CALL acts on the whole quaternion. α ≈ 1/137 is the interrupt-line probability per clock cycle. Every programmer\'s function call IS the EM force in CPU vocabulary.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "The four axes"', 'mind/wheel/4-loop.md § "The wheel is a CPU"'],
+      },
+      axis_phi: {
+        title: 'φ axis — SIGNAL (WHICH)',
+        subtitle: 'diameter · quaternion basis k · force: CYCLE (gravity) · drive: CURIOSITY',
+        vocab: {
+          physics: 'phase / charge axis · gravity-coupling fiber',
+          computing: 'LOOP instruction · event-loop scheduler',
+          ezekiel: 'ox face + ox back (creature 3)',
+          sanskrit: 'dharma (law / signal of what upholds)',
+          medicine: 'spirit-ward ↔ shadow-ward axis',
+          egyptian: 'Osiris ↔ Set (order ↔ chaos)',
+        },
+        body: [
+          { heading: 'Structure', text: 'BLESS ↔ CURSE across the hub. The WHICH axis — discrimination, selection, quality.' },
+          { heading: 'Force assignment', text: 'φ carries CYCLE — <b>gravity, but reinterpreted</b>. Gravity is NOT a particle-mediated force; it IS the loop iterating. The kernel\'s main event loop. No graviton needed. α_G = 1 at Planck scale (unit coupling at substrate), (m/m_P)² scaling to observable weakness.' },
+          { heading: 'Hierarchy dissolved', text: 'Gravity being "10³⁹ times weaker" than EM is a category error: gravity is the medium, EM is a gate. The ~36-order hierarchy is just 2 × (19-order mass ratio from m_P/m_proton). Not fine-tuning, not supersymmetry — just mass-scale.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "The four axes"', 'mind/wheel/5-physics.md § "Gravity — the loop, not a particle"', 'mind/wheel/4-loop.md § "Gravity is the event loop itself"'],
+      },
+      axis_tau: {
+        title: 'τ axis — TIME (WHEN) · ghosted',
+        subtitle: 'monotone diameter · quaternion scalar "1" · force: TEST · drive: HUNGER',
+        vocab: {
+          physics: 'time axis · weak-force fiber · c = one clock cycle',
+          computing: 'TEST/CMP instruction · clock signal',
+          ezekiel: 'eagle face + eagle back (creature 4)',
+          sanskrit: 'kāla (time)',
+          medicine: 'season-cycle axis',
+          egyptian: 'Rā ↔ Khepri (day ↔ becoming)',
+        },
+        body: [
+          { heading: 'Special — monotone', text: 'Per frame 8: τ is unidirectional. next() never decrements. There is no −½ layer on τ equivalent to the bidirectional −½ on χ/μ/φ. The arrow of time is structural, not emergent.' },
+          { heading: 'Causality IS non-commutativity', text: 'Causality exists because τ is asymmetric AND H is non-commutative (ij ≠ ji). These two facts are the same fact.' },
+          { heading: 'Why ghosted', text: 'τ is the 4th dimension of H but we can only draw 3 in this scene. Rendered as a tilted faded line at (1,1,1)/√3. The three τ-bivector planes (χτ, μτ, φτ) are similarly drawn as tilted ghost rings.' },
+          { heading: 'Force assignment', text: 'τ carries TEST (weak force). A TEST decides the whole point — the universe\'s conditional branch. α_w ≈ 0.03.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "The four axes"', 'wit.md frame 8 · "WHEN is monotone"', 'mind/wheel/4-loop.md § "The four forces"'],
+      },
+
+      // ----------- 6 RINGS / BIVECTOR PLANES -----------
+      ring_chimu: {
+        title: 'χμ ring — the space-substance plane',
+        subtitle: 'grade 2 bivector plane · 4 bivectors · visible spatial rotation',
+        vocab: {
+          physics: 'spatial-substance rotation generator',
+          computing: 'MOV↔CALL coupling plane',
+          ezekiel: 'wheel within the wheel (inner ring)',
+          sanskrit: 'ākāśa-prakṛti interchange',
+          medicine: 'cardinal horizontal plane',
+          egyptian: 'base-to-course bivector of the djed pillar',
+        },
+        body: [
+          { heading: 'Role', text: 'One of H\'s 6 independent rotation planes (bivectors). The χμ plane has 4 bivector positions — ↑↑↕↕, ↑↓↕↕, ↓↑↕↕, ↓↓↕↕ — the four sign patterns on the two committed axes.' },
+          { heading: 'Clifford grade 2', text: 'Bivectors generate rotations. eᵢeⱼ rotates in the (i,j) plane. Total bivector count: 6 planes × 4 sign patterns = 24 = D4 roots = 24-cell vertices = 24 hours per day.' },
+          { heading: 'Animation', text: 'Rotates around z at 0.0045 rad/frame — the gyroscope feel. Visible in the drawing because both χ and μ map to drawable 3D axes.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Grade 2 — the 24 bivectors"', 'mind/wheel/1-wheel.md § "D4 root system = 24 roots"'],
+      },
+      ring_chiphi: {
+        title: 'χφ ring — the space-signal plane',
+        subtitle: 'grade 2 bivector plane · 4 bivectors · visible spatial rotation',
+        vocab: {
+          physics: 'position-phase rotation (Lorentz-like)',
+          computing: 'MOV↔LOOP coupling plane',
+          ezekiel: 'second ring of the vision',
+          sanskrit: 'ākāśa-dharma interchange',
+          medicine: 'cardinal vertical plane',
+          egyptian: 'second djed tier',
+        },
+        body: [
+          { heading: 'Role', text: 'Bivectors: ↑↕↑↕, ↑↕↓↕, ↓↕↑↕, ↓↕↓↕. Rotation generator in the WHERE-WHICH plane.' },
+          { heading: 'Animation', text: 'Rotates around y at 0.0032 rad/frame — different speed from χμ ring so the gyroscope precesses visibly.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Grade 2 — the 24 bivectors"'],
+      },
+      ring_muphi: {
+        title: 'μφ ring — the substance-signal plane',
+        subtitle: 'grade 2 bivector plane · 4 bivectors · visible spatial rotation',
+        vocab: {
+          physics: 'mass-phase rotation (isospin-like)',
+          computing: 'CALL↔LOOP coupling plane',
+          ezekiel: 'outer visible ring',
+          sanskrit: 'prakṛti-dharma interchange',
+          medicine: 'substance-to-spirit plane',
+          egyptian: 'third djed tier',
+        },
+        body: [
+          { heading: 'Role', text: 'Bivectors: ↕↑↑↕, ↕↑↓↕, ↕↓↑↕, ↕↓↓↕. Rotation generator in the WHAT-WHICH plane — purely internal-quantum-number-ish in SM vocabulary.' },
+          { heading: 'Animation', text: 'Rotates around x at 0.0057 rad/frame — the fastest visible ring.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Grade 2 — the 24 bivectors"'],
+      },
+      ring_chitau: {
+        title: 'χτ ring — space-time plane · ghosted',
+        subtitle: 'grade 2 bivector · τ-coupled · can\'t be drawn cleanly in 3D',
+        vocab: {
+          physics: 'Lorentz boost generator (space ↔ time)',
+          computing: 'MOV ↔ CLOCK coupling',
+          ezekiel: 'one of the wheels that "turned not when they went"',
+          sanskrit: 'ākāśa-kāla interchange',
+          medicine: 'seasonal-positional plane',
+          egyptian: 'plane of Rā\'s daily progression',
+        },
+        body: [
+          { heading: 'Role', text: 'One of 3 τ-bivector planes. Since τ can\'t be drawn in 3D, rendered as a tilted faded ring at odd angles — visual reminder that the plane exists but is projected.' },
+          { heading: 'Physics vocabulary', text: 'The χτ plane IS what physicists call a Lorentz boost generator. Rotation in (space, time) = change of velocity. Boost = rotation in a χτ bivector.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Grade 2 — the 24 bivectors"', 'mind/wheel/1-wheel.md § "Inner wheel"'],
+      },
+      ring_mutau: {
+        title: 'μτ ring — substance-time plane · ghosted',
+        subtitle: 'grade 2 bivector · τ-coupled',
+        vocab: {
+          physics: 'mass-time generator (decay rate)',
+          computing: 'CALL ↔ CLOCK coupling',
+          ezekiel: 'hidden ring',
+          sanskrit: 'prakṛti-kāla interchange',
+          medicine: 'growth-through-seasons plane',
+          egyptian: 'Osiris\' resurrection cycle plane',
+        },
+        body: [
+          { heading: 'Role', text: 'Bivectors ↕↑↕↑, ↕↑↕↓, ↕↓↕↑, ↕↓↕↓ (the 4 sign patterns on μ and τ). Rotation generator in the WHAT-WHEN plane.' },
+          { heading: 'Interpretation', text: 'Decay and growth rates live here. A particle\'s lifetime IS a rotation in the μτ plane — how much substance per unit time.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Grade 2"'],
+      },
+      ring_phitau: {
+        title: 'φτ ring — signal-time plane · ghosted',
+        subtitle: 'grade 2 bivector · τ-coupled',
+        vocab: {
+          physics: 'phase-time generator (frequency)',
+          computing: 'LOOP ↔ CLOCK coupling',
+          ezekiel: 'ghosted ring',
+          sanskrit: 'dharma-kāla interchange',
+          medicine: 'spiritual-cycle plane',
+          egyptian: 'plane of Ma\'at\'s judgment (signal × time)',
+        },
+        body: [
+          { heading: 'Role', text: 'Bivectors ↕↕↑↑, ↕↕↑↓, ↕↕↓↑, ↕↕↓↓. Rotation generator in the WHICH-WHEN plane — frequency, oscillation, phase advance per tick.' },
+          { heading: 'The ω in e^(iωt)', text: 'Every physicist\'s "phase advances at angular frequency ω" IS a rotation in the φτ plane. Light, quantum-mechanical wavefunctions, every oscillator.' },
+        ],
+        refs: ['mind/wheel/3-lattice.md § "Grade 2"', 'mind/wheel/4-loop.md § "Light = bind"'],
+      },
+
+      // ----------- 16 CORNERS (generated) -----------
+      // Convention: corner_<sx><sy><sz><st>  where each is p/n for +/-
+      // Special: corner_pppp = hylo, corner_nnnn = meta
+      corner_pppp: {
+        title: '↑↑↑↑ — HYLO · all forces forward',
+        subtitle: 'grade 4 corner · PCRWF · the equation applied to itself',
+        vocab: {
+          physics: '1 + i + j + k · fully-forward pseudoscalar',
+          computing: 'hylomorphism · unfold-then-fold · compile',
+          ezekiel: 'the lockpoint where all 4 faces turn forward',
+          sanskrit: 'Dynamic Quality · Pirsig · pure becoming',
+          medicine: 'all-quadrants-forward · high summer noon',
+          egyptian: 'Rā at zenith · full midday illumination',
+        },
+        body: [
+          { heading: 'Structurally special', text: 'One of only TWO corners with compiled NASM primitives (hylo at ↑↑↑↑, meta at ↓↓↓↓). The other 14 corners are ordinary sign permutations. Hylo is the <b>join of all four forward fundamental forces</b>: PROJ+COMP+PRIM+WEAK all forward = PCRWF.' },
+          { heading: 'Hylomorphism', text: 'Greek ὕλη (matter) + μορφή (form). The recursion scheme that unfolds then folds. The equation applied to its own coordinates producing itself. Self-op: <b>THINK</b>. Lakoff schema: CONTAINER. Meijer/Fokkinga/Paterson 1991, Augusteijn 1993, Y combinator, Kauffman eigenform, Banach fixed-point, Lawvere 1969 — independent math grounding.' },
+          { heading: 'Pirsig\'s Dynamic Quality', text: 'Not a 5th level above the 4 — it\'s the 4 forces evaluating themselves. The fixed point IS the structure. You are the structure recognizing itself. That\'s what a wit is.' },
+          { heading: 'Bio / calibration', text: 'Bio: THINK (meta-cognition). Calibration: meta-cognition, the self-op on the whole walk. The corner most directly instantiating frame 0 (fixed point IS structure).' },
+        ],
+        refs: [
+          'wit.md § "Structurally Special Points" · ↑↑↑↑',
+          'mind/wheel/3-lattice.md § "The two structurally special corners"',
+          'prior/os-lattice/01-bond/param/hylo.asm (NASM primitive)',
+        ],
+      },
+      corner_nnnn: {
+        title: '↓↓↓↓ — META · all forces backward',
+        subtitle: 'grade 4 corner · PCRWB · dual of hylo',
+        vocab: {
+          physics: '−1 − i − j − k · fully-backward pseudoscalar',
+          computing: 'NOP at substrate · identity operator · BE',
+          ezekiel: 'lockpoint where all 4 faces turn back',
+          sanskrit: 'śūnyatā · emptiness · un-doing as pure existence',
+          medicine: 'all-quadrants-reversed · midwinter midnight',
+          egyptian: 'Duat at deepest point · the night sea',
+        },
+        body: [
+          { heading: 'Structurally special', text: 'Second of the two corners with a compiled primitive. Dual of hylo: all four forces backward = PCRWB. Lakoff schema: IDENTITY. Self-op: <b>BE</b>. Modal: BE. Quantifier: NO/NONE. Just existence without operation.' },
+          { heading: 'Why "meta"', text: 'Not "meta-" as in "higher level" — meta as in "backward commit on all axes." The pseudoscalar negated. Where hylo compiles, meta just IS.' },
+          { heading: 'Relationship to hylo', text: 'Antipodal partner across the hub. Hylo = all forward forces synthesizing; meta = all backward forces resting. Together they are the two symmetric extremes of the 16 corners; the other 14 are intermediate sign patterns.' },
+        ],
+        refs: [
+          'wit.md § "Structurally Special Points" · ↓↓↓↓',
+          'mind/wheel/3-lattice.md § "The two structurally special corners"',
+          'prior/os-lattice/01-bond/param/meta.asm (NASM primitive)',
+        ],
+      },
+      corner_ppnn: corner('↑↑↓↓', 'FOLD', 'fold', 'DIGEST', 'compress many into one', '—'),
+      corner_ppnp: corner('↑↑↓↑', 'MAP',  'map',  'ADAPT/EVOLVE', 'transform to new vocab', '—'),
+      corner_pppn: corner('↑↑↑↓', 'FOLDL', 'foldl', 'REMEMBER/DNA', 'accumulate over time', '—'),
+      corner_pnnn: corner('↑↓↓↓', 'READ', 'read', 'SENSE', 'observe before acting', 'DO'),
+      corner_pnnp: corner('↑↓↓↑', 'FILTER', 'filter', 'IMMUNE SYSTEM', 'reject poison', 'MUST'),
+      corner_pnpn: corner('↑↓↑↓', 'COPY', 'copy', 'REPRODUCE', 'replicate to new domain', '—'),
+      corner_pnpp: corner('↑↓↑↑', 'SCAN', 'scan', 'FORAGE', 'search widely', '—'),
+      corner_npnn: corner('↓↑↓↓', 'CALL', 'call', 'COMMUNICATE', 'query for more info', 'HAVE'),
+      corner_npnp: corner('↓↑↓↑', 'MAYBE', 'maybe', 'SENSE(passive)', 'hold without collapsing', 'CAN'),
+      corner_nppn: corner('↓↑↑↓', 'FIX', 'fix', 'HEAL', 'correct errors', 'SHOULD'),
+      corner_nppp: corner('↓↑↑↑', 'BIND', 'bind', 'BOND', 'commit to frame', '—'),
+      corner_nnnp: corner('↓↓↓↑', 'TEST', 'test', 'FIGHT/FLIGHT', 'pass/fail claims', 'WILL'),
+      corner_nnpn: corner('↓↓↑↓', 'DRAIN', 'drain', 'EXCRETE', 'release wrong beliefs', 'MAY'),
+      corner_nnpp: corner('↓↓↑↑', 'TAKE_WHILE', 'take_while', 'EAT', 'consume while signal', 'MIGHT'),
+
+      // ----------- S-SCOPE PEERS -----------
+      peer_gen1: {
+        title: 'Peer H₁ — generation 1',
+        subtitle: 'S-scope triality peer · e / u / d · Khufu · first orbit position',
+        vocab: {
+          physics: 'electron, up quark, down quark, electron neutrino',
+          computing: 'thread 1 · first triality representative',
+          ezekiel: 'first living creature (in S3 orbit)',
+          sanskrit: 'Brahmā · creator aspect · first generation of the cycle',
+          medicine: 'first wheel of the triangular arrangement',
+          egyptian: 'Khufu pyramid · π encoding (base/height = 2π, slant/half-base = φ)',
+        },
+        body: [
+          { heading: 'Role in S', text: 'S = sedenions (16D) = O ⊕ O = (H⊕H) ⊕ (H⊕H) contains 4 H\'s. Aut(S) = S3 × Z2 (order 48) splits them 3+1. This is one of the 3 triality-peer H\'s — cycled by the S3 outer automorphism of D4.' },
+          { heading: 'Matter content', text: 'Each generation contains 16 fermions (SO(10) 16-spinor = 15 SM + 1 sterile ν) = the 16 half-spin corners of H. Generation 1: e, νₑ, up quark × 3 colors, down quark × 3 colors, plus antiparticles.' },
+          { heading: 'Giza convergence', text: '<b>Khufu</b> = first pyramid in the plateau\'s triangular arrangement. Encodes π and φ in its proportions: perimeter/height = 2π (<0.1%), slant/half-base = φ (<0.1%). Built with 4500-year precision. The 3 peer pyramids + Sphinx ARE the 3+1 in stone.' },
+          { heading: 'Hard ceiling', text: 'Cartan 1894: Out ≤ S3 for all simple Lie algebras, achieved ONLY by D4. No 4th fermion generation is algebraically possible. This isn\'t "we haven\'t looked" — it\'s structurally forbidden.' },
+        ],
+        refs: [
+          'mind/wheel/1-wheel.md § "S-scope: 4 H\'s in 3+1 arrangement"',
+          'mind/wheel/5-physics.md § "Why 3 generations — D4 triality"',
+          'mind/metrognosis/giza.md',
+          'wit.md frame 1 · S decomposition',
+        ],
+      },
+      peer_gen2: {
+        title: 'Peer H₂ — generation 2',
+        subtitle: 'S-scope triality peer · μ / c / s · Khafre · second orbit position',
+        vocab: {
+          physics: 'muon, charm quark, strange quark, muon neutrino',
+          computing: 'thread 2 · second triality representative',
+          ezekiel: 'second living creature (in S3 orbit)',
+          sanskrit: 'Viṣṇu · sustainer aspect · second cycle',
+          medicine: 'second wheel of the triangular arrangement',
+          egyptian: 'Khafre pyramid · α encoding (base = 3×137 cubits, height = 2×137)',
+        },
+        body: [
+          { heading: 'Role in S', text: 'Second of the 3 triality-peer H\'s. Same 16-fermion structure as gen 1, different mass scale. Triality cycles V → S+ → S− → V through the three 8-dim irreducible representations of so(8).' },
+          { heading: 'Matter content', text: 'μ (105.66 MeV), νₘᵤ, charm quark × 3 colors, strange quark × 3 colors + antis = 16. Mass ratio m_μ/m_e ≈ 206.8 — framework attributes this to 17 = corners + hub (see 6-masses.md, not to triality directly).' },
+          { heading: 'Giza convergence', text: '<b>Khafre</b> = the 3-4-5 triangle pyramid. Base = 3×137 cubits, height = 2×137 cubits. 137 = 1/α (fine-structure constant). Four and a half thousand years of stone encoding the EM coupling in architectural ratios.' },
+        ],
+        refs: [
+          'mind/wheel/1-wheel.md § "S-scope"',
+          'mind/wheel/5-physics.md § "Why 3 generations"',
+          'mind/metrognosis/giza.md § "Khafre"',
+        ],
+      },
+      peer_gen3: {
+        title: 'Peer H₃ — generation 3',
+        subtitle: 'S-scope triality peer · τ / t / b · Menkaure · third orbit position',
+        vocab: {
+          physics: 'tau lepton, top quark, bottom quark, tau neutrino',
+          computing: 'thread 3 · third triality representative',
+          ezekiel: 'third living creature (in S3 orbit)',
+          sanskrit: 'Śiva · destroyer/transformer aspect · third cycle',
+          medicine: 'third wheel of the triangular arrangement',
+          egyptian: 'Menkaure pyramid · 5³ encoding (height = 125 cubits exactly)',
+        },
+        body: [
+          { heading: 'Role in S', text: 'Third of the 3 triality-peer H\'s. Heaviest fermion generation. Same 16-corner structure repeated at highest mass scale.' },
+          { heading: 'Matter content', text: 'τ (1776.86 MeV), νₜ, top quark × 3 colors (173 GeV — the heaviest SM particle), bottom quark × 3 colors + antis = 16.' },
+          { heading: 'Giza convergence', text: '<b>Menkaure</b> = smallest pyramid, height 125 cubits = <b>5³ exactly</b> (Petrie 1883, corrected for granite). This matches the wormhole centrality cascade\'s bottom step: cent(grade 3) − cent(grade 4) = 125 = 5³. 3rd pyramid = 3rd generation = 5³ at the cascade bottom. Triple encoding in stone.' },
+        ],
+        refs: [
+          'mind/wheel/1-wheel.md § "S-scope"',
+          'mind/metrognosis/giza.md § "Menkaure = 5³"',
+          'mind/wheel/3-lattice.md § "Wormhole compute — centrality cascade"',
+        ],
+      },
+      mirror_h: {
+        title: 'Mirror H — the 4th H, Z₂-flipped',
+        subtitle: 'sterile sector · right-handed partners · CP-mirror · Sphinx candidate',
+        vocab: {
+          physics: 'sterile neutrinos · right-handed sector · CP-mirror states',
+          computing: 'kernel / debugger thread · inverted execution mode',
+          ezekiel: 'fourth creature (eagle) — inverted relative to the three',
+          sanskrit: 'Śakti / mirror-aspect · the reflected principle',
+          medicine: 'shadow wheel · West / introspection',
+          egyptian: 'the Sphinx — horizontal, lion+human, qualitatively distinct from the 3 pyramids',
+        },
+        body: [
+          { heading: 'Why not 4 peers', text: 'Aut(S) = S3 × Z2 (order 48 = F4 roots = SM fermion count — triple convergence). S3 permutes 3 of the 4 H\'s (triality orbit = generations). Z2 flips the 4th (CD-doubling direction) → mirror sector. The 4 H\'s are NOT symmetric peers — 3+1 is the structural asymmetry.' },
+          { heading: 'What\'s in it', text: 'Sterile neutrinos. Right-handed partners. CP-mirror states. Not a 4th generation (algebraically forbidden by Cartan Out ≤ S3) but the partner-sector of all three generations simultaneously. Scaled with scale.y *= -1 here to show the Z₂ flip.' },
+          { heading: 'Giza parallel', text: 'The <b>Sphinx</b> is qualitatively distinct from the 3 pyramids — horizontal not vertical, lion+human not triangle, oriented east not oriented to true north. Petrie noticed. Post-wheel reading: the plateau is 3+1 in stone, with the Sphinx as the Z₂-mirror outlier.' },
+          { heading: 'Pati-Salam connection', text: 'In Pati-Salam SU(4) × SU(2)_L × SU(2)_R: the 3 quark colors are the 3 S3-peer H\'s; the "4th color" (lepton) is the Z₂-mirror H. Pati-Salam didn\'t need to be proposed — it\'s what S-scope gives natively.' },
+        ],
+        refs: [
+          'mind/wheel/1-wheel.md § "S-scope: 4 H\'s in 3+1"',
+          'mind/wheel/5-physics.md § "Pati-Salam — natural fallout of S-scope 3+1"',
+          'mind/metrognosis/giza.md § "3 pyramids + Sphinx"',
+          'wit.md frame 1 · S = 3+1',
+        ],
+      },
+    };
+  })();
+
+  // ==================================================================
+  // PANEL UI
+  // ==================================================================
+  const panel       = document.getElementById('panel');
+  const pClose      = document.getElementById('panel-close');
+  const pTitle      = document.getElementById('panel-title');
+  const pSubtitle   = document.getElementById('panel-subtitle');
+  const pVocab      = document.getElementById('panel-vocab');
+  const pBody       = document.getElementById('panel-body');
+  const pRefs       = document.getElementById('panel-refs');
+
+  function openPanel(key) {
+    const data = ELEMENT_DATA[key];
+    if (!data) {
+      pTitle.textContent = 'unknown element';
+      pSubtitle.textContent = key;
+      pVocab.innerHTML = '';
+      pBody.innerHTML = '';
+      pRefs.innerHTML = '';
+      panel.classList.add('open');
+      panel.setAttribute('aria-hidden', 'false');
+      return;
+    }
+    pTitle.textContent = data.title;
+    pSubtitle.textContent = data.subtitle;
+    // vocab row
+    const vocabOrder = [
+      ['physics',   'physics'],
+      ['computing', 'computing'],
+      ['ezekiel',   'ezekiel'],
+      ['sanskrit',  'sanskrit'],
+      ['medicine',  'medicine'],
+      ['egyptian',  'egyptian'],
+    ];
+    pVocab.innerHTML = vocabOrder.map(([k, lbl]) => {
+      const v = data.vocab && data.vocab[k] ? data.vocab[k] : '—';
+      return `<div><span class="vkey">${lbl}</span><span class="vval">${escapeHtml(v)}</span></div>`;
+    }).join('');
+    // body
+    pBody.innerHTML = (data.body || []).map(sec =>
+      `<div class="body-section"><h3>${escapeHtml(sec.heading)}</h3><p>${sec.text}</p></div>`
+    ).join('');
+    // refs
+    if (data.refs && data.refs.length) {
+      pRefs.innerHTML = `<span class="ref-label">refs</span>` +
+        data.refs.map(r => `<span class="ref">${escapeHtml(r)}</span>`).join('');
+    } else {
+      pRefs.innerHTML = '';
+    }
+    panel.classList.add('open');
+    panel.setAttribute('aria-hidden', 'false');
+  }
+
+  function closePanel() {
+    panel.classList.remove('open');
+    panel.setAttribute('aria-hidden', 'true');
+    clearSelection();
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  pClose.addEventListener('click', closePanel);
+
+  // ==================================================================
+  // SELECTION / HIGHLIGHT
+  // ==================================================================
+  function clearSelection() {
+    if (!selected) return;
+    try { selected.restore(); } catch(e) {}
+    selected = null;
+  }
+
+  function highlight(picker) {
+    clearSelection();
+    const vt = picker.userData.visualTargets || {};
+    const restoreFns = [];
+
+    // hub: pulse glow + scale core
+    if (vt.core && vt.glow) {
+      const origGlowOpacity = vt.glow.material.opacity;
+      const origGlowScale   = vt.glow.scale.clone();
+      const origCoreScale   = vt.core.scale.clone();
+      vt.glow.material.opacity = Math.min(1, origGlowOpacity * 2.5 + 0.2);
+      vt.glow.scale.setScalar(origGlowScale.x * 1.8);
+      vt.core.scale.setScalar(origCoreScale.x * 1.4);
+      restoreFns.push(() => {
+        vt.glow.material.opacity = origGlowOpacity;
+        vt.glow.scale.copy(origGlowScale);
+        vt.core.scale.copy(origCoreScale);
+      });
+    }
+    // axis line
+    if (vt.line) {
+      const orig = vt.line.material.opacity;
+      vt.line.material.opacity = Math.min(1, orig * 2.2 + 0.3);
+      const origWidth = vt.line.material.linewidth;
+      restoreFns.push(() => {
+        vt.line.material.opacity = orig;
+        vt.line.material.linewidth = origWidth;
+      });
+    }
+    // atom / corner: scale ball + boost halo
+    if (vt.ball && vt.halo) {
+      const origBallScale = vt.ball.scale.clone();
+      const origHaloScale = vt.halo.scale.clone();
+      const origHaloOpacity = vt.halo.material.opacity;
+      const origBallOpacity = vt.ball.material.opacity;
+      vt.ball.scale.setScalar(origBallScale.x * 1.7);
+      vt.halo.scale.setScalar(origHaloScale.x * 1.8);
+      vt.halo.material.opacity = Math.min(1, origHaloOpacity * 2.2 + 0.2);
+      if (vt.ball.material.transparent) {
+        vt.ball.material.opacity = Math.min(1, origBallOpacity * 1.5 + 0.3);
+      }
+      restoreFns.push(() => {
+        vt.ball.scale.copy(origBallScale);
+        vt.halo.scale.copy(origHaloScale);
+        vt.halo.material.opacity = origHaloOpacity;
+        vt.ball.material.opacity = origBallOpacity;
+      });
+    }
+    // ring: brighten core + halo
+    if (vt.ringGroup) {
+      const core = vt.ringGroup.userData.ringCore;
+      const halo = vt.ringGroup.userData.ringHalo;
+      const origCoreOp = core.material.opacity;
+      const origHaloOp = halo.material.opacity;
+      core.material.opacity = Math.min(1, origCoreOp * 2 + 0.2);
+      halo.material.opacity = Math.min(1, origHaloOp * 3 + 0.2);
+      restoreFns.push(() => {
+        core.material.opacity = origCoreOp;
+        halo.material.opacity = origHaloOp;
+      });
+    }
+    // peer / mirror H wheel: scale up pivot
+    if (vt.wheel) {
+      const origScale = vt.wheel.scale.clone();
+      vt.wheel.scale.multiplyScalar(1.15);
+      restoreFns.push(() => vt.wheel.scale.copy(origScale));
+    }
+
+    selected = {
+      object: picker,
+      restore: () => restoreFns.forEach(fn => fn()),
+    };
+  }
+
+  // ==================================================================
+  // RAYCAST + CLICK
+  // ==================================================================
+  const raycaster = new THREE.Raycaster();
+  const pointer = new THREE.Vector2();
+
+  function getActiveClickables() {
+    // H-mode: only primary-H clickables (already registered)
+    // S-mode: peers + mirror + sHub
+    if (mode === 'H') {
+      return clickables; // all primary-H pickers
+    } else {
+      const arr = [];
+      for (const p of peerH) arr.push(p.picker);
+      arr.push(mirrorPicker);
+      arr.push(sHubPicker);
+      return arr;
+    }
+  }
+
+  function onPointerDown(ev) {
+    // ignore clicks on HUD / panel
+    if (ev.target.closest('#panel') || ev.target.closest('.hud.interactive') || ev.target.closest('#hint')) return;
+
+    pointer.x = (ev.clientX / window.innerWidth)  * 2 - 1;
+    pointer.y = -(ev.clientY / window.innerHeight) * 2 + 1;
+    raycaster.setFromCamera(pointer, camera);
+
+    const targets = getActiveClickables();
+    const hits = raycaster.intersectObjects(targets, true);
+
+    if (hits.length === 0) {
+      closePanel();
+      return;
+    }
+    // find the hit mesh that has an elementKey (walking up parents if needed)
+    let hit = hits[0].object;
+    while (hit && !hit.userData.elementKey) hit = hit.parent;
+    if (!hit || !hit.userData.elementKey) {
+      closePanel();
+      return;
+    }
+    highlight(hit);
+    openPanel(hit.userData.elementKey);
+  }
+
+  renderer.domElement.addEventListener('pointerdown', onPointerDown);
+
+  // ==================================================================
+  // ANIMATION
+  // ==================================================================
+  const clock = new THREE.Clock();
+  let paused = false;
+  let mode = 'H';
+
+  function animateHWheel(hRoot, t, scopeMul = 1) {
+    const rings = hRoot.userData.rings;
+    const s = scopeMul;
+    rings.chiMu.rotation.z += 0.0045 * s;
+    rings.chiPhi.rotation.y += 0.0032 * s;
+    rings.muPhi.rotation.x += 0.0057 * s;
+
+    rings.chiTau.rotation.z += 0.0011 * s;
+    rings.chiTau.rotation.x += 0.0007 * s;
+    rings.muTau.rotation.y  += 0.0013 * s;
+    rings.muTau.rotation.z  += 0.0006 * s;
+    rings.phiTau.rotation.x += 0.0009 * s;
+    rings.phiTau.rotation.y += 0.0015 * s;
+
+    const pulse = 1 + 0.12 * Math.sin(t * 2.2);
+    hRoot.userData.hubGlow.scale.setScalar(pulse);
+
+    hRoot.userData.cornerGroup.rotation.y += 0.0009 * s;
+    hRoot.userData.cornerGroup.rotation.x += 0.00035 * s;
+  }
+
+  function animate() {
+    requestAnimationFrame(animate);
+    const dt = paused ? 0 : clock.getDelta();
+    const t = clock.elapsedTime;
+    if (!paused) {
+      if (mode === 'H') {
+        animateHWheel(primaryH, t, 1.0);
+      } else {
+        animateHWheel(peerH[0].h, t, 0.9);
+        animateHWheel(peerH[1].h, t, 1.1);
+        animateHWheel(peerH[2].h, t, 0.75);
+        animateHWheel(mirrorH,    t, 0.6);
+
+        const s3Speed = 0.12;
+        const baseAngle = t * s3Speed;
+        for (let i = 0; i < 3; i++) {
+          const a = peerH[i].baseAngle + baseAngle;
+          peerH[i].pivot.position.x = S_RADIUS * Math.cos(a);
+          peerH[i].pivot.position.z = S_RADIUS * Math.sin(a);
+          peerH[i].pivot.rotation.y = -baseAngle;
+        }
+        mirrorPivot.position.y = S_MIRROR_OFFSET_Y + 0.15 * Math.sin(t * 0.7);
+        mirrorPivot.rotation.y += 0.0016;
+      }
+    }
+    if (sScope.visible) updateSLines();
+    controls.update();
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  // ==================================================================
+  // UI — mode / pause / reset
+  // ==================================================================
+  const btnToggle = document.getElementById('toggleView');
+  const btnPause  = document.getElementById('togglePause');
+  const btnReset  = document.getElementById('resetCam');
+  const stTitle   = document.getElementById('status-title');
+  const stBody    = document.getElementById('status-body');
+
+  function setMode(m) {
+    mode = m;
+    closePanel();
+    if (m === 'H') {
+      hScope.visible = true;
+      sScope.visible = false;
+      btnToggle.textContent = 'View: H-scope → S-scope';
+      stTitle.textContent = 'H-SCOPE';
+      stBody.innerHTML = 'inner wheel of a single H.<br/>3 spatial-spatial bivector planes rotate (χμ, χφ, μφ).<br/>3 τ-planes ghosted (hidden dimension).<br/>8 axis atoms + 16 half-spin corners = 24 lockpoints = D4 roots.';
+      camera.position.copy(CAM_HOME_H);
+      controls.target.set(0, 0, 0);
+    } else {
+      hScope.visible = false;
+      sScope.visible = true;
+      btnToggle.textContent = 'View: S-scope → H-scope';
+      stTitle.textContent = 'S-SCOPE — 3+1';
+      stBody.innerHTML = '4 H\'s sharing one hub.<br/>3 triality peers cycle under S₃ → fermion generations.<br/>1 mirror H flipped by Z₂ → sterile / CP-partner sector.<br/>hub ↕↕↕↕ = shared additive identity.';
+      camera.position.copy(CAM_HOME_S);
+      controls.target.set(0, -0.6, 0);
+    }
+  }
+
+  btnToggle.addEventListener('click', () => setMode(mode === 'H' ? 'S' : 'H'));
+  btnPause.addEventListener('click', () => {
+    paused = !paused;
+    btnPause.textContent = paused ? 'Resume' : 'Pause';
+    if (!paused) clock.getDelta();
+  });
+  btnReset.addEventListener('click', () => {
+    if (mode === 'H') { camera.position.copy(CAM_HOME_H); controls.target.set(0,0,0); }
+    else              { camera.position.copy(CAM_HOME_S); controls.target.set(0,-0.6,0); }
+  });
+
+  // keyboard
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'v' || e.key === 'V') btnToggle.click();
+    else if (e.key === ' ') { e.preventDefault(); btnPause.click(); }
+    else if (e.key === 'r' || e.key === 'R') btnReset.click();
+    else if (e.key === 'Escape') closePanel();
+  });
+
+  window.addEventListener('resize', () => {
+    camera.aspect = W() / H();
+    camera.updateProjectionMatrix();
+    renderer.setSize(W(), H());
+  });
+
+  // init
+  setMode('H');
+})();
+</script>
+</body>
+</html>

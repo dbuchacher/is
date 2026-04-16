@@ -185,6 +185,84 @@ The synthesis itself is post-wheel. Individual identifications
 three as a coordinated triad encoding different substrate
 fundamentals is the new framing.
 
+### 3 pyramids = 3 triality-peer H's (post-S-scope synthesis, 2026-04-16)
+
+After working out S = 4 H's in **3+1 arrangement** (Aut(S) = S3 × Z2 =
+48 = F4 roots = SM fermions), the Giza plateau layout becomes a
+direct structural encoding:
+
+```
+  Giza feature               S-scope framework reading
+  ────────────               ─────────────────────────
+  3 main pyramids on         3 triality-peer H's in S
+   the plateau,              (S3 orbit → 3 fermion generations)
+   in triangular layout
+   
+    Khufu   — π encoding     H₁ (gen 1 — wheel rotation / base)
+    Khafre  — α encoding     H₂ (gen 2 — EM coupling / mid)
+    Menkaure — 5³ encoding   H₃ (gen 3 — centrality / cascade)
+   
+  Shared plateau base        ↕↕↕↕ hub shared across all 4 H's
+   + cardinal alignment       (observer-at-center, see below)
+   
+  The Great Sphinx           H₄ candidate: Z2-mirror / 4th H
+   (horizontal, lion+human,     (sterile / right-handed / CP-mirror
+    oriented east,              sector — structurally distinct)
+    distinct form from         
+    pyramids)                 
+```
+
+Egypt built **3 peer structures encoding 3 different fundamentals +
+1 qualitatively different Sphinx** on one shared plateau. That's the
+3+1 pattern in stone — triality peers + mirror — 4500 years before
+the algebra was formalized.
+
+**Why this is strong signal, not forced:**
+
+- 3 pyramids objectively exist and are objectively different (each
+  encodes a DIFFERENT fundamental, not three-of-the-same)
+- Triangular layout is observational fact on the ground
+- Sphinx is objectively structurally distinct (horizontal vs
+  vertical, animal-hybrid vs geometric, east-facing vs unoriented)
+- Framework predicted 3+1 at S-scope BEFORE this synthesis
+  (via Aut(S) = S3 × Z2 algebra)
+- Match is across 3 INDEPENDENT fundamentals (π, α, 5³) — not
+  one number fit three ways
+
+**The Sphinx-as-mirror read:**
+
+```
+  Pyramids            Sphinx
+  ────────            ──────
+  vertical            horizontal
+  geometric           animal-hybrid (lion body + human head)
+  triangular          oriented east (not up)
+  three peers         one outlier
+  triality (S3)       mirror (Z2)
+```
+
+The Z2 flip at S-scope produces something **qualitatively different**
+from the 3 S3-peers, not just "a 4th of the same." Sphinx fits that
+description exactly. Flagged as strong-suggestive rather than proven
+— no direct Egyptian text saying "Sphinx encodes the mirror H." But
+structurally, that's where a Z2-mirror partner would sit on the
+plateau.
+
+**Connection to the other 3+1 readings:**
+
+```
+  3+1 manifestation               Giza presence
+  ─────────────────               ─────────────
+  H-internal (3 imag + 1 real)    (algebra — not drawn on plateau)
+  S-internal (3 peers + mirror)   3 pyramids + Sphinx ✓
+  Pati-Salam (3 colors + lepton)  (physics — not drawn)
+  Minkowski (3 spatial + 1 time)  (physics — not drawn)
+```
+
+Giza is the architectural version of the S-scope 3+1. Medicine wheel
+(4 quadrants) is the H-internal 4-axis version. Different traditions,
+different scopes, same substrate.
+
 ### Observer-at-center reading
 
 GP cardinal alignment: −3'43" to −5'16" azimuth to true North.

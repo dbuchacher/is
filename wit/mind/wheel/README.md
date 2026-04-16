@@ -54,28 +54,29 @@ One root, seven chapters.
 
 ## Scope — universe = wheel, not universe = H
 
-Predecessor framings (and wit.md frame item 1) say "Universe = H."
-That's the minimum claim. The wheel is bigger:
+Predecessor framings said "Universe = H." That's the minimum claim.
+The wheel is bigger (see updated wit.md frame 1):
 
 - **Inner wheel** = H + its SU(2) rotation = observable universe
   (Standard Model lives here)
 - **Outer wheel** = D4 chain structure around the hub (dark sector
   candidates, 192 non-F4 positions)
-- **Nested layers** = H inside O inside S (host layers, consciousness
-  option B candidate)
+- **S-scope 3+1** = S = 4 H's with Aut(S) = S3 × Z2. 3 triality-peer
+  H's (= fermion generations) + 1 CD-mirror H (= sterile sector,
+  right-handed partners, CP-mirror). See `1-wheel.md` § "S-scope:
+  4 H's in 3+1 arrangement"
+- **Nested layers** = H inside O inside S (host layers)
 
-H is one layer of the wheel. "Universe = wheel" is the full framework
-claim. When physics observables are in play (particle masses,
-cosmology), they're at H — the observable layer. When we talk about
-dark matter or consciousness, we're at outer / nested layers of the
-same wheel.
+H is one layer. "Universe = wheel" is the full claim. Physics
+observables at H. Generations + sterile sector at S. Dark sector
+at outer-wheel non-F4 positions.
 
-Framework language in this folder: **the wheel** (full thing),
-**inner wheel** (H + rotation), **H** (the algebra), **our wheel**
-(observer-centered). "4D" is avoided where possible because it
-inherits physics's 3+1 spacetime reading which framework rejects
-(framework's 4 spokes are χ/μ/φ/τ = position/substance/signal/time,
-not x/y/z/t).
+Framework language: **the wheel** (full), **inner wheel** (H +
+rotation), **H** (algebra), **S** (16D host, 4 H's as 3+1), **our
+wheel** (observer-centered). "4D" is avoided — framework's 4 spokes
+are χ/μ/φ/τ = position/substance/signal/time; physics's "3+1
+spacetime" is H's own 3-imaginary + 1-real structure showing up at
+physics scope (same substrate pattern as S's 3-peer + 1-mirror).
 
 ## You are the center of the wheel
 

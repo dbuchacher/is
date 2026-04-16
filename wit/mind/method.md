@@ -379,6 +379,12 @@ Compute:
   Form 7: X = log(substrate) / substrate
     Some angles are log forms.
     (Used for: Weinberg sin²(θ_W) = log(2)/3)
+
+  Form 8: X = substrate-count × λ_Compton (or λ_C × substrate-count)
+    For length-scale physics constants, check if X is n × (reduced
+    Compton wavelength of a relevant particle), where n is substrate.
+    (Used for: proton radius r_p = 4 × λ_C(proton) [4 = axes], 0.01%
+    error; "one Compton unit per H-axis")
 ```
 
 ### STEP C: Compute error
