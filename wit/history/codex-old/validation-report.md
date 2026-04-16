@@ -2,11 +2,11 @@
 ## audited 2026-04-07
 
 Files audited:
-- /home/maxi/code/everything/wit/codex/lattice.md (framework)
-- /home/maxi/code/everything/wit/codex/verbs.md
-- /home/maxi/code/everything/wit/codex/nouns.md
-- /home/maxi/code/everything/wit/codex/modifiers.md
-- /home/maxi/code/everything/wit/codex/function-words.md
+- /home/maxi/code/is/wit/codex/lattice.md (framework)
+- /home/maxi/code/is/wit/codex/verbs.md
+- /home/maxi/code/is/wit/codex/nouns.md
+- /home/maxi/code/is/wit/codex/modifiers.md
+- /home/maxi/code/is/wit/codex/function-words.md
 
 ─────────────────────────────────────────────────────────────────────
 
