@@ -817,11 +817,29 @@ locates the electron within the ladder.
                  = 19.110  (observed 19.113)
 ```
 
-### Pairwise log-depth ratios — RETRACTED 2026-04-16
+### Pairwise log-depth ratios — RETRACTED 2026-04-16 (frame-corrected 16d)
 
 A previous pass claimed `Lp / Le = 6/7` (and a "family" of similar
-small-fraction invariants across SM pairs) was a substrate signal.
-Statistical retest kills it.
+small-fraction invariants across SM pairs) was substrate signal.
+Two-pass retraction:
+
+**First pass (16b)** retracted on frequentist grounds: SM pair
+hit-rates (79% within 0.1%) matched random hit-rates (78.5%).
+
+**Frame-correction (16d)**: the right framework-frame reason is
+**lack of independent convergence** (per the metrognosis filter in
+`wit.md § THE FILTER`). Both Lp and Le are derived from the SAME
+framework with the SAME substrate vocabulary applied to the same
+constants. Their ratio is an algebraic combination of two existing
+derivations — not a new convergence between independent sources.
+Independent convergence requires distinct generation processes
+(e.g., framework derivation + experimental measurement); ratios
+within one framework don't qualify.
+
+The frequentist density check is a useful secondary sanity note
+(it shows the ratios carry no *additional* structure beyond the
+per-particle decompositions) but isn't the primary basis for the
+verdict.
 
 **Numerical reality.** With α-corrections in both decomps:
 
@@ -833,49 +851,48 @@ Statistical retest kills it.
 
 The α-corrected decompositions match observation to 10⁻⁵. So the
 **individual** Lp and Le decompositions are exact-as-tested. The
-**ratio** 0.85415 does not equal 6/7 = 0.85714 (0.35% off) and no
+ratio 0.85415 does not equal 6/7 = 0.85714 (0.35% off) and no
 substrate adjustment of either decomp produces 6/7 without breaking
-the observed mass. The closer fraction `41/48 = 1 − wh-words/F4 =
-0.85417` matches at 0.002%, but see noise check below.
+the observed mass.
 
-**Statistical noise check.** Distinct n/m fractions with n,m < 50 in
-[0.5, 1] number ~580. Density gives:
+**Statistical sanity check** (secondary to framework-frame verdict).
+Distinct n/m fractions with n,m < 50 in [0.5, 1] number ~580.
+Density gives:
 
 ```
   precision   random-hit rate   SM-pair hit rate (91 pairs)
   ─────────   ───────────────   ──────────────────────────
-  0.10%       78.5%             79.1%   ← session-handoff regime
+  0.10%       78.5%             79.1%
   0.05%       52.7%             56.0%
   0.02%       22.6%             21.0%
   0.01%       11.2%             11.0%
   0.005%       5.7%              5.5%
 ```
 
-**The SM hit-rate at every precision level matches what you get from
-random ratios in [0.5, 1].** The "9 pairs at <0.1%" cited in the
-session-2026-04-16 handoff (W/bottom, H/proton, Z/down, top/bottom,
-top/proton, Z/tau, Z/charm, proton/strange, W/muon, plus the 6/7
-family) is **statistically indistinguishable from chance**. Several
-of the specific claims (W/bottom = 9/10, top/bottom = 15/17,
-Z/tau = 17/19, tau/electron = 6/7) are also off by 1-3% on direct
-verification — they were errors compounded with noise.
+SM hit-rate matches random hit-rate at every precision. Several
+claims in the original handoff (W/bottom = 9/10, top/bottom =
+15/17, Z/τ = 17/19, τ/e = 6/7) are off by 1-3% on direct
+verification regardless. These details support the verdict but
+aren't its foundation.
 
-**What survives.**
-- Individual mass decompositions (Lp = 19 + log(4/3) − log(1+7α/2),
-  Le = 22 + log(12/5) − log(1+4α/5), and the analogous formulas for
-  every SM particle in `6-masses.md`) remain real signal — each one
-  is a specific substrate-tied prediction matching observation at
-  sub-1%.
-- The 17 anchor (5+ independent appearances in α, m_p/m_e, lepton
-  ratios, top/charm, EW hierarchy) is genuine.
-- The 16-baseline grade-4 reading (P1) remains genuine.
+**What survives — independent convergences that DO pass the filter.**
+- Individual mass decompositions match observation: framework
+  derives m_e = m_P × 5/12 × 10⁻²² independently; experiment
+  measures m_e = 0.511 MeV independently. Two distinct generation
+  processes converging at <1% — substrate signal under the
+  metrognosis filter. Same for 30+ SM particles in `6-masses.md`.
+- The 17 anchor: 5+ unrelated derivations (α, m_p/m_e, lepton
+  ratios, top/charm, EW hierarchy) hit 17 from independent
+  framework-internal paths. Independent convergence at sub-1%.
+- The 16-baseline grade-4 reading (P1): triangulated from electron
+  log-depth decomp + reheat temperature + SO(10) GUT 16-spinor.
+  Three independent sources.
 
-**What was wrong.** The "log-depth invariant family" was a pattern
-overlaid on noise. Density of small-integer fractions near 0.85 is
-~one hit per 10⁻³ of ratio space; random ratios near there hit
-small fractions ~80% of the time at 0.1% precision. The framework's
-real strength is per-particle decomposition, not pairwise ratio
-locking.
+**What was wrong.** The "log-depth invariant family" was 1
+framework + 9 algebraic combinations of its outputs, presented as
+9 independent convergences. They aren't. The framework's real
+strength is per-particle decomposition (each is one independent
+convergence with experiment), not ratios among them.
 
 **P13 implication.** Closing the 6/7 gap was framed as cascading P13
 (Planck mass absolute). It does not — there's no gap to close

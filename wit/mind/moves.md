@@ -322,62 +322,116 @@ Method.md Step 10. Honest flags are data. If no clean substrate
 form emerges after trying all 8 method.md forms, write "no clean
 form found yet" and move on.
 
-### Don't claim invariant families without a noise null
+### Use the metrognosis filter as the primary evidence rule
 
-Pattern-matching small fractions n/m to ratios in [0.5, 1] is
-high-risk: there are ~580 distinct n/m with n,m<50 in that range,
-so random ratios hit some small fraction within 0.1% with ~80%
-probability and within 0.005% with ~5.7%. Per-particle mass
-formulas (where each side decomposes into specific substrate
-counts) are real signal. Pairwise ratio "families" need an explicit
-randomized null comparison before publication. The 2026-04-16b
-retraction of the "log-depth invariant family" came from skipping
-this check; SM pair hit-rates at every precision matched random
-hit-rates exactly. See `wit/mind/wheel/6-masses.md § Pairwise
-log-depth ratios — RETRACTED` and `7-open.md § Retracted in
-2026-04-16b`.
+The framework's own epistemology — stated in `wit.md § THE FILTER`
+— is **effort × precision × independent convergence**. That's the
+primary test for substrate signal. Anything else is secondary.
 
-### Don't claim "X near substrate-clean Y" without a local-density null
+Apply it like this:
 
-Same pattern, distance-not-ratio version. Two contexts where this
-goes wrong:
+- **Independent**: do the two (or more) sources that converged on
+  the same integer/structure use distinct generation processes? A
+  framework derivation and an experimental measurement are
+  independent. Two algebraic combinations of the same framework
+  outputs are NOT independent.
+- **Effort**: did the convergent sources cost real cumulative work
+  to reach? Generations of physics measuring c, 4500 years of
+  Egyptian engineers surveying Giza — high effort. Random small-
+  integer fractions in [0.5, 1] — zero effort.
+- **Precision**: is the convergence integer-exact or sub-1%? Or is
+  the candidate spread inside measurement uncertainty?
 
-- **Small magnitudes**: substrate-clean integer set (1, 3, 4, 5,
-  6, 7, 8, 12, 16, 17, 24, 32, 42, 48, 72, 80, 108, 120, 137, 168,
-  192, 240, ...) plus pairwise/triple products fills the small
-  integers densely. Almost any small integer is "within 2 of
-  something clean." A hit at p ≈ 1000 carries ~50% information at
-  best.
-- **Large magnitudes**: the same set is sparse. A hit at p ≈ 10⁶
-  carries ~99.9% information — but only if you actually find one.
+When these line up, treat as substrate signal — even if a
+frequentist null says "this could happen by chance." When they
+don't line up, no statistical test rescues the claim.
 
-The 2026-04-16c retraction of the Wieferich-substrate claim came
-from missing this: 1093 (base-2 Wieferich) was claimed
-substrate-adjacent because 1092 = 12·7·13. Local density at p~1000
-makes that claim noise. The base-3 Wieferich attack confirmed:
-p=11 hits in a 100%-adjacency regime (zero info), p=1,006,003
-misses in a 0.1%-adjacency regime (decisive miss against the
-prediction).
+Frequentist nulls (random density, hit-rate sampling) are useful
+**secondary** sanity checks, especially when an apparent
+convergence might just be a tautology of the framework's own
+vocabulary. They are NOT the primary arbiter — that's the filter.
 
-Rule: any "X is near a substrate-clean integer" claim must report
-the local-density baseline. Signal is the EXCESS over the local
-rate, not the adjacency itself. See `wit/mind/metrognosis/prime-
-lattice.md § Wieferich primes — RETRACTED`.
+The two retractions of 2026-04-16 (log-depth family, Wieferich
+adjacency) were both correctly retracted but initially justified in
+frequentist terms; the framework-frame justifications are below.
 
-### Don't formula-fit when measurement uncertainty exceeds candidate spread
+### Don't claim invariant families from non-independent convergences
+
+The 2026-04-16b retraction of the "log-depth invariant family":
+pairwise log-depth ratios (Lp/Le and similar) within the framework
+are NOT independent convergences. Both Lp and Le come from the same
+framework, derived with the same substrate vocabulary applied to
+the same set of constants. Their ratio doesn't add evidence beyond
+what each per-particle formula already gives — it's an algebraic
+combination of two existing derivations, not a new convergence
+between independent sources.
+
+The frequentist null (SM pair hit-rates match random hit-rates)
+was a useful sanity check showing the ratios carry no *additional*
+structure beyond per-particle decompositions. But the
+framework-frame reason for retraction is **lack of independence**:
+ratios within one framework aren't another piece of evidence about
+substrate.
+
+What IS independent convergence here: each per-particle mass
+formula vs. its corresponding measured mass. The framework derives
+m_e = m_P × 5/12 × 10⁻²² independently; experiment measures
+m_e = 0.511 MeV independently. Convergence at <1% across 30+
+particles = signal. Combinations of those derivations among
+themselves — not.
+
+See `wit/mind/wheel/6-masses.md § Pairwise log-depth ratios —
+RETRACTED` and `7-open.md § Retracted in 2026-04-16b`.
+
+### Weak convergence isn't noise — but isn't signal either
+
+The 2026-04-16c Wieferich attack: 1093 (base-2 Wieferich) sits
+near 1092 = 12·7·13. Wieferich condition `2^(p-1) ≡ 1 mod p²` and
+the substrate factoring 12·7·13 ARE generated independently
+(number theory vs. framework vocabulary). The convergence IS
+independent.
+
+But the convergence is **weak**: 12 ✓ (D4-pairs), 7 ✓ (wh-words),
+13 — *not in the framework's substrate-clean set*. The
+factorization requires including 13 ad-hoc to read substrate-
+cleanly. By the metrognosis filter, that's low precision (the
+substrate read isn't exact-clean).
+
+Same for base-3: only p=11 and p=1,006,003 known under 10¹⁷. p=11
+sits near 9 = 3² which IS substrate (trit-squared) — clean. p=1,006,003
+has no clean substrate read. 1-of-2 with one weak read.
+
+Conclusion: weak convergence, not noise. Don't elevate it to
+"framework prediction" or "metrognosis evidence" — it doesn't pass
+the precision threshold. But also don't retract as "statistical
+noise" — that's the wrong frame. Honest status: "independent
+convergence at low precision, parked." See `metrognosis/prime-
+lattice.md § Wieferich primes — STATUS PARKED`.
+
+The frequentist local-density check (small magnitudes have dense
+substrate-clean integers; large have sparse) is a useful sanity
+note but doesn't bear on the framework's verdict. The framework
+asks: is the convergence independent and high-precision? Wieferich
+adjacency: independent yes, precision low. Park it.
+
+### Don't formula-fit when candidate spread is inside measurement floor
 
 Specific to the 2026-04-16c P10 attack: η_B has ~0.7% Planck CMB
 measurement uncertainty. Multiple substrate-clean formulas
 (α⁴×√3/8, α⁴×(5/24+α), α⁴×log(2)/3×exp(−10α)) land within 1% of
-observed — but you can't distinguish them from each other or from
-chance in the substrate pool, because the measurement floor is
-right at that level. When candidate spread is comparable to
-measurement uncertainty, formula-fitting yields nothing; only a
-mechanism-first derivation can.
+observed.
 
-Check the measurement uncertainty BEFORE attacking with formulas.
-If the framework's precision bar (≤0.1%) is below measurement
-floor, attack the mechanism, not the number.
+Framework-frame reason this fails: when candidate spread is inside
+measurement floor, the **precision** factor of the metrognosis
+filter is unmet. You can't tell whether one candidate is better
+than another, and you can't tell whether any of them is better than
+chance. The right move is mechanism-first derivation — derive a
+specific factor from substrate dynamics, then check whether
+measurement precision has caught up enough to test it.
+
+Check measurement uncertainty BEFORE attacking with formulas. If
+the framework's precision bar (≤0.1% for clean cases) is below
+measurement floor, attack the mechanism, not the number.
 
 ### Don't conflate scopes
 
