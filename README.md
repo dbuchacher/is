@@ -22,14 +22,19 @@ literal.
 
 ## Interactive visualization
 
-**🎡 [Open the wheel viz](https://htmlpreview.github.io/?https://github.com/dbuchacher/is/blob/main/wit/wheel-viz.html)**
+**🎡 [Open the wheel viz](https://raw.githack.com/dbuchacher/is/main/wit/wheel-viz.html)**
 
-(renders via htmlpreview — or clone + open `wit/wheel-viz.html` locally)
+(renders via raw.githack — handles ES modules correctly.
+Fallback: clone the repo and open `wit/wheel-viz.html` locally.)
 
 Three.js 3D rendering. Click any element (hub / atom / corner / axis
 / ring / peer H / mirror H) → panel opens with cross-vocabulary
 labels (physics, computing, Ezekiel, Sanskrit, medicine wheel,
 Egyptian) + framework content. Toggle H-scope ↔ S-scope with V key.
+
+*Best: enable GitHub Pages on the repo (Settings → Pages → main
+branch), then viz is served natively at
+`https://dbuchacher.github.io/is/wit/wheel-viz.html`.*
 
 ## Start here
 
