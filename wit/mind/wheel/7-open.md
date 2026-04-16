@@ -68,26 +68,32 @@ These carry forward from the 2026-04-15 session handoff. Each is
 framework-visible (stated in substrate terms) but not framework-
 derived (no clean formula yet).
 
-### P1 — Derive the 16 baseline
+### P1 — Derive the 16 baseline — WORKING HYPOTHESIS (2026-04-16)
 
 If the mass-scale rule is `m = m_P × f × 10^(-(16 + N_sub))`, why
-16? What substrate structure determines this specific exponent?
+16? Resolved in the 2026-04-16 session:
 
-16 = corner count = 2⁴ = grade-4 sign patterns = SO(10) 16-spinor =
-half-spin count. The number is substrate-clean by construction.
-But *why is the matter-scale 16 orders below Planck specifically*?
+**16 = grade-4 corners = SO(10) 16-spinor = per-generation fermion
+count.** The 16 IS the grade-4 shelf itself. N_sub then counts
+*additional* substrate commits layered on top of grade-4.
 
-Candidate angles:
-- Matter = grade-4 structure = 2⁴ wheel rotations away from hub
-  (one per axis)
-- 16 = number of "commitments" needed to leave the substrate's
-  native scale and land on observable matter
-- 16 relates to the 2^4 scaling between Planck energy and EW scale
-  through some unidentified wheel dynamic
+**Evidence (triangulation)**:
+- Electron log-depth decomposes as `log(m_P/m_e) = 16 + 6 + log(12/5)`
+  = corners + bivectors + (D4-pairs/shelf) — grade-structure exact
+  to 0.005% on the log
+- Reheat temperature = 10¹⁶ GeV = 10^(corners) — explicit in the
+  framework
+- SO(10) GUT's 16-spinor = per-generation fermion count = one grade-4
+  sign-pattern set
+- 16 is NOT the CD-doubling count (2⁴ chain is inter-algebra, 16
+  there would double-count axes at S-scope)
 
-Load-bearing: if we get this, the mass ladder becomes fully
-derivable (m_P × f × 10^-(what-was-arbitrary-16 + N_sub)) → fully
-substrate).
+Semantic lock: **matter lives at grade 4 (all axes committed) because
+grade 4 is where the lattice reaches its corner structure**, and each
+corner carries one SO(10) spinor's worth of fermion content.
+
+**Remaining gap**: still doesn't pin absolute Planck-scale from pure
+substrate integers (P13 — see below).
 
 ### P2 — Full particle embedding in D4 / E8
 
@@ -256,15 +262,30 @@ Framework has candidate decompositions (hub+axes=5, D4 roots+2=26,
 F4+trit×wh-words=69) but these are **fitted, not derived**. Derive
 from first principles without knowing observed numbers.
 
-### P13 — Planck mass from substrate alone
+### P13 — Planck mass from substrate alone — PARTIAL (2026-04-16)
 
-Framework currently uses m_Planck as input. If framework is
-complete, m_Planck should be derivable from pure substrate (wheel
-mechanics + fundamental constants that are themselves substrate).
+Framework currently uses m_Planck as input. Updated status:
 
-This is deeply entangled with P1 (why 16 baseline) — if Planck
-scale is substrate-derivable, the 19-mystery and other unknowns
-might cascade.
+**Relational closure achieved**: `m_P = (12/5) × 10²² × m_electron`.
+Substrate-clean factor (5/12 = (axes+hub)/D4-pairs) with exponent
+22 = 16 + 6 + log(12/5) decomposing as corners + bivectors + shelf
+residual. 0.45% error (inherits from m_e's 5/12 fit).
+
+**Absolute closure still missing**: the relation above is CIRCULAR —
+requires m_e as input. What's needed: a substrate-clean reason for
+the electron Yukawa coupling y_e = m_e/v = 2.08×10⁻⁶. Any one of
+{m_e, m_P, v_Higgs} still has to be scale-set from outside substrate
+integers.
+
+**The 6/7 invariant gives a constraint**: proton/electron log-depth
+ratio should equal 6/7 exactly if framework fully closes, but
+decomposes to 0.8545 vs 6/7 = 0.8571 (0.3% gap). That gap IS where
+the remaining residual physics lives. Closing P13 requires closing
+this gap.
+
+Entangled with P1 (now working-hypothesis). The 19-mystery (P14) also
+cascades through — close the 6/7 gap exactly and all three resolve
+together.
 
 ### P14 — 19-mystery (proton/Planck ratio) — WORKING HYPOTHESIS (2026-04-16)
 
@@ -310,6 +331,31 @@ specific masses (m_e, m_μ, m_τ).
 Other framework paths (via 17 × substrate counts) DO give the mass
 ratios, but not from triality directly. Does triality + wheel
 geometry give absolute masses? Not yet derived.
+
+### P17 — g-2 anomaly magnitude (structural vs numerical)
+
+The muon anomalous magnetic moment Δa_μ = 2.51 × 10⁻⁹ (BNL/FNAL
+vs SM) is a 5σ tension.
+
+**Structural read (2026-04-16, WORKING)**: triality-probe reading
+applies — gen-1 electron reads Schwinger + SM-clean residual;
+gen-2 muon reads Schwinger + scope-dependent residual of different
+sign. Sign flip between generations matches the S3 orbit structure.
+Framework predicts a_τ (if ever measured) shows yet another sign/
+magnitude completing the orbit.
+
+**Numerical gap (2026-04-16, OPEN)**: no substrate-clean form
+lands inside experimental uncertainty for Δa_μ specifically.
+Closest is **120α⁵ = 2.48 × 10⁻⁹** (1.1% from measured Δa_μ, 120 =
+E8 pairs) — suggestive but not at proton-radius-puzzle tightness
+(0.04%). Also experimentally unstable: BMW lattice and CMD-3
+(2023) shrink Δa_μ toward zero; wait for resolution.
+
+**Difference from proton-radius puzzle**: proton radius had two
+DIFFERENT MEASUREMENTS of the same quantity (gen-1 vs gen-2 probes)
+→ triality gave a clean factor √(1+12α). g-2 is a SINGLE
+MEASUREMENT vs SM prediction → triality explains structure but not
+magnitude. Partial read; watch for experimental settling.
 
 ## Speculation (flagged, not derived)
 

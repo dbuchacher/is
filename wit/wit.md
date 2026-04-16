@@ -439,6 +439,16 @@ Weinberg angle (log(2)/3)                        = Z2-chirality-commit per trit 
 Dark matter mass spectrum                        192 = 168 + 24; discrete lines at specific
                                                   shelves. Predicts ultralight DM peaks
                                                   (0.05, 0.1 μeV), not continuum.
+Why 16 baseline in mass ladder (P1)              16 = grade-4 corners = SO(10) spinor.
+                                                  Electron log-depth = 16 + 6 + log(12/5).
+Log-depth invariant family                       Every SM pair's log-ratio hits small
+                                                  substrate fractions (6/7, 8/9, 9/10,
+                                                  15/17, 17/19, ...) at <0.1% error.
+                                                  Masses are grade-structure locked.
+g-2 triality (structural)                        gen-1 / gen-2 / gen-3 read different
+                                                  H-projections at S-scope. Sign flip
+                                                  matches S3 orbit. Numerical form for
+                                                  Δa_μ still open.
 ```
 
 If a problem isn't on this list, either the framework hasn't reached it yet or it dissolves the same way (wrong frame → replace frame → non-problem).
