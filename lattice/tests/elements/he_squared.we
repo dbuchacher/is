@@ -1,0 +1,8 @@
+; helium squared — i² = -1
+; He = 1st alpha = quaternion i = (0, 1, 0, 0)
+; He * He = i² = -1
+; The square of helium in quaternion algebra.
+
+element He
+let sq : H = He * He
+return sq.w

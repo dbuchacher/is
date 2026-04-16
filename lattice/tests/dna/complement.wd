@@ -1,0 +1,9 @@
+; Watson-Crick base pairing — A + T = 0
+; Adenine = +χ = (0,1,0,0), Thymine = -χ = (0,-1,0,0)
+; Complementary bases are additive inverses in H.
+; Base pairing IS quaternion negation on the bonding axis.
+
+base a = A
+base t = T
+let pair : H = a + t
+return pair.i

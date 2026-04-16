@@ -1,0 +1,8 @@
+; bell commutator — physics syntax
+; [sigma_x, sigma_y] = 2i*sigma_z
+
+basis H
+state a = |i>
+state b = |j>
+observable comm = [a, b]
+measure comm.k

@@ -1,39 +1,20 @@
 #!/bin/bash
-# build — compile hodos (walk assembler) + lattice (walker + equation).
-#
-# Usage:
-#   ./build              build everything
-#   ./build clean        remove build artifacts
-#
-# Products:
-#   ./hodos        walk assembler — compiles .w source → raw byte stream
-#   ./lattice      walker — runs a walk.bin, prints pipeline result
+# build — assemble kernel + compile hodos
 set -e
-
 cd "$(dirname "$0")"
 
 if [ "$1" = "clean" ]; then
-    rm -f hodos lattice core.o main.o
+    rm -f code/kernel.bin lang/hodos
     find tests -name '*.bin' -type f -delete 2>/dev/null || true
+    find tests -name '*.w.tmp' -type f -delete 2>/dev/null || true
     echo "cleaned"
     exit 0
 fi
 
-# -O3 -march=native: let gcc use whatever vector ISA the host CPU has.
-# main.c's SIMD width selector will auto-detect the widest supported
-# bond dispatch table at runtime; -march=native lets any C helper code
-# (now or future) use AVX2/AVX-512 intrinsics and auto-vectorized loops
-# at full hardware width.
-CFLAGS="-O3 -march=native -Wall"
-cc $CFLAGS -o hodos hodos.c
-nasm -f elf64 core.asm -o core.o
-# -fopenmp: shell_phase1_compute in main.c uses #pragma omp parallel
-# for Tier C phase 1 prime classification across cores. Needs -fopenmp
-# on both the compile step AND the link step.
-cc $CFLAGS -fopenmp -c main.c -o main.o
-# -no-pie: bond dispatch tables hold absolute function addresses, which
-# need text relocs in a PIE. This is a standalone test binary, not a
-# library, so non-PIE is fine and kills the linker warning.
-cc -no-pie -fopenmp -o lattice main.o core.o
+nasm -f bin code/kernel.asm -o code/kernel.bin
 
-echo "built: hodos lattice"
+if [ -f lang/hodos.c ]; then
+    cc -O3 -Wall -o lang/hodos lang/hodos.c
+fi
+
+echo "built: code/kernel.bin"

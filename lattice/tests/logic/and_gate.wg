@@ -1,0 +1,5 @@
+; AND gate — min(↑, ↔) = ↔
+; Post's AND = min over balanced ternary.
+; AND(+1, 0) = min(1, 0) = 0
+
+AND 1 0

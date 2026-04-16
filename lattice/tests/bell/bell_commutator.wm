@@ -1,0 +1,9 @@
+; bell commutator — math syntax
+; [i, j] = ij - ji = 2k
+
+let i : H = (0, 1, 0, 0)
+let j : H = (0, 0, 1, 0)
+let ij : H = i * j
+let ji : H = j * i
+let comm : H = ij - ji
+return comm.k

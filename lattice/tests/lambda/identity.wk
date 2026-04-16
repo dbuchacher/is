@@ -1,0 +1,6 @@
+; identity combinator — I x = x
+; I = ↓ = -1 = AND = annihilation.
+; The identity combinator returns its argument unchanged.
+; S, K, I = ↑, ↔, ↓ = the three trit values = Post's three gates.
+
+I 42

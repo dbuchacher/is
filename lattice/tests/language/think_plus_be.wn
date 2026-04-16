@@ -1,0 +1,10 @@
+; THINK + BE = ORIGIN
+; THINK = ↑↑↑↑ = hylo = (1,1,1,1) — all forces forward
+; BE    = ↓↓↓↓ = meta = (-1,-1,-1,-1) — all forces backward
+; Their sum is the origin (0,0,0,0) — the container, nothingness.
+; To think and to be, added together, cancel to zero.
+
+word think = THINK
+word be = BE
+let sum : H = think + be
+return sum.w

@@ -1,94 +1,108 @@
 #!/bin/bash
-# run — run the lattice test battery.
-#
-# Usage:
-#   ./run            fast tests only (default, sub-second battery)
-#   ./run slow       include slow tests in tests/passing/slow/ (minutes)
-#   ./run all        alias for `./run slow`
-#
-# For each .w under tests/ and primes/tests/:
-#   1. Assemble with hodos → .bin next to the source
-#   2. Run under lattice → stdout = integer result
-#   3. Compare to expected value from tests/expect.txt + primes/tests/expect.txt
-#   4. Print PASS/FAIL and update counters
-#
-# Framework tests live under tests/. Project-specific tests live
-# under <project>/tests/ (currently just primes/). Each root owns its
-# own expect.txt.
-#
-# expect.txt format, one per line:  <test_name> <expected_integer>
-# Lines starting with # are comments.
+# run — build + run in QEMU, extract result
 set -e
-
 cd "$(dirname "$0")"
 
-[ -x ./lattice ] || { echo "run: ./lattice not built (try ./build)" >&2; exit 2; }
-[ -x ./hodos ]   || { echo "run: ./hodos not built (try ./build)"   >&2; exit 2; }
+./build >/dev/null 2>&1
 
-# slow-mode flag
-include_slow=0
-if [ "$1" = "slow" ] || [ "$1" = "all" ]; then
-    include_slow=1
-fi
+extract_result() {
+    timeout 10 qemu-system-x86_64 \
+        -kernel "$1" \
+        -serial stdio \
+        -monitor none \
+        -nographic \
+        -no-reboot \
+        2>/dev/null | tr -d '\r' | grep '^=' | sed 's/^=//'
+}
 
-# preflight: show the active SIMD width exactly once
-if [ $include_slow -eq 1 ]; then
-    printf "width: %s  (slow tests included)\n─────────────────\n" "$(./lattice --info)"
+inject_walk() {
+    python3 -c "
+import sys, struct
+kernel = bytearray(open('code/kernel.bin', 'rb').read())
+walk = open('$1', 'rb').read()
+marker = bytes([0xC3, 0x05, 0x08, 0x08])
+idx = kernel.find(marker)
+if idx < 0:
+    sys.exit('walk marker not found')
+struct.pack_into('<I', kernel, idx - 4, len(walk))
+kernel[idx:idx+len(walk)] = walk
+for i in range(len(walk), 4):
+    kernel[idx+i] = 0
+open('$2', 'wb').write(kernel)
+"
+}
+
+assemble() {
+    # $1 = source file, $2 = output .bin
+    local src="$1" bin="$2"
+    local ext="${src##*.}"
+
+    case "$ext" in
+        w)
+            lang/hodos "$src" -o "$bin" >/dev/null 2>&1
+            ;;
+        wm|wp|wl|we|wg|ws|wd|wk|wn)
+            local tmpw="${src%.*}.w.tmp"
+            python3 lang/phos.py "$src" -o "$tmpw" 2>/dev/null
+            lang/hodos "$tmpw" -o "$bin" >/dev/null 2>&1
+            rm -f "$tmpw"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+}
+
+if [ "$1" = "test" ] && [ -x lang/hodos ]; then
+    pass=0 fail=0
+
+    declare -A expect
+    if [ -f tests/expect.txt ]; then
+        while read -r name val; do
+            [ -z "$name" ] && continue
+            [ "${name:0:1}" = "#" ] && continue
+            expect[$name]=$val
+        done < tests/expect.txt
+    fi
+
+    for w in $(find tests -type f \( -name '*.w' -o -name '*.wm' -o -name '*.wp' -o -name '*.wl' -o -name '*.we' -o -name '*.wg' -o -name '*.ws' -o -name '*.wd' -o -name '*.wk' -o -name '*.wn' \) ! -name '*.w.tmp' | sort); do
+        ext="${w##*.}"
+        name=$(basename "$w" ".$ext")
+        bin="${w%.*}.bin"
+
+        if ! assemble "$w" "$bin"; then
+            echo "FAIL $name  (assemble error)"
+            fail=$((fail+1))
+            continue
+        fi
+
+        inject_walk "$bin" kernel_test.bin 2>/dev/null || {
+            echo "FAIL $name  (inject error)"
+            fail=$((fail+1))
+            continue
+        }
+
+        got=$(extract_result kernel_test.bin) || true
+
+        exp=${expect[$name]:-}
+        if [ -z "$exp" ]; then
+            echo "SKIP $name  (no expected value; got $got)"
+            continue
+        fi
+
+        if [ "$got" = "$exp" ]; then
+            echo "PASS $name  $got"
+            pass=$((pass+1))
+        else
+            echo "FAIL $name  expected=$exp got=$got"
+            fail=$((fail+1))
+        fi
+    done
+
+    rm -f kernel_test.bin
+    echo "─────────────────"
+    echo "$pass pass, $fail fail"
+    [ $fail -eq 0 ]
 else
-    printf "width: %s\n─────────────────\n" "$(./lattice --info)"
+    extract_result code/kernel.bin
 fi
-
-pass=0
-fail=0
-
-# load expected values from every expect.txt under a tests/ root
-declare -A expect
-for f in tests/expect.txt primes/tests/expect.txt cd/tests/expect.txt; do
-    [ -f "$f" ] || continue
-    while read -r name val; do
-        [ -z "$name" ] && continue
-        [ "${name:0:1}" = "#" ] && continue
-        expect[$name]=$val
-    done < "$f"
-done
-
-# find walks under every test root; exclude /slow/ unless requested
-walk_list=$(find tests primes/tests cd/tests -name '*.w' -type f 2>/dev/null | sort)
-if [ $include_slow -eq 0 ]; then
-    walk_list=$(printf "%s\n" "$walk_list" | grep -v '/slow/' || true)
-fi
-
-for w in $walk_list; do
-    name=$(basename "$w" .w)
-    bin="${w%.w}.bin"
-
-    if ! ./hodos "$w" -o "$bin" >/dev/null 2>&1; then
-        echo "FAIL $name  (hodos assemble error)"
-        fail=$((fail+1))
-        continue
-    fi
-
-    got=$(./lattice "$bin" 2>&1) || {
-        echo "FAIL $name  (lattice returned nonzero: $got)"
-        fail=$((fail+1))
-        continue
-    }
-
-    exp=${expect[$name]:-}
-    if [ -z "$exp" ]; then
-        echo "SKIP $name  (no expected value; got $got)"
-        continue
-    fi
-
-    if [ "$got" = "$exp" ]; then
-        echo "PASS $name  $got"
-        pass=$((pass+1))
-    else
-        echo "FAIL $name  expected=$exp got=$got"
-        fail=$((fail+1))
-    fi
-done
-
-echo "─────────────────"
-echo "$pass pass, $fail fail"
-[ $fail -eq 0 ]
