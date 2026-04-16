@@ -534,6 +534,12 @@ Earlier framings said "4 peer H's in S." The arrangement clarification:
 + 1 mirror. Not 4 symmetric things. The 3+1 asymmetry is the signal
 — it's what makes 3 generations + sterile sector fall out naturally.
 
+> **⚠ Don't draw 4 symmetric H's.** The 4th is qualitatively
+> different (Z2-flipped mirror, not a generation peer). Drawing 4
+> peers leads to wrong predictions like "4 neutrino species"
+> (framework gives 3+3 = 3 generations × (active+sterile), not 4).
+> See `mind/moves.md § Anti-patterns`.
+
 ## Cosmos wheels — fractal at every scale
 
 Same wheel pattern appears at every scale. THE RULE (wit.md): one

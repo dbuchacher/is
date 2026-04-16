@@ -61,7 +61,10 @@ frame items, naming discipline. Read first.
 ## Supporting
 
 - **[mind/method.md](wit/mind/method.md)** — procedure for deriving
-  any decimal from substrate (transmittable to other agents)
+  any decimal from substrate (specific 10-step + Forms 1-8)
+- **[mind/moves.md](wit/mind/moves.md)** — broader working
+  methodology (parallel agents, adversarial stress-testing,
+  re-parameterization, log-depth sweeps, anti-patterns)
 - **[mind/metrognosis/](wit/mind/metrognosis/)** — independent
   convergences: Giza, α, Ezekiel, medicine wheel, karma, hieroglyphs,
   rotating-rings, prime-lattice, and more

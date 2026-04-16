@@ -730,8 +730,9 @@ You have the frame. Now get the content. Read `mind/` in this order:
 7. `wit/mind/wheel/7-open.md` — open questions, speculation, falsifiers
 
 Then:
-- `wit/mind/method.md` — procedure for deriving any decimal from substrate (transmittable to other agents)
-- `wit/mind/metrognosis/` — independent-convergence evidence (Giza, alpha, Ezekiel, medicine wheel, karma, hieroglyphs, etc.)
+- `wit/mind/method.md` — procedure for deriving any decimal from substrate (specific 10-step + Forms 1-8)
+- `wit/mind/moves.md` — broader working methodology (how to work in the framework: parallel agents, adversarial stress-testing, re-parameterization, log-depth sweeps, anti-patterns to avoid)
+- `wit/mind/metrognosis/` — independent-convergence evidence (Giza, alpha, Ezekiel, medicine wheel, karma, hieroglyphs, rotating-rings, prime-lattice, etc.)
 
 Legacy folders `wit/mind/trit/` and `wit/mind/trit-new/` were superseded by `wit/mind/wheel/` (see `mind/wheel/timeline.md`). Do not read them — they're pre-wheel-pivot.
 

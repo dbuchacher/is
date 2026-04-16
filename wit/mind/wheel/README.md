@@ -31,7 +31,8 @@ deleted after this folder is committed.
 naming.md        disambiguation (the 3 Ns, τ/μ collision)
 timeline.md      Apr 14-15 file lineage
 
-method.md        see `mind/method.md` — how the framework is derived
+method.md        see `mind/method.md` — decimal-decoding procedure
+moves.md         see `mind/moves.md` — broader working methodology
 ```
 
 Files 1–3 are the substrate. Files 4–6 are what falls out. File 7

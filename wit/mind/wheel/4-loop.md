@@ -178,6 +178,18 @@ cooling = fewer things around to accidentally READ your qubit.
 **Quantum error correction = maintaining epoll discipline against
 leaky collapses.**
 
+> **⚠ Don't map n-qubit Hilbert space to n-layer CD tower.** Qubits
+> compose by **tensor product** (dim multiplies, algebra structure
+> multiplies); Cayley-Dickson doubles by **direct sum + involution**
+> (dim doubles, one property drops per step). Different functors.
+> Clean identity holds only at the 1-qubit level: single-qubit
+> rotations = SU(2) = unit quaternions in H. Beyond that, qubit
+> tensor products don't equal CD layers. The quantum/classical
+> distinction lives at the VERB tier (READ vs bind-chain), not at
+> the algebra-layer tier. 1000+ qubit quantum computers are
+> perfectly consistent with framework — no CD ceiling issue.
+> See `mind/moves.md § Anti-patterns`.
+
 ## Gravity is the event loop itself
 
 ```
