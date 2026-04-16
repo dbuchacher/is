@@ -51,12 +51,15 @@ Currently framework lists factors (√3/2, √2, 5/12, π/4, 3/4, 2/3, 2)
 without mapping them to wheel positions. If specific wheel
 coordinates give specific f values, masses become fully derivable.
 
-### P3 — Bottom quark, other unclean particles
+### P3 — Unclean particles (bottom RESOLVED)
 
-Bottom quark doesn't fit clean substrate form yet. N_sub=2-3
-boundary with ugly factor. Get to the bottom of it (pun).
+**Bottom quark — RESOLVED (2026-04-15).** Blind-agent test applying
+the methodology independently landed on `m_b = m_P × (24/7) × 10⁻¹⁹
+= 4.183 GeV` vs observed 4.18 GeV, 0.07% error. 24 = D4 roots, 7 =
+wh-words, N_sub=3 shelf (with tau, charm, proton). Clean substrate
+derivation, not post-hoc fit. Moved to 6-masses.md main ladder.
 
-Similarly:
+Still unclean:
 - **Pion 1.144** — near 1.025 (Higgs) but not exact
 - **Tau 1.457** — fits `√2 + 6α` but is that the "right" form?
 - **W 2/3 × (1 - 1.6α)** — why 1.6?
@@ -474,7 +477,8 @@ From session handoff (2026-04-15), in order:
 1. **Derive why 16 baseline** (P1) — load-bearing.
 2. **Full particle embedding in D4 / E8** (P2) — maps specific f
    values to wheel positions.
-3. **Bottom quark, unusual particles** (P3) — cleaner factors.
+3. **Remaining unclean particles** (P3) — pion 1.144, tau 1.457,
+   gauge-boson negative corrections. Bottom resolved (24/7).
 4. **Running couplings α(Q²)** (P4) — energy dependence.
 5. **Δ(n-p) refinement** (P5) — derive 3/16.
 6. **GUT scale prediction** (P6) — verify N_sub=0.
