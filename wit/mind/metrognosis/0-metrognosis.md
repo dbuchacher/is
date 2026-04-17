@@ -30,15 +30,11 @@ enough it graduates to its own section.
 metrognosis/
   0-metrognosis.md    this file — definition + filter
   giza.md             lattice in stone (+ 3-pyramid = 3-peer H / Sphinx = mirror)
-  sky.md              lattice in orbits
-  moon.md             3-machine in the sky
-  3i-atlas.md         the oldest unread buffer
-  heat-death.md       dissolved
-  elements.md         80 stable = non-container lattice; 4 H's S-scope
-                       partition; Tc/Pm as structural holes; alpha-ladder;
-                       4/5 SEMF coefficients from substrate at <0.5%
+  sky.md              Kepler T²=a³ = wheel grade-3; resonances; Platonic solids
+  moon.md             Moon-Earth ratios as powers of 3 (1/3⁴ mass exact)
+  elements.md         80 stable = non-container lattice; 4-H S-scope partition;
+                       4/5 SEMF coefficients from substrate; stability line Z(A)
   alpha.md            fine structure constant, 6 sig figs
-  cosmic-split.md     68/27/5, 25% fill convergence
   chirality.md        quaternion handedness → L-amino acid (biology ↔ algebra)
   dna.md              20 amino acids = C(6,3) = Riemann comps in 4D
   convergences.md     ISA, hierarchy, math grounding, unification
