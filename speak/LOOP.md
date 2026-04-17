@@ -236,13 +236,21 @@ Self-paced `/loop` — you pick delay after each iteration.
   1800s
 - **Everything done** (done-criteria all checked): cancel loop
 
-### Commits
+### Commits (save-point every iteration)
 
-- Every iteration that lands work: commit.
-- Message: `speak/<phase>/<subsystem>: <what + why>`
-- Co-Authored-By trailer.
-- Push to origin/main every 2-3 commits.
-- Never skip hooks.
+- **Every iteration ends with a commit.** This IS the save-point.
+  Git log becomes the iteration journal.
+- If the iteration did substantive work: commit with full message.
+- If the iteration checked state and decided "nothing to do yet":
+  commit an empty `speak/LOOP-STATUS.md` update noting the check.
+  Never a silent no-op wake-up.
+- Message format: `speak/<phase>/<subsystem>: <what + why>` for
+  work; `speak/loop: iter-N state check — <finding>` for checks.
+- Co-Authored-By trailer always.
+- Push to origin/main every 2-3 commits (not every iteration —
+  batches).
+- Never skip hooks. Never force-push.
+- Never amend committed work. Fresh commit for fixes.
 
 ### Agent delegation
 
