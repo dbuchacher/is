@@ -1,6 +1,6 @@
 {
   "know-beget": {
-    "claim": "Three independent vocabularies name perception-closes-into-production as one operation.",
+    "claim": "PIE gneh3 held know and beget as one verb — take-in and put-out as one stroke. Egyptian sjA·Hw·xpr walks perceive → speak → become (an outer thing becomes inner becomes outer again). Chinese xin·wen·zuo walks heart holds → ear hears → hand acts (same arc, different chain of three morphemes). Three vocabularies, three shapes of the same perception-into-production loop.",
     "pie": {
       "id": "gneh3",
       "gloss": "know = beget"
@@ -286,7 +286,7 @@
     }
   },
   "hear-understand": {
-    "claim": "Hearing and understanding are one verb: the closing of the loop when sound arrives is also the closing of the loop when meaning arrives.",
+    "claim": "The same verb covers sound-reception and grasp-of-meaning in three unrelated families. Sumerian geshtug = ear AND hearing AND understanding; Egyptian sDm = hear AND obey AND understand; Chinese wen = hear AND understand AND loop-close. A single operation (sound arrives → meaning arrives → act adjusts) named once per language rather than as three separate words.",
     "pie": null,
     "sumerian": {
       "id": "geshtug",
@@ -302,7 +302,7 @@
     }
   },
   "heart-mind": {
-    "claim": "The organ in the chest and the seat of thought are one morpheme: READ-side of the hub-event lives in the same body-part across families.",
+    "claim": "The organ in the chest and the seat of thought are one morpheme in three unrelated languages. Sumerian sha = heart AND interior AND mind; Egyptian ib = heart AND mind AND will; Chinese xin = heart AND mind AND seat of thought. Not metaphor — one word covering what English splits into organ/mind/will.",
     "pie": null,
     "sumerian": {
       "id": "sha",

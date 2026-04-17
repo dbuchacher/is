@@ -158,6 +158,76 @@ def render_terminal(data):
     return "\n".join(lines)
 
 
+def render_redirect_terminal(rd):
+    """Structured one-card redirect for an English descendant not
+    directly curated. No forged claim prose — just parentage + pointer.
+    """
+    word = rd["word"]
+    pie = rd["parent_pie"]
+    branch = rd["branch_name"]
+    hero = rd["parent_hero"]
+
+    lines = [f"{B}{word}{R}"]
+    if hero:
+        lines.append(
+            f"  {D}descends from PIE{R} {C}{pie}{R} "
+            f"{D}via the{R} {B}{branch}{R} "
+            f"{D}branch — see the curated parent:{R} {B}{hero}{R}"
+        )
+        lines.append("")
+        lines.append(f"  {D}try:  speak {hero}{R}")
+    else:
+        lines.append(
+            f"  {D}descends from PIE{R} {C}{pie}{R} "
+            f"{D}via the{R} {B}{branch}{R} "
+            f"{D}branch — no curated hero word for this root yet.{R}"
+        )
+    return "\n".join(lines)
+
+
+def render_redirect_html(rd):
+    """HTML redirect card — one short page, no meta-refresh. Honest
+    structural output per BUILD-SPEC: parent + branch + pointer,
+    no forged claim prose."""
+    word = rd["word"]
+    pie = rd["parent_pie"]
+    branch = rd["branch_name"]
+    hero = rd["parent_hero"]
+
+    out = [f'<div class="word">{word}</div>']
+    out.append('<div style="color:#666;font-size:0.9em;'
+               'margin-top:0.3em;">English descendant — '
+               'redirect to curated parent</div>')
+
+    if hero:
+        out.append(
+            f'<div class="section">'
+            f'<b>{word}</b> descends from PIE '
+            f'<span class="ids">{pie}</span> via the '
+            f'<b>{branch}</b> branch.</div>'
+        )
+        out.append(
+            f'<div class="section">See the curated entry for the '
+            f'parent root:<br>'
+            f'<a href="{hero}.html" '
+            f'style="font-size:1.2em;">→ speak {hero}</a></div>'
+        )
+    else:
+        out.append(
+            f'<div class="section">'
+            f'<b>{word}</b> descends from PIE '
+            f'<span class="ids">{pie}</span> via the '
+            f'<b>{branch}</b> branch. No curated hero word for '
+            f'this root yet.</div>'
+        )
+
+    out.append('<div class="section" style="margin-top:2em;'
+               'font-size:0.9em;">'
+               '<a href="index.html">← all words</a></div>')
+
+    return HTML_TEMPLATE.format(word=word, body="\n".join(out))
+
+
 def render_cross_lang_terminal(xl):
     """Render output for a cross-language morpheme match.
 
@@ -610,7 +680,7 @@ def render_coord_index(coords):
 
 
 def render_html_index():
-    from lib import cross_lang_index
+    from lib import cross_lang_index, redirect_descendants
     words = curated_words()
     xl = cross_lang_index()
     # Flatten into {morpheme_id: coord_name} preserving case
@@ -618,16 +688,25 @@ def render_html_index():
     for lang in ("sumerian", "egyptian", "chinese", "pie"):
         for mid, coord_name in xl.get(lang, {}).items():
             xl_flat.setdefault(mid, coord_name)
-    # Datalist: curated words + cross-lang morphemes
+    # Descendant redirects — each one has its own HTML page
+    redirects = redirect_descendants()
+    redirect_words = sorted(r["word"].lower() for r in redirects)
+    # Datalist: curated + redirect descendants + cross-lang morphemes
     opt_items = [f'    <option value="{w}">' for w in words]
+    opt_items.extend(
+        f'    <option value="{w}">' for w in redirect_words
+    )
     opt_items.extend(
         f'    <option value="{mid}">' for mid in sorted(xl_flat.keys())
     )
     options = "\n".join(opt_items)
     import json as _json
+    # Curated + redirect-descendants both land on a same-named .html
+    # at the site root. URL-state handler treats them as one set.
+    known_pages = sorted(set(words) | set(redirect_words))
     search_block = INDEX_SEARCH_BLOCK.format(
         options=options,
-        curated_js=_json.dumps(words),
+        curated_js=_json.dumps(known_pages),
         xlang_js=_json.dumps(xl_flat),
     )
     body = ['<h1>speak</h1>',

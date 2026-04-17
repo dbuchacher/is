@@ -27,7 +27,9 @@ CASES = {
         "required": [
             "xin", "(chinese morpheme)",
             "coord:", "know-beget",
-            "Three independent vocabularies",
+            # rewritten claim names the matching rule in data
+            "PIE gneh3 held know and beget",
+            "heart holds",
             "PIE", "gneh3",
             "Egyptian", "sjA",
             "English words here:",

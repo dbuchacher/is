@@ -214,6 +214,75 @@ def nearest_curated(word, n=3):
     return difflib.get_close_matches(word.lower().strip(), words, n=n, cutoff=0.6)
 
 
+def lookup_redirect(word):
+    """Return redirect info if `word` is a descendant listed in
+    branches.json but NOT curated in en-pie.json.
+
+    Returns {parent_pie, parent_hero, branch_name, word} or None.
+
+    parent_hero = the first en-pie curated word with primary_pie == parent_pie.
+    That's the ship-to target. If no curated word exists for the parent root,
+    we can still surface the PIE root itself + branch info without a hero target.
+    """
+    word = word.strip()
+    if not word:
+        return None
+    app = load_app_data()
+    en_pie = app.get("en-pie", {})
+    if word.lower() in en_pie:
+        return None  # already curated; not a redirect
+    branches = app.get("branches", {})
+    for pie_id, branch_map in branches.items():
+        for branch_name, descendants in branch_map.items():
+            if word in descendants or word.lower() in [d.lower() for d in descendants]:
+                # Find a curated hero word for this pie root
+                hero = None
+                for w, entry in en_pie.items():
+                    if entry.get("primary_pie") == pie_id:
+                        hero = w
+                        break
+                return {
+                    "word": word,
+                    "parent_pie": pie_id,
+                    "branch_name": branch_name,
+                    "parent_hero": hero,
+                }
+    return None
+
+
+def redirect_descendants():
+    """Return all English descendants in branches.json that are NOT
+    curated in en-pie.json. Used by the static-site builder to
+    generate redirect pages.
+
+    Returns list of redirect dicts (same shape as lookup_redirect returns).
+    """
+    app = load_app_data()
+    en_pie = app.get("en-pie", {})
+    en_pie_lc = {w.lower() for w in en_pie}
+    branches = app.get("branches", {})
+    out = []
+    seen = set()
+    for pie_id, branch_map in branches.items():
+        hero = None
+        for w, entry in en_pie.items():
+            if entry.get("primary_pie") == pie_id:
+                hero = w
+                break
+        for branch_name, descendants in branch_map.items():
+            for d in descendants:
+                if d.lower() in en_pie_lc or d.lower() in seen:
+                    continue
+                seen.add(d.lower())
+                out.append({
+                    "word": d,
+                    "parent_pie": pie_id,
+                    "branch_name": branch_name,
+                    "parent_hero": hero,
+                })
+    return out
+
+
 def lookup_with_stemming(word):
     """Try direct lookup; if miss, try simple stems; if still miss,
     return None. Returns (data, stem_used) where stem_used is None

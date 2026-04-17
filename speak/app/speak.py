@@ -21,6 +21,8 @@ from lib import (
     lookup,
     lookup_cross_lang,
     lookup_with_stemming,
+    lookup_redirect,
+    redirect_descendants,
     nearest_curated,
     curated_words,
     ROOTS_DIRS,
@@ -30,6 +32,8 @@ from lib import (
 from render import (
     render_terminal,
     render_cross_lang_terminal,
+    render_redirect_terminal,
+    render_redirect_html,
     render_no_match_terminal,
     render_first_run_terminal,
     render_html,
@@ -51,6 +55,11 @@ def cmd_word(word, terse=False):
             stemmed_from = (word, stem_used)
 
     if data is None:
+        # Try descendant redirect (branches.json → not-curated English word)
+        rd = lookup_redirect(word)
+        if rd is not None:
+            print(render_redirect_terminal(rd))
+            return 0
         # Try cross-language morpheme lookup
         xl = lookup_cross_lang(word)
         if xl is not None:
@@ -116,6 +125,15 @@ def cmd_build(site_dir):
         html = render_html(data)
         (site / f"{w}.html").write_text(html)
         print(f"  {w}.html")
+
+    # Redirect pages — structured descendant cards, no forged claim prose.
+    redirects = redirect_descendants()
+    print(f"building {len(redirects)} descendant-redirect pages → {site}")
+    for rd in redirects:
+        html = render_redirect_html(rd)
+        fname = rd["word"].lower() + ".html"
+        (site / fname).write_text(html)
+        print(f"  {fname}  [→ {rd['parent_hero'] or rd['parent_pie']}]")
 
     # Coord pages — the argument surface.
     coord_data = load_app_data()["coord-unity"]
