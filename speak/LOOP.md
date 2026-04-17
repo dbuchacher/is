@@ -70,8 +70,9 @@ voice and the non-negotiables.
 
 ## 2. MISSION
 
-Build the substrate-translation bot. Three concepts are one
-thing, and the bot is their synthesis:
+Build the substrate-translation bot. ONE operation at three
+apertures — the bot is the operation made explicit at the
+text/vocabulary layer:
 
 ```
 speak app       word → substrate decomposition
@@ -79,18 +80,19 @@ moral compass   wit  → substrate-coherent wit
 reverse-LLM     any  → substrate-native reframe (born-indexed, O(1))
 ```
 
-All three = substrate-lossy-input → substrate-map → substrate-
-native-output. The bot is that pattern at the vocabulary/text
-layer.
+All three IS substrate-lossy-input → substrate-map → substrate-
+native-output. Not three patterns; ONE pattern, three inputs.
+The bot instantiates it at text/vocabulary scale.
 
 **Final product** (what "done" looks like):
 
 - User types English question OR word OR paragraph
 - Tiny local LLM (3-7B GGUF) parses surface (tokens, lemmas)
 - Walks the 400+ file lattice (reverse-LLM born-index)
-- Emits substrate-decomposition: morphemes, PIE/Sum/Eg/Chi
-  parallels, frame-item tags where honest, coord/spin/walk
-  where honest, claim prose
+- Emits substrate-decomposition: morphemes, cross-language
+  witnesses at the same coord (Sumerian/Egyptian/Chinese
+  morphemes that IS the same substrate operation), frame-item
+  tags where honest, coord/spin/walk where honest, claim prose
 - Output IS a reframe of the input — the question in substrate
   terms. That reframe often IS the answer.
 
@@ -104,7 +106,7 @@ layer.
 - [ ] Cross-language input works (type Sumerian/Egyptian/Chinese
       morpheme, get reframe)
 - [ ] Sentence-level decomposition works (spaCy + walk)
-- [ ] Local LLM integration wired (llama-cpp-python or similar)
+- [ ] Local LLM integration wired (llama-cpp-python, GGUF model)
       — bot runs on laptop, no network
 - [ ] Coord/spin/walk tagging: attempted on 50+ atomic files
       where clean, flagged `unassigned` elsewhere (NO FORCE FITS)
@@ -138,11 +140,12 @@ item. That's this iteration's work.
 
 ## 4. PHASE GUIDE
 
-### Phase R — Research & synthesis (if `speak/BUILD-SPEC.md` missing)
+### Phase R — Recognition + spec (if `speak/BUILD-SPEC.md` missing)
 
-Read the moral-compass files. Synthesize the three concepts
-(speak app, moral compass, reverse-LLM) into a concrete build
-spec. Answer:
+Read the moral-compass files. Recognize the three apertures
+(speak app, moral compass, reverse-LLM) as ONE operation with
+three inputs. Write the build spec for the text/vocabulary
+instantiation. Answer:
 
 - How does a 3B-parameter local LLM wrapped around the 400+ file
   lattice differ from standalone 140GB LLM?
@@ -178,8 +181,8 @@ Expected 60-70% auto-match. Manual patch rest.
 
 **D3: Cross-language input**
 Build `sumerian-en.json`, `egyptian-en.json`, `chinese-en.json`
-lookups so non-English input works. Parse each graph's
-descendants similarly.
+lookups so non-English input works. Same reverse-index process
+applied to each graph's descendants.
 
 **D4: Coord/spin/walk tagging** (the wit.md § 80/81 deliverable)
 Walk speak/roots/ + sub-graphs. For each atomic file, attempt
