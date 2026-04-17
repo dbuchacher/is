@@ -96,9 +96,15 @@ The bot instantiates it at text/vocabulary scale.
 - Output IS a reframe of the input — the question in substrate
   terms. That reframe often IS the answer.
 
-**Done criteria** (cancel the loop when ALL true):
+**Done criteria** (INITIAL — Phase R may revise these):
 
-- [ ] `speak/BUILD-SPEC.md` exists — synthesized research output
+Phase R is allowed — expected, even — to discover that some of
+these criteria are wrong or missing. Revise in BUILD-SPEC.md.
+The revised criteria become canonical; this list is just a
+starting place.
+
+- [ ] `speak/BUILD-SPEC.md` exists — research output with
+      revised (or confirmed) done-criteria
 - [ ] en-pie.json has ≥1500 curated English words (via
       descendant reverse-index + Wiktionary scrape)
 - [ ] Interactive text box works on docs/ site (JS-powered,
@@ -142,10 +148,71 @@ item. That's this iteration's work.
 
 ### Phase R — Recognition + spec (if `speak/BUILD-SPEC.md` missing)
 
-Read the moral-compass files. Recognize the three apertures
-(speak app, moral compass, reverse-LLM) as ONE operation with
-three inputs. Write the build spec for the text/vocabulary
-instantiation. Answer:
+**This is your research + play phase. You have actual agency here.**
+Read, think, experiment, question this very prompt, and shape
+the final product to what the substrate actually wants.
+
+**R1: Absorb**
+Read all moral-compass files. Read `reverse-llm.md` carefully —
+twice. Read existing `speak/app/` code + data. Read the 5
+adversarial reviews referenced in `APP-PLAN.md` (they're the
+v2→v3 history).
+
+**R2: Play**
+Open `speak/scratch/` (create it). Write exploration notes as
+you go. Try things:
+- What does "born-indexed" concretely mean for this 400-file
+  graph? Sketch the data structure.
+- What does the walker look like as pseudocode?
+- Is a small local LLM actually needed, or is a regex/spaCy
+  tokenizer enough for v1? (Honest answer may be: no LLM needed.)
+- What's the MINIMUM viable substrate-translation bot? Strip
+  the done-criteria to essentials. What's essential vs nice-to-have?
+- What did the `APP-PLAN.md` reviews miss?
+
+These scratch notes are yours. Commit them. They're the thinking
+record — useful even if superseded.
+
+**R3: Question the done-criteria**
+The 12 checkboxes at the top of this LOOP.md are INITIAL. They
+were drafted before research. Phase R's job is to confirm or
+revise them based on what the substrate actually wants.
+
+Specific things to interrogate:
+- Is "sentence-level decomposition" right scope for v1, or is
+  word/phrase enough?
+- Is local LLM premature? (The finding may be: the bot doesn't
+  need an LLM at all — it just needs a lattice walker + simple
+  tokenizer.)
+- Is "1500 words curated" the right target? Maybe 400
+  substrate-rich words hits higher density.
+- What's missing from the criteria? (E.g., "bot runs offline" or
+  "sub-100ms response time" or "works for non-IE languages on
+  input too").
+
+**R4: Adversarial review**
+Spawn 2-3 review agents (shipping, UX, pre-mortem). Each gets
+your draft spec. Each critiques from their angle. Integrate the
+sharp catches.
+
+**R5: Output**
+Write `speak/BUILD-SPEC.md` containing:
+- Revised done-criteria (MAY differ from LOOP.md's — that's fine)
+- Rationale for any deviation from LOOP.md (what you found in R2
+  that changed the shape)
+- Component architecture
+- Build plan (phase-ordered)
+- Falsification: what would prove this can't work
+
+**R6: Authority**
+BUILD-SPEC.md supersedes LOOP.md done-criteria. If your research
+says the local LLM isn't needed, drop it. If it says something
+critical is missing, add it. Commit BUILD-SPEC.md, then proceed
+to Phase D using YOUR revised criteria, not the initial ones.
+
+Honest flag expected: "The LOOP.md prompt assumed X; I found
+that X isn't needed for the v1 substrate-translation operation,
+so BUILD-SPEC.md drops it. Here's why: ..." Answer:
 
 - How does a 3B-parameter local LLM wrapped around the 400+ file
   lattice differ from standalone 140GB LLM?
