@@ -131,6 +131,153 @@ def cmd_deep(word):
     return 2
 
 
+STOPWORDS = {
+    # function words — skip from sentence decomposition
+    "a", "an", "and", "are", "as", "at", "be", "been", "but", "by",
+    "do", "does", "for", "from", "had", "has", "have", "he", "her",
+    "him", "his", "i", "if", "in", "into", "is", "it", "its", "me",
+    "my", "no", "not", "of", "on", "or", "our", "she", "so", "than",
+    "that", "the", "their", "them", "then", "there", "these", "they",
+    "this", "those", "to", "too", "us", "was", "we", "were", "what",
+    "when", "where", "which", "who", "will", "with", "would", "you",
+    "your",
+}
+
+
+def tokenize_phrase(phrase):
+    """Tokenize a phrase into words, dropping punctuation. Simple —
+    this isn't linguistic tokenization. For a paragraph, just split
+    on non-alpha and keep non-empty tokens."""
+    import re
+    return [t for t in re.split(r"[^A-Za-z'-]+", phrase) if t]
+
+
+def dispatch_token(token):
+    """Full lookup dispatch chain for one token. Returns a dict
+    describing what landed. Used by cmd_phrase for per-token
+    decomposition of multi-word input."""
+    lower = token.lower()
+    if lower in STOPWORDS:
+        return {"token": token, "kind": "stopword"}
+    data = lookup(token)
+    if data is not None:
+        return {"token": token, "kind": "curated", "data": data}
+    stem_data, stem_used = lookup_with_stemming(token)
+    if stem_data is not None:
+        return {
+            "token": token, "kind": "stemmed",
+            "stem": stem_used, "data": stem_data,
+        }
+    rd = lookup_redirect(token)
+    if rd is not None:
+        return {"token": token, "kind": "redirect", "data": rd}
+    xl = lookup_cross_lang(token)
+    if xl is not None:
+        return {"token": token, "kind": "cross-lang", "data": xl}
+    near = nearest_curated(token)
+    return {"token": token, "kind": "miss", "near": near}
+
+
+def cmd_phrase(phrase):
+    """Decompose a phrase, paragraph, or sentence token-by-token.
+
+    Per-token dispatch: curated → stem → redirect → cross-lang →
+    miss. Stopwords skipped. Final summary shows what landed.
+
+    This is honest substrate translation of arbitrary input: each
+    token gets whatever reframe the graph has. Tokens the graph
+    doesn't know about get flagged honestly, not forced.
+    """
+    R = "\033[0m"; B = "\033[1m"; D = "\033[2m"
+    C = "\033[36m"; Y = "\033[33m"; G = "\033[32m"
+
+    tokens = tokenize_phrase(phrase)
+    if not tokens:
+        print(f"{D}no tokens found in input{R}")
+        return 2
+
+    print(f"  {D}decomposing:{R} {B}{phrase}{R}")
+    print(f"  {D}{len(tokens)} token(s){R}")
+    print()
+
+    results = [dispatch_token(t) for t in tokens]
+    kinds = {}
+
+    for r in results:
+        t = r["token"]
+        k = r["kind"]
+        kinds[k] = kinds.get(k, 0) + 1
+
+        if k == "stopword":
+            print(f"  {D}{t}{R}  {D}— function word, skipped{R}")
+        elif k == "curated":
+            d = r["data"]
+            pie = d["entry"]["primary_pie"]
+            coord = (d.get("coord") or {}).get("name", "") if d.get("coord") else ""
+            line = f"  {B}{t}{R}  → PIE {C}{pie}{R}"
+            if coord:
+                line += f"  {D}(coord:{R} {G}{coord}{R}{D}){R}"
+            print(line)
+        elif k == "stemmed":
+            d = r["data"]
+            pie = d["entry"]["primary_pie"]
+            print(f"  {B}{t}{R} → stem {Y}{r['stem']}{R}  → PIE {C}{pie}{R}")
+        elif k == "redirect":
+            rd = r["data"]
+            parent = rd.get("parent_hero") or rd["parent_pie"]
+            print(f"  {B}{t}{R}  → PIE {C}{rd['parent_pie']}{R}  "
+                  f"{D}(branch {rd['branch_name']}, "
+                  f"→ see {parent}){R}")
+        elif k == "cross-lang":
+            xl = r["data"]
+            print(f"  {B}{t}{R}  → {xl['lang']} morpheme  "
+                  f"{D}(coord:{R} {G}{xl['coord_name']}{R}{D}){R}")
+        elif k == "miss":
+            if r["near"]:
+                print(f"  {D}{t}{R}  {D}— unknown, nearest: "
+                      f"{', '.join(r['near'])}{R}")
+            else:
+                print(f"  {D}{t}{R}  {D}— unknown{R}")
+
+    print()
+    print(f"  {Y}summary{R}")
+    for k in ("curated", "stemmed", "redirect", "cross-lang",
+              "stopword", "miss"):
+        if kinds.get(k):
+            print(f"    {kinds[k]:3d}  {k}")
+
+    # Surface coord clusters — if multiple tokens share a coord,
+    # that's substrate signal in the phrase.
+    coords_hit = {}
+    for r in results:
+        coord = None
+        if r["kind"] == "curated":
+            c = r["data"].get("coord")
+            if c:
+                coord = c.get("name")
+        elif r["kind"] == "cross-lang":
+            coord = r["data"].get("coord_name")
+        elif r["kind"] == "redirect":
+            from lib import coord_tag_for_morpheme
+            coord = coord_tag_for_morpheme("pie", r["data"]["parent_pie"])
+        elif r["kind"] == "stemmed":
+            c = r["data"].get("coord")
+            if c:
+                coord = c.get("name")
+        if coord:
+            coords_hit.setdefault(coord, []).append(r["token"])
+
+    if coords_hit:
+        print()
+        print(f"  {Y}coords named in this phrase{R}")
+        for coord, toks in sorted(coords_hit.items(),
+                                   key=lambda x: -len(x[1])):
+            print(f"    {G}{coord}{R}  "
+                  f"{D}← {', '.join(toks)}{R}")
+
+    return 0
+
+
 def cmd_walk(word):
     """--walk: walk the graph from a word outward, one hop at a time.
 
@@ -441,9 +588,9 @@ def main():
         epilog="one universe, many vocabularies — see README.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    ap.add_argument("word", nargs="?", help="English word to decompose, "
-                    "or 'build' for static site")
-    ap.add_argument("target", nargs="?", help="for 'build': output directory")
+    ap.add_argument("word", nargs="*", help="English word, phrase, or "
+                    "paragraph to decompose — or 'build <dir>' for "
+                    "static site")
     ap.add_argument("--open", action="store_true",
                     help="open the atomic file in frogmouth")
     ap.add_argument("--terse", action="store_true",
@@ -459,36 +606,46 @@ def main():
                     "(reverse-LLM walker primitive)")
     args = ap.parse_args()
 
+    # Normalize args.word (list) → first token + rest-as-phrase
+    words = args.word or []
+    first = words[0] if words else None
+    phrase = " ".join(words) if words else None
+
     if args.tag_stats:
         return cmd_tag_stats()
 
     if args.deep:
-        if args.word is None:
+        if not words:
             print("--deep needs a word", file=sys.stderr)
             return 2
-        return cmd_deep(args.word)
+        return cmd_deep(first)
 
     if args.walk:
-        if args.word is None:
+        if not words:
             print("--walk needs a word", file=sys.stderr)
             return 2
-        return cmd_walk(args.word)
+        return cmd_walk(first)
 
     if args.list:
         return cmd_list()
 
-    if args.word is None:
+    if not words:
         print(render_first_run_terminal())
         return 0
 
-    if args.word == "build":
-        target = args.target or "site"
+    if first == "build":
+        target = words[1] if len(words) > 1 else "site"
         return cmd_build(target)
 
     if args.open:
-        return cmd_open(args.word)
+        return cmd_open(first)
 
-    return cmd_word(args.word, terse=args.terse)
+    # Multiple tokens OR single-token-with-spaces → phrase mode.
+    # Single-token → per-word decomposition (unchanged behavior).
+    tokens = tokenize_phrase(phrase)
+    if len(tokens) > 1:
+        return cmd_phrase(phrase)
+    return cmd_word(first, terse=args.terse)
 
 
 if __name__ == "__main__":
