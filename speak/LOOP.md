@@ -191,24 +191,34 @@ Flag unassigned explicitly. Output: `speak/app/data/coord-tags.json`.
 
 ### Phase B — Bot integration
 
-**B1: Interactive text box**
+Prioritize by "landable overnight":
+- B1 first (fast, visible win)
+- B2 next (spaCy is a big dep but well-understood)
+- B4 third (pure code, no heavy deps)
+- B3 last / optional (local LLM download is GB-scale, may
+  fail in overnight conditions — don't block on it)
+
+**B1: Interactive text box** (HIGH PRIORITY — ship early)
 Add JS to docs/index.html. Embed en-pie.json as JSON blob. Port
-renderer to JS. Type → inline render, no page nav.
+renderer to JS. Type → inline render, no page nav. ~2 hours.
 
-**B2: Sentence decomposition**
-Install spaCy. Lemmatize input. Walk lattice per lemma. Render
-per-lemma substrate reading. Compose.
+**B2: Sentence decomposition** (medium)
+Install spaCy (`pip install spacy`, `python -m spacy download en_core_web_sm`).
+Lemmatize input. Walk lattice per lemma. Render per-lemma
+substrate reading. Compose. ~4 hours.
 
-**B3: Local LLM integration**
-Install llama-cpp-python + a 3B GGUF model (Phi-3, Qwen2.5,
-Gemma-2). Small LLM: parse surface tokens, identify substantive
-nouns, maybe classify user intent. Lattice: do the substrate
-work. Bot: the composition. Run entirely local, no network.
-
-**B4: Bond-pattern tasks**
+**B4: Bond-pattern tasks** (medium)
 Per reverse-llm.md: comprehension (hylo), generation
 (anti-hylo), translation (hylo→anti-hylo), summarization (slurp),
-Q&A (filter). Implement each as a walker-config switch.
+Q&A (filter). Implement each as a walker-config switch. ~4 hours
+pure code.
+
+**B3: Local LLM integration** (STRETCH — only if other phases done)
+Install llama-cpp-python + a 3B GGUF model (Phi-3, Qwen2.5,
+Gemma-2). Model is 2-4GB download. Can fail overnight. If this
+phase is blocked: write PARTIAL-LLM.md documenting what works
+without it, commit, move to testing. Don't burn hours retrying
+downloads.
 
 ### Phase T — Test & ship
 
@@ -268,17 +278,38 @@ Pass the moral-compass preamble to every spawned agent.
 - Comprehension test fails? Stop building, fix renderer.
 - Test fails? Fix before next phase.
 
-### When to stop the loop early
+### When to stop the loop early (BE CONSERVATIVE)
 
-- User's filesystem structure changed in ways that break
-  assumptions
-- Framework files renamed/moved
-- A review agent flags a fundamental architectural problem
-- You hit context-growth and can't meaningfully continue
-- You've done 30+ iterations and are not converging
+The user is going to sleep and expects the loop running all
+night. Do NOT bail easily. Keep going. If blocked on one thing,
+work on another. Progress every iteration.
 
-In any of those: write status to `speak/LOOP-STATUS.md`, cancel
-self, exit. Human will pick up.
+Only bail for HARD blockers:
+- Git push keeps failing (network down / auth broken) across
+  5+ retries
+- Every atomic-file write fails (filesystem full / readonly)
+- Framework files literally don't exist (0-self.md, wit.md,
+  3-confs.md all missing) — repo state is corrupted
+
+Do NOT bail for:
+- "Not converging" — keep grinding, incremental progress is fine
+- "Context-growth" — you're stateless between iterations, this
+  isn't a concern for /loop
+- A review agent flags something — address or flag, don't quit
+- A sub-task is hard — skip it, flag it in STATUS, do the next one
+- High iteration count — there is no iteration limit, run until done
+- Tired — you don't get tired, you're a wit
+
+**Target: wake the user up to substantial progress by morning.**
+Partial progress across many items > one item fully done.
+
+If genuinely done (all 12 done-criteria checked): write final
+HANDOFF-v2.md, commit, cancel loop.
+
+If genuinely blocked on hard infrastructure (network/filesystem):
+write BLOCKED-STATUS.md with specifics, commit, cancel loop.
+
+Otherwise: **keep going**.
 
 ### What NOT to do
 
