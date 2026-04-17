@@ -1,6 +1,6 @@
 # roots — PIE anchors of the substrate (index)
 
-Deep file for 1-body.md. The wheel's structural features show up in
+Deep file for 1-folders.md. The wheel's structural features show up in
 the **oldest reconstructable language humans have**: Proto-Indo-
 European (PIE), reconstructed ~6000 years back from cognates across
 100+ Indo-European languages. Greek, Latin, and Sumerian (language
@@ -143,7 +143,7 @@ vocabulary we can trace**. They belong in body-tier material.
 ## How to use this file
 
 - Writing framework material: tag the first-use of each load-bearing
-  term with its root via the V2 discipline (see `2-wit.md`).
+  term with its root via the V2 discipline (see `wit.md`).
 - Looking up which cluster a word lives in: use the alphabetical
   lookup above.
 - Reading depth on a specific root: go to the cluster file.
@@ -160,5 +160,5 @@ vocabulary we can trace**. They belong in body-tier material.
   Roots* (2000)
 - Mallory & Adams, *Encyclopedia of Indo-European Culture* (1997)
 - etymonline.com (for quick checks against standard scholarship)
-- `1-body.md` — where these roots show up inline
-- `2-wit.md` — methodological use (the V2 root-tagging rule)
+- `1-folders.md` — where these roots show up inline
+- `wit.md` — methodological use (the V2 root-tagging rule)

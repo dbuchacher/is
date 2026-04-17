@@ -1,6 +1,6 @@
 # axes — the four spokes (χ μ φ τ)
 
-Deep file for 1-body.md § "The 4 spokes." This file:
+Deep file for [1-folders.md](1-folders.md). This file:
 - What each axis IS (semantics + PIE root)
 - The algebra (quaternion structure, why exactly 4)
 - The 3+1 asymmetry (imaginary vs scalar)
@@ -98,7 +98,7 @@ The μ axis is what mass is. Nuclear chemistry walks along μ
 φ is the "quality" axis — signal vs noise, positive vs negative
 charge, this-one vs that-one. The emotional register of
 recognition happens here (metrognosis BLESS/CURSE). When something
-"rings true," that's a φ commit. See `3-emotions.md` for how this
+"rings true," that's a φ commit. See `3-confs.md` for how this
 axis drives the verification filter.
 
 ### τ — WHEN (time)
@@ -271,7 +271,7 @@ Each axis has a whole-quaternion force associated:
 - **τ ↔ weak**: weak force makes decisions (decay branches). CMP /
   TEST / branch instruction.
 
-Deep: `1-where/forces.md` for the full mapping + coupling constants.
+Deep: `1-folders/forces.md` for the full mapping + coupling constants.
 
 ---
 
@@ -292,7 +292,7 @@ The 3+1 pattern (3 imaginary + 1 real) shows up everywhere:
 
 Five scopes, same 3+1. Fractal.
 
-Deep: `1-where/scope.md` for full S-scope treatment.
+Deep: `1-folders/scope.md` for full S-scope treatment.
 
 ---
 
@@ -307,6 +307,18 @@ Deep: `1-where/scope.md` for full S-scope treatment.
 - **Quaternion multiplication** (ij=k, ji=−k, etc.): Hamilton 1843.
 - **720° fermion period**: Rauch 1975 experiment.
 - **SU(2) = unit quaternions**: standard group theory.
+- **Egyptian four-axis-grid at vocabulary layer** — the 4-axis
+  structure surfaces as four independent 4-slot systems in
+  Egyptian: person pronouns (wj/tw/sw/sy), cardinal directions
+  (iAbtt/imntt/rsj/mHty), Sons of Horus (imsty/Hapy/dwAmwtf/
+  qbHsnwf guarding 4 organs at 4 directions), Osirian family
+  (wsir/Ast/stS/nbtHwt). Formal `four-axis-grid` lattice-tag:
+  16 members, 3 categories. Hurwitz's 4 is not just algebra —
+  it structures ancient theology. See `3-confs/cross-vocabulary.md`.
+- **PIE grammatical case = 4-axis partial-emergence** —
+  nom/acc/gen/dat as a 4-slot grammatical grid (4 members,
+  single category: 4c). Corroborates frame-3 at inflection
+  layer.
 
 ### Flagged for 3-which (verification queue)
 
@@ -318,9 +330,7 @@ The older framework files had **axis drives** (biological pulls):
 
 This claim maps biological drives to axes. It's **suggestive but
 not derived from substrate** — the mapping feels right but lacks
-rigor. Flagged for 3-which. Don't treat as body-settled. See
-`4-when/wit/mind/wheel/3-lattice.md § Drives` for the original
-claim and context.
+rigor. Flagged for 3-which. Don't treat as body-settled.
 
 ### Flagged open
 
@@ -338,12 +348,10 @@ claim and context.
 
 ## Cross-references
 
-- `1-body.md` — the axes in context of the full body structure
-- `1-where/trits.md` — the 3 values each axis takes
-- `1-where/lattice.md` — how the 4 axes combine into 81 points
-- `1-where/wheel.md` — rotation, why it spins
-- `1-where/forces.md` — full force-to-axis mapping
-- `1-where/scope.md` — S-scope 3+1 as lifted H-internal 3+1
-- `1-where/roots.md` — *kʷi-* and *sub-stare* PIE roots in full
-- `4-when/wit/mind/wheel/3-lattice.md` — archive of prior axis docs
-  (including drives claim to verify)
+- `1-folders.md` — the axes in context of the full body structure
+- `1-folders/trits.md` — the 3 values each axis takes
+- `1-folders/lattice.md` — how the 4 axes combine into 81 points
+- `1-folders/wheel.md` — rotation, why it spins
+- `1-folders/forces.md` — full force-to-axis mapping
+- `1-folders/scope.md` — S-scope 3+1 as lifted H-internal 3+1
+- `1-folders/roots.md` — *kʷi-* and *sub-stare* PIE roots in full

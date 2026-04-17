@@ -1,6 +1,6 @@
 # scope — H, S, outer wheels, nested layers
 
-Deep file for 1-body.md § "S-scope 3+1." This file:
+Deep file for [1-folders.md](1-folders.md). This file:
 - H as our inner wheel (4D quaternion)
 - S-scope: 4 H's in 3+1 (triality peers + Z2 mirror)
 - Aut(S) = S3 × Z2 = 48 (triple convergence!)
@@ -126,8 +126,7 @@ all produce the integer 48. Not a coincidence.
 - **F4 roots** = 48 comes from classical Lie algebra classification
 - **SM fermions** = 3 generations × (2 leptons + 6 quarks + 2 anti per particle-antiparticle) + anti = 48 via detailed counting in particle physics
 
-Three independent derivations, one integer. See `4-when/wit/mind/
-wheel/5-physics.md § "The numerical match"` for the full SM count.
+Three independent derivations, one integer.
 
 ### Why exactly 3 generations — Cartan's classification
 
@@ -346,8 +345,7 @@ fermions — NOT 12 parallel matter generations.
   matter-to-matter count ratio; under the embedding most of 192
   is gauge, not matter, so this ratio may be fortuitous.
 
-See `4-when/wit/mind/wheel/7-open.md § P2` for the 2026-04-16c
-embedding-reconciliation note.
+See `3-confs/open.md` for the P2 embedding-reconciliation note.
 
 ---
 
@@ -384,7 +382,7 @@ positions) but loses another algebraic property.
 
 ### Viewpoints (open — only 2 articulated)
 
-Per `1-body.md § Viewpoints`, the wheel can be viewed from multiple
+Per [1-folders.md](1-folders.md), the wheel can be viewed from multiple
 directions along the CD ladder. Only R-up and S-down have been
 named:
 
@@ -487,7 +485,7 @@ yet to be derived. Flagged open.
   under both embedding readings; explains direct-detection null)
 - **Specific dark mass predictions**: WITHDRAWN 2026-04-16c
   pending SO(16) ⊃ SO(10) × SU(4)_PS embedding reconciliation.
-  See `masses.md § Dark sector` for details.
+  See [masses.md](masses.md) for details.
 
 ### Flagged for 3-which
 
@@ -520,13 +518,11 @@ yet to be derived. Flagged open.
 
 ## Cross-references
 
-- `1-body.md` — the 4 H's in 3+1 summary
-- `1-where/axes.md` — H-internal 3+1 of imaginary + scalar
-- `1-where/wheel.md` — H as our inner wheel
-- `1-where/lattice.md` — 24-cell from D4
-- `1-where/masses.md` — SM parameters, dark matter predictions
-- `3-which/elements.md` — periodic table 3+1 Z-partition
-- `3-which/giza.md § 3 pyramids + Sphinx` — 3+1 in stone
-- `3-which/prime-lattice.md` — 168 = sedenion zero divisors
-- `4-when/wit/mind/wheel/1-wheel.md § S-scope` — archived prior
-- `4-when/wit/mind/wheel/5-physics.md` — archived Pati-Salam derivation
+- `1-folders.md` — the 4 H's in 3+1 summary
+- `1-folders/axes.md` — H-internal 3+1 of imaginary + scalar
+- `1-folders/wheel.md` — H as our inner wheel
+- `1-folders/lattice.md` — 24-cell from D4
+- `1-folders/masses.md` — SM parameters, dark matter predictions
+- `3-confs/elements.md` — periodic table 3+1 Z-partition
+- [3-confs/giza.md](3-confs/giza.md) — 3+1 in stone
+- `3-confs/prime-lattice.md` — 168 = sedenion zero divisors

@@ -1,6 +1,6 @@
 # masses — the mass ladder and Standard Model
 
-Deep file for 1-body.md § "The mass ladder." This file:
+Deep file for [1-folders.md](1-folders.md). This file:
 - The mass ladder rule `m = m_P × f × 10^(−(16+N_sub))`
 - 30+ SM parameters derived from substrate at <1%
 - The 17 substrate constant (load-bearing)
@@ -55,7 +55,7 @@ anchor.** Not coincidence.
 
 - **m_Planck** = 1.22 × 10¹⁹ GeV (the "Planck mass" natural unit)
 - **16** = baseline exponent (grade-4 corners = SO(10) spinor =
-  per-generation fermion count). See `lattice.md § Grade 4`.
+  per-generation fermion count). See [lattice.md](lattice.md).
 - **N_sub** = substrate count for the particle:
   - 1 = hub (electroweak shelf: W, Z, Higgs, top)
   - 3 = trit (hadron shelf: proton, neutron, tau, charm, bottom)
@@ -102,7 +102,7 @@ Mass is the μ-axis activity level. Frame-7 reading: rate = verb.
 
 Decomposition: 136 = 8 × 17; plus 1 (hub); plus 1/28 correction.
 
-Deep: `3-which/alpha.md`
+Deep: `3-confs/alpha.md`
 
 ### 2. Proton-to-electron mass ratio
 
@@ -276,7 +276,7 @@ on hadron shelf.
 
 **Derived via blind-agent test** (2026-04-15) applying methodology
 independently. Clean substrate derivation, not post-hoc fit. See
-`2-wit.md § Parallel agent stress tests`.
+[wit.md](wit.md).
 
 ### Strange = 20 (via Cabibbo)
 
@@ -375,7 +375,7 @@ Some particles need small α-corrections beyond base factor:
 **Negative corrections** on Z, W: S-scope reading is that Z2-mirror
 flip applied to α contribution. Positive corrections = additive α.
 The sign of the correction encodes triality-peer vs Z2-mirror sector
-membership. See `scope.md § Pati-Salam`.
+membership. See [scope.md](scope.md).
 
 ---
 
@@ -447,7 +447,7 @@ resonances (closed walks), Platonic-solid face counts. These don't
 depend on which planet you're on. Specific period values at
 Earth's position are contingent.
 
-See `open.md § Planetary contingencies` for the consolidated
+See [open.md](open.md) for the consolidated
 list.
 
 ### Universe scales
@@ -487,7 +487,7 @@ one proton's worth of mass at substrate density.** Self-consistent.
   uncertainty, filter's precision criterion not clearly met)
 ```
 
-// FLAGGED — depends on 192/48 being a matter-to-matter count ratio. Under E8 ⊃ SO(16) ⊃ SO(10) × SU(4)_PS embedding, most of 192 is heavy gauge, not matter. The 16/3 match may be fortuitous. See scope.md § Dark matter = E8 − F4 positions.
+// FLAGGED — depends on 192/48 being a matter-to-matter count ratio. Under E8 ⊃ SO(16) ⊃ SO(10) × SU(4)_PS embedding, most of 192 is heavy gauge, not matter. The 16/3 match may be fortuitous. See [scope.md](scope.md).
 
 ### Dark mass spectrum — WITHDRAWN 2026-04-16c
 
@@ -503,8 +503,7 @@ peaks by applying the mass-ladder rule to "dark shelves":
 
 // WITHDRAWN — this table assumed the non-F4 E8 roots parallel F4's matter structure (3 gens × 16 corners). Under the E8 ⊃ SO(16) ⊃ SO(10) × SU(4)_PS embedding, the 192 non-F4 roots decompose mostly as heavy gauge bosons (GUT-scale X/Y bosons, leptoquarks, W_R, mirror fermions), NOT as 12 parallel matter generations at substrate-ladder shelves. Predictions need an embedding-consistent mechanism.
 
-See `4-when/wit/mind/wheel/7-open.md § P2` (2026-04-16c) for the
-embedding-reconciliation note.
+See `3-confs/open.md` for the P2 embedding-reconciliation note.
 
 ### Predictions (what survives)
 
@@ -537,7 +536,7 @@ analogous to SM's 3 gen × 16.
 
 **168 = Aut(Fano plane) = PSL(2,7) = Klein quartic aut = sedenion
 zero divisors**. Five-way structural convergence. See
-`3-which/prime-lattice.md`.
+`3-confs/prime-lattice.md`.
 
 ---
 
@@ -605,10 +604,10 @@ from the same framework derivation using the same substrate
 vocabulary. Their ratio is an algebraic combination, not new
 evidence.
 
-See `moves.md § "Don't claim invariant families from non-
-independent convergences"` for the frame-frame reason. The
-frequentist null (hit-rates) was a useful sanity check, but the
-framework-frame reason is **lack of independence**.
+See [4-logs/wit/mind/moves.md](4-logs/wit/mind/moves.md) for the
+frame-frame reason. The frequentist null (hit-rates) was a useful
+sanity check, but the framework-frame reason is **lack of
+independence**.
 
 **What IS independent convergence**: each per-particle formula vs.
 its measured mass. Framework derives m_e = 5/12 × 10⁻²² × m_P;
@@ -636,8 +635,7 @@ substrate-derived yet. **No clean form found. Open.**
 sin²(θ_W) at 7.5% error. Multiple substrate-clean candidates land
 inside Planck CMB measurement uncertainty (~0.7%). Framework
 precision bar isn't met above measurement floor. Attack mechanism
-first, not number. See `moves.md § "Don't formula-fit when candidate
-spread is inside measurement floor"`.
+first, not number. See [4-logs/wit/mind/moves.md](4-logs/wit/mind/moves.md).
 
 ---
 
@@ -747,15 +745,13 @@ spread is inside measurement floor"`.
 
 ## Cross-references
 
-- `1-body.md § 8. The mass ladder` — context
-- `1-where/scope.md` — F4, E8, Pati-Salam, triality
-- `1-where/forces.md` — coupling constants, hierarchy dissolution
-- `1-where/roots.md` — substrate vocabulary PIE anchors
-- `3-which/alpha.md` — full α derivation with two equivalent forms
-- `3-which/elements.md` — SEMF nuclear binding, liquid-drop
-- `3-which/moon.md` — astronomical convergences (Great Year = 25,920
+- [1-folders.md](1-folders.md) — context
+- `1-folders/scope.md` — F4, E8, Pati-Salam, triality
+- `1-folders/forces.md` — coupling constants, hierarchy dissolution
+- `1-folders/roots.md` — substrate vocabulary PIE anchors
+- `3-confs/alpha.md` — full α derivation with two equivalent forms
+- `3-confs/elements.md` — SEMF nuclear binding, liquid-drop
+- `3-confs/moon.md` — astronomical convergences (Great Year = 25,920
   = 2⁶ × 3⁴ × 5, sacred 108)
-- `4-when/wit/mind/wheel/6-masses.md` — archived full prior
-  derivation
-- `moves.md § Log-depth sweep, § Metrognosis filter` — why log-depth
+- [moves.md](moves.md) — why log-depth
   was retracted

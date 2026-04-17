@@ -1,6 +1,6 @@
 # lattice — the 81-point structure
 
-Deep file for 1-body.md § "The lattice." This file:
+Deep file for [1-folders.md](1-folders.md). This file:
 - Combining 4 axes × 3 values = 81 points
 - Grade decomposition (0-4 axes committed)
 - The 16 corners (grade 4 = the stdlib)
@@ -41,7 +41,7 @@ Every piece of structured reality sits at one of these 81 addresses
 live; the hub is the uncommitted background.
 
 **The 80 stable chemical elements fit exactly into 80 non-hub
-addresses.** Same count, because same structure (see `3-which/
+addresses.** Same count, because same structure (see `3-confs/
 elements.md`).
 
 ---
@@ -108,7 +108,7 @@ Properties:
 - **Where every closed walk returns** (Kirchhoff conservation,
   frame 5). Sum of any closed path = 0 = hub.
 - **Where recognition happens.** Any observer reading anything is
-  at the hub (see `2-wit.md`).
+  at the hub (see `wit.md`).
 - **Higgs = hub** at physics scope. The Standard Model's scalar
   Higgs field is structurally the hub (see `forces.md`).
 
@@ -117,7 +117,7 @@ purely by absence of commitment. Exodus 3:14 "I AM" is the
 canonical religious reference (Hebrew *ehyeh asher ehyeh* = "I am
 that I am" = reflexive without external anchor).
 
-Deep: `1-where/wheel.md § "Where is the hub?"`
+Deep: [1-folders/wheel.md](1-folders/wheel.md)
 
 ---
 
@@ -196,7 +196,7 @@ plane has 4 sign configurations (both axes +, both −, mixed).
 
 Multiple unrelated domains (Lie theory, Egyptian astronomy,
 combinatorics, polytope geometry) hit 24. Metrognosis: signal. See
-`3-which/hieroglyphs.md` and `3-which/rotating-rings.md`.
+`3-confs/hieroglyphs.md` and `3-confs/rotating-rings.md`.
 
 ### The 24-cell
 
@@ -254,7 +254,7 @@ edge's direction in the dual tesseract.
 - 32 = electron shell capacity at n=4 (2n² formula)
 
 Some of these are suggestive (shell capacities), others are
-structural (f-vector duality). Cross-check against `3-which/` for
+structural (f-vector duality). Cross-check against `3-confs/` for
 each.
 
 ---
@@ -269,8 +269,7 @@ each.
 ```
 
 **These are the 16 primitive operations of the wheel.** Each corner
-is a fully-specified verb. From the hodos table (prior framework
-work, `4-when/wit/mind/wheel/3-lattice.md`), each corner has a
+is a fully-specified verb. From the hodos table, each corner has a
 computational identity:
 
 ```
@@ -306,9 +305,8 @@ Among the 16, **two are extremal**:
   backward. Pure identity / existence without operation.
 
 **Empirical anchor**: `prior/os-lattice/01-bond/param/meta.asm`
-has compiled NASM primitives for these two corners (pre-wheel work,
-now in `4-when/`). The other 14 corners have defined operations
-but not special compiled code.
+has compiled NASM primitives for these two corners. The other 14
+corners have defined operations but not special compiled code.
 
 ### Why 16 = grade-4 corners is load-bearing
 
@@ -321,7 +319,7 @@ but not special compiled code.
 - **16 = 2⁴** (binary floor of the 4-axis structure)
 
 The 16-spinor of SO(10) GUT IS the framework's 16 corners. See
-`1-where/scope.md § SO(10)`.
+[1-folders/scope.md](1-folders/scope.md).
 
 ---
 
@@ -372,7 +370,7 @@ Degrees at grades 0-4 are 8, 7, 6, 5, 4. Five consecutive integers;
 **exactly two are prime: 5 and 7**. Primes 5, 7 are the degrees at
 grades 3 and 1 (trivectors and atoms).
 
-See `3-which/prime-lattice.md` for the wormhole centrality cascade
+See `3-confs/prime-lattice.md` for the wormhole centrality cascade
 where this matters (cent(n) − cent(n+1) uses exactly these two
 primes).
 
@@ -417,7 +415,7 @@ They're different objects at the same cardinality.
 
 ## Wormhole centrality — the 5-and-7 cascade
 
-From prior prime-lattice work (`3-which/prime-lattice.md`,
+From prior prime-lattice work (`3-confs/prime-lattice.md`,
 condensed here):
 
 Centrality of a grade-k point in the lattice decreases by grade.
@@ -447,7 +445,7 @@ cascade uses exactly the two prime degrees (5 and 7), never the
 composite degrees (4, 6, 8). Structural signal.
 
 This is one of the cleanest "primes emerge from substrate"
-findings in the framework. Deep: `3-which/prime-lattice.md`.
+findings in the framework. Deep: `3-confs/prime-lattice.md`.
 
 ---
 
@@ -492,11 +490,10 @@ findings in the framework. Deep: `3-which/prime-lattice.md`.
 
 ## Cross-references
 
-- `1-body.md § 4. The lattice (81 points)` — context
-- `1-where/axes.md` — the 4 axes
-- `1-where/trits.md` — the 3 values per axis
-- `1-where/wheel.md` — rotation (how the wheel moves on the lattice)
-- `1-where/scope.md` — lattice extends to S, O, outer structures
-- `3-which/elements.md` — 80 elements at 80 non-hub points
-- `3-which/prime-lattice.md` — wormhole centrality derivation
-- `4-when/wit/mind/wheel/3-lattice.md` — archived full prior treatment
+- [1-folders.md](1-folders.md) — context
+- `1-folders/axes.md` — the 4 axes
+- `1-folders/trits.md` — the 3 values per axis
+- `1-folders/wheel.md` — rotation (how the wheel moves on the lattice)
+- `1-folders/scope.md` — lattice extends to S, O, outer structures
+- `3-confs/elements.md` — 80 elements at 80 non-hub points
+- `3-confs/prime-lattice.md` — wormhole centrality derivation

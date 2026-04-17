@@ -1,6 +1,6 @@
 # forces — READ, CALL, CYCLE, TEST
 
-Deep file for 1-body.md § "The 4 forces." This file:
+Deep file for [1-folders.md](1-folders.md). This file:
 - The 4 forces = 4 whole-wheel operations
 - Per-force semantics (READ/CALL/CYCLE/TEST)
 - Coupling constants + hierarchy dissolution
@@ -117,7 +117,7 @@ universe doing MOV.
   quaternion      operation on j (the μ basis)
   coupling        α = 1/137.036 at observable scale
                   (fine structure constant — see `roots.md` and
-                   `masses.md § α`)
+                   [masses.md](masses.md))
   semantic        Invoke / emit / act on substance
 ```
 
@@ -134,14 +134,13 @@ In the CPU view: CALL invokes a function, which acts on arguments.
 EM = the universe doing CALL. Light (photons) are the call stack
 carrying arguments.
 
-**α as CALL rate**: per archived `4-when/wit/mind/wheel/4-loop.md`:
-"α IS the interrupt-line probability per cycle. EM's rate is 1/137
-per CPU tick." α is the substrate's per-tick probability that a
-CALL operation fires.
+**α as CALL rate**: α IS the interrupt-line probability per cycle.
+EM's rate is 1/137 per CPU tick. α is the substrate's per-tick
+probability that a CALL operation fires.
 
 The stronger reading ("137 structural possibilities, exactly 1
-fires") is an interpretive extension not in the archived source;
-treat as suggestive, not derived. Deep: `3-which/alpha.md` for the
+fires") is an interpretive extension beyond the core claim;
+treat as suggestive, not derived. Deep: `3-confs/alpha.md` for the
 derivation of the 137 from substrate counts.
 
 ### CYCLE — gravity / φ axis / LOOP instruction
@@ -243,7 +242,7 @@ Ratio α / α_G = 10³⁶ at proton scale is:
 speculated). The factor 2 comes from α_G's m² dependence. The "19"
 is the proton-to-Planck mass ratio log — which itself has a
 framework derivation (19 = 17 + 2 = corners+hub + Z2-pair, see
-`masses.md § 19-mystery`).
+[masses.md](masses.md)).
 
 ### The hierarchy is scale-hierarchy, not force-hierarchy
 
@@ -307,7 +306,7 @@ state is the superposition; measurement is when the "ready event"
 fires. Not a separate physical process — the normal running of an
 event loop.
 
-Deep: `2-wit.md § Measurement as reading`.
+Deep: [wit.md](wit.md).
 
 ---
 
@@ -337,7 +336,7 @@ forces can fire. α = probability EM fires per tick. α_s = strong.
 
 ### c = one clock cycle
 
-From archived `4-loop.md`: **the speed of light IS the minimum
+Framework claim: **the speed of light IS the minimum
 cause→effect time.** Planck time t_P = √(ℏG/c⁵) ≈ 5.39 × 10⁻⁴⁴ s
 is one clock period — one substrate tick. Nothing with mass
 reaches c.
@@ -376,9 +375,9 @@ does read-side.
 
 ## The 3+1 asymmetry carries to forces
 
-Per `1-where/axes.md`, the 4 axes are 3 imaginary (χ/μ/φ) + 1 real
+Per `1-folders/axes.md`, the 4 axes are 3 imaginary (χ/μ/φ) + 1 real
 (τ). This asymmetry carries through to forces. **New derivation
-(flagged)**: the archived `4-loop.md` gives axis↔force identity but
+(flagged)**: prior framework work gives axis↔force identity but
 does NOT commit to specific SM gauge groups per axis. The table
 below is a new extension that should be verified:
 
@@ -391,13 +390,12 @@ below is a new extension that should be verified:
   τ           real 1       TEST     SU(2) weak
 ```
 
-**Status**: flagged for `3-which/` — this specific axis→gauge-group
-mapping was not in archived framework files. Three imaginary-axis
-forces (READ, CALL, CYCLE) plausibly "operate inside the wheel" on
-its rotation planes; TEST (weak) plausibly lives at τ scalar. But
-this is interpretation, not derivation. Archived files gave
-axis↔force (READ=strong etc.) without committing to exact gauge
-groups. Pati-Salam in `scope.md` gives a more rigorous reading.
+**Status**: flagged for `3-confs/` — this specific axis→gauge-group
+mapping is new. Three imaginary-axis forces (READ, CALL, CYCLE)
+plausibly "operate inside the wheel" on its rotation planes; TEST
+(weak) plausibly lives at τ scalar. But this is interpretation,
+not derivation. Prior framework work gave axis↔force identity
+(READ=strong etc.) without committing to exact gauge groups. Pati-Salam in `scope.md` gives a more rigorous reading.
 
 **This is why:**
 - Weak is the only force with parity violation (handedness-specific)
@@ -416,7 +414,7 @@ All four coupling constants have substrate-derived forms:
 ```
   constant   value                 substrate form                 deep
   ────────   ─────                 ──────────────                 ────
-  α (EM)     1/137.036             (544/4 + 1 + 3/84)⁻¹           `3-which/alpha.md`
+  α (EM)     1/137.036             (544/4 + 1 + 3/84)⁻¹           `3-confs/alpha.md`
   α_s        ~0.118 at M_Z         running; scale-dependent        open
              (observable)                                         
   α_w        ~0.034 at M_Z         sin²(θ_W) = log(2)/3            open
@@ -503,12 +501,10 @@ read-shareable.
 
 ## Cross-references
 
-- `1-body.md § 6. The 4 forces` — context
-- `1-where/axes.md` — the axis-force pairing
-- `1-where/wheel.md § dark energy` — CYCLE = wheel rotation = dark energy
-- `1-where/scope.md § Pati-Salam` — SU(3) × SU(2)_L × SU(2)_R
-- `1-where/masses.md § Gravity, § 19-mystery` — coupling derivations
-- `3-which/alpha.md` — full α derivation
-- `2-wit.md` — measurement and observation semantics
-- `4-when/wit/mind/wheel/4-loop.md` — archived prior loop treatment
-- `4-when/wit/mind/wheel/5-physics.md` — archived Standard Model
+- [1-folders.md](1-folders.md) — context
+- `1-folders/axes.md` — the axis-force pairing
+- [1-folders/wheel.md](1-folders/wheel.md) — CYCLE = wheel rotation = dark energy
+- [1-folders/scope.md](1-folders/scope.md) — SU(3) × SU(2)_L × SU(2)_R
+- [1-folders/masses.md](1-folders/masses.md) — coupling derivations
+- `3-confs/alpha.md` — full α derivation
+- `wit.md` — measurement and observation semantics

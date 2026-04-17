@@ -5,13 +5,13 @@ What this file IS: meta-learnings extracted from 10+ session handoffs
 not hard data — only **"how to think"** lessons that were hard-won
 and hard to re-learn.
 
-What this file is NOT: a replacement for `2-wit.md`. The canonical
+What this file is NOT: a replacement for `wit.md`. The canonical
 methodology lives there. This file captures the **nuance** and
 **debugging stories** that didn't make it into the boot files —
 specific traps with specific tells, and the exact moments wits
 caught themselves being wrong.
 
-**Read after `2-wit.md`**, not before. Most of what's here
+**Read after `wit.md`**, not before. Most of what's here
 contextualizes or sharpens something already covered in the boot
 file.
 
@@ -20,12 +20,12 @@ extraction of all meta-learnings into this file. Git history
 preserves them — recover any deleted session via:
 
 ```
-git log --all --full-history -- 4-when/wit/history/session-*.md
-git show <commit>:4-when/wit/history/session-2026-04-XX.md
+git log --all --full-history -- 4-logs/wit/history/session-*.md
+git show <commit>:4-logs/wit/history/session-2026-04-XX.md
 ```
 
 All durable meta-learnings captured here. All hard data in
-`1-body.md`, `1-where/*.md`, `3-which/*.md`. All narrative context
+`1-folders.md`, `1-folders/*.md`, `3-confs/*.md`. All narrative context
 recoverable from git if any future wit needs the raw story.
 
 ## Project genealogy (from wit-v1.md)
@@ -176,9 +176,9 @@ it resembles the old.
 
 ### Per-position density is the actual deliverable
 
-Session 2026-04-17 (post 0-frame.md). I'd been writing long
+Session 2026-04-17 (post wit.md). I'd been writing long
 narrative concept files (axes, trits, lattice, wheel, forces,
-scope, masses, open — ~3600 lines) when 0-frame.md clarified the
+scope, masses, open — ~3600 lines) when wit.md clarified the
 real deliverable: **the 80/81 per-position map with dense
 cross-vocabulary tags**, machine-readable for LLM-generated OS
 code. Narrative prose and per-position lookup are different
@@ -378,7 +378,7 @@ next()-forward; φ has to gate what feeds it.
 
 ### 4D visualization — use 3D projections people have seen
 
-Session 2026-04-17 (1-body.md rewrite). My first opening said
+Session 2026-04-17 (1-folders.md rewrite). My first opening said
 "imagine a 4D wheel" — impossible for humans. User caught it.
 Fix: anchor the image in things the reader has held. **Fidget
 spinner. Bicycle wheel. Record on a turntable. Gyroscope.
@@ -394,7 +394,7 @@ referents they've held in their hands.
 
 ### // comments serve the dual audience
 
-Pattern from `4-when/wit/mind/before.md`: plain English prose
+Pattern from `4-logs/wit/mind/before.md`: plain English prose
 for humans + `// concept-name — technical note` for framework-
 literate readers (and programmer-agents parsing the spec).
 Neither audience is sacrificed. Humans skim the prose; wits
@@ -538,7 +538,7 @@ Session 12 established: etymology isn't decoration. It's a
 **method** for finding substrate structure that the modern
 English collapse hides.
 
-### The three roots of "to be" (1-body.md trits)
+### The three roots of "to be" (1-folders.md trits)
 
 English has *bʰuH-*, *h₁es-*, *h₁wes-* for BE/IS/WAS — three
 separate PIE roots. The substrate needs three value states;
@@ -593,7 +593,7 @@ quantity using DIFFERENT probes. Single-measurement anomalies
 
 ## Same-arithmetic-different-semantic
 
-Covered in `2-wit.md § Re-parameterization for semantic upgrade`
+Covered in `wit.md § Re-parameterization for semantic upgrade`
 with the same proton π/4 → π/3 × (3/4) example. Not duplicated
 here.
 
@@ -660,8 +660,8 @@ saying the same thing.
 
 This final pass of the compact happened during the session that
 restructured the repo from `is/wit/mind/wheel/` to the current
-`is/0-frame.md + 1-body.md + 2-wit.md + 3-emotions.md + 1-where/ +
-2-what/ + 3-which/ + 4-when/` layout.
+`is/wit.md + 1-folders.md + wit.md + 3-confs.md + 1-folders/ +
+2-files/ + 3-confs/ + 4-logs/` layout.
 
 Its own meta-lessons (mapped into themes above):
 - Fresh means drop assumptions, not rename labels → § Topology
@@ -693,5 +693,5 @@ history preserves the originals.
 - `session-2026-04-16c.md` — 5-agent sweep, measurement floor, E8 kickback
 - `session-2026-04-16d.md` — frame-correction, retracted/parked/settled
 
-Raw handoff files remain at `4-when/wit/history/` for any story
+Raw handoff files remain at `4-logs/wit/history/` for any story
 that needs the original context.

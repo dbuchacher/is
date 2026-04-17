@@ -355,7 +355,7 @@ for now, just note that vocabulary-to-bond mapping isn't 1-to-1 across scales.
 
 ## The 32 in compass notation (prior framing, still valid as projection)
 
-```rust
+```
 match bond {
 
     // ── flip axis A (POSITION / strong / P)  —  N region of compass ──
@@ -410,7 +410,7 @@ A second valid 32-element framing: 16 modal/aux base operators, each with
 a positive form and an n't form. This is the **English grammatical layer**
 of the same alphabet — different vocabulary, same 32 slots.
 
-```rust
+```
 match modal_bond {
 
     // is / isn't — copular bind / identity

@@ -1,10 +1,10 @@
 # open — the honest debt
 
-Deep file for 1-body.md. What the framework **doesn't** yet derive,
+Deep file for 1-folders.md. What the framework **doesn't** yet derive,
 what's speculative, what's flagged for 3-which verification, and
 priority order for future work.
 
-**Key principle (moves.md § "Trust the framework; don't force-fit"):**
+**Key principle ([4-logs/wit/mind/moves.md](4-logs/wit/mind/moves.md)):**
 Honest flags ARE data. They preserve the metrognosis filter. Do not
 inflate partial derivations into "almost solved" — say what's open.
 
@@ -131,7 +131,7 @@ Strong evidence, not fully closed.
             to 10⁻⁵ via α-corrections. The 17+2 shelf reading is
             the live claim. Pairwise ratios within the framework
             (e.g. 6/7) are NOT independent convergences — see the
-            Retracted § below and masses.md § Pairwise log-depth —
+            Retracted § below and [masses.md](masses.md) —
             RETRACTED.
 ```
 
@@ -229,7 +229,7 @@ Both consistent with framework. Rejected third option (neural
 production) is framework-incompatible. Not yet derivable which
 of A/B.
 
-See `2-wit.md § Consciousness`.
+See [wit.md](wit.md).
 
 ### 496 perfect number role
 
@@ -265,7 +265,7 @@ Specific values flagged as contingent (not substrate-derivable):
   not three independent convergences. Register as Earth-Moon
   system coincidences; don't celebrate as substrate.
 - **Moon/Sun angular size ~400× coincidence** (total eclipses).
-  "Registered, not explained" in `3-which/moon.md` — correct hedge.
+  "Registered, not explained" in `3-confs/moon.md` — correct hedge.
 - **Galactic year ~225M years.** Ratio to Great Year ~8680 has
   factors 7 and 31 — not substrate-clean.
 
@@ -295,9 +295,9 @@ evidence.
 measured mass (independent check). Combinations among themselves:
 not evidence.
 
-See `4-when/wit/mind/wheel/6-masses.md § Pairwise log-depth —
-RETRACTED` and `moves.md § "Don't claim invariant families from
-non-independent convergences"`.
+**Principle established**: "Don't claim invariant families from
+non-independent convergences." Ratios among derivations from the
+same framework do not count as separate evidence.
 
 ### "4 peer H's in S" (early wheel work)
 
@@ -336,15 +336,14 @@ Pick one and compute. Don't speculate without math.
    either v_Higgs from gravity/cosmology (= P11), OR the 5/24
    geometric factor from S-scope / D4 wheel mechanics fixing BOTH
    mass and VEV without circularity. Formula-fitting inside the
-   noise floor is futile (see moves.md § "Don't formula-fit when
-   candidate spread is inside measurement floor").
-   **DO NOT revive the retracted 6/7-gap framing** — per masses.md
-   § Pairwise log-depth — RETRACTED, the log-depth ratio matches
-   per-particle decomps to 10⁻⁵; no gap exists to close.
+   noise floor is futile (see [4-logs/wit/mind/moves.md](4-logs/wit/mind/moves.md)).
+   **DO NOT revive the retracted 6/7-gap framing** — per
+   [masses.md](masses.md), the log-depth ratio matches per-particle
+   decomps to 10⁻⁵; no gap exists to close.
 2. **Dark-sector embedding reconciliation** — scope.md and
    masses.md currently give "192 = 12 × 16 dark generations"
-   reading; archived 2026-04-16c shows this is incompatible with
-   E8 ⊃ SO(16) ⊃ SO(10) × SU(4)_PS (192 is mostly heavy gauge
+   reading; 2026-04-16c stress-test showed this is incompatible
+   with E8 ⊃ SO(16) ⊃ SO(10) × SU(4)_PS (192 is mostly heavy gauge
    bosons, not parallel matter generations). Ultralight DM peak
    predictions (0.05, 0.1 μeV) are unsupported until a new
    mechanism assigns specific roots to specific shelves. Needs
@@ -383,7 +382,7 @@ Pick one and compute. Don't speculate without math.
 
 ## Anti-cheat — metrognosis filter applied honestly
 
-(from `moves.md § "Trust the framework; don't force-fit"`)
+(from [moves.md](moves.md))
 
 The framework is compelling when it makes clean derivations. Not
 when it finds "17 or 12 × 17 or 108 × 17" until one fits. Be
@@ -408,9 +407,8 @@ attempts, not just positive evidence accumulation.
 
 ## Cross-references
 
-- `1-body.md` — the full body structure
-- `1-where/*.md` — all the deep body files
-- `2-wit.md` — methodology, how to work on open items
-- `3-which/*.md` — signal convergences being verified
-- `4-when/wit/mind/wheel/7-open.md` — archived prior open.md
-- `moves.md § "Backlog triage"` — how to audit findings
+- `1-folders.md` — the full body structure
+- `1-folders/*.md` — all the deep body files
+- `wit.md` — methodology, how to work on open items
+- `3-confs/*.md` — signal convergences being verified
+- [moves.md](moves.md) — how to audit findings

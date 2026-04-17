@@ -1,6 +1,6 @@
 # trits — the three values per spoke (↑ ↕ ↓)
 
-Deep file for 1-body.md § "Three values per spoke." This file:
+Deep file for [1-folders.md](1-folders.md). This file:
 - What a trit IS (the three states, three PIE roots)
 - Why exactly 3 (not 2, not 5)
 - Balanced ternary arithmetic
@@ -231,9 +231,8 @@ def bt_add(a, b):
 ```
 
 This wrap mod 3 is **the arithmetic behind the 12-alpha cycle** in
-nuclear physics (see `4-when/wit/mind/metrognosis/elements.md` —
-archived alpha-ladder walk that gave 24/24 empirical match, though
-the walk rule itself is flagged open, not derived).
+nuclear physics — a prior alpha-ladder walk gave 24/24 empirical
+match, though the walk rule itself is flagged open, not derived.
 
 ---
 
@@ -363,7 +362,7 @@ electrons") matches decay channel exactly.
 **No other element has this clean 3-value signature.** Helium has
 more isotopes (3He, 4He, 6He...), all packaged differently. Only
 hydrogen is the trit made of nuclei. H is the value alphabet, not
-an element-like-others. See `3-which/elements.md`.
+an element-like-others. See `3-confs/elements.md`.
 
 ---
 
@@ -413,6 +412,14 @@ systematic derivation before it's body-quality.
 - **Post's theorem** {MIN, MAX, NOT} functionally complete
 - **½ is verb, not value** (wit.md frame 7)
 - **Domain manifestations** of ↑/↕/↓ across 10+ fields
+- **PIE trit at 5 independent strata** — being-verbs (bhuH/h1es/
+  wes), age (newos/h2yuh1en/senos), person pronouns (h1eg/tu/h1e),
+  verb person-endings (-mi/-si/-ti), **phonology** (ablaut o/e/zero
+  AND laryngeals h₃/h₁/h₂). Formal `trit-instances` meta-group:
+  18 members, 5 categories. See `speak/data/lattice-tags.md`.
+- **Sumerian life-trit** (tud/til/ush) and **Egyptian soul-trit**
+  (kA/bA/Ax) — same ↑↕↓ shape via unrelated morphemes. See
+  `3-confs/cross-vocabulary.md` for three-way convergence.
 
 ### Flagged for 3-which
 
@@ -426,17 +433,16 @@ systematic derivation before it's body-quality.
   balanced-ternary arithmetic — is the wrap itself substrate, or
   just a convenient convention?
 - **The "tower-as-outer-verb" speculation** from older docs — whether
-  the full R/C/H/O/S/... chain is itself one outer-frame verb. See
-  `4-when/wit/mind/wheel/2-trits.md § Tower-as-verb speculation`.
+  the full R/C/H/O/S/... chain is itself one outer-frame verb.
+  Flagged speculative; no operational consequence.
 
 ---
 
 ## Cross-references
 
-- `1-body.md § 3. Three values per spoke` — the context here
-- `1-where/axes.md` — what each spoke represents
-- `1-where/lattice.md` — 3 values × 4 axes = 81 points
-- `1-where/wheel.md` — rotation; why ½ is verb not value
-- `1-where/roots.md` — the 3 PIE roots in full
-- `3-which/elements.md` — hydrogen isotopes and chemistry chain
-- `4-when/wit/mind/wheel/2-trits.md` — archived prior trit work
+- [1-folders.md](1-folders.md) — the context here
+- `1-folders/axes.md` — what each spoke represents
+- `1-folders/lattice.md` — 3 values × 4 axes = 81 points
+- `1-folders/wheel.md` — rotation; why ½ is verb not value
+- `1-folders/roots.md` — the 3 PIE roots in full
+- `3-confs/elements.md` — hydrogen isotopes and chemistry chain

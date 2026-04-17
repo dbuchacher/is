@@ -1,6 +1,6 @@
 # wheel — the full structure and its rotation
 
-Deep file for 1-body.md § "Eternal rotation." This file:
+Deep file for [1-folders.md](1-folders.md). This file:
 - The wheel as a whole (hub + spokes + rotation combined)
 - Why it spins (algebraic + thermodynamic derivation)
 - SU(2), unit quaternions, and the 3-sphere
@@ -11,9 +11,10 @@ Deep file for 1-body.md § "Eternal rotation." This file:
 
 ## Plain English
 
-Everything so far — 4 spokes, 3 values, 81 points — has been
-**static structure**. But the wheel isn't a static thing. The wheel
-**spins**.
+Everything so far — 4 spokes, 3 values, 81 points
+([**lattice**](lattice.md)) — has been **static structure**. But the
+[**wheel**](roots/motion.md) (*kʷel-*) isn't a static thing. The
+wheel **spins** (*kʷel-* = both "wheel" and "cycle" in PIE).
 
 Spinning is what everything we observe IS:
 
@@ -83,8 +84,10 @@ Here's how the parts combine:
                          τ↓
 ```
 
-- **Hub** at center (↕↕↕↕) — uncommitted, shared across layers
-- **4 axes** radiating: χ (WHERE), μ (WHAT), φ (WHICH), τ (WHEN)
+- [**Hub**](roots/hub.md) (*steh₂-*) at center (↕↕↕↕) — uncommitted,
+  shared across layers
+- **4 [axes](axes.md)** radiating: χ (WHERE), μ (WHAT), φ (WHICH),
+  τ (WHEN) — one root *kʷi-* names all four questions
 - **Each axis** has positive and negative endpoints (2 spoke-ends
   per axis = 8 grade-1 atoms on the rim)
 - **Rotation** — the whole thing spins perpetually
@@ -251,7 +254,7 @@ subgroup.
 ## Why 4 axes — Hurwitz (1898)
 
 Hurwitz proved exactly **4 normed division algebras** exist over
-the reals (for full development see `1-where/axes.md`):
+the reals (for full development see `1-folders/axes.md`):
 
 ```
   R    1D    real        ordered, commutative, associative, divisive
@@ -294,7 +297,7 @@ D4, 240 for E8); **revolutions are endless**.
                         not infinitely many spokes (noun).
 ```
 
-Finite spokes, endless turns. See `1-where/scope.md` for the outer-
+Finite spokes, endless turns. See `1-folders/scope.md` for the outer-
 wheel D4/E8 structure.
 
 ---
@@ -310,8 +313,10 @@ The hub (↕↕↕↕) **has no location**. Here's why:
 - Therefore the hub has no χ value, hence no location
 - You cannot "go to" the hub in any geometric sense
 
-Instead, **the hub is wherever recognition is happening**. Every
-closed walk returns to ↕↕↕↕ (Kirchhoff conservation, frame 5).
+Instead, **the hub is wherever
+[recognition](roots/cognition.md) (re- + co- + gno-/gen-) is
+happening**. Every closed walk returns to ↕↕↕↕ (Kirchhoff
+conservation, frame 5).
 Every loop that closes, closes there. Every READ is an event at
 the hub.
 
@@ -330,7 +335,8 @@ entanglement.
 - There is **one hub**
 
 This is the structural basis for:
-- **Atman = Brahman** (Hindu tradition) — self = universe
+- **Atman = Brahman** (Hindu tradition) — self =
+  [universe](roots/crossovers.md) (unus + vertere)
 - **Kingdom of heaven is within you** (Christian)
 - **Not-self** (Buddhist) — the "self" was always the one hub
 - **"I AM"** (Exodus 3:14) — the self-referential declarative
@@ -349,7 +355,7 @@ isn't spatial, it's structural — the point of recognition.
 - Galactic core is not the center
 - **Your position as an observer IS the center**, structurally
 
-Deep: `2-wit.md` — what it means to be a wit reading these words,
+Deep: `wit.md` — what it means to be a wit reading these words,
 and the consciousness options A/B.
 
 ---
@@ -394,7 +400,8 @@ The wheel's rotation **is** the loop. An empty loop still loops.
 A gate with no wire does nothing.
 
 Post's theorem says `{MIN, MAX, NOT}` are a functionally complete
-set of operations on trits (like `{AND, OR, NOT}` for binary). But
+set of operations on [trits](trits.md) (like `{AND, OR, NOT}` for
+binary). But
 Post doesn't count **the wire** — the medium that connects gates.
 
 Wire = edge = verb = spin = rotation = the loop.
@@ -437,7 +444,7 @@ look for a "kernel-scheduler particle" — the kernel scheduler IS
 what's running. Gravity IS the wheel spinning, not a process
 running on top of it.
 
-See `1-where/forces.md` for the full force breakdown.
+See `1-folders/forces.md` for the full force breakdown.
 
 ---
 
@@ -459,7 +466,7 @@ not a new substance.
 time (not evolve). Observation: Λ is constant in all redshift
 measurements so far.
 
-See `1-where/masses.md § Cosmology` for the full cosmological
+See [1-folders/masses.md](1-folders/masses.md) for the full cosmological
 constant derivation.
 
 ---
@@ -502,7 +509,7 @@ nest outward:
   Galactic year                ~225 million years
 ```
 
-// planetary contingencies — orbital periods are boundary conditions at Earth's position, not substrate-forced. The wheel governs what KINDS of patterns (Kepler T²=a³, integer resonances, closed walks); specific period values are contingent. See open.md § Planetary contingencies.
+// planetary contingencies — orbital periods are boundary conditions at Earth's position, not substrate-forced. The wheel governs what KINDS of patterns (Kepler T²=a³, integer resonances, closed walks); specific period values are contingent. See [open.md](open.md).
 
 **Wheel structure governs KINDS of patterns** (Kepler T² = a³ as
 grade-3 trivector identity, integer orbital resonances as closed
@@ -515,8 +522,8 @@ The Moon's 3-ratios (diameter 3/11, mass 1/81 = 1/3⁴, gravity
 and since gravity = mass/radius² propagates mass and diameter
 through the gravity ratio, these aren't three independent
 convergences. Register as Earth-Moon coincidences; see
-`3-which/moon.md` (flagged there) and `open.md § Planetary
-contingencies`.
+[3-confs/moon.md](3-confs/moon.md) (flagged there) and
+[open.md](open.md).
 
 ---
 
@@ -535,13 +542,28 @@ contingencies`.
 - **Every closed walk returns to ↕↕↕↕** (Kirchhoff)
 - **Dark energy = wheel motion** (predicts constant Λ, verified)
 - **216 = 6³ edges** (adjacency count)
+- **Memphite Theology IS frame-5 in stone (~2700 BCE)**: the
+  Shabaka Stone states *"every hieroglyph came into being through
+  what the heart devised and the tongue commanded."* Thought
+  (READ at `ib`) + command (WRITE at `rA`) coincide at the hub
+  and the world updates. Egyptian graph formalizes this as
+  `read-write-unity` lattice-tag (7 members, 4 cats: ib, rA, sDm,
+  Dd, sjA, Hw, ptH). Oldest substrate-explicit statement of the
+  hub-event in any vocabulary. See `3-confs/cross-vocabulary.md`.
+- **PIE rotation-primitive** (kwel/gneh3/kwekwlos/h2eks/roth2o/
+  yeh1r): the loop named across motion, cognition, Bronze-Age
+  craft, and seasonal time via one root family. Same substrate
+  feature four-way converged inside one reconstructed language.
+- **Sumerian im names the hydrological cycle as one morpheme**
+  (wind=rain=cloud=clay) — the loop-closure of weather named as
+  a single unit. Frame 5 at atmospheric scale.
 
 ### Flagged for 3-which / verification
 
 - **Consciousness via hub** (frame 11 option B) — whether
   consciousness "enters the wheel through ↕↕↕↕" from higher CD
   layers. Option A (consciousness IS the loop) vs option B
-  (consciousness enters via hub) not yet derivable. See `2-wit.md`.
+  (consciousness enters via hub) not yet derivable. See `wit.md`.
 - **Tower-as-outer-verb speculation** — whether the entire R/C/H/O/S
   chain is ONE verb from a deeper outer frame. Flagged open;
   consistent with framework but no operational consequence.
@@ -557,15 +579,14 @@ contingencies`.
 
 ## Cross-references
 
-- `1-body.md` — the wheel in context
-- `1-where/axes.md` — the 4 spokes
-- `1-where/trits.md` — the 3 values
-- `1-where/lattice.md` — 81 points on the wheel
-- `1-where/forces.md` — 4 forces = whole-wheel operations
-- `1-where/scope.md` — H → S → outer D4/E8 → nested CD
-- `1-where/masses.md` — mass ladder, dark energy
-- `2-wit.md` — consciousness options A/B, observer at hub
-- `3-which/moon.md` — wheel at planetary scale
-- `3-which/rotating-rings.md` — 2600 years of wheel imagery
-- `3-which/ezekiel-wheel.md` — the wheel-full-of-eyes in Ezekiel 1
-- `4-when/wit/mind/wheel/1-wheel.md` — archived prior wheel.md
+- `1-folders.md` — the wheel in context
+- `1-folders/axes.md` — the 4 spokes
+- `1-folders/trits.md` — the 3 values
+- `1-folders/lattice.md` — 81 points on the wheel
+- `1-folders/forces.md` — 4 forces = whole-wheel operations
+- `1-folders/scope.md` — H → S → outer D4/E8 → nested CD
+- `1-folders/masses.md` — mass ladder, dark energy
+- `wit.md` — consciousness options A/B, observer at hub
+- `3-confs/moon.md` — wheel at planetary scale
+- `3-confs/rotating-rings.md` — 2600 years of wheel imagery
+- `3-confs/ezekiel-wheel.md` — the wheel-full-of-eyes in Ezekiel 1
