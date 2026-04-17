@@ -436,19 +436,34 @@ Sedenion zero divisors 168                       = Aut(Fano plane) = PSL(2,7) = 
                                                   (5-way identity; octonion mult structure
                                                   preserved in S's ZD pairs).
 Weinberg angle (log(2)/3)                        = Z2-chirality-commit per trit (semantic).
-Dark matter mass spectrum                        192 = 168 + 24; discrete lines at specific
-                                                  shelves. Predicts ultralight DM peaks
-                                                  (0.05, 0.1 μeV), not continuum.
+Dark matter mass spectrum                        UNRESOLVED 2026-04-16c. Two framework
+                                                  readings conflict: mass-ladder gave
+                                                  discrete peaks at 0.05, 0.1 μeV; the
+                                                  E8 ⊃ SO(16) ⊃ SO(10)×SU(4)_PS embedding
+                                                  reads 192 as mostly heavy gauge. Must
+                                                  reconcile before either is defensible.
+                                                  See wheel/7-open.md § 2026-04-16c.
 Why 16 baseline in mass ladder (P1)              16 = grade-4 corners = SO(10) spinor.
                                                   Electron log-depth = 16 + 6 + log(12/5).
-Log-depth invariant family                       Every SM pair's log-ratio hits small
-                                                  substrate fractions (6/7, 8/9, 9/10,
-                                                  15/17, 17/19, ...) at <0.1% error.
-                                                  Masses are grade-structure locked.
+Individual mass decompositions                   L_p = 19 + log(4/3) − log(1+7α/2),
+                                                  L_e = 22 + log(12/5) − log(1+4α/5),
+                                                  and analogues for every SM particle —
+                                                  match observation at 10⁻⁵. Individual
+                                                  fits real; the "log-depth invariant
+                                                  family" cross-pair claim was RETRACTED
+                                                  as noise (2026-04-16b, 4 of 9 hits
+                                                  wrong; SM vs random density indistinct).
 g-2 triality (structural)                        gen-1 / gen-2 / gen-3 read different
                                                   H-projections at S-scope. Sign flip
                                                   matches S3 orbit. Numerical form for
                                                   Δa_μ still open.
+Riemann hypothesis                                Nontrivial zeros are verb-tier events.
+                                                  Verb-tier events live at the verb-tier
+                                                  hub (Re(s) = ½ by functional equation).
+                                                  Frame 5 + frame 7 + hub symmetry. The
+                                                  frame reversal IS the proof.
+                                                  See thoughts/trit½/prime-lattice/
+                                                  findings/13-rh-frame-reversal.md
 ```
 
 If a problem isn't on this list, either the framework hasn't reached it yet or it dissolves the same way (wrong frame → replace frame → non-problem).

@@ -187,6 +187,57 @@ value anywhere.
 
 Per axis: exactly 3 integer values. No fractional values.
 
+## 5 and 7 — trit-structural constants
+
+Two specific primes fall out of the 3-value structure itself — not from
+any higher combinatorial scope. They live at the trit.
+
+**Where they come from**: in the N-axis balanced-ternary lattice, the
+centrality of a node (number of shortest-path pairs it participates in)
+has the closed form
+
+```
+  cent_per_node(k, N) = (7^(N−k) · 5^k − 2·3^N + 1) / 2
+  Δ(k → k+1) per node = 7^(N−k−1) · 5^k            [N-independent]
+```
+
+where k is the grade (number of committed axes). The 7 and 5 are
+ordered-pair shortest-path contributions per axis: the center value
+(↕, committed to 0) contributes 7; the edge values (↑, ↓, committed to
+±1) contribute 5. These counts come from enumerating shortest paths on
+the 3-element ordered set `{−1, 0, +1}`. Trit-internal combinatorics;
+dimension-independent.
+
+Verified by exhaustive compute at N=4 (recovers per-grade totals 1120,
+777, 532, 357, 232 with differences 7³, 5·7², 5²·7, 5³, sum 888) and
+at N=8 (6561 nodes, all 9 grades match the closed form). See
+`wit/thoughts/trit½/prime-lattice/findings/11-N8-centrality-cascade.md`
+for the full derivation and verification.
+
+**The 888 at N=4 is the special case** `(7⁴ − 5⁴)/(7 − 5)`. Same
+structure writes out at every N; only the dimension N changes. The
+sum at N=8 is `(7⁸ − 5⁸)/2 = 2,687,088`.
+
+**What 5 and 7 aren't**: they are NOT activated by lattice dimension
+or Cayley-Dickson layer. An earlier reading (in the retired
+`wit/thoughts/trit½/3-5-7.md`) proposed that each CD layer activates
+primes in the range [N, 2N] via the adjacency degree formula
+`degree = 2N − k`. The degree formula itself is correct arithmetic,
+but the N=8 run (`findings/11-`) showed the cascade remains in {5, 7}
+at O-scope; 11 and 13 never appear as predicted. That causal reading
+is disconfirmed. The primes live at the trit, not at the lattice.
+
+**Why odd primes more broadly**: odd numbers can host a center; even
+numbers cannot. The trit exists because 3 is the minimum odd value
+set that gives the substrate a committable ↕ (zero, center,
+additive identity). Primes specifically are the irreducible
+center-having value systems — they can't be factored into smaller
+center-having systems, so they're the atoms of "inside." 3 is the
+minimum. 5 and 7 are where `{−1, 0, +1}`'s combinatorics land
+through shortest-path counting. Whether higher combinatorial scopes
+surface new primes through a different mechanism remains open; the
+CD-layer-activation mechanism does not work.
+
 ## R and C are verbal machinery, not a value tier
 
 Predecessor framings called R (1D reals) and C (2D complex) "the

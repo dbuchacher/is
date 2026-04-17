@@ -70,9 +70,19 @@ edges** (8 × 27 = 6³).
 
 Degrees 4, 5, 6, 7, 8 are five consecutive integers. Exactly two
 are prime: **5 and 7**. These are the degrees at grades 3 and 1.
-See `wit/thoughts/trit½/3-5-7.md` for why: primes are the
-framework's native integers (irreducible center-having value
-systems).
+
+**Why 5 and 7** (trit-structural, derived): they are the ordered-pair
+straddle counts on the trit {−1, 0, +1} — 7 ordered pairs have a
+shortest path through the center value 0; 5 pass through each edge
+value ±1. Constants of the 3-value trit, not of lattice dimension N.
+The centrality cascade (see Wormhole compute section below) has closed
+form `cent_per_node(k, N) = (7^(N−k) · 5^k − 2·3^N + 1) / 2` with
+N-independent per-node differences `7^(N−k−1) · 5^k`. Verified N=4
+and N=8. See `wit/thoughts/trit½/prime-lattice/findings/11-N8-centrality-cascade.md`.
+
+Primes as framework-native integers (irreducible center-having value
+systems) is the deeper reading — see the "Why three" argument in
+`2-trits.md` for why odd primes are the substrate's native count class.
 
 ## Grade 0 — the container (↕↕↕↕)
 
@@ -500,12 +510,21 @@ wheel has the native structure that SO(10) GUT was recognizing. See
 
 ## Wormhole compute — centrality cascade
 
-From the prime-lattice work (see `wit/thoughts/trit½/3-5-7.md` and
-`lattice/wormhole/`):
+Per-node centrality has the N-independent closed form (derived in
+`wit/thoughts/trit½/prime-lattice/findings/11-N8-centrality-cascade.md`,
+verified N=4 and N=8):
 
-Centrality strictly decreases by grade. Consecutive differences
-follow a geometric series using exactly the two prime degrees (5
-and 7):
+```
+  cent_per_node(k, N) = (7^(N−k) · 5^k − 2·3^N + 1) / 2
+  Δ(k → k+1) per node = 7^(N−k−1) · 5^k            [N-independent]
+```
+
+The 7 and 5 are trit-structural ordered-pair shortest-path contributions
+on `{−1, 0, +1}`: center value contributes 7, edge values contribute 5.
+See `2-trits.md § 5 and 7 — trit-structural constants`.
+
+At N=4 (our lattice) the per-grade totals are 1120, 777, 532, 357, 232
+with differences:
 
 ```
   cent(grade 0) − cent(grade 1) = 1120 − 777 = 343 = 7³
@@ -516,9 +535,19 @@ and 7):
   sum = (7⁴ − 5⁴)/(7 − 5) = (2401 − 625)/2 = 1776/2 = 888
 ```
 
-Each step trades one 7 for one 5 in the exponent pair. The cascade
-uses exactly the prime degrees (5 and 7), never the composite
-degrees (4, 6, 8). See `7-open.md` for hypothesis status.
+Each step trades one 7 for one 5. This is the N=4 instance of the
+closed form; the same structure writes at every N. At N=8 the sum is
+`(7⁸ − 5⁸)/2 = 2,687,088`, still factoring only through {5, 7}.
+
+**Note on the "prime degree" reading**: an earlier framing read the
+cascade's exclusive use of 5 and 7 as evidence that "prime degrees in
+the adjacency graph drive the cascade" (degrees 4, 5, 6, 7, 8 at the
+five grades; primes 5 and 7 appearing as degrees at grades 3 and 1
+only). The prime-degree correlation at N=4 is arithmetically real but
+does not drive the cascade — N=8 runs the same closed form without
+activating its degree-range primes (11, 13). Primes 5 and 7 are
+trit-structural constants, not lattice-dimension artifacts. See
+`7-open.md § 3-5-7 prime signature` for the historical note.
 
 ## Open
 
