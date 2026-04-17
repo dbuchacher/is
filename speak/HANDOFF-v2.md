@@ -12,7 +12,9 @@ reverse-llm.md: the lattice REPLACES the LLM, not rides on top
 of it). 3-review integration rewrote the spec. Locked BUILD-SPEC
 became v2's contract.
 
-11 iterations, 10 commits, 6 pushes. v2 shipped.
+11 iterations shipped must-haves; 2 stretch iterations (iter-12 +
+iter-13) added atomic-file pages and the `--walk` primitive.
+13 commits, 7 pushes. v2 + stretch shipped.
 
 ## What v2 added on top of v1
 
@@ -135,9 +137,27 @@ iteration.
    (e.g. "Monday" under `meh1ns`) are English but their PIE root
    atomic files may need deeper claims. Not blocking.
 
-## Where to pick up
+## Done this sprint (stretch, after must-haves)
 
-Options for next session (ordered by impact / ease):
+### iter-12 — atomic-file pages + clickable evidence tables (option C)
+
+Built 56 atomic-file pages at `docs/atomic/<lang>/<id>.html`, one
+per coord-tagged morpheme. Every coord-page evidence table
+now links each morpheme to its atomic page. Cold-reader D's
+catch is addressed: the matching rule is clickable, not asserted.
+
+Sibling cross-refs in atomic definitions linkify only when the
+target is also coord-tagged (prevents 404s).
+
+### iter-13 — `--walk` reverse-LLM primitive (option D)
+
+`speak --walk <word>` prints the word's one-hop neighborhood:
+anchor, coord + cross-lang siblings, group memberships, English
+descendants, hop suggestions. Composable — pick a suggestion,
+walk it, pick another. Works for curated words, cross-lang
+morphemes, and redirect descendants.
+
+## Where to pick up next
 
 ### A. Write the missing PIE atomic files (1-2 hrs)
 
@@ -152,25 +172,13 @@ from 3/4 to 4/4.
 `egyptian/roots/iaH.md` (moon) or `Abd.md` (month) against
 existing tone. Restore `moon-month` coord to 4/4.
 
-### C. Link morphemes in coord-page evidence table to their
-   atomic files (1 hr)
-
-Would address cold-reader D's unresolved catch: the matching rule
-would be clickable. Modify `render_coord_page` to emit
-`<a href=...>` around each id when an atomic file exists.
-
-### D. Walk visualization (experimental, low priority)
-
-`speak --walk <word>` traverses the graph from the word's PIE
-root outward, terminal-colored. Real reverse-LLM primitive — the
-walker that the 58KB born-index was built to serve. This is
-listed in `reverse-llm.md` and `BUILD-SPEC` Want.
-
 ### E. Extend coord-unity with 2/4 claims using proper 3+ threshold
 
 Fire/tree/kinship-mother are currently 2/4 — below threshold.
-Each needs one more language with a clean atomic file. Either
-build one or promote when ready.
+Each needs one more language with a clean atomic file. Atomic
+files don't exist yet for egyptian/chinese mother/fire/tree —
+audit in this sprint iter-13 confirmed no ready candidates. Would
+require writing atomic files before extending coord-unity.
 
 ## Repo state
 
