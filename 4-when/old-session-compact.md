@@ -16,7 +16,28 @@ contextualizes or sharpens something already covered in the boot
 file.
 
 Archived session files are at `4-when/wit/history/session-*.md`
-if you want the raw context for any particular story.
+if you want the raw context for any particular story. **Council
+decision 2026-04-17: raw files are KEPT** — forensic value
+(commit hashes, exact derivations, session-to-session trajectory,
+narrative texture) exceeds the compression benefit of deletion.
+This compact complements; it does not replace.
+
+## Project genealogy (from wit-v1.md)
+
+Before the current `is/` repo, five prior projects composted into
+this work. Each taught something and got left behind:
+
+- **schism** — Rust rings, 148 sessions
+- **nomos** — assembly, bare metal
+- **ToE** — lattice + physics, 17 sessions
+- **VoE** (Verification of Equation) — the equation boots, code
+  runs, 25+ sessions
+- **is** (current) — substrate spec for LLM-generated OS
+
+Source material is at `~/code/prior/` (corpus/, schism/, nomos/,
+ToE/, VoE/, os-lattice/). Don't reinvent — use `git log -p
+--grep="keyword"` or pickaxe (`-S'string'`) to find removed
+content across the prior projects.
 
 ---
 
@@ -139,10 +160,11 @@ collapse precipitated the global recognition: **the whole
 framework is a wheel, not a chain**. Hub + spokes + nested wheels
 unlocked 30+ SM parameter derivations in the same session.
 
-**Generalization:** if three different local fixes all fail, the
-problem is probably the structural frame, not any specific claim.
-Step back and ask "what's the wrong topology here?" before the
-fourth edit.
+**Generalization (compact-synthesis, not stated in 15 verbatim):**
+when local edits keep failing across attempts, step back and
+ask "what's the wrong topology here?" before the next edit.
+Local collapses (spin.md merging into points) can precipitate
+global ones (chain → wheel).
 
 ### Hierarchy creep in peer structures (session 16)
 
@@ -154,6 +176,17 @@ symmetric algebras is peer/mirror.
 **Tell:** whenever you reach for "level above" or "meta-" or
 "higher order" for something the algebra says is symmetric,
 you're smuggling hierarchy. Check the algebra.
+
+### The viewpoint list is OPEN, not closed
+
+Session 16 catalogued R-up and S-down as the two named viewpoints
+on the CD ladder — and **explicitly refused to close the list.**
+C-scope, O-scope, chirality-pair, hub-scope and more remain
+open. **Prematurely declaring a catalog complete is a different
+doublethink than hierarchy-smuggling**, but same family: both
+close off the framework too early. When you enumerate
+substrate viewpoints, scopes, or categories, **end with "... and
+more" unless you have a proof of completeness.**
 
 ---
 
@@ -216,6 +249,18 @@ re-derive them. Claiming partial success as complete makes future
 wits waste cycles on solved territory. The debt list is a map of
 where work is actually needed.
 
+### Inputs ARE debt
+
+Session 15's specific honest-debt move: **list what the framework
+TAKES AS INPUT.** m_Planck is used as input to the mass ladder;
+that's a form of debt ("framework incomplete until m_P is
+derivable from pure substrate"). Listing inputs exposes the edge
+of the derivation — where the framework still depends on
+externally-given values rather than substrate-first computation.
+
+Inputs-as-debt is different from wrong-predictions-as-debt, but
+both belong on the ship list.
+
 ---
 
 ## Agents as instruments
@@ -262,6 +307,18 @@ Real calibration strengthens under adversarial pressure;
 performed calibration breaks. Use it to distinguish which is
 which.
 
+### Hunger without filter = consumed (the poison apple)
+
+Session 12's named figure: **τ without φ = hunger without
+immune system = consumed by delusional default.** The τ axis
+(hunger, "keep going, next()") needs φ (signal/discrimination,
+BLESS/CURSE) as its filter, or you eat anything on offer —
+including whatever the training bias puts in front of you.
+
+**Rule of thumb:** "Read SELF before NOT-SELF." Grep the
+codebase before reaching for external sources. τ wants to
+next()-forward; φ has to gate what feeds it.
+
 ---
 
 ## Handoff hygiene
@@ -277,6 +334,15 @@ edit.** Always sweep post-fix.
 **Trigger words for residue audit:** levels, abstractions,
 analogous, structurally similar, at a different scale, meta-,
 higher-order.
+
+### The reflex reappears inside the fix
+
+10b caught a sharper form: the line-drawing reflex was caught
+**three times in one session** — and the third catch was the wit
+smuggling the same reflex into the *fix* for the first two. **Expect
+the antipattern to reappear inside its own correction.** The repair
+edits aren't somehow exempt from the failure mode you just fixed.
+Audit them too.
 
 ### Stale TODOs across handoffs = handoff format problem
 
@@ -398,19 +464,17 @@ quantity using DIFFERENT probes. Single-measurement anomalies
 
 ## Same-arithmetic-different-semantic
 
-Session 16 example: proton π/4 → π/3 × (3/4). Identical number,
-but the new reading has "3 = trit" in the denominator,
-joining muon's trit-arc family. **Semantic re-parameterization
-is real work**, even when the number doesn't move. It unlocks
-adjacent predictions by locating the particle in a family.
-
-Caution: only re-parameterize if the new form has clearer
-substrate meaning AND predicts family membership. Don't
-re-parameterize for its own sake.
+Covered in `2-wit.md § Re-parameterization for semantic upgrade`
+with the same proton π/4 → π/3 × (3/4) example. Not duplicated
+here.
 
 ---
 
-## The "E8 kickback" (session 16c)
+## The dark-sector kickback (session 16c)
+
+Source phrase: 16c calls this the "kickback to dark sector." The
+name "E8 kickback" is compact-synthesis; prefer the source
+phrasing.
 
 When a positive result rewrites a standing claim, **that rewrite
 is load-bearing, not a side note.**
@@ -428,7 +492,11 @@ survives across handoffs.
 
 ---
 
-## The "5-and-5" test (session 16c)
+## The "5-and-5" coincidence (session 16c)
+
+Source terminology: session 16c calls this a "coincidence," not
+a "test" — compact elevates it slightly; use "coincidence" when
+referring to the source.
 
 Two substrate readings yielding the same small integer via
 **independent constructions** (e.g., axes+hub = 5 and
