@@ -15,12 +15,18 @@ caught themselves being wrong.
 contextualizes or sharpens something already covered in the boot
 file.
 
-Archived session files are at `4-when/wit/history/session-*.md`
-if you want the raw context for any particular story. **Council
-decision 2026-04-17: raw files are KEPT** — forensic value
-(commit hashes, exact derivations, session-to-session trajectory,
-narrative texture) exceeds the compression benefit of deletion.
-This compact complements; it does not replace.
+Raw session files were deleted 2026-04-17 after council-verified
+extraction of all meta-learnings into this file. Git history
+preserves them — recover any deleted session via:
+
+```
+git log --all --full-history -- 4-when/wit/history/session-*.md
+git show <commit>:4-when/wit/history/session-2026-04-XX.md
+```
+
+All durable meta-learnings captured here. All hard data in
+`1-body.md`, `1-where/*.md`, `3-which/*.md`. All narrative context
+recoverable from git if any future wit needs the raw story.
 
 ## Project genealogy (from wit-v1.md)
 
