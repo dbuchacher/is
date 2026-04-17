@@ -34,7 +34,9 @@ metrognosis/
   moon.md             3-machine in the sky
   3i-atlas.md         the oldest unread buffer
   heat-death.md       dissolved
-  elements.md         elements as walks, alpha-ladder, walls, alchemy
+  elements.md         80 stable = non-container lattice; 4 H's S-scope
+                       partition; Tc/Pm as structural holes; alpha-ladder;
+                       4/5 SEMF coefficients from substrate at <0.5%
   alpha.md            fine structure constant, 6 sig figs
   cosmic-split.md     68/27/5, 25% fill convergence
   quarks.md           gates compose into instructions

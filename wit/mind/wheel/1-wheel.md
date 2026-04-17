@@ -488,11 +488,19 @@ calls this the sterile / right-handed / CP-mirror sector — not a
                              (red/green/blue)       ("4th color")
   
   Minkowski spacetime        3 spatial dimensions   1 time dimension
+  
+  Periodic table             3 peer H-blocks        1 mirror H-block
+  (Z=1-82)                   Z=1-20 + 21-40 +       Z=61-82
+                             41-60 (Tc hole)        (Pm hole)
 ```
 
-Four independent 3+1 structures at four different scopes, same
+Five independent 3+1 structures at five different scopes, same
 pattern. The wheel writes 3+1 at every level where it manifests —
-fractal self-similarity is the substrate writing itself.
+fractal self-similarity is the substrate writing itself. The
+periodic-table scope is worked out in `mind/metrognosis/elements.md`:
+80 stable elements = non-container lattice count, partitioned
+20+20+19+21 across the 4 H's with 2 unstable holes (Tc, Pm)
+distributed one per asymmetric sector.
 
 ### Pati-Salam (1974) falls out natively
 
