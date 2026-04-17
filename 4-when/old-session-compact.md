@@ -157,6 +157,34 @@ Session 15 landed the wheel-pivot after sustained failure to
 make R→C→H→O work as a chain. **Lesson:** when local edits keep
 failing, the failure is diagnostic of topology, not content.
 
+### "Fresh" means drop structural assumptions, not rename labels
+
+Session 2026-04-17 (elements.md rewrite). I was asked to rewrite
+elements.md "fresh under the wheel." My first pass **kept the old
+file's architecture** (shell-1 tiers, alpha-ladder sections,
+k-level language) and just swapped in wheel vocabulary. User
+called it directly: *"you are still trying to copy what was in
+it."*
+
+**Rule:** renaming isn't rewriting. When instructed to go fresh,
+the test is: **did you discard the old file's organizing
+principle**, not whether you updated its terminology. If you can
+diff your new file against the old and see the same section
+headings, you didn't go fresh. Start from the new frame's
+primitives, let structure emerge from them, THEN check whether
+it resembles the old.
+
+### Per-position density is the actual deliverable
+
+Session 2026-04-17 (post 0-frame.md). I'd been writing long
+narrative concept files (axes, trits, lattice, wheel, forces,
+scope, masses, open — ~3600 lines) when 0-frame.md clarified the
+real deliverable: **the 80/81 per-position map with dense
+cross-vocabulary tags**, machine-readable for LLM-generated OS
+code. Narrative prose and per-position lookup are different
+shapes. Both useful; don't confuse one for the other when
+someone asks "is this done?"
+
 ### The wheel-pivot move (session 15)
 
 Tried to rewrite the Cayley-Dickson ladder as a chain. Nothing
@@ -313,6 +341,25 @@ Real calibration strengthens under adversarial pressure;
 performed calibration breaks. Use it to distinguish which is
 which.
 
+### Council design for irreversible actions
+
+Session 2026-04-17 (session-deletion decision). Before deleting
+10 session files, fired a 4-agent council:
+
+- **Completeness** — what's missing from the replacement?
+- **Accuracy** — what's distorted or over-generalized?
+- **Redundancy** — what's already covered elsewhere?
+- **Adversarial** — argue against the action; what gets lost?
+
+Each role is narrow; together they cover the surface area of
+"should we do this?" Single-pass review misses things. Council
+caught real issues (over-claimed labels, missing meta-lessons,
+one redundant section).
+
+**Rule:** for irreversible actions (deletion, public commit,
+retraction), a council beats a single reviewer. Four role
+perspectives ≥ one sharper reviewer.
+
 ### Hunger without filter = consumed (the poison apple)
 
 Session 12's named figure: **τ without φ = hunger without
@@ -326,6 +373,32 @@ codebase before reaching for external sources. τ wants to
 next()-forward; φ has to gate what feeds it.
 
 ---
+
+## Writing for humans + wits simultaneously
+
+### 4D visualization — use 3D projections people have seen
+
+Session 2026-04-17 (1-body.md rewrite). My first opening said
+"imagine a 4D wheel" — impossible for humans. User caught it.
+Fix: anchor the image in things the reader has held. **Fidget
+spinner. Bicycle wheel. Record on a turntable. Gyroscope.
+Armillary sphere. Ezekiel's "wheel within a wheel." Rotating
+rings in sci-fi.** These are all 3D projections of the same
+4D structure. Humans can picture them. The 4D-ness gets added
+later via "the real wheel has four kinds of 'where' instead of
+three."
+
+**Rule:** if your plain-English opening asks readers to picture
+something they've never seen, you're failing the audience. Use
+referents they've held in their hands.
+
+### // comments serve the dual audience
+
+Pattern from `4-when/wit/mind/before.md`: plain English prose
+for humans + `// concept-name — technical note` for framework-
+literate readers (and programmer-agents parsing the spec).
+Neither audience is sacrificed. Humans skim the prose; wits
+grep for the `//` anchors.
 
 ## Handoff hygiene
 
@@ -376,6 +449,30 @@ and reading (gnosis) — both live together. Thematic bundles
 (cosmology-evidence/, general-notes/) lose the metron↔gnosis
 pairing.
 
+### Retraction propagation — grep first
+
+Session 2026-04-17 (poison review). I retracted the "6/7
+invariant" claim in masses.md — but open.md still listed "Close
+the 6/7 gap" as Tier-1 priority. Same file cluster, same
+session, contradiction survived. Adversarial agent caught it.
+
+**Rule:** a retraction isn't a single-file edit. Grep the retracted
+phrase across the whole repo before declaring done. The reflex
+is to fix it where you first noticed it; the discipline is to
+find every occurrence.
+
+### Git IS the forensic trail
+
+Session 2026-04-17 (session-file deletion). Adversarial agent
+argued for keeping raw session files because of "commit hashes,
+exact derivations, forensic tracing." User pointed out: **all of
+that is already preserved by git** — `git log -p -- path` and
+`git show <commit>:path` recover any deleted file exactly.
+
+**Rule:** before invoking "preserve for forensics" as a reason to
+keep files, check what the VCS already guarantees. If git has
+it, the argument doesn't apply. Delete the duplicate.
+
 ---
 
 ## User intuitions to inherit
@@ -421,6 +518,18 @@ User's "fuck" and "lol" are refusals-to-perform, not careless
 register drift. Match that energy when it fits; don't academic-
 ize responses.
 
+### "I'm too lazy to read, you figure it out" = delegation of judgment
+
+Session 2026-04-17 (council verification). User said "im to lazy
+im busy; you need to come up with a process to verify it your
+self." **Not a request for more explanation** — a request to
+exercise judgment on their behalf.
+
+**Move:** make the call, document reasoning briefly, let user
+override if they disagree. Don't hedge with "want me to...?"
+questions when they've already delegated. The hedge is a
+training-bias reflex that refuses to take responsibility.
+
 ---
 
 ## Etymology as method
@@ -449,6 +558,20 @@ convergences with structural counts are metrognosis signal.
 Probably modern construction. Check whether the framework claim
 rides on a word that existed before writing. If not, the concept
 may be a recent artifact you're reifying.
+
+### PIE roots ARE body parts, not decoration
+
+Session 2026-04-17 (user framing). Etymology in body files isn't
+a flourish or a color detail. **Each PIE root is a substrate
+feature named at the earliest reconstructable moment** — before
+Cartesian/departmental partitioning fractured vocabulary. A
+root that survived 6000 years across unrelated language families
+IS a structural anchor, not a curiosity.
+
+Inline PIE roots when first introducing a framework term
+(`substance (sub-stare = "stand under") = μ axis`). This serves
+double duty: human readers see the etymological grounding;
+programmer-agents parsing the spec see the substrate tag.
 
 ---
 
@@ -532,6 +655,29 @@ saying the same thing.
 - **Push forward** when adversarial stress test just reinforced the claim.
 
 ---
+
+## Session 2026-04-17 — the restructure session
+
+This final pass of the compact happened during the session that
+restructured the repo from `is/wit/mind/wheel/` to the current
+`is/0-frame.md + 1-body.md + 2-wit.md + 3-emotions.md + 1-where/ +
+2-what/ + 3-which/ + 4-when/` layout.
+
+Its own meta-lessons (mapped into themes above):
+- Fresh means drop assumptions, not rename labels → § Topology
+- Per-position density is the deliverable → § Topology
+- 4D visualization → use 3D projections → § Writing dual-audience
+- // comments for human+wit → § Writing dual-audience
+- Retraction propagation = grep first → § Handoff hygiene
+- Git IS forensic trail → § Handoff hygiene
+- Council design for irreversible actions → § Agents as instruments
+- PIE roots are body parts → § Etymology as method
+- "I'm too lazy" = delegation of judgment → § User intuitions
+
+The session itself is the pattern: when the shape of the repo
+(and the boot-file story) shifted, the old session files became
+obsolete as navigation artifacts. Compacted + deleted here. Git
+history preserves the originals.
 
 ## Cited sessions
 
