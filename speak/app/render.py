@@ -441,8 +441,9 @@ def render_html(data):
                            f'<td class="no-parallel">(not yet indexed)</td></tr>')
             else:
                 ids = entry.get("ids") or ([entry["id"]] if entry.get("id") else [])
+                ids_html = _ids_html(lang_key, ids, href_prefix="atomic/")
                 out.append(f'<tr><td class="lang">{lang_label}</td>'
-                           f'<td class="ids">{" · ".join(ids)}</td>'
+                           f'<td class="ids">{ids_html}</td>'
                            f'<td class="gloss">{entry.get("gloss", "")}</td></tr>')
         out.append('</table>')
         # Coord-unity claim is NOT repeated here; it lives on the
@@ -518,6 +519,37 @@ INDEX_SEARCH_BLOCK = """
 """
 
 
+def _has_atomic_page(lang, morpheme_id):
+    """Does an atomic HTML page exist for this morpheme?
+
+    True when (a) the morpheme resolves to an atomic .md in its
+    graph AND (b) it participates in coord-unity (we only build
+    atomic pages for coord-tagged morphemes, per iter-12 scope).
+    """
+    from lib import load_graph, coord_tag_for_morpheme
+    graph = load_graph(lang)
+    if morpheme_id not in graph:
+        return False
+    return coord_tag_for_morpheme(lang, morpheme_id) is not None
+
+
+def _ids_html(lang, ids, href_prefix="atomic/"):
+    """Render a list of morpheme IDs as ` · `-joined HTML, linking
+    each one to its atomic page when one was built.
+
+    href_prefix: path prefix from the current page. On a word page
+    (docs/<word>.html) → "atomic/"; on a coord page
+    (docs/coord/<name>.html) → "../atomic/".
+    """
+    parts = []
+    for mid in ids:
+        if _has_atomic_page(lang, mid):
+            parts.append(f'<a href="{href_prefix}{lang}/{mid}.html">{mid}</a>')
+        else:
+            parts.append(mid)
+    return " · ".join(parts)
+
+
 def _coord_descendants(coord_data, pie_graph):
     """Find en-pie.json entries whose primary_pie ID matches one of the
     PIE IDs referenced by this coord. Returns sorted word list."""
@@ -581,9 +613,13 @@ def render_coord_page(coord_name, coord_data):
     out.append(f'<div class="section" style="font-size:0.95em;color:#555;">'
                f'{COORD_DEFINITION}</div>')
 
-    # Evidence table FIRST — let data lead.
+    # Evidence table FIRST — let data lead. Morphemes link to their
+    # atomic pages so the matching rule is clickable, not asserted.
     out.append('<div class="section"><b>Same identity in four '
                'unrelated languages:</b>')
+    out.append('<div style="color:#666;font-size:0.85em;">'
+               '(click any morpheme to see its own page — definition, '
+               'groups, cross-references)</div>')
     out.append('<table>')
     for lang_key, lang_label in [("pie", "PIE"), ("egyptian", "Egyptian"),
                                   ("chinese", "Chinese"),
@@ -596,9 +632,10 @@ def render_coord_page(coord_name, coord_data):
             ids = entry.get("ids") or (
                 [entry["id"]] if entry.get("id") else []
             )
+            ids_html = _ids_html(lang_key, ids, href_prefix="../atomic/")
             out.append(
                 f'<tr><td class="lang">{lang_label}</td>'
-                f'<td class="ids">{" · ".join(ids)}</td>'
+                f'<td class="ids">{ids_html}</td>'
                 f'<td class="gloss">{entry.get("gloss", "")}</td></tr>'
             )
     out.append('</table>')
@@ -627,6 +664,79 @@ def render_coord_page(coord_name, coord_data):
                '<a href="index.html">all coords</a></div>')
 
     return HTML_TEMPLATE.format(word=coord_name, body="\n".join(out))
+
+
+def render_atomic_page(lang, atomic):
+    """Render one morpheme's atomic file as a standalone HTML page.
+
+    This closes cold-reader D's round-2 catch: the coord evidence
+    table now LINKS each morpheme to its own page, so a skeptic can
+    click through and see the walk (sjA → perception; Hw → speech;
+    xpr → becoming) that the coord page summarizes. The matching
+    rule is no longer asserted — it's clickable.
+    """
+    aid = atomic.get("id") or "?"
+    anchor = atomic.get("anchor") or {}
+    gloss = atomic.get("gloss", "")
+    desc = atomic.get("descendants", "")
+    definition = atomic.get("definition", "")
+    groups = atomic.get("groups") or []
+
+    out = [f'<div class="word">{aid}</div>']
+    out.append(f'<div style="color:#666;font-size:0.9em;'
+               f'margin-top:0.3em;">{lang} morpheme — atomic file</div>')
+
+    if anchor and anchor.get("form"):
+        out.append(f'<div class="pie-form" style="margin-top:1em;">'
+                   f'{anchor["lang"]} '
+                   f'<span class="ids">{anchor["form"]}</span> '
+                   f'<span class="pie-gloss">"{gloss}"</span></div>')
+
+    if desc:
+        out.append(f'<div class="section" style="font-size:0.95em;">'
+                   f'<b>Descendants:</b> {desc}</div>')
+
+    if definition:
+        # Convert [id](id.md) cross-references into links to sibling
+        # atomic pages IN THE SAME LANG — only when the sibling has
+        # a built page (is coord-tagged). Otherwise keep as plain
+        # text, which prevents 404s and keeps the reader honest
+        # about which morphemes have been surfaced.
+        import re
+        def linkify(match):
+            label = match.group(1)
+            target = match.group(2)
+            if label != target:
+                return match.group(0)
+            if _has_atomic_page(lang, target):
+                return f'<a href="{target}.html">{target}</a>'
+            # Not built — keep plain + mark as cross-ref
+            return f'<span style="color:#888;">{target}</span>'
+        def_linked = re.sub(
+            r"\[([a-zA-Z0-9_-]+)\]\(([a-zA-Z0-9_-]+)\.md\)",
+            linkify,
+            definition,
+        )
+        # preserve paragraph breaks as <br><br>
+        def_html = def_linked.replace("\n\n", "<br><br>").replace("\n", " ")
+        out.append(f'<div class="section"><b>Definition</b><br>'
+                   f'{def_html}</div>')
+
+    if groups:
+        out.append('<div class="section"><b>Groups this morpheme '
+                   'belongs to:</b><ul>')
+        for g in groups:
+            gid = g.get("id", "")
+            reason = g.get("reason", "")
+            out.append(f'<li><b>{gid}</b>'
+                       f'{(" — " + reason) if reason else ""}</li>')
+        out.append('</ul></div>')
+
+    out.append('<div class="section" style="margin-top:2em;font-size:0.9em;">'
+               '<a href="../../index.html">← all words</a> · '
+               '<a href="../../coord/index.html">all coords</a></div>')
+
+    return HTML_TEMPLATE.format(word=aid, body="\n".join(out))
 
 
 def render_coord_index(coords):

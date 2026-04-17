@@ -42,6 +42,7 @@ from render import (
     render_html_index,
     render_coord_page,
     render_coord_index,
+    render_atomic_page,
     _coord_clean_hit_count,
 )
 
@@ -221,8 +222,35 @@ def cmd_build(site_dir):
         (site / fname).write_text(html)
         print(f"  {fname}  [→ {rd['parent_hero'] or rd['parent_pie']}]")
 
-    # Coord pages — the argument surface.
+    # Atomic-file pages — one page per coord-tagged morpheme, so
+    # the coord-page evidence table can link through. Answers
+    # cold-reader D's catch: the matching rule is clickable, not
+    # asserted.
     coord_data = load_app_data()["coord-unity"]
+    atomic_dir = site / "atomic"
+    atomic_pages_built = 0
+    for coord_name, c in coord_data.items():
+        for lang in ("pie", "sumerian", "egyptian", "chinese"):
+            entry = c.get(lang)
+            if not entry or not isinstance(entry, dict):
+                continue
+            ids = []
+            if entry.get("id"):
+                ids.append(entry["id"])
+            ids.extend(entry.get("ids") or [])
+            graph = load_graph(lang)
+            out_dir = atomic_dir / lang
+            out_dir.mkdir(parents=True, exist_ok=True)
+            for mid in ids:
+                atomic = graph.get(mid)
+                if atomic is None:
+                    continue
+                html = render_atomic_page(lang, atomic)
+                (out_dir / f"{mid}.html").write_text(html)
+                atomic_pages_built += 1
+    print(f"built {atomic_pages_built} atomic-file pages → {atomic_dir}")
+
+    # Coord pages — the argument surface.
     coord_dir = site / "coord"
     coord_dir.mkdir(parents=True, exist_ok=True)
     print(f"building {len(coord_data)} coord pages → {coord_dir}")
