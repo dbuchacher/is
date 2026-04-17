@@ -58,25 +58,42 @@ speak <word>            — decompose (terminal, colored)
 speak --terse <word>    — compact output for repeat users
 speak --open <word>     — open the PIE atomic file in frogmouth
 speak --list            — list all curated words
+speak --deep <word>     — coord-tag derivation for a word
+speak --tag-stats       — coord-tag coverage across 4 graphs
 speak build <dir>       — render static HTML site
 ```
 
-## What it covers (v1)
+Unknown-word fallback chain: direct → stemmed (knowing → know) →
+descendant redirect (genetic → cognition) → cross-language
+morpheme (xin → coord/know-beget) → nearest-suggest (cogntion
+→ cognition, nation, generation).
 
-31 hero words, all hand-curated against the `speak/` graph's 238
-PIE atomic files. Each word has:
+## What it covers (v2)
 
-- morpheme split (hand-curated, not algorithmic)
-- primary PIE root (verified to exist in the graph)
-- per-word claim sentence (plain English, states the substrate
-  identity the word witnesses)
-- cross-language parallel (where the same coord is named in
-  Sumerian / Egyptian / Chinese graphs)
-- try-next suggestions (3 related curated words)
+Hand-curated:
+- 31 hero English words, each with a claim-carrying entry
+- 16 cross-language coord-unity groups (5 at 4/4, 8 at 3/4, 3 at 2/4)
 
-Words outside the curated set return a list of what IS curated.
+Generated, filter-gated:
+- 42 descendant redirect cards (structured — parent PIE + branch
+  name + link to curated hero — no forged claim prose)
+- Cross-language input for every morpheme in a coord-unity entry
+  (PIE + Sumerian + Egyptian + Chinese)
+- Per-coord argument pages: 16 dense "the coord says X" pages,
+  one per coord-unity entry, each showing all witnesses + all
+  English descendants
+- Lemmatization via simple suffix rules (stdlib, no spaCy)
+- Nearest-suggest via difflib for typos and close misses
+
+Web:
+- Interactive `<datalist>` autocomplete on the index page
+- URL-state: `docs/?w=cognition` → `cognition.html`;
+  `docs/?w=xin` → `coord/know-beget.html`
+- ~90 static HTML pages on GH Pages
+
 This is a density-beats-breadth pitch, not a comprehensive
-etymology dictionary.
+etymology dictionary. Every page carries an argument or a pointer
+to one — no forged prose at scale.
 
 ## The curated 31
 
