@@ -249,5 +249,72 @@
     },
     "egyptian": null,
     "chinese": null
+  },
+  "head-chief": {
+    "claim": "The top of the body and the top of the political body share one morpheme across four unrelated families — leadership IS head-position.",
+    "pie": {
+      "id": "kap-ut",
+      "gloss": "head = top (source of English cap, chief, capital)"
+    },
+    "sumerian": {
+      "id": "sang",
+      "gloss": "head = top = chief"
+    },
+    "egyptian": {
+      "id": "tp",
+      "gloss": "head = first = best"
+    },
+    "chinese": {
+      "id": "shou_head",
+      "gloss": "head = chief = leader"
+    }
+  },
+  "mouth-opening": {
+    "claim": "The body's aperture and the world's openings are one morpheme: speaking, eating, entering, beginning all pass through the same gate.",
+    "pie": null,
+    "sumerian": {
+      "id": "ka",
+      "gloss": "mouth = opening = gate"
+    },
+    "egyptian": {
+      "id": "rA",
+      "gloss": "mouth = opening = doorway"
+    },
+    "chinese": {
+      "id": "kou",
+      "gloss": "mouth = opening = entrance"
+    }
+  },
+  "hear-understand": {
+    "claim": "Hearing and understanding are one verb: the closing of the loop when sound arrives is also the closing of the loop when meaning arrives.",
+    "pie": null,
+    "sumerian": {
+      "id": "geshtug",
+      "gloss": "ear = hearing = understanding"
+    },
+    "egyptian": {
+      "id": "sDm",
+      "gloss": "hear = obey = understand"
+    },
+    "chinese": {
+      "id": "wen",
+      "gloss": "hear = understand = loop-close"
+    }
+  },
+  "heart-mind": {
+    "claim": "The organ in the chest and the seat of thought are one morpheme: READ-side of the hub-event lives in the same body-part across families.",
+    "pie": null,
+    "sumerian": {
+      "id": "sha",
+      "gloss": "heart = interior = mind"
+    },
+    "egyptian": {
+      "id": "ib",
+      "gloss": "heart = mind = will"
+    },
+    "chinese": {
+      "id": "xin",
+      "gloss": "heart = mind = seat of thought"
+    }
   }
 }
