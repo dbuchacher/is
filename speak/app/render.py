@@ -279,6 +279,7 @@ def render_html(data):
         out.append(f'<div class="section claim"><b>The claim:</b> {claim}</div>')
 
     if coord:
+        coord_name = coord.get("name", "")
         out.append('<div class="section"><b>Evidence — unrelated languages name it:</b>')
         out.append('<table>')
         for lang_key, lang_label in [("pie", "PIE"), ("egyptian", "Egyptian"),
@@ -295,6 +296,11 @@ def render_html(data):
         out.append('</table>')
         if coord.get("claim"):
             out.append(f'<p class="synthesis">{coord["claim"]}</p>')
+        if coord_name:
+            out.append(f'<p style="margin-top:0.5em;font-size:0.9em;">'
+                       f'→ <a href="coord/{coord_name}.html">see coord: '
+                       f'{coord_name}</a> — all witnesses for this '
+                       f'substrate identity</p>')
         out.append('</div>')
 
     tn = _try_next(data)
@@ -344,6 +350,145 @@ INDEX_SEARCH_BLOCK = """
 """
 
 
+def _coord_descendants(coord_data, pie_graph):
+    """Find en-pie.json entries whose primary_pie ID matches one of the
+    PIE IDs referenced by this coord. Returns sorted word list."""
+    from lib import load_app_data
+    pie = coord_data.get("pie")
+    if not pie:
+        return []
+    pie_ids = set()
+    if isinstance(pie, dict):
+        if pie.get("id"):
+            pie_ids.add(pie["id"])
+        pie_ids.update(pie.get("ids") or [])
+    if not pie_ids:
+        return []
+    app = load_app_data()
+    return sorted(
+        w for w, e in app["en-pie"].items()
+        if e.get("primary_pie") in pie_ids
+    )
+
+
+def _coord_clean_hit_count(coord_data):
+    """Number of non-null language slots (the 3/4 or 4/4 count)."""
+    return sum(
+        1 for k in ("pie", "sumerian", "egyptian", "chinese")
+        if coord_data.get(k)
+    )
+
+
+def render_coord_page(coord_name, coord_data):
+    """Render a per-coord argument page.
+
+    Coord page = the argument surface. One coord, up to 4 vocabularies
+    naming it, the shared claim once, English descendants listed, link
+    back to index. The scale dimension of v2 lives here.
+    """
+    hit = _coord_clean_hit_count(coord_data)
+    descendants = _coord_descendants(coord_data, None)
+    claim = coord_data.get("claim", "")
+
+    out = [f'<div class="word">{coord_name}</div>']
+    out.append(f'<div style="color:#666;font-size:0.9em;margin-top:0.3em;">'
+               f'cross-vocabulary convergence — {hit} of 4 unrelated '
+               f'languages name this coord</div>')
+
+    if claim:
+        out.append(f'<div class="section claim"><b>The claim:</b> {claim}</div>')
+
+    out.append('<div class="section"><b>Evidence — unrelated languages '
+               'name this coord:</b>')
+    out.append('<table>')
+    for lang_key, lang_label in [("pie", "PIE"), ("egyptian", "Egyptian"),
+                                  ("chinese", "Chinese"),
+                                  ("sumerian", "Sumerian")]:
+        entry = coord_data.get(lang_key)
+        if entry is None:
+            out.append(f'<tr><td class="lang">{lang_label}</td>'
+                       f'<td class="no-parallel">(no atomic file indexed)</td></tr>')
+        else:
+            ids = entry.get("ids") or (
+                [entry["id"]] if entry.get("id") else []
+            )
+            out.append(
+                f'<tr><td class="lang">{lang_label}</td>'
+                f'<td class="ids">{" · ".join(ids)}</td>'
+                f'<td class="gloss">{entry.get("gloss", "")}</td></tr>'
+            )
+    out.append('</table>')
+    out.append('</div>')
+
+    if descendants:
+        links = " ".join(
+            f'<a href="../{w}.html">{w}</a>' for w in descendants
+        )
+        out.append(f'<div class="section"><b>English words at this coord:'
+                   f'</b><div class="try-next" style="margin-top:0.3em">'
+                   f'{links}</div></div>')
+    else:
+        out.append('<div class="section" style="color:#888;font-size:0.9em;">'
+                   'no curated English words live at this coord yet — the '
+                   'substrate claim holds across the non-English vocabularies '
+                   'above.</div>')
+
+    out.append('<div class="section" style="margin-top:2em;font-size:0.9em;">'
+               '<a href="../index.html">← all words and coords</a></div>')
+
+    return HTML_TEMPLATE.format(word=coord_name, body="\n".join(out))
+
+
+def render_coord_index(coords):
+    """Index of all coord pages, grouped by hit count.
+
+    coords: list of (name, coord_data, hit_count) tuples.
+    """
+    fours = [(n, c) for n, c, h in coords if h == 4]
+    threes = [(n, c) for n, c, h in coords if h == 3]
+    twos = [(n, c) for n, c, h in coords if h == 2]
+
+    body = ['<h1>coord pages</h1>',
+            '<p>Each coord is a substrate identity named by multiple '
+            'unrelated vocabularies. The shared claim lives here, once; '
+            'the English descendants are apertures on it.</p>']
+
+    if fours:
+        body.append(f'<h2 style="margin-top:2em;">four-way convergence '
+                    f'({len(fours)})</h2><ul>')
+        for name, c in fours:
+            body.append(f'<li><a href="{name}.html">{name}</a> '
+                        f'<span style="color:#888;">— {c.get("claim", "")[:80]}'
+                        f'{"..." if len(c.get("claim", "")) > 80 else ""}'
+                        f'</span></li>')
+        body.append('</ul>')
+
+    if threes:
+        body.append(f'<h2 style="margin-top:2em;">three-way '
+                    f'({len(threes)})</h2><ul>')
+        for name, c in threes:
+            body.append(f'<li><a href="{name}.html">{name}</a> '
+                        f'<span style="color:#888;">— {c.get("claim", "")[:80]}'
+                        f'{"..." if len(c.get("claim", "")) > 80 else ""}'
+                        f'</span></li>')
+        body.append('</ul>')
+
+    if twos:
+        body.append(f'<h2 style="margin-top:2em;">two-way — below filter '
+                    f'threshold ({len(twos)})</h2>')
+        body.append('<p style="color:#666;font-size:0.9em;">'
+                    'below the 3/4 threshold. Listed here for transparency; '
+                    'not ship-ready as standalone claims.</p><ul>')
+        for name, c in twos:
+            body.append(f'<li><a href="{name}.html">{name}</a></li>')
+        body.append('</ul>')
+
+    body.append('<div class="section" style="margin-top:3em;font-size:0.9em;">'
+                '<a href="../index.html">← all words</a></div>')
+
+    return HTML_TEMPLATE.format(word="coords", body="\n".join(body))
+
+
 def render_html_index():
     words = curated_words()
     options = "\n".join(f'    <option value="{w}">' for w in words)
@@ -362,6 +507,9 @@ def render_html_index():
     for w in words:
         body.append(f'<li><a href="{w}.html">{w}</a></li>')
     body.append('</ul>')
+    body.append('<p style="margin-top:2em;"><a href="coord/index.html">'
+                '→ coord pages</a> — cross-vocabulary convergences '
+                '(the argument surface).</p>')
     return HTML_TEMPLATE.format(word="index", body="\n".join(body))
 
 

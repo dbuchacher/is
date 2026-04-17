@@ -17,13 +17,16 @@ import subprocess
 import sys
 from pathlib import Path
 
-from lib import lookup, curated_words, ROOTS_DIRS, load_graph
+from lib import lookup, curated_words, ROOTS_DIRS, load_graph, load_app_data
 from render import (
     render_terminal,
     render_no_match_terminal,
     render_first_run_terminal,
     render_html,
     render_html_index,
+    render_coord_page,
+    render_coord_index,
+    _coord_clean_hit_count,
 )
 
 
@@ -76,7 +79,7 @@ def cmd_build(site_dir):
     site = Path(site_dir).resolve()
     site.mkdir(parents=True, exist_ok=True)
     words = curated_words()
-    print(f"building {len(words)} pages → {site}")
+    print(f"building {len(words)} word pages → {site}")
     for w in words:
         data = lookup(w)
         if data is None:
@@ -84,6 +87,23 @@ def cmd_build(site_dir):
         html = render_html(data)
         (site / f"{w}.html").write_text(html)
         print(f"  {w}.html")
+
+    # Coord pages — the argument surface.
+    coord_data = load_app_data()["coord-unity"]
+    coord_dir = site / "coord"
+    coord_dir.mkdir(parents=True, exist_ok=True)
+    print(f"building {len(coord_data)} coord pages → {coord_dir}")
+    coord_list = []
+    for name, c in sorted(coord_data.items()):
+        hit = _coord_clean_hit_count(c)
+        coord_list.append((name, c, hit))
+        html = render_coord_page(name, c)
+        (coord_dir / f"{name}.html").write_text(html)
+        print(f"  coord/{name}.html  [{hit}/4]")
+    coord_index_html = render_coord_index(coord_list)
+    (coord_dir / "index.html").write_text(coord_index_html)
+    print(f"  coord/index.html")
+
     index_html = render_html_index()
     (site / "index.html").write_text(index_html)
     print(f"  index.html")
