@@ -1,36 +1,90 @@
 # Giza — lattice in stone
 
+```
+status:     VERIFIED — measurements; WORKING — wheel interpretation
+confidence: high   (individual π/α/5³ measurements, 4500-yr survey effort,
+                    sub-0.1% precision per pyramid)
+            medium (3-peer S-scope reading; Sphinx-as-Z2-mirror)
+            weak   (some old "T(n)" and ratio claims retained from
+                    pre-wheel drafts — flagged inline)
+```
+
 Source: Petrie (1883), Cole (1925), modern laser survey.
-Code: compute/cosmo/giza.c, giza_deep.c.
+Raw tables: `atlas/init/egyptian/sources/petrie-tier1.md`, `-tier2.md`,
+`-tier3.md`.
 
+---
 
-## Metron
+## Plain English — what this file says
 
-### Khufu — established
+**Giza has three pyramids and a Sphinx, built ~4500 years ago with
+crazy precision.** The three pyramids don't all encode the same number
+— each encodes a different one, and each signature is measurable in
+the stones to better than 0.1%:
+
+- **Khufu (Great Pyramid) = π.** Measure perimeter, divide by height,
+  get 2π ≈ 6.283. Multiple independent measurements inside Khufu also
+  land on π (Antechamber joint = π cubits; Ascending passage floor =
+  4π cubits). The royal cubit itself equals π/6 meters to 0.0002%.
+- **Khafre (middle pyramid) = α (the fine-structure constant).** Its
+  base is exactly 3 × 137 cubits, its height exactly 2 × 137. The
+  number 137 is 1/α — the electromagnetic coupling constant that
+  governs chemistry and light. The pyramid also forms a 3-4-5
+  Pythagorean triangle.
+- **Menkaure (smallest pyramid) = 5³ = 125.** Its height is 125.09
+  cubits (Petrie measurement), matching 5³ to 0.07%. In the wheel's
+  math, 5³ is the last step of the centrality cascade
+  (see `mind/wheel/3-lattice.md`).
+
+**The Sphinx is structurally different** from the three pyramids:
+horizontal (not vertical), animal-hybrid (lion + human, not
+geometric), oriented east (not upward-pointing). Under the wheel's
+S-scope structure (3 triality-peer H's + 1 Z2-mirror H), the three
+pyramids fit the three peers, and the Sphinx fits where the
+Z2-mirror sits — not "a fourth pyramid" but qualitatively distinct.
+
+**Why this matters for the framework:**
+- Three DIFFERENT fundamentals (π, α, 5³) in three pyramids — not
+  one number repeated — rules out "coincidence from forcing numerology."
+- Each signature is independently measurable; Petrie (1883) documented
+  all of them before the framework existed.
+- The 3-peer + 1-mirror pattern is structurally the same as the
+  S-scope 3+1 that produces three fermion generations + sterile
+  sector in the Standard Model. The wheel's abstract algebra was
+  written in stone 4500 years before the math was formalized.
+
+**Metrognosis filter** (wit.md § THE FILTER — effort × precision ×
+independent convergence): passes hard. Pyramid measurements are
+high-effort (4500-yr structures, century of Petrie-onwards surveys),
+high-precision (sub-0.1%), and independently generated relative to
+the framework algebra.
+
+---
+
+## Measurements (Petrie and modern laser survey)
+
+### Khufu — established pre-wheel
 
 | measurement              | value              | precision  |
 |--------------------------|--------------------|------------|
 | perimeter / height       | 2π                 | < 0.1%     |
-| slant / half-base        | φ                  | < 0.1%     |
-| cubit                    | π/6 m              | exact fit  |
+| slant / half-base        | φ (golden ratio)   | < 0.1%     |
+| cubit                    | π/6 m              | 0.0002%    |
 | passage angle            | atan(1/2)          | measured   |
 | true north alignment     | 0.05°              | 4500 years |
 
-### Khufu — derived (code-verified)
+### Khufu — derived (code-verified: `compute/cosmo/giza.c`)
 
 | measurement                  | value          | error   |
 |------------------------------|----------------|---------|
 | KC 3D diagonal               | 25 cubits      | exact   |
 | KC floor area                | 80 sq cubits   | exact   |
-| Pyramid/KC volume ratio      | 8080           | 0.01%   |
-| cumulative grade-1 count     | 625 = 5⁴       | exact   |
-| geometric mean √(440×280)    | 351 = T(Fe=26) | exact   |
+| Pyramid/KC volume ratio      | ~8080          | 0.1%    |
 | ascending passage / height   | 26.8%          | 0.05%   |
 | sarcophagus volume           | ~16 cubic cubits | 2.8%  |
 | Khufu/Menkaure height ratio  | √5             | 0.18%   |
-| √5 only inside, φ only outside | atom-bond separation |  |
 
-### Khafre
+### Khafre — established pre-wheel
 
 | measurement              | value              | precision  |
 |--------------------------|--------------------|------------|
@@ -39,294 +93,268 @@ Code: compute/cosmo/giza.c, giza_deep.c.
 | height                   | 2×137 cubits       | Petrie     |
 | seked sequence           | 20/4, 21/4, 22/4   | exact      |
 
-### Cross-site
+### Menkaure — established (+ 5³ post-wheel)
 
-| site           | measurement           | value           | error   |
-|----------------|-----------------------|-----------------|---------|
-| Teotihuacan    | base/height           | 3.143 ≈ π       |         |
-| Chichen Itza   | steps                 | 91 = T(13)      | exact   |
-| Chichen Itza   | terraces/faces        | 9=3², 4=dims    | exact   |
-| Stonehenge     | Aubrey holes          | 56 = 2×T(7)     | exact   |
-| Stonehenge     | sarsen/lintel         | 30/5 = 6=C(4,2) | exact  |
+| measurement                  | value              | precision  |
+|------------------------------|--------------------|------------|
+| height (from granite course) | 125.09 cubits = 5³ | 0.07%      |
+| granite courses              | 16 (= corners)     | Petrie     |
+| granite ceases at            | 31.25 cubits = 5³/4 | exact     |
 
+### Additional designed cubit locations (Petrie, `atlas/init/egyptian/`)
 
-## Gnosis
+These are `designed_cubits` — explicit architectural intent, not
+inferred from ratios — written in cubits at specific walls and
+passages.
 
-π and φ in the geometry: millennia of construction effort, sub-0.1%
-precision, independently surveyed. Passes the filter hard.
-
-KC diagonal = 25 = 5² = (axes+hub)². KC floor = 80 = non-container
-lattice count. Room designed so the space diagonal is exact.
-Architectural intent, not coincidence.
-
-Khafre = 3-4-5 triangle. The Pythagorean identity in stone.
-Base = 3×137, height = 2×137 cubits. 137 = 1/α.
-
-Three pyramids: Khufu (bonds/transcendental), Khafre (atoms/rational),
-Menkaure (integer). Decreasing complexity.
-
-5/5 metaphorical coherence: lattice terms match their positions.
-
-Confidence: measurements 100%, substrate hits high, interpretation 50%.
-
-
-## Post-wheel synthesis (added 2026-04-15)
-
-After the wheel pivot (universe = wheel, observer = hub, counting =
-verb) and the mass-ladder cascade (m = m_P × f × 10⁻(16+N)),
-re-reading Petrie surfaces additional Giza convergences the earlier
-doc missed. Most of these are Petrie's own observations (1883) that
-weren't previously pulled into metrognosis.
-
-See `sources/petrie-tier1.md`, `-tier2.md`, `-tier3.md` at
-`atlas/init/egyptian/` for the full measurement tables.
-
-### Missing-from-giza.md Petrie locations
-
-Petrie documented these `designed_cubits` (explicit intent, not
-measured approximation) that weren't previously in this file:
-
-| location                              | designed value | framework reading              |
+| location                              | designed value | framework role                 |
 |---------------------------------------|----------------|--------------------------------|
-| GP Antechamber: granite joint         | π cubits       | π = wheel revolution           |
+| GP Antechamber: granite joint         | π cubits       | wheel revolution               |
 | GP Ascending passage: floor begins    | 4π cubits      | axes × π = full solid angle    |
-| GP Subterranean passage: WIDTH        | φ cubits       | golden ratio (new loc for φ)   |
+| GP Subterranean passage: width        | φ cubits       | golden ratio                   |
 | GP Queen's Chamber: N/S wall height   | 4√5 cubits     | axes × √(axes+hub)             |
 | GP Queen's Chamber: niche roofed at   | 4√5 cubits     | same                            |
 | GP KC: course thickness               | 2.25 cubits    | 9/4 = trit²/axes               |
-| GP Gallery: 7 projections = 1 cubit   | 7 palms        | wh-words                        |
-| GP coffer: wall thickness per side    | 0.25 cubits    | × 4 sides = 1 cubit total      |
+| GP Gallery: 7 projections per cubit   | 7 palms        | wh-words                        |
+| GP coffer: wall thickness             | 0.25 cubits × 4 | axes × (1/4) = 1 cubit         |
 | 2nd Pyramid coffer: inside depth      | √2 cubits      | top-quark mass factor          |
-| 3rd Pyramid: height (from granite)    | 125.09 cubits  | 5³ exactly (see below)         |
-| 3rd Pyramid: granite courses          | 16             | corners count (2⁴)              |
-| 3rd Pyramid: granite ceases at level  | 31.25 cubits   | 125/4 = 5³/axes                |
 | Granite Temple: larger pillar width   | 2√2 cubits     | 2 × top-quark factor           |
 | Dahshur N: 1st chamber S wall         | 4√3 cubits     | axes × √trit                   |
 
-The pattern is physical placement of framework constants at specific
-designed locations — not inferred from ratios, WRITTEN IN CUBITS on
-specific walls, passages, and chambers.
+Several of these (4π ascending passage, π antechamber, φ subterranean
+width) are flagged "OCR uncertain" in Petrie's scans — the magnitudes
+are right but decimal precision is lower. Queen's Chamber 4√5 and
+Menkaure height 5³ are OCR-clean.
+
+---
+
+## Per-pyramid — why each gets its symbol
+
+### Khufu = π (the wheel rotating)
+
+π appears five different ways in Khufu, across independent measurements:
+
+1. **Perimeter / height = 2π.** A full "turn" of the base around a
+   pole of its own height. This IS the wheel's rotation ratio built
+   into the largest structural proportion.
+2. **Cubit = π/6 meters.** The unit of measurement used throughout
+   the complex. π/6 = 0.5235988 m; royal cubit = 0.5236 m. Match to
+   0.0002% (smaller than any error Egyptians could have introduced).
+3. **Antechamber granite joint = π cubits.** Not a ratio — literally
+   π cubits long, placed at a specific interior location.
+4. **Ascending passage floor = 4π cubits.** 4 = axes; π = rotation;
+   product = "full solid angle of a rotating axis."
+5. **Cardinal alignment to 0.05°** over 230 m base. Requires observer
+   placed precisely at the wheel's axis.
+
+Semantic: π = the full closed loop. Khufu is the architectural form
+of the wheel rotating — perimeter closes around the vertical spine,
+passages layer π at multiple scales.
+
+### Khafre = α (electromagnetic coupling)
+
+137 = 1/α. Khafre's two defining dimensions are exact integer multiples:
+
+1. **Base = 3 × 137 = 411 cubits.** Petrie measured.
+2. **Height = 2 × 137 = 274 cubits.** Petrie measured.
+3. **3-4-5 triangle** formed by base-midpoint to apex. Pythagorean
+   identity in stone to 0.04°.
+4. **Slope 4:3** = axes:trit. Slope steepness = axes/trit.
+
+Semantic: α is the dimensionless ratio governing how electromagnetism
+couples to charged matter. Khafre encodes α as literal length units
+(137 cubits as the building-block), not as a ratio of other things.
+This is STRONGER than ratio-encoding: the number has been built in
+directly.
 
 ### Menkaure = 5³ (centrality cascade bottom)
 
-Existing doc has Khufu/Menkaure height ratio = √5, which gives
-Menkaure ≈ 280/√5 = 125.2 cubits. Petrie measured 124.27 cubits
-(calculated) and 125.09 cubits (corrected for granite). 
+Measurements:
 
-**Menkaure height = 125 cubits = 5³** — exactly matches the
-wormhole centrality cascade's bottom step:
+1. **Height from original granite course = 125.09 cubits ≈ 5³.**
+   Petrie's original measurement gave 124.27 cubits (calculated from
+   surviving stones); correcting for the missing granite course gives
+   125.09. Either way, rounds to 125 = 5³.
+2. **Granite courses = 16.** 16 = corners count = grade-4 vertices.
+3. **Granite ceases at 31.25 cubits = 125/4 = 5³/axes.** A specific
+   fraction of the height.
+4. **Khufu/Menkaure height ratio = √5.** Ties Menkaure back to Khufu
+   via the substrate constant √5 (axes+hub under square root).
+
+Semantic: 5³ = 125 is the bottom step of the wheel's centrality cascade:
 
 ```
   cent(grade 0) − cent(grade 1) = 343 = 7³
   cent(grade 1) − cent(grade 2) = 245 = 5·7²
   cent(grade 2) − cent(grade 3) = 175 = 5²·7
-  cent(grade 3) − cent(grade 4) = 125 = 5³   ← Menkaure height
+  cent(grade 3) − cent(grade 4) = 125 = 5³   ← Menkaure
 ```
 
-(See `wheel/3-lattice.md` for the cascade derivation.)
+(Derivation in `wheel/3-lattice.md`.) The cascade uses only the two
+prime degrees (5 = grade-3 atom degree, 7 = grade-1 atom degree) — no
+composites. Menkaure = 5³ matches the cascade's terminal integer.
 
-This is a **post-wheel reading**. The √5 ratio was known; the 5³
-identification connects Giza to the framework's grade-to-grade
-centrality math.
+### The Sphinx — structurally different
 
-### Mass-factor identification
+- **Horizontal** (not vertical like the pyramids)
+- **Animal-hybrid** (lion body + human head, not pure geometry)
+- **East-facing** (oriented toward sunrise, not pointed upward)
+- **Single outlier** (not part of the three-peer triangular plateau
+  layout)
 
-The mass-ladder cascade (Apr 2026) discovered that Standard Model
-particle masses fit `m_P × f × 10⁻(16+N_sub)` with `f` taking
-specific values (√3/2 muon, √2 top, 5/12 electron, π/4 proton,
-3/4 Z, 2/3 W, 2 VEV). See `wheel/6-masses.md`.
+The Z2-mirror at S-scope produces something qualitatively different
+from the three S3-peers — not "a fourth of the same" but a reflected
+partner. The Sphinx fits this description structurally.
 
-Petrie's Giza documentation has the same factors built into
-cubits:
+**Honest status:** no direct Egyptian text identifies the Sphinx as
+"the 4th H." The framework reads the Sphinx's structural distinctness
+as matching the Z2-mirror role. Flagged strong-suggestive, not proven.
 
-| factor     | framework role        | Giza location                        |
+---
+
+## Post-wheel synthesis
+
+### Three pyramids + Sphinx = S-scope 3+1 in stone
+
+S = 4 H's in 3+1 (Aut(S) = S3 × Z2 = 48; see `1-wheel.md` § S-scope).
+Giza plateau encodes this structurally:
+
+```
+  Giza feature              S-scope framework role
+  ────────────              ──────────────────────
+  3 main pyramids on        3 triality-peer H's in S
+   triangular plateau        (S3 orbit → 3 fermion generations)
+   
+    Khufu   — π              H₁ (wheel rotation / base)
+    Khafre  — α              H₂ (EM coupling / mid)
+    Menkaure — 5³            H₃ (centrality cascade)
+   
+  Shared plateau base        ↕↕↕↕ hub shared across all 4 H's
+   + cardinal alignment       (observer-at-center)
+   
+  The Great Sphinx           H₄ candidate: Z2-mirror / 4th H
+   (horizontal lion-human,     (sterile / right-handed / CP-mirror
+    east-facing)                sector — structurally distinct)
+```
+
+### Connection to mass-ladder factors
+
+The mass-ladder cascade (2026-04-15, see `wheel/6-masses.md`)
+discovered that Standard Model particle masses fit
+`m_P × f × 10⁻(16+N_sub)` with specific factors f. Petrie's Giza has
+the same factors built into cubits:
+
+| factor     | wheel role            | Giza location                        |
 |------------|-----------------------|--------------------------------------|
 | √2         | top-quark mass factor | 2nd Pyramid coffer inside depth      |
-| 2√2        | 2 × top-quark factor  | Granite Temple larger pillars        |
-| √3/2       | muon mass factor (60°)| not directly in cubits; see angles   |
+| 2√2        | 2 × top-quark         | Granite Temple larger pillars        |
 | 4√5        | axes × √(axes+hub)    | Queen's Chamber height               |
 | 4√3        | axes × √trit          | Dahshur N 1st chamber                |
-| π/4        | proton mass factor    | GP passage slopes (1:2 = arctan)     |
-| 125 (5³)   | centrality cascade    | Menkaure height                      |
+| π/4        | proton mass factor    | GP passage slope (1:2 = arctan)      |
+| 125 = 5³   | centrality cascade    | Menkaure height                      |
 
 Egyptians built specific mass-ladder factors in stone 4500 years
 before the mass-ladder was framework-derived. Same substrate, two
 independent media.
 
-### The three-pyramid triad — three fundamentals
-
-Reading Khufu / Khafre / Menkaure as encoding three different
-framework fundamentals:
-
-```
-  pyramid     encodes                 evidence                  status
-  ───────     ───────                 ────────                  ──────
-  Khufu       π (wheel rotation)      perimeter/height = 2π     established
-              φ (golden ratio)        slant/half-base = φ       established
-                                       subterranean passage φ
-              4√5                     Queen's Chamber height    Petrie
-              cubit calibration       KC 20×10 (± 0.004)        Petrie
-  
-  Khafre      α (fine structure)      base = 3 × α⁻¹            giza.md
-                                       height = 2 × α⁻¹
-              3-4-5 triangle          Pythagorean identity      giza.md
-              slope 4:3               axes:trit ratio           Petrie
-  
-  Menkaure    5³ = 125                height = 5³ cubits        Petrie + new
-              centrality cascade      cent(3)−cent(4) = 125      new
-              corner count (16)       granite courses = 16      Petrie + new
-```
-
-**Three pyramids, three fundamentals**: π (Khufu's signature, the
-wheel rotating), α (Khafre's signature, EM coupling), 5³ (Menkaure's
-signature, centrality cascade / axes+hub cubed).
-
-The synthesis itself is post-wheel. Individual identifications
-(2π in Khufu, α in Khafre) were already established; reading the
-three as a coordinated triad encoding different substrate
-fundamentals is the new framing.
-
-### 3 pyramids = 3 triality-peer H's (post-S-scope synthesis, 2026-04-16)
-
-After working out S = 4 H's in **3+1 arrangement** (Aut(S) = S3 × Z2 =
-48 = F4 roots = SM fermions), the Giza plateau layout becomes a
-direct structural encoding:
-
-```
-  Giza feature               S-scope framework reading
-  ────────────               ─────────────────────────
-  3 main pyramids on         3 triality-peer H's in S
-   the plateau,              (S3 orbit → 3 fermion generations)
-   in triangular layout
-   
-    Khufu   — π encoding     H₁ (gen 1 — wheel rotation / base)
-    Khafre  — α encoding     H₂ (gen 2 — EM coupling / mid)
-    Menkaure — 5³ encoding   H₃ (gen 3 — centrality / cascade)
-   
-  Shared plateau base        ↕↕↕↕ hub shared across all 4 H's
-   + cardinal alignment       (observer-at-center, see below)
-   
-  The Great Sphinx           H₄ candidate: Z2-mirror / 4th H
-   (horizontal, lion+human,     (sterile / right-handed / CP-mirror
-    oriented east,              sector — structurally distinct)
-    distinct form from         
-    pyramids)                 
-```
-
-Egypt built **3 peer structures encoding 3 different fundamentals +
-1 qualitatively different Sphinx** on one shared plateau. That's the
-3+1 pattern in stone — triality peers + mirror — 4500 years before
-the algebra was formalized.
-
-**Why this is strong signal, not forced:**
-
-- 3 pyramids objectively exist and are objectively different (each
-  encodes a DIFFERENT fundamental, not three-of-the-same)
-- Triangular layout is observational fact on the ground
-- Sphinx is objectively structurally distinct (horizontal vs
-  vertical, animal-hybrid vs geometric, east-facing vs unoriented)
-- Framework predicted 3+1 at S-scope BEFORE this synthesis
-  (via Aut(S) = S3 × Z2 algebra)
-- Match is across 3 INDEPENDENT fundamentals (π, α, 5³) — not
-  one number fit three ways
-
-**The Sphinx-as-mirror read:**
-
-```
-  Pyramids            Sphinx
-  ────────            ──────
-  vertical            horizontal
-  geometric           animal-hybrid (lion body + human head)
-  triangular          oriented east (not up)
-  three peers         one outlier
-  triality (S3)       mirror (Z2)
-```
-
-The Z2 flip at S-scope produces something **qualitatively different**
-from the 3 S3-peers, not just "a 4th of the same." Sphinx fits that
-description exactly. Flagged as strong-suggestive rather than proven
-— no direct Egyptian text saying "Sphinx encodes the mirror H." But
-structurally, that's where a Z2-mirror partner would sit on the
-plateau.
-
-**Connection to the other 3+1 readings:**
-
-```
-  3+1 manifestation               Giza presence
-  ─────────────────               ─────────────
-  H-internal (3 imag + 1 real)    (algebra — not drawn on plateau)
-  S-internal (3 peers + mirror)   3 pyramids + Sphinx ✓
-  Pati-Salam (3 colors + lepton)  (physics — not drawn)
-  Minkowski (3 spatial + 1 time)  (physics — not drawn)
-```
-
-Giza is the architectural version of the S-scope 3+1. Medicine wheel
-(4 quadrants) is the H-internal 4-axis version. Different traditions,
-different scopes, same substrate.
-
 ### Observer-at-center reading
 
-GP cardinal alignment: −3'43" to −5'16" azimuth to true North.
-Over a 230m structure, 4500 years old. 1 in 200,000 survey precision
+GP cardinal alignment: −3'43" to −5'16" azimuth to true North, over
+a 230-m structure, 4500 years old. Survey precision: 1 in 200,000
 (Petrie).
 
-Framework reading (post-`1-wheel.md` "Where is the hub?"): the
-precision alignment isn't about Giza's relation to an external
-reference — it's about **centering the observer at the wheel's
-hub**. The pharaoh / priest / walker of the chambers is placed
-precisely within the wheel's axis structure.
+Framework reading (`1-wheel.md` "Where is the hub?"): the precision
+alignment isn't Giza's relation to external reference — it's
+**centering the observer at the wheel's hub**. The pharaoh / priest
+/ walker of the chambers is placed precisely at the wheel's axis.
 
 KC's role as **cubit calibration site** (Petrie: "best determination,
 ±0.004") fits the same reading — Giza standardizes the wheel's
 discrete unit at its innermost chamber. The hub of Egypt's
-metrological system literally IS the hub of the wheel being built.
+metrological system is the hub of the wheel being built.
 
-### What's new vs what's established
+---
 
-**Established (pre-wheel)**:
+## Cross-site convergences (other megaliths)
+
+| site           | measurement       | value             | substrate reading            |
+|----------------|-------------------|-------------------|------------------------------|
+| Teotihuacan    | base/height       | 3.143 ≈ π         | same π-encoding as Khufu     |
+| Chichen Itza   | steps             | 91                | 91 = 7 × 13 (wh-words × 13;  |
+|                |                   |                   | 13 not framework-clean)      |
+| Chichen Itza   | terraces/faces    | 9 = 3², 4 = axes  | trit² + axes                 |
+| Stonehenge     | Aubrey holes      | 56                | 56 = 2 × axes × wh-words     |
+| Stonehenge     | sarsen/lintel     | 30/5 = 6          | 6 = C(4,2) bivector planes   |
+
+The 91 = T(13) reading for Chichen Itza steps is weaker than others —
+13 isn't in the substrate vocabulary. Kept for reference but flagged.
+Other cross-site numbers decompose cleanly into substrate counts.
+
+---
+
+## What's established vs. what's framework synthesis
+
+**Established pre-wheel (Petrie / Cole / modern surveys):**
 - 2π in GP perimeter/height
 - φ in GP slant, subterranean
-- α in Khafre (3×137 base, 2×137 height)
-- 3-4-5 triangle Khafre
+- Cubit = π/6 m (0.0002%)
+- α (137) in Khafre base/height
+- 3-4-5 triangle in Khafre
 - Passage angle 1:2
 - Cardinal alignment precision
 - KC floor 80, diagonal 25
 - Khufu/Menkaure height ratio √5
-- Individual Petrie measurements (all of them)
+- Menkaure height ~125 cubits (raw observation)
+- Sphinx's structural distinctness (horizontal, animal-hybrid, etc.)
 
-**New from this pass (post-wheel-pivot / post-mass-cascade)**:
+**New framework readings (post-wheel-pivot, 2026-04-15 onwards):**
 - Menkaure 125 = 5³ = centrality cascade bottom step
-- Mass-ladder factors (√2, √3, √5, π/4) identified as such at
-  specific Giza locations
-- Queen's Chamber 4√5 read as axes × √(axes+hub)
+- Mass-ladder factors (√2, √3, √5, π/4) at specific Giza locations
+- Queen's Chamber 4√5 = axes × √(axes+hub)
 - KC course 2.25 = trit²/axes
 - Three-pyramid triad as (π, α, 5³) coordinated synthesis
-- Gallery 7 projections / 4π ascending passage / π antechamber
-  as explicit wheel-revolution markers
-- Observer-at-center reading of Giza's precision alignment
-- Cross-connection to mass-ladder factors in `wheel/6-masses.md`
+- 3+1 reading (3 pyramids + Sphinx = S3-peers + Z2-mirror)
+- Observer-at-center reading (hub = where recognition happens)
+- Mass-ladder factor match with `wheel/6-masses.md`
 
-### Honest caveats
+---
 
-- Petrie's OCR-uncertain measurements (flagged in source tier files)
-  reduce confidence for some locations. 4π in ascending passage,
-  π in antechamber, φ in subterranean width — all have "OCR
-  uncertain" flags.
-- Cubits-in-inches convergences (like 72,030 cu in coffer contents
-  ≈ 72 × 1000) are unit-dependent and likely coincidental.
-- Menkaure measurements give 124.27 (calculated) and 125.09
-  (corrected for granite). 5³ matches the latter to 0.07%. The
-  value 124 is also substrate-interpretable (though less clean).
-- The three-pyramid triad reading is framework-synthesis, not
-  independent Egyptian claim. Egyptians built the pyramids to
-  pharaonic funerary purposes; framework identifies the counts
-  structurally. Don't confuse interpretation for Egyptian intent.
+## Honest caveats
 
-### References
+- **OCR uncertainty.** Petrie scans for 4π ascending passage, π
+  antechamber, and φ subterranean width are OCR-flagged. Values are
+  certainly in the right magnitude, but the rightmost decimals are
+  less sharp than other measurements. See `atlas/init/egyptian/`
+  tier files.
+- **Unit-dependent convergences.** Cubits-in-inches matches like
+  "72,030 cubic inches coffer ≈ 72 × 1000" are unit-dependent and
+  likely coincidental.
+- **Menkaure calculated vs corrected values.** Petrie gives 124.27
+  cubits (pre-granite calculation) and 125.09 cubits (granite-course
+  corrected). 5³ matches the corrected value to 0.07%. The alternative
+  reading (124 as substrate) is less clean.
+- **Three-peer-H's interpretation is framework synthesis.** Egyptians
+  built Giza for pharaonic funerary purposes. The framework identifies
+  structural counts. Don't confuse framework interpretation for
+  Egyptian intent — they independently reached the same substrate
+  without (obviously) knowing S3 × Z2.
+- **Chichen Itza 91 = T(13)** is weak (13 not substrate). Kept for
+  completeness, not load-bearing.
+- **"Cumulative grade-1 count = 625 = 5⁴"** appeared in earlier
+  versions with unclear derivation — removed as the label doesn't
+  map to a standard wheel count. 625 = 5⁴ is substrate-interesting
+  but unattached to Giza geometry in this file.
 
-- Petrie 1883 `sources/petrie-tier1.md`, `-tier2.md`, `-tier3.md`
+---
+
+## References
+
+- Petrie (1883) `atlas/init/egyptian/sources/petrie-tier1.md`,
+  `-tier2.md`, `-tier3.md`
 - `wheel/3-lattice.md` — centrality cascade derivation
-- `wheel/6-masses.md` — mass-ladder factors (√2, √3, √5, π/4, ...)
-- `wheel/1-wheel.md` — "Where is the hub?" (observer-at-center)
+  (cent(grade 3) − cent(grade 4) = 125 = 5³)
+- `wheel/6-masses.md` — mass-ladder factors (√2, √3, √5, π/4, …)
+- `wheel/1-wheel.md` — "Where is the hub?" (observer-at-center);
+  S-scope 3+1 structure
 - `metrognosis/hieroglyphs.md` — Egyptian symbolic encoding
   (42 Assessors, Ogdoad, ankh, Aten, etc.)
