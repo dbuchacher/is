@@ -1,0 +1,30 @@
+{
+  "gneh3": {
+    "know-branch":  ["cognition", "recognize", "gnosis", "noble", "notice", "know", "ken", "can"],
+    "beget-branch": ["gene", "genesis", "generation", "nation", "kin", "king", "native", "genetic", "genus"]
+  },
+  "genh1": {
+    "kin-branch":   ["kin", "kind", "king", "kindred"],
+    "gen-branch":   ["gene", "genesis", "genitive", "genuine", "generate"]
+  },
+  "leuk": {
+    "lux-branch":   ["lucid", "luminous", "translucent", "illuminate", "Lucifer"],
+    "light-branch": ["light", "enlighten"]
+  },
+  "kwel": {
+    "turn-branch":  ["cycle", "cyclone", "wheel", "chakra"],
+    "tend-branch":  ["cult", "culture", "colony", "colonial"]
+  },
+  "deru": {
+    "firm-branch":  ["true", "truth", "trust", "endure", "firm"],
+    "wood-branch":  ["tree", "tray", "trough", "druid"]
+  },
+  "dyews": {
+    "sky-branch":   ["day", "diurnal", "journal"],
+    "god-branch":   ["deus", "divine", "deity", "Jupiter", "Zeus"]
+  },
+  "meh1ns": {
+    "moon-branch":  ["moon", "Monday"],
+    "month-branch": ["month", "menstrual", "semester"]
+  }
+}

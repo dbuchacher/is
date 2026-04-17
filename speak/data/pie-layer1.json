@@ -1,0 +1,2284 @@
+[
+  {
+    "id": "h1eg",
+    "pie": "*h₁eǵ- / *h₁eǵoh₂",
+    "gloss": "\"I\" (1sg)",
+    "category": "1a-pronouns-and-deictics",
+    "descendants": [
+      "I",
+      "Latin *ego*",
+      "Greek *egō*",
+      "Sanskrit *aham*"
+    ],
+    "layer1_subcategory": "1a"
+  },
+  {
+    "id": "tu",
+    "pie": "*tu-",
+    "gloss": "\"you\" (2sg)",
+    "category": "1a-pronouns-and-deictics",
+    "descendants": [
+      "thou",
+      "Latin *tu*",
+      "German *du*"
+    ],
+    "layer1_subcategory": "1a"
+  },
+  {
+    "id": "we",
+    "pie": "*we- / *n̥s-",
+    "gloss": "\"we / us\"",
+    "category": "1a-pronouns-and-deictics",
+    "descendants": [
+      "we",
+      "us",
+      "Latin *nos*"
+    ],
+    "layer1_subcategory": "1a"
+  },
+  {
+    "id": "yu",
+    "pie": "*yu- / *usmé-",
+    "gloss": "\"you\" (2pl)",
+    "category": "1a-pronouns-and-deictics",
+    "descendants": [
+      "you",
+      "Latin *vos*"
+    ],
+    "layer1_subcategory": "1a"
+  },
+  {
+    "id": "se",
+    "pie": "*sé- / *swe-",
+    "gloss": "reflexive \"self\"",
+    "category": "1a-pronouns-and-deictics",
+    "descendants": [
+      "self",
+      "Latin *se*",
+      "German *sich*"
+    ],
+    "layer1_subcategory": "1a"
+  },
+  {
+    "id": "h1e",
+    "pie": "*h₁e- / *tod",
+    "gloss": "demonstrative \"that / it\"",
+    "category": "1a-pronouns-and-deictics",
+    "descendants": [
+      "it",
+      "that",
+      "the",
+      "Latin *is/id*"
+    ],
+    "layer1_subcategory": "1a"
+  },
+  {
+    "id": "so",
+    "pie": "*so- / *seh₂- / *tod",
+    "gloss": "\"this / that\"",
+    "category": "1a-pronouns-and-deictics",
+    "descendants": [
+      "this",
+      "the",
+      "Greek *ho/hē/to*"
+    ],
+    "layer1_subcategory": "1a"
+  },
+  {
+    "id": "ke",
+    "pie": "*ḱe-",
+    "gloss": "\"this / here\" (proximal)",
+    "category": "1a-pronouns-and-deictics",
+    "descendants": [
+      "he",
+      "here",
+      "hither"
+    ],
+    "layer1_subcategory": "1a"
+  },
+  {
+    "id": "kwi",
+    "pie": "*kʷi- / *kʷo-",
+    "gloss": "interrogative / relative",
+    "category": "1a-pronouns-and-deictics",
+    "descendants": [
+      "who",
+      "what",
+      "where",
+      "when",
+      "why",
+      "which",
+      "how; Latin *qui*; Greek *tis/ti*"
+    ],
+    "layer1_subcategory": "1a"
+  },
+  {
+    "id": "oynos",
+    "pie": "*óynos / *sem-",
+    "gloss": "one",
+    "category": "1b-small-numerals-counting-things-in-front-of-you",
+    "descendants": [
+      "one",
+      "Latin *unus*",
+      "Greek *heis*",
+      "sem- (same",
+      "simple)"
+    ],
+    "layer1_subcategory": "1b"
+  },
+  {
+    "id": "dwoh1",
+    "pie": "*dwóh₁",
+    "gloss": "two",
+    "category": "1b-small-numerals-counting-things-in-front-of-you",
+    "descendants": [
+      "two",
+      "Latin *duo*",
+      "Greek *duo*",
+      "German *zwei*"
+    ],
+    "layer1_subcategory": "1b"
+  },
+  {
+    "id": "treyes",
+    "pie": "*tréyes",
+    "gloss": "three",
+    "category": "1b-small-numerals-counting-things-in-front-of-you",
+    "descendants": [
+      "three",
+      "Latin *tres*",
+      "Greek *treis*"
+    ],
+    "layer1_subcategory": "1b"
+  },
+  {
+    "id": "kwetwores",
+    "pie": "*kʷetwóres",
+    "gloss": "four",
+    "category": "1b-small-numerals-counting-things-in-front-of-you",
+    "descendants": [
+      "four",
+      "Latin *quattuor*",
+      "Greek *tettares*"
+    ],
+    "layer1_subcategory": "1b"
+  },
+  {
+    "id": "penkwe",
+    "pie": "*pénkʷe",
+    "gloss": "five",
+    "category": "1b-small-numerals-counting-things-in-front-of-you",
+    "descendants": [
+      "five",
+      "Latin *quinque*",
+      "Greek *pente*",
+      "finger"
+    ],
+    "layer1_subcategory": "1b"
+  },
+  {
+    "id": "ph2ter",
+    "pie": "*ph₂tḗr",
+    "gloss": "father",
+    "category": "1c-kinship",
+    "descendants": [
+      "father",
+      "Latin *pater*",
+      "Greek *patēr*",
+      "Sanskrit *pitr̥*"
+    ],
+    "layer1_subcategory": "1c"
+  },
+  {
+    "id": "meh2ter",
+    "pie": "*méh₂tēr",
+    "gloss": "mother",
+    "category": "1c-kinship",
+    "descendants": [
+      "mother",
+      "Latin *mater*",
+      "Greek *mētēr*"
+    ],
+    "layer1_subcategory": "1c"
+  },
+  {
+    "id": "bhreh2ter",
+    "pie": "*bʰréh₂tēr",
+    "gloss": "brother",
+    "category": "1c-kinship",
+    "descendants": [
+      "brother",
+      "Latin *frater*",
+      "Greek *phrater*"
+    ],
+    "layer1_subcategory": "1c"
+  },
+  {
+    "id": "swesor",
+    "pie": "*swésor",
+    "gloss": "sister",
+    "category": "1c-kinship",
+    "descendants": [
+      "sister",
+      "Latin *soror*",
+      "Russian *sestra*"
+    ],
+    "layer1_subcategory": "1c"
+  },
+  {
+    "id": "suHnus",
+    "pie": "*suHnús",
+    "gloss": "son",
+    "category": "1c-kinship",
+    "descendants": [
+      "son",
+      "Sanskrit *sūnu*"
+    ],
+    "layer1_subcategory": "1c"
+  },
+  {
+    "id": "dhugh2ter",
+    "pie": "*dʰugh₂tḗr",
+    "gloss": "daughter",
+    "category": "1c-kinship",
+    "descendants": [
+      "daughter",
+      "Greek *thugatēr*",
+      "Sanskrit *duhitr̥*"
+    ],
+    "layer1_subcategory": "1c"
+  },
+  {
+    "id": "nepot",
+    "pie": "*népōt-",
+    "gloss": "nephew / grandson",
+    "category": "1c-kinship",
+    "descendants": [
+      "nephew",
+      "Latin *nepos*"
+    ],
+    "layer1_subcategory": "1c"
+  },
+  {
+    "id": "h2enH",
+    "pie": "*h₂enH-",
+    "gloss": "grandmother / ancestress",
+    "category": "1c-kinship",
+    "descendants": [
+      "Latin *anus*",
+      "Hittite *ḫanna*"
+    ],
+    "layer1_subcategory": "1c"
+  },
+  {
+    "id": "widhewo",
+    "pie": "*widʰéwo-",
+    "gloss": "widow",
+    "category": "1c-kinship",
+    "descendants": [
+      "widow",
+      "Latin *vidua*"
+    ],
+    "layer1_subcategory": "1c"
+  },
+  {
+    "id": "genh1",
+    "pie": "*ǵenh₁-",
+    "gloss": "beget / kin",
+    "category": "1c-kinship",
+    "descendants": [
+      "**kin**",
+      "**king**",
+      "**gene**",
+      "**genus**",
+      "**genesis**",
+      "**Latin *genus***",
+      "Greek *genos*"
+    ],
+    "layer1_subcategory": "1c"
+  },
+  {
+    "id": "h2wiH-ro",
+    "pie": "*h₂wíH-ro-",
+    "gloss": "man / husband",
+    "category": "1c-kinship",
+    "descendants": [
+      "virile",
+      "Latin *vir*",
+      "Sanskrit *vīra*",
+      "werewolf (*wer-* = man)"
+    ],
+    "layer1_subcategory": "1c"
+  },
+  {
+    "id": "gwen",
+    "pie": "*gʷḗn",
+    "gloss": "woman",
+    "category": "1c-kinship",
+    "descendants": [
+      "queen",
+      "Greek *gunē* (gynecology)",
+      "Sanskrit *gnā*"
+    ],
+    "layer1_subcategory": "1c"
+  },
+  {
+    "id": "ker-a",
+    "pie": "*ḱer- / *ḱerh₂-",
+    "gloss": "head / horn",
+    "category": "1d-body-parts",
+    "descendants": [
+      "horn",
+      "hart",
+      "cerebrum",
+      "Latin *cornu*",
+      "Greek *keras",
+      "kara*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "h3okw",
+    "pie": "*h₃ókʷ-",
+    "gloss": "eye",
+    "category": "1d-body-parts",
+    "descendants": [
+      "eye",
+      "Latin *oculus*",
+      "Greek *ops*",
+      "Sanskrit *akṣi*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "h2ews-a",
+    "pie": "*h₂éws-",
+    "gloss": "ear",
+    "category": "1d-body-parts",
+    "descendants": [
+      "ear",
+      "Latin *auris*",
+      "Greek *ous*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "bhruH",
+    "pie": "*bʰruH-",
+    "gloss": "brow",
+    "category": "1d-body-parts",
+    "descendants": [
+      "brow",
+      "Greek *ophrus*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "nas",
+    "pie": "*nas-",
+    "gloss": "nose",
+    "category": "1d-body-parts",
+    "descendants": [
+      "nose",
+      "Latin *nasus*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "dnghuh2",
+    "pie": "*dń̥ǵʰuh₂",
+    "gloss": "tongue",
+    "category": "1d-body-parts",
+    "descendants": [
+      "tongue",
+      "Latin *lingua*",
+      "Sanskrit *jihvā*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "h1dont",
+    "pie": "*h₁dónt-",
+    "gloss": "tooth",
+    "category": "1d-body-parts",
+    "descendants": [
+      "tooth",
+      "Latin *dens/dentis*",
+      "Greek *odōn*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "gombhos",
+    "pie": "*ǵómbʰos",
+    "gloss": "tooth / peg",
+    "category": "1d-body-parts",
+    "descendants": [
+      "comb",
+      "Sanskrit *jambha*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "kred",
+    "pie": "*ḱred- / *ḱerd-",
+    "gloss": "heart",
+    "category": "1d-body-parts",
+    "descendants": [
+      "heart",
+      "cardiac",
+      "Latin *cor/cordis*",
+      "Greek *kardia*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "pods",
+    "pie": "*pṓds / *ped-",
+    "gloss": "foot",
+    "category": "1d-body-parts",
+    "descendants": [
+      "foot",
+      "Latin *pes/pedis*",
+      "Greek *pous*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "genu",
+    "pie": "*ǵénu-",
+    "gloss": "knee",
+    "category": "1d-body-parts",
+    "descendants": [
+      "knee",
+      "Latin *genu*",
+      "Greek *gonu*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "mr-gh",
+    "pie": "*mr̥-gʰ- / *man-",
+    "gloss": "hand",
+    "category": "1d-body-parts",
+    "descendants": [
+      "manual",
+      "Latin *manus*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "ghesr",
+    "pie": "*ǵʰesr-",
+    "gloss": "hand",
+    "category": "1d-body-parts",
+    "descendants": [
+      "Greek *cheir* (chirurgy",
+      "surgery)"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "h1nomn",
+    "pie": "*h₁nomn̥",
+    "gloss": "name",
+    "category": "1d-body-parts",
+    "descendants": [
+      "name",
+      "Latin *nomen*",
+      "Greek *onoma*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "h1esh2r",
+    "pie": "*h₁ésh₂r̥",
+    "gloss": "blood",
+    "category": "1d-body-parts",
+    "descendants": [
+      "Greek *ear*",
+      "Hittite *ešḫar*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "kwrewh2",
+    "pie": "*kʷrewh₂-",
+    "gloss": "blood / raw flesh",
+    "category": "1d-body-parts",
+    "descendants": [
+      "crude",
+      "Latin *cruor*",
+      "Greek *kreas*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "h2ost",
+    "pie": "*h₂ost-",
+    "gloss": "bone",
+    "category": "1d-body-parts",
+    "descendants": [
+      "osseous",
+      "Latin *os/ossis*",
+      "Greek *osteon*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "yekwr",
+    "pie": "*yḗkʷr̥",
+    "gloss": "liver",
+    "category": "1d-body-parts",
+    "descendants": [
+      "hepatic",
+      "Latin *iecur*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "nebh",
+    "pie": "*nēbʰ-",
+    "gloss": "navel / cloud",
+    "category": "1d-body-parts",
+    "descendants": [
+      "navel",
+      "Latin *umbilicus*",
+      "nebula"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "h1iH",
+    "pie": "*h₁iH- / *h₁nter-",
+    "gloss": "entrails / inside",
+    "category": "1d-body-parts",
+    "descendants": [
+      "enter",
+      "intestine",
+      "Latin *intus*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "kap-ut",
+    "pie": "*kap-ut-",
+    "gloss": "head",
+    "category": "1d-body-parts",
+    "descendants": [
+      "head",
+      "captain",
+      "chapter",
+      "Latin *caput*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "krep",
+    "pie": "*krep- / *kʷrep-",
+    "gloss": "body",
+    "category": "1d-body-parts",
+    "descendants": [
+      "corpse",
+      "corporal",
+      "Latin *corpus*"
+    ],
+    "layer1_subcategory": "1d"
+  },
+  {
+    "id": "dyews",
+    "pie": "*dyḗws",
+    "gloss": "bright sky / day-god",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "Zeus",
+      "Latin *deus*",
+      "*dies*",
+      "Tuesday (Tiw)",
+      "Sanskrit *dyaus*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "nokwts",
+    "pie": "*nókʷts",
+    "gloss": "night",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "night",
+      "Latin *nox/noctis*",
+      "Greek *nuks*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "soh2wl",
+    "pie": "*sóh₂wl̥ / *sh₂un-",
+    "gloss": "sun",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "sun",
+      "solar",
+      "Latin *sol*",
+      "Greek *hēlios*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "meh1ns",
+    "pie": "*mḗh₁n̥s",
+    "gloss": "moon / month",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "moon",
+      "month",
+      "Latin *mensis*",
+      "Greek *mēn*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "h2ster",
+    "pie": "*h₂stḗr",
+    "gloss": "star",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "star",
+      "asterisk",
+      "Latin *stella*",
+      "Greek *astēr*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "h2ewsos",
+    "pie": "*h₂éwsōs",
+    "gloss": "dawn",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "east",
+      "Easter",
+      "aurora",
+      "Latin *aurora*",
+      "Greek *ēōs*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "h2ekweh2",
+    "pie": "*h₂ékʷeh₂",
+    "gloss": "water",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "aqua",
+      "Latin *aqua*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "wodr",
+    "pie": "*wódr̥ / *wed-",
+    "gloss": "water",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "water",
+      "vodka",
+      "Greek *hudōr*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "peh2wr",
+    "pie": "*péh₂wr̥",
+    "gloss": "fire",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "fire",
+      "pyre",
+      "Greek *pur*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "h1ngwnis",
+    "pie": "*h₁n̥gʷnis",
+    "gloss": "fire",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "ignite",
+      "Latin *ignis*",
+      "Sanskrit *agni*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "dheghom",
+    "pie": "*dʰéǵʰōm",
+    "gloss": "earth",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "humus",
+      "chthonic",
+      "Latin *humus*",
+      "Greek *chthōn*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "h2weh1",
+    "pie": "*h₂weh₁- / *wento-",
+    "gloss": "wind / blow",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "wind",
+      "vent",
+      "Latin *ventus*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "h2enh1",
+    "pie": "*h₂enh₁-",
+    "gloss": "breathe",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "animate",
+      "Latin *anima*",
+      "Greek *anemos*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "snoygwh",
+    "pie": "*snóygʷʰ-",
+    "gloss": "snow",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "snow",
+      "Latin *nix*",
+      "Greek *nipha*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "h1regwos",
+    "pie": "*h₁regʷos",
+    "gloss": "dark",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "Erebus",
+      "Greek *erebos*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "leuk",
+    "pie": "*leuk-",
+    "gloss": "light / bright",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "light",
+      "lunar",
+      "Latin *lux*",
+      "Greek *leukos*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "bhel",
+    "pie": "*bʰel-",
+    "gloss": "white / shining",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "Latin *flamma*",
+      "Greek *phalios*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "megh",
+    "pie": "*meǵʰ- / *meǵh₂-",
+    "gloss": "cloud / mist",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "fog?",
+      "Greek *omichle*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "ghyem",
+    "pie": "*ǵʰyem-",
+    "gloss": "winter",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "hibernate",
+      "Latin *hiems*",
+      "Greek *kheimōn*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "wesr",
+    "pie": "*wésr̥",
+    "gloss": "spring",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "Latin *ver*",
+      "Greek *ear*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "kerh2",
+    "pie": "*kerh₂-",
+    "gloss": "heat",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "carbon",
+      "Latin *cremare*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "gwher",
+    "pie": "*gʷʰer-",
+    "gloss": "warm / hot",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "warm",
+      "Latin *formus*",
+      "Greek *thermos*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "gel",
+    "pie": "*gel-",
+    "gloss": "cold",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "cold",
+      "gel",
+      "Latin *gelu*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "tep",
+    "pie": "*tep-",
+    "gloss": "warm (mildly)",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "tepid",
+      "Latin *tepere*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "h2ed",
+    "pie": "*h₂ed-/-h₂eyd-",
+    "gloss": "burn / dry",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "edify?",
+      "Greek *aithō*"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "ter-s",
+    "pie": "*ter-s-",
+    "gloss": "dry / thirst",
+    "category": "1e-natural-phenomena-things-you-see-from-anywhere",
+    "descendants": [
+      "thirst",
+      "terrain?",
+      "Latin *torrere* (torrid)"
+    ],
+    "layer1_subcategory": "1e"
+  },
+  {
+    "id": "ghwer",
+    "pie": "*ǵʰwer-",
+    "gloss": "wild beast",
+    "category": "1f-wild-animals",
+    "descendants": [
+      "feral",
+      "Latin *ferus*",
+      "Greek *thēr*"
+    ],
+    "layer1_subcategory": "1f"
+  },
+  {
+    "id": "wlkwos",
+    "pie": "*wĺ̥kʷos",
+    "gloss": "wolf",
+    "category": "1f-wild-animals",
+    "descendants": [
+      "wolf",
+      "Latin *lupus*",
+      "Greek *lukos*"
+    ],
+    "layer1_subcategory": "1f"
+  },
+  {
+    "id": "h2rtkos",
+    "pie": "*h₂ŕ̥tḱos",
+    "gloss": "bear",
+    "category": "1f-wild-animals",
+    "descendants": [
+      "arctic",
+      "Latin *ursus*",
+      "Greek *arktos*"
+    ],
+    "layer1_subcategory": "1f"
+  },
+  {
+    "id": "h1ekwos",
+    "pie": "*h₁éḱwos",
+    "gloss": "horse",
+    "category": "1f-wild-animals",
+    "descendants": [
+      "equine",
+      "Latin *equus*",
+      "Greek *hippos* (wild horse; later domesticated)"
+    ],
+    "layer1_subcategory": "1f"
+  },
+  {
+    "id": "mus",
+    "pie": "*mus-",
+    "gloss": "mouse",
+    "category": "1f-wild-animals",
+    "descendants": [
+      "mouse",
+      "Latin *mus*",
+      "Greek *mus*"
+    ],
+    "layer1_subcategory": "1f"
+  },
+  {
+    "id": "h2ewis",
+    "pie": "*h₂éwis",
+    "gloss": "bird",
+    "category": "1f-wild-animals",
+    "descendants": [
+      "Latin *avis* (aviation)"
+    ],
+    "layer1_subcategory": "1f"
+  },
+  {
+    "id": "peysk",
+    "pie": "*péysḱ-",
+    "gloss": "fish",
+    "category": "1f-wild-animals",
+    "descendants": [
+      "fish",
+      "Latin *piscis*"
+    ],
+    "layer1_subcategory": "1f"
+  },
+  {
+    "id": "h3rneh",
+    "pie": "*h₃r̥neh- / *h₁ór-dh-",
+    "gloss": "eagle / bird of prey",
+    "category": "1f-wild-animals",
+    "descendants": [
+      "eagle",
+      "erne"
+    ],
+    "layer1_subcategory": "1f"
+  },
+  {
+    "id": "serp",
+    "pie": "*serp-",
+    "gloss": "snake / creep",
+    "category": "1f-wild-animals",
+    "descendants": [
+      "serpent",
+      "Latin *serpere*"
+    ],
+    "layer1_subcategory": "1f"
+  },
+  {
+    "id": "h1engwi",
+    "pie": "*h₁engʷi-/*h₂engʷi-",
+    "gloss": "snake / worm",
+    "category": "1f-wild-animals",
+    "descendants": [
+      "anguish (the constriction)",
+      "Latin *anguis*"
+    ],
+    "layer1_subcategory": "1f"
+  },
+  {
+    "id": "deru",
+    "pie": "*deru- / *dóru-",
+    "gloss": "tree / wood / firm",
+    "category": "1g-trees-and-plants-wild",
+    "descendants": [
+      "**tree**",
+      "**true**",
+      "**trust**",
+      "**durable**",
+      "Latin *durus*",
+      "Greek *drus* (oak)"
+    ],
+    "layer1_subcategory": "1g"
+  },
+  {
+    "id": "bheh2gos",
+    "pie": "*bʰeh₂ǵos",
+    "gloss": "beech / oak",
+    "category": "1g-trees-and-plants-wild",
+    "descendants": [
+      "beech",
+      "Latin *fagus*"
+    ],
+    "layer1_subcategory": "1g"
+  },
+  {
+    "id": "leyp",
+    "pie": "*léyp-",
+    "gloss": "leaf",
+    "category": "1g-trees-and-plants-wild",
+    "descendants": [
+      "leaf",
+      "Greek *lepis* (flake)"
+    ],
+    "layer1_subcategory": "1g"
+  },
+  {
+    "id": "pelH",
+    "pie": "*pelH- / *pol(H)-",
+    "gloss": "flat open space",
+    "category": "1g-trees-and-plants-wild",
+    "descendants": [
+      "field",
+      "floor"
+    ],
+    "layer1_subcategory": "1g"
+  },
+  {
+    "id": "h1es",
+    "pie": "*h₁es-",
+    "gloss": "to be",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "**is**",
+      "**am**",
+      "**are**",
+      "**Latin *est/sum***",
+      "Greek *esti*",
+      "Sanskrit *asti*",
+      "German *ist*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "bhuH",
+    "pie": "*bʰuH-",
+    "gloss": "to become / be",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "be",
+      "built",
+      "future",
+      "Latin *fui*",
+      "Greek *phuō*",
+      "Sanskrit *bhavati*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "wes",
+    "pie": "*wes-",
+    "gloss": "to stay / dwell",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "was",
+      "were",
+      "German *war*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "steh2",
+    "pie": "*steh₂-",
+    "gloss": "to stand",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "stand",
+      "state",
+      "stay",
+      "static",
+      "Latin *stare*",
+      "Greek *histēmi*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "sed",
+    "pie": "*sed-",
+    "gloss": "to sit",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "sit",
+      "set",
+      "seat",
+      "Latin *sedere*",
+      "Greek *hedra*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "legh",
+    "pie": "*legʰ-",
+    "gloss": "to lie down",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "lay",
+      "lie",
+      "lair",
+      "Greek *lechos*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "swep",
+    "pie": "*swep-",
+    "gloss": "to sleep",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "sleep?",
+      "Latin *sopor* (soporific)",
+      "Greek *hupnos* (hypnosis)"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "h1ed",
+    "pie": "*h₁ed-",
+    "gloss": "to eat",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "eat",
+      "edible",
+      "Latin *edere*",
+      "Greek *esthiō*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "peh3",
+    "pie": "*peh₃(i)-",
+    "gloss": "to drink",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "potable",
+      "Latin *potus*",
+      "Greek *pinein*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "teh2",
+    "pie": "*(s)teh₂-",
+    "gloss": "to stand",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "see above"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "dheh1",
+    "pie": "*dʰeh₁-",
+    "gloss": "to put / do",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "**do**",
+      "**deed**",
+      "**thesis**",
+      "face",
+      "fact",
+      "Latin *facere*",
+      "Greek *tithēmi*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "deh3",
+    "pie": "*deh₃-",
+    "gloss": "to give",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "data",
+      "donate",
+      "dose",
+      "Latin *dare*",
+      "Greek *didōmi*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "ghabh",
+    "pie": "*ǵʰabʰ-",
+    "gloss": "to seize / have",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "gift",
+      "have?",
+      "Latin *habere*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "bher",
+    "pie": "*bʰer-",
+    "gloss": "to carry / bear",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "**bear**",
+      "**burden**",
+      "**fertile**",
+      "Latin *ferre*",
+      "Greek *pherein*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "telh2",
+    "pie": "*telh₂-",
+    "gloss": "to lift / bear",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "toll",
+      "Latin *tollere*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "ghend",
+    "pie": "*gʰend-",
+    "gloss": "to grab / take",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "get",
+      "forget",
+      "pregnant",
+      "prison",
+      "Latin *prehendere*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "kap",
+    "pie": "*kap-",
+    "gloss": "to grasp",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "have",
+      "captive",
+      "catch",
+      "Latin *capere*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "sel",
+    "pie": "*sel-",
+    "gloss": "to take / grasp",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "select",
+      "consult",
+      "Latin *seligere*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "ker-b",
+    "pie": "*ker-",
+    "gloss": "to grow",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "create",
+      "Ceres",
+      "Latin *crescere*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "h2ewg",
+    "pie": "*h₂ewg-",
+    "gloss": "to grow / increase",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "augment",
+      "eke",
+      "Latin *augere*",
+      "Greek *auxanō*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "h2el",
+    "pie": "*h₂el-",
+    "gloss": "to grow / nourish",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "**old**",
+      "**adult**",
+      "**alumnus**",
+      "Latin *alere*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "gweyh3",
+    "pie": "*gʷeyh₃-",
+    "gloss": "to live (biological)",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "quick",
+      "vital",
+      "vivid",
+      "Latin *vivere*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "mer",
+    "pie": "*mer-",
+    "gloss": "to die",
+    "category": "1h-basic-actions-being-doing-moving",
+    "descendants": [
+      "mortal",
+      "murder",
+      "Latin *mori*",
+      "Russian *smertʹ*"
+    ],
+    "layer1_subcategory": "1h"
+  },
+  {
+    "id": "h1ey",
+    "pie": "*h₁ey-",
+    "gloss": "to go",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "**go**",
+      "**exit**",
+      "transit",
+      "Latin *ire*",
+      "Greek *ienai*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "gwem",
+    "pie": "*gʷem-",
+    "gloss": "to come",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "come",
+      "become",
+      "Latin *venire*",
+      "Greek *bainō*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "sekw",
+    "pie": "*sekʷ-",
+    "gloss": "to follow",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "sequel",
+      "second",
+      "social",
+      "Latin *sequi*",
+      "Greek *hepomai*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "kwel",
+    "pie": "*kʷel-",
+    "gloss": "to turn / move around",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "wheel",
+      "cycle",
+      "colony",
+      "Latin *colere*",
+      "Greek *pelō*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "per",
+    "pie": "*per-",
+    "gloss": "to go through / forward",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "for",
+      "fore",
+      "through",
+      "per-",
+      "Latin *per*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "terh2",
+    "pie": "*terh₂-",
+    "gloss": "to cross over",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "through",
+      "trans-",
+      "Latin *trans*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "bhugh",
+    "pie": "*bʰugʰ-",
+    "gloss": "to flee / bend",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "bow",
+      "bend",
+      "Greek *pheugō*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "seh2g",
+    "pie": "*seh₂g-",
+    "gloss": "to seek / track",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "seek",
+      "sage",
+      "Latin *sagire*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "nes",
+    "pie": "*nes-",
+    "gloss": "to return safely",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "nostalgia",
+      "Greek *nostos*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "wegh",
+    "pie": "*wegʰ-",
+    "gloss": "to convey",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "wagon",
+      "vehicle",
+      "weight",
+      "Latin *vehere*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "steigh",
+    "pie": "*steigʰ-",
+    "gloss": "to walk / climb",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "stile",
+      "stair",
+      "sty",
+      "Greek *steichō*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "ghengh",
+    "pie": "*gʰengʰ-",
+    "gloss": "to go / walk",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "Greek *bainō*? (overlap)"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "key",
+    "pie": "*ḱey-",
+    "gloss": "to lie at rest",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "cemetery (Greek *keimai*)"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "h3er",
+    "pie": "*h₃er-",
+    "gloss": "to move / rise",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "orient",
+      "origin",
+      "Latin *oriri*",
+      "Greek *ornumi*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "bhegw",
+    "pie": "*bʰegʷ-",
+    "gloss": "to flee / run",
+    "category": "1i-motion-verbs",
+    "descendants": [
+      "fugitive",
+      "Latin *fugere*",
+      "Greek *pheugō*"
+    ],
+    "layer1_subcategory": "1i"
+  },
+  {
+    "id": "weid",
+    "pie": "*weid- / *weyd-",
+    "gloss": "to see / know",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "**wit**",
+      "**wise**",
+      "**video**",
+      "**view**",
+      "**idea**",
+      "Latin *videre*",
+      "Greek *oida/idein*",
+      "Sanskrit *veda*"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "gneh3",
+    "pie": "*ǵneh₃- / *ǵenh₃-",
+    "gloss": "to know",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "**know**",
+      "**can**",
+      "**ken**",
+      "**cognize**",
+      "recognize",
+      "gnosis",
+      "Latin *noscere*",
+      "Greek *gignōskō*"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "derk",
+    "pie": "*derḱ-",
+    "gloss": "to see",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "Latin *cernere* (discern)",
+      "Greek *derkomai*"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "h2ews-b",
+    "pie": "*h₂ews-",
+    "gloss": "to listen / hear",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "audio",
+      "Latin *audire*",
+      "Greek *aiō*"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "klew",
+    "pie": "*ḱlew-",
+    "gloss": "to hear",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "listen",
+      "loud",
+      "Latin *cluere*",
+      "Greek *kluō* (Clio)"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "spek",
+    "pie": "*spek̂-",
+    "gloss": "to observe",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "spy",
+      "spectacle",
+      "Latin *specere*",
+      "Greek *skopos* (by metathesis: scope",
+      "skeptic)"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "sent",
+    "pie": "*sent-",
+    "gloss": "to sense / feel",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "sense",
+      "Latin *sentire*"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "h3ed",
+    "pie": "*h₃ed-",
+    "gloss": "to smell",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "odor",
+      "olfactory",
+      "Latin *odor*"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "gusH",
+    "pie": "*ǵ(e)usH-",
+    "gloss": "to taste / choose",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "choose",
+      "gusto",
+      "Latin *gustare*",
+      "Greek *geuō*"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "men",
+    "pie": "*men-",
+    "gloss": "to think",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "**mind**",
+      "**mental**",
+      "**mention**",
+      "**Latin *mens***",
+      "Greek *menos*",
+      "Sanskrit *manas*"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "dheugh",
+    "pie": "*dheugh-",
+    "gloss": "to think / be useful",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "think",
+      "thank",
+      "Latin *tongere*"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "med",
+    "pie": "*med-",
+    "gloss": "to measure / think",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "meditate",
+      "medicine",
+      "mete",
+      "Latin *mederi*",
+      "Greek *medomai*"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "pent",
+    "pie": "*pent-",
+    "gloss": "to try / find path",
+    "category": "1j-perception-verbs-the-original-substrate-contact",
+    "descendants": [
+      "find",
+      "path",
+      "Greek *pontos*"
+    ],
+    "layer1_subcategory": "1j"
+  },
+  {
+    "id": "wekw",
+    "pie": "*wekʷ-",
+    "gloss": "to speak",
+    "category": "1k-speech-verbs",
+    "descendants": [
+      "voice",
+      "vocal",
+      "Latin *vox*",
+      "Greek *epos*"
+    ],
+    "layer1_subcategory": "1k"
+  },
+  {
+    "id": "bheh2",
+    "pie": "*bʰeh₂-",
+    "gloss": "to speak / shine",
+    "category": "1k-speech-verbs",
+    "descendants": [
+      "fable",
+      "fame",
+      "preface",
+      "Latin *fari*",
+      "Greek *phēmi*"
+    ],
+    "layer1_subcategory": "1k"
+  },
+  {
+    "id": "deik",
+    "pie": "*deik̂-",
+    "gloss": "to show / say",
+    "category": "1k-speech-verbs",
+    "descendants": [
+      "teach",
+      "dictate",
+      "index",
+      "Latin *dicere*",
+      "Greek *deiknumi*"
+    ],
+    "layer1_subcategory": "1k"
+  },
+  {
+    "id": "leg",
+    "pie": "*leg-",
+    "gloss": "to collect / speak",
+    "category": "1k-speech-verbs",
+    "descendants": [
+      "**logic**",
+      "**lecture**",
+      "**-logy**",
+      "**Latin *legere***",
+      "Greek *legein*"
+    ],
+    "layer1_subcategory": "1k"
+  },
+  {
+    "id": "kal",
+    "pie": "*kal-",
+    "gloss": "to call / cry",
+    "category": "1k-speech-verbs",
+    "descendants": [
+      "call",
+      "Latin *calare* (calendar)",
+      "Greek *kaleō* (*ekklēsia* = assembly)"
+    ],
+    "layer1_subcategory": "1k"
+  },
+  {
+    "id": "welh1",
+    "pie": "*welh₁-",
+    "gloss": "to wish / will",
+    "category": "1l-mental-emotional",
+    "descendants": [
+      "will",
+      "voluntary",
+      "Latin *velle*",
+      "Greek *elpo*"
+    ],
+    "layer1_subcategory": "1l"
+  },
+  {
+    "id": "leubh",
+    "pie": "*leubʰ-",
+    "gloss": "to love / care",
+    "category": "1l-mental-emotional",
+    "descendants": [
+      "**love**",
+      "**believe**",
+      "**leave**",
+      "(permit)",
+      "Latin *lubet*"
+    ],
+    "layer1_subcategory": "1l"
+  },
+  {
+    "id": "preyH",
+    "pie": "*preyH-",
+    "gloss": "to love / please",
+    "category": "1l-mental-emotional",
+    "descendants": [
+      "**friend**",
+      "**free**",
+      "**Latin *liber***"
+    ],
+    "layer1_subcategory": "1l"
+  },
+  {
+    "id": "bheydh",
+    "pie": "*bʰeydʰ-",
+    "gloss": "to trust / persuade",
+    "category": "1l-mental-emotional",
+    "descendants": [
+      "bide",
+      "**faith**",
+      "**federate**",
+      "Latin *fidere*",
+      "Greek *peithō*"
+    ],
+    "layer1_subcategory": "1l"
+  },
+  {
+    "id": "peh2",
+    "pie": "*peh₂-",
+    "gloss": "to protect / feed",
+    "category": "1l-mental-emotional",
+    "descendants": [
+      "pastor",
+      "food",
+      "pan-",
+      "Latin *pascere*"
+    ],
+    "layer1_subcategory": "1l"
+  },
+  {
+    "id": "trp",
+    "pie": "*tr̥p-",
+    "gloss": "to delight",
+    "category": "1l-mental-emotional",
+    "descendants": [
+      "Latin *trepidus*",
+      "Greek *terpō*"
+    ],
+    "layer1_subcategory": "1l"
+  },
+  {
+    "id": "h1lewdh",
+    "pie": "*h₁lewdʰ-",
+    "gloss": "to grow / free",
+    "category": "1l-mental-emotional",
+    "descendants": [
+      "liberty",
+      "Latin *liber*",
+      "Greek *eleutheros*"
+    ],
+    "layer1_subcategory": "1l"
+  },
+  {
+    "id": "bhey",
+    "pie": "*bʰey- / *bʰeyh₂-",
+    "gloss": "to fear",
+    "category": "1l-mental-emotional",
+    "descendants": [
+      "abide?",
+      "Old Russian *bojatʹ*"
+    ],
+    "layer1_subcategory": "1l"
+  },
+  {
+    "id": "h1ng",
+    "pie": "*h₁n̥ǵ-",
+    "gloss": "narrow / anxious",
+    "category": "1l-mental-emotional",
+    "descendants": [
+      "**anger**",
+      "**anguish**",
+      "**anxiety**",
+      "**Latin *angustus***"
+    ],
+    "layer1_subcategory": "1l"
+  },
+  {
+    "id": "meg",
+    "pie": "*meǵ(h₂)-",
+    "gloss": "great",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "magnum",
+      "mega",
+      "much",
+      "Latin *magnus*",
+      "Greek *megas*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "polh1",
+    "pie": "*polh₁- / *polu-",
+    "gloss": "much / many",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "poly-",
+      "plenty",
+      "Latin *plus*",
+      "Greek *polus*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "newos",
+    "pie": "*newos",
+    "gloss": "new",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "new",
+      "Latin *novus*",
+      "Greek *neos*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "senos",
+    "pie": "*senos",
+    "gloss": "old",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "senior",
+      "Latin *senex*",
+      "Greek *henos*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "h2yuh1en",
+    "pie": "*h₂yuh₁en-",
+    "gloss": "young",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "young",
+      "Latin *iuvenis* (juvenile)"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "solh2",
+    "pie": "*solh₂-",
+    "gloss": "whole",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "solid",
+      "safe",
+      "holistic",
+      "Latin *sollus*",
+      "Greek *holos*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "h2ek",
+    "pie": "*h₂eḱ-",
+    "gloss": "sharp / pointed",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "acid",
+      "acute",
+      "edge",
+      "Latin *acer*",
+      "Greek *akros*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "h2erg",
+    "pie": "*h₂erǵ-",
+    "gloss": "shining white / silver",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "argent",
+      "Latin *argentum*",
+      "Greek *arguros*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "h1rewdh",
+    "pie": "*h₁rewdʰ-",
+    "gloss": "red",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "**red**",
+      "**rust**",
+      "**rouge**",
+      "**Latin *rufus***",
+      "Greek *eruthros*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "ghelh3",
+    "pie": "*ǵʰelh₃-",
+    "gloss": "yellow / green / gold",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "yellow",
+      "gold",
+      "gall",
+      "Latin *helvus*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "peyH",
+    "pie": "*peyH-",
+    "gloss": "fat / thick",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "Greek *piōn* (via)"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "dek",
+    "pie": "*deḱ-",
+    "gloss": "proper / fitting",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "decent",
+      "Latin *decere*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "bheregh",
+    "pie": "*bʰereǵ̑ʰ-",
+    "gloss": "high",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "burg",
+      "burrow",
+      "Latin *fortis*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "h1lengwh",
+    "pie": "*h₁lengʷʰ-",
+    "gloss": "light (weight)",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "light",
+      "lung",
+      "Latin *levis*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "teuh2",
+    "pie": "*teuh₂-",
+    "gloss": "to swell",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "thumb",
+      "tumor",
+      "Latin *tumere*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "sweh2d-u",
+    "pie": "*sweh₂d-u-",
+    "gloss": "sweet",
+    "category": "1m-basic-qualities",
+    "descendants": [
+      "**sweet**",
+      "**persuade**",
+      "Latin *suavis*",
+      "Greek *hēdus*"
+    ],
+    "layer1_subcategory": "1m"
+  },
+  {
+    "id": "h2epo",
+    "pie": "*h₂epó- / *apó",
+    "gloss": "away from / off",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "**off**",
+      "**of**",
+      "**apo-**",
+      "ab-",
+      "Latin *ab*"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "h1en",
+    "pie": "*h₁én-",
+    "gloss": "in",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "**in**",
+      "**en-**",
+      "em-",
+      "Latin *in*"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "h2en",
+    "pie": "*h₂en-",
+    "gloss": "up / on",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "**on**",
+      "**an-**",
+      "Greek *ana-*"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "h1eghs",
+    "pie": "*h₁eǵʰs- / *h₁eḱs-",
+    "gloss": "out",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "**out**",
+      "**ex-**",
+      "Latin *ex*"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "uper",
+    "pie": "*upér-",
+    "gloss": "above / over",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "**over**",
+      "**hyper-**",
+      "super-",
+      "Latin *super*"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "upo",
+    "pie": "*upo-",
+    "gloss": "under / below",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "**up**",
+      "**hypo-**",
+      "sub-",
+      "Latin *sub*"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "h2mbhi",
+    "pie": "*h₂m̥bʰi-",
+    "gloss": "around / on both sides",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "ambi-",
+      "amphi-",
+      "Latin *ambo*"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "enteros",
+    "pie": "*énteros",
+    "gloss": "between / within",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "inter-",
+      "enter",
+      "internal",
+      "Latin *inter*"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "medhyos",
+    "pie": "*médʰyos",
+    "gloss": "middle",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "**middle**",
+      "**mid**",
+      "**medium**",
+      "Latin *medius*",
+      "Greek *messos*"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "h2per",
+    "pie": "*h₂per-",
+    "gloss": "before / through / beyond",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "para-",
+      "per-",
+      "for-",
+      "fore-",
+      "pre-",
+      "Latin *prae*"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "h1epi",
+    "pie": "*h₁epi / *opi",
+    "gloss": "at / near",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "epi-",
+      "ob-",
+      "Latin *ob*"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "sem",
+    "pie": "*sem-",
+    "gloss": "one / with",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "same",
+      "similar",
+      "sym-",
+      "syn-",
+      "Latin *simul*",
+      "Greek *homo-*"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "ni",
+    "pie": "*ni-",
+    "gloss": "down",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "nether"
+    ],
+    "layer1_subcategory": "1n"
+  },
+  {
+    "id": "dwis",
+    "pie": "*dwis-",
+    "gloss": "in two / apart",
+    "category": "1n-spatial-prepositions-directions-in-the-world",
+    "descendants": [
+      "bi-",
+      "di-",
+      "Latin *bis*"
+    ],
+    "layer1_subcategory": "1n"
+  }
+]

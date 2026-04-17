@@ -1,0 +1,86 @@
+{
+  "know-beget": {
+    "claim": "Three independent vocabularies name perception-closes-into-production as one operation.",
+    "pie": {"id": "gneh3", "gloss": "know = beget"},
+    "egyptian": {"ids": ["sjA", "Hw", "xpr"], "gloss": "perceive · speak · become"},
+    "chinese": {"ids": ["xin", "wen", "zuo"], "gloss": "heart · hear · act"},
+    "sumerian": null
+  },
+  "kin-line-and-rule": {
+    "claim": "Beget-line and political legitimacy fuse into ruler-morphemes across languages.",
+    "pie": {"id": "genh1", "gloss": "beget / kin / king-line"},
+    "sumerian": {"ids": ["lugal"], "gloss": "big-man = king"},
+    "egyptian": {"ids": ["nsw"], "gloss": "sedge-king"},
+    "chinese": null
+  },
+  "year-cycle": {
+    "claim": "Four independent languages name the year as a returning-cycle morpheme.",
+    "pie": {"id": "yeh1r", "gloss": "year = returning cycle"},
+    "sumerian": {"ids": ["mu"], "gloss": "year = name"},
+    "egyptian": {"ids": ["rnpt"], "gloss": "year"},
+    "chinese": {"ids": ["nian"], "gloss": "year = harvest-cycle"}
+  },
+  "moon-month": {
+    "claim": "The moon-body and the month-unit share one morpheme across four unrelated families — the cycle IS the clock.",
+    "pie": {"id": "meh1ns", "gloss": "moon = month"},
+    "sumerian": {"ids": ["iti"], "gloss": "moon = month"},
+    "egyptian": {"ids": ["iti"], "gloss": "moon = month"},
+    "chinese": {"ids": ["yue"], "gloss": "moon = month"}
+  },
+  "sky-god": {
+    "claim": "Four unrelated languages fuse sky and divine into one morpheme.",
+    "pie": {"id": "dyews", "gloss": "sky = day = god"},
+    "sumerian": {"ids": ["an"], "gloss": "sky = god"},
+    "egyptian": {"ids": ["ra", "nTr"], "gloss": "sun = god / divine-generic"},
+    "chinese": {"ids": ["tian"], "gloss": "sky = heaven = high-god"}
+  },
+  "earth-human": {
+    "claim": "PIE named earth and human-being from one root — the body IS named from the ground it stands on.",
+    "pie": {"id": "dheghom", "gloss": "earth → humus, human"},
+    "sumerian": {"ids": ["ki"], "gloss": "earth = place"},
+    "egyptian": {"ids": ["tA"], "gloss": "earth = land"},
+    "chinese": {"ids": ["di"], "gloss": "earth = ground"}
+  },
+  "light-dark-axis": {
+    "claim": "Light and dark are two poles of one axis, not two separate things.",
+    "pie": {"id": "leuk", "gloss": "light / giving-sight"},
+    "sumerian": {"ids": ["ud"], "gloss": "day = sun = light"},
+    "egyptian": {"ids": ["ra"], "gloss": "sun = daylight = god"},
+    "chinese": {"ids": ["ri"], "gloss": "sun = day"}
+  },
+  "rotation-primitive": {
+    "claim": "The loop is named independently across motion, cognition, craft, and time.",
+    "pie": {"id": "kwel", "gloss": "turn / walk-in-a-ring"},
+    "sumerian": {"ids": ["gi4", "gur"], "gloss": "return / turn"},
+    "egyptian": {"ids": ["xpr"], "gloss": "become = scarab-rolls"},
+    "chinese": null
+  },
+  "tree-firm-true": {
+    "claim": "PIE *deru- named wood, firmness, and truth as one substrate operation — stays-pointing-the-same-way across three scales.",
+    "pie": {"id": "deru", "gloss": "wood = firm = true"},
+    "sumerian": {"ids": ["gish"], "gloss": "tree = wood = wooden-thing"},
+    "egyptian": null,
+    "chinese": null
+  },
+  "water-primitive": {
+    "claim": "The liquid-substance named independently across four families as the life-giving primitive.",
+    "pie": {"id": "wodr", "gloss": "water"},
+    "sumerian": {"ids": ["a"], "gloss": "water"},
+    "egyptian": {"ids": ["mw"], "gloss": "water"},
+    "chinese": null
+  },
+  "fire-primitive": {
+    "claim": "Two PIE fire-roots (one for passive, one for agent-fire) show the dual-aspect of the same coord.",
+    "pie": {"id": "peh2wr", "gloss": "fire (passive, → pyre, pure)"},
+    "sumerian": {"ids": ["izi"], "gloss": "fire"},
+    "egyptian": null,
+    "chinese": null
+  },
+  "kinship-mother-pair": {
+    "claim": "Mother and father words arrive at the same sound-shape independently across unrelated families — the ma/pa phonemes are infant body-reaches, not culturally transmitted.",
+    "pie": {"id": "meh2ter", "gloss": "mother"},
+    "sumerian": {"ids": ["ama"], "gloss": "mother"},
+    "egyptian": null,
+    "chinese": null
+  }
+}

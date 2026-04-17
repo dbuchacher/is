@@ -1,0 +1,322 @@
+[
+  {
+    "id": "ter-tor",
+    "pie": "*-tḗr / *-tōr",
+    "gloss": "agent suffix",
+    "category": "4b-derivational-suffixes",
+    "descendants": [
+      "-er",
+      "-or",
+      "doer",
+      "actor",
+      "senator"
+    ],
+    "layer_subcategory": "4b",
+    "morpheme_type": "suffix"
+  },
+  {
+    "id": "trom-tlom",
+    "pie": "*-trom / *-tlom",
+    "gloss": "instrument / place suffix",
+    "category": "4b-derivational-suffixes",
+    "descendants": [
+      "-tor",
+      "-trum",
+      "theater",
+      "arbitrium"
+    ],
+    "layer_subcategory": "4b",
+    "morpheme_type": "suffix"
+  },
+  {
+    "id": "mn",
+    "pie": "*-mn̥",
+    "gloss": "result / thing-done suffix",
+    "category": "4b-derivational-suffixes",
+    "descendants": [
+      "-men",
+      "-ma",
+      "-min",
+      "Latin *nomen*",
+      "Greek *-ma* (pragma)"
+    ],
+    "layer_subcategory": "4b",
+    "morpheme_type": "suffix"
+  },
+  {
+    "id": "tis-sis",
+    "pie": "*-tis / *-sis",
+    "gloss": "abstract noun suffix",
+    "category": "4b-derivational-suffixes",
+    "descendants": [
+      "-sion",
+      "-tion",
+      "Greek *-sis*",
+      "analysis",
+      "thesis"
+    ],
+    "layer_subcategory": "4b",
+    "morpheme_type": "suffix"
+  },
+  {
+    "id": "tos-to",
+    "pie": "*-tos / *-to-",
+    "gloss": "past participle suffix",
+    "category": "4b-derivational-suffixes",
+    "descendants": [
+      "-ed",
+      "-t",
+      "Latin *-tus*",
+      "-ate"
+    ],
+    "layer_subcategory": "4b",
+    "morpheme_type": "suffix"
+  },
+  {
+    "id": "nos",
+    "pie": "*-nos",
+    "gloss": "passive participle suffix",
+    "category": "4b-derivational-suffixes",
+    "descendants": [
+      "-en (fallen, broken)",
+      "-ne"
+    ],
+    "layer_subcategory": "4b",
+    "morpheme_type": "suffix"
+  },
+  {
+    "id": "yos",
+    "pie": "*-yos",
+    "gloss": "comparative suffix",
+    "category": "4b-derivational-suffixes",
+    "descendants": [
+      "-er (bigger)",
+      "Latin *-ior*"
+    ],
+    "layer_subcategory": "4b",
+    "morpheme_type": "suffix"
+  },
+  {
+    "id": "isto",
+    "pie": "*-isto-",
+    "gloss": "superlative suffix",
+    "category": "4b-derivational-suffixes",
+    "descendants": [
+      "-est (biggest)",
+      "Latin *-issimus*"
+    ],
+    "layer_subcategory": "4b",
+    "morpheme_type": "suffix"
+  },
+  {
+    "id": "eh2",
+    "pie": "*-eh₂",
+    "gloss": "feminine suffix",
+    "category": "4b-derivational-suffixes",
+    "descendants": [
+      "-a (Latin)",
+      "-ā (Sanskrit)"
+    ],
+    "layer_subcategory": "4b",
+    "morpheme_type": "suffix"
+  },
+  {
+    "id": "iko",
+    "pie": "*-iko-",
+    "gloss": "adjectival suffix",
+    "category": "4b-derivational-suffixes",
+    "descendants": [
+      "-ic (logic)",
+      "Latin *-icus*"
+    ],
+    "layer_subcategory": "4b",
+    "morpheme_type": "suffix"
+  },
+  {
+    "id": "eyo-yo",
+    "pie": "*-eyo- / *-yo-",
+    "gloss": "adjectival / material suffix",
+    "category": "4b-derivational-suffixes",
+    "descendants": [
+      "-y",
+      "-ine",
+      "Latin *-ius*"
+    ],
+    "layer_subcategory": "4b",
+    "morpheme_type": "suffix"
+  },
+  {
+    "id": "ko",
+    "pie": "*-ko-",
+    "gloss": "diminutive suffix",
+    "category": "4b-derivational-suffixes",
+    "descendants": [
+      "-k",
+      "-ch (Germanic)"
+    ],
+    "layer_subcategory": "4b",
+    "morpheme_type": "suffix"
+  },
+  {
+    "id": "nom-s",
+    "pie": "*-s",
+    "gloss": "nominative singular",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Latin *-us/-is*",
+      "Greek *-os*",
+      "English genitive *'s*"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "case-ending"
+  },
+  {
+    "id": "acc-m",
+    "pie": "*-m",
+    "gloss": "accusative singular",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Latin *-um*",
+      "Greek *-on*",
+      "Sanskrit *-am*"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "case-ending"
+  },
+  {
+    "id": "gen-os",
+    "pie": "*-os / *-es / *-s",
+    "gloss": "genitive singular",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Latin *-is*",
+      "Greek *-os*",
+      "English *'s*"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "case-ending"
+  },
+  {
+    "id": "dat-ei",
+    "pie": "*-ei",
+    "gloss": "dative singular",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Latin *-i*",
+      "Greek *-i*"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "case-ending"
+  },
+  {
+    "id": "verb-1sg-mi",
+    "pie": "*-mi",
+    "gloss": "verb 1sg present",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Greek *-mi* (eimi)",
+      "Sanskrit *-mi* (asmi)"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "verb-ending"
+  },
+  {
+    "id": "verb-1sg-m",
+    "pie": "*-m",
+    "gloss": "verb 1sg past",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Latin *-m* (eram)",
+      "Sanskrit *-m*"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "verb-ending"
+  },
+  {
+    "id": "verb-2sg-si",
+    "pie": "*-si",
+    "gloss": "verb 2sg present",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Greek *-si*",
+      "Sanskrit *-si*"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "verb-ending"
+  },
+  {
+    "id": "verb-2sg-s",
+    "pie": "*-s",
+    "gloss": "verb 2sg past",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Latin *-s* (amabas)",
+      "English *-st* (thou wast)"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "verb-ending"
+  },
+  {
+    "id": "verb-3sg-ti",
+    "pie": "*-ti",
+    "gloss": "verb 3sg present",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Latin *-t*",
+      "Greek *-ti* (esti)",
+      "Sanskrit *-ti* (asti)",
+      "English *-s* (he runs)"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "verb-ending"
+  },
+  {
+    "id": "verb-3sg-t",
+    "pie": "*-t",
+    "gloss": "verb 3sg past",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Latin *-t* (erat)",
+      "Sanskrit *-t*"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "verb-ending"
+  },
+  {
+    "id": "mid-1sg-h2er",
+    "pie": "*-h₂er",
+    "gloss": "middle voice 1sg",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Hittite *-ḫari*",
+      "Latin *-r* (amor)"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "verb-ending"
+  },
+  {
+    "id": "mid-2sg-soi",
+    "pie": "*-soi",
+    "gloss": "middle voice 2sg",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Greek *-sai*",
+      "Sanskrit *-se*"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "verb-ending"
+  },
+  {
+    "id": "mid-3sg-to",
+    "pie": "*-to / *-or",
+    "gloss": "middle voice 3sg",
+    "category": "4c-inflectional-morphology",
+    "descendants": [
+      "Greek *-tai*",
+      "Sanskrit *-te*",
+      "Latin *-tur*"
+    ],
+    "layer_subcategory": "4c",
+    "morpheme_type": "verb-ending"
+  }
+]

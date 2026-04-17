@@ -1,0 +1,263 @@
+{
+  "cognition": {
+    "morphemes": [
+      {"form": "re-", "type": "prefix", "pie": null},
+      {"form": "co-", "type": "prefix", "pie": null},
+      {"form": "gno-", "type": "root", "pie": "gneh3"},
+      {"form": "-tion", "type": "suffix", "pie": null}
+    ],
+    "primary_pie": "gneh3",
+    "stress_morpheme": "gno-",
+    "claim": "These aren't two meanings of one word. They're ONE OPERATION — take-in (eye, ear) and put-out (hand, loins) are the same stroke seen from two sides. PIE speakers had one word because the substrate has one operation."
+  },
+  "recognize": {
+    "morphemes": [
+      {"form": "re-", "type": "prefix", "pie": null},
+      {"form": "co-", "type": "prefix", "pie": null},
+      {"form": "gno-", "type": "root", "pie": "gneh3"},
+      {"form": "-ize", "type": "suffix", "pie": null}
+    ],
+    "primary_pie": "gneh3",
+    "stress_morpheme": "gno-",
+    "claim": "Re-co-gno literally means again-together-knowing. Recognition is the loop closing — the moment what-comes-in matches what-was-known-before. The hub event named in three morphemes."
+  },
+  "genesis": {
+    "morphemes": [
+      {"form": "gene-", "type": "root", "pie": "gneh3"},
+      {"form": "-sis", "type": "suffix", "pie": null}
+    ],
+    "primary_pie": "gneh3",
+    "stress_morpheme": "gene-",
+    "claim": "Genesis is the beget-branch of the same PIE verb whose know-branch gave 'cognition'. Bringing-into-being and knowing-about are the same operation seen from its two sides."
+  },
+  "gene": {
+    "morphemes": [
+      {"form": "gene", "type": "root", "pie": "gneh3"}
+    ],
+    "primary_pie": "gneh3",
+    "stress_morpheme": "gene",
+    "claim": "A 'gene' is the unit of beget-information — what gets passed when a body makes another body. PIE had one root for both knowing a thing and begetting a thing; modern biology rediscovered the beget-side and named it 'gene' from the same root."
+  },
+  "generation": {
+    "morphemes": [
+      {"form": "gene-", "type": "root", "pie": "gneh3"},
+      {"form": "-ation", "type": "suffix", "pie": null}
+    ],
+    "primary_pie": "gneh3",
+    "stress_morpheme": "gene-",
+    "claim": "A generation is the span of one beget-cycle — one body making another. Same root as genesis. The cycle of kin-line repeating."
+  },
+  "nation": {
+    "morphemes": [
+      {"form": "na-", "type": "root", "pie": "gneh3"},
+      {"form": "-tion", "type": "suffix", "pie": null}
+    ],
+    "primary_pie": "gneh3",
+    "stress_morpheme": "na-",
+    "claim": "A nation is the kin-line extended to a people — those born from the same beget-stream. Via Latin nātus (born), same root as genesis and generation. The people-as-begotten-set."
+  },
+  "know": {
+    "morphemes": [
+      {"form": "know", "type": "root", "pie": "gneh3"}
+    ],
+    "primary_pie": "gneh3",
+    "stress_morpheme": "know",
+    "claim": "To know is to have taken-in and held. PIE held know and beget as one verb — both are what-comes-in-through-perception being-kept. English preserved the know-side; begetting became a separate word."
+  },
+  "notice": {
+    "morphemes": [
+      {"form": "no-", "type": "root", "pie": "gneh3"},
+      {"form": "-tice", "type": "suffix", "pie": null}
+    ],
+    "primary_pie": "gneh3",
+    "stress_morpheme": "no-",
+    "claim": "To notice is the in-stroke of knowing — take-in before hold-as-known. Via Latin noscere 'to come to know', from the same PIE root as cognition, genesis, and nation. The moment READ commits."
+  },
+  "king": {
+    "morphemes": [
+      {"form": "king", "type": "root", "pie": "genh1"}
+    ],
+    "primary_pie": "genh1",
+    "secondary_pie": ["h3regs"],
+    "stress_morpheme": "king",
+    "claim": "English 'king' descends from genh1 'the beget-root' — the one whose kin-line traces to him. But PIE also had h3regs 'the straightener', another ruler-root preserved in Latin rex, rector, right, regime. Kingship IS beget-line AND alignment-with-truth fused in one role."
+  },
+  "kin": {
+    "morphemes": [
+      {"form": "kin", "type": "root", "pie": "genh1"}
+    ],
+    "primary_pie": "genh1",
+    "stress_morpheme": "kin",
+    "claim": "Kin is what comes from the same beget-stream. Same PIE root as king (the one whose kin-line traces to him), genesis, and gene. Family, as named by the act of bringing-forth."
+  },
+  "mother": {
+    "morphemes": [
+      {"form": "mother", "type": "root", "pie": "meh2ter"}
+    ],
+    "primary_pie": "meh2ter",
+    "stress_morpheme": "mother",
+    "claim": "Mother-words across unrelated languages share a body-sound: the ma-shape a child makes reaching for milk. Not borrowed across families — independently arrived at because the sound IS the reaching. The substrate showing through infant babble."
+  },
+  "father": {
+    "morphemes": [
+      {"form": "father", "type": "root", "pie": "ph2ter"}
+    ],
+    "primary_pie": "ph2ter",
+    "stress_morpheme": "father",
+    "claim": "Father-words share the pa-shape cross-linguistically (Sanskrit pitṛ, Greek patēr, Latin pater). Paired against mother-words at the two-parent axis — one pair of morphemes naming the pair of bodies the child came from."
+  },
+  "brother": {
+    "morphemes": [
+      {"form": "brother", "type": "root", "pie": "bhreh2ter"}
+    ],
+    "primary_pie": "bhreh2ter",
+    "stress_morpheme": "brother",
+    "claim": "Brother, from PIE bhreh2ter, names same-beget-line male at body-scale. Paired against sister. Kinship-structure as substrate-feature: two pairs (parent/child, brother/sister) giving four family-roles on one axis."
+  },
+  "sister": {
+    "morphemes": [
+      {"form": "sister", "type": "root", "pie": "swesor"}
+    ],
+    "primary_pie": "swesor",
+    "stress_morpheme": "sister",
+    "claim": "Sister, from PIE swesor (literally 'own-female' = sve-sor). Paired against brother in the sibling-axis. The female-pole of the same-beget-line sibling pair."
+  },
+  "year": {
+    "morphemes": [
+      {"form": "year", "type": "root", "pie": "yeh1r"}
+    ],
+    "primary_pie": "yeh1r",
+    "stress_morpheme": "year",
+    "claim": "Year is the loop closing — the substrate's rotation named at seasonal scale. Same root family as Greek hōra (hour) and horoscope. The cycle that returns to its start, marked by counting."
+  },
+  "month": {
+    "morphemes": [
+      {"form": "month", "type": "root", "pie": "meh1ns"}
+    ],
+    "primary_pie": "meh1ns",
+    "stress_morpheme": "month",
+    "claim": "Month and moon are the same PIE word. The time-unit IS named by the body that makes it: from new-moon to new-moon is one meh1ns. Across languages this unity persists — Chinese yue, Sumerian/Egyptian iti, all fuse moon and month."
+  },
+  "moon": {
+    "morphemes": [
+      {"form": "moon", "type": "root", "pie": "meh1ns"}
+    ],
+    "primary_pie": "meh1ns",
+    "stress_morpheme": "moon",
+    "claim": "Moon and month are one word in PIE. The sky-body and the time-unit it makes cannot be separated — one meh1ns is one full cycle of the body across the sky. Unity-preservation: the cycle IS the clock."
+  },
+  "day": {
+    "morphemes": [
+      {"form": "day", "type": "root", "pie": "dyews"}
+    ],
+    "primary_pie": "dyews",
+    "stress_morpheme": "day",
+    "claim": "Day descends from dyews — the bright-sky root that also gave Latin deus (god) and Sanskrit dyaus (sky-god). One PIE root for daylight AND sky AND god, split by later tongues. The bright above is the divine is the span-of-bright."
+  },
+  "night": {
+    "morphemes": [
+      {"form": "night", "type": "root", "pie": "nokwts"}
+    ],
+    "primary_pie": "nokwts",
+    "stress_morpheme": "night",
+    "claim": "Night, from PIE nokwts, is the opposite pole to day. Paired against dyews at the substrate's dark-bright axis. Not just a word for absence-of-light — the dedicated dark-pole morpheme that unrelated languages all preserve (Latin nox, Greek nyx, Sanskrit nakt)."
+  },
+  "sky": {
+    "morphemes": [
+      {"form": "sky", "type": "root", "pie": "dyews"}
+    ],
+    "primary_pie": "dyews",
+    "secondary_pie": ["nebh"],
+    "stress_morpheme": "sky",
+    "claim": "Sky and god were one in PIE (dyews gave both deus and day). Separately, the cloud-sky root nebh gave English 'nebula' and 'heaven'. Four unrelated families fuse sky with god — Sumerian an, Egyptian ra, Chinese tian, PIE dyews. One coord, many names."
+  },
+  "earth": {
+    "morphemes": [
+      {"form": "earth", "type": "root", "pie": "dheghom"}
+    ],
+    "primary_pie": "dheghom",
+    "stress_morpheme": "earth",
+    "claim": "Earth, from PIE dheghom, is both the ground AND the earthly-being that walks it. Same root gave Latin humus (earth) and humanus (human) — the body IS named from the ground it stands on. Earth-human unity preserved across three words."
+  },
+  "water": {
+    "morphemes": [
+      {"form": "water", "type": "root", "pie": "wodr"}
+    ],
+    "primary_pie": "wodr",
+    "stress_morpheme": "water",
+    "claim": "Water, from PIE wodr (also h2ekweh2 for flowing-water). The liquid substance named across unrelated families as the life-giving primitive: Sumerian a, Egyptian mw, Chinese shui. Four languages, four morphemes, one coord."
+  },
+  "fire": {
+    "morphemes": [
+      {"form": "fire", "type": "root", "pie": "peh2wr"}
+    ],
+    "primary_pie": "peh2wr",
+    "secondary_pie": ["h1ngwnis"],
+    "stress_morpheme": "fire",
+    "claim": "PIE had TWO fire-roots: peh2wr (fire as passive substance, gave 'pyre', 'pure') and h1ngwnis (fire as active agent, gave Latin ignis, Sanskrit agni). The split tracks whether fire is named-from-outside (seen, managed) or named-from-inside (worshipped, agentive). Two roots for two aspects of one coord."
+  },
+  "light": {
+    "morphemes": [
+      {"form": "light", "type": "root", "pie": "leuk"}
+    ],
+    "primary_pie": "leuk",
+    "stress_morpheme": "light",
+    "claim": "Light is the giving-of-sight — paired against dark at the substrate's polar axis. Lucid, luminous, translucent, Lucifer, illuminate: all descend from leuk. The bright-pole of a single axis, not a standalone thing."
+  },
+  "dark": {
+    "morphemes": [
+      {"form": "dark", "type": "root", "pie": "h1regwos"}
+    ],
+    "primary_pie": "h1regwos",
+    "stress_morpheme": "dark",
+    "claim": "Dark is the opposite pole to light. PIE h1regwos gave Greek erebos (the underworld) and Germanic 'dark'. Paired against leuk at the light-dark axis: two poles, one axis, not two separate things. The substrate has a bright-dark dimension; English happens to have inherited both pole-words."
+  },
+  "true": {
+    "morphemes": [
+      {"form": "true", "type": "root", "pie": "deru"}
+    ],
+    "primary_pie": "deru",
+    "stress_morpheme": "true",
+    "claim": "True, firm, and tree are ONE PIE root. *deru- named the wood AND the firmness AND the truth-of-a-statement as one substrate feature: that-which-stays-pointing-the-same-way. A tree stays rooted; a firm thing doesn't move; a true statement holds across reads. Same stroke at three scales."
+  },
+  "firm": {
+    "morphemes": [
+      {"form": "firm", "type": "root", "pie": "deru"}
+    ],
+    "primary_pie": "deru",
+    "stress_morpheme": "firm",
+    "claim": "Firm — via Latin firmus from PIE *dher- (related to deru) — names the stays-in-place quality. Same root-family as 'true' (stays-pointing-true) and 'tree' (stays-rooted). One substrate operation, three modern concepts: tree, firm, true all point at stability-across-time."
+  },
+  "tree": {
+    "morphemes": [
+      {"form": "tree", "type": "root", "pie": "deru"}
+    ],
+    "primary_pie": "deru",
+    "stress_morpheme": "tree",
+    "claim": "Tree from PIE deru — the same root that gave 'true' and 'firm'. One morpheme for the plant that stays rooted AND the stays-firm quality AND the stays-true statement. Not metaphor: the substrate has one stability-coord, and PIE named all three applications with one word."
+  },
+  "one": {
+    "morphemes": [
+      {"form": "one", "type": "root", "pie": "oynos"}
+    ],
+    "primary_pie": "oynos",
+    "stress_morpheme": "one",
+    "claim": "One, from PIE oynos (also gave Latin unus, Greek oinos dice-face). The first count. English 'alone' is al-one (all-one). Unity-and-oneness: one morpheme naming the primitive that count starts from."
+  },
+  "two": {
+    "morphemes": [
+      {"form": "two", "type": "root", "pie": "dwoh1"}
+    ],
+    "primary_pie": "dwoh1",
+    "stress_morpheme": "two",
+    "claim": "Two, from PIE dwoh1 — gave Latin duo, Sanskrit dvau, German zwei, English 'twice', 'twin', 'between' (between means 'in the space of two'). The paired-count as substrate primitive, with lexical family spanning the very-related English words for doubling and splitting."
+  },
+  "three": {
+    "morphemes": [
+      {"form": "three", "type": "root", "pie": "treyes"}
+    ],
+    "primary_pie": "treyes",
+    "stress_morpheme": "three",
+    "claim": "Three, from PIE treyes — the count that completes a triad. English 'third', 'trinity', 'triple', Latin tres, Greek tria. The third count is load-bearing: two gives a pair, three gives a structure. Most divine-triads and first-three-principles across cultures trace to this substrate-count."
+  }
+}

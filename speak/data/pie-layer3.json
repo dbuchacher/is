@@ -1,0 +1,327 @@
+[
+  {
+    "id": "kwekwlos",
+    "pie": "*kʷékʷlos",
+    "gloss": "wheel",
+    "category": "3a-the-wheel-complex",
+    "descendants": [
+      "wheel",
+      "cycle",
+      "Sanskrit *cakra*",
+      "Greek *kuklos*"
+    ],
+    "layer_subcategory": "3a"
+  },
+  {
+    "id": "h2eks",
+    "pie": "*h₂eḱs- / *h₂eḱs-lo-",
+    "gloss": "axle / axis",
+    "category": "3a-the-wheel-complex",
+    "descendants": [
+      "axle",
+      "axis",
+      "Latin *axis*",
+      "Greek *axōn*"
+    ],
+    "layer_subcategory": "3a"
+  },
+  {
+    "id": "yugom",
+    "pie": "*yugóm",
+    "gloss": "yoke",
+    "category": "3a-the-wheel-complex",
+    "descendants": [
+      "yoke",
+      "conjugal",
+      "junction",
+      "Latin *iugum*",
+      "Greek *zugon*",
+      "Sanskrit *yuga*"
+    ],
+    "layer_subcategory": "3a"
+  },
+  {
+    "id": "wegh-c",
+    "pie": "*wéǵʰ- / *wéǵʰnos",
+    "gloss": "wagon / convey",
+    "category": "3a-the-wheel-complex",
+    "descendants": [
+      "wagon",
+      "wain",
+      "vehicle",
+      "weight",
+      "Latin *vehere*"
+    ],
+    "layer_subcategory": "3a"
+  },
+  {
+    "id": "roth2o",
+    "pie": "*rot-h₂o-",
+    "gloss": "wheel (different word)",
+    "category": "3a-the-wheel-complex",
+    "descendants": [
+      "Latin *rota* (rotate, round)",
+      "German *Rad*"
+    ],
+    "layer_subcategory": "3a"
+  },
+  {
+    "id": "h2eusom",
+    "pie": "*h₂eus-om / *h₂éwso-",
+    "gloss": "gold (from \"glow/dawn\")",
+    "category": "3b-metals",
+    "descendants": [
+      "Latin *aurum* (gold, aureate)",
+      "English **gold** (via *ǵʰelh₃-*)"
+    ],
+    "layer_subcategory": "3b"
+  },
+  {
+    "id": "h2erg-c",
+    "pie": "*h₂erǵ-",
+    "gloss": "silver / shining white",
+    "category": "3b-metals",
+    "descendants": [
+      "argent",
+      "Latin *argentum*",
+      "Greek *arguros*"
+    ],
+    "layer_subcategory": "3b"
+  },
+  {
+    "id": "Hayos",
+    "pie": "*(H)áyos",
+    "gloss": "copper / bronze / ore",
+    "category": "3b-metals",
+    "descendants": [
+      "ore",
+      "era",
+      "Latin *aes* (bronze)"
+    ],
+    "layer_subcategory": "3b"
+  },
+  {
+    "id": "h3regs",
+    "pie": "*h₃rḗǵs",
+    "gloss": "king / straightener",
+    "category": "3c-political-social-hierarchy",
+    "descendants": [
+      "rex",
+      "regal",
+      "royal",
+      "reich",
+      "raj",
+      "Latin *rex*",
+      "Sanskrit *rājan*"
+    ],
+    "layer_subcategory": "3c"
+  },
+  {
+    "id": "h3reg",
+    "pie": "*h₃reǵ-",
+    "gloss": "to rule / straighten",
+    "category": "3c-political-social-hierarchy",
+    "descendants": [
+      "right",
+      "reach",
+      "rex",
+      "regulate",
+      "Latin *regere*",
+      "Greek *oregō*"
+    ],
+    "layer_subcategory": "3c"
+  },
+  {
+    "id": "deuk",
+    "pie": "*deuk-",
+    "gloss": "to lead",
+    "category": "3c-political-social-hierarchy",
+    "descendants": [
+      "duke",
+      "duct",
+      "conduct",
+      "Latin *ducere*"
+    ],
+    "layer_subcategory": "3c"
+  },
+  {
+    "id": "teuteh2",
+    "pie": "*teutéh₂",
+    "gloss": "people / tribe",
+    "category": "3c-political-social-hierarchy",
+    "descendants": [
+      "Deutsch",
+      "Teuton",
+      "Tuatha (Irish)"
+    ],
+    "layer_subcategory": "3c"
+  },
+  {
+    "id": "h2eg",
+    "pie": "*h₂eǵ-",
+    "gloss": "to drive / lead",
+    "category": "3c-political-social-hierarchy",
+    "descendants": [
+      "act",
+      "agent",
+      "agile",
+      "Latin *agere*",
+      "Greek *agō*"
+    ],
+    "layer_subcategory": "3c"
+  },
+  {
+    "id": "deiwos",
+    "pie": "*deiwós",
+    "gloss": "god (from sky)",
+    "category": "3d-religious-ritual-vocabulary",
+    "descendants": [
+      "divine",
+      "deity",
+      "Tuesday (Tiw-)",
+      "Latin *deus*",
+      "Sanskrit *deva*"
+    ],
+    "layer_subcategory": "3d"
+  },
+  {
+    "id": "seh2kro",
+    "pie": "*seh₂k-ro-",
+    "gloss": "sacred / bound",
+    "category": "3d-religious-ritual-vocabulary",
+    "descendants": [
+      "sacred",
+      "saint",
+      "Latin *sacer*"
+    ],
+    "layer_subcategory": "3d"
+  },
+  {
+    "id": "ghew",
+    "pie": "*ǵʰew-",
+    "gloss": "to invoke / call",
+    "category": "3d-religious-ritual-vocabulary",
+    "descendants": [
+      "god (from Proto-Germanic *gudan* = \"invoked one\"?)",
+      "Sanskrit *hu-*"
+    ],
+    "layer_subcategory": "3d"
+  },
+  {
+    "id": "meldh",
+    "pie": "*meldʰ-",
+    "gloss": "to pray / call on",
+    "category": "3d-religious-ritual-vocabulary",
+    "descendants": [
+      "Slavic *modliti*",
+      "English *meld*?"
+    ],
+    "layer_subcategory": "3d"
+  },
+  {
+    "id": "h1yewos",
+    "pie": "*h₁i̯ewos",
+    "gloss": "law / rite",
+    "category": "3e-abstract-concepts-law-fate-measure",
+    "descendants": [
+      "Latin *ius/iuris*",
+      "just",
+      "jury",
+      "justice"
+    ],
+    "layer_subcategory": "3e"
+  },
+  {
+    "id": "dheh1s",
+    "pie": "*dʰeh₁-s-",
+    "gloss": "sacred / religious",
+    "category": "3e-abstract-concepts-law-fate-measure",
+    "descendants": [
+      "Greek *theos*? (disputed)"
+    ],
+    "layer_subcategory": "3e"
+  },
+  {
+    "id": "h1oyto",
+    "pie": "*h₁oyto- / *yewes-",
+    "gloss": "oath",
+    "category": "3e-abstract-concepts-law-fate-measure",
+    "descendants": [
+      "(Oath words are complex; some IE branches formed them independently)"
+    ],
+    "layer_subcategory": "3e"
+  },
+  {
+    "id": "h2eiw",
+    "pie": "*h₂eiw- / *h₂óyu-",
+    "gloss": "life / age / eternity",
+    "category": "3f-time-beyond-day-night-year",
+    "descendants": [
+      "ever",
+      "aye",
+      "aeon",
+      "Latin *aevum*",
+      "Greek *aiōn*"
+    ],
+    "layer_subcategory": "3f"
+  },
+  {
+    "id": "yeh1r",
+    "pie": "*yeh₁r-",
+    "gloss": "year / season / cycle",
+    "category": "3f-time-beyond-day-night-year",
+    "descendants": [
+      "year",
+      "Latin *hornus*",
+      "Greek *hōra* (hour, season)"
+    ],
+    "layer_subcategory": "3f"
+  },
+  {
+    "id": "wet",
+    "pie": "*wet-",
+    "gloss": "year (as duration)",
+    "category": "3f-time-beyond-day-night-year",
+    "descendants": [
+      "Latin *vetus* (veteran, veterinarian)",
+      "Greek *etos*"
+    ],
+    "layer_subcategory": "3f"
+  },
+  {
+    "id": "nu",
+    "pie": "*nu-",
+    "gloss": "now",
+    "category": "3f-time-beyond-day-night-year",
+    "descendants": [
+      "now",
+      "Latin *nunc*",
+      "Greek *nun*"
+    ],
+    "layer_subcategory": "3f"
+  },
+  {
+    "id": "pro",
+    "pie": "*pro-",
+    "gloss": "before / forward",
+    "category": "3f-time-beyond-day-night-year",
+    "descendants": [
+      "pro-",
+      "for-",
+      "Latin *pro*",
+      "Greek *pro*"
+    ],
+    "layer_subcategory": "3f"
+  },
+  {
+    "id": "posti",
+    "pie": "*po(s)ti-",
+    "gloss": "after",
+    "category": "3f-time-beyond-day-night-year",
+    "descendants": [
+      "post-",
+      "Latin *post*"
+    ],
+    "layer_subcategory": "3f"
+  }
+]
