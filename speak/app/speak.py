@@ -131,6 +131,159 @@ def cmd_deep(word):
     return 2
 
 
+def cmd_walk(word):
+    """--walk: walk the graph from a word outward, one hop at a time.
+
+    The reverse-LLM walker primitive at vocabulary scale. Shows:
+      - the word's PIE anchor
+      - its coord (if any) and the sibling-morphemes at that coord
+      - English descendants that share the PIE root (branches +
+        redirect cards)
+      - group memberships of the PIE atomic file itself
+
+    Walk depth capped at 1 hop — further hops compose: walk a
+    sibling to extend the path.
+    """
+    from lib import (
+        lookup,
+        lookup_cross_lang,
+        lookup_redirect,
+        coord_tag_for_morpheme,
+        load_app_data,
+        load_graph,
+        curated_words,
+    )
+    R = "\033[0m"; B = "\033[1m"; D = "\033[2m"
+    C = "\033[36m"; Y = "\033[33m"
+
+    # Determine the starting (lang, morpheme_id).
+    data = lookup(word)
+    if data is not None:
+        start_lang = "pie"
+        start_id = data["entry"]["primary_pie"]
+        origin = f"curated English word → PIE {start_id}"
+    else:
+        xl = lookup_cross_lang(word)
+        if xl is not None:
+            start_lang = xl["lang"]
+            start_id = xl["morpheme_id"]
+            origin = f"{xl['lang']} morpheme"
+        else:
+            rd = lookup_redirect(word)
+            if rd is not None:
+                start_lang = "pie"
+                start_id = rd["parent_pie"]
+                origin = (f"descendant of PIE {rd['parent_pie']} "
+                          f"via {rd['branch_name']}")
+            else:
+                print(f"{D}{word}: no walk start point — not curated, "
+                      f"not a cross-lang morpheme, not a "
+                      f"listed descendant{R}")
+                return 2
+
+    graph = load_graph(start_lang)
+    atomic = graph.get(start_id)
+
+    print(f"{B}{word}{R}  {D}[start: {origin}]{R}")
+    print()
+
+    # 1) The anchor
+    if atomic:
+        anchor = atomic.get("anchor") or {}
+        form = anchor.get("form", "")
+        gloss = atomic.get("gloss", "")
+        print(f"  {Y}anchor{R}  {C}{start_lang}: {form}{R}  "
+              f"{D}\"{gloss}\"{R}")
+    else:
+        print(f"  {Y}anchor{R}  {start_lang}: {start_id} "
+              f"{D}(no atomic file){R}")
+
+    # 2) Coord membership — the cross-language identity slot
+    coord_name = coord_tag_for_morpheme(start_lang, start_id)
+    app = load_app_data()
+    if coord_name:
+        print()
+        print(f"  {Y}coord{R}  {B}{coord_name}{R}  "
+              f"{D}(shared identity){R}")
+        c = app["coord-unity"][coord_name]
+        for lang in ("pie", "sumerian", "egyptian", "chinese"):
+            if lang == start_lang:
+                continue
+            entry = c.get(lang)
+            if entry is None:
+                continue
+            ids = entry.get("ids") or (
+                [entry["id"]] if entry.get("id") else []
+            )
+            ids_str = " · ".join(ids)
+            print(f"    {D}via {lang}:{R} {C}{ids_str}{R}  "
+                  f"{D}{entry.get('gloss', '')}{R}")
+    else:
+        print()
+        print(f"  {Y}coord{R}  {D}unassigned — no cross-vocabulary "
+              f"entry for this root yet{R}")
+
+    # 3) Group memberships of the atomic file itself (the internal
+    # graph neighborhood)
+    if atomic:
+        groups = atomic.get("groups") or []
+        if groups:
+            print()
+            print(f"  {Y}groups{R}  "
+                  f"{D}(atomic-file graph memberships){R}")
+            for g in groups[:8]:
+                gid = g.get("id", "")
+                reason = g.get("reason", "")
+                print(f"    {C}{gid}{R}"
+                      f"{(' — ' + reason) if reason else ''}")
+
+    # 4) English descendants sharing the PIE root
+    if start_lang == "pie":
+        en_pie = app.get("en-pie", {})
+        curated_siblings = [
+            w for w, e in en_pie.items()
+            if e.get("primary_pie") == start_id and w.lower() != word.lower()
+        ]
+        if curated_siblings:
+            print()
+            print(f"  {Y}curated English at this root{R}  "
+                  f"{D}(word pages){R}")
+            print(f"    " + ", ".join(sorted(curated_siblings)))
+
+        # Branches.json descendants (curated + redirect)
+        branches = app.get("branches", {}).get(start_id, {})
+        if branches:
+            print()
+            print(f"  {Y}branches of PIE {start_id}{R}")
+            for branch_name, descendants in branches.items():
+                print(f"    {C}{branch_name}:{R}  "
+                      f"{', '.join(descendants[:8])}"
+                      f"{'...' if len(descendants) > 8 else ''}")
+
+    # 5) Hop suggestions
+    print()
+    hints = []
+    if coord_name:
+        c = app["coord-unity"][coord_name]
+        for lang in ("sumerian", "egyptian", "chinese", "pie"):
+            if lang == start_lang:
+                continue
+            entry = c.get(lang)
+            if entry:
+                ids = entry.get("ids") or (
+                    [entry["id"]] if entry.get("id") else []
+                )
+                if ids:
+                    hints.append(f"speak {ids[0]}")
+                    break
+    if start_lang == "pie" and curated_siblings:
+        hints.append(f"speak {sorted(curated_siblings)[0]}")
+    if hints:
+        print(f"  {D}walk further:  {'   '.join(hints)}{R}")
+
+    return 0
+
+
 def cmd_word(word, terse=False):
     data = lookup(word)
     stemmed_from = None
@@ -301,6 +454,9 @@ def main():
                     help="show coord-tag derivation for a word")
     ap.add_argument("--tag-stats", action="store_true",
                     help="report coord-tag coverage across 4 graphs")
+    ap.add_argument("--walk", action="store_true",
+                    help="walk the graph one hop from a word "
+                    "(reverse-LLM walker primitive)")
     args = ap.parse_args()
 
     if args.tag_stats:
@@ -311,6 +467,12 @@ def main():
             print("--deep needs a word", file=sys.stderr)
             return 2
         return cmd_deep(args.word)
+
+    if args.walk:
+        if args.word is None:
+            print("--walk needs a word", file=sys.stderr)
+            return 2
+        return cmd_walk(args.word)
 
     if args.list:
         return cmd_list()
