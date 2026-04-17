@@ -157,6 +157,74 @@ def render_terminal(data):
     return "\n".join(lines)
 
 
+def render_cross_lang_terminal(xl):
+    """Render output for a cross-language morpheme match.
+
+    xl = {lang, morpheme_id, coord_name, coord_data, atomic}
+    """
+    lang = xl["lang"]
+    mid = xl["morpheme_id"]
+    name = xl["coord_name"]
+    coord = xl["coord_data"]
+    atomic = xl.get("atomic") or {}
+
+    lines = []
+    prefix = f"{B}{mid}{R}  "
+    lines.append(f"{prefix}{D}({lang} morpheme){R}")
+
+    anchor = atomic.get("anchor") or {}
+    gloss = atomic.get("gloss", "")
+    if anchor and gloss:
+        form = anchor.get("form", "")
+        lines.append(f"  {C}{form}{R}  {D}\"{gloss}\"{R}")
+    elif gloss:
+        lines.append(f"  {D}\"{gloss}\"{R}")
+    lines.append("")
+
+    lines.append(f"  {Y}This morpheme sits at coord:{R} {B}{name}{R}")
+
+    claim = coord.get("claim", "").strip()
+    if claim:
+        lines.append(_wrap(claim, width=64, indent="  "))
+    lines.append("")
+
+    lines.append("  Other vocabularies naming the same coord:")
+    label_width = 10
+    for lang_key, lang_label in [("pie", "PIE"), ("egyptian", "Egyptian"),
+                                  ("chinese", "Chinese"),
+                                  ("sumerian", "Sumerian")]:
+        if lang_key == lang:
+            continue  # skip self
+        entry = coord.get(lang_key)
+        if entry is None:
+            lines.append(
+                f"    {lang_label:{label_width}}"
+                f"{D}(no atomic file indexed){R}"
+            )
+        else:
+            ids = entry.get("ids") or (
+                [entry["id"]] if entry.get("id") else []
+            )
+            ids_str = " · ".join(ids) if ids else "(—)"
+            g = entry.get("gloss", "")
+            lines.append(
+                f"    {lang_label:{label_width}}{C}{ids_str}{R}"
+                + (f"    {D}({g}){R}" if g else "")
+            )
+    lines.append("")
+
+    # English descendants at this coord
+    desc = _coord_descendants(coord, None)
+    if desc:
+        try_cmds = "  ".join(f"speak {w}" for w in desc[:4])
+        lines.append(f"  English words here:  "
+                     f"{', '.join(desc[:6])}"
+                     f"{'...' if len(desc) > 6 else ''}")
+        lines.append(f"  {D}try:  {try_cmds}{R}")
+
+    return "\n".join(lines)
+
+
 def render_no_match_terminal(word=None):
     msg = [f"  {D}'{word}' not in curated set.{R}"] if word else [
         f"  {D}not in curated set.{R}"]
@@ -316,7 +384,7 @@ INDEX_SEARCH_BLOCK = """
 <form id="speak-search" method="get" action="."
       style="margin-top:1.5em;margin-bottom:1em;">
   <input id="speak-word" name="w" list="speak-words" autofocus
-         placeholder="type a word — e.g. cognition, year, king"
+         placeholder="type a word — e.g. cognition, year, king, xin, sDm"
          autocomplete="off"
          style="font-size:1.1em;padding:0.4em 0.6em;width:100%;
                 max-width:24em;border:1px solid #ccc;
@@ -328,11 +396,26 @@ INDEX_SEARCH_BLOCK = """
 <script>
 (function() {{
   var params = new URLSearchParams(window.location.search);
-  var w = (params.get('w') || '').trim().toLowerCase();
+  var w = (params.get('w') || '').trim();
   var curated = {curated_js};
+  var xlang = {xlang_js};  // {{morpheme: coord-name}} (case-preserving)
   function go(word) {{
-    if (curated.indexOf(word) !== -1) {{
-      window.location.href = word + '.html';
+    var lower = word.toLowerCase();
+    if (curated.indexOf(lower) !== -1) {{
+      window.location.href = lower + '.html';
+      return;
+    }}
+    // cross-language morpheme match — preserve the case the user typed,
+    // fall back to case-insensitive on the keys
+    if (xlang[word]) {{
+      window.location.href = 'coord/' + xlang[word] + '.html';
+      return;
+    }}
+    for (var k in xlang) {{
+      if (k.toLowerCase() === lower) {{
+        window.location.href = 'coord/' + xlang[k] + '.html';
+        return;
+      }}
     }}
   }}
   if (w) go(w);
@@ -340,10 +423,10 @@ INDEX_SEARCH_BLOCK = """
   var input = document.getElementById('speak-word');
   form.addEventListener('submit', function(e) {{
     e.preventDefault();
-    go((input.value || '').trim().toLowerCase());
+    go((input.value || '').trim());
   }});
   input.addEventListener('change', function() {{
-    go((input.value || '').trim().toLowerCase());
+    go((input.value || '').trim());
   }});
 }})();
 </script>
@@ -490,12 +573,25 @@ def render_coord_index(coords):
 
 
 def render_html_index():
+    from lib import cross_lang_index
     words = curated_words()
-    options = "\n".join(f'    <option value="{w}">' for w in words)
+    xl = cross_lang_index()
+    # Flatten into {morpheme_id: coord_name} preserving case
+    xl_flat = {}
+    for lang in ("sumerian", "egyptian", "chinese", "pie"):
+        for mid, coord_name in xl.get(lang, {}).items():
+            xl_flat.setdefault(mid, coord_name)
+    # Datalist: curated words + cross-lang morphemes
+    opt_items = [f'    <option value="{w}">' for w in words]
+    opt_items.extend(
+        f'    <option value="{mid}">' for mid in sorted(xl_flat.keys())
+    )
+    options = "\n".join(opt_items)
     import json as _json
     search_block = INDEX_SEARCH_BLOCK.format(
         options=options,
         curated_js=_json.dumps(words),
+        xlang_js=_json.dumps(xl_flat),
     )
     body = ['<h1>speak</h1>',
             '<p>substrate decomposition of English words. '

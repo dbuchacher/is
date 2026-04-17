@@ -17,9 +17,17 @@ import subprocess
 import sys
 from pathlib import Path
 
-from lib import lookup, curated_words, ROOTS_DIRS, load_graph, load_app_data
+from lib import (
+    lookup,
+    lookup_cross_lang,
+    curated_words,
+    ROOTS_DIRS,
+    load_graph,
+    load_app_data,
+)
 from render import (
     render_terminal,
+    render_cross_lang_terminal,
     render_no_match_terminal,
     render_first_run_terminal,
     render_html,
@@ -33,6 +41,11 @@ from render import (
 def cmd_word(word, terse=False):
     data = lookup(word)
     if data is None:
+        # Not in English set — try cross-language morpheme lookup
+        xl = lookup_cross_lang(word)
+        if xl is not None:
+            print(render_cross_lang_terminal(xl))
+            return 0
         print(render_no_match_terminal(word))
         return 2
     if terse:

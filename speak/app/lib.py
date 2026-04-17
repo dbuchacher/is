@@ -140,6 +140,62 @@ def find_coord_for_pie(primary_pie, coord_data):
     return None
 
 
+_CROSS_LANG_INDEX_CACHE = None
+
+
+def cross_lang_index():
+    """Build {lang: {morpheme_id: coord_name}} reverse index on-demand
+    from coord-unity.json. Cached."""
+    global _CROSS_LANG_INDEX_CACHE
+    if _CROSS_LANG_INDEX_CACHE is not None:
+        return _CROSS_LANG_INDEX_CACHE
+    app = load_app_data()
+    coord_data = app.get("coord-unity", {})
+    idx = {"sumerian": {}, "egyptian": {}, "chinese": {}, "pie": {}}
+    for coord_name, coord in coord_data.items():
+        for lang in idx:
+            entry = coord.get(lang)
+            if not entry or not isinstance(entry, dict):
+                continue
+            ids = []
+            if entry.get("id"):
+                ids.append(entry["id"])
+            ids.extend(entry.get("ids") or [])
+            for rid in ids:
+                # Prefer the first coord encountered; multiple coords
+                # referencing the same morpheme is unusual and worth
+                # surfacing in validation rather than silently picking.
+                idx[lang].setdefault(rid, coord_name)
+    _CROSS_LANG_INDEX_CACHE = idx
+    return idx
+
+
+def lookup_cross_lang(morpheme):
+    """English lookup miss? Try cross-lang indexes. Returns dict with
+    {lang, morpheme_id, coord_name, coord_data, atomic} or None."""
+    morpheme = morpheme.strip()
+    if not morpheme:
+        return None
+    idx = cross_lang_index()
+    for lang in ("sumerian", "egyptian", "chinese", "pie"):
+        # Match case-insensitive on ID — graphs use native casing
+        # (e.g. sjA, Hw, xpr) which we preserve.
+        for mid, coord_name in idx[lang].items():
+            if mid.lower() == morpheme.lower():
+                app = load_app_data()
+                coord = app["coord-unity"][coord_name]
+                graph = load_graph(lang)
+                atomic = graph.get(mid)
+                return {
+                    "lang": lang,
+                    "morpheme_id": mid,
+                    "coord_name": coord_name,
+                    "coord_data": {"name": coord_name, **coord},
+                    "atomic": atomic,
+                }
+    return None
+
+
 def lookup(word):
     """English word → full substrate-decomposition dict, or None if not curated."""
     word = word.lower().strip()

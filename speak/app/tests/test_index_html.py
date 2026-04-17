@@ -24,7 +24,10 @@ def main():
         'name="w"',
         'URLSearchParams',
         "params.get('w')",
-        "window.location.href = word + '.html'",
+        "window.location.href = lower + '.html'",
+        # cross-language bridge: coord-page redirect for morpheme match
+        "window.location.href = 'coord/'",
+        'var xlang =',
     ]
     missing = [s for s in required if s not in html]
     assert not missing, f"index.html missing: {missing}"

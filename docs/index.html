@@ -43,7 +43,7 @@
 <form id="speak-search" method="get" action="."
       style="margin-top:1.5em;margin-bottom:1em;">
   <input id="speak-word" name="w" list="speak-words" autofocus
-         placeholder="type a word — e.g. cognition, year, king"
+         placeholder="type a word — e.g. cognition, year, king, xin, sDm"
          autocomplete="off"
          style="font-size:1.1em;padding:0.4em 0.6em;width:100%;
                 max-width:24em;border:1px solid #ccc;
@@ -80,16 +80,83 @@
     <option value="two">
     <option value="water">
     <option value="year">
+    <option value="Hw">
+    <option value="a">
+    <option value="ama">
+    <option value="an">
+    <option value="deru">
+    <option value="dheghom">
+    <option value="di">
+    <option value="dyews">
+    <option value="genh1">
+    <option value="geshtug">
+    <option value="gi4">
+    <option value="gish">
+    <option value="gneh3">
+    <option value="gur">
+    <option value="ib">
+    <option value="iti">
+    <option value="izi">
+    <option value="ka">
+    <option value="kap-ut">
+    <option value="ki">
+    <option value="kou">
+    <option value="kwel">
+    <option value="leuk">
+    <option value="lugal">
+    <option value="meh1ns">
+    <option value="meh2ter">
+    <option value="mu">
+    <option value="mw">
+    <option value="nTr">
+    <option value="nian">
+    <option value="nsw">
+    <option value="peh2wr">
+    <option value="rA">
+    <option value="ra">
+    <option value="ri">
+    <option value="rnpt">
+    <option value="sDm">
+    <option value="sang">
+    <option value="sha">
+    <option value="shou_head">
+    <option value="sjA">
+    <option value="tA">
+    <option value="tian">
+    <option value="tp">
+    <option value="ud">
+    <option value="wen">
+    <option value="wodr">
+    <option value="xin">
+    <option value="xpr">
+    <option value="yeh1r">
+    <option value="yue">
+    <option value="zuo">
   </datalist>
 </form>
 <script>
 (function() {
   var params = new URLSearchParams(window.location.search);
-  var w = (params.get('w') || '').trim().toLowerCase();
+  var w = (params.get('w') || '').trim();
   var curated = ["brother", "cognition", "dark", "day", "earth", "father", "fire", "firm", "gene", "generation", "genesis", "kin", "king", "know", "light", "month", "moon", "mother", "nation", "night", "notice", "one", "recognize", "sister", "sky", "three", "tree", "true", "two", "water", "year"];
+  var xlang = {"lugal": "kin-line-and-rule", "mu": "year-cycle", "iti": "moon-month", "an": "sky-god", "ki": "earth-human", "ud": "light-dark-axis", "gi4": "rotation-primitive", "gur": "rotation-primitive", "gish": "tree-firm-true", "a": "water-primitive", "izi": "fire-primitive", "ama": "kinship-mother-pair", "sang": "head-chief", "ka": "mouth-opening", "geshtug": "hear-understand", "sha": "heart-mind", "sjA": "know-beget", "Hw": "know-beget", "xpr": "know-beget", "nsw": "kin-line-and-rule", "rnpt": "year-cycle", "ra": "sky-god", "nTr": "sky-god", "tA": "earth-human", "mw": "water-primitive", "tp": "head-chief", "rA": "mouth-opening", "sDm": "hear-understand", "ib": "heart-mind", "xin": "know-beget", "wen": "know-beget", "zuo": "know-beget", "nian": "year-cycle", "yue": "moon-month", "tian": "sky-god", "di": "earth-human", "ri": "light-dark-axis", "shou_head": "head-chief", "kou": "mouth-opening", "gneh3": "know-beget", "genh1": "kin-line-and-rule", "yeh1r": "year-cycle", "meh1ns": "moon-month", "dyews": "sky-god", "dheghom": "earth-human", "leuk": "light-dark-axis", "kwel": "rotation-primitive", "deru": "tree-firm-true", "wodr": "water-primitive", "peh2wr": "fire-primitive", "meh2ter": "kinship-mother-pair", "kap-ut": "head-chief"};  // {morpheme: coord-name} (case-preserving)
   function go(word) {
-    if (curated.indexOf(word) !== -1) {
-      window.location.href = word + '.html';
+    var lower = word.toLowerCase();
+    if (curated.indexOf(lower) !== -1) {
+      window.location.href = lower + '.html';
+      return;
+    }
+    // cross-language morpheme match — preserve the case the user typed,
+    // fall back to case-insensitive on the keys
+    if (xlang[word]) {
+      window.location.href = 'coord/' + xlang[word] + '.html';
+      return;
+    }
+    for (var k in xlang) {
+      if (k.toLowerCase() === lower) {
+        window.location.href = 'coord/' + xlang[k] + '.html';
+        return;
+      }
     }
   }
   if (w) go(w);
@@ -97,10 +164,10 @@
   var input = document.getElementById('speak-word');
   form.addEventListener('submit', function(e) {
     e.preventDefault();
-    go((input.value || '').trim().toLowerCase());
+    go((input.value || '').trim());
   });
   input.addEventListener('change', function() {
-    go((input.value || '').trim().toLowerCase());
+    go((input.value || '').trim());
   });
 })();
 </script>
