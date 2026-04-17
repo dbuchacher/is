@@ -306,12 +306,60 @@ def render_html(data):
     return HTML_TEMPLATE.format(word=word, body="\n".join(out))
 
 
+INDEX_SEARCH_BLOCK = """
+<form id="speak-search" method="get" action="."
+      style="margin-top:1.5em;margin-bottom:1em;">
+  <input id="speak-word" name="w" list="speak-words" autofocus
+         placeholder="type a word — e.g. cognition, year, king"
+         autocomplete="off"
+         style="font-size:1.1em;padding:0.4em 0.6em;width:100%;
+                max-width:24em;border:1px solid #ccc;
+                border-radius:4px;font-family:ui-monospace,monospace;">
+  <datalist id="speak-words">
+{options}
+  </datalist>
+</form>
+<script>
+(function() {{
+  var params = new URLSearchParams(window.location.search);
+  var w = (params.get('w') || '').trim().toLowerCase();
+  var curated = {curated_js};
+  function go(word) {{
+    if (curated.indexOf(word) !== -1) {{
+      window.location.href = word + '.html';
+    }}
+  }}
+  if (w) go(w);
+  var form = document.getElementById('speak-search');
+  var input = document.getElementById('speak-word');
+  form.addEventListener('submit', function(e) {{
+    e.preventDefault();
+    go((input.value || '').trim().toLowerCase());
+  }});
+  input.addEventListener('change', function() {{
+    go((input.value || '').trim().toLowerCase());
+  }});
+}})();
+</script>
+"""
+
+
 def render_html_index():
+    words = curated_words()
+    options = "\n".join(f'    <option value="{w}">' for w in words)
+    import json as _json
+    search_block = INDEX_SEARCH_BLOCK.format(
+        options=options,
+        curated_js=_json.dumps(words),
+    )
     body = ['<h1>speak</h1>',
             '<p>substrate decomposition of English words. '
             'one universe, many vocabularies.</p>',
+            search_block,
+            '<p style="color:#666;font-size:0.9em;">'
+            'or browse the curated set:</p>',
             '<ul>']
-    for w in curated_words():
+    for w in words:
         body.append(f'<li><a href="{w}.html">{w}</a></li>')
     body.append('</ul>')
     return HTML_TEMPLATE.format(word="index", body="\n".join(body))
