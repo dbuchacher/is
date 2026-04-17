@@ -140,6 +140,32 @@ def find_coord_for_pie(primary_pie, coord_data):
     return None
 
 
+def coord_tag_for_morpheme(lang, morpheme_id):
+    """Return coord_name if this morpheme participates in a coord-unity
+    entry in its language slot, else None (unassigned)."""
+    idx = cross_lang_index()
+    return idx.get(lang, {}).get(morpheme_id)
+
+
+def coord_tag_stats():
+    """Return {lang: (tagged, unassigned, total)} across all 4 graphs.
+    Tagged = morpheme appears in coord-unity as that lang. Unassigned
+    is first-class per BUILD-SPEC — honest flag, not a failure."""
+    stats = {}
+    for lang in ("pie", "sumerian", "egyptian", "chinese"):
+        d = ROOTS_DIRS.get(lang)
+        if not d or not d.exists():
+            stats[lang] = (0, 0, 0)
+            continue
+        all_ids = {p.stem for p in d.glob("*.md")}
+        tagged = 0
+        for mid in all_ids:
+            if coord_tag_for_morpheme(lang, mid):
+                tagged += 1
+        stats[lang] = (tagged, len(all_ids) - tagged, len(all_ids))
+    return stats
+
+
 _CROSS_LANG_INDEX_CACHE = None
 
 

@@ -23,6 +23,8 @@ from lib import (
     lookup_with_stemming,
     lookup_redirect,
     redirect_descendants,
+    coord_tag_for_morpheme,
+    coord_tag_stats,
     nearest_curated,
     curated_words,
     ROOTS_DIRS,
@@ -42,6 +44,90 @@ from render import (
     render_coord_index,
     _coord_clean_hit_count,
 )
+
+
+def cmd_tag_stats():
+    """Report coord-tag coverage per graph. `unassigned` is
+    first-class — not a failure, just data about which morphemes
+    haven't yet been placed on a cross-vocabulary coord."""
+    stats = coord_tag_stats()
+    print("coord-tag coverage per graph:")
+    print()
+    total_t = total_u = total_n = 0
+    for lang, (t, u, n) in stats.items():
+        pct = 100 * t / n if n else 0
+        print(f"  {lang:10s}  {t:3d} tagged  {u:3d} unassigned  "
+              f"({n} total, {pct:.1f}% tagged)")
+        total_t += t
+        total_u += u
+        total_n += n
+    print()
+    print(f"  {'total':10s}  {total_t:3d} tagged  {total_u:3d} unassigned  "
+          f"({total_n} total)")
+    print()
+    print("  tagged = morpheme participates in at least one "
+          "coord-unity entry\n"
+          "  unassigned = filter has not yet placed this morpheme "
+          "on a cross-\n"
+          "               vocabulary coord (honest flag, not "
+          "failure)")
+    return 0
+
+
+def cmd_deep(word):
+    """--deep: show coord-tag derivation for a word.
+
+    For a curated English word: word → primary PIE → coord
+    (if coord-unity participates).
+    For a cross-lang morpheme: morpheme → coord.
+    For anything unassigned: say so honestly.
+    """
+    data = lookup(word)
+    if data is not None:
+        primary = data["entry"].get("primary_pie")
+        coord_name = None
+        if primary:
+            coord_name = coord_tag_for_morpheme("pie", primary)
+        print(f"\033[1m{word}\033[0m")
+        print(f"  PIE root: {primary}")
+        if coord_name:
+            print(f"  coord-tag: \033[36m{coord_name}\033[0m "
+                  f"(via PIE {primary})")
+            print(f"  filter: PASS — participates in "
+                  f"coord-unity convergence")
+        else:
+            print(f"  coord-tag: \033[2munassigned\033[0m")
+            print(f"  filter: no cross-vocabulary convergence "
+                  f"recorded for this PIE root")
+        return 0
+
+    # cross-lang morpheme?
+    xl = lookup_cross_lang(word)
+    if xl is not None:
+        print(f"\033[1m{word}\033[0m ({xl['lang']} morpheme)")
+        print(f"  coord-tag: \033[36m{xl['coord_name']}\033[0m "
+              f"(via {xl['lang']} {xl['morpheme_id']})")
+        print(f"  filter: PASS")
+        return 0
+
+    # redirect descendant?
+    rd = lookup_redirect(word)
+    if rd is not None:
+        coord = coord_tag_for_morpheme("pie", rd["parent_pie"]) \
+            if rd.get("parent_pie") else None
+        print(f"\033[1m{word}\033[0m")
+        print(f"  descendant of PIE {rd['parent_pie']} "
+              f"(via {rd['branch_name']})")
+        if coord:
+            print(f"  coord-tag: \033[36m{coord}\033[0m "
+                  f"(inherited from PIE {rd['parent_pie']})")
+        else:
+            print(f"  coord-tag: \033[2munassigned\033[0m")
+        return 0
+
+    print(f"\033[2m{word}: not curated, not a cross-lang morpheme, "
+          f"not a listed descendant\033[0m")
+    return 2
 
 
 def cmd_word(word, terse=False):
@@ -183,7 +269,20 @@ def main():
                     help="compact output (morphemes + claim only)")
     ap.add_argument("--list", action="store_true",
                     help="list all curated words")
+    ap.add_argument("--deep", action="store_true",
+                    help="show coord-tag derivation for a word")
+    ap.add_argument("--tag-stats", action="store_true",
+                    help="report coord-tag coverage across 4 graphs")
     args = ap.parse_args()
+
+    if args.tag_stats:
+        return cmd_tag_stats()
+
+    if args.deep:
+        if args.word is None:
+            print("--deep needs a word", file=sys.stderr)
+            return 2
+        return cmd_deep(args.word)
 
     if args.list:
         return cmd_list()
