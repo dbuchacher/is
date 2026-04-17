@@ -39,12 +39,8 @@ metrognosis/
                        4/5 SEMF coefficients from substrate at <0.5%
   alpha.md            fine structure constant, 6 sig figs
   cosmic-split.md     68/27/5, 25% fill convergence
-  quarks.md           gates compose into instructions
-  leptons.md          CPU flags
-  generations.md      three tiers of stability
-  boolean.md          16 functions, Pascal row 4
-  chirality.md        quaternion handedness
-  dna.md              genetic code on the lattice
+  chirality.md        quaternion handedness → L-amino acid (biology ↔ algebra)
+  dna.md              20 amino acids = C(6,3) = Riemann comps in 4D
   convergences.md     ISA, hierarchy, math grounding, unification
   ezekiel-wheel.md    wheel within wheel — prophetic version
   medicine-wheel.md   indigenous N. American 4-quadrant wheel
