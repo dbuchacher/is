@@ -143,10 +143,11 @@ def render_terminal(data):
     # ---- cross-language evidence ----
     if coord:
         lines.extend(_render_coord(coord))
+        coord_name = coord.get("name", "")
+        if coord_name:
+            lines.append(f"  {D}→ see coord: {coord_name} — full "
+                         f"argument across all witnesses{R}")
         lines.append("")
-        if coord.get("claim"):
-            lines.append(_wrap(coord["claim"], width=64, indent="  "))
-            lines.append("")
 
     # ---- try next ----
     tn = _try_next(data)
@@ -182,6 +183,9 @@ def render_cross_lang_terminal(xl):
     lines.append("")
 
     lines.append(f"  {Y}This morpheme sits at coord:{R} {B}{name}{R}")
+    lines.append(f"  {D}(a coord = one shared identity named by "
+                 f"multiple unrelated languages){R}")
+    lines.append("")
 
     claim = coord.get("claim", "").strip()
     if claim:
@@ -356,7 +360,8 @@ def render_html(data):
 
     if coord:
         coord_name = coord.get("name", "")
-        out.append('<div class="section"><b>Evidence — unrelated languages name it:</b>')
+        out.append('<div class="section"><b>Same identity in unrelated '
+                   'languages:</b>')
         out.append('<table>')
         for lang_key, lang_label in [("pie", "PIE"), ("egyptian", "Egyptian"),
                                       ("chinese", "Chinese"), ("sumerian", "Sumerian")]:
@@ -370,13 +375,15 @@ def render_html(data):
                            f'<td class="ids">{" · ".join(ids)}</td>'
                            f'<td class="gloss">{entry.get("gloss", "")}</td></tr>')
         out.append('</table>')
-        if coord.get("claim"):
-            out.append(f'<p class="synthesis">{coord["claim"]}</p>')
+        # Coord-unity claim is NOT repeated here; it lives on the
+        # coord page. Word pages keep the per-word claim above.
         if coord_name:
             out.append(f'<p style="margin-top:0.5em;font-size:0.9em;">'
-                       f'→ <a href="coord/{coord_name}.html">see coord: '
-                       f'{coord_name}</a> — all witnesses for this '
-                       f'substrate identity</p>')
+                       f'→ <a href="coord/{coord_name}.html">see '
+                       f'coord: {coord_name}</a> '
+                       f'<span style="color:#888;">— full argument, '
+                       f'all witnesses, all English descendants</span>'
+                       f'</p>')
         out.append('</div>')
 
     tn = _try_next(data)
@@ -470,12 +477,25 @@ def _coord_clean_hit_count(coord_data):
     )
 
 
+COORD_DEFINITION = (
+    'A <b>coord</b> is one shared identity — a slot where multiple '
+    'unrelated languages have independently named the same operation '
+    'or thing with their own unrelated morphemes. When 3 or 4 '
+    'language families land on the same slot, that\'s the claim '
+    'made literal: one universe, many vocabularies.'
+)
+
+
 def render_coord_page(coord_name, coord_data):
     """Render a per-coord argument page.
 
     Coord page = the argument surface. One coord, up to 4 vocabularies
     naming it, the shared claim once, English descendants listed, link
     back to index. The scale dimension of v2 lives here.
+
+    Layout per cold-reader feedback: definition first (define "coord"
+    before using it), evidence table next (data leads the argument),
+    shared claim follows the evidence, descendants close.
     """
     hit = _coord_clean_hit_count(coord_data)
     descendants = _coord_descendants(coord_data, None)
@@ -483,14 +503,17 @@ def render_coord_page(coord_name, coord_data):
 
     out = [f'<div class="word">{coord_name}</div>']
     out.append(f'<div style="color:#666;font-size:0.9em;margin-top:0.3em;">'
-               f'cross-vocabulary convergence — {hit} of 4 unrelated '
-               f'languages name this coord</div>')
+               f'one shared identity — {hit} of 4 unrelated languages '
+               f'name this coord</div>')
 
-    if claim:
-        out.append(f'<div class="section claim"><b>The claim:</b> {claim}</div>')
+    # Coord definition — surfaces the term that cold readers flagged
+    # as undefined jargon.
+    out.append(f'<div class="section" style="font-size:0.95em;color:#555;">'
+               f'{COORD_DEFINITION}</div>')
 
-    out.append('<div class="section"><b>Evidence — unrelated languages '
-               'name this coord:</b>')
+    # Evidence table FIRST — let data lead.
+    out.append('<div class="section"><b>Same identity in four '
+               'unrelated languages:</b>')
     out.append('<table>')
     for lang_key, lang_label in [("pie", "PIE"), ("egyptian", "Egyptian"),
                                   ("chinese", "Chinese"),
@@ -511,6 +534,11 @@ def render_coord_page(coord_name, coord_data):
     out.append('</table>')
     out.append('</div>')
 
+    # Claim AFTER evidence — framed as the read of the data.
+    if claim:
+        out.append(f'<div class="section claim"><b>What this means:</b> '
+                   f'{claim}</div>')
+
     if descendants:
         links = " ".join(
             f'<a href="../{w}.html">{w}</a>' for w in descendants
@@ -520,12 +548,13 @@ def render_coord_page(coord_name, coord_data):
                    f'{links}</div></div>')
     else:
         out.append('<div class="section" style="color:#888;font-size:0.9em;">'
-                   'no curated English words live at this coord yet — the '
-                   'substrate claim holds across the non-English vocabularies '
-                   'above.</div>')
+                   'no curated English words live at this coord yet — '
+                   'the cross-language identity above still holds '
+                   'independently of English.</div>')
 
     out.append('<div class="section" style="margin-top:2em;font-size:0.9em;">'
-               '<a href="../index.html">← all words and coords</a></div>')
+               '<a href="../index.html">← all words</a> · '
+               '<a href="index.html">all coords</a></div>')
 
     return HTML_TEMPLATE.format(word=coord_name, body="\n".join(out))
 

@@ -43,19 +43,19 @@ CASES = {
         "re- · co- · gno- · -tion",
         # PIE form
         "ǵneh",
-        # branches
+        # branches — data leads the claim per cold-reader feedback
         "know-branch:",
         "beget-branch:",
-        # claim
-        "ONE OPERATION",
-        "same stroke",
+        # softened claim — data-first, grounded, no metaphysical leap
+        "One PIE verb meant both know and beget",
+        "unrelated morphemes",
         # cross-lang evidence
         "Egyptian",
         "sjA",
         "Chinese",
         "xin",
-        # synthesis
-        "perception-closes",
+        # coord link (synthesis moved to coord page)
+        "see coord: know-beget",
         # try-next
         "try:",
     ],
