@@ -1,2 +1,6 @@
 atlas/tmp/
 wit/thoughts/prime-lattice/code/pi_count
+
+__pycache__/
+*.py[cod]
+
