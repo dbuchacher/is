@@ -20,6 +20,8 @@ from pathlib import Path
 from lib import (
     lookup,
     lookup_cross_lang,
+    lookup_with_stemming,
+    nearest_curated,
     curated_words,
     ROOTS_DIRS,
     load_graph,
@@ -40,14 +42,28 @@ from render import (
 
 def cmd_word(word, terse=False):
     data = lookup(word)
+    stemmed_from = None
     if data is None:
-        # Not in English set — try cross-language morpheme lookup
+        # Try simple stem match (knowing → know, generating → generation...)
+        stem_data, stem_used = lookup_with_stemming(word)
+        if stem_data is not None:
+            data = stem_data
+            stemmed_from = (word, stem_used)
+
+    if data is None:
+        # Try cross-language morpheme lookup
         xl = lookup_cross_lang(word)
         if xl is not None:
             print(render_cross_lang_terminal(xl))
             return 0
-        print(render_no_match_terminal(word))
+        # Nearest-suggest fallback
+        near = nearest_curated(word)
+        print(render_no_match_terminal(word, near=near))
         return 2
+
+    if stemmed_from is not None:
+        orig, stem = stemmed_from
+        print(f"  \033[2m({orig} → stemmed to '{stem}')\033[0m\n")
     if terse:
         # compact: just morphemes + claim
         entry = data["entry"]

@@ -170,6 +170,66 @@ def cross_lang_index():
     return idx
 
 
+SUFFIX_STRIPS = [
+    # ordered longest-first
+    ("ization", ""),
+    ("ations", "ation"),
+    ("ization", ""),
+    ("izing", "ize"),
+    ("ized", "ize"),
+    ("izes", "ize"),
+    ("ation", ""),
+    ("ities", "ity"),
+    ("ility", ""),
+    ("ing", ""),
+    ("ed", ""),
+    ("ly", ""),
+    ("es", ""),
+    ("s", ""),
+]
+
+
+def simple_stem_guess(word):
+    """Return a list of candidate stems to probe against curated set.
+
+    Light stemmer — enough for common English forms. Doesn't handle
+    irregular verbs; spaCy could, but adds a heavy dependency that
+    the v2 budget doesn't justify for 31 curated words.
+    """
+    word = word.lower().strip()
+    candidates = [word]
+    for suffix, replacement in SUFFIX_STRIPS:
+        if word.endswith(suffix) and len(word) > len(suffix) + 2:
+            stem = word[:-len(suffix)] + replacement
+            if stem and stem not in candidates:
+                candidates.append(stem)
+    return candidates
+
+
+def nearest_curated(word, n=3):
+    """Return up to `n` curated words nearest to `word` by difflib
+    similarity. Empty list if no candidates hit the similarity floor."""
+    import difflib
+    words = curated_words()
+    return difflib.get_close_matches(word.lower().strip(), words, n=n, cutoff=0.6)
+
+
+def lookup_with_stemming(word):
+    """Try direct lookup; if miss, try simple stems; if still miss,
+    return None. Returns (data, stem_used) where stem_used is None
+    on direct hit, or the matched stem when a stem matched."""
+    direct = lookup(word)
+    if direct is not None:
+        return direct, None
+    for stem in simple_stem_guess(word):
+        if stem == word.lower().strip():
+            continue
+        d = lookup(stem)
+        if d is not None:
+            return d, stem
+    return None, None
+
+
 def lookup_cross_lang(morpheme):
     """English lookup miss? Try cross-lang indexes. Returns dict with
     {lang, morpheme_id, coord_name, coord_data, atomic} or None."""

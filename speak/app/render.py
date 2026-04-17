@@ -225,11 +225,19 @@ def render_cross_lang_terminal(xl):
     return "\n".join(lines)
 
 
-def render_no_match_terminal(word=None):
+def render_no_match_terminal(word=None, near=None):
     msg = [f"  {D}'{word}' not in curated set.{R}"] if word else [
         f"  {D}not in curated set.{R}"]
-    msg.append(f"  {D}curated ({len(curated_words())} words):{R}")
-    msg.append("  " + ", ".join(curated_words()))
+    if near:
+        try_cmds = "  ".join(f"speak {w}" for w in near)
+        msg.append("")
+        msg.append(f"  {Y}nearest curated:{R}  "
+                   + ", ".join(near))
+        msg.append(f"  {D}try:  {try_cmds}{R}")
+    else:
+        msg.append("")
+        msg.append(f"  {D}curated ({len(curated_words())} words):{R}")
+        msg.append("  " + ", ".join(curated_words()))
     return "\n".join(msg)
 
 
