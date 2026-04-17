@@ -23,7 +23,7 @@ Code: compute/cosmo/giza.c, giza_deep.c.
 | KC 3D diagonal               | 25 cubits      | exact   |
 | KC floor area                | 80 sq cubits   | exact   |
 | Pyramid/KC volume ratio      | 8080           | 0.01%   |
-| cumulative atoms shell 1     | 625 = 25²      | exact   |
+| cumulative grade-1 count     | 625 = 5⁴       | exact   |
 | geometric mean √(440×280)    | 351 = T(Fe=26) | exact   |
 | ascending passage / height   | 26.8%          | 0.05%   |
 | sarcophagus volume           | ~16 cubic cubits | 2.8%  |
@@ -55,8 +55,9 @@ Code: compute/cosmo/giza.c, giza_deep.c.
 π and φ in the geometry: millennia of construction effort, sub-0.1%
 precision, independently surveyed. Passes the filter hard.
 
-KC diagonal = 25 = fill%. KC floor = 80 = shell(½). Room designed
-so the space diagonal is exact. Architectural intent, not coincidence.
+KC diagonal = 25 = 5² = (axes+hub)². KC floor = 80 = non-container
+lattice count. Room designed so the space diagonal is exact.
+Architectural intent, not coincidence.
 
 Khafre = 3-4-5 triangle. The Pythagorean identity in stone.
 Base = 3×137, height = 2×137 cubits. 137 = 1/α.
@@ -66,7 +67,7 @@ Menkaure (integer). Decreasing complexity.
 
 5/5 metaphorical coherence: lattice terms match their positions.
 
-Confidence: measurements 100%, shell hits high, interpretation 50%.
+Confidence: measurements 100%, substrate hits high, interpretation 50%.
 
 
 ## Post-wheel synthesis (added 2026-04-15)

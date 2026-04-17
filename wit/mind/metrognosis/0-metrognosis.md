@@ -37,7 +37,6 @@ metrognosis/
   alpha.md            fine structure constant 6 sig figs + α-as-CALL-rate
   chirality.md        quaternion handedness → L-amino acid (biology ↔ algebra)
   dna.md              20 amino acids = C(6,3) = Riemann comps in 4D
-  convergences.md     ISA, hierarchy, math grounding, unification
   ezekiel-wheel.md    wheel within wheel — prophetic version
   medicine-wheel.md   indigenous N. American 4-quadrant wheel
   hieroglyphs.md      Egyptian (9 independent wheel convergences)
